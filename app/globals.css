@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    @apply bg-slate-50 text-slate-900;
+  }
+}
+
+.search-input-placeholder::placeholder {
+  color: rgba(147, 197, 253, 0.7);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Inheritance badges */
+.badge {
+  @apply inline-block text-xs font-medium px-2 py-0.5 rounded-full;
+}
+.badge-ad  { @apply bg-blue-100 text-blue-800; }
+.badge-ar  { @apply bg-purple-100 text-purple-800; }
+.badge-xl  { @apply bg-rose-100 text-rose-800; }
+.badge-mt  { @apply bg-amber-100 text-amber-800; }
+.badge-dn  { @apply bg-teal-100 text-teal-800; }
+.badge-gen { @apply bg-slate-100 text-slate-600; }

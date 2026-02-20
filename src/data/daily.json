@@ -1,0 +1,633 @@
+{
+  "genes": [
+    {
+      "symbol": "DMD",
+      "fullName": "Dystrophin",
+      "inheritance": "X-Linked Recessive",
+      "locus": "Xp21.2",
+      "omim": "300377",
+      "phenotype": "Duchenne muscular dystrophy (DMD) and Becker muscular dystrophy (BMD). DMD presents with proximal weakness before age 5, calf pseudohypertrophy, and loss of ambulation by early teens. BMD is milder with later onset.",
+      "mechanism": "Dystrophin anchors the cytoskeleton to the extracellular matrix via the dystrophin-associated protein complex (DAPC). Out-of-frame mutations cause DMD; in-frame mutations cause the milder BMD phenotype. Loss of dystrophin leads to membrane fragility, repeated microinjury, inflammation, and fibrosis.",
+      "hallmarks": [
+        { "point": "Gowers' sign (using hands to climb up legs when rising from floor) is a classic clinical finding reflecting proximal lower extremity weakness.", "citation": "Gowers WR. Pseudo-hypertrophic muscular paralysis. 1879." },
+        { "point": "The 'reading frame rule': out-of-frame mutations (≈95% of DMD cases) prevent functional dystrophin; in-frame mutations (BMD) allow a truncated but partially functional protein.", "citation": "Monaco AP et al. Am J Hum Genet. 1988;43(4):487-99." },
+        { "point": "Exon-skipping therapy (eteplirsen, golodirsen) and gene therapy (delandistrogene moxeparvovec, FDA 2023) restore partial dystrophin expression by converting an out-of-frame to an in-frame transcript.", "citation": "Mendell JR et al. N Engl J Med. 2023;388:2509-2521." }
+      ]
+    },
+    {
+      "symbol": "DMPK",
+      "fullName": "Dystrophia Myotonica Protein Kinase",
+      "inheritance": "Autosomal Dominant",
+      "locus": "19q13.32",
+      "omim": "605377",
+      "phenotype": "Myotonic dystrophy type 1 (DM1): multisystem disease with myotonia, distal > proximal weakness, cardiac conduction defects, cataracts, endocrine dysfunction (diabetes, hypogonadism), and cognitive involvement. Congenital DM1 is the most severe form.",
+      "mechanism": "CTG trinucleotide repeat expansion in the 3' UTR of DMPK. Mutant RNA containing expanded CUG repeats sequesters MBNL1 splicing factor, causing widespread mis-splicing across many tissues. Genetic anticipation: repeat length increases with each generation, correlating with severity.",
+      "hallmarks": [
+        { "point": "Genetic anticipation is the rule: repeat lengths >50 cause adult-onset DM1; >1000 cause congenital DM1 — the most severe form, often transmitted maternally.", "citation": "Harper PS. Myotonic Dystrophy. 3rd ed. 2001." },
+        { "point": "Myotonia (impaired relaxation after contraction) can be elicited clinically by percussion of the thenar eminence or wrist extensors.", "citation": "Thornton CA. Neurol Clin. 2014;32(3):705-719." },
+        { "point": "Cardiac arrhythmia is the second leading cause of death in DM1; annual ECG and Holter monitoring are standard of care.", "citation": "Wahbi K et al. Circulation. 2012;125(11):1342-50." }
+      ]
+    },
+    {
+      "symbol": "SMN1",
+      "fullName": "Survival of Motor Neuron 1",
+      "inheritance": "Autosomal Recessive",
+      "locus": "5q13.2",
+      "omim": "600354",
+      "phenotype": "Spinal muscular atrophy (SMA): degeneration of anterior horn cells causing progressive proximal > distal weakness. Types 1–4 defined by age of onset and motor milestones achieved. SMA type 1 is the leading genetic cause of infant death.",
+      "mechanism": "Homozygous deletion or mutation of SMN1. Paralogous SMN2 gene produces ~10% full-length SMN protein (exon 7 is predominantly skipped). Copy number of SMN2 modifies severity — more copies = milder disease.",
+      "hallmarks": [
+        { "point": "SMN2 copy number is the primary disease modifier: 1–2 copies → SMA type 1; 3–4 copies → type 3/4. This is the therapeutic target for splicing modifiers (nusinersen, risdiplam).", "citation": "Lefebvre S et al. Cell. 1995;80(1):155-65." },
+        { "point": "Newborn screening for SMA has transformed outcomes; pre-symptomatic treatment with nusinersen or onasemnogene abeparvovec can produce near-normal motor development.", "citation": "De Vivo DC et al. N Engl J Med. 2019;381:1406-1416." },
+        { "point": "The tongue shows characteristic fasciculations ('bag of worms') in SMA type 1 — a useful bedside finding reflecting lower motor neuron degeneration.", "citation": "Russman BS. Semin Pediatr Neurol. 2007;14(4):196-201." }
+      ]
+    },
+    {
+      "symbol": "RYR1",
+      "fullName": "Ryanodine Receptor 1",
+      "inheritance": "Autosomal Dominant / Autosomal Recessive",
+      "locus": "19q13.2",
+      "omim": "180901",
+      "phenotype": "Malignant hyperthermia susceptibility (MHS), central core disease, multiminicore myopathy, and centronuclear myopathy. The most genetically heterogeneous congenital myopathy gene.",
+      "mechanism": "RYR1 encodes the sarcoplasmic reticulum calcium release channel. Gain-of-function dominant mutations → uncontrolled Ca²⁺ release, malignant hyperthermia. Loss-of-function recessive mutations → structural congenital myopathy with cores on biopsy.",
+      "hallmarks": [
+        { "point": "Malignant hyperthermia (MH) is a pharmacogenetic emergency triggered by volatile anesthetics (halothane, sevoflurane) or succinylcholine — not by stress or fever alone.", "citation": "Rosenberg H et al. Orphanet J Rare Dis. 2007;2:21." },
+        { "point": "Central core disease shows type 1 fiber predominance and central cores (areas devoid of oxidative enzyme activity) on NADH-TR stain — the histologic hallmark.", "citation": "Jungbluth H. Orphanet J Rare Dis. 2007;2:25." },
+        { "point": "Dantrolene, which blocks RYR1-mediated Ca²⁺ release, is the specific antidote for MH crisis; it must be available in any facility using volatile anesthetics.", "citation": "Gronert GA. Anesthesiology. 1980;53(5):395-423." }
+      ]
+    },
+    {
+      "symbol": "GAA",
+      "fullName": "Acid Alpha-Glucosidase",
+      "inheritance": "Autosomal Recessive",
+      "locus": "17q25.3",
+      "omim": "606800",
+      "phenotype": "Pompe disease (glycogen storage disease type II): ranges from classic infantile (cardiomegaly, hypotonia, death by 2 years untreated) to late-onset (slowly progressive proximal myopathy ± respiratory failure, no cardiac involvement).",
+      "mechanism": "Deficiency of lysosomal acid alpha-glucosidase leads to intra-lysosomal glycogen accumulation in muscle and other tissues. Vacuolar myopathy with PAS-positive vacuoles. Late-onset often caused by the common c.-32-13T>G splice variant, retaining some residual enzyme activity.",
+      "hallmarks": [
+        { "point": "The 'cross sign' on muscle MRI — selective involvement of paraspinal and posterior thigh muscles — is characteristic of late-onset Pompe disease.", "citation": "Carlier RY et al. J Inherit Metab Dis. 2011;34(4):923-30." },
+        { "point": "Acid alpha-glucosidase (GAA) enzyme activity can be measured on dried blood spot — used for newborn screening and diagnosis.", "citation": "Kemper AR et al. Genet Med. 2017;19(12):1238-1244." },
+        { "point": "Enzyme replacement therapy (alglucosidase alfa, 2006; avalglucosidase alfa, 2021) is the standard of care; glycogen-reducing substrate therapy (miglustat) is investigational.", "citation": "Van den Hout HM et al. Pediatrics. 2000;105(1):E17." }
+      ]
+    },
+    {
+      "symbol": "PMP22",
+      "fullName": "Peripheral Myelin Protein 22",
+      "inheritance": "Autosomal Dominant",
+      "locus": "17p12",
+      "omim": "601097",
+      "phenotype": "Charcot-Marie-Tooth disease type 1A (CMT1A) — the most common inherited peripheral neuropathy. Slowly progressive distal weakness and sensory loss, pes cavus, hammer toes, and areflexia. Onset in first or second decade.",
+      "mechanism": "Duplication of the 1.5 Mb region at 17p12 containing PMP22 causes CMT1A (dosage sensitivity). Point mutations or deletion (1 copy) cause hereditary neuropathy with liability to pressure palsies (HNPP). PMP22 is a structural component of compact myelin.",
+      "hallmarks": [
+        { "point": "CMT1A (PMP22 duplication) is the most common inherited neuropathy, with a prevalence of ~1 in 2,500. NCS shows uniform slowing of conduction velocity (<38 m/s in median nerve).", "citation": "Skre H. Clin Genet. 1974;6(2):98-118." },
+        { "point": "Pes cavus (high arched foot) and hammer toes result from intrinsic foot muscle wasting and are present in >70% of CMT1A patients.", "citation": "Pareyson D et al. Lancet Neurol. 2009;8(7):654-67." },
+        { "point": "Vincristine is contraindicated in CMT patients; it can precipitate severe acute neuropathy due to the underlying myelin vulnerability.", "citation": "Graf WD et al. Ann Neurol. 1996;39(1):17-22." }
+      ]
+    },
+    {
+      "symbol": "MFN2",
+      "fullName": "Mitofusin 2",
+      "inheritance": "Autosomal Dominant",
+      "locus": "1p36.22",
+      "omim": "608507",
+      "phenotype": "Charcot-Marie-Tooth disease type 2A (CMT2A): axonal neuropathy with early onset, predominantly motor > sensory involvement, and often severe disability. Some patients also show optic atrophy.",
+      "mechanism": "MFN2 encodes a GTPase mediating outer mitochondrial membrane fusion. Mutations impair mitochondrial fusion and axonal mitochondrial transport (particularly critical for long peripheral nerve axons). Mitochondria cluster at the cell body rather than reaching distal axon terminals.",
+      "hallmarks": [
+        { "point": "CMT2A is the most common axonal CMT subtype. NCS shows reduced amplitude with normal or near-normal conduction velocities (axonal pattern).", "citation": "Zuchner S et al. Nat Genet. 2004;36(5):449-51." },
+        { "point": "Pyramidal features (spasticity, hyperreflexia) coexist with peripheral neuropathy in some CMT2A patients — a clinical red flag for an axonal CMT with central involvement.", "citation": "Feely SM et al. Brain. 2011;134(Pt 11):3368-79." },
+        { "point": "Optic atrophy in CMT2A (HMSN VI) reflects high dependence of retinal ganglion cells on mitochondrial transport over long axons to the lateral geniculate nucleus.", "citation": "Zuchner S et al. Ann Neurol. 2006;59(3):597-601." }
+      ]
+    },
+    {
+      "symbol": "CAPN3",
+      "fullName": "Calpain 3",
+      "inheritance": "Autosomal Recessive",
+      "locus": "15q15.1",
+      "omim": "114240",
+      "phenotype": "Limb-girdle muscular dystrophy R1 (LGMD2A/R1): the most common LGMD worldwide. Proximal weakness with scapular winging, toe walking, and lordosis. CK is markedly elevated. Cardiac involvement is rare.",
+      "mechanism": "Calpain-3 is a calcium-dependent cysteine protease found in skeletal muscle. It cleaves titin and is involved in myofibrillar remodeling. Loss of calpain-3 leads to impaired sarcomere maintenance and progressive muscle fiber degeneration.",
+      "hallmarks": [
+        { "point": "LGMD R1 is the most prevalent LGMD globally, particularly in the Basque Country (Spain) and Reunion Island — populations used to first define the disease.", "citation": "Richard I et al. Cell. 1995;81(1):27-40." },
+        { "point": "Scapular winging is a prominent early sign and may precede significant limb weakness, helping distinguish LGMD2A from Duchenne or Emery-Dreifuss MD.", "citation": "Fardeau M et al. C R Acad Sci III. 1996;319(3):257-64." },
+        { "point": "Calpain-3 Western blot on muscle biopsy shows absent or reduced band at 94 kDa — complementing genetic testing in resource-limited settings.", "citation": "Anderson LV et al. Am J Pathol. 1998;153(4):1169-79." }
+      ]
+    },
+    {
+      "symbol": "LMNA",
+      "fullName": "Lamin A/C",
+      "inheritance": "Autosomal Dominant (most) / Autosomal Recessive",
+      "locus": "1q22",
+      "omim": "150330",
+      "phenotype": "Multiple allelic diseases: Emery-Dreifuss muscular dystrophy (EDMD2), LGMD1B, dilated cardiomyopathy with conduction defect, Dunnigan partial lipodystrophy, and Hutchinson-Gilford progeria. Cardiac involvement in EDMD2 is severe and life-threatening.",
+      "mechanism": "Lamin A/C are type V intermediate filaments of the nuclear lamina, providing structural support to the nucleus and organizing chromatin. Mutations disrupt nuclear integrity, mechanosensing, and gene regulation, particularly in mechanically stressed tissues (cardiac and skeletal muscle).",
+      "hallmarks": [
+        { "point": "The EDMD clinical triad: (1) early joint contractures (elbows, Achilles), (2) slowly progressive humeroperoneal weakness, (3) cardiac arrhythmia and dilated cardiomyopathy.", "citation": "Emery AE, Dreifuss FE. J Neurol Neurosurg Psychiatry. 1966;29(4):338-42." },
+        { "point": "Cardiac arrhythmia in LMNA disease may predate muscle weakness; sudden cardiac death has occurred in teenage athletes — ICD implantation guidelines are stricter than for other cardiomyopathies.", "citation": "van Rijsingen IA et al. J Am Coll Cardiol. 2012;59(6):493-500." },
+        { "point": "LMNA mutations cause ~5–10% of all familial dilated cardiomyopathy; genetic testing is recommended for DCM with conduction disease even in the absence of muscle involvement.", "citation": "Parks SB et al. Heart Rhythm. 2008;5(3):440-45." }
+      ]
+    },
+    {
+      "symbol": "MTM1",
+      "fullName": "Myotubularin 1",
+      "inheritance": "X-Linked Recessive",
+      "locus": "Xq28",
+      "omim": "300415",
+      "phenotype": "X-linked myotubular myopathy (XLMTM): severe neonatal hypotonia, respiratory failure requiring ventilation at birth, and ophthalmoplegia. The most severe congenital myopathy; many infants do not survive infancy without respiratory support.",
+      "mechanism": "Myotubularin is a phosphoinositide phosphatase that dephosphorylates PI(3)P, regulating membrane trafficking and autophagy. Loss of MTM1 impairs myofibrillar organization and leads to muscle fibers resembling fetal myotubes (central nuclei with perinuclear myosin clearing).",
+      "hallmarks": [
+        { "point": "Muscle biopsy hallmark: large rounded fibers with centrally placed nuclei and a clear 'halo' zone devoid of myofibrils — resembling fetal myotubes, giving the disease its name.", "citation": "Spiro AJ et al. Arch Neurol. 1966;14(1):1-14." },
+        { "point": "Aspamotide (resamirigene bilparvovec, AT132), an AAV-delivered MTM1 gene therapy, showed early promise but clinical trials were paused due to unexpected hepatic toxicity in 2021.", "citation": "Shieh PB et al. N Engl J Med. 2023;389:2294-2306." },
+        { "point": "Female carriers of MTM1 mutations can develop significant myopathy due to skewed X-inactivation, presenting with weakness and respiratory compromise in adulthood.", "citation": "Jungbluth H et al. Neuromuscul Disord. 2003;13(1):55-9." }
+      ]
+    },
+    {
+      "symbol": "SOD1",
+      "fullName": "Superoxide Dismutase 1",
+      "inheritance": "Autosomal Dominant (mostly) / Autosomal Recessive",
+      "locus": "21q22.11",
+      "omim": "147450",
+      "phenotype": "Familial ALS (fALS): upper and lower motor neuron degeneration causing progressive weakness, fasciculations, spasticity, and respiratory failure. SOD1-ALS accounts for ~20% of fALS and ~2% of all ALS.",
+      "mechanism": "Toxic gain-of-function from misfolded SOD1 protein aggregates, not loss of antioxidant activity. Misfolded SOD1 disrupts axonal transport, mitochondrial function, and triggers ER stress. The p.A4V variant is the most common and aggressive SOD1-ALS mutation in North America.",
+      "hallmarks": [
+        { "point": "Tofersen (antisense oligonucleotide targeting SOD1 mRNA) was approved by FDA in 2023 for SOD1-ALS — the first gene-specific ALS therapy.", "citation": "Miller TM et al. N Engl J Med. 2022;387(12):1099-1110." },
+        { "point": "SOD1-ALS typically spares frontotemporal cognition (unlike TDP-43/FUS-ALS), a distinguishing clinical feature used in prognosis and genetic counseling.", "citation": "Phukan J et al. Lancet Neurol. 2012;11(3):232-40." },
+        { "point": "The p.A4V mutation causes a particularly aggressive course — median survival from symptom onset is only 12 months, far shorter than mean ALS survival of ~3 years.", "citation": "Cudkowicz ME et al. Ann Neurol. 1997;41(2):210-21." }
+      ]
+    },
+    {
+      "symbol": "SCN4A",
+      "fullName": "Sodium Voltage-Gated Channel Alpha Subunit 4",
+      "inheritance": "Autosomal Dominant",
+      "locus": "17q23.3",
+      "omim": "603967",
+      "phenotype": "Multiple allelic disorders of Nav1.4: paramyotonia congenita (PMC), hyperkalemic periodic paralysis (HyperPP), hypokalemic periodic paralysis type 2 (HypoPP2), and potassium-aggravated myotonia. Episodic weakness and/or myotonia, often cold or exercise triggered.",
+      "mechanism": "Nav1.4 is the primary voltage-gated sodium channel in skeletal muscle. Gain-of-function mutations impair inactivation, leading to prolonged depolarization (myotonia). Some mutations cause depolarization-induced paradoxical Na⁺ influx during hypokalemia, causing flaccid weakness in periodic paralysis.",
+      "hallmarks": [
+        { "point": "Paramyotonia congenita is paradoxically worsened by exercise (myotonia increases with repeated contractions) — the reverse of 'warm-up' seen in myotonic dystrophy.", "citation": "Streib EW. Muscle Nerve. 1987;10(4):312-20." },
+        { "point": "Cold exposure is a classic trigger for both myotonia and weakness in SCN4A disease — patients often report facial stiffness in cold air or after eating cold food.", "citation": "Jurkat-Rott K, Lehmann-Horn F. Muscle Nerve. 2007;35(1):4-22." },
+        { "point": "Mexiletine, a sodium channel blocker, is the first-line pharmacotherapy for symptomatic SCN4A myotonia, reducing both stiffness and episodes of weakness.", "citation": "Statland JM et al. JAMA Neurol. 2012;69(3):1) 400-407." }
+      ]
+    },
+    {
+      "symbol": "DYSF",
+      "fullName": "Dysferlin",
+      "inheritance": "Autosomal Recessive",
+      "locus": "2p13.2",
+      "omim": "603009",
+      "phenotype": "Dysferlinopathy: includes LGMD2B/R2 (proximal pelvic-girdle weakness) and Miyoshi myopathy (distal weakness, gastrocnemius > tibialis anterior). CK is dramatically elevated (10,000–100,000 IU/L). Onset typically in late teens to 20s.",
+      "mechanism": "Dysferlin is a calcium-activated membrane repair protein; when muscle membrane is torn (e.g., during eccentric exercise), dysferlin mediates membrane resealing. Loss leads to impaired repair, chronic microinjury, and degeneration — despite initially excellent athletic performance in many patients.",
+      "hallmarks": [
+        { "point": "Many LGMD2B patients were champion athletes before symptom onset — the muscle membrane tears of intense exercise had been compensated by dysferlin-mediated repair.", "citation": "Klinge L et al. Neuromuscul Disord. 2010;20(6):380-85." },
+        { "point": "Markedly elevated CK (often >10,000 IU/L, sometimes >100,000 IU/L) at a young athletic patient warrants dysferlinopathy workup even before weakness develops.", "citation": "Illa I et al. Ann Neurol. 2001;49(6):811-15." },
+        { "point": "Dysferlin protein can be detected by monocyte flow cytometry — monocytes express dysferlin and the test is a reliable, minimally invasive screening tool.", "citation": "Ho M et al. Ann Neurol. 2002;51(5):669-72." }
+      ]
+    },
+    {
+      "symbol": "VCP",
+      "fullName": "Valosin-Containing Protein",
+      "inheritance": "Autosomal Dominant",
+      "locus": "9p13.3",
+      "omim": "601023",
+      "phenotype": "IBMPFD (Inclusion Body Myopathy with Paget disease of Bone and Frontotemporal Dementia): a multisystem proteinopathy. Not all three features are required. Mean age of onset is 45 years; most patients develop at least one component by age 60.",
+      "mechanism": "VCP/p97 is an AAA+ ATPase essential for ubiquitin-proteasome system and autophagy-mediated protein degradation. Mutations impair clearance of misfolded proteins, leading to accumulation of TDP-43 aggregates and rimmed vacuoles in muscle.",
+      "hallmarks": [
+        { "point": "Rimmed vacuoles on muscle biopsy and TDP-43 positive inclusions are the histologic hallmarks — shared with sporadic inclusion body myositis (sIBM), but in a much younger patient with family history.", "citation": "Watts GD et al. Nat Genet. 2004;36(4):377-81." },
+        { "point": "VCP disease belongs to the 'multisystem proteinopathy' spectrum that also includes Paget's disease of bone (elevated alkaline phosphatase, osteoclastic lesions on bone scan).", "citation": "Kim HJ et al. Science. 2013;339(6115):1335. (TDP-43/FUS mutations cause similar spectrum)" },
+        { "point": "Frontotemporal dementia in VCP disease often presents with behavioral variant FTD (disinhibition, apathy) rather than language-predominant variants — important for family counseling.", "citation": "Johnson JO et al. Am J Hum Genet. 2010;87(5):711-17." }
+      ]
+    },
+    {
+      "symbol": "PYGM",
+      "fullName": "Muscle Phosphorylase",
+      "inheritance": "Autosomal Recessive",
+      "locus": "11q13.1",
+      "omim": "608455",
+      "phenotype": "McArdle disease (GSD type V): exercise intolerance with myalgia, cramps, and myoglobinuria triggered by brief intense or sustained moderate exercise. Characteristic 'second wind' phenomenon. CK elevated at baseline; markedly elevated after exertion.",
+      "mechanism": "Muscle glycogen phosphorylase initiates glycogenolysis in skeletal muscle. Its absence blocks the initial high-power glycolytic phase of exercise. After ~10 minutes of low-intensity exercise, fatty acid oxidation and glucose delivery take over — producing the second wind.",
+      "hallmarks": [
+        { "point": "The 'second wind' phenomenon — relief of cramps and renewed exercise capacity after resting briefly during sustained effort — is pathognomonic for McArdle disease.", "citation": "McArdle B. Clin Sci. 1951;10(1):13-35." },
+        { "point": "Non-ischemic forearm exercise test: lactate fails to rise normally (stays flat) while ammonia rises appropriately — confirming a glycogenolytic defect without the risk of venous occlusion.", "citation": "Kazemi-Esfarjani P et al. Ann Neurol. 2002;52(2):153-59." },
+        { "point": "The p.R49X variant (also called p.R50X in older nomenclature) accounts for ~81% of McArdle alleles in White Europeans — making targeted genotyping highly efficient in this population.", "citation": "Andreu AL et al. Am J Hum Genet. 1999;65(1):229-32." }
+      ]
+    },
+    {
+      "symbol": "NEB",
+      "fullName": "Nebulin",
+      "inheritance": "Autosomal Recessive",
+      "locus": "2q23.3",
+      "omim": "161650",
+      "phenotype": "Nemaline myopathy type 2: the most common nemaline myopathy gene. Ranges from severe neonatal hypotonia to mild adult-onset disease. Features: hypotonia, proximal weakness, facial weakness, high arched palate, and respiratory compromise.",
+      "mechanism": "Nebulin is an enormous protein (~800 kDa) spanning the thin filament of the sarcomere. It regulates actin filament length and thin filament function. Loss-of-function mutations shorten thin filaments, impairing force generation and leading to accumulation of nemaline rods (protein aggregates) on Gomori trichrome stain.",
+      "hallmarks": [
+        { "point": "NEB is one of the largest human genes (183 exons) — pathogenic variants include missense, nonsense, splice-site, and a common Finnish founder deletion of exon 55.", "citation": "Pelin K et al. Proc Natl Acad Sci USA. 1999;96(5):2305-10." },
+        { "point": "Nemaline rods (electron-dense Z-disc-derived aggregates) are the biopsy hallmark; they are best seen on Gomori modified trichrome stain as red-purple rods against a blue-green fiber background.", "citation": "North KN et al. Neuromuscul Disord. 1997;7(6-7):375-82." },
+        { "point": "Cardiac involvement is uncommon in NEB-nemaline myopathy — in contrast to ACTA1, TPM2, and TPM3 nemaline myopathy, which more often have cardiomyopathy.", "citation": "Sanoudou D, Beggs AH. Trends Cardiovasc Med. 2001;11(1):46-53." }
+      ]
+    },
+    {
+      "symbol": "TTN",
+      "fullName": "Titin",
+      "inheritance": "Autosomal Dominant / Autosomal Recessive",
+      "locus": "2q31.2",
+      "omim": "188840",
+      "phenotype": "Titinopathies: include LGMD2J/R10 (tibial muscular dystrophy — Finnish distal myopathy), hereditary myopathy with early respiratory failure (HMERF), Udd myopathy, and dilated cardiomyopathy. Some variants contribute to idiopathic DCM.",
+      "mechanism": "Titin is the largest human protein, spanning the entire sarcomere from Z-disc to M-line. It functions as a molecular spring, contributing to passive elasticity. Truncating variants are common in dilated cardiomyopathy (~25% of familial DCM). Recessive compound heterozygotes develop severe LGMD.",
+      "hallmarks": [
+        { "point": "TTN is the largest gene in the human genome (363 exons, 4.2 Mb) and titin is the largest known protein (~3.7 MDa) — a molecular ruler and spring in the sarcomere.", "citation": "Labeit S, Kolmerer B. Science. 1995;270(5234):293-6." },
+        { "point": "Truncating variants in TTN are the most common genetic cause of dilated cardiomyopathy, found in ~25% of familial and ~18% of sporadic DCM.", "citation": "Herman DS et al. N Engl J Med. 2012;366(7):619-28." },
+        { "point": "Interpreting TTN variants is notoriously challenging: many truncating variants exist in healthy individuals in low-PSI (percent spliced in) exons; pathogenicity correlates with variant location in high-PSI exons expressed in heart.", "citation": "Roberts AM et al. Sci Transl Med. 2015;7(270):270ra6." }
+      ]
+    },
+    {
+      "symbol": "GAN",
+      "fullName": "Gigaxonin",
+      "inheritance": "Autosomal Recessive",
+      "locus": "16q23.2",
+      "omim": "606369",
+      "phenotype": "Giant axonal neuropathy (GAN): childhood-onset progressive mixed sensorimotor neuropathy with distinctive tightly-curled hair, often with central nervous system involvement (cerebellar, pyramidal, cognitive). Rare but genetically homogeneous.",
+      "mechanism": "Gigaxonin is an E3 ubiquitin ligase adaptor that targets intermediate filament proteins for degradation. Loss leads to accumulation of neurofilament and vimentin aggregates in axons, forming the giant axon expansions (axons packed with neurofilaments) that define the disease.",
+      "hallmarks": [
+        { "point": "Tightly-curled, kinky hair is the pathognomonic clinical sign in GAN — present in nearly all patients regardless of ancestry, reflecting intermediate filament dysregulation in hair follicle cells.", "citation": "Berg BO et al. Pediatrics. 1972;49(6):894-99." },
+        { "point": "Nerve biopsy shows focally enlarged axons stuffed with densely packed neurofilaments — the 'giant axon' — with preferential loss of large myelinated fibers.", "citation": "Donaghy M et al. Brain. 1988;111(Pt 5):1187-1200." },
+        { "point": "An intrathecal AAV9 gene therapy trial (NCT02362438) showed preliminary evidence of slowing CNS progression in GAN — one of the first CNS-targeted gene therapies for a peripheral neuropathy.", "citation": "Bharucha-Goebel DX et al. J Neuromuscul Dis. 2021;8(6):891-910." }
+      ]
+    },
+    {
+      "symbol": "COLQ",
+      "fullName": "Collagen-Like Tail Subunit of Asymmetric Acetylcholinesterase",
+      "inheritance": "Autosomal Recessive",
+      "locus": "3p25.1",
+      "omim": "603033",
+      "phenotype": "Congenital myasthenic syndrome (CMS) due to acetylcholinesterase (AChE) deficiency at the neuromuscular junction. Fatigable proximal weakness from infancy or early childhood, with pupillary abnormalities. May worsen with acetylcholinesterase inhibitors (pyridostigmine).",
+      "mechanism": "COLQ encodes the collagen tail that anchors asymmetric acetylcholinesterase to the basal lamina of the NMJ. Without the anchor, AChE is absent from the synapse. ACh accumulates, overstimulating and eventually desensitizing the postsynaptic nicotinic receptor — mimicking a cholinergic crisis.",
+      "hallmarks": [
+        { "point": "COLQ-CMS is uniquely worsened by pyridostigmine (AChE inhibitor) — because there is already no AChE; adding more inhibition causes toxic ACh accumulation and clinical deterioration.", "citation": "Ohno K et al. Hum Mol Genet. 1998;7(5):807-19." },
+        { "point": "Ephedrine and albuterol are the primary treatments for COLQ-CMS, likely by upregulating AChR or improving NMJ development — bypassing the absent AChE.", "citation": "Liewluck T et al. Neurology. 2011;77(20):1806-8." },
+        { "point": "Repetitive nerve stimulation in COLQ-CMS shows a characteristic 'double CMAP' (repetitive compound muscle action potential after a single stimulus) due to re-firing from prolonged end-plate potentials.", "citation": "Engel AG et al. Prog Neurobiol. 2015;131:140-58." }
+      ]
+    },
+    {
+      "symbol": "FUS",
+      "fullName": "FUS RNA Binding Protein",
+      "inheritance": "Autosomal Dominant",
+      "locus": "16p11.2",
+      "omim": "137070",
+      "phenotype": "Familial ALS (FUS-ALS) and FTD-FUS. FUS-ALS typically has very early onset (teens to 30s) with rapid progression. Often presents with flail arm or flail leg syndrome. FUS mutations account for ~4% of fALS.",
+      "mechanism": "FUS (Fused in Sarcoma) is an RNA-binding protein involved in transcription, pre-mRNA splicing, and mRNA transport. ALS mutations impair nuclear import (disrupting PY-NLS interaction with Transportin-1), causing cytoplasmic mislocalization and stress granule incorporation, leading to toxic aggregates.",
+      "hallmarks": [
+        { "point": "FUS-ALS uniquely features cytoplasmic FUS inclusions (not TDP-43), and pathology is absent from TDP-43 IHC — a key pathological distinction from the majority of ALS cases.", "citation": "Kwiatkowski TJ Jr et al. Science. 2009;323(5918):1205-8." },
+        { "point": "Juvenile-onset ALS (before age 25) is disproportionately caused by FUS mutations — any young ALS patient should trigger urgent FUS genetic testing and family assessment.", "citation": "Conte A et al. J Neurol Neurosurg Psychiatry. 2012;83(3):328-30." },
+        { "point": "Arginine methylation of FUS (by PRMT1) regulates its nuclear/cytoplasmic partitioning; arginine-to-cysteine mutations abolish methylation and maximally mislocalise FUS — correlating with the most aggressive phenotypes.", "citation": "Dormann D et al. Nature. 2010;467(7311):729-33." }
+      ]
+    }
+  ],
+  "factoids": [
+    {
+      "text": "In 1869, Jean-Martin Charcot delivered his landmark lectures at the Salpêtrière Hospital in Paris systematically describing a new motor neuron disease he called 'amyotrophic lateral sclerosis' — a name still used today. Charcot distinguished it from progressive muscular atrophy by the combination of upper and lower motor neuron signs, recognized in part from studying his own coachman, who developed progressive paralysis.",
+      "source": "Goetz CG. Charcot, the Clinician. Raven Press, 1987.",
+      "category": "History"
+    },
+    {
+      "text": "Mary Walker, a junior physician at St Alfege's Hospital in London, demonstrated in 1934 that physostigmine (an anticholinesterase) dramatically reversed myasthenia gravis weakness — a bedside test she devised in 20 minutes after reading about curare antidotes. This discovery established the neuromuscular junction as the disease site and led directly to the pyridostigmine therapy still used today.",
+      "source": "Walker MB. Lancet. 1934;1:1200-1201.",
+      "category": "History"
+    },
+    {
+      "text": "The Ice Bucket Challenge in the summer of 2014 raised over $115 million for ALS research in just 8 weeks — an unprecedented viral fundraising phenomenon. The funds directly contributed to the discovery of NEK1 as a new ALS gene (2016) and supported the development of the antisense oligonucleotide tofersen, approved in 2023 for SOD1-ALS.",
+      "source": "Cha AE. Washington Post. Aug 20, 2014; Cirulli ET et al. Nat Genet. 2016;48(9):1043-8.",
+      "category": "Modern"
+    },
+    {
+      "text": "Lou Gehrig's farewell speech on June 2, 1939 — in which he called himself 'the luckiest man on the face of the earth' — was delivered just two weeks after his ALS diagnosis. He died on June 2, 1941, exactly two years to the day after that speech, at age 37. His legacy made ALS synonymous with his name in the United States, where it is still commonly called 'Lou Gehrig's disease.'",
+      "source": "Robinson R. Gehrig: A Mature Man. Norton, 1990.",
+      "category": "History"
+    },
+    {
+      "text": "Duchenne de Boulogne did not discover Duchenne muscular dystrophy — Edward Meryon described it clearly in 1851, noting it affected boys, spared girls, and showed 'granular and fatty degeneration' of muscle fibers. Duchenne later gave it wide attention with his 1868 photographic atlas (using medical photography he pioneered). The disease was named after Duchenne by Jean-Martin Charcot, his student, in a long tradition of scientific priority disputes.",
+      "source": "Emery AE, Emery ML. The History of a Genetic Disease. RSM Press, 2011.",
+      "category": "History"
+    },
+    {
+      "text": "The drug 4-aminopyridine (dalfampridine), originally used by neuromuscular researchers to enhance neuromuscular transmission in Lambert-Eaton myasthenic syndrome, was later FDA-approved in 2010 to improve walking speed in multiple sclerosis. This cross-disciplinary repurposing illustrates how neuromuscular channel biology fuels broader neurological therapeutics.",
+      "source": "Goodman AD et al. Ann Neurol. 2009;68(4):494-502.",
+      "category": "Discovery"
+    },
+    {
+      "text": "The identification of dystrophin in 1987 by Louis Kunkel's lab was a landmark of 'reverse genetics' (positional cloning): starting from a chromosomal location and working backward to find the gene, without any prior knowledge of the protein. The dystrophin gene, at 2.4 Mb, remains the largest known human gene — and carries the record for the highest spontaneous mutation rate in the human genome.",
+      "source": "Koenig M et al. Cell. 1987;50(3):509-17.",
+      "category": "Discovery"
+    },
+    {
+      "text": "Malignant hyperthermia was first described in 1960 by Michael Denborough, an Australian medical student, who noticed that 10 of his patient's relatives had died under anesthesia. He reported this as a 'familial complication of anaesthesia' in the Lancet — launching the field of pharmacogenomics decades before the term existed.",
+      "source": "Denborough MA, Lovell RR. Lancet. 1960;2(7148):45.",
+      "category": "Discovery"
+    },
+    {
+      "text": "Charcot-Marie-Tooth disease was described simultaneously and independently in 1886 by three physicians: Jean-Martin Charcot and Pierre Marie in Paris, and Howard Henry Tooth in London. Tooth's Cambridge dissertation actually preceded the Charcot-Marie paper. Today, CMT is the most common inherited peripheral neuropathy, affecting roughly 1 in 2,500 people worldwide.",
+      "source": "Skre H. Clin Genet. 1974;6:98-118.",
+      "category": "History"
+    },
+    {
+      "text": "The SMN1 gene was cloned in 1995 by Lydie Lefebvre and colleagues — a discovery that transformed understanding of spinal muscular atrophy. In 2016, nusinersen became the first FDA-approved treatment for any motor neuron disease, delivered intrathecally and acting by correcting SMN2 splicing. This was followed by onasemnogene abeparvovec (Zolgensma) in 2019 — the most expensive drug in history at the time of approval (~$2.1 million per dose).",
+      "source": "Lefebvre S et al. Cell. 1995;80:155-65. Finkel RS et al. N Engl J Med. 2017;377:1723-32.",
+      "category": "Modern"
+    },
+    {
+      "text": "Pompe disease is named after Johann Cassianus Pompe, a Dutch pathologist who in 1932 described a 7-month-old infant with massive glycogen deposits in the heart and skeletal muscle. His report predated the concept of lysosomal storage diseases by 23 years. When alglucosidase alfa (Myozyme) was approved in 2006, it became the first enzyme replacement therapy for a primary myopathy and dramatically altered the natural history of infantile Pompe disease.",
+      "source": "Pompe JC. Ned Tijdschr Geneeskd. 1932;76:304. Van den Hout HM et al. Pediatrics. 2000;105(1):E17.",
+      "category": "History"
+    },
+    {
+      "text": "Botulinum toxin, produced by Clostridium botulinum and the most acutely lethal natural substance known, was first used therapeutically in the late 1970s by ophthalmologist Alan Scott for strabismus. It was FDA-approved in 1989 as Oculinum (later Botox). Today it is used for spasticity, dystonia, hyperhidrosis, chronic migraine, and cosmetic indications — a remarkable repurposing from neuromuscular pathology.",
+      "source": "Scott AB et al. Arch Ophthalmol. 1980;98(11):1940-41.",
+      "category": "Discovery"
+    },
+    {
+      "text": "Genetic anticipation — the worsening of a disease across generations — was described in myotonic dystrophy by Fleischer in 1918, but was dismissed by geneticists for decades as ascertainment bias. It was not until 1989, when congenital DM1 cases were linked to maternal transmission, that anticipation was taken seriously. The discovery of CTG repeat expansion in DMPK in 1992 provided the molecular explanation and proved anticipation was real.",
+      "source": "Fleischer B. Münch Med Wochenschr. 1918;65:1617. Brook JD et al. Cell. 1992;68(4):799-808.",
+      "category": "History"
+    },
+    {
+      "text": "The 2023 FDA approval of delandistrogene moxeparvovec (Elevidys) for Duchenne muscular dystrophy marked the culmination of over 30 years of gene therapy research. The therapy delivers a shortened 'microdystrophin' via AAV rh74 vector. It was the first gene therapy for a muscle disease approved in the US — though controversy remains about its demonstrated functional benefit versus biomarker endpoints.",
+      "source": "Mendell JR et al. N Engl J Med. 2023;388:2509-2521.",
+      "category": "Modern"
+    },
+    {
+      "text": "McArdle disease (GSD type V) was described by Brian McArdle in 1951 using a simple clinical observation: an otherwise healthy 30-year-old man could not sustain muscle contraction without severe cramping, and his venous lactate failed to rise with forearm ischemic exercise while ammonia rose normally — localizing the defect to glycogenolysis rather than glycolysis. The enzymatic deficiency in muscle phosphorylase was confirmed by Mommaerts in 1959.",
+      "source": "McArdle B. Clin Sci. 1951;10(1):13-35. Mommaerts WF et al. Proc Natl Acad Sci USA. 1959;45(6):791-7.",
+      "category": "History"
+    },
+    {
+      "text": "In 2012, the sequencing of a complete human genome cost less than $1,000 for the first time — a milestone that accelerated discovery in neuromuscular genetics. The first Human Genome Project cost approximately $3 billion and took 13 years (1990–2003). Today's whole-genome sequencing in clinical neuromuscular diagnostics diagnoses conditions that were previously labeled 'idiopathic myopathy' in ~30–40% of systematically studied cohorts.",
+      "source": "Boycott KM et al. Nat Rev Genet. 2013;14(10):681-91.",
+      "category": "Modern"
+    },
+    {
+      "text": "Electromyography (EMG) was pioneered by Adrian and Bronk in 1929 using a cathode ray oscilloscope. The first needle EMG recordings revealed that voluntary muscle activity generates action potentials — establishing the electrical basis of muscle contraction. The modern diagnostic EMG/NCS (nerve conduction study) pairing, now performed millions of times annually, descended directly from these 1920s laboratory curiosities.",
+      "source": "Adrian ED, Bronk DW. J Physiol. 1929;67(2):119-51.",
+      "category": "History"
+    },
+    {
+      "text": "The Nobel Prize in Physiology or Medicine 1991 was awarded to Erwin Neher and Bert Sakmann for discovering single ion channel recording (patch clamp technique). Their technique, developed in 1976, allows measurement of current through a single ion channel protein — and directly enabled characterization of the channelopathies (SCN4A, KCNQ2, CLCN1, CACNA1S) that cause periodic paralysis, myotonia congenita, and myasthenic syndromes.",
+      "source": "Neher E, Sakmann B. Nature. 1976;260(5554):799-802.",
+      "category": "Discovery"
+    },
+    {
+      "text": "Dejerine-Sottas disease (DSS) — a severe, early-onset demyelinating neuropathy — was first described in 1893 by Jules Joseph Dejerine and his wife Jules Sottas, a husband-and-wife team who co-authored many influential works in French neurology. DSS is now understood to be a severe allelic variant of CMT1 caused by de novo dominant mutations in PMP22, MPZ, or EGR2 — among other genes.",
+      "source": "Dejerine J, Sottas J. C R Soc Biol. 1893;45:63-96.",
+      "category": "History"
+    },
+    {
+      "text": "The 1976 US National Influenza Immunization Program ('swine flu' vaccination campaign) was linked to a significant increase in Guillain-Barré syndrome (GBS) risk — approximately 1 additional GBS case per 100,000 vaccinees. This association, though small in absolute terms, reshaped vaccine safety monitoring globally and established GBS as a benchmark adverse event requiring active surveillance for all new vaccines.",
+      "source": "Schonberger LB et al. Am J Epidemiol. 1979;110(2):105-23.",
+      "category": "History"
+    },
+    {
+      "text": "James Ramsay Hunt described herpes zoster oticus (Ramsay Hunt syndrome) in 1907 — geniculate ganglion varicella-zoster reactivation causing facial palsy, ear pain, and vesicles in the ear canal. Hunt was a leading American neurologist who also described the dentatorubral-pallidoluysian atrophy (DRPLA) syndrome. His name graces at least six eponymous medical conditions, more than almost any 20th-century neurologist.",
+      "source": "Hunt JR. J Nerv Ment Dis. 1907;34(2):73-96.",
+      "category": "History"
+    },
+    {
+      "text": "CRISPR-Cas9 genome editing was first used to correct the DMD mutation in living mice in 2016, published simultaneously in three Science papers. The technique used intramuscular and systemic AAV delivery of Cas9 and guide RNAs targeting the mutant exon, restoring a truncated but functional dystrophin. This proof-of-concept catalyzed a wave of in-vivo gene editing clinical trials for neuromuscular diseases.",
+      "source": "Nelson CE et al. Science. 2016;351(6271):403-7.",
+      "category": "Modern"
+    },
+    {
+      "text": "Stiff person syndrome (SPS) — an autoimmune disorder with rigidity, painful muscle spasms, and anti-GAD65 antibodies — affected the singer Celine Dion, who publicly disclosed her diagnosis in 2022. Her case drew international attention to this rare condition, increasing patient recognition and research funding. SPS is also associated with breast cancer, small cell lung cancer, and other autoimmune conditions.",
+      "source": "Bhatt JM et al. Pract Neurol. 2022.",
+      "category": "Modern"
+    },
+    {
+      "text": "Stephen Hawking, diagnosed with ALS at 21, defied the expected 2–5 year median survival by living 55 years after diagnosis — an extreme outlier attributed in part to his very young onset (juvenile ALS tends to progress more slowly) and to exceptional supportive care. His case, while inspiring, is statistically exceptional: fewer than 5% of ALS patients survive >10 years.",
+      "source": "Hawking S. My Brief History. Bantam Books, 2013.",
+      "category": "Modern"
+    },
+    {
+      "text": "Wilson's disease was first described as a distinct clinicopathological entity by Samuel Alexander Kinnier Wilson in 1912, in a landmark 212-page paper describing 12 cases of 'progressive lenticular degeneration.' He identified the consistent combination of hepatic cirrhosis and basal ganglia degeneration, establishing the hepatolenticular degeneration concept — though the copper accumulation mechanism and the ATP7B gene were not identified until decades later.",
+      "source": "Wilson SAK. Brain. 1912;34(4):295-507.",
+      "category": "History"
+    }
+  ],
+  "questions": [
+    {
+      "question": "A 4-year-old boy presents with difficulty rising from the floor. He uses his hands to push on his thighs when standing (Gowers' sign), has calf pseudohypertrophy, and CK is 12,000 IU/L. Genetic testing confirms an out-of-frame exon 48–50 deletion in the DMD gene. Which best describes the mechanism of pathogenicity?",
+      "choices": [
+        "The deletion removes the dystrophin promoter, eliminating transcription",
+        "The out-of-frame deletion causes a premature stop codon and absence of full-length dystrophin protein",
+        "The deletion duplicates exons 48–50, producing a toxic gain-of-function dystrophin",
+        "The deletion disrupts the DGC by removing the dystroglycan-binding domain while preserving rod domain function"
+      ],
+      "answer": 1,
+      "explanation": "Out-of-frame mutations shift the reading frame, introducing a premature stop codon and triggering nonsense-mediated decay of the mRNA — resulting in absent dystrophin. This is the pathomechanism of Duchenne MD. In-frame mutations (as in Becker MD) allow production of a truncated but partially functional dystrophin. The 'reading frame rule' (Monaco et al., 1988) holds in ~95% of cases."
+    },
+    {
+      "question": "A 28-year-old woman presents with bilateral foot drop, pes cavus, and areflexia. She has thinned calves and difficulty with balance since adolescence. Her father and grandfather had similar findings. Nerve conduction studies show median nerve motor conduction velocity of 22 m/s bilaterally. What is the most likely diagnosis?",
+      "choices": [
+        "CIDP (Chronic Inflammatory Demyelinating Polyneuropathy)",
+        "Charcot-Marie-Tooth type 1A (CMT1A, PMP22 duplication)",
+        "Guillain-Barré syndrome",
+        "Charcot-Marie-Tooth type 2A (CMT2A, MFN2 mutation)"
+      ],
+      "answer": 1,
+      "explanation": "Uniform, symmetric slowing of MCV (<38 m/s in the median nerve) in a hereditary, slowly progressive pattern with a positive family history strongly suggests CMT1 (demyelinating). CMT1A (PMP22 duplication) is the most common inherited neuropathy. CIDP would be acquired and treatment-responsive. CMT2A (axonal) shows reduced amplitude with near-normal MCV. GBS is acute and monophasic."
+    },
+    {
+      "question": "A 6-week-old infant presents with profound hypotonia, minimal spontaneous movement, and requires ventilatory support from birth. Tongue fasciculations are noted. CK is normal. EMG shows active denervation (fibrillations) in multiple limb and paraspinal muscles. Which gene is most likely responsible?",
+      "choices": [
+        "DMD (Dystrophin)",
+        "MTM1 (Myotubularin)",
+        "SMN1 (Survival Motor Neuron 1)",
+        "RYR1 (Ryanodine Receptor 1)"
+      ],
+      "answer": 2,
+      "explanation": "The clinical picture — neonatal hypotonia, tongue fasciculations, and EMG evidence of denervation (fibrillations, indicating anterior horn cell/motor neuron pathology) with normal CK — is classic SMA type 1 due to SMN1 deletion. MTM1 (XLMTM) causes myopathic (not neurogenic) EMG changes and typically shows central nuclei on biopsy. DMD presents later (age 2–5) with elevated CK. RYR1 myopathy is non-denervating."
+    },
+    {
+      "question": "A 45-year-old man is referred after being found to have CK of 1,400 IU/L on routine labs. He reports bilateral lower extremity weakness that started 3 years ago with difficulty with stairs. Muscle MRI shows selective atrophy of the posterior compartment of both thighs and the gluteus maximus. EMG shows myopathic motor unit potentials. He has an affected brother. Which diagnosis is most consistent?",
+      "choices": [
+        "Limb-girdle muscular dystrophy R1 (CAPN3 / calpainopathy)",
+        "Polymyositis",
+        "Becker muscular dystrophy",
+        "Inclusion body myositis"
+      ],
+      "answer": 0,
+      "explanation": "LGMD R1 (calpainopathy) is an autosomal recessive LGMD with proximal, pelvic-girdle predominant weakness, moderately elevated CK, and characteristic posterior thigh and gluteus maximus involvement on MRI. The positive family history (affected brother) supports AR inheritance. Polymyositis is typically acquired and responsive to immunotherapy. Becker MD is X-linked and would be unusual in this bilateral, symmetric pattern with an affected sibling of either sex. Inclusion body myositis typically affects older men (>50) with finger flexor and quadriceps weakness."
+    },
+    {
+      "question": "During anesthesia induction with sevoflurane for an elective knee surgery in a 19-year-old previously healthy athlete, the anesthesiologist notes rapidly rising end-tidal CO2, masseter rigidity, and sinus tachycardia. Temperature is 38.9°C and rising. What is the immediate next step?",
+      "choices": [
+        "Administer IV corticosteroids and active cooling",
+        "Stop the triggering agent, hyperventilate with 100% O2, and give IV dantrolene",
+        "Administer IV calcium gluconate and sodium bicarbonate",
+        "Perform urgent cardioversion for impending arrhythmia"
+      ],
+      "answer": 1,
+      "explanation": "This is malignant hyperthermia (MH), a pharmacogenetic emergency most often due to RYR1 mutations. The trigger (sevoflurane) must be stopped immediately, the circuit flushed with 100% O2 at high flows, and IV dantrolene (2.5 mg/kg initial dose, repeated as needed) administered without delay. Dantrolene blocks RYR1-mediated SR Ca²⁺ release, aborting the crisis. Steroids have no role. Active cooling is adjunctive. Cardioversion is not the priority."
+    },
+    {
+      "question": "A 35-year-old woman has a 10-year history of progressive distal lower extremity weakness. She cannot walk on her heels. CK is 85,000 IU/L. She was a competitive runner until her mid-20s. Muscle biopsy shows dystrophic changes and marked inflammation. Which gene is most likely mutated?",
+      "choices": [
+        "CAPN3",
+        "DYSF",
+        "LMNA",
+        "GNE"
+      ],
+      "answer": 1,
+      "explanation": "Dramatically elevated CK (often >10,000 IU/L, sometimes >100,000), distal (gastrocnemius-predominant) weakness, and a history of athletic prowess before symptom onset is a classic presentation of Miyoshi myopathy / dysferlinopathy (DYSF mutations). DYSF encodes the membrane repair protein dysferlin; loss leads to inability to reseal exercise-induced membrane tears, causing marked CK release and eventual fiber death. Significant inflammatory infiltrates on biopsy are characteristic and can mimic polymyositis. CAPN3 causes more proximal LGMD2A. LMNA causes EDMD. GNE causes a distal myopathy (hereditary inclusion body myopathy) with far lower CK."
+    },
+    {
+      "question": "A 52-year-old man presents with hand weakness affecting fine motor tasks (threading needles, buttoning) more than grip strength. He has bilateral wrist flexor and finger flexor weakness along with right quadriceps atrophy. CK is 500 IU/L. Muscle biopsy shows rimmed vacuoles and endomysial inflammation. No response to 3 months of high-dose prednisone. What is the most likely diagnosis?",
+      "choices": [
+        "Polymyositis",
+        "Dermatomyositis",
+        "Sporadic inclusion body myositis (sIBM)",
+        "LGMD R9 (FKRP muscular dystrophy)"
+      ],
+      "answer": 2,
+      "explanation": "Sporadic inclusion body myositis (sIBM) is the most common acquired myopathy in patients over 50. Characteristic features: (1) early and severe finger flexor and wrist flexor weakness, (2) quadriceps atrophy (often asymmetric), (3) rimmed vacuoles on biopsy with endomysial inflammation, (4) mildly elevated CK, and (5) absence of response to immunosuppression. The steroid non-response is a major clue distinguishing sIBM from polymyositis, which often responds. Anti-cN1A antibodies support the diagnosis."
+    },
+    {
+      "question": "A 25-year-old man presents with progressive proximal weakness and elevated CK (3,200 IU/L). Examination also shows bilateral contractures at the elbows and Achilles tendons. ECG shows first-degree AV block. His mother had similar weakness and a pacemaker placed at age 38. What gene is most likely responsible?",
+      "choices": [
+        "EMD (Emerin, X-linked)",
+        "LMNA (Lamin A/C)",
+        "COLQ",
+        "CAPN3"
+      ],
+      "answer": 1,
+      "explanation": "The classic EDMD triad — early joint contractures (elbow/Achilles), humeroperoneal weakness, and cardiac conduction defects — combined with autosomal dominant inheritance (mother affected) and a conduction defect on ECG points to LMNA (Lamin A/C) mutation causing AD-EDMD or LGMD1B. X-linked EDMD (EMD/emerin) would require an X-linked family pattern (females unaffected or mildly affected, males severely affected). COLQ causes CMS, not EDMD. CAPN3 causes LGMD without contractures or cardiac involvement."
+    },
+    {
+      "question": "A 4-year-old boy presents with hypotonia noted at birth, bilateral ptosis, and ophthalmoplegia. He has difficulty running but can walk independently. CK is normal. Muscle biopsy shows numerous fibers with central nuclei occupying >3% of fibers in all fiber types. Which inheritance pattern is most likely?",
+      "choices": [
+        "Autosomal dominant (DNM2 mutation)",
+        "Autosomal recessive (BIN1 mutation)",
+        "X-linked recessive (MTM1 mutation)",
+        "Autosomal dominant (RYR1 mutation)"
+      ],
+      "answer": 2,
+      "explanation": "Severe neonatal/infantile onset centronuclear myopathy with ophthalmoplegia in a male patient points to X-linked myotubular myopathy (XLMTM) due to MTM1 mutations. The clinical severity (respiratory failure at birth in most cases) is the most severe centronuclear myopathy. DNM2-related centronuclear myopathy (AD) tends to have later onset and milder course. BIN1 mutations (AR) cause a moderate phenotype. RYR1 causes central core myopathy, not centronuclear myopathy."
+    },
+    {
+      "question": "A 62-year-old man with bulbar ALS is counseled that riluzole therapy is available. What is riluzole's mechanism of action and the expected benefit?",
+      "choices": [
+        "Riluzole inhibits the NMDA receptor, stopping glutamate-mediated excitotoxicity and prolonging survival by 12–18 months",
+        "Riluzole blocks voltage-gated sodium channels, reducing persistent Na+ current and prolonging median survival by approximately 2–3 months",
+        "Riluzole is an antisense oligonucleotide that reduces toxic TDP-43 aggregation and slows disease progression by 50%",
+        "Riluzole enhances BDNF-mediated motor neuron survival and prevents spread of disease to contiguous segments"
+      ],
+      "answer": 1,
+      "explanation": "Riluzole (approved 1995) is the first ALS disease-modifying therapy. It blocks persistent voltage-gated Na+ currents and reduces presynaptic glutamate release, providing modest anti-excitotoxic benefit. Clinical trials showed a modest ~2–3 month extension of median survival (particularly for bulbar-onset ALS). While modest, it remains a standard of care alongside edaravone (2017) and sodium phenylbutyrate/tauroursodeoxycholic acid (AMX0035, 2022). Antisense therapy (tofersen) targets SOD1-ALS specifically, not general ALS."
+    },
+    {
+      "question": "A 10-year-old girl with severe scoliosis from birth has hypotonia, facial weakness, and is ventilator-dependent. Her tightly coiled hair is distinctive. Nerve biopsy shows greatly enlarged ('giant') axons packed with neurofilaments. What is the most likely diagnosis?",
+      "choices": [
+        "Dejerine-Sottas disease (MPZ mutation)",
+        "Giant axonal neuropathy (GAN mutation)",
+        "Friedreich's ataxia (FXN mutation)",
+        "Charcot-Marie-Tooth type 4 (CMT4)"
+      ],
+      "answer": 1,
+      "explanation": "Tightly-curled kinky hair is pathognomonic for giant axonal neuropathy (GAN), caused by biallelic GAN mutations. GAN encodes gigaxonin, an E3 ligase adaptor targeting intermediate filament proteins; loss causes accumulation of neurofilaments in giant axonal swellings on nerve biopsy. The combination of severe childhood neuropathy, CNS involvement, and distinctive hair is diagnostic. Friedreich's ataxia has dorsal column/cerebellar pathology without giant axons. CMT4 and MPZ/Dejerine-Sottas do not cause kinky hair or giant axons."
+    },
+    {
+      "question": "A 55-year-old woman with progressive proximal muscle weakness has CK 2,500 IU/L, an EMG showing myopathic changes, and is found to have anti-Jo-1 antibodies. She also has mechanic's hands, Raynaud phenomenon, and non-scarring alopecia. What syndrome does she have?",
+      "choices": [
+        "Dermatomyositis with anti-MDA5 antibodies",
+        "Anti-synthetase syndrome",
+        "Sporadic inclusion body myositis",
+        "Polymyalgia rheumatica"
+      ],
+      "answer": 1,
+      "explanation": "Anti-Jo-1 antibodies (targeting histidyl-tRNA synthetase) are the signature of anti-synthetase syndrome — a systemic autoimmune condition with the pentad of: inflammatory myopathy, interstitial lung disease, mechanic's hands (hyperkeratotic fissuring of fingers), Raynaud phenomenon, and inflammatory arthritis. Anti-Jo-1 is the most common antisynthetase antibody (~30% of inflammatory myopathies). ILD surveillance and early treatment are critical. Anti-MDA5 dermatomyositis tends to cause rapidly progressive ILD with less prominent muscle disease. sIBM is not associated with these antibodies."
+    },
+    {
+      "question": "A 22-year-old man presents after his first episode of exercise-induced myoglobinuria following a weekend hiking trip. He reports cramping with intense exercise since childhood but a 'second wind' if he slows down and rests briefly. His CK at rest is 1,800 IU/L. Ischemic forearm exercise test shows ammonia rise but NO lactate rise. What is the diagnosis?",
+      "choices": [
+        "Carnitine palmitoyltransferase II deficiency (CPTII)",
+        "McArdle disease (GSD type V, PYGM mutation)",
+        "Phosphofructokinase deficiency (Tarui disease, GSD type VII)",
+        "Myoadenylate deaminase deficiency"
+      ],
+      "answer": 1,
+      "explanation": "The 'second wind,' exercise-induced myoglobinuria, and the forearm exercise test pattern (no lactate rise, normal ammonia rise) are classic for McArdle disease (GSD type V) — muscle phosphorylase deficiency. CPTII also causes exercise-induced myoglobinuria, but is triggered by prolonged low-intensity exercise or fasting, and the forearm exercise test is normal (glycolysis intact). PFK deficiency shows a similar ischemic exercise test but is distinguished by a mild compensated hemolytic anemia (PFK is expressed in RBCs). Myoadenylate deaminase deficiency shows normal lactate but absent ammonia rise."
+    },
+    {
+      "question": "A 70-year-old man with a 2-year history of hand weakness that started with difficulty turning door knobs and has progressed to wasting of the bilateral thenar eminences and forearm flexors. He is a former carpenter. There is mild knee extensor weakness. No sensory complaints. EMG shows active and chronic denervation in a multifocal pattern. CK is 1,100 IU/L. MRC strength testing shows finger flexors 3/5, wrist flexors 3/5, knee extensors 4/5. What is the most likely diagnosis?",
+      "choices": [
+        "Sporadic ALS (upper and lower motor neuron signs required)",
+        "Sporadic inclusion body myositis (sIBM)",
+        "Multifocal motor neuropathy (MMN)",
+        "Brachial amyotrophic diplegia"
+      ],
+      "answer": 1,
+      "explanation": "sIBM is the most common acquired myopathy in patients over 50 and characteristically affects finger flexors > shoulder, and quadriceps — often asymmetrically. CK is mildly elevated. Despite myopathy, EMG frequently shows mixed myopathic and neurogenic features ('pseudo-neurogenic' pattern) due to end-stage fiber loss and reinnervation — a common diagnostic pitfall. The absence of UMN signs and the selective pattern distinguish this from ALS. MMN causes pure LMN pattern without quadriceps involvement and responds to IVIG. Brachial amyotrophic diplegia is an ALS variant requiring UMN involvement."
+    },
+    {
+      "question": "You are evaluating a neonate with profound hypotonia, respiratory failure, and a CK of 12 IU/L (normal). EMG shows myopathic units. Muscle biopsy reveals small, rounded fibers with a central clear zone on NADH-TR staining with preserved peripheral enzyme activity. What is the most likely diagnosis and gene?",
+      "choices": [
+        "Nemaline myopathy — NEB gene",
+        "Central core disease — RYR1 gene",
+        "X-linked myotubular myopathy — MTM1 gene",
+        "Multiminicore disease — SEPN1 gene"
+      ],
+      "answer": 1,
+      "explanation": "Central clear zones ('cores') on NADH-TR stain (areas with absent mitochondria/oxidative activity) in a neonatal/early-onset myopathy with hypotonia points to central core disease, most commonly due to RYR1 mutations. Cores are single, central, and run the length of the fiber in type 1-predominant fibers. XLMTM (MTM1) shows centrally placed nuclei, not cores. Nemaline myopathy shows rods on Gomori trichrome. Multiminicore disease shows multiple small cores and is often caused by SEPN1 (SELENON) or RYR1 mutations."
+    },
+    {
+      "question": "A 40-year-old woman presents with exercise intolerance and is found to have mitochondrial DNA mutation m.3243A>G. She also has diabetes, hearing loss, and short stature. What syndrome does she have?",
+      "choices": [
+        "MERRF (Myoclonic Epilepsy with Ragged Red Fibers)",
+        "MELAS (Mitochondrial Encephalomyopathy, Lactic Acidosis, and Stroke-like episodes)",
+        "Kearns-Sayre syndrome",
+        "CPEO (Chronic Progressive External Ophthalmoplegia)"
+      ],
+      "answer": 1,
+      "explanation": "The m.3243A>G (tRNALeu) mutation is the most common MELAS point mutation, accounting for ~80% of MELAS cases. The syndrome includes stroke-like episodes, encephalomyopathy, lactic acidosis, and a broad spectrum of features including diabetes, hearing loss, cardiomyopathy, and short stature. MERRF is associated with m.8344A>G (tRNALys) and presents with myoclonus, ataxia, and epilepsy. Kearns-Sayre involves ptosis/ophthalmoplegia and cardiac conduction block due to large-scale mtDNA deletions. Pure CPEO may also harbor the m.3243A>G variant but without systemic involvement."
+    },
+    {
+      "question": "A 30-year-old woman with myasthenia gravis has anti-MuSK antibodies. She has prominent oropharyngeal and neck flexor weakness with relative sparing of limb strength. How does the treatment approach for MuSK-MG differ from AChR-MG?",
+      "choices": [
+        "MuSK-MG responds better to pyridostigmine and thymectomy than AChR-MG",
+        "MuSK-MG is more responsive to rituximab and plasma exchange but often responds poorly to pyridostigmine, and thymectomy is not indicated",
+        "MuSK-MG requires higher doses of acetylcholinesterase inhibitors because MuSK maintains synaptic AChR clustering",
+        "MuSK-MG is treated identically to AChR-MG with IVIG as first-line therapy"
+      ],
+      "answer": 1,
+      "explanation": "MuSK-MG has a distinct clinical and treatment profile. Pyridostigmine (AChEI) often worsens symptoms or is poorly tolerated due to muscarinic side effects. Thymectomy shows no proven benefit (thymic pathology is absent or non-hyperplastic in most MuSK-MG). Rituximab (anti-CD20) has shown significant efficacy in multiple series, particularly for refractory MuSK-MG. Plasma exchange (not IVIG) is preferred for acute exacerbations in MuSK-MG. These differences reflect the distinct pathophysiology (IgG4 antibodies, complement-independent) compared to AChR-MG."
+    },
+    {
+      "question": "You see an 8-year-old boy with spinal muscular atrophy type 2 (can sit but never walked). His SMN2 copy number is 3. His parents ask about treatment options. Which is NOT an approved treatment for SMA?",
+      "choices": [
+        "Nusinersen (Spinraza) — intrathecal antisense oligonucleotide",
+        "Risdiplam (Evrysdi) — oral SMN2 splicing modifier",
+        "Onasemnogene abeparvovec (Zolgensma) — IV AAV9 SMN1 gene therapy",
+        "Alglucosidase alfa (Myozyme) — enzyme replacement therapy"
+      ],
+      "answer": 3,
+      "explanation": "Alglucosidase alfa (Myozyme) is enzyme replacement therapy for Pompe disease (GAA deficiency), not SMA. The three approved SMA therapies are: (1) Nusinersen — an ASO correcting SMN2 exon 7 splicing, given intrathecally; (2) Onasemnogene abeparvovec — AAV9-SMN1 gene replacement, given IV once (for patients <2 years or <21 kg); (3) Risdiplam — oral SMN2 splicing modifier. All three increase functional SMN protein via different mechanisms."
+    },
+    {
+      "question": "A 55-year-old man is diagnosed with late-onset Pompe disease after evaluation for dyspnea. Spirometry shows FVC 52% supine vs 71% upright (>10% orthopnea). Acid alpha-glucosidase enzyme activity is 1.2% of normal on DBS. CK is 1,800 IU/L. EMG shows myopathic units with unusual high-frequency discharges in paraspinal muscles. What is the distinctive EMG finding in Pompe disease and why?",
+      "choices": [
+        "Paraspinal complex repetitive discharges (CRDs) or myotonic discharges without clinical myotonia — reflecting vacuolar muscle membrane instability",
+        "Fibrillation potentials in a stocking-glove distribution — from secondary peripheral neuropathy",
+        "Fasciculation potentials in proximal muscles — from anterior horn cell involvement",
+        "Positive sharp waves restricted to the diaphragm — from selective type IIx fiber atrophy"
+      ],
+      "answer": 0,
+      "explanation": "Pompe disease has a characteristic EMG signature: myotonic-like discharges or complex repetitive discharges (CRDs) in paraspinal and gluteal muscles, occurring without clinical myotonia — due to excess glycogen destabilizing muscle membrane potential. This finding in a patient with proximal weakness, respiratory involvement, and elevated CK should prompt GAA enzyme testing. Orthopnea (supine FVC drop >10%) reflects early diaphragmatic involvement — an important functional marker in late-onset Pompe."
+    },
+    {
+      "question": "A 33-year-old woman is evaluated for episodic weakness. She reports attacks of flaccid limb paralysis lasting 1–3 days, triggered by high-carbohydrate meals and rest after vigorous exercise. During an attack, K+ is 2.1 mEq/L. Between attacks she is normal. What is the most likely diagnosis?",
+      "choices": [
+        "Hyperkalemic periodic paralysis (CACNA1S or SCN4A gain-of-function)",
+        "Hypokalemic periodic paralysis type 1 (CACNA1S mutation)",
+        "Andersen-Tawil syndrome (KCNJ2 mutation)",
+        "Paramyotonia congenita (SCN4A mutation)"
+      ],
+      "answer": 1,
+      "explanation": "Hypokalemic periodic paralysis type 1 (HypoPP1) is caused by dominant CACNA1S mutations (encoding the α1 subunit of the voltage-gated Ca²⁺ channel in T-tubules). Attacks are triggered by carbohydrate/insulin surge and post-exercise rest — classic precipitants. Serum K+ falls during attacks due to paradoxical K+ influx through anomalous gating pore currents. Acetazolamide is the preventive treatment of choice. HypoPP2 involves SCN4A. Hyperkalemic PP (SCN4A gain-of-function) occurs with high K+ during attacks, often triggered by fasting or cold. Andersen-Tawil syndrome involves QTc prolongation, periodic paralysis, and dysmorphic features."
+    }
+  ]
+}
