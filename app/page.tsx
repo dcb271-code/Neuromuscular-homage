@@ -2,6 +2,7 @@ import indexData from '@/src/data/index.json';
 import { GeneOfDay, FactoidOfDay, QuestionOfDay } from '@/components/DailyWidgets';
 import CategoryGrid from '@/components/CategoryGrid';
 import FeaturedConditions from '@/components/FeaturedConditions';
+import { RotatingCategories, RotatingConditions } from '@/components/RotatingWidgets';
 
 type Summary = {
   crawledPages: number;
@@ -139,11 +140,13 @@ export default function Home() {
       {/* ── Featured conditions ──────────────────────────────────────── */}
       <SectionLabel>Select Neuromuscular Conditions</SectionLabel>
       <FeaturedConditions conditions={FEATURED_CONDITIONS} />
+      <RotatingConditions />
 
       {/* ── Browse by Category + alphabet index ──────────────────────── */}
       <div style={{ marginTop: '28px' }}>
         <SectionLabel>Browse by Category</SectionLabel>
         <CategoryGrid items={CLINICAL_CATEGORIES} />
+        <RotatingCategories />
         <div style={{ marginTop: '8px' }}>
           <AlphabetIndex />
         </div>
