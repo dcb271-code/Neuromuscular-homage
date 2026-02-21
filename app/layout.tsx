@@ -47,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
 
             {/* Nav */}
-            <nav style={{ display: 'flex', gap: '4px', flexShrink: 0 }}>
+            <nav className="nm-hide-sm" style={{ display: 'flex', gap: '4px', flexShrink: 0 }}>
               <NavLink href="/browse">Browse</NavLink>
             </nav>
           </div>

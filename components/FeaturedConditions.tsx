@@ -10,12 +10,7 @@ type Condition = {
 
 export default function FeaturedConditions({ conditions }: { conditions: Condition[] }) {
   return (
-    <div style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(3, 1fr)',
-      gap: '8px',
-      marginBottom: '28px',
-    }}>
+    <div className="nm-3col" style={{ marginBottom: '28px' }}>
       {conditions.map(cond => (
         <a
           key={cond.abbr}

@@ -131,12 +131,7 @@ export default function Home() {
       </div>
 
       {/* Factoid + Question side by side */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: '12px',
-        marginBottom: '36px',
-      }}>
+      <div className="nm-2col" style={{ marginBottom: '36px' }}>
         <FactoidOfDay />
         <QuestionOfDay />
       </div>
@@ -155,12 +150,7 @@ export default function Home() {
       </div>
 
       {/* ── Stats bar at bottom ──────────────────────────────────────── */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
-        gap: '10px',
-        marginTop: '36px',
-      }}>
+      <div className="nm-4col" style={{ marginTop: '36px' }}>
         {[
           { label: 'Source pages',      value: summary.crawledPages.toLocaleString() },
           { label: 'Entries',           value: summary.totalSections.toLocaleString() },
@@ -202,6 +192,7 @@ function SiteHero() {
       marginBottom: '36px',
       paddingBottom: '28px',
       borderBottom: '1px solid #f1f5f9',
+      textAlign: 'center',
     }}>
       {/* Main title */}
       <div style={{

@@ -18,6 +18,18 @@
   50% { opacity: 0.4; }
 }
 
+/* ── Responsive grid helpers ─────────────────────────────────── */
+.nm-3col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.nm-4col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.nm-2col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+@media (max-width: 640px) {
+  .nm-3col { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .nm-4col { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .nm-2col { grid-template-columns: 1fr; gap: 8px; }
+  .nm-hide-sm { display: none !important; }
+}
+
 /* Inheritance badges */
 .badge {
   @apply inline-block text-xs font-medium px-2 py-0.5 rounded-full;

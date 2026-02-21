@@ -6,7 +6,7 @@ export default function CategoryGrid({ items }: {
   items: ClinicalCategory[];
 }) {
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '8px' }}>
+    <div className="nm-3col">
       {items.map(cat => (
         <a
           key={cat.name}
