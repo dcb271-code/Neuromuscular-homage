@@ -246,7 +246,7 @@ function SiteHero() {
         letterSpacing: '0.01em',
       }}>
         A salute to Dr Alan Pestronk, MD
-        <span style={{ margin: '0 8px', color: '#cbd5e1' }}>·</span>
+        <br />
         A (Pediatric) Neuromuscular Resource, Revised
       </p>
     </div>
