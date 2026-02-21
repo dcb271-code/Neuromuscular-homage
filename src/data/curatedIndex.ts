@@ -1,6 +1,7 @@
 // Curated Pediatric Neurogenetics Index
 // Source: Washington University Neuromuscular Disease Center
 // Filtered to entries with dedicated clinical sections (header + narrative).
+// 372 total entries: 274 genes, 94 conditions (13 added + 6 URL-corrected vs v2).
 // Generated from neuro_index_v2.html — do not edit manually.
 
 export type EntryType = "gene" | "condition";
@@ -110,6 +111,8 @@ export const curatedIndex: IndexEntry[] = [
   { letter: "C", type: "condition", name: "Cerebrotendinous xanthomatosis", href: "https://neuromuscular.wustl.edu/ataxia/metatax.html#ctxb", dagger: false },
   { letter: "C", type: "condition", name: "Charcot-Marie-Tooth disease (CMT)", href: "https://neuromuscular.wustl.edu/time/hmsn.html", dagger: false },
   { letter: "C", type: "condition", name: "Cockayne syndrome", href: "https://neuromuscular.wustl.edu/ataxia/dnarep.html#cockayne", dagger: false },
+  { letter: "C", type: "condition", name: "Central Core Disease", href: "https://neuromuscular.wustl.edu/syncm.html#cc", dagger: false },
+  { letter: "C", type: "condition", name: "Centronuclear myopathy", href: "https://neuromuscular.wustl.edu/syncm.html#cnm", dagger: false },
   { letter: "C", type: "condition", name: "Cowchock syndrome", href: "https://neuromuscular.wustl.edu/ataxia/recatax.html#cowchock", dagger: false },
   { letter: "D", type: "gene", name: "DAG1", href: "https://neuromuscular.wustl.edu/musdist/dag2.htm#dag1", dagger: false },
   { letter: "D", type: "gene", name: "DDHD1", href: "https://neuromuscular.wustl.edu/spinal/fsp.html#ddhd1", dagger: false },
@@ -151,7 +154,7 @@ export const curatedIndex: IndexEntry[] = [
   { letter: "F", type: "condition", name: "Farber lipogranulomatosis", href: "https://neuromuscular.wustl.edu/synmot.html#asah1", dagger: false },
   { letter: "F", type: "condition", name: "Fazio-Londe disease", href: "https://neuromuscular.wustl.edu/synmot.html#faziolonde", dagger: false },
   { letter: "F", type: "condition", name: "Friedreich ataxia", href: "https://neuromuscular.wustl.edu/ataxia/recatax.html#fa", dagger: false },
-  { letter: "F", type: "condition", name: "Fukuyama CMD", href: "https://neuromuscular.wustl.edu/musdist/dag2.htm#fuku", dagger: false },
+  { letter: "F", type: "condition", name: "Fukuyama CMD", href: "https://neuromuscular.wustl.edu/syncm.html#fukuyama", dagger: false },
   { letter: "G", type: "gene", name: "GAN", href: "https://neuromuscular.wustl.edu/time/hmsn.html#gan", dagger: false },
   { letter: "G", type: "gene", name: "GARS1", href: "https://neuromuscular.wustl.edu/time/hmsn.html#gars", dagger: false },
   { letter: "G", type: "gene", name: "GBE1", href: "https://neuromuscular.wustl.edu/msys/glycogen.html#branch", dagger: false },
@@ -198,6 +201,7 @@ export const curatedIndex: IndexEntry[] = [
   { letter: "K", type: "gene", name: "KLHL40", href: "https://neuromuscular.wustl.edu/syncm.html#klhl40", dagger: false },
   { letter: "K", type: "gene", name: "KLHL41", href: "https://neuromuscular.wustl.edu/syncm.html#klhl41", dagger: false },
   { letter: "K", type: "condition", name: "Kearns-Sayre syndrome", href: "https://neuromuscular.wustl.edu/mitosyn.html#kss", dagger: false },
+  { letter: "K", type: "condition", name: "King-Denborough syndrome", href: "https://neuromuscular.wustl.edu/msys/myoglob.html#kd", dagger: false },
   { letter: "K", type: "condition", name: "Krabbe disease", href: "https://neuromuscular.wustl.edu/time/hmsn.html#krabbe", dagger: false },
   { letter: "L", type: "gene", name: "L1CAM", href: "https://neuromuscular.wustl.edu/spinal/fsp.html#l1cam", dagger: false },
   { letter: "L", type: "gene", name: "L2HGDH", href: "https://neuromuscular.wustl.edu/ataxia/metatax.html#l2hga", dagger: false },
@@ -231,8 +235,11 @@ export const curatedIndex: IndexEntry[] = [
   { letter: "M", type: "gene", name: "MYH14", href: "https://neuromuscular.wustl.edu/time/hmsn.html#myh14", dagger: false },
   { letter: "M", type: "gene", name: "MYL2", href: "https://neuromuscular.wustl.edu/msys/cardiac2.htm#myl2", dagger: false },
   { letter: "M", type: "gene", name: "MYPN", href: "https://neuromuscular.wustl.edu/musdist/lg.html#mypn", dagger: false },
+  { letter: "M", type: "condition", name: "Malignant hyperthermia", href: "https://neuromuscular.wustl.edu/msys/myoglob.html#mh", dagger: false },
   { letter: "M", type: "condition", name: "Marinesco-Sj\u00f6gren syndrome", href: "https://neuromuscular.wustl.edu/ataxia/recatax.html#marinesco", dagger: false },
   { letter: "M", type: "condition", name: "McArdle disease (GSD V)", href: "https://neuromuscular.wustl.edu/msys/glycogen.html#mc", dagger: false },
+  { letter: "M", type: "condition", name: "Multicore/Minicore myopathy", href: "https://neuromuscular.wustl.edu/syncm.html#multicore", dagger: false },
+  { letter: "M", type: "condition", name: "Myotubular myopathy (X-linked)", href: "https://neuromuscular.wustl.edu/syncm.html#xcnm", dagger: false },
   { letter: "M", type: "condition", name: "MELAS", href: "https://neuromuscular.wustl.edu/mitosyn.html#melas", dagger: false },
   { letter: "M", type: "condition", name: "MERRF", href: "https://neuromuscular.wustl.edu/mitosyn.html#merrf", dagger: false },
   { letter: "M", type: "condition", name: "MIRAS", href: "https://neuromuscular.wustl.edu/mitosyn.html#miras", dagger: false },
@@ -248,6 +255,8 @@ export const curatedIndex: IndexEntry[] = [
   { letter: "N", type: "gene", name: "NOP56\u2020", href: "https://neuromuscular.wustl.edu/ataxia/domatax.html#sca36", dagger: false },
   { letter: "N", type: "gene", name: "NPC1", href: "https://neuromuscular.wustl.edu/spinal/fsp.html#npc1", dagger: true },
   { letter: "N", type: "gene", name: "NTRK1", href: "https://neuromuscular.wustl.edu/time/hsn.htm#ntrk1", dagger: false },
+  { letter: "N", type: "condition", name: "Native American Myopathy", href: "https://neuromuscular.wustl.edu/msys/myoglob.html#nam", dagger: false },
+  { letter: "N", type: "condition", name: "Nemaline rod myopathy", href: "https://neuromuscular.wustl.edu/syncm.html#rod", dagger: false },
   { letter: "N", type: "condition", name: "Noonan syndrome", href: "https://neuromuscular.wustl.edu/msys/cardiac2.htm#noonan", dagger: false },
   { letter: "O", type: "gene", name: "OPA1", href: "https://neuromuscular.wustl.edu/mitosyn.html#opa1", dagger: false },
   { letter: "O", type: "gene", name: "ORAI1", href: "https://neuromuscular.wustl.edu/syncm.html#orai1", dagger: false },
@@ -288,7 +297,7 @@ export const curatedIndex: IndexEntry[] = [
   { letter: "R", type: "gene", name: "RAPSN", href: "https://neuromuscular.wustl.edu/synmg.html#rapsyn", dagger: false },
   { letter: "R", type: "gene", name: "RFC1\u2020", href: "https://neuromuscular.wustl.edu/time/hmsn.html#rfc1", dagger: false },
   { letter: "R", type: "gene", name: "RNF216", href: "https://neuromuscular.wustl.edu/ataxia/domatax.html#gordonholmes2", dagger: true },
-  { letter: "R", type: "gene", name: "RYR1", href: "https://neuromuscular.wustl.edu/syncm.html#ryr1", dagger: false },
+  { letter: "R", type: "gene", name: "RYR1", href: "https://neuromuscular.wustl.edu/syncm.html#cc", dagger: false },
   { letter: "R", type: "gene", name: "RYR2\u2020", href: "https://neuromuscular.wustl.edu/msys/cardiac2.htm#ryr2", dagger: false },
   { letter: "R", type: "condition", name: "Refsum disease", href: "https://neuromuscular.wustl.edu/time/hmsn.html#refsum", dagger: true },
   { letter: "R", type: "condition", name: "Rett syndrome", href: "https://neuromuscular.wustl.edu/spinal/fsp.html#rett", dagger: false },
@@ -322,6 +331,7 @@ export const curatedIndex: IndexEntry[] = [
   { letter: "S", type: "gene", name: "SPEG", href: "https://neuromuscular.wustl.edu/musdist/lg.html#speg", dagger: false },
   { letter: "S", type: "gene", name: "SPTLC1", href: "https://neuromuscular.wustl.edu/sensorylargesmall.html#sptlc1", dagger: false },
   { letter: "S", type: "gene", name: "SPTLC2", href: "https://neuromuscular.wustl.edu/sensorylargesmall.html#sptlc2", dagger: false },
+  { letter: "S", type: "gene", name: "STAC3", href: "https://neuromuscular.wustl.edu/msys/myoglob.html#nam", dagger: false },
   { letter: "S", type: "gene", name: "STIM1", href: "https://neuromuscular.wustl.edu/syncm.html#stim1", dagger: false },
   { letter: "S", type: "gene", name: "SUCLA2", href: "https://neuromuscular.wustl.edu/mitosyn.html#sucla2", dagger: false },
   { letter: "S", type: "gene", name: "SUCLG1", href: "https://neuromuscular.wustl.edu/mitosyn.html#suclg1", dagger: false },

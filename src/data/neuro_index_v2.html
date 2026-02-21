@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pediatric Neurogenetics Index — WashU Neuromuscular</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f14;
+    --surface: #13161e;
+    --surface2: #1a1e2a;
+    --border: #252a38;
+    --accent: #7eb8f7;
+    --accent2: #a78bfa;
+    --text: #e2e8f0;
+    --text-muted: #64748b;
+    --text-dim: #94a3b8;
+    --gene-color: #7eb8f7;
+    --condition-color: #a78bfa;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+  header {
+    position: relative;
+    padding: 4rem 2rem 3rem;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, #0d0f14 0%, #10131b 100%);
+    overflow: hidden;
+  }
+  header::after {
+    content: 'NMD';
+    position: absolute;
+    right: -1rem;
+    top: -2rem;
+    font-family: 'DM Serif Display', serif;
+    font-size: 18rem;
+    color: rgba(126,184,247,0.03);
+    pointer-events: none;
+    line-height: 1;
+    letter-spacing: -0.05em;
+  }
+  .header-inner { max-width: 1400px; margin: 0 auto; position: relative; z-index: 1; }
+  .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+  h1 em { color: var(--accent); font-style: italic; }
+  .header-desc {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    max-width: 680px;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .header-meta { display: flex; gap: 2rem; flex-wrap: wrap; align-items: center; }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+  }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .legend-dot.gene { background: var(--gene-color); }
+  .legend-dot.condition { background: var(--condition-color); }
+  .source-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 0.3rem 0.8rem;
+    border-radius: 2px;
+    transition: all 0.2s;
+    letter-spacing: 0.05em;
+    margin-left: auto;
+  }
+  .source-link:hover { border-color: var(--accent); color: var(--accent); }
+  .alpha-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13,15,20,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 2rem;
+  }
+  .alpha-nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .alpha-nav a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 2px;
+    transition: all 0.15s;
+    letter-spacing: 0.05em;
+  }
+  .alpha-nav a:hover { color: var(--accent); background: rgba(126,184,247,0.08); }
+  main { max-width: 1400px; margin: 0 auto; padding: 2rem; position: relative; z-index: 1; }
+  .letter-section {
+    margin-bottom: 3rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .letter-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem 1.75rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+  .letter-glyph {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: rgba(126,184,247,0.15);
+    min-width: 2.5rem;
+    font-style: italic;
+  }
+  .letter-stats { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .stat-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+    font-weight: 500;
+  }
+  .stat-badge.gene { background: rgba(126,184,247,0.1); color: var(--gene-color); border: 1px solid rgba(126,184,247,0.2); }
+  .stat-badge.condition { background: rgba(167,139,250,0.1); color: var(--condition-color); border: 1px solid rgba(167,139,250,0.2); }
+  .entry-grid {
+    padding: 1.5rem 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.35rem;
+    background: var(--surface2);
+  }
+  .entry { display: flex; align-items: baseline; gap: 0.5rem; }
+  .entry-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; margin-top: 0.55em; }
+  .entry-dot.gene { background: var(--gene-color); opacity: 0.7; }
+  .entry-dot.condition { background: var(--condition-color); opacity: 0.7; }
+  .entry a {
+    font-size: 0.82rem;
+    text-decoration: none;
+    color: var(--text-dim);
+    transition: color 0.15s;
+    font-family: 'DM Mono', monospace;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .entry.gene a:hover { color: var(--gene-color); }
+  .entry.condition a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.83rem;
+    font-weight: 400;
+  }
+  .entry.condition a:hover { color: var(--condition-color); }
+  .entry .dagger { font-size: 0.6rem; color: var(--text-muted); vertical-align: super; margin-left: 1px; font-family: 'DM Mono', monospace; }
+  footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-family: 'DM Mono', monospace;
+    border-top: 1px solid var(--border);
+    position: relative;
+    z-index: 1;
+    line-height: 2;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .footnote {
+    max-width: 700px;
+    margin: 1.5rem auto 0;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-align: left;
+    line-height: 1.8;
+    border: 1px solid var(--border);
+    padding: 1rem 1.25rem;
+    border-radius: 3px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="eyebrow">Pediatric Neurogenetics Reference</div>
+    <h1>Genes &amp; Named Conditions<br><em>Pediatric &amp; Variable Onset</em></h1>
+    <p class="header-desc">
+      A curated index of genes and named neuromuscular conditions with known pediatric, congenital,
+      infantile, childhood, or adolescent presentations — filtered from the Washington University
+      Neuromuscular Disease Center. Only entries with dedicated clinical sections (header + narrative)
+      are linked; table-only mentions have been removed.
+    </p>
+    <div class="header-meta">
+      <div class="legend-item"><span class="legend-dot gene"></span>GENE</div>
+      <div class="legend-item"><span class="legend-dot condition"></span>NAMED CONDITION / SYNDROME</div>
+      <div class="legend-item" style="color:var(--text-muted);font-size:0.7rem;">† = predominantly adult onset; pediatric cases documented</div>
+      <a class="source-link" href="https://neuromuscular.wustl.edu/alfindex.htm" target="_blank">↗ SOURCE INDEX</a>
+    </div>
+  </div>
+</header>
+
+<nav class="alpha-nav">
+  <div class="alpha-nav-inner">
+    <a href="#A">A</a><a href="#B">B</a><a href="#C">C</a><a href="#D">D</a>
+    <a href="#E">E</a><a href="#F">F</a><a href="#G">G</a><a href="#H">H</a>
+    <a href="#I">I</a><a href="#J">J</a><a href="#K">K</a><a href="#L">L</a>
+    <a href="#M">M</a><a href="#N">N</a><a href="#O">O</a><a href="#P">P</a>
+    <a href="#R">R</a><a href="#S">S</a><a href="#T">T</a><a href="#U">U</a>
+    <a href="#V">V</a><a href="#W">W</a><a href="#Y">Y</a><a href="#Z">Z</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- A -->
+<section class="letter-section" id="A">
+  <div class="letter-header">
+    <div class="letter-glyph">A</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#aars" target="_blank">AARS1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#aars2" target="_blank">AARS2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#abat" target="_blank">ABAT</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#aml" target="_blank">ABCD1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/cardiac2.htm#ncie2" target="_blank">ABHD5</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#refsum20" target="_blank">ABHD12</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#abhd16a" target="_blank">ABHD16A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#acad9" target="_blank">ACAD9</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/cardiac.html#scad" target="_blank">ACADS</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/cardiac2.htm#very" target="_blank">ACADVL</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mother/peroxisome.html#acox1" target="_blank">ACOX1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mother/myosin.htm#actdis" target="_blank">ACTA1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/autonomic.html#actg2" target="_blank">ACTG2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#actn2" target="_blank">ACTN2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mother/myosin.htm#actndis" target="_blank">ACTN3</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/antibody/pnimax.html#ada2" target="_blank">ADA2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#coq8" target="_blank">ADCK3 (COQ8A)</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/contract.html#gpr126" target="_blank">ADGRG6</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#adprhl2" target="_blank">ADPRHL2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/distal.html#adssl1" target="_blank">ADSSL1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#sca28" target="_blank">AFG3L2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#sengers" target="_blank">AGK</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#agtpbp1" target="_blank">AGTPBP1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#aif" target="_blank">AIFM1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#aimp1" target="_blank">AIMP1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/autonomic.html#apeced" target="_blank">AIRE</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#sls" target="_blank">ALDH3A2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#aldh5a1" target="_blank">ALDH5A1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmg.html#alg2" target="_blank">ALG2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmg.html#alg14" target="_blank">ALG14</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#alpers" target="_blank">POLG (Alpers)</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#amacr" target="_blank">AMACR</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#lg11p13" target="_blank">ANO5</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#ano10atax" target="_blank">ANO10</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#mld" target="_blank">ARSA</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#asah1" target="_blank">ASAH1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#smafract" target="_blank">ASCC1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#atad3a" target="_blank">ATAD3A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#spg3" target="_blank">ATL1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#atp1a1" target="_blank">ATP1A1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#ahc1" target="_blank">ATP1A2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#capos" target="_blank">ATP1A3</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mother/activity.html#brody" target="_blank">ATP2A1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/myoglob.html#atp2a2" target="_blank">ATP2A2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#xcatax2" target="_blank">ATP2B3</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#dsmax" target="_blank">ATP7A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/metatax.html#wilson" target="_blank">ATP7B</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#atp8a2" target="_blank">ATP8A2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#atp13a2" target="_blank">ATP13A2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#sca1" target="_blank">ATXN1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#sca2" target="_blank">ATXN2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#mjd" target="_blank">ATXN3</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#sca10" target="_blank">ATXN10</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/autonomic.html#aaa" target="_blank">AAA Syndrome (Allgrove)</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/msys/contract.html#aarssc" target="_blank">Aarskog–Scott syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#palatalmyo" target="_blank">Alexander disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#alpers" target="_blank">Alpers-Huttenlocher syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#andermann" target="_blank">Andermann syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/msys/glycogen.html#branch" target="_blank">Andersen disease (GSD IV)</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#cssa" target="_blank">ARSACS</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#arts" target="_blank">Arts syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/dnarep.html#at" target="_blank">Ataxia-telangiectasia</a></div>
+  </div>
+</section>
+
+<!-- B -->
+<section class="letter-section" id="B">
+  <div class="letter-header">
+    <div class="letter-glyph">B</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#bag3" target="_blank">BAG3</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#finneo" target="_blank">BCS1L</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#proximaldominant" target="_blank">BICD2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#cnmbin1" target="_blank">BIN1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#bscl2" target="_blank">BSCL2</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/msys/cardiac.html#barth" target="_blank">Barth syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#cln3" target="_blank">Batten disease (CLN3)</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/musdist/dmd.html#Becker" target="_blank">Becker muscular dystrophy</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mother/activity.html#mcr" target="_blank">Becker myotonia congenita</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#behr" target="_blank">Behr syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#beth" target="_blank">Bethlem myopathy</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/synmot.html#bvvls" target="_blank">Brown-Vialetto-van Laere syndrome</a></div>
+  </div>
+</section>
+
+<!-- C -->
+<section class="letter-section" id="C">
+  <div class="letter-header">
+    <div class="letter-glyph">C</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#ea2" target="_blank">CACNA1A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/cardiac2.htm#cacna1c" target="_blank">CACNA1C</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mtime/mepisodic.html#hypok" target="_blank">CACNA1S</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/distal.html#capn1" target="_blank">CAPN1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#cln3" target="_blank">CLN3</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#cnbp" target="_blank">CNBP</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#coq2" target="_blank">COQ2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#coq4" target="_blank">COQ4</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#coq7" target="_blank">COQ7</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#crystallin" target="_blank">CRYAB<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#cyp7b1" target="_blank">CYP7B1<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#c9orf72" target="_blank">C9orf72<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#c12orf65" target="_blank">C12orf65</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#c19orf12" target="_blank">C19orf12</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/metatax.html#ctxb" target="_blank">Cerebrotendinous xanthomatosis</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html" target="_blank">Charcot-Marie-Tooth disease (CMT)</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/dnarep.html#cockayne" target="_blank">Cockayne syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/syncm.html#cc" target="_blank">Central Core Disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/syncm.html#cnm" target="_blank">Centronuclear myopathy</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#cowchock" target="_blank">Cowchock syndrome</a></div>
+  </div>
+</section>
+
+<!-- D -->
+<section class="letter-section" id="D">
+  <div class="letter-header">
+    <div class="letter-glyph">D</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/dag2.htm#dag1" target="_blank">DAG1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#ddhd1" target="_blank">DDHD1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#ddhd2" target="_blank">DDHD2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#dm1" target="_blank">DMPK<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#dna2" target="_blank">DNA2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#dnajb2" target="_blank">DNAJB2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#dnajb6" target="_blank">DNAJB6</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#dnm1l" target="_blank">DNM1L</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#cnmdnm2" target="_blank">DNM2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmg.html#dpagt1" target="_blank">DPAGT1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/fsh.html#dux4" target="_blank">DUX4</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#dync1h1" target="_blank">DYNC1H1</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#lamp2" target="_blank">Danon disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#ds" target="_blank">Dejerine-Sottas disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#drpla" target="_blank">DRPLA</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/musdist/dmd.html" target="_blank">Duchenne muscular dystrophy</a></div>
+  </div>
+</section>
+
+<!-- E -->
+<section class="letter-section" id="E">
+  <div class="letter-header">
+    <div class="letter-glyph">E</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#egr2" target="_blank">EGR2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hsn.htm#familial" target="_blank">ELP1 (IKBKAP)</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/dnarep.html#cockayne" target="_blank">ERCC1–8</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/cardiac.html#mplacoa" target="_blank">ETFDH</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#ethe1" target="_blank">ETHE1</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/musdist/edmd.html" target="_blank">Emery-Dreifuss muscular dystrophy</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/msys/contract.html#escobar" target="_blank">Escobar syndrome</a></div>
+  </div>
+</section>
+
+<!-- F -->
+<section class="letter-section" id="F">
+  <div class="letter-header">
+    <div class="letter-glyph">F</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#fam134b" target="_blank">FAM134B</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#fgd4" target="_blank">FGD4</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#sca27" target="_blank">FGF14</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#fhl1" target="_blank">FHL1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#fig4" target="_blank">FIG4</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/dag2.htm#fkrp" target="_blank">FKRP</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/dag2.htm#fktn" target="_blank">FKTN</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#flad1" target="_blank">FLAD1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#flnc" target="_blank">FLNC<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#flvcr1" target="_blank">FLVCR1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#fmr1" target="_blank">FMR1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#fus" target="_blank">FUS<span class="dagger">†</span></a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/sensory-pain.html#fabry" target="_blank">Fabry disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/musdist/fsh.html" target="_blank">Facioscapulohumeral MD (FSHD)</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/synmot.html#asah1" target="_blank">Farber lipogranulomatosis</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/synmot.html#faziolonde" target="_blank">Fazio-Londe disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#fa" target="_blank">Friedreich ataxia</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/syncm.html#fukuyama" target="_blank">Fukuyama CMD</a></div>
+  </div>
+</section>
+
+<!-- G -->
+<section class="letter-section" id="G">
+  <div class="letter-header">
+    <div class="letter-glyph">G</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#gan" target="_blank">GAN</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#gars" target="_blank">GARS1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/glycogen.html#branch" target="_blank">GBE1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#gdap1" target="_blank">GDAP1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#cx32" target="_blank">GJB1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#gjc2" target="_blank">GJC2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/distal.html#gne" target="_blank">GNE<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/dag2.htm#gmppb" target="_blank">GMPPB</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#gosr2" target="_blank">GOSR2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#grm1" target="_blank">GRM1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/glycogen.html#gsd" target="_blank">GYS1</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#gan" target="_blank">Giant axonal neuropathy</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#krabbe" target="_blank">Globoid cell leukodystrophy (Krabbe)</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#gracile" target="_blank">GRACILE syndrome</a></div>
+  </div>
+</section>
+
+<!-- H -->
+<section class="letter-section" id="H">
+  <div class="letter-header">
+    <div class="letter-glyph">H</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#lchadd" target="_blank">HADHA</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#lchadd" target="_blank">HADHB</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#hars" target="_blank">HARS1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#hint1" target="_blank">HINT1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/metatax.html#hk1" target="_blank">HK1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#hsd17b4" target="_blank">HSD17B4</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#hsd10" target="_blank">HSD17B10</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#hsf1" target="_blank">HSF1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#hspb1" target="_blank">HSPB1<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#hspb8" target="_blank">HSPB8<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#hd" target="_blank">HTT</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#hnpp" target="_blank">HNPP</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/dnarep.html#hh" target="_blank">Hoyeraal-Hreidarsson syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#hd" target="_blank">Huntington disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#hurler" target="_blank">Hurler syndrome</a></div>
+  </div>
+</section>
+
+<!-- I -->
+<section class="letter-section" id="I">
+  <div class="letter-header">
+    <div class="letter-glyph">I</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#idua" target="_blank">IDUA</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#ighmbp2" target="_blank">IGHMBP2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#inf2" target="_blank">INF2<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/dag2.htm#ispd" target="_blank">ISPD</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#itga7" target="_blank">ITGA7</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#itpr1" target="_blank">ITPR1</a></div>
+  </div>
+</section>
+
+<!-- J -->
+<section class="letter-section" id="J">
+  <div class="letter-header">
+    <div class="letter-glyph">J</div>
+    <div class="letter-stats">
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#joubert" target="_blank">Joubert syndrome</a></div>
+  </div>
+</section>
+
+<!-- K -->
+<section class="letter-section" id="K">
+  <div class="letter-header">
+    <div class="letter-glyph">K</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#kars" target="_blank">KARS1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#kbtbd13" target="_blank">KBTBD13</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#kif1a" target="_blank">KIF1A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#kif5a" target="_blank">KIF5A<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/peeom.html#kif21a" target="_blank">KIF21A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#kifbp" target="_blank">KIFBP</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#klc4" target="_blank">KLC4</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#klhl40" target="_blank">KLHL40</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#klhl41" target="_blank">KLHL41</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#kss" target="_blank">Kearns-Sayre syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/msys/myoglob.html#kd" target="_blank">King-Denborough syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#krabbe" target="_blank">Krabbe disease</a></div>
+  </div>
+</section>
+
+<!-- L -->
+<section class="letter-section" id="L">
+  <div class="letter-header">
+    <div class="letter-glyph">L</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#l1cam" target="_blank">L1CAM</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/metatax.html#l2hga" target="_blank">L2HGDH</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/dag2.htm#large" target="_blank">LARGE1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/glycogen.html#aa" target="_blank">LDHA</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#ldb3" target="_blank">LDB3 (ZASP)<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#litaf" target="_blank">LITAF</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#lmod3" target="_blank">LMOD3</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#lonp1" target="_blank">LONP1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmg.html#lrp4" target="_blank">LRP4</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#lrp12" target="_blank">LRP12</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#lrpprc" target="_blank">LRPPRC</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#lrsam1" target="_blank">LRSAM1<span class="dagger">†</span></a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#lafora" target="_blank">Lafora disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/musdist/distal.html#laing" target="_blank">Laing distal myopathy</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#lhon" target="_blank">Leber hereditary optic neuropathy</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#leigh" target="_blank">Leigh syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html" target="_blank">Limb-girdle muscular dystrophy (LGMD)</a></div>
+  </div>
+</section>
+
+<!-- M -->
+<section class="letter-section" id="M">
+  <div class="letter-header">
+    <div class="letter-glyph">M</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#mecp2" target="_blank">MECP2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#megf10" target="_blank">MEGF10</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#mfn2" target="_blank">MFN2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#morc2" target="_blank">MORC2<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#mpv17" target="_blank">MPV17</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#mpz" target="_blank">MPZ</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#mtm1" target="_blank">MTM1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#mtmr2" target="_blank">MTMR2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#mtmr13" target="_blank">MTMR13</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/cardiac2.htm#mybpc3" target="_blank">MYBPC3<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/contract.html#myh3" target="_blank">MYH3</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/distal.html#myh7" target="_blank">MYH7</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#myh14" target="_blank">MYH14</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/cardiac2.htm#myl2" target="_blank">MYL2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#mypn" target="_blank">MYPN</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/msys/myoglob.html#mh" target="_blank">Malignant hyperthermia</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#marinesco" target="_blank">Marinesco-Sjögren syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/msys/glycogen.html#mc" target="_blank">McArdle disease (GSD V)</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/syncm.html#multicore" target="_blank">Multicore/Minicore myopathy</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/syncm.html#xcnm" target="_blank">Myotubular myopathy (X-linked)</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#melas" target="_blank">MELAS</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#merrf" target="_blank">MERRF</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#miras" target="_blank">MIRAS</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/syncm.html#mobius" target="_blank">Möbius syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#mohrtranebjaerg" target="_blank">Mohr-Tranebjaerg syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#morquio" target="_blank">Morquio syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/msys/cardiac.html#mulibrey" target="_blank">Mulibrey nanism</a></div>
+  </div>
+</section>
+
+<!-- N -->
+<section class="letter-section" id="N">
+  <div class="letter-header">
+    <div class="letter-glyph">N</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#ndrg1" target="_blank">NDRG1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#nefl" target="_blank">NEFL</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#nf1" target="_blank">NF1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#nf2" target="_blank">NF2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hsn.htm#ngfb" target="_blank">NGFB</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#sca36" target="_blank">NOP56<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#npc1" target="_blank">NPC1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hsn.htm#ntrk1" target="_blank">NTRK1</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/msys/myoglob.html#nam" target="_blank">Native American Myopathy</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/syncm.html#rod" target="_blank">Nemaline rod myopathy</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/msys/cardiac2.htm#noonan" target="_blank">Noonan syndrome</a></div>
+  </div>
+</section>
+
+<!-- O -->
+<section class="letter-section" id="O">
+  <div class="letter-header">
+    <div class="letter-glyph">O</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#opa1" target="_blank">OPA1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#orai1" target="_blank">ORAI1</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/musdist/peeom.html#opmd" target="_blank">Oculopharyngeal MD (OPMD)<span class="dagger">†</span></a></div>
+  </div>
+</section>
+
+<!-- P -->
+<section class="letter-section" id="P">
+  <div class="letter-header">
+    <div class="letter-glyph">P</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#pank2" target="_blank">PANK2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#pdhcomplex" target="_blank">PDHA1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mother/peroxisome.html#pex" target="_blank">PEX1/2/7/10/12/16/26</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/glycogen.html#pgam" target="_blank">PGAM2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/glycogen.html#phka1" target="_blank">PHKA1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#phyh" target="_blank">PHYH</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/contract.html#piezo2" target="_blank">PIEZO2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#pla2g6" target="_blank">PLA2G6</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#plp1" target="_blank">PLP1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#pmm2" target="_blank">PMM2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#pmp22" target="_blank">PMP22</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/dnarep.html#pnkp" target="_blank">PNKP</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#pnpla6" target="_blank">PNPLA6</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#polg" target="_blank">POLG</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#polg2" target="_blank">POLG2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#polr3" target="_blank">POLR3A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#polr3" target="_blank">POLR3B</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/dag2.htm#pomgnt1" target="_blank">POMGNT1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/dag2.htm#pomgnt2" target="_blank">POMGNT2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/dag2.htm#pomt1" target="_blank">POMT1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/dag2.htm#pomt2" target="_blank">POMT2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/sensory-pain.html#prdm12" target="_blank">PRDM12</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmg.html#prepl" target="_blank">PREPL</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/myoglob.html#prkag2" target="_blank">PRKAG2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#sca14" target="_blank">PRKCG<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mtime/mepisodic.html#prrt2" target="_blank">PRRT2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/glycogen.html#mc" target="_blank">PYGM</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#pmld" target="_blank">Pelizaeus-Merzbacher disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/msys/contract.html#penashokeir" target="_blank">Pena-Shokeir syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#perrault" target="_blank">Perrault syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#pitthopkins" target="_blank">Pitt-Hopkins syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/msys/glycogen.html#am" target="_blank">Pompe disease (GSD II)</a></div>
+  </div>
+</section>
+
+<!-- R -->
+<section class="letter-section" id="R">
+  <div class="letter-header">
+    <div class="letter-glyph">R</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#rab7" target="_blank">RAB7A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmg.html#rapsyn" target="_blank">RAPSN</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#rfc1" target="_blank">RFC1<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/domatax.html#gordonholmes2" target="_blank">RNF216</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#cc" target="_blank">RYR1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/cardiac2.htm#ryr2" target="_blank">RYR2<span class="dagger">†</span></a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#refsum" target="_blank">Refsum disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#rett" target="_blank">Rett syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/time/hsn.htm#familial" target="_blank">Riley-Day syndrome (FD)</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/msys/myoglob.html#rippling" target="_blank">Rippling muscle syndrome</a></div>
+  </div>
+</section>
+
+<!-- S -->
+<section class="letter-section" id="S">
+  <div class="letter-header">
+    <div class="letter-glyph">S</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#cssa" target="_blank">SACS</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#sbf1" target="_blank">SBF1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#sbf2" target="_blank">SBF2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mtime/mepisodic.html#scn4a" target="_blank">SCN4A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/sensory-pain.html#scn9a" target="_blank">SCN9A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/sensory-pain.html#scn10a" target="_blank">SCN10A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/sensory-pain.html#scn11a" target="_blank">SCN11A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#sco2" target="_blank">SCO2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#sepn1" target="_blank">SEPN1 (SELENON)</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#serac1" target="_blank">SERAC1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#setx" target="_blank">SETX<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#sh3tc2" target="_blank">SH3TC2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#sil1" target="_blank">SIL1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/metatax.html#glut1" target="_blank">SLC2A1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#slc12a6" target="_blank">SLC12A6</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/cardiac.html#slc22a5" target="_blank">SLC22A5</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#slc25" target="_blank">SLC25A4</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#bvvls" target="_blank">SLC52A2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#bvvls" target="_blank">SLC52A3</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#smn" target="_blank">SMN1/2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/fsh.html#smchd1" target="_blank">SMCHD1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmg.html#snap25" target="_blank">SNAP25</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#sod1" target="_blank">SOD1<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#sord" target="_blank">SORD<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#sox10" target="_blank">SOX10</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#speg" target="_blank">SPEG</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/sensorylargesmall.html#sptlc1" target="_blank">SPTLC1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/sensorylargesmall.html#sptlc2" target="_blank">SPTLC2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/myoglob.html#nam" target="_blank">STAC3</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#stim1" target="_blank">STIM1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#sucla2" target="_blank">SUCLA2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#suclg1" target="_blank">SUCLG1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/edmd.html#syne1" target="_blank">SYNE1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/edmd.html#syne2" target="_blank">SYNE2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmg.html#syt2" target="_blank">SYT2</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#salla" target="_blank">Salla syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#sando" target="_blank">SANDO</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/syncm.html#sjampel" target="_blank">Schwartz-Jampel syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#sengers" target="_blank">Sengers syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#silver" target="_blank">Silver syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#sls" target="_blank">Sjögren-Larsson syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/msys/contract.html#stuve" target="_blank">Stuve-Wiedemann syndrome</a></div>
+  </div>
+</section>
+
+<!-- T -->
+<section class="letter-section" id="T">
+  <div class="letter-header">
+    <div class="letter-glyph">T</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#tango2" target="_blank">TANGO2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#tdp43" target="_blank">TARDBP (TDP-43)<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#tk2" target="_blank">TK2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/cardiac2.htm#tmem43" target="_blank">TMEM43<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#tnnt1" target="_blank">TNNT1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/msys/cardiac2.htm#tnnt2" target="_blank">TNNT2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#tor1a" target="_blank">TOR1A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/metatax.html#tpi1" target="_blank">TPI1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#tpm2" target="_blank">TPM2</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#tpm3" target="_blank">TPM3</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/dag2.htm#trappc11" target="_blank">TRAPPC11</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/sensory-pain.html#trpa1" target="_blank">TRPA1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/sensory-pain.html#trpv4" target="_blank">TRPV4</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/nother/amyloid.htm#ttr" target="_blank">TTR<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#tubb3" target="_blank">TUBB3</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#tubb4a" target="_blank">TUBB4A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#twnk" target="_blank">TWNK</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#tymp" target="_blank">TYMP</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/nanatomy/proxsens.html#tangier" target="_blank">Tangier disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/spinal/fsp.html#taysachs" target="_blank">Tay-Sachs disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/synmot.html#troyer" target="_blank">Troyer syndrome</a></div>
+  </div>
+</section>
+
+<!-- U -->
+<section class="letter-section" id="U">
+  <div class="letter-header">
+    <div class="letter-glyph">U</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/antibody/infmyop.htm#uba1" target="_blank">UBA1<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#unc45b" target="_blank">UNC45B</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/musdist/dag2.htm#ullrich" target="_blank">Ullrich CMD</a></div>
+  </div>
+</section>
+
+<!-- V -->
+<section class="letter-section" id="V">
+  <div class="letter-header">
+    <div class="letter-glyph">V</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#vcp" target="_blank">VCP<span class="dagger">†</span></a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#vldlr" target="_blank">VLDLR</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/musdist/lg.html#vma21" target="_blank">VMA21</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#vps13a" target="_blank">VPS13A</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#vps13d" target="_blank">VPS13D</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/synmot.html#vrk1" target="_blank">VRK1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#vwa1" target="_blank">VWA1</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#vici" target="_blank">Vici syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/metatax.html#wilson" target="_blank">Wilson disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#wolfram" target="_blank">Wolfram syndrome</a></div>
+  </div>
+</section>
+
+<!-- W -->
+<section class="letter-section" id="W">
+  <div class="letter-header">
+    <div class="letter-glyph">W</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/time/hmsn.html#wnk1" target="_blank">WNK1</a></div>
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/ataxia/recatax.html#wwox" target="_blank">WWOX</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/musdist/dag2.htm#ww" target="_blank">Walker-Warburg syndrome</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/synmot.html#werdnig" target="_blank">Werdnig-Hoffmann disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/ataxia/metatax.html#wilson" target="_blank">Wilson disease</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#wolfram" target="_blank">Wolfram syndrome</a></div>
+  </div>
+</section>
+
+<!-- Y -->
+<section class="letter-section" id="Y">
+  <div class="letter-header">
+    <div class="letter-glyph">Y</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/mitosyn.html#yars" target="_blank">YARS2</a></div>
+  </div>
+</section>
+
+<!-- Z -->
+<section class="letter-section" id="Z">
+  <div class="letter-header">
+    <div class="letter-glyph">Z</div>
+    <div class="letter-stats">
+      <span class="stat-badge gene">Genes</span>
+      <span class="stat-badge condition">Conditions</span>
+    </div>
+  </div>
+  <div class="entry-grid">
+    <div class="entry gene"><span class="entry-dot gene"></span><a href="https://neuromuscular.wustl.edu/syncm.html#zc4h2" target="_blank">ZC4H2</a></div>
+    <div class="entry condition"><span class="entry-dot condition"></span><a href="https://neuromuscular.wustl.edu/mother/peroxisome.html#zellweger" target="_blank">Zellweger syndrome</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Pediatric Neurogenetics Index — Filtered from <a href="https://neuromuscular.wustl.edu/alfindex.htm" target="_blank">Washington University Neuromuscular Disease Center</a></p>
+  <p>Only genes/conditions with dedicated clinical sections retained. Exclusively adult-onset entries excluded. † = predominantly adult with documented pediatric cases.</p>
+  <div class="footnote">
+    <strong>Caveats:</strong> Inclusion decisions are based on knowledge of the WashU site's structure as of early 2025 and may not reflect recent additions or reorganizations. Some links may not resolve precisely to their anchor if the source has been updated. A small number of borderline entries (genes with brief but named subsections) may have been conservatively excluded. Verification against the primary source is always recommended. Clinical decisions should never rely on this index alone — cross-reference OMIM, ClinVar, and Orphanet as appropriate.
+  </div>
+</footer>
+
+</body>
+</html>
