@@ -53,11 +53,11 @@ export function RotatingCategories() {
 
   return (
     <div style={{ marginTop: '10px' }}>
-      <RotatingLabel />
+      <RotatingLabel kind="Categories" />
       {!mounted ? (
         <SkeletonGrid />
       ) : (
-        <div className="nm-2col">
+        <div className="nm-2col-pinned">
           {items.map(cat => (
             <a
               key={cat.url}
@@ -166,11 +166,11 @@ export function RotatingConditions() {
 
   return (
     <div style={{ marginTop: '10px', marginBottom: '28px' }}>
-      <RotatingLabel />
+      <RotatingLabel kind="Conditions" />
       {!mounted ? (
         <SkeletonGrid />
       ) : (
-        <div className="nm-2col">
+        <div className="nm-2col-pinned">
           {items.map(cond => (
             <a
               key={cond.url}
@@ -228,7 +228,7 @@ export function RotatingConditions() {
 
 // ─── Shared helpers ───────────────────────────────────────────────────────────
 
-function RotatingLabel() {
+function RotatingLabel({ kind }: { kind: 'Conditions' | 'Categories' }) {
   return (
     <div style={{
       display: 'flex', alignItems: 'center', gap: '8px',
@@ -238,7 +238,7 @@ function RotatingLabel() {
         fontSize: '10px', fontWeight: 700, letterSpacing: '0.1em',
         textTransform: 'uppercase', color: '#94a3b8',
       }}>
-        Daily Spotlight
+        Daily Spotlight — {kind}
       </div>
       <span style={{
         fontSize: '9px', fontWeight: 600, letterSpacing: '0.06em',
@@ -255,7 +255,7 @@ function RotatingLabel() {
 
 function SkeletonGrid() {
   return (
-    <div className="nm-2col">
+    <div className="nm-2col-pinned">
       {[1, 2].map(i => (
         <div key={i} style={{
           background: '#fff', border: '1px solid #e2e8f0',
