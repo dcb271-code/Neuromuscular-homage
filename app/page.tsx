@@ -21,7 +21,7 @@ const CLINICAL_CATEGORIES = [
   { name: 'Peripheral Neuropathies',               color: '#2563eb', url: 'https://neuromuscular.wustl.edu/time/hmsn.html' },
   { name: 'NMJ Disorders',                         color: '#0891b2', url: 'https://neuromuscular.wustl.edu/synmg.html' },
   { name: 'Mitochondrial Disorders',               color: '#d97706', url: 'https://neuromuscular.wustl.edu/mitosyn.html' },
-  { name: 'Inherited Ataxias',                     color: '#16a34a', url: 'https://neuromuscular.wustl.edu/ataxia/recatax.html' },
+  { name: 'Hereditary Ataxia, Recessive',           color: '#16a34a', url: 'https://neuromuscular.wustl.edu/ataxia/recatax.html' },
   { name: 'Familial Spinal Cord Syndromes (SPG)',  color: '#0d9488', url: 'https://neuromuscular.wustl.edu/spinal/fsp.html' },
   { name: 'Acute Immune Polyneuropathies',         color: '#4f46e5', url: 'https://neuromuscular.wustl.edu/antibody/gbs.htm' },
   { name: 'Myopathy + CNS (Encephalomyopathy)',    color: '#be185d', url: 'https://neuromuscular.wustl.edu/msys/mcns.html' },
