@@ -230,7 +230,9 @@ export function FactoidOfDay() {
 
 // ─── Question of the Day ─────────────────────────────────────────────────────
 
-type Question = typeof dailyData.questions[0];
+type Question = typeof dailyData.questions[0] & {
+  resource?: { label: string; url: string };
+};
 
 export function QuestionOfDay() {
   const [mounted, setMounted] = useState(false);
@@ -348,6 +350,29 @@ export function QuestionOfDay() {
             <p style={{ fontSize: '12px', color: '#334155', lineHeight: 1.6, margin: 0 }}>
               {q.explanation}
             </p>
+            {q.resource && (
+              <a
+                href={q.resource.url}
+                target="_blank"
+                rel="noopener"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '5px',
+                  marginTop: '10px',
+                  fontSize: '11px', fontWeight: 600,
+                  color: '#2563eb',
+                  background: '#eff6ff',
+                  border: '1px solid #bfdbfe',
+                  borderRadius: '6px',
+                  padding: '4px 10px',
+                  textDecoration: 'none',
+                }}
+              >
+                {q.resource.label}
+                <svg width="9" height="9" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 10L10 2M10 2H5M10 2V7" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+            )}
           </div>
         )}
 
