@@ -14,7 +14,7 @@ const summary = indexData as Summary;
 
 // Hardcoded clinically-focused categories with direct wustl.edu links
 const CLINICAL_CATEGORIES = [
-  { name: 'Neuromuscular Syndromes',               color: '#64748b', url: 'https://neuromuscular.wustl.edu/' },
+  { name: 'Neuromuscular Syndromes',               color: '#64748b', url: 'https://neuromuscular.wustl.edu/syaltbrain.html' },
   { name: 'Muscular Dystrophies',                  color: '#7c3aed', url: 'https://neuromuscular.wustl.edu/musdist/dmd.html' },
   { name: 'Congenital & Pediatric Myopathies',     color: '#db2777', url: 'https://neuromuscular.wustl.edu/syncm.html' },
   { name: 'Motor Neuron Diseases',                 color: '#dc2626', url: 'https://neuromuscular.wustl.edu/synmot.html' },
