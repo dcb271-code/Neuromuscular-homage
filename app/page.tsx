@@ -254,7 +254,7 @@ function SiteHero() {
 }
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-const INDEX_BASE = 'https://neuromuscular.wustl.edu/alfindex.htm';
+const WUSTL_INDEX = 'https://neuromuscular.wustl.edu/alfindex.htm';
 
 function AlphabetIndex() {
   return (
@@ -272,9 +272,7 @@ function AlphabetIndex() {
       {ALPHABET.map(letter => (
         <a
           key={letter}
-          href={`${INDEX_BASE}#${letter}`}
-          target="_blank"
-          rel="noopener"
+          href={`/browse/${letter}`}
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -295,7 +293,7 @@ function AlphabetIndex() {
         </a>
       ))}
       <a
-        href={INDEX_BASE}
+        href={WUSTL_INDEX}
         target="_blank"
         rel="noopener"
         style={{
