@@ -14,7 +14,6 @@ const summary = indexData as Summary;
 
 // Hardcoded clinically-focused categories with direct wustl.edu links
 const CLINICAL_CATEGORIES = [
-  { name: 'Neuromuscular Syndromes',               color: '#64748b', url: 'https://neuromuscular.wustl.edu/syaltbrain.html' },
   { name: 'Muscular Dystrophies',                  color: '#7c3aed', url: 'https://neuromuscular.wustl.edu/musdist/dmd.html' },
   { name: 'Congenital & Pediatric Myopathies',     color: '#db2777', url: 'https://neuromuscular.wustl.edu/syncm.html' },
   { name: 'Motor Neuron Diseases',                 color: '#dc2626', url: 'https://neuromuscular.wustl.edu/synmot.html' },
@@ -26,6 +25,7 @@ const CLINICAL_CATEGORIES = [
   { name: 'Acute Immune Polyneuropathies',         color: '#4f46e5', url: 'https://neuromuscular.wustl.edu/antibody/gbs.htm' },
   { name: 'Myopathy + CNS (Encephalomyopathy)',    color: '#be185d', url: 'https://neuromuscular.wustl.edu/msys/mcns.html' },
   { name: 'Episodic Muscle Weakness',             color: '#d97706', url: 'https://neuromuscular.wustl.edu/mtime/mepisodic.html' },
+  { name: 'Myoglobinuria / Rhabdomyolysis',       color: '#dc2626', url: 'https://neuromuscular.wustl.edu/msys/myoglob.html' },
 ];
 
 // Hardcoded featured pediatric NMD conditions
@@ -137,7 +137,7 @@ export default function Home() {
       </div>
 
       {/* ── Featured conditions ──────────────────────────────────────── */}
-      <SectionLabel>Common Pediatric Neuromuscular Conditions</SectionLabel>
+      <SectionLabel>Select Neuromuscular Conditions</SectionLabel>
       <FeaturedConditions conditions={FEATURED_CONDITIONS} />
 
       {/* ── Browse by Category + alphabet index ──────────────────────── */}
