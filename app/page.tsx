@@ -145,19 +145,13 @@ export default function Home() {
       <SectionLabel>Common Pediatric Neuromuscular Conditions</SectionLabel>
       <FeaturedConditions conditions={FEATURED_CONDITIONS} />
 
-      {/* ── Browse by Category ───────────────────────────────────────── */}
+      {/* ── Browse by Category + alphabet index ──────────────────────── */}
       <div style={{ marginTop: '28px' }}>
         <SectionLabel>Browse by Category</SectionLabel>
-        <CategoryGrid
-          items={CLINICAL_CATEGORIES}
-          totalCount={summary.totalSections}
-        />
-      </div>
-
-      {/* ── Horizontal alphabet index ─────────────────────────────────── */}
-      <div style={{ marginTop: '20px' }}>
-        <SectionLabel>Index</SectionLabel>
-        <AlphabetIndex />
+        <CategoryGrid items={CLINICAL_CATEGORIES} />
+        <div style={{ marginTop: '8px' }}>
+          <AlphabetIndex />
+        </div>
       </div>
 
       {/* ── Stats bar at bottom ──────────────────────────────────────── */}
@@ -317,19 +311,21 @@ function AlphabetIndex() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          marginLeft: '4px',
-          width: '26px',
+          gap: '4px',
+          marginLeft: '6px',
           height: '26px',
-          fontSize: '12px',
-          fontWeight: 500,
-          color: '#64748b',
-          background: '#f8fafc',
-          border: '1px solid #e2e8f0',
+          padding: '0 10px',
+          fontSize: '11px',
+          fontWeight: 600,
+          color: '#475569',
+          background: '#f1f5f9',
+          border: '1px solid #cbd5e1',
           borderRadius: '5px',
           textDecoration: 'none',
+          whiteSpace: 'nowrap',
         }}
       >
-        ↗
+        A–Z Index ↗
       </a>
     </div>
   );
