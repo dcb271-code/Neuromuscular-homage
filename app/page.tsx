@@ -1,5 +1,4 @@
 import indexData from '@/src/data/index.json';
-import searchData from '@/src/data/search.json';
 import { GeneOfDay, FactoidOfDay, QuestionOfDay } from '@/components/DailyWidgets';
 import CategoryGrid from '@/components/CategoryGrid';
 import FeaturedConditions from '@/components/FeaturedConditions';
@@ -9,56 +8,21 @@ type Summary = {
   totalSections: number;
   withGenes: number;
   withInheritance: number;
-  categories: string[];
-};
-
-type RawChunk = {
-  name: string;
-  category: string;
-  genes: string;
-  url: string;
-  anchor: string;
 };
 
 const summary = indexData as Summary;
-const chunks = searchData as RawChunk[];
 
-const SKIP_CATS = new Set(['Overview / Fellowship', 'General']);
-const visibleCats = summary.categories.filter(c => !SKIP_CATS.has(c));
-
-// Filter out internal anchor IDs, reference stubs, numbered items, and other junk
-function isGoodEntry(name: string): boolean {
-  const n = name.trim();
-  if (n.length < 4) return false;
-  if (/^[●•*\-\s~]+$/.test(n)) return false;
-  if (/^[a-z][a-z0-9]*$/.test(n)) return false;
-  if (/^ref\d+/i.test(n)) return false;
-  if (/^\d+\.?$/.test(n)) return false;
-  if (/^\d[a-z0-9]+$/.test(n)) return false;
-  if (!/\s/.test(n) && n.length <= 6 && !/^[A-Z][A-Z0-9\-]+$/.test(n)) return false;
-  const blocklist = new Set(['Forms', 'Other', 'Drugs', 'Trunk', 'Roots',
-    'NERVE', 'HUMOR', 'HOAX', 'Immune', 'Toxins', 'Genetics', 'Treatment',
-    'Introduction', 'Summary', 'General', 'Cramps', 'Overview']);
-  if (blocklist.has(n)) return false;
-  return true;
-}
-
-function cleanName(n: string): string {
-  return n.replace(/[\n\s]+\d+\s*$/, '').replace(/\n+/g, ' ').trim();
-}
-
-function isConditionEntry(entry: RawChunk): boolean {
-  const n = entry.name.toLowerCase();
-  return /dystrophy|syndrome|myopathy|neuropathy|disease|atrophy|palsy|myositis|paralysis|encephalopathy|ataxia|sclerosis|deficiency|neuronopathy|channelopathy|cardiomyopathy|myotonia|polyneuropathy/.test(n)
-    || (entry.genes.trim().length > 0 && entry.genes.trim().length < 50);
-}
-
-// Compute top 3 condition entries per category for preview pills
-const categoryPreviews: Record<string, { name: string }[]> = {};
-for (const cat of visibleCats) {
-  const entries = chunks.filter(c => c.category === cat && isGoodEntry(c.name) && isConditionEntry(c));
-  categoryPreviews[cat] = entries.slice(0, 3).map(e => ({ name: cleanName(e.name).slice(0, 48) }));
-}
+// Hardcoded clinically-focused categories with direct wustl.edu links
+const CLINICAL_CATEGORIES = [
+  { name: 'Muscular Dystrophies',              color: '#7c3aed', url: 'https://neuromuscular.wustl.edu/musdist/dmd.html' },
+  { name: 'Congenital & Pediatric Myopathies', color: '#db2777', url: 'https://neuromuscular.wustl.edu/syncm.html' },
+  { name: 'Motor Neuron Diseases',             color: '#dc2626', url: 'https://neuromuscular.wustl.edu/synmot.html' },
+  { name: 'Peripheral Neuropathies',           color: '#2563eb', url: 'https://neuromuscular.wustl.edu/time/hmsn.html' },
+  { name: 'NMJ Disorders',                     color: '#0891b2', url: 'https://neuromuscular.wustl.edu/synmg.html' },
+  { name: 'Mitochondrial & Metabolic Myopathies', color: '#d97706', url: 'https://neuromuscular.wustl.edu/mitosyn.html' },
+  { name: 'Ataxia/Cerebellar',                 color: '#16a34a', url: 'https://neuromuscular.wustl.edu/ataxia/recatax.html' },
+  { name: 'Immune/Antibody-Mediated',          color: '#4f46e5', url: 'https://neuromuscular.wustl.edu/antibody/pnimdem.html' },
+];
 
 // Hardcoded featured pediatric NMD conditions
 const FEATURED_CONDITIONS = [
@@ -98,11 +62,11 @@ const FEATURED_CONDITIONS = [
     url: 'https://neuromuscular.wustl.edu/msys/contract.html',
   },
   {
-    label: 'Chronic Inflammatory Demyelinating Polyneuropathy',
-    abbr: 'CIDP',
+    label: 'AIDP / Guillain–Barré Syndrome',
+    abbr: 'GBS',
     gene: '',
     color: '#0891b2',
-    url: 'https://neuromuscular.wustl.edu/antibody/pnimdem.html#Chronic%20Immune%20Demyelinating%20Polyneuropathy%20(CIDP)',
+    url: 'https://neuromuscular.wustl.edu/antibody/gbs.htm',
   },
   {
     label: 'Myasthenia Gravis',
@@ -119,11 +83,32 @@ const FEATURED_CONDITIONS = [
     url: 'https://neuromuscular.wustl.edu/mitosyn.html#MITOCHONDRIAL%20DISORDERS',
   },
   {
-    label: 'Periodic Paralysis',
-    abbr: 'PP',
-    gene: 'SCN4A / CACNA1S',
-    color: '#d97706',
-    url: 'https://neuromuscular.wustl.edu/mtime/mepisodic.html#Hypokalemic%20Periodic%20Paralysis',
+    label: 'Friedreich Ataxia',
+    abbr: 'FRDA',
+    gene: 'FXN',
+    color: '#16a34a',
+    url: 'https://neuromuscular.wustl.edu/ataxia/recatax.html#Friedreich%20Ataxia',
+  },
+  {
+    label: 'Limb-Girdle Muscular Dystrophy',
+    abbr: 'LGMD',
+    gene: 'Multiple',
+    color: '#7c3aed',
+    url: 'https://neuromuscular.wustl.edu/musdist/lg.html',
+  },
+  {
+    label: 'Collagen VI Myopathies (Bethlem / Ullrich)',
+    abbr: 'COL6',
+    gene: 'COL6A1-3',
+    color: '#db2777',
+    url: 'https://neuromuscular.wustl.edu/syncm.html',
+  },
+  {
+    label: 'Hereditary Neuropathy w/ Pressure Palsies',
+    abbr: 'HNPP',
+    gene: 'PMP22',
+    color: '#2563eb',
+    url: 'https://neuromuscular.wustl.edu/time/hmsn.html#Hereditary%20Liability%20to%20Pressure%20Palsies%20(HNPP)',
   },
 ];
 
@@ -159,25 +144,24 @@ export default function Home() {
       {/* ── Browse by Category + vertical alphabet sidebar ───────────── */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: '1fr 80px',
+        gridTemplateColumns: '80px 1fr',
         gap: '20px',
         alignItems: 'start',
         marginTop: '28px',
       }}>
-        {/* Category grid */}
-        <div>
-          <SectionLabel>Browse by Category</SectionLabel>
-          <CategoryGrid
-            categories={visibleCats}
-            totalCount={summary.totalSections}
-            previews={categoryPreviews}
-          />
-        </div>
-
         {/* Vertical alphabet index */}
         <div>
           <SectionLabel>Index</SectionLabel>
           <AlphabetIndex />
+        </div>
+
+        {/* Category grid */}
+        <div>
+          <SectionLabel>Browse by Category</SectionLabel>
+          <CategoryGrid
+            items={CLINICAL_CATEGORIES}
+            totalCount={summary.totalSections}
+          />
         </div>
       </div>
 
