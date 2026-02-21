@@ -204,13 +204,13 @@ function SiteHero() {
         marginBottom: '10px',
       }}>
         <span style={{
-          fontSize: '15px',
-          fontWeight: 500,
+          fontSize: '22px',
+          fontWeight: 600,
           color: '#94a3b8',
-          letterSpacing: '0.04em',
+          letterSpacing: '0.4em',
           textTransform: 'uppercase',
           display: 'block',
-          marginBottom: '6px',
+          marginBottom: '4px',
         }}>
           Neuromuscular
         </span>
