@@ -10,7 +10,7 @@ export default function CategoryGrid({ items, totalCount }: {
 }) {
   return (
     <>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '8px' }}>
         {items.map(cat => (
           <a
             key={cat.name}

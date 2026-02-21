@@ -145,28 +145,19 @@ export default function Home() {
       <SectionLabel>Common Pediatric Neuromuscular Conditions</SectionLabel>
       <FeaturedConditions conditions={FEATURED_CONDITIONS} />
 
-      {/* ── Browse by Category + vertical alphabet sidebar ───────────── */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: '80px 1fr',
-        gap: '20px',
-        alignItems: 'start',
-        marginTop: '28px',
-      }}>
-        {/* Vertical alphabet index */}
-        <div>
-          <SectionLabel>Index</SectionLabel>
-          <AlphabetIndex />
-        </div>
+      {/* ── Browse by Category ───────────────────────────────────────── */}
+      <div style={{ marginTop: '28px' }}>
+        <SectionLabel>Browse by Category</SectionLabel>
+        <CategoryGrid
+          items={CLINICAL_CATEGORIES}
+          totalCount={summary.totalSections}
+        />
+      </div>
 
-        {/* Category grid */}
-        <div>
-          <SectionLabel>Browse by Category</SectionLabel>
-          <CategoryGrid
-            items={CLINICAL_CATEGORIES}
-            totalCount={summary.totalSections}
-          />
-        </div>
+      {/* ── Horizontal alphabet index ─────────────────────────────────── */}
+      <div style={{ marginTop: '20px' }}>
+        <SectionLabel>Index</SectionLabel>
+        <AlphabetIndex />
       </div>
 
       {/* ── Stats bar at bottom ──────────────────────────────────────── */}
@@ -286,10 +277,12 @@ function AlphabetIndex() {
       background: '#fff',
       border: '1px solid #e2e8f0',
       borderRadius: '12px',
-      padding: '8px 6px',
+      padding: '10px 12px',
       display: 'flex',
-      flexDirection: 'column',
-      gap: '2px',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      gap: '4px',
+      alignItems: 'center',
     }}>
       {ALPHABET.map(letter => (
         <a
@@ -301,7 +294,8 @@ function AlphabetIndex() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            height: '22px',
+            width: '26px',
+            height: '26px',
             fontSize: '11px',
             fontWeight: 700,
             letterSpacing: '0.05em',
@@ -315,7 +309,6 @@ function AlphabetIndex() {
           {letter}
         </a>
       ))}
-      {/* Full index link */}
       <a
         href={INDEX_BASE}
         target="_blank"
@@ -324,9 +317,10 @@ function AlphabetIndex() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          marginTop: '4px',
-          height: '22px',
-          fontSize: '10px',
+          marginLeft: '4px',
+          width: '26px',
+          height: '26px',
+          fontSize: '12px',
           fontWeight: 500,
           color: '#64748b',
           background: '#f8fafc',
