@@ -3,10 +3,19 @@
 import { useState, useEffect } from 'react';
 import dailyData from '@/src/data/daily.json';
 
-// Day index seeded by calendar day (resets each calendar day)
+// Day index seeded by calendar date in Eastern Time (resets at 12 AM EST/EDT)
 function todayIndex() {
-  const d = new Date();
-  return Math.floor(d.getFullYear() * 1000 + (d.getMonth() + 1) * 31 + d.getDate());
+  const now = new Date();
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/New_York',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(now);
+  const year  = parseInt(parts.find(p => p.type === 'year')!.value);
+  const month = parseInt(parts.find(p => p.type === 'month')!.value);
+  const day   = parseInt(parts.find(p => p.type === 'day')!.value);
+  return year * 10000 + month * 100 + day;
 }
 
 function pick<T>(arr: T[]): T {
