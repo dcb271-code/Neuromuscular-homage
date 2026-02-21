@@ -14,14 +14,17 @@ const summary = indexData as Summary;
 
 // Hardcoded clinically-focused categories with direct wustl.edu links
 const CLINICAL_CATEGORIES = [
-  { name: 'Muscular Dystrophies',              color: '#7c3aed', url: 'https://neuromuscular.wustl.edu/musdist/dmd.html' },
-  { name: 'Congenital & Pediatric Myopathies', color: '#db2777', url: 'https://neuromuscular.wustl.edu/syncm.html' },
-  { name: 'Motor Neuron Diseases',             color: '#dc2626', url: 'https://neuromuscular.wustl.edu/synmot.html' },
-  { name: 'Peripheral Neuropathies',           color: '#2563eb', url: 'https://neuromuscular.wustl.edu/time/hmsn.html' },
-  { name: 'NMJ Disorders',                     color: '#0891b2', url: 'https://neuromuscular.wustl.edu/synmg.html' },
-  { name: 'Mitochondrial & Metabolic Myopathies', color: '#d97706', url: 'https://neuromuscular.wustl.edu/mitosyn.html' },
-  { name: 'Ataxia/Cerebellar',                 color: '#16a34a', url: 'https://neuromuscular.wustl.edu/ataxia/recatax.html' },
-  { name: 'Immune/Antibody-Mediated',          color: '#4f46e5', url: 'https://neuromuscular.wustl.edu/antibody/pnimdem.html' },
+  { name: 'Neuromuscular Syndromes',               color: '#64748b', url: 'https://neuromuscular.wustl.edu/' },
+  { name: 'Muscular Dystrophies',                  color: '#7c3aed', url: 'https://neuromuscular.wustl.edu/musdist/dmd.html' },
+  { name: 'Congenital & Pediatric Myopathies',     color: '#db2777', url: 'https://neuromuscular.wustl.edu/syncm.html' },
+  { name: 'Motor Neuron Diseases',                 color: '#dc2626', url: 'https://neuromuscular.wustl.edu/synmot.html' },
+  { name: 'Peripheral Neuropathies',               color: '#2563eb', url: 'https://neuromuscular.wustl.edu/time/hmsn.html' },
+  { name: 'NMJ Disorders',                         color: '#0891b2', url: 'https://neuromuscular.wustl.edu/synmg.html' },
+  { name: 'Mitochondrial Disorders',               color: '#d97706', url: 'https://neuromuscular.wustl.edu/mitosyn.html' },
+  { name: 'Inherited Ataxias',                     color: '#16a34a', url: 'https://neuromuscular.wustl.edu/ataxia/recatax.html' },
+  { name: 'Familial Spinal Cord Syndromes (SPG)',  color: '#0d9488', url: 'https://neuromuscular.wustl.edu/spinal/fsp.html' },
+  { name: 'Acute Immune Polyneuropathies',         color: '#4f46e5', url: 'https://neuromuscular.wustl.edu/antibody/gbs.htm' },
+  { name: 'Myopathy + CNS (Encephalomyopathy)',    color: '#be185d', url: 'https://neuromuscular.wustl.edu/msys/mcns.html' },
 ];
 
 // Hardcoded featured pediatric NMD conditions
