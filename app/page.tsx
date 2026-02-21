@@ -216,23 +216,23 @@ function SiteHero() {
         </span>
         <span style={{ display: 'inline-flex', alignItems: 'baseline', gap: 0 }}>
           <span style={{
-            fontSize: '52px',
+            fontSize: '72px',
             fontWeight: 800,
             color: '#60a5fa',
             letterSpacing: '-2px',
           }}>HOM</span>
           <span style={{
-            fontSize: '20px',
+            fontSize: '28px',
             fontWeight: 600,
             color: '#93c5fd',
             opacity: 0.7,
             letterSpacing: '0.02em',
             verticalAlign: 'middle',
             position: 'relative',
-            top: '-4px',
+            top: '-6px',
           }}>ep</span>
           <span style={{
-            fontSize: '52px',
+            fontSize: '72px',
             fontWeight: 800,
             color: '#60a5fa',
             letterSpacing: '-2px',
