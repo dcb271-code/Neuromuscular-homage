@@ -17,6 +17,9 @@ type Chunk = {
 
 const SKIP_CATS = new Set(['Overview / Fellowship', 'General']);
 
+// Module-level cache — avoids re-fetching 9 MB on every mount / navigation
+let cachedChunks: Chunk[] | null = null;
+
 // Exclude internal anchor stubs, reference stubs, numbered items, and other non-informative entries
 function isGoodEntry(name: string): boolean {
   const n = name.trim();
@@ -73,10 +76,16 @@ function BrowseInner() {
   const [query, setQuery] = useState('');
 
   useEffect(() => {
+    if (cachedChunks) {
+      setAllChunks(cachedChunks);
+      setLoading(false);
+      return;
+    }
     fetch('/search.json')
       .then(r => r.json())
       .then((data: Chunk[]) => {
-        setAllChunks(data.filter(c => !SKIP_CATS.has(c.category) && isGoodEntry(c.name)));
+        cachedChunks = data.filter(c => !SKIP_CATS.has(c.category) && isGoodEntry(c.name));
+        setAllChunks(cachedChunks);
         setLoading(false);
       });
   }, []);

@@ -1,21 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-
-// Timezone-aware date index — resets at midnight EST/EDT
-function todayIndex() {
-  const now = new Date();
-  const parts = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'America/New_York',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-  }).formatToParts(now);
-  const year  = parseInt(parts.find(p => p.type === 'year')!.value);
-  const month = parseInt(parts.find(p => p.type === 'month')!.value);
-  const day   = parseInt(parts.find(p => p.type === 'day')!.value);
-  return year * 10000 + month * 100 + day;
-}
+import { todayIndex } from '@/src/utils';
 
 // Pick 2 items from opposite halves of the pool — no same-day overlap
 function pick2<T>(arr: T[]): [T, T] {

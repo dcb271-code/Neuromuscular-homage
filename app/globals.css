@@ -32,6 +32,12 @@
   .nm-hide-sm { display: none !important; }
 }
 
+/* Only visible on small screens */
+.nm-show-sm { display: none !important; }
+@media (max-width: 640px) {
+  .nm-show-sm { display: inline !important; }
+}
+
 /* Inheritance badges */
 .badge {
   @apply inline-block text-xs font-medium px-2 py-0.5 rounded-full;

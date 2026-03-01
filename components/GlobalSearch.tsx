@@ -110,6 +110,7 @@ export default function GlobalSearch() {
           value={query}
           onChange={e => { setQuery(e.target.value); setOpen(true); }}
           onFocus={() => setOpen(true)}
+          aria-label="Search conditions, genes, or OMIM IDs"
           className="search-input-placeholder"
           style={{ flex: 1, background: 'transparent', border: 'none', outline: 'none',
             color: 'white', fontSize: '13px', minWidth: 0 }}

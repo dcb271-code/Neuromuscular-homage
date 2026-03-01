@@ -46,10 +46,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <GlobalSearch />
             </div>
 
-            {/* Nav */}
+            {/* Nav — full on desktop */}
             <nav className="nm-hide-sm" style={{ display: 'flex', gap: '4px', flexShrink: 0 }}>
               <NavLink href="/browse">Browse</NavLink>
             </nav>
+            {/* Nav — compact on mobile */}
+            <a href="/browse" className="nm-show-sm"
+              style={{
+                flexShrink: 0,
+                fontSize: '11px',
+                fontWeight: 600,
+                color: '#60a5fa',
+                textDecoration: 'none',
+              }}
+            >A–Z</a>
           </div>
         </header>
 
