@@ -6,6 +6,14 @@ import type { IndexEntry } from '@/src/data/curatedIndex';
 const ALL_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const WUSTL_INDEX = 'https://neuromuscular.wustl.edu/alfindex.htm';
 
+function cleanGeneSymbol(raw: string) {
+  return raw.split(/[\s(]/)[0].trim().toUpperCase();
+}
+
+function slugify(name: string) {
+  return name.toLowerCase().replace(/['']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
 export default function LetterPageClient({
   letter,
   entries,
@@ -18,7 +26,7 @@ export default function LetterPageClient({
 
   return (
     <div>
-      {/* ── Breadcrumb ─────────────────────────────────────────────────── */}
+      {/* Breadcrumb */}
       <div style={{ marginBottom: '20px', fontSize: '12px', color: '#94a3b8' }}>
         <Link href="/" style={{ color: '#94a3b8', textDecoration: 'none' }}>Home</Link>
         <span style={{ margin: '0 6px' }}>/</span>
@@ -27,7 +35,7 @@ export default function LetterPageClient({
         <span style={{ color: '#1e293b', fontWeight: 600 }}>{letter}</span>
       </div>
 
-      {/* ── Letter nav strip ───────────────────────────────────────────── */}
+      {/* Letter nav strip */}
       <div style={{
         display: 'flex', flexWrap: 'wrap', gap: '4px',
         marginBottom: '20px',
@@ -65,11 +73,11 @@ export default function LetterPageClient({
             borderRadius: '5px', textDecoration: 'none', whiteSpace: 'nowrap',
           }}
         >
-          A–Z Index ↗
+          A-Z Index
         </a>
       </div>
 
-      {/* ── Legend ─────────────────────────────────────────────────────── */}
+      {/* Legend */}
       <div style={{
         background: '#f8fafc', border: '1px solid #e2e8f0',
         borderRadius: '10px', padding: '10px 14px',
@@ -83,19 +91,19 @@ export default function LetterPageClient({
             color: '#2563eb', fontWeight: 700, fontSize: '11px',
             background: '#eff6ff', padding: '1px 5px', borderRadius: '4px',
           }}>GENE</span>
-          {' '}— gene symbol
+          {' '} -- gene symbol (links to gene page)
         </span>
         <span>
           <span style={{ color: '#1e293b', fontWeight: 500 }}>Condition</span>
-          {' '}— named syndrome or disease
+          {' '} -- named syndrome or disease
         </span>
         <span>
-          <span style={{ color: '#f59e0b', fontWeight: 700 }}>†</span>
-          {' '}— predominantly adult-onset; pediatric cases documented
+          <span style={{ color: '#f59e0b', fontWeight: 700 }}>+</span>
+          {' '} -- predominantly adult-onset; pediatric cases documented
         </span>
       </div>
 
-      {/* ── Page heading ───────────────────────────────────────────────── */}
+      {/* Page heading */}
       <div style={{ marginBottom: '24px' }}>
         <span style={{
           fontFamily: 'ui-monospace, "Cascadia Code", "SF Mono", monospace',
@@ -105,7 +113,7 @@ export default function LetterPageClient({
           <span style={{ fontSize: '13px', color: '#94a3b8', marginLeft: '12px', fontWeight: 500 }}>
             {entries.length} {entries.length === 1 ? 'entry' : 'entries'}
             {genes.length > 0 && conditions.length > 0 && (
-              <> · {genes.length} gene{genes.length !== 1 ? 's' : ''}, {conditions.length} condition{conditions.length !== 1 ? 's' : ''}</>
+              <> &middot; {genes.length} gene{genes.length !== 1 ? 's' : ''}, {conditions.length} condition{conditions.length !== 1 ? 's' : ''}</>
             )}
           </span>
         )}
@@ -121,7 +129,7 @@ export default function LetterPageClient({
       ) : (
         <div style={{ display: 'grid', gap: '32px' }}>
 
-          {/* Genes */}
+          {/* Genes — link to local /gene/SYMBOL pages */}
           {genes.length > 0 && (
             <section>
               <div style={{
@@ -131,46 +139,36 @@ export default function LetterPageClient({
                 Gene Symbols ({genes.length})
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                {genes.map(entry => (
-                  <a
-                    key={entry.name}
-                    href={entry.href}
-                    target="_blank"
-                    rel="noopener"
-                    style={{
-                      display: 'inline-flex', alignItems: 'center', gap: '5px',
-                      padding: '5px 10px',
-                      background: '#eff6ff',
-                      border: '1px solid #bfdbfe',
-                      borderRadius: '6px',
-                      textDecoration: 'none',
-                      fontFamily: 'ui-monospace, "Cascadia Code", "SF Mono", monospace',
-                      fontSize: '12px', fontWeight: 600, color: '#2563eb',
-                      transition: 'border-color 0.1s, background 0.1s',
-                    }}
-                    onMouseEnter={e => {
-                      (e.currentTarget as HTMLElement).style.background = '#dbeafe';
-                      (e.currentTarget as HTMLElement).style.borderColor = '#93c5fd';
-                    }}
-                    onMouseLeave={e => {
-                      (e.currentTarget as HTMLElement).style.background = '#eff6ff';
-                      (e.currentTarget as HTMLElement).style.borderColor = '#bfdbfe';
-                    }}
-                  >
-                    {entry.name}
-                    {entry.dagger && (
-                      <span style={{ color: '#f59e0b', fontSize: '11px', fontWeight: 700 }}>†</span>
-                    )}
-                    <svg width="9" height="9" viewBox="0 0 12 12" fill="none" style={{ flexShrink: 0, opacity: 0.5 }}>
-                      <path d="M2 10L10 2M10 2H5M10 2V7" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </a>
-                ))}
+                {genes.map(entry => {
+                  const sym = cleanGeneSymbol(entry.name);
+                  return (
+                    <Link
+                      key={entry.name}
+                      href={`/gene/${sym}`}
+                      style={{
+                        display: 'inline-flex', alignItems: 'center', gap: '5px',
+                        padding: '5px 10px',
+                        background: '#eff6ff',
+                        border: '1px solid #bfdbfe',
+                        borderRadius: '6px',
+                        textDecoration: 'none',
+                        fontFamily: 'ui-monospace, "Cascadia Code", "SF Mono", monospace',
+                        fontSize: '12px', fontWeight: 600, color: '#2563eb',
+                        transition: 'border-color 0.1s, background 0.1s',
+                      }}
+                    >
+                      {entry.name}
+                      {entry.dagger && (
+                        <span style={{ color: '#f59e0b', fontSize: '11px', fontWeight: 700 }}>+</span>
+                      )}
+                    </Link>
+                  );
+                })}
               </div>
             </section>
           )}
 
-          {/* Conditions */}
+          {/* Conditions — link to local /condition/slug pages */}
           {conditions.length > 0 && (
             <section>
               <div style={{
@@ -180,41 +178,34 @@ export default function LetterPageClient({
                 Conditions ({conditions.length})
               </div>
               <div style={{ display: 'grid', gap: '6px' }}>
-                {conditions.map(entry => (
-                  <a
-                    key={entry.name}
-                    href={entry.href}
-                    target="_blank"
-                    rel="noopener"
-                    style={{
-                      display: 'flex', alignItems: 'center', gap: '10px',
-                      padding: '10px 14px',
-                      background: '#fff',
-                      border: '1px solid #e2e8f0',
-                      borderRadius: '10px',
-                      textDecoration: 'none',
-                      transition: 'border-color 0.15s, box-shadow 0.15s',
-                    }}
-                    onMouseEnter={e => {
-                      (e.currentTarget as HTMLElement).style.borderColor = '#cbd5e1';
-                      (e.currentTarget as HTMLElement).style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)';
-                    }}
-                    onMouseLeave={e => {
-                      (e.currentTarget as HTMLElement).style.borderColor = '#e2e8f0';
-                      (e.currentTarget as HTMLElement).style.boxShadow = 'none';
-                    }}
-                  >
-                    <span style={{ fontSize: '13px', fontWeight: 500, color: '#1e293b', flex: 1, lineHeight: 1.4 }}>
-                      {entry.name}
-                      {entry.dagger && (
-                        <span style={{ color: '#f59e0b', marginLeft: '5px', fontWeight: 700, fontSize: '12px' }}>†</span>
-                      )}
-                    </span>
-                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" style={{ flexShrink: 0 }}>
-                      <path d="M2 10L10 2M10 2H5M10 2V7" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </a>
-                ))}
+                {conditions.map(entry => {
+                  const slug = slugify(entry.name);
+                  return (
+                    <Link
+                      key={entry.name}
+                      href={`/condition/${slug}`}
+                      style={{
+                        display: 'flex', alignItems: 'center', gap: '10px',
+                        padding: '10px 14px',
+                        background: '#fff',
+                        border: '1px solid #e2e8f0',
+                        borderRadius: '10px',
+                        textDecoration: 'none',
+                        transition: 'border-color 0.15s, box-shadow 0.15s',
+                      }}
+                    >
+                      <span style={{ fontSize: '13px', fontWeight: 500, color: '#1e293b', flex: 1, lineHeight: 1.4 }}>
+                        {entry.name}
+                        {entry.dagger && (
+                          <span style={{ color: '#f59e0b', marginLeft: '5px', fontWeight: 700, fontSize: '12px' }}>+</span>
+                        )}
+                      </span>
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" style={{ flexShrink: 0 }}>
+                        <path d="M4 2L10 6L4 10" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </Link>
+                  );
+                })}
               </div>
             </section>
           )}
@@ -225,15 +216,12 @@ export default function LetterPageClient({
       {/* Bottom attribution */}
       <p style={{ fontSize: '11px', color: '#cbd5e1', marginTop: '32px' }}>
         Data sourced from the{' '}
-        <a
-          href="https://neuromuscular.wustl.edu"
-          target="_blank"
-          rel="noopener"
-          style={{ color: '#94a3b8', textDecoration: 'none' }}
-        >
+        <a href="https://neuromuscular.wustl.edu" target="_blank" rel="noopener"
+          style={{ color: '#94a3b8', textDecoration: 'none' }}>
           Washington University Neuromuscular Disease Center
-        </a>.
-        For clinical use, always refer to the primary source.
+        </a>
+        , NCBI Gene, and OMIM.
+        For clinical use, always refer to primary sources.
       </p>
     </div>
   );

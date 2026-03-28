@@ -1,21 +1,20 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import Fuse, { type FuseResult } from 'fuse.js';
+import Link from 'next/link';
 
 type Chunk = {
-  id: string;
-  name: string;
-  category: string;
-  genes: string;
-  inheritance: string;
-  omimIds: string;
-  content: string;
-  url: string;
-  anchor: string;
+  id: string; name: string; category: string; genes: string;
+  inheritance: string; omimIds: string; content: string;
+  url: string; anchor: string;
 };
 
+type GeneRecord = { symbol: string; fullName: string };
+
 let fuseInstance: Fuse<Chunk> | null = null;
+let genesCache: GeneRecord[] | null = null;
 
 async function getFuse(): Promise<Fuse<Chunk>> {
   if (fuseInstance) return fuseInstance;
@@ -37,6 +36,19 @@ async function getFuse(): Promise<Fuse<Chunk>> {
   return fuseInstance;
 }
 
+async function getGenes(): Promise<GeneRecord[]> {
+  if (genesCache) return genesCache;
+  try {
+    const res = await fetch('/api/genes');
+    genesCache = await res.json();
+  } catch { genesCache = []; }
+  return genesCache!;
+}
+
+function slugify(name: string) {
+  return name.toLowerCase().replace(/['']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
 function inheritanceBadge(inh: string) {
   const i = inh.toLowerCase();
   if (i.includes('dominant'))     return 'badge badge-ad';
@@ -48,18 +60,27 @@ function inheritanceBadge(inh: string) {
 }
 
 export default function GlobalSearch() {
+  const router = useRouter();
   const [query, setQuery]     = useState('');
   const [results, setResults] = useState<FuseResult<Chunk>[]>([]);
+  const [geneMatches, setGeneMatches] = useState<GeneRecord[]>([]);
   const [open, setOpen]       = useState(false);
   const [loading, setLoading] = useState(false);
   const inputRef     = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const search = useCallback(async (q: string) => {
-    if (q.trim().length < 2) { setResults([]); return; }
+    if (q.trim().length < 2) { setResults([]); setGeneMatches([]); return; }
     setLoading(true);
-    const fuse = await getFuse();
-    setResults(fuse.search(q, { limit: 12 }));
+    const [fuse, genes] = await Promise.all([getFuse(), getGenes()]);
+    const qLower = q.toLowerCase();
+    setResults(fuse.search(q, { limit: 8 }));
+    setGeneMatches(
+      genes.filter(g =>
+        g.symbol.toLowerCase().includes(qLower) ||
+        g.fullName.toLowerCase().includes(qLower)
+      ).slice(0, 4)
+    );
     setLoading(false);
   }, []);
 
@@ -87,8 +108,14 @@ export default function GlobalSearch() {
     return () => document.removeEventListener('keydown', onKey);
   }, []);
 
-  const href = (r: Chunk) =>
-    `https://neuromuscular.wustl.edu/${r.url.replace('https://neuromuscular.wustl.edu/', '')}${r.anchor ? '#' + r.anchor : ''}`;
+  const handleSubmit = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && query.trim().length >= 2) {
+      setOpen(false);
+      router.push(`/search?q=${encodeURIComponent(query)}`);
+    }
+  };
+
+  const hasResults = geneMatches.length > 0 || results.length > 0;
 
   return (
     <div ref={containerRef} style={{ position: 'relative', width: '100%' }}>
@@ -106,19 +133,20 @@ export default function GlobalSearch() {
         <input
           ref={inputRef}
           type="text"
-          placeholder="Search disease, gene, OMIM ID…"
+          placeholder="Search disease, gene, OMIM ID..."
           value={query}
           onChange={e => { setQuery(e.target.value); setOpen(true); }}
           onFocus={() => setOpen(true)}
+          onKeyDown={handleSubmit}
           aria-label="Search conditions, genes, or OMIM IDs"
           className="search-input-placeholder"
           style={{ flex: 1, background: 'transparent', border: 'none', outline: 'none',
             color: 'white', fontSize: '13px', minWidth: 0 }}
         />
         {query ? (
-          <button onClick={() => { setQuery(''); setResults([]); inputRef.current?.focus(); }}
+          <button onClick={() => { setQuery(''); setResults([]); setGeneMatches([]); inputRef.current?.focus(); }}
             style={{ color: 'rgba(147,197,253,0.8)', background: 'none', border: 'none',
-              cursor: 'pointer', fontSize: '12px', flexShrink: 0 }}>✕</button>
+              cursor: 'pointer', fontSize: '12px', flexShrink: 0 }}>x</button>
         ) : (
           <kbd style={{ fontSize: '11px', color: 'rgba(147,197,253,0.7)',
             background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)',
@@ -133,40 +161,84 @@ export default function GlobalSearch() {
           boxShadow: '0 20px 60px rgba(0,0,0,0.15)', overflow: 'hidden', zIndex: 100,
           maxHeight: '480px', overflowY: 'auto',
         }}>
-          {loading && <div style={{ padding: '12px 16px', fontSize: '12px', color: '#94a3b8' }}>Searching…</div>}
-          {!loading && results.length === 0 && (
+          {loading && <div style={{ padding: '12px 16px', fontSize: '12px', color: '#94a3b8' }}>Searching...</div>}
+
+          {!loading && !hasResults && (
             <div style={{ padding: '16px', fontSize: '13px', color: '#64748b', textAlign: 'center' }}>
               No results for &quot;{query}&quot;
             </div>
           )}
-          {!loading && results.map((r, i) => {
-            const item = r.item;
-            const inh  = item.inheritance.split(',').map(s => s.trim()).filter(Boolean);
-            return (
-              <a key={i} href={href(item)} target="_blank" rel="noopener"
-                onClick={() => setOpen(false)}
-                style={{ display: 'block', padding: '12px 16px', textDecoration: 'none',
-                  borderBottom: i < results.length - 1 ? '1px solid #f1f5f9' : 'none' }}>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
-                  <span style={{ fontWeight: 600, fontSize: '13px', color: '#1e293b' }}>{item.name}</span>
-                  {inh.map(ih => (
-                    <span key={ih} className={inheritanceBadge(ih)}>{ih}</span>
-                  ))}
-                </div>
-                {item.genes && (
-                  <div style={{ fontSize: '11px', color: '#3b82f6', marginTop: '2px' }}>
-                    {item.genes}
+
+          {!loading && hasResults && (
+            <>
+              {/* Gene matches — link to local gene pages */}
+              {geneMatches.length > 0 && (
+                <div style={{ padding: '8px 12px', borderBottom: '1px solid #f1f5f9' }}>
+                  <div style={{ fontSize: '9px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#2563eb', marginBottom: '4px', padding: '0 4px' }}>
+                    Genes
                   </div>
-                )}
-                <div style={{ fontSize: '11px', color: '#64748b', marginTop: '2px' }}>{item.category}</div>
-                <div style={{ fontSize: '11px', color: '#94a3b8', marginTop: '3px',
-                  overflow: 'hidden', display: '-webkit-box',
-                  WebkitLineClamp: 1, WebkitBoxOrient: 'vertical' }}>
-                  {item.content.slice(0, 120).replace(/\s+/g, ' ')}
+                  <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
+                    {geneMatches.map(g => (
+                      <Link
+                        key={g.symbol}
+                        href={`/gene/${g.symbol}`}
+                        onClick={() => setOpen(false)}
+                        style={{
+                          display: 'inline-flex', alignItems: 'center', gap: '4px',
+                          padding: '3px 8px', borderRadius: '6px',
+                          background: '#eff6ff', border: '1px solid #bfdbfe',
+                          textDecoration: 'none', fontSize: '11px',
+                        }}
+                      >
+                        <span style={{ fontWeight: 800, color: '#2563eb', fontFamily: 'ui-monospace, monospace' }}>{g.symbol}</span>
+                        <span style={{ color: '#475569' }}>{g.fullName}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </a>
-            );
-          })}
+              )}
+
+              {/* Condition matches — link to local condition pages */}
+              {results.map((r, i) => {
+                const item = r.item;
+                const inh  = item.inheritance.split(',').map(s => s.trim()).filter(Boolean);
+                const slug = slugify(item.name);
+                return (
+                  <Link key={i} href={`/condition/${slug}`}
+                    onClick={() => setOpen(false)}
+                    style={{ display: 'block', padding: '10px 16px', textDecoration: 'none',
+                      borderBottom: i < results.length - 1 ? '1px solid #f1f5f9' : 'none' }}>
+                    <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
+                      <span style={{ fontWeight: 600, fontSize: '13px', color: '#1e293b' }}>{item.name}</span>
+                      {inh.slice(0, 2).map(ih => (
+                        <span key={ih} className={inheritanceBadge(ih)}>{ih}</span>
+                      ))}
+                    </div>
+                    {item.genes && (
+                      <div style={{ fontSize: '11px', color: '#3b82f6', marginTop: '2px' }}>
+                        {item.genes.split(/[,\s]+/).slice(0, 5).join(', ')}
+                      </div>
+                    )}
+                    <div style={{ fontSize: '11px', color: '#64748b', marginTop: '2px' }}>{item.category}</div>
+                  </Link>
+                );
+              })}
+
+              {/* See all link */}
+              <Link
+                href={`/search?q=${encodeURIComponent(query)}`}
+                onClick={() => setOpen(false)}
+                style={{
+                  display: 'block', padding: '8px 16px', textAlign: 'center',
+                  fontSize: '11px', fontWeight: 600, color: '#2563eb',
+                  textDecoration: 'none', borderTop: '1px solid #f1f5f9',
+                  background: '#f8fafc',
+                }}
+              >
+                See all results
+              </Link>
+            </>
+          )}
         </div>
       )}
     </div>

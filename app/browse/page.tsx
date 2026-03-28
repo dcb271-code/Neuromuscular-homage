@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 
 type Chunk = {
   id: string;
@@ -123,8 +124,10 @@ function BrowseInner() {
   const paginated = filtered.slice(0, page * PAGE_SIZE);
   const hasMore = paginated.length < filtered.length;
 
-  const href = (c: Chunk) =>
-    `${c.url}${c.anchor ? '#' + c.anchor : ''}`;
+  function slugify(name: string) {
+    return name.toLowerCase().replace(/['']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  }
+  const condHref = (c: Chunk) => `/condition/${slugify(c.name)}`;
 
   return (
     <div>
@@ -196,11 +199,9 @@ function BrowseInner() {
             {paginated.map(c => {
               const inhs = c.inheritance.split(',').map(s => s.trim()).filter(Boolean);
               return (
-                <a
+                <Link
                   key={c.id}
-                  href={href(c)}
-                  target="_blank"
-                  rel="noopener"
+                  href={condHref(c)}
                   style={{
                     display: 'block',
                     background: '#fff',
@@ -210,20 +211,9 @@ function BrowseInner() {
                     textDecoration: 'none',
                     transition: 'border-color 0.15s, box-shadow 0.15s',
                   }}
-                  onMouseEnter={e => {
-                    (e.currentTarget as HTMLElement).style.borderColor = '#93c5fd';
-                    (e.currentTarget as HTMLElement).style.boxShadow = '0 2px 8px rgba(59,130,246,0.1)';
-                  }}
-                  onMouseLeave={e => {
-                    (e.currentTarget as HTMLElement).style.borderColor = '#e2e8f0';
-                    (e.currentTarget as HTMLElement).style.boxShadow = 'none';
-                  }}
                 >
                   <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '8px', marginBottom: '4px' }}>
                     <span style={{ fontSize: '13px', fontWeight: 600, color: '#1e293b', lineHeight: 1.3 }}>{cleanName(c.name)}</span>
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ flexShrink: 0, marginTop: '2px' }}>
-                      <path d="M2 10L10 2M10 2H5M10 2V7" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
                   </div>
                   {c.genes && (
                     <div style={{ fontSize: '11px', color: '#3b82f6', marginBottom: '6px', fontFamily: 'ui-monospace, monospace' }}>
@@ -247,7 +237,7 @@ function BrowseInner() {
                       }}>{c.category}</span>
                     )}
                   </div>
-                </a>
+                </Link>
               );
             })}
           </div>
