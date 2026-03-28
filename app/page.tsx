@@ -3,8 +3,7 @@ import genesEnriched from '@/src/data/genes-enriched.json';
 import { GeneOfDay, FactoidOfDay, QuestionOfDay } from '@/components/DailyWidgets';
 import CategoryGrid from '@/components/CategoryGrid';
 import FeaturedConditions from '@/components/FeaturedConditions';
-import { RotatingCategories, RotatingConditions } from '@/components/RotatingWidgets';
-import HeroSearch from '@/components/HeroSearch';
+import { RotatingCategories, RotatingConditions, RotatingGenes } from '@/components/RotatingWidgets';
 import Link from 'next/link';
 
 type Summary = {
@@ -32,36 +31,21 @@ const CLINICAL_CATEGORIES = [
   { name: 'Myoglobinuria / Rhabdomyolysis',       color: '#dc2626', url: 'https://neuromuscular.wustl.edu/msys/myoglob.html' },
 ];
 
-// Featured pediatric NMD conditions — original curated WUSTL deep links
+// 6 featured pediatric NMD conditions — curated WUSTL deep links
 const FEATURED_CONDITIONS = [
-  { label: 'Duchenne MD',                              abbr: 'DMD',   gene: 'DMD',           color: '#7c3aed', url: 'https://neuromuscular.wustl.edu/musdist/dmd.html#Duchenne' },
-  { label: 'Becker MD',                                abbr: 'BMD',   gene: 'DMD',           color: '#7c3aed', url: 'https://neuromuscular.wustl.edu/musdist/dmd.html#Becker' },
-  { label: 'Spinal Muscular Atrophy',                  abbr: 'SMA',   gene: 'SMN1',          color: '#dc2626', url: 'https://neuromuscular.wustl.edu/synmot.html#sma5q' },
-  { label: 'Myotonic Dystrophy 1',                     abbr: 'DM1',   gene: 'DMPK',          color: '#7c3aed', url: 'https://neuromuscular.wustl.edu/musdist/pe-eom.html#dm1' },
-  { label: 'Emery-Dreifuss MD',                        abbr: 'EDMD',  gene: 'EMD / LMNA',    color: '#db2777', url: 'https://neuromuscular.wustl.edu/msys/contract.html#emd' },
-  { label: 'Childhood Myasthenia Gravis',               abbr: 'MG',    gene: 'CHRNA1 / MUSK', color: '#0891b2', url: 'https://neuromuscular.wustl.edu/mtime/mgddx.html#childmg' },
-  { label: 'Central Core Disorders',                   abbr: 'CCD',   gene: 'RYR1',          color: '#0d9488', url: 'https://neuromuscular.wustl.edu/syncm.html#cc' },
-  { label: 'Bethlem Myopathies (COL6/12)',              abbr: 'BTHLM', gene: 'COL6A1-3',      color: '#db2777', url: 'https://neuromuscular.wustl.edu/musdist/lg.html#beth' },
-  { label: 'Hereditary Neuropathy w/ Pressure Palsies', abbr: 'HNPP', gene: 'PMP22',         color: '#2563eb', url: 'https://neuromuscular.wustl.edu/time/hmsn.html#pp' },
-  { label: 'Friedreich Ataxia',                        abbr: 'FRDA',  gene: 'FXN',           color: '#16a34a', url: 'https://neuromuscular.wustl.edu/ataxia/recatax.html#FA' },
-  { label: 'Kearns-Sayre Syndrome "Spectrum" (KSS)',   abbr: 'KSS',   gene: 'mtDNA',         color: '#d97706', url: 'https://neuromuscular.wustl.edu/mitosyn.html#ks' },
-  { label: 'AIDP / Guillain-Barre Syndrome',           abbr: 'GBS',   gene: '',              color: '#0891b2', url: 'https://neuromuscular.wustl.edu/antibody/gbs.htm#cgbs' },
+  { label: 'Duchenne MD',              abbr: 'DMD',  gene: 'DMD',    color: '#7c3aed', url: 'https://neuromuscular.wustl.edu/musdist/dmd.html#Duchenne' },
+  { label: 'Spinal Muscular Atrophy',  abbr: 'SMA',  gene: 'SMN1',   color: '#dc2626', url: 'https://neuromuscular.wustl.edu/synmot.html#sma5q' },
+  { label: 'Myotonic Dystrophy 1',     abbr: 'DM1',  gene: 'DMPK',   color: '#7c3aed', url: 'https://neuromuscular.wustl.edu/musdist/pe-eom.html#dm1' },
+  { label: 'Emery-Dreifuss MD',        abbr: 'EDMD', gene: 'EMD / LMNA', color: '#db2777', url: 'https://neuromuscular.wustl.edu/msys/contract.html#emd' },
+  { label: 'Central Core Disorders',   abbr: 'CCD',  gene: 'RYR1',   color: '#0d9488', url: 'https://neuromuscular.wustl.edu/syncm.html#cc' },
+  { label: 'Friedreich Ataxia',        abbr: 'FRDA', gene: 'FXN',    color: '#16a34a', url: 'https://neuromuscular.wustl.edu/ataxia/recatax.html#FA' },
 ];
 
 export default function Home() {
   return (
     <div>
-      {/* ── Search-first hero ──────────────────────────────────────────── */}
-      <SearchHero />
-
-      {/* ── Quick entry points ─────────────────────────────────────────── */}
-      <div style={{ display: 'flex', gap: '6px', marginBottom: '32px', flexWrap: 'wrap', justifyContent: 'center' }}>
-        <QuickLink href="/browse" label="Browse A-Z" />
-        <QuickLink href="/search?q=autosomal+dominant" label="Autosomal Dominant" />
-        <QuickLink href="/search?q=autosomal+recessive" label="Autosomal Recessive" />
-        <QuickLink href="/search?q=x-linked" label="X-Linked" />
-        <QuickLink href="/search?q=mitochondrial" label="Mitochondrial" />
-      </div>
+      {/* ── Site hero ────────────────────────────────────────────────── */}
+      <SiteHero />
 
       {/* ── Daily widgets ────────────────────────────────────────────── */}
       <SectionLabel>Today</SectionLabel>
@@ -73,10 +57,16 @@ export default function Home() {
         <QuestionOfDay />
       </div>
 
-      {/* ── Featured conditions ──────────────────────────────────────── */}
-      <SectionLabel>Select Neuromuscular Conditions</SectionLabel>
-      <FeaturedConditions conditions={FEATURED_CONDITIONS} />
-      <RotatingConditions />
+      {/* ── Rotating Genes (local pages) ─────────────────────────────── */}
+      <SectionLabel>Neuromuscular Genes</SectionLabel>
+      <RotatingGenes />
+
+      {/* ── Featured + rotating conditions ─────────────────────────── */}
+      <div style={{ marginTop: '28px' }}>
+        <SectionLabel>Select Neuromuscular Conditions</SectionLabel>
+        <FeaturedConditions conditions={FEATURED_CONDITIONS} />
+        <RotatingConditions />
+      </div>
 
       {/* ── Browse by Category + alphabet index ──────────────────────── */}
       <div style={{ marginTop: '28px' }}>
@@ -124,79 +114,38 @@ export default function Home() {
   );
 }
 
-// ─── Search-first hero ──────────────────────────────────────────────────────────
-
-function SearchHero() {
+function SiteHero() {
   return (
     <div style={{
+      marginBottom: '36px',
+      paddingBottom: '28px',
+      borderBottom: '1px solid #f1f5f9',
       textAlign: 'center',
-      paddingBottom: '24px',
-      marginBottom: '8px',
     }}>
-      {/* Compact title */}
       <div style={{
         fontFamily: 'ui-monospace, "Cascadia Code", "SF Mono", monospace',
         lineHeight: 1,
-        marginBottom: '6px',
+        marginBottom: '10px',
       }}>
         <span style={{
-          fontSize: '16px', fontWeight: 600, color: '#94a3b8',
+          fontSize: '22px', fontWeight: 600, color: '#94a3b8',
           letterSpacing: '0.4em', textTransform: 'uppercase',
-          display: 'block', marginBottom: '2px',
+          display: 'block', marginBottom: '4px',
         }}>
           Neuromuscular
         </span>
         <span style={{ display: 'inline-flex', alignItems: 'baseline', gap: 0 }}>
-          <span style={{ fontSize: '48px', fontWeight: 800, color: '#60a5fa', letterSpacing: '-2px' }}>HOM</span>
-          <span style={{ fontSize: '20px', fontWeight: 600, color: '#93c5fd', opacity: 0.7, letterSpacing: '0.02em', verticalAlign: 'middle', position: 'relative', top: '-4px' }}>ep</span>
-          <span style={{ fontSize: '48px', fontWeight: 800, color: '#60a5fa', letterSpacing: '-2px' }}>AGE</span>
+          <span style={{ fontSize: '72px', fontWeight: 800, color: '#60a5fa', letterSpacing: '-2px' }}>HOM</span>
+          <span style={{ fontSize: '28px', fontWeight: 600, color: '#93c5fd', opacity: 0.7, letterSpacing: '0.02em', verticalAlign: 'middle', position: 'relative', top: '-6px' }}>ep</span>
+          <span style={{ fontSize: '72px', fontWeight: 800, color: '#60a5fa', letterSpacing: '-2px' }}>AGE</span>
         </span>
       </div>
-
-      <p style={{ fontSize: '12px', color: '#94a3b8', margin: '0 0 20px 0' }}>
-        A salute to Dr Alan Pestronk, MD &middot; A (Pediatric) Neuromuscular Resource, Revised
+      <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: 1.5, letterSpacing: '0.01em' }}>
+        A salute to Dr Alan Pestronk, MD
+        <br />
+        A (Pediatric) Neuromuscular Resource, Revised
       </p>
-
-      {/* Prominent search */}
-      <div style={{ maxWidth: '640px', margin: '0 auto' }}>
-        <HeroSearch />
-      </div>
-
-      {/* Suggestion chips */}
-      <div style={{ marginTop: '12px', fontSize: '12px', color: '#94a3b8' }}>
-        Try:{' '}
-        {['DMD', 'SMA', 'Duchenne', 'CMT', 'RYR1', 'mitochondrial', 'LMNA'].map(q => (
-          <Link
-            key={q}
-            href={`/search?q=${encodeURIComponent(q)}`}
-            style={{
-              display: 'inline-block', padding: '2px 8px', margin: '2px',
-              borderRadius: '6px', background: '#f1f5f9',
-              border: '1px solid #e2e8f0', fontSize: '11px',
-              color: '#475569', textDecoration: 'none',
-            }}
-          >
-            {q}
-          </Link>
-        ))}
-      </div>
     </div>
-  );
-}
-
-// ─── Sub-components ────────────────────────────────────────────────────────────
-
-function QuickLink({ href, label }: { href: string; label: string }) {
-  return (
-    <Link href={href} style={{
-      display: 'inline-block', padding: '5px 14px',
-      fontSize: '11px', fontWeight: 600,
-      borderRadius: '99px', background: '#f8fafc',
-      border: '1px solid #e2e8f0', color: '#475569',
-      textDecoration: 'none', letterSpacing: '0.02em',
-    }}>
-      {label}
-    </Link>
   );
 }
 

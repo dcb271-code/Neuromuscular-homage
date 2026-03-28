@@ -2,12 +2,27 @@
 
 import { useState, useEffect } from 'react';
 import { todayIndex } from '@/src/utils';
+import Link from 'next/link';
+import genesData from '@/src/data/genes-enriched.json';
 
 // Pick 2 items from opposite halves of the pool — no same-day overlap
 function pick2<T>(arr: T[]): [T, T] {
   const n = arr.length;
   const idx = todayIndex() % n;
   return [arr[idx], arr[(idx + Math.floor(n / 2)) % n]];
+}
+
+// Pick N items spread evenly across the pool, rotating daily
+function pickN<T>(arr: T[], count: number, offset = 0): T[] {
+  const n = arr.length;
+  if (n === 0) return [];
+  const startIdx = (todayIndex() + offset) % n;
+  const step = Math.max(1, Math.floor(n / count));
+  const result: T[] = [];
+  for (let i = 0; i < count && i < n; i++) {
+    result.push(arr[(startIdx + i * step) % n]);
+  }
+  return result;
 }
 
 // ─── Rotating Categories ──────────────────────────────────────────────────────
@@ -146,7 +161,7 @@ export function RotatingConditions() {
   const [items, setItems] = useState<Condition[]>([]);
 
   useEffect(() => {
-    setItems(pick2(ROTATING_CONDITIONS));
+    setItems(pickN(ROTATING_CONDITIONS, 3, 7));
     setMounted(true);
   }, []);
 
@@ -154,9 +169,9 @@ export function RotatingConditions() {
     <div style={{ marginTop: '10px', marginBottom: '28px' }}>
       <RotatingLabel kind="Conditions" />
       {!mounted ? (
-        <SkeletonGrid />
+        <SkeletonGrid count={3} />
       ) : (
-        <div className="nm-2col-pinned">
+        <div className="nm-3col">
           {items.map(cond => (
             <a
               key={cond.url}
@@ -212,6 +227,99 @@ export function RotatingConditions() {
   );
 }
 
+// ─── Rotating Genes (local gene pages) ────────────────────────────────────────
+
+// All genes with enough data to make a useful page
+const ALL_GENES = genesData
+  .filter(g => g.fullName && (g.ncbiSummary || g.phenotype))
+  .map(g => ({
+    symbol: g.symbol,
+    fullName: g.fullName,
+    locus: g.locus,
+    inheritance: g.inheritance as string[],
+  }));
+
+const INH_COLORS: Record<string, string> = {
+  'autosomal dominant': '#2563eb',
+  'autosomal recessive': '#7c3aed',
+  'x-linked': '#be185d',
+  'mitochondrial': '#d97706',
+  'de novo': '#16a34a',
+};
+
+function inhColor(inh: string): string {
+  const key = inh.toLowerCase();
+  for (const [p, c] of Object.entries(INH_COLORS)) { if (key.includes(p)) return c; }
+  return '#64748b';
+}
+
+export function RotatingGenes() {
+  const [mounted, setMounted] = useState(false);
+  const [items, setItems] = useState<typeof ALL_GENES>([]);
+
+  useEffect(() => {
+    setItems(pickN(ALL_GENES, 6, 13));
+    setMounted(true);
+  }, []);
+
+  return (
+    <div style={{ marginBottom: '28px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
+        <span style={{
+          fontSize: '9px', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase',
+          color: '#60a5fa', background: '#eff6ff', padding: '1px 6px', borderRadius: '99px', border: '1px solid #bfdbfe',
+        }}>
+          Rotates daily &middot; {ALL_GENES.length} genes
+        </span>
+      </div>
+      {!mounted ? (
+        <SkeletonGrid count={6} />
+      ) : (
+        <div className="nm-3col">
+          {items.map(g => (
+            <Link
+              key={g.symbol}
+              href={`/gene/${g.symbol}`}
+              style={{
+                display: 'flex', flexDirection: 'column',
+                background: '#fff', border: '1px solid #dbeafe',
+                borderRadius: '12px', padding: '12px 14px',
+                textDecoration: 'none',
+                transition: 'border-color 0.15s, box-shadow 0.15s',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                <span style={{
+                  fontSize: '13px', fontWeight: 800, color: '#2563eb',
+                  fontFamily: 'ui-monospace, "Cascadia Code", "SF Mono", monospace',
+                }}>
+                  {g.symbol}
+                </span>
+                {g.locus && (
+                  <span style={{ fontSize: '10px', color: '#94a3b8' }}>{g.locus}</span>
+                )}
+              </div>
+              <span style={{ fontSize: '12px', fontWeight: 500, color: '#1e293b', lineHeight: 1.35, marginBottom: '4px' }}>
+                {g.fullName}
+              </span>
+              <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
+                {g.inheritance.slice(0, 2).map(inh => (
+                  <span key={inh} style={{
+                    fontSize: '10px', fontWeight: 500, color: inhColor(inh),
+                    background: inhColor(inh) + '12', padding: '1px 6px', borderRadius: '99px',
+                  }}>
+                    {inh}
+                  </span>
+                ))}
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ─── Shared helpers ───────────────────────────────────────────────────────────
 
 function RotatingLabel({ kind }: { kind: 'Conditions' | 'Categories' }) {
@@ -239,10 +347,10 @@ function RotatingLabel({ kind }: { kind: 'Conditions' | 'Categories' }) {
   );
 }
 
-function SkeletonGrid() {
+function SkeletonGrid({ count = 2 }: { count?: number }) {
   return (
-    <div className="nm-2col-pinned">
-      {[1, 2].map(i => (
+    <div className="nm-3col">
+      {Array.from({ length: count }).map((_, i) => (
         <div key={i} style={{
           background: '#fff', border: '1px solid #e2e8f0',
           borderRadius: '12px', padding: '14px 16px',
