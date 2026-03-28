@@ -13,7 +13,8 @@ type Chunk = {
 
 type GeneRecord = {
   symbol: string; fullName: string; locus: string;
-  inheritance: string[]; omim: string;
+  aliases?: string[]; inheritance: string[]; omim: string;
+  phenotype?: string;
 };
 
 let fuseInstance: Fuse<Chunk> | null = null;
@@ -119,7 +120,9 @@ export default function HeroSearch() {
     setGeneMatches(
       genes.filter(g =>
         g.symbol.toLowerCase().includes(qLower) ||
-        g.fullName.toLowerCase().includes(qLower)
+        g.fullName.toLowerCase().includes(qLower) ||
+        (g.aliases || []).some((a: string) => a.toLowerCase().includes(qLower)) ||
+        (g.phenotype || '').toLowerCase().includes(qLower)
       ).slice(0, 5)
     );
     setLoading(false);

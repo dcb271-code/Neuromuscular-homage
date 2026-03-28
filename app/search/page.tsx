@@ -13,8 +13,8 @@ type Chunk = {
 
 type GeneRecord = {
   symbol: string; fullName: string; locus: string;
-  inheritance: string[]; omim: string; ncbiSummary: string;
-  categories: string[];
+  aliases: string[]; inheritance: string[]; omim: string;
+  phenotype: string; categories: string[];
 };
 
 let fuseInstance: Fuse<Chunk> | null = null;
@@ -119,7 +119,9 @@ function SearchInner() {
         return genes.filter(g =>
           g.symbol.toLowerCase().includes(q) ||
           g.fullName.toLowerCase().includes(q) ||
-          g.locus.toLowerCase().includes(q)
+          g.locus.toLowerCase().includes(q) ||
+          (g.aliases || []).some((a: string) => a.toLowerCase().includes(q)) ||
+          (g.phenotype || '').toLowerCase().includes(q)
         );
       }).catch(() => [] as GeneRecord[]),
     ]).then(([searchResults, genes]) => {

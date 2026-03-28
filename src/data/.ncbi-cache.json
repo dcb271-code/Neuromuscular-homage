@@ -5296,5 +5296,986 @@
     "mapLocation": "3p25.1",
     "ncbiSummary": "This gene encodes the subunit of a collagen-like molecule associated with acetylcholinesterase in skeletal muscle. Each molecule is composed of three identical subunits. Each subunit contains a proline-rich attachment domain (PRAD) that binds an acetylcholinesterase tetramer to anchor the catalytic subunit of the enzyme to the basal lamina. Mutations in this gene are associated with endplate acetylcholinesterase deficiency. Multiple transcript variants encoding different isoforms have been found for this gene. [provided by RefSeq, Jul 2008]",
     "geneType": ""
+  },
+  "AIFM1": {
+    "ncbiGeneId": "9131",
+    "officialSymbol": "AIFM1",
+    "officialName": "apoptosis inducing factor mitochondria associated 1",
+    "aliases": [
+      "AIF",
+      "AUNX1",
+      "CMT2D",
+      "CMTX4",
+      "COWCK",
+      "COXPD6",
+      "DFNX5",
+      "NADMR",
+      "NAMSD",
+      "PDCD8",
+      "SEMDHL"
+    ],
+    "otherDesignations": [
+      "apoptosis-inducing factor 1, mitochondrial",
+      "apoptosis-inducing factor, mitochondrion-associated, 1",
+      "auditory neuropathy, X-linked recessive 1",
+      "programmed cell death 8 (apoptosis-inducing factor)",
+      "striatal apoptosis-inducing factor",
+      "testicular secretory protein Li 4"
+    ],
+    "chromosome": "X",
+    "mapLocation": "Xq26.1",
+    "ncbiSummary": "This gene encodes a flavoprotein essential for nuclear disassembly in apoptotic cells, and it is found in the mitochondrial intermembrane space in healthy cells. Induction of apoptosis results in the translocation of this protein to the nucleus where it affects chromosome condensation and fragmentation. In addition, this gene product induces mitochondria to release the apoptogenic proteins cytochrome c and caspase-9. Mutations in this gene cause combined oxidative phosphorylation deficiency 6 (COXPD6), a severe mitochondrial encephalomyopathy, as well as Cowchock syndrome, also known as X-linked recessive Charcot-Marie-Tooth disease-4 (CMTX-4), a disorder resulting in neuropathy, and axonal and motor-sensory defects with deafness and cognitive disability. Alternative splicing results in multiple transcript variants. A related pseudogene has been identified on chromosome 10. [provided by RefSeq, Aug 2015]",
+    "geneType": ""
+  },
+  "ADSSL1": {
+    "ncbiGeneId": "122622",
+    "officialSymbol": "ADSS1",
+    "officialName": "adenylosuccinate synthase 1",
+    "aliases": [
+      "ADSSL1",
+      "MPD5"
+    ],
+    "otherDesignations": [
+      "adenylosuccinate synthetase isozyme 1",
+      "AMPSase 1",
+      "IMP--aspartate ligase 1",
+      "M-type adenylosuccinate synthetase",
+      "adSS 1",
+      "adenylosuccinate synthase like 1",
+      "adenylosuccinate synthetase, basic isozyme",
+      "adenylosuccinate synthetase, muscle isozyme",
+      "adenylosuccinate synthetase-like 1"
+    ],
+    "chromosome": "14",
+    "mapLocation": "14q32.33",
+    "ncbiSummary": "This gene encodes a member of the adenylosuccinate synthase family of proteins. The encoded muscle-specific enzyme plays a role in the purine nucleotide cycle by catalyzing the first step in the conversion of inosine monophosphate (IMP) to adenosine monophosphate (AMP). Mutations in this gene may cause adolescent onset distal myopathy. Alternative splicing results in multiple transcript variants. [provided by RefSeq, Feb 2016]",
+    "geneType": ""
+  },
+  "ACTA1": {
+    "ncbiGeneId": "58",
+    "officialSymbol": "ACTA1",
+    "officialName": "actin alpha 1, skeletal muscle",
+    "aliases": [
+      "ACTA",
+      "ASMA",
+      "CFTD",
+      "CFTD1",
+      "CFTDM",
+      "CMYO2A",
+      "CMYO2B",
+      "CMYO2C",
+      "CMYP2A",
+      "CMYP2B",
+      "CMYP2C",
+      "MPFD",
+      "NEM1",
+      "NEM2",
+      "NEM3",
+      "SHPM"
+    ],
+    "otherDesignations": [
+      "actin, alpha skeletal muscle",
+      "nemaline myopathy type 3"
+    ],
+    "chromosome": "1",
+    "mapLocation": "1q42.13",
+    "ncbiSummary": "The product encoded by this gene belongs to the actin family of proteins, which are highly conserved proteins that play a role in cell motility, structure and integrity. Alpha, beta and gamma actin isoforms have been identified, with alpha actins being a major constituent of the contractile apparatus, while beta and gamma actins are involved in the regulation of cell motility. This actin is an alpha actin that is found in skeletal muscle. Mutations in this gene cause a variety of myopathies, including nemaline myopathy, congenital myopathy with excess of thin myofilaments, congenital myopathy with cores, and congenital myopathy with fiber-type disproportion, diseases that lead to muscle fiber defects with manifestations such as hypotonia. [provided by RefSeq, Sep 2019]",
+    "geneType": ""
+  },
+  "ETHE1": {
+    "ncbiGeneId": "23474",
+    "officialSymbol": "ETHE1",
+    "officialName": "ETHE1 persulfide dioxygenase",
+    "aliases": [
+      "HSCO",
+      "YF13H12"
+    ],
+    "otherDesignations": [
+      "persulfide dioxygenase ETHE1, mitochondrial",
+      "ethylmalonic encephalopathy 1",
+      "hepatoma subtracted clone one protein",
+      "protein ETHE1, mitochondrial",
+      "sulfur dioxygenase ETHE1"
+    ],
+    "chromosome": "19",
+    "mapLocation": "19q13.31",
+    "ncbiSummary": "This gene encodes a member of the metallo beta-lactamase family of iron-containing proteins involved in the mitochondrial sulfide oxidation pathway. The encoded protein catalyzes the oxidation of a persulfide substrate to sulfite. Certain mutations in this gene cause ethylmalonic encephalopathy, an infantile metabolic disorder affecting the brain, gastrointestinal tract and peripheral vessels. Alternative splicing results in multiple transcript variants encoding different isoforms. [provided by RefSeq, Mar 2016]",
+    "geneType": ""
+  },
+  "ITPR1": {
+    "ncbiGeneId": "3708",
+    "officialSymbol": "ITPR1",
+    "officialName": "inositol 1,4,5-trisphosphate receptor type 1",
+    "aliases": [
+      "ACV",
+      "CLA4",
+      "INSP3R1",
+      "IP3R",
+      "IP3R1",
+      "PPP1R94",
+      "SCA15",
+      "SCA16",
+      "SCA29"
+    ],
+    "otherDesignations": [
+      "inositol 1,4,5-trisphosphate-gated calcium channel ITPR1",
+      "IP3 receptor",
+      "IP3R 1",
+      "inositol 1,4,5 trisphosphate receptor",
+      "inositol 1,4,5-triphosphate receptor, type 1",
+      "protein phosphatase 1, regulatory subunit 94",
+      "type 1 InsP3 receptor",
+      "type 1 inositol 1,4,5-trisphosphate receptor"
+    ],
+    "chromosome": "3",
+    "mapLocation": "3p26.1",
+    "ncbiSummary": "This gene encodes an intracellular receptor for inositol 1,4,5-trisphosphate. Upon stimulation by inositol 1,4,5-trisphosphate, this receptor mediates calcium release from the endoplasmic reticulum. Mutations in this gene cause spinocerebellar ataxia type 15, a disease associated with an heterogeneous group of cerebellar disorders. Multiple transcript variants have been identified for this gene. [provided by RefSeq, Nov 2009]",
+    "geneType": ""
+  },
+  "ITGA7": {
+    "ncbiGeneId": "3679",
+    "officialSymbol": "ITGA7",
+    "officialName": "integrin subunit alpha 7",
+    "aliases": [],
+    "otherDesignations": [
+      "integrin alpha-7",
+      "integrin alpha 7 chain"
+    ],
+    "chromosome": "12",
+    "mapLocation": "12q13.2",
+    "ncbiSummary": "The protein encoded by this gene belongs to the integrin alpha chain family. Integrins are heterodimeric integral membrane proteins composed of an alpha chain and a beta chain. They mediate a wide spectrum of cell-cell and cell-matrix interactions, and thus play a role in cell migration, morphologic development, differentiation, and metastasis. This protein functions as a receptor for the basement membrane protein laminin-1. It is mainly expressed in skeletal and cardiac muscles and may be involved in differentiation and migration processes during myogenesis. Defects in this gene are associated with congenital myopathy. Alternatively spliced transcript variants encoding different isoforms have been noted for this gene. [provided by RefSeq, Feb 2009]",
+    "geneType": ""
+  },
+  "MTMR2": {
+    "ncbiGeneId": "8898",
+    "officialSymbol": "MTMR2",
+    "officialName": "myotubularin related protein 2",
+    "aliases": [
+      "CMT4B",
+      "CMT4B1"
+    ],
+    "otherDesignations": [
+      "phosphatidylinositol-3,5-bisphosphate 3-phosphatase MTMR2",
+      "phosphatidylinositol-3,5-bisphosphate 3-phosphatase",
+      "phosphatidylinositol-3-phosphatase",
+      "phosphatidylinositol-3-phosphate phosphatase",
+      "phosphoinositide-3-phosphatase"
+    ],
+    "chromosome": "11",
+    "mapLocation": "11q21",
+    "ncbiSummary": "This gene is a member of the myotubularin family of phosphoinositide lipid phosphatases. The encoded protein possesses phosphatase activity towards phosphatidylinositol-3-phosphate and phosphatidylinositol-3,5-bisphosphate. Mutations in this gene are a cause of Charcot-Marie-Tooth disease type 4B, an autosomal recessive demyelinating neuropathy. Alternatively spliced transcript variants encoding multiple isoforms have been found for this gene. [provided by RefSeq, Aug 2011]",
+    "geneType": ""
+  },
+  "NGFB": {
+    "ncbiGeneId": "4803",
+    "officialSymbol": "NGF",
+    "officialName": "nerve growth factor",
+    "aliases": [
+      "Beta-NGF",
+      "HSAN5",
+      "NGFB"
+    ],
+    "otherDesignations": [
+      "beta-nerve growth factor",
+      "nerve growth factor (beta polypeptide)",
+      "nerve growth factor, beta subunit",
+      "pro-nerve growth factor long"
+    ],
+    "chromosome": "1",
+    "mapLocation": "1p13.2",
+    "ncbiSummary": "This gene is a member of the NGF-beta family and encodes a secreted protein which homodimerizes and is incorporated into a larger complex. This protein has nerve growth stimulating activity and the complex is involved in the regulation of growth and the differentiation of sympathetic and certain sensory neurons. Mutations in this gene have been associated with hereditary sensory and autonomic neuropathy, type 5 (HSAN5), and dysregulation of this gene's expression is associated with allergic rhinitis. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "TOR1A": {
+    "ncbiGeneId": "1861",
+    "officialSymbol": "TOR1A",
+    "officialName": "torsin family 1 member A",
+    "aliases": [
+      "AMC5",
+      "DQ2",
+      "DYT1"
+    ],
+    "otherDesignations": [
+      "torsin-1A",
+      "dystonia 1 protein",
+      "dystonia 1, torsion (autosomal dominant; torsin A)",
+      "torsin A",
+      "torsin ATPase 1",
+      "torsin ATPase-1A"
+    ],
+    "chromosome": "9",
+    "mapLocation": "9q34.11",
+    "ncbiSummary": "The protein encoded by this gene is a member of the AAA family of adenosine triphosphatases (ATPases), is related to the Clp protease/heat shock family and is expressed prominently in the substantia nigra pars compacta. Mutations in this gene result in the autosomal dominant disorder, torsion dystonia 1. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "TNNT2": {
+    "ncbiGeneId": "7139",
+    "officialSymbol": "TNNT2",
+    "officialName": "troponin T2, cardiac type",
+    "aliases": [
+      "CMD1D",
+      "CMH2",
+      "CMPD2",
+      "LVNC6",
+      "RCM3",
+      "TnTC",
+      "cTnT"
+    ],
+    "otherDesignations": [
+      "troponin T, cardiac muscle",
+      "cardiomyopathy, dilated 1D (autosomal dominant)",
+      "cardiomyopathy, hypertrophic 2",
+      "troponin T type 2 (cardiac)"
+    ],
+    "chromosome": "1",
+    "mapLocation": "1q32.1",
+    "ncbiSummary": "This gene encodes the cardiac isoform of troponin T. The encoded protein is the tropomyosin-binding subunit of the troponin complex, which is located on the thin filament of striated muscles and regulates muscle contraction in response to alterations in intracellular calcium ion concentration. Mutations in this gene have been associated with familial hypertrophic cardiomyopathy as well as with dilated cardiomyopathy. [provided by RefSeq, May 2022]",
+    "geneType": ""
+  },
+  "NEB": {
+    "ncbiGeneId": "4703",
+    "officialSymbol": "NEB",
+    "officialName": "nebulin",
+    "aliases": [
+      "AMC6",
+      "NEB177D",
+      "NEM2"
+    ],
+    "otherDesignations": [
+      "nebulin",
+      "nemaline myopathy type 2"
+    ],
+    "chromosome": "2",
+    "mapLocation": "2q23.3",
+    "ncbiSummary": "This gene encodes nebulin, a giant protein component of the cytoskeletal matrix that coexists with the thick and thin filaments within the sarcomeres of skeletal muscle. In most vertebrates, nebulin accounts for 3 to 4% of the total myofibrillar protein. The encoded protein contains approximately 30-amino acid long modules that can be classified into 7 types and other repeated modules. Protein isoform sizes vary from 600 to 800 kD due to alternative splicing that is tissue-, species-,and developmental stage-specific. Of the 183 exons in the nebulin gene, at least 43 are alternatively spliced, although exons 143 and 144 are not found in the same transcript. Of the several thousand transcript variants predicted for nebulin, the RefSeq Project has decided to create three representative RefSeq records. Mutations in this gene are associated with recessive nemaline myopathy. [provided by RefSeq, Sep 2009]",
+    "geneType": ""
+  },
+  "TTN": {
+    "ncbiGeneId": "7276",
+    "officialSymbol": "TTR",
+    "officialName": "transthyretin",
+    "aliases": [
+      "AMYLD1",
+      "ATTR",
+      "CTS",
+      "CTS1",
+      "HEL111",
+      "HsT2651",
+      "PALB",
+      "TBPA",
+      "TTN"
+    ],
+    "otherDesignations": [
+      "transthyretin",
+      "epididymis luminal protein 111",
+      "prealbumin, amyloidosis type I",
+      "thyroxine-binding prealbumin"
+    ],
+    "chromosome": "18",
+    "mapLocation": "18q12.1",
+    "ncbiSummary": "This gene encodes one of the three prealbumins, which include alpha-1-antitrypsin, transthyretin and orosomucoid. The encoded protein, transthyretin, is a homo-tetrameric carrier protein, which transports thyroid hormones in the plasma and cerebrospinal fluid. It is also involved in the transport of retinol (vitamin A) in the plasma by associating with retinol-binding protein. The protein may also be involved in other intracellular processes including proteolysis, nerve regeneration, autophagy and glucose homeostasis. Mutations in this gene are associated with amyloid deposition, predominantly affecting peripheral nerves or the heart, while a small percentage of the gene mutations are non-amyloidogenic. The mutations are implicated in the etiology of several diseases, including amyloidotic polyneuropathy, euthyroid hyperthyroxinaemia, amyloidotic vitreous opacities, cardiomyopathy, oculoleptomeningeal amyloidosis, meningocerebrovascular amyloidosis and carpal tunnel syndrome. [provided by RefSeq, Aug 2017]",
+    "geneType": ""
+  },
+  "VCP": {
+    "ncbiGeneId": "7415",
+    "officialSymbol": "VCP",
+    "officialName": "valosin containing protein",
+    "aliases": [
+      "CDC48",
+      "FTDALS6",
+      "TERA",
+      "p97"
+    ],
+    "otherDesignations": [
+      "transitional endoplasmic reticulum ATPase",
+      "15S Mg(2+)-ATPase p97 subunit",
+      "TER ATPase"
+    ],
+    "chromosome": "9",
+    "mapLocation": "9p13.3",
+    "ncbiSummary": "This gene encodes a member of the AAA ATPase family of proteins. The encoded protein plays a role in protein degradation, intracellular membrane fusion, DNA repair and replication, regulation of the cell cycle, and activation of the NF-kappa B pathway. This protein forms a homohexameric complex that interacts with a variety of cofactors and extracts ubiquitinated proteins from lipid membranes or protein complexes. Mutations in this gene cause IBMPFD (inclusion body myopathy with paget disease of bone and frontotemporal dementia), ALS (amyotrophic lateral sclerosis) and Charcot-Marie-Tooth disease in human patients. [provided by RefSeq, Aug 2017]",
+    "geneType": ""
+  },
+  "MUSK": {
+    "ncbiGeneId": "4593",
+    "officialSymbol": "MUSK",
+    "officialName": "muscle associated receptor tyrosine kinase",
+    "aliases": [
+      "CMS9",
+      "FADS"
+    ],
+    "otherDesignations": [
+      "muscle, skeletal receptor tyrosine-protein kinase",
+      "muscle, skeletal, receptor tyrosine kinase",
+      "muscle-specific kinase receptor",
+      "muscle-specific tyrosine-protein kinase receptor"
+    ],
+    "chromosome": "9",
+    "mapLocation": "9q31.3",
+    "ncbiSummary": "This gene encodes a muscle-specific tyrosine kinase receptor. The encoded protein may play a role in clustering of the acetylcholine receptor in the postsynaptic neuromuscular junction. Mutations in this gene have been associated with congenital myasthenic syndrome. Alternatively spliced transcript variants have been described.[provided by RefSeq, Oct 2009]",
+    "geneType": ""
+  },
+  "CLCN1": {
+    "ncbiGeneId": "1180",
+    "officialSymbol": "CLCN1",
+    "officialName": "chloride voltage-gated channel 1",
+    "aliases": [
+      "CLC1"
+    ],
+    "otherDesignations": [
+      "chloride channel protein 1",
+      "chloride channel 1, skeletal muscle",
+      "chloride channel protein, skeletal muscle",
+      "chloride channel, voltage-sensitive 1",
+      "clC-1"
+    ],
+    "chromosome": "7",
+    "mapLocation": "7q34",
+    "ncbiSummary": "The CLCN family of voltage-dependent chloride channel genes comprises nine members (CLCN1-7, Ka and Kb) which demonstrate quite diverse functional characteristics while sharing significant sequence homology. The protein encoded by this gene regulates the electric excitability of the skeletal muscle membrane. Mutations in this gene cause two forms of inherited human muscle disorders: recessive generalized myotonia congenita (Becker) and dominant myotonia (Thomsen). Alternative splicing results in multiple transcript variants. [provided by RefSeq, Mar 2012]",
+    "geneType": ""
+  },
+  "CHRNA1": {
+    "ncbiGeneId": "1134",
+    "officialSymbol": "CHRNA1",
+    "officialName": "cholinergic receptor nicotinic alpha 1 subunit",
+    "aliases": [
+      "ACHRA",
+      "ACHRD",
+      "CHRNA",
+      "CMS1A",
+      "CMS1B",
+      "CMS2A",
+      "FCCMS",
+      "SCCMS"
+    ],
+    "otherDesignations": [
+      "acetylcholine receptor subunit alpha",
+      "acetylcholine receptor, nicotinic, alpha 1 (muscle)",
+      "cholinergic receptor, nicotinic alpha 1",
+      "cholinergic receptor, nicotinic, alpha 1 (muscle)",
+      "cholinergic receptor, nicotinic, alpha polypeptide 1 (muscle)",
+      "muscle nicotinic acetylcholine receptor",
+      "nicotinic acetylcholine receptor alpha subunit",
+      "nicotinic cholinergic receptor alpha 1"
+    ],
+    "chromosome": "2",
+    "mapLocation": "2q31.1",
+    "ncbiSummary": "The muscle acetylcholine receptor consiststs of 5 subunits of 4 different types: 2 alpha subunits and 1 each of the beta, gamma, and delta subunits. This gene encodes an alpha subunit that plays a role in acetlycholine binding/channel gating. Alternatively spliced transcript variants encoding different isoforms have been identified. [provided by RefSeq, Nov 2012]",
+    "geneType": ""
+  },
+  "DES": {
+    "ncbiGeneId": "1674",
+    "officialSymbol": "DES",
+    "officialName": "desmin",
+    "aliases": [
+      "CDCD3",
+      "CSM1",
+      "CSM2",
+      "LGMD1D",
+      "LGMD1E",
+      "LGMD2R"
+    ],
+    "otherDesignations": [
+      "desmin",
+      "cardiomyopathy, dilated 1F (autosomal dominant)",
+      "cardiomyopathy, dilated 1I",
+      "epididymis secretory sperm binding protein",
+      "intermediate filament protein"
+    ],
+    "chromosome": "2",
+    "mapLocation": "2q35",
+    "ncbiSummary": "This gene encodes a muscle-specific class III intermediate filament. Homopolymers of this protein form a stable intracytoplasmic filamentous network connecting myofibrils to each other and to the plasma membrane. Mutations in this gene are associated with desmin-related myopathy, a familial cardiac and skeletal myopathy (CSM), and with distal myopathies. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "HEXA": {
+    "ncbiGeneId": "3073",
+    "officialSymbol": "HEXA",
+    "officialName": "hexosaminidase subunit alpha",
+    "aliases": [
+      "TSD"
+    ],
+    "otherDesignations": [
+      "beta-hexosaminidase subunit alpha",
+      "N-acetyl-beta-glucosaminidase subunit alpha",
+      "beta-N-acetylhexosaminidase subunit alpha",
+      "hexosaminidase A (alpha polypeptide)",
+      "hexosaminidase subunit A"
+    ],
+    "chromosome": "15",
+    "mapLocation": "15q23",
+    "ncbiSummary": "This gene encodes a member of the glycosyl hydrolase 20 family of proteins. The encoded preproprotein is proteolytically processed to generate the alpha subunit of the lysosomal enzyme beta-hexosaminidase. This enzyme, together with the cofactor GM2 activator protein, catalyzes the degradation of the ganglioside GM2, and other molecules containing terminal N-acetyl hexosamines. Mutations in this gene lead to an accumulation of GM2 ganglioside in neurons, the underlying cause of neurodegenerative disorders termed the GM2 gangliosidoses, including Tay-Sachs disease (GM2-gangliosidosis type I). Alternative splicing results in multiple transcript variants, at least one of which encodes a preproprotein that is proteolytically processed. [provided by RefSeq, Jan 2016]",
+    "geneType": ""
+  },
+  "SELENON": {
+    "ncbiGeneId": "57190",
+    "officialSymbol": "SELENON",
+    "officialName": "selenoprotein N",
+    "aliases": [
+      "CFTD",
+      "CMYO3",
+      "CMYP3",
+      "MDRS1",
+      "RSMD1",
+      "RSS",
+      "SELN",
+      "SEPN1"
+    ],
+    "otherDesignations": [
+      "selenoprotein N",
+      "selenoprotein N, 1"
+    ],
+    "chromosome": "1",
+    "mapLocation": "1p36.11",
+    "ncbiSummary": "This gene encodes a glycoprotein that is localized in the endoplasmic reticulum. It plays an important role in cell protection against oxidative stress, and in the regulation of redox-related calcium homeostasis. Mutations in this gene are associated with early onset muscle disorders, referred to as SEPN1-related myopathy. SEPN1-related myopathy consists of 4 autosomal recessive disorders, originally thought to be separate entities: rigid spine muscular dystrophy (RSMD1), the classical form of multiminicore disease, desmin related myopathy with Mallory-body like inclusions, and congenital fiber-type disproportion (CFTD). This protein is a selenoprotein, containing the rare amino acid selenocysteine (Sec). Sec is encoded by the UGA codon, which normally signals translation termination. The 3' UTRs of selenoprotein mRNAs contain a conserved stem-loop structure, designated the Sec insertion sequence (SECIS) element, that is necessary for the recognition of UGA as a Sec codon, rather than as a stop signal. A second stop-codon redefinition element (SRE) adjacent to the UGA codon has been identified in this gene (PMID:15791204). SRE is a phylogenetically conserved stem-loop structure that stimulates readthrough at the UGA codon, and augments the Sec insertion efficiency by SECIS. Alternatively spliced transcript variants have been found for this gene. [provided by RefSeq, Dec 2016]",
+    "geneType": ""
+  },
+  "FLNC": {
+    "ncbiGeneId": "2318",
+    "officialSymbol": "FLNC",
+    "officialName": "filamin C",
+    "aliases": [
+      "ABP-280",
+      "ABP280A",
+      "ABPA",
+      "ABPL",
+      "ARVC15",
+      "CMH26",
+      "FLN2",
+      "MFM5",
+      "MPD4",
+      "RCM5"
+    ],
+    "otherDesignations": [
+      "filamin-C",
+      "ABP-280-like protein",
+      "ABP-L, gamma filamin",
+      "actin binding protein 280",
+      "filamin C, gamma",
+      "filamin-2",
+      "gamma filamin"
+    ],
+    "chromosome": "7",
+    "mapLocation": "7q32.1",
+    "ncbiSummary": "This gene encodes one of three related filamin genes, specifically gamma filamin. These filamin proteins crosslink actin filaments into orthogonal networks in cortical cytoplasm and participate in the anchoring of membrane proteins for the actin cytoskeleton. Three functional domains exist in filamin: an N-terminal filamentous actin-binding domain, a C-terminal self-association domain, and a membrane glycoprotein-binding domain. Mutations in this gene are a cause of cardiopathy. Two transcript variants encoding different isoforms have been found for this gene. [provided by RefSeq, May 2022]",
+    "geneType": ""
+  },
+  "HEXB": {
+    "ncbiGeneId": "3074",
+    "officialSymbol": "HEXB",
+    "officialName": "hexosaminidase subunit beta",
+    "aliases": [
+      "ENC-1AS",
+      "HEL-248",
+      "HEL-S-111"
+    ],
+    "otherDesignations": [
+      "beta-hexosaminidase subunit beta",
+      "HCC-7",
+      "N-acetyl-beta-glucosaminidase subunit beta",
+      "beta-N-acetylhexosaminidase subunit beta",
+      "beta-hexosaminidase beta-subunit",
+      "cervical cancer proto-oncogene 7 protein",
+      "epididymis luminal protein 248",
+      "epididymis secretory protein Li 111",
+      "epididymis secretory sperm binding protein",
+      "hexosaminidase B (beta polypeptide)",
+      "hexosaminidase subunit B"
+    ],
+    "chromosome": "5",
+    "mapLocation": "5q13.3",
+    "ncbiSummary": "Hexosaminidase B is the beta subunit of the lysosomal enzyme beta-hexosaminidase that, together with the cofactor GM2 activator protein, catalyzes the degradation of the ganglioside GM2, and other molecules containing terminal N-acetyl hexosamines. Beta-hexosaminidase is composed of two subunits, alpha and beta, which are encoded by separate genes. Both beta-hexosaminidase alpha and beta subunits are members of family 20 of glycosyl hydrolases. Mutations in the alpha or beta subunit genes lead to an accumulation of GM2 ganglioside in neurons and neurodegenerative disorders termed the GM2 gangliosidoses. Beta subunit gene mutations lead to Sandhoff disease (GM2-gangliosidosis type II). Alternatively spliced transcript variants encoding different isoforms have been found for this gene. [provided by RefSeq, May 2014]",
+    "geneType": ""
+  },
+  "UBA1": {
+    "ncbiGeneId": "7317",
+    "officialSymbol": "UBA1",
+    "officialName": "ubiquitin like modifier activating enzyme 1",
+    "aliases": [
+      "A1S9",
+      "A1S9T",
+      "A1ST",
+      "AMCX1",
+      "CFAP124",
+      "GXP1",
+      "POC20",
+      "SMAX2",
+      "UBA1A",
+      "UBE1",
+      "UBE1X",
+      "VEXAS"
+    ],
+    "otherDesignations": [
+      "ubiquitin-like modifier-activating enzyme 1",
+      "A1S9T and BN75 temperature sensitivity complementing",
+      "POC20 centriolar protein homolog",
+      "UBA1, ubiquitin-activating enzyme E1 homolog A",
+      "testicular secretory protein Li 63"
+    ],
+    "chromosome": "X",
+    "mapLocation": "Xp11.3",
+    "ncbiSummary": "The protein encoded by this gene catalyzes the first step in ubiquitin conjugation to mark cellular proteins for degradation. This gene complements an X-linked mouse temperature-sensitive defect in DNA synthesis, and thus may function in DNA repair. It is part of a gene cluster on chromosome Xp11.23. Alternatively spliced transcript variants that encode the same protein have been described. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "ACTN3": {
+    "ncbiGeneId": "89",
+    "officialSymbol": "ACTN3",
+    "officialName": "actinin alpha 3",
+    "aliases": [
+      "ACTN3D"
+    ],
+    "otherDesignations": [
+      "alpha-actinin-3",
+      "F-actin cross-linking protein",
+      "alpha-actinin skeletal muscle"
+    ],
+    "chromosome": "11",
+    "mapLocation": "11q13.2",
+    "ncbiSummary": "This gene encodes a member of the alpha-actin binding protein gene family. The encoded protein is primarily expressed in skeletal muscle and functions as a structural component of sarcomeric Z line. This protein is involved in crosslinking actin containing thin filaments. An allelic polymorphism in this gene results in both coding and non-coding variants; the reference genome represents the coding allele. The non-functional allele of this gene is associated with elite athlete status. [provided by RefSeq, Apr 2024]",
+    "geneType": ""
+  },
+  "AMACR": {
+    "ncbiGeneId": "23600",
+    "officialSymbol": "AMACR",
+    "officialName": "alpha-methylacyl-CoA racemase",
+    "aliases": [
+      "AMACRD",
+      "CBAS4",
+      "P504S",
+      "RACE",
+      "RM"
+    ],
+    "otherDesignations": [
+      "alpha-methylacyl-CoA racemase",
+      "2-methylacyl-CoA racemase"
+    ],
+    "chromosome": "5",
+    "mapLocation": "5p13.2",
+    "ncbiSummary": "This gene encodes a racemase. The encoded enzyme interconverts pristanoyl-CoA and C27-bile acylCoAs between their (R)- and (S)-stereoisomers. The conversion to the (S)-stereoisomers is necessary for degradation of these substrates by peroxisomal beta-oxidation. Encoded proteins from this locus localize to both mitochondria and peroxisomes. Mutations in this gene may be associated with adult-onset sensorimotor neuropathy, pigmentary retinopathy, and adrenomyeloneuropathy due to defects in bile acid synthesis. Alternatively spliced transcript variants have been described. Read-through transcription also exists between this gene and the upstream neighboring C1QTNF3 (C1q and tumor necrosis factor related protein 3) gene. [provided by RefSeq, Mar 2011]",
+    "geneType": ""
+  },
+  "GBE1": {
+    "ncbiGeneId": "2632",
+    "officialSymbol": "GBE1",
+    "officialName": "1,4-alpha-glucan branching enzyme 1",
+    "aliases": [
+      "APBD",
+      "GBE",
+      "GSD4"
+    ],
+    "otherDesignations": [
+      "1,4-alpha-glucan-branching enzyme",
+      "amylo-(1,4 to 1,6) transglucosidase",
+      "amylo-(1,4 to 1,6) transglycosylase",
+      "brancher enzyme",
+      "glucan (1,4-alpha-), branching enzyme 1",
+      "glycogen branching enzyme"
+    ],
+    "chromosome": "3",
+    "mapLocation": "3p12.2",
+    "ncbiSummary": "The protein encoded by this gene is a glycogen branching enzyme that catalyzes the transfer of alpha-1,4-linked glucosyl units from the outer end of a glycogen chain to an alpha-1,6 position on the same or a neighboring glycogen chain. Branching of the chains is essential to increase the solubility of the glycogen molecule and, consequently, in reducing the osmotic pressure within cells. Highest level of this enzyme are found in liver and muscle. Mutations in this gene are associated with glycogen storage disease IV (also known as Andersen's disease). [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "HADHA": {
+    "ncbiGeneId": "3030",
+    "officialSymbol": "HADHA",
+    "officialName": "hydroxyacyl-CoA dehydrogenase trifunctional multienzyme complex subunit alpha",
+    "aliases": [
+      "ECHA",
+      "GBP",
+      "LCEH",
+      "LCHAD",
+      "MLCL AT",
+      "MTPA",
+      "TP-ALPHA"
+    ],
+    "otherDesignations": [
+      "trifunctional enzyme subunit alpha, mitochondrial",
+      "3-ketoacyl-Coenzyme A (CoA) thiolase, alpha subunit",
+      "3-oxoacyl-CoA thiolase",
+      "78 kDa gastrin-binding protein",
+      "gastrin-binding protein",
+      "hydroxyacyl-CoA dehydrogenase/3-ketoacyl-CoA thiolase/enoyl-CoA hydratase (trifunctional protein), alpha subunit",
+      "hydroxyacyl-Coenzyme A dehydrogenase/3-ketoacyl-Coenzyme A thiolase/enoyl-Coenzyme A hydratase (trifunctional protein), alpha subunit",
+      "long-chain 2-enoyl-CoA hydratase",
+      "long-chain-3-hydroxyacyl-CoA dehydrogenase",
+      "mitochondrial long-chain 2-enoyl-Coenzyme A (CoA) hydratase, alpha subunit",
+      "mitochondrial long-chain L-3-hydroxyacyl-Coenzyme A (CoA) dehydrogenase, alpha subunit",
+      "mitochondrial trifunctional enzyme, alpha subunit",
+      "mitochondrial trifunctional protein, alpha subunit",
+      "monolysocardiolipin acyltransferase"
+    ],
+    "chromosome": "2",
+    "mapLocation": "2p23.3",
+    "ncbiSummary": "This gene encodes the alpha subunit of the mitochondrial trifunctional protein, which catalyzes the last three steps of mitochondrial beta-oxidation of long chain fatty acids. The mitochondrial membrane-bound heterocomplex is composed of four alpha and four beta subunits, with the alpha subunit catalyzing the 3-hydroxyacyl-CoA dehydrogenase and enoyl-CoA hydratase activities. Mutations in this gene result in trifunctional protein deficiency or LCHAD deficiency. The genes of the alpha and beta subunits of the mitochondrial trifunctional protein are located adjacent to each other in the human genome in a head-to-head orientation. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "MPZ": {
+    "ncbiGeneId": "4359",
+    "officialSymbol": "MPZ",
+    "officialName": "myelin protein zero",
+    "aliases": [
+      "CMT1",
+      "CMT1B",
+      "CMT2I",
+      "CMT2J",
+      "CMT4E",
+      "CMTDI3",
+      "CMTDID",
+      "DSS",
+      "HMSNIB",
+      "MPP",
+      "P0"
+    ],
+    "otherDesignations": [
+      "myelin protein P0",
+      "Charcot-Marie-Tooth neuropathy 1B",
+      "myelin peripheral protein"
+    ],
+    "chromosome": "1",
+    "mapLocation": "1q23.3",
+    "ncbiSummary": "This gene is specifically expressed in Schwann cells of the peripheral nervous system and encodes a type I transmembrane glycoprotein that is a major structural protein of the peripheral myelin sheath. The encoded protein contains a large hydrophobic extracellular domain and a smaller basic intracellular domain, which are essential for the formation and stabilization of the multilamellar structure of the compact myelin. Mutations in this gene are associated with autosomal dominant form of Charcot-Marie-Tooth disease type 1 (CMT1B) and other polyneuropathies, such as Dejerine-Sottas syndrome (DSS) and congenital hypomyelinating neuropathy (CHN). A recent study showed that two isoforms are produced from the same mRNA by use of alternative in-frame translation termination codons via a stop codon readthrough mechanism. [provided by RefSeq, Oct 2015]",
+    "geneType": ""
+  },
+  "POMGNT1": {
+    "ncbiGeneId": "55624",
+    "officialSymbol": "POMGNT1",
+    "officialName": "protein O-linked mannose N-acetylglucosaminyltransferase 1 (beta 1,2-)",
+    "aliases": [
+      "GNTI.2",
+      "GnT I.2",
+      "LGMD2O",
+      "LGMDR15",
+      "MEB",
+      "MGAT1.2",
+      "RP76",
+      "gnT-I.2"
+    ],
+    "otherDesignations": [
+      "protein O-linked-mannose beta-1,2-N-acetylglucosaminyltransferase 1",
+      "UDP-GlcNAc:alpha-D-mannoside beta-1,2-N-acetylglucosaminyltransferase I.2"
+    ],
+    "chromosome": "1",
+    "mapLocation": "1p34.1",
+    "ncbiSummary": "This gene encodes a type II transmembrane protein that resides in the Golgi apparatus. It participates in O-mannosyl glycosylation and is specific for alpha linked terminal mannose. Mutations in this gene may be associated with muscle-eye-brain disease and several congenital muscular dystrophies. Alternatively spliced transcript variants that encode different protein isoforms have been described. [provided by RefSeq, Feb 2014]",
+    "geneType": ""
+  },
+  "SH3TC2": {
+    "ncbiGeneId": "79628",
+    "officialSymbol": "SH3TC2",
+    "officialName": "SH3 domain and tetratricopeptide repeats 2",
+    "aliases": [
+      "CMT4C",
+      "MNMN"
+    ],
+    "otherDesignations": [
+      "SH3 domain and tetratricopeptide repeat-containing protein 2",
+      "SH3 domain and tetratricopeptide repeats-containing protein 2"
+    ],
+    "chromosome": "5",
+    "mapLocation": "5q32",
+    "ncbiSummary": "This gene encodes a protein with two N-terminal Src homology 3 (SH3) domains and 10 tetratricopeptide repeat (TPR) motifs, and is a member of a small gene family. The gene product has been proposed to be an adapter or docking molecule. Mutations in this gene result in autosomal recessive Charcot-Marie-Tooth disease type 4C, a childhood-onset neurodegenerative disease characterized by demyelination of motor and sensory neurons. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "SLC22A5": {
+    "ncbiGeneId": "6584",
+    "officialSymbol": "SLC22A5",
+    "officialName": "solute carrier family 22 member 5",
+    "aliases": [
+      "CDSP",
+      "OCTN2"
+    ],
+    "otherDesignations": [
+      "organic cation/carnitine transporter 2",
+      "high-affinity sodium dependent carnitine cotransporter",
+      "systemic carnitine deficiency"
+    ],
+    "chromosome": "5",
+    "mapLocation": "5q31.1",
+    "ncbiSummary": "Polyspecific organic cation transporters in the liver, kidney, intestine, and other organs are critical for elimination of many endogenous small organic cations as well as a wide array of drugs and environmental toxins. The encoded protein is a plasma integral membrane protein which functions both as an organic cation transporter and as a sodium-dependent high affinity carnitine transporter. The encoded protein is involved in the active cellular uptake of carnitine. Mutations in this gene are the cause of systemic primary carnitine deficiency (CDSP), an autosomal recessive disorder manifested early in life by hypoketotic hypoglycemia and acute metabolic decompensation, and later in life by skeletal myopathy or cardiomyopathy. Alternative splicing of this gene results in multiple transcript variants. [provided by RefSeq, Apr 2015]",
+    "geneType": ""
+  },
+  "SIL1": {
+    "ncbiGeneId": "64374",
+    "officialSymbol": "SIL1",
+    "officialName": "SIL1 nucleotide exchange factor",
+    "aliases": [
+      "BAP",
+      "MSS",
+      "ULG5"
+    ],
+    "otherDesignations": [
+      "nucleotide exchange factor SIL1",
+      "BiP-associated protein",
+      "SIL1 homolog, endoplasmic reticulum chaperone",
+      "SIL1-like protein endoplasmic reticulum chaperone"
+    ],
+    "chromosome": "5",
+    "mapLocation": "5q31.2",
+    "ncbiSummary": "This gene encodes a resident endoplasmic reticulum (ER), N-linked glycoprotein with an N-terminal ER targeting sequence, 2 putative N-glycosylation sites, and a C-terminal ER retention signal. This protein functions as a nucleotide exchange factor for another unfolded protein response protein. Mutations in this gene have been associated with Marinesco-Sjogren syndrome. Alternate transcriptional splice variants have been characterized. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "SMCHD1": {
+    "ncbiGeneId": "23347",
+    "officialSymbol": "SMCHD1",
+    "officialName": "structural maintenance of chromosomes flexible hinge domain containing 1",
+    "aliases": [
+      "BAMS",
+      "FSHD2"
+    ],
+    "otherDesignations": [
+      "structural maintenance of chromosomes flexible hinge domain-containing protein 1",
+      "SMC hinge domain-containing protein 1"
+    ],
+    "chromosome": "18",
+    "mapLocation": "18p11.32",
+    "ncbiSummary": "This gene encodes a protein which contains a hinge region domain found in members of the SMC (structural maintenance of chromosomes) protein family. [provided by RefSeq, Dec 2011]",
+    "geneType": ""
+  },
+  "TPI1": {
+    "ncbiGeneId": "7167",
+    "officialSymbol": "TPI1",
+    "officialName": "triosephosphate isomerase 1",
+    "aliases": [
+      "HEL-S-49",
+      "TIM",
+      "TPI",
+      "TPID"
+    ],
+    "otherDesignations": [
+      "triosephosphate isomerase",
+      "epididymis secretory protein Li 49",
+      "methylglyoxal synthase",
+      "triose-phosphate isomerase"
+    ],
+    "chromosome": "12",
+    "mapLocation": "12p13.31",
+    "ncbiSummary": "This gene encodes an enzyme, consisting of two identical proteins, which catalyzes the isomerization of glyceraldehydes 3-phosphate (G3P) and dihydroxy-acetone phosphate (DHAP) in glycolysis and gluconeogenesis. Mutations in this gene are associated with triosephosphate isomerase deficiency. Pseudogenes have been identified on chromosomes 1, 4, 6 and 7. Alternative splicing results in multiple transcript variants. [provided by RefSeq, Apr 2009]",
+    "geneType": ""
+  },
+  "DYSF": {
+    "ncbiGeneId": "8291",
+    "officialSymbol": "DYSF",
+    "officialName": "dysferlin",
+    "aliases": [
+      "FER1L1",
+      "LGMD2B",
+      "LGMDR2",
+      "MMD1"
+    ],
+    "otherDesignations": [
+      "dysferlin",
+      "dystrophy-associated fer-1-like 1",
+      "fer-1-like family member 1",
+      "fer-1-like protein 1",
+      "limb girdle muscular dystrophy 2B (autosomal recessive)"
+    ],
+    "chromosome": "2",
+    "mapLocation": "2p13.2",
+    "ncbiSummary": "The protein encoded by this gene belongs to the ferlin family and is a skeletal muscle protein found associated with the sarcolemma. It is involved in muscle contraction and contains C2 domains that play a role in calcium-mediated membrane fusion events, suggesting that it may be involved in membrane regeneration and repair. In addition, the protein encoded by this gene binds caveolin-3, a skeletal muscle membrane protein which is important in the formation of caveolae. Specific mutations in this gene have been shown to cause autosomal recessive limb girdle muscular dystrophy type 2B (LGMD2B) as well as Miyoshi myopathy. Alternative splicing results in multiple transcript variants. [provided by RefSeq, Aug 2008]",
+    "geneType": ""
+  },
+  "SOD1": {
+    "ncbiGeneId": "6647",
+    "officialSymbol": "SOD1",
+    "officialName": "superoxide dismutase 1",
+    "aliases": [
+      "ALS",
+      "ALS1",
+      "HEL-S-44",
+      "IPOA",
+      "SOD",
+      "STAHP",
+      "hSod1",
+      "homodimer"
+    ],
+    "otherDesignations": [
+      "superoxide dismutase [Cu-Zn]",
+      "Cu/Zn superoxide dismutase",
+      "SOD, soluble",
+      "epididymis secretory protein Li 44",
+      "hydrogen sulfide oxidase",
+      "indophenoloxidase A",
+      "superoxide dismutase 1, soluble",
+      "superoxide dismutase, cystolic"
+    ],
+    "chromosome": "21",
+    "mapLocation": "21q22.11",
+    "ncbiSummary": "The protein encoded by this gene binds copper and zinc ions and is one of two isozymes responsible for destroying free superoxide radicals in the body. The encoded isozyme is a soluble cytoplasmic protein, acting as a homodimer to convert naturally-occuring but harmful superoxide radicals to molecular oxygen and hydrogen peroxide. The other isozyme is a mitochondrial protein. In addition, this protein contains an antimicrobial peptide that displays antibacterial, antifungal, and anti-MRSA activity against E. coli, E. faecalis, S. aureus, S. aureus MRSA LPV+, S. agalactiae, and yeast C. krusei. Mutations in this gene have been implicated as causes of familial amyotrophic lateral sclerosis. Rare transcript variants have been reported for this gene. [provided by RefSeq, Jul 2020]",
+    "geneType": ""
+  },
+  "FXN": {
+    "ncbiGeneId": "2395",
+    "officialSymbol": "FXN",
+    "officialName": "frataxin",
+    "aliases": [
+      "CyaY",
+      "FA",
+      "FARR",
+      "FRDA",
+      "X25"
+    ],
+    "otherDesignations": [
+      "frataxin, mitochondrial",
+      "Friedreich ataxia protein"
+    ],
+    "chromosome": "9",
+    "mapLocation": "9q21.11",
+    "ncbiSummary": "This nuclear gene encodes a mitochondrial protein which belongs to the FRATAXIN family. The protein functions in regulating mitochondrial iron transport and respiration. The expansion of intronic trinucleotide repeat GAA from 8-33 repeats to >90 repeats results in Friedreich ataxia. Alternative splicing results in multiple transcript variants. [provided by RefSeq, Jul 2016]",
+    "geneType": ""
+  },
+  "COL6A3": {
+    "ncbiGeneId": "1293",
+    "officialSymbol": "COL6A3",
+    "officialName": "collagen type VI alpha 3 chain",
+    "aliases": [
+      "BTHLM1",
+      "BTHLM1C",
+      "DYT27",
+      "UCMD1",
+      "UCMD1C"
+    ],
+    "otherDesignations": [
+      "collagen alpha-3(VI) chain",
+      "collagen VI, alpha-3 polypeptide",
+      "collagen, type VI, alpha 3",
+      "epididymis secretory sperm binding protein"
+    ],
+    "chromosome": "2",
+    "mapLocation": "2q37.3",
+    "ncbiSummary": "This gene encodes the alpha-3 chain, one of the three alpha chains of type VI collagen, a beaded filament collagen found in most connective tissues. The alpha-3 chain of type VI collagen is much larger than the alpha-1 and -2 chains. This difference in size is largely due to an increase in the number of subdomains, similar to von Willebrand Factor type A domains, that are found in the amino terminal globular domain of all the alpha chains. These domains have been shown to bind extracellular matrix proteins, an interaction that explains the importance of this collagen in organizing matrix components. Mutations in the type VI collagen genes are associated with Bethlem myopathy, a rare autosomal dominant proximal myopathy with early childhood onset. Mutations in this gene are also a cause of Ullrich congenital muscular dystrophy, also referred to as Ullrich scleroatonic muscular dystrophy, an autosomal recessive congenital myopathy that is more severe than Bethlem myopathy. Multiple transcript variants have been identified, but the full-length nature of only some of these variants has been described. [provided by RefSeq, Jun 2009]",
+    "geneType": ""
+  },
+  "SGCA": {
+    "ncbiGeneId": "6442",
+    "officialSymbol": "SGCA",
+    "officialName": "sarcoglycan alpha",
+    "aliases": [
+      "50DAG",
+      "ADL",
+      "DAG2",
+      "DMDA2",
+      "LGMD2D",
+      "LGMDR3",
+      "SCARMD1",
+      "adhalin"
+    ],
+    "otherDesignations": [
+      "alpha-sarcoglycan",
+      "50 kDa dystrophin-associated glycoprotein",
+      "50kD DAG",
+      "alpha-SG",
+      "dystroglycan-2",
+      "limb girdle muscular dystrophy 2D",
+      "sarcoglycan, alpha (50kDa dystrophin-associated glycoprotein)"
+    ],
+    "chromosome": "17",
+    "mapLocation": "17q21.33",
+    "ncbiSummary": "This gene encodes a component of the dystrophin-glycoprotein complex (DGC), which is critical to the stability of muscle fiber membranes and to the linking of the actin cytoskeleton to the extracellular matrix. Its expression is thought to be restricted to striated muscle. Mutations in this gene result in type 2D autosomal recessive limb-girdle muscular dystrophy. Multiple transcript variants encoding different isoforms have been found for this gene. [provided by RefSeq, Oct 2008]",
+    "geneType": ""
+  },
+  "SURF1": {
+    "ncbiGeneId": "6834",
+    "officialSymbol": "SURF1",
+    "officialName": "SURF1 cytochrome c oxidase assembly factor",
+    "aliases": [
+      "CMT4K",
+      "MC4DN1",
+      "SHY1"
+    ],
+    "otherDesignations": [
+      "surfeit locus protein 1",
+      "surfeit 1"
+    ],
+    "chromosome": "9",
+    "mapLocation": "9q34.2",
+    "ncbiSummary": "This gene encodes a protein localized to the inner mitochondrial membrane and thought to be involved in the biogenesis of the cytochrome c oxidase complex. The protein is a member of the SURF1 family, which includes the related yeast protein SHY1 and rickettsial protein RP733. The gene is located in the surfeit gene cluster, a group of very tightly linked genes that do not share sequence similarity, where it shares a bidirectional promoter with SURF2 on the opposite strand. Defects in this gene are a cause of Leigh syndrome, a severe neurological disorder that is commonly associated with systemic cytochrome c oxidase deficiency. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "SGCG": {
+    "ncbiGeneId": "6445",
+    "officialSymbol": "SGCG",
+    "officialName": "sarcoglycan gamma",
+    "aliases": [
+      "35DAG",
+      "A4",
+      "DAGA4",
+      "DMDA",
+      "DMDA1",
+      "LGMD2C",
+      "LGMDR5",
+      "MAM",
+      "SCARMD2",
+      "gamma-SG"
+    ],
+    "otherDesignations": [
+      "gamma-sarcoglycan",
+      "35 kDa dystrophin-associated glycoprotein",
+      "35kD dystrophin-associated glycoprotein",
+      "sarcoglycan, gamma (35kDa dystrophin-associated glycoprotein)"
+    ],
+    "chromosome": "13",
+    "mapLocation": "13q12.12",
+    "ncbiSummary": "This gene encodes gamma-sarcoglycan, one of several sarcolemmal transmembrane glycoproteins that interact with dystrophin. The dystrophin-glycoprotein complex (DGC) spans the sarcolemma and is comprised of dystrophin, syntrophin, alpha- and beta-dystroglycans and sarcoglycans. The DGC provides a structural link between the subsarcolemmal cytoskeleton and the extracellular matrix of muscle cells. Defects in the encoded protein can lead to early onset autosomal recessive muscular dystrophy, in particular limb-girdle muscular dystrophy, type 2C (LGMD2C). [provided by RefSeq, Oct 2008]",
+    "geneType": ""
+  },
+  "AGRN": {
+    "ncbiGeneId": "375790",
+    "officialSymbol": "AGRN",
+    "officialName": "agrin",
+    "aliases": [
+      "AGRIN",
+      "CMS8",
+      "CMSPPD"
+    ],
+    "otherDesignations": [
+      "agrin",
+      "agrin proteoglycan"
+    ],
+    "chromosome": "1",
+    "mapLocation": "1p36.33",
+    "ncbiSummary": "This gene encodes one of several proteins that are critical in the development of the neuromuscular junction (NMJ), as identified in mouse knock-out studies. The encoded protein contains several laminin G, Kazal type serine protease inhibitor, and epidermal growth factor domains. Additional post-translational modifications occur to add glycosaminoglycans and disulfide bonds. In one family with congenital myasthenic syndrome affecting limb-girdle muscles, a mutation in this gene was found. Alternative splicing results in multiple transcript variants encoding different isoforms. [provided by RefSeq, Mar 2015]",
+    "geneType": ""
+  },
+  "SGCB": {
+    "ncbiGeneId": "6443",
+    "officialSymbol": "SGCB",
+    "officialName": "sarcoglycan beta",
+    "aliases": [
+      "A3b",
+      "LGMD2E",
+      "LGMDR4",
+      "SGC"
+    ],
+    "otherDesignations": [
+      "beta-sarcoglycan",
+      "43 kDa dystrophin-associated glycoprotein",
+      "43DAG",
+      "beta-SG",
+      "beta-sarcoglycan(43kD dystrophin-associated glycoprotein)",
+      "limb girdle muscular dystrophy 2E (non-linked families)",
+      "sarcoglycan, beta (43kDa dystrophin-associated glycoprotein)"
+    ],
+    "chromosome": "4",
+    "mapLocation": "4q12",
+    "ncbiSummary": "This gene encodes a member of the sarcoglycan family. Sarcoglycans are transmembrane components in the dystrophin-glycoprotein complex which help stabilize the muscle fiber membranes and link the muscle cytoskeleton to the extracellular matrix. Mutations in this gene have been associated with limb-girdle muscular dystrophy.[provided by RefSeq, Oct 2008]",
+    "geneType": ""
+  },
+  "DOK7": {
+    "ncbiGeneId": "285489",
+    "officialSymbol": "DOK7",
+    "officialName": "docking protein 7",
+    "aliases": [
+      "C4orf25",
+      "CMS10",
+      "CMS1B"
+    ],
+    "otherDesignations": [
+      "protein Dok-7",
+      "downstream of tyrosine kinase 7"
+    ],
+    "chromosome": "4",
+    "mapLocation": "4p16.3",
+    "ncbiSummary": "The protein encoded by this gene is essential for neuromuscular synaptogenesis. The protein functions in aneural activation of muscle-specific receptor kinase, which is required for postsynaptic differentiation, and in the subsequent clustering of the acetylcholine receptor in myotubes. This protein can also induce autophosphorylation of muscle-specific receptor kinase. Mutations in this gene are a cause of familial limb-girdle myasthenia autosomal recessive, which is also known as congenital myasthenic syndrome type 1B. Alternative splicing results in multiple transcript variants. [provided by RefSeq, Sep 2009]",
+    "geneType": ""
   }
 }

@@ -11,7 +11,7 @@ type Chunk = {
   url: string; anchor: string;
 };
 
-type GeneRecord = { symbol: string; fullName: string };
+type GeneRecord = { symbol: string; fullName: string; aliases?: string[]; phenotype?: string };
 
 let fuseInstance: Fuse<Chunk> | null = null;
 let genesCache: GeneRecord[] | null = null;
@@ -105,7 +105,9 @@ export default function GlobalSearch() {
     setGeneMatches(
       genes.filter(g =>
         g.symbol.toLowerCase().includes(qLower) ||
-        g.fullName.toLowerCase().includes(qLower)
+        g.fullName.toLowerCase().includes(qLower) ||
+        (g.aliases || []).some((a: string) => a.toLowerCase().includes(qLower)) ||
+        (g.phenotype || '').toLowerCase().includes(qLower)
       ).slice(0, 4)
     );
     setLoading(false);

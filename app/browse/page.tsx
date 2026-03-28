@@ -125,9 +125,20 @@ function BrowseInner() {
   const hasMore = paginated.length < filtered.length;
 
   function slugify(name: string) {
-    return name.toLowerCase().replace(/['']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    return name.toLowerCase().replace(/['']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80);
   }
-  const condHref = (c: Chunk) => `/condition/${slugify(c.name)}`;
+
+  // Check if condition has a local page, otherwise link to WUSTL
+  const [localSlugs, setLocalSlugs] = useState<Set<string>>(new Set());
+  useEffect(() => {
+    fetch('/api/condition-slugs').then(r => r.json()).then((slugs: string[]) => setLocalSlugs(new Set(slugs))).catch(() => {});
+  }, []);
+
+  function condLink(c: Chunk): { href: string; external: boolean } {
+    const slug = slugify(c.name);
+    if (localSlugs.has(slug)) return { href: `/condition/${slug}`, external: false };
+    return { href: `${c.url}${c.anchor ? '#' + c.anchor : ''}`, external: true };
+  }
 
   return (
     <div>
@@ -198,26 +209,26 @@ function BrowseInner() {
           <div style={{ display: 'grid', gap: '8px', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))' }}>
             {paginated.map(c => {
               const inhs = c.inheritance.split(',').map(s => s.trim()).filter(Boolean);
-              return (
-                <Link
-                  key={c.id}
-                  href={condHref(c)}
-                  style={{
-                    display: 'block',
-                    background: '#fff',
-                    border: '1px solid #e2e8f0',
-                    borderRadius: '12px',
-                    padding: '12px 14px',
-                    textDecoration: 'none',
-                    transition: 'border-color 0.15s, box-shadow 0.15s',
-                  }}
-                >
+              const { href, external } = condLink(c);
+              const cardStyle = {
+                display: 'block' as const, background: '#fff',
+                border: '1px solid #e2e8f0', borderRadius: '12px',
+                padding: '12px 14px', textDecoration: 'none' as const,
+                transition: 'border-color 0.15s, box-shadow 0.15s',
+              };
+              const cardContent = (
+                <>
                   <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '8px', marginBottom: '4px' }}>
                     <span style={{ fontSize: '13px', fontWeight: 600, color: '#1e293b', lineHeight: 1.3 }}>{cleanName(c.name)}</span>
+                    {external && (
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" style={{ flexShrink: 0, marginTop: '3px', opacity: 0.4 }}>
+                        <path d="M2 10L10 2M10 2H5M10 2V7" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    )}
                   </div>
                   {c.genes && (
                     <div style={{ fontSize: '11px', color: '#3b82f6', marginBottom: '6px', fontFamily: 'ui-monospace, monospace' }}>
-                      {c.genes.split(',').slice(0, 5).join(', ')}{c.genes.split(',').length > 5 ? ' …' : ''}
+                      {c.genes.split(',').slice(0, 5).join(', ')}{c.genes.split(',').length > 5 ? ' ...' : ''}
                     </div>
                   )}
                   <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
@@ -237,7 +248,12 @@ function BrowseInner() {
                       }}>{c.category}</span>
                     )}
                   </div>
-                </Link>
+                </>
+              );
+              return external ? (
+                <a key={c.id} href={href} target="_blank" rel="noopener" style={cardStyle}>{cardContent}</a>
+              ) : (
+                <Link key={c.id} href={href} style={cardStyle}>{cardContent}</Link>
               );
             })}
           </div>

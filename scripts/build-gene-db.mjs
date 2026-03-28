@@ -81,6 +81,50 @@ const curatedConditions = indexEntries
   .filter(e => e[2] === 'condition')
   .map(e => ({ name: e[3], href: e[4], dagger: e[5] === 'true', letter: e[1] }));
 
+// Supplemental important genes not in curatedIndex.ts or daily.json
+const SUPPLEMENTAL_GENES = [
+  { symbol: 'FXN', href: 'https://neuromuscular.wustl.edu/ataxia/recatax.html#FA' },
+  { symbol: 'COL6A1', href: 'https://neuromuscular.wustl.edu/musdist/lg.html#beth' },
+  { symbol: 'COL6A2', href: 'https://neuromuscular.wustl.edu/musdist/lg.html#beth' },
+  { symbol: 'COL6A3', href: 'https://neuromuscular.wustl.edu/musdist/lg.html#beth' },
+  { symbol: 'EMD', href: 'https://neuromuscular.wustl.edu/msys/contract.html#emd' },
+  { symbol: 'CHRNA1', href: 'https://neuromuscular.wustl.edu/synmg.html#chrna1' },
+  { symbol: 'MUSK', href: 'https://neuromuscular.wustl.edu/synmg.html#musk' },
+  { symbol: 'CLCN1', href: 'https://neuromuscular.wustl.edu/mother/chan.html#clcn1' },
+  { symbol: 'SPG4', href: 'https://neuromuscular.wustl.edu/spinal/fsp.html#spast' },
+  { symbol: 'SPG7', href: 'https://neuromuscular.wustl.edu/spinal/fsp.html#spg7' },
+  { symbol: 'ATM', href: 'https://neuromuscular.wustl.edu/ataxia/dnarep.html#at' },
+  { symbol: 'SGCA', href: 'https://neuromuscular.wustl.edu/musdist/lg.html#lgmd2d' },
+  { symbol: 'SGCB', href: 'https://neuromuscular.wustl.edu/musdist/lg.html#lgmd2e' },
+  { symbol: 'SGCG', href: 'https://neuromuscular.wustl.edu/musdist/lg.html#lgmd2c' },
+  { symbol: 'SGCD', href: 'https://neuromuscular.wustl.edu/musdist/lg.html#lgmd2f' },
+  { symbol: 'DES', href: 'https://neuromuscular.wustl.edu/mother/myosin.htm#desdis' },
+  { symbol: 'FLNC', href: 'https://neuromuscular.wustl.edu/mother/myosin.htm#flnc' },
+  { symbol: 'UBA1', href: 'https://neuromuscular.wustl.edu/synmot.html#uba1' },
+  { symbol: 'HEXB', href: 'https://neuromuscular.wustl.edu/synmot.html#hexB' },
+  { symbol: 'HEXA', href: 'https://neuromuscular.wustl.edu/synmot.html#hexA' },
+  { symbol: 'FKRP', href: 'https://neuromuscular.wustl.edu/musdist/lg.html#lgmd2i' },
+  { symbol: 'CACNA1A', href: 'https://neuromuscular.wustl.edu/ataxia/domatax.html#sca6' },
+  { symbol: 'GJB1', href: 'https://neuromuscular.wustl.edu/time/hmsn.html#cmtx1' },
+  { symbol: 'MPZ', href: 'https://neuromuscular.wustl.edu/time/hmsn.html#mpz' },
+  { symbol: 'SH3TC2', href: 'https://neuromuscular.wustl.edu/time/hmsn.html#cmt4c' },
+  { symbol: 'GDAP1', href: 'https://neuromuscular.wustl.edu/time/hmsn.html#gdap1' },
+  { symbol: 'IGHMBP2', href: 'https://neuromuscular.wustl.edu/synmot.html#smard1' },
+  { symbol: 'TRPV4', href: 'https://neuromuscular.wustl.edu/time/hmsn.html#trpv4' },
+  { symbol: 'BAG3', href: 'https://neuromuscular.wustl.edu/mother/myosin.htm#bag3' },
+  { symbol: 'SELENON', href: 'https://neuromuscular.wustl.edu/syncm.html#selenon' },
+  { symbol: 'BIN1', href: 'https://neuromuscular.wustl.edu/syncm.html#bin1' },
+  { symbol: 'STAC3', href: 'https://neuromuscular.wustl.edu/syncm.html#stac3' },
+  { symbol: 'CHAT', href: 'https://neuromuscular.wustl.edu/synmg.html#chat' },
+  { symbol: 'RAPSN', href: 'https://neuromuscular.wustl.edu/synmg.html#rapsn' },
+  { symbol: 'DOK7', href: 'https://neuromuscular.wustl.edu/synmg.html#dok7' },
+  { symbol: 'AGRN', href: 'https://neuromuscular.wustl.edu/synmg.html#agrn' },
+  { symbol: 'POLG', href: 'https://neuromuscular.wustl.edu/mitosyn.html#alpers' },
+  { symbol: 'SURF1', href: 'https://neuromuscular.wustl.edu/mitosyn.html#surf1' },
+  { symbol: 'TWNK', href: 'https://neuromuscular.wustl.edu/mitosyn.html#twinkle' },
+  { symbol: 'OPA1', href: 'https://neuromuscular.wustl.edu/mitosyn.html#opa1' },
+];
+
 // search.json — scraped WUSTL data
 const searchData = JSON.parse(readFileSync(resolve(root, 'src/data/search.json'), 'utf8'));
 
@@ -193,6 +237,27 @@ for (const cg of curatedGenes) {
   genes.set(sym, record);
 }
 
+// Known WUSTL URLs for daily.json genes missing from curated index
+const DAILY_GENE_URLS = {
+  DMD:   'https://neuromuscular.wustl.edu/musdist/dmd.html',
+  DMPK:  'https://neuromuscular.wustl.edu/musdist/pe-eom.html#dm1',
+  SMN1:  'https://neuromuscular.wustl.edu/synmot.html#sma5q',
+  GAA:   'https://neuromuscular.wustl.edu/msys/glycogen.html#am',
+  CAPN3: 'https://neuromuscular.wustl.edu/musdist/lg.html#lgmd2a',
+  LMNA:  'https://neuromuscular.wustl.edu/msys/contract.html#laminac',
+  SOD1:  'https://neuromuscular.wustl.edu/synmot.html#sod1',
+  DYSF:  'https://neuromuscular.wustl.edu/musdist/lg.html#ml1',
+  VCP:   'https://neuromuscular.wustl.edu/musdist/distal.html#vcp',
+  PYGM:  'https://neuromuscular.wustl.edu/msys/glycogen.html#McA',
+  NEB:   'https://neuromuscular.wustl.edu/syncm.html#rod',
+  TTN:   'https://neuromuscular.wustl.edu/musdist/lg.html#ttn',
+  GAN:   'https://neuromuscular.wustl.edu/time/hmsn.html#gan',
+  COLQ:  'https://neuromuscular.wustl.edu/synmg.html#colq',
+  FUS:   'https://neuromuscular.wustl.edu/synmot.html#fus',
+  MTM1:  'https://neuromuscular.wustl.edu/syncm.html#mtm',
+  SCN4A: 'https://neuromuscular.wustl.edu/mother/chan.html#scn4a',
+};
+
 // Also add daily.json genes not in the curated index
 for (const [sym, rich] of dailyGenes) {
   if (genes.has(sym)) continue;
@@ -219,11 +284,12 @@ for (const [sym, rich] of dailyGenes) {
     });
   }
 
-  // Build a WUSTL URL from the first matching search entry, or a generic search
+  // Use known URL, or build from search entries, or fall back to search
+  const knownUrl = DAILY_GENE_URLS[sym];
   const firstEntry = entries[0];
-  const wustlUrl = firstEntry
-    ? `${firstEntry.url}${firstEntry.anchor ? '#' + firstEntry.anchor : ''}`
-    : `https://neuromuscular.wustl.edu/alfindex.htm`;
+  const wustlUrl = knownUrl
+    || (firstEntry ? `${firstEntry.url}${firstEntry.anchor ? '#' + firstEntry.anchor : ''}` : '')
+    || `https://neuromuscular.wustl.edu/alfindex.htm`;
 
   genes.set(sym, {
     symbol: sym,
@@ -242,6 +308,48 @@ for (const [sym, rich] of dailyGenes) {
     mechanism: rich.mechanism || '',
     hallmarks: rich.hallmarks || [],
     wustlUrl,
+    adultOnset: false,
+    categories: [...catSet],
+    associatedConditions: assocConditions.slice(0, 30),
+  });
+}
+
+// Also add supplemental important genes
+for (const sg of SUPPLEMENTAL_GENES) {
+  if (genes.has(sg.symbol)) continue;
+  const entries = geneToEntries.get(sg.symbol) || [];
+  const omimSet = geneToOmim.get(sg.symbol) || new Set();
+  const inhSet = new Set();
+  const catSet = new Set();
+  for (const e of entries) {
+    if (e.inheritance) e.inheritance.split(',').map(s => s.trim()).filter(Boolean).forEach(i => { if (!['Sporadic', 'Unknown'].includes(i)) inhSet.add(i); });
+    if (e.category && !['General', 'Overview / Fellowship'].includes(e.category)) catSet.add(e.category);
+  }
+  const assocConditions = [];
+  const seenNames = new Set();
+  for (const e of entries) {
+    const name = e.name?.trim();
+    if (!isValidConditionName(name) || seenNames.has(name.toLowerCase())) continue;
+    seenNames.add(name.toLowerCase());
+    assocConditions.push({ name, slug: slugify(name), category: e.category, url: `${e.url}${e.anchor ? '#' + e.anchor : ''}`, inheritance: e.inheritance, omimIds: e.omimIds });
+  }
+  genes.set(sg.symbol, {
+    symbol: sg.symbol,
+    rawName: sg.symbol,
+    fullName: '',
+    aliases: [],
+    chromosome: '',
+    locus: '',
+    geneType: '',
+    ncbiGeneId: '',
+    ncbiSummary: '',
+    inheritance: [...inhSet],
+    omim: [...omimSet][0] || '',
+    omimIds: [...omimSet],
+    phenotype: '',
+    mechanism: '',
+    hallmarks: [],
+    wustlUrl: sg.href,
     adultOnset: false,
     categories: [...catSet],
     associatedConditions: assocConditions.slice(0, 30),
