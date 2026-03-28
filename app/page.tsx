@@ -1,5 +1,5 @@
 import indexData from '@/src/data/index.json';
-import genesData from '@/src/data/genes-enriched.json';
+import genesEnriched from '@/src/data/genes-enriched.json';
 import { GeneOfDay, FactoidOfDay, QuestionOfDay } from '@/components/DailyWidgets';
 import CategoryGrid from '@/components/CategoryGrid';
 import FeaturedConditions from '@/components/FeaturedConditions';
@@ -48,11 +48,6 @@ const FEATURED_CONDITIONS = [
   { label: 'AIDP / Guillain-Barre Syndrome',      abbr: 'GBS',   gene: '',              color: '#0891b2', url: '/search?q=guillain-barre' },
 ];
 
-// Curated spotlight genes for the homepage
-const SPOTLIGHT_GENES = genesData
-  .filter(g => g.fullName && (g.ncbiSummary || g.phenotype))
-  .slice(0, 12);
-
 export default function Home() {
   return (
     <div>
@@ -68,92 +63,51 @@ export default function Home() {
         <QuickLink href="/search?q=mitochondrial" label="Mitochondrial" />
       </div>
 
-      {/* ── Two-column: Browse + Daily ─────────────────────────────────── */}
-      <div className="nm-home-grid">
-        {/* Left column: Browse & Navigate */}
-        <div>
-          {/* Browse by Category */}
-          <SectionLabel>Browse by Category</SectionLabel>
-          <CategoryGrid items={CLINICAL_CATEGORIES} />
-          <RotatingCategories />
-          <div style={{ marginTop: '8px' }}>
-            <AlphabetIndex />
-          </div>
-
-          {/* Featured Genes */}
-          <div style={{ marginTop: '28px' }}>
-            <SectionLabel>Featured Genes</SectionLabel>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '6px' }}>
-              {SPOTLIGHT_GENES.map(g => (
-                <Link
-                  key={g.symbol}
-                  href={`/gene/${g.symbol}`}
-                  style={{
-                    display: 'flex', alignItems: 'center', gap: '8px',
-                    background: '#fff', border: '1px solid #e2e8f0',
-                    borderRadius: '10px', padding: '8px 12px',
-                    textDecoration: 'none',
-                    transition: 'border-color 0.15s, box-shadow 0.15s',
-                  }}
-                >
-                  <span style={{
-                    fontSize: '13px', fontWeight: 800, color: '#2563eb',
-                    fontFamily: 'ui-monospace, "Cascadia Code", "SF Mono", monospace',
-                  }}>
-                    {g.symbol}
-                  </span>
-                  <span style={{
-                    fontSize: '10px', color: '#64748b',
-                    overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-                  }}>
-                    {g.fullName}
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Right column: Daily content + Stats */}
-        <div>
-          <SectionLabel>Today</SectionLabel>
-          <div style={{ marginBottom: '12px' }}>
-            <GeneOfDay />
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px' }}>
-            <FactoidOfDay />
-            <QuestionOfDay />
-          </div>
-
-          {/* Stats */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
-            {[
-              { label: 'Source pages',       value: summary.crawledPages.toLocaleString() },
-              { label: 'Entries indexed',    value: summary.totalSections.toLocaleString() },
-              { label: 'Gene entries',       value: genesData.length.toLocaleString() },
-              { label: 'Inheritance tagged', value: summary.withInheritance.toLocaleString() },
-            ].map(s => (
-              <div key={s.label} style={{
-                background: '#fff', border: '1px solid #e2e8f0',
-                borderRadius: '12px', padding: '12px 14px',
-              }}>
-                <div style={{ fontSize: '20px', fontWeight: 700, color: '#1e293b', letterSpacing: '-0.5px' }}>
-                  {s.value}
-                </div>
-                <div style={{ fontSize: '10px', color: '#94a3b8', marginTop: '2px', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 500 }}>
-                  {s.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* ── Daily widgets ────────────────────────────────────────────── */}
+      <SectionLabel>Today</SectionLabel>
+      <div style={{ marginBottom: '12px' }}>
+        <GeneOfDay />
+      </div>
+      <div className="nm-2col" style={{ marginBottom: '36px' }}>
+        <FactoidOfDay />
+        <QuestionOfDay />
       </div>
 
       {/* ── Featured conditions ──────────────────────────────────────── */}
-      <div style={{ marginTop: '32px' }}>
-        <SectionLabel>Select Neuromuscular Conditions</SectionLabel>
-        <FeaturedConditions conditions={FEATURED_CONDITIONS} />
-        <RotatingConditions />
+      <SectionLabel>Select Neuromuscular Conditions</SectionLabel>
+      <FeaturedConditions conditions={FEATURED_CONDITIONS} />
+      <RotatingConditions />
+
+      {/* ── Browse by Category + alphabet index ──────────────────────── */}
+      <div style={{ marginTop: '28px' }}>
+        <SectionLabel>Browse by Category</SectionLabel>
+        <CategoryGrid items={CLINICAL_CATEGORIES} />
+        <RotatingCategories />
+        <div style={{ marginTop: '8px' }}>
+          <AlphabetIndex />
+        </div>
+      </div>
+
+      {/* ── Stats bar ──────────────────────────────────────────────── */}
+      <div className="nm-4col" style={{ marginTop: '36px' }}>
+        {[
+          { label: 'Source pages',      value: summary.crawledPages.toLocaleString() },
+          { label: 'Entries',           value: summary.totalSections.toLocaleString() },
+          { label: 'Gene pages',        value: genesEnriched.length.toLocaleString() },
+          { label: 'Inheritance tagged', value: summary.withInheritance.toLocaleString() },
+        ].map(s => (
+          <div key={s.label} style={{
+            background: '#fff', border: '1px solid #e2e8f0',
+            borderRadius: '14px', padding: '16px 18px',
+          }}>
+            <div style={{ fontSize: '22px', fontWeight: 700, color: '#1e293b', letterSpacing: '-0.5px' }}>
+              {s.value}
+            </div>
+            <div style={{ fontSize: '11px', color: '#94a3b8', marginTop: '2px', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 500 }}>
+              {s.label}
+            </div>
+          </div>
+        ))}
       </div>
 
       {/* Attribution */}

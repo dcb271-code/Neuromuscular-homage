@@ -18,12 +18,15 @@ type GeneRecord = {
 
 let fuseInstance: Fuse<Chunk> | null = null;
 let genesCache: GeneRecord[] | null = null;
+let condSlugsCache: Set<string> | null = null;
 
 async function getFuse(): Promise<Fuse<Chunk>> {
   if (fuseInstance) return fuseInstance;
   const res = await fetch('/search.json');
   const data: Chunk[] = await res.json();
-  fuseInstance = new Fuse(data, {
+  // Filter out junk entries before indexing
+  const clean = data.filter(d => isGoodEntry(d.name));
+  fuseInstance = new Fuse(clean, {
     keys: [
       { name: 'name', weight: 4 },
       { name: 'genes', weight: 3 },
@@ -41,17 +44,42 @@ async function getFuse(): Promise<Fuse<Chunk>> {
 
 async function getGenes(): Promise<GeneRecord[]> {
   if (genesCache) return genesCache;
-  try {
-    const res = await fetch('/api/genes');
-    genesCache = await res.json();
-  } catch {
-    genesCache = [];
-  }
+  try { const res = await fetch('/api/genes'); genesCache = await res.json(); }
+  catch { genesCache = []; }
   return genesCache!;
 }
 
+async function getCondSlugs(): Promise<Set<string>> {
+  if (condSlugsCache) return condSlugsCache;
+  try { const res = await fetch('/api/condition-slugs'); condSlugsCache = new Set(await res.json()); }
+  catch { condSlugsCache = new Set(); }
+  return condSlugsCache;
+}
+
 function slugify(name: string) {
-  return name.toLowerCase().replace(/['']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  return name.toLowerCase().replace(/['']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80);
+}
+
+function isGoodEntry(name: string): boolean {
+  if (!name || name.length < 4 || name.length > 120) return false;
+  if (/^[a-z][a-z0-9]*$/.test(name)) return false;
+  if (/^ref\d+/i.test(name)) return false;
+  if (/^\d+\.?$/.test(name)) return false;
+  if (/^\d[a-z0-9]+$/.test(name)) return false;
+  if ((name.match(/ /g) || []).length > 15) return false;
+  if (!/\s/.test(name) && name.length <= 6 && !/^[A-Z][A-Z0-9\-]+$/.test(name)) return false;
+  return true;
+}
+
+// Build the right link for a search result: local page if it exists, WUSTL otherwise
+function resultHref(item: Chunk, localSlugs: Set<string>): { href: string; external: boolean } {
+  const slug = slugify(item.name);
+  if (localSlugs.has(slug)) {
+    return { href: `/condition/${slug}`, external: false };
+  }
+  // Fall back to WUSTL link
+  const wustlUrl = `${item.url}${item.anchor ? '#' + item.anchor : ''}`;
+  return { href: wustlUrl, external: true };
 }
 
 const INH_COLORS: Record<string, { bg: string; fg: string }> = {
@@ -73,10 +101,14 @@ export default function HeroSearch() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<FuseResult<Chunk>[]>([]);
   const [geneMatches, setGeneMatches] = useState<GeneRecord[]>([]);
+  const [localSlugs, setLocalSlugs] = useState<Set<string>>(new Set());
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Load condition slugs on mount
+  useEffect(() => { getCondSlugs().then(setLocalSlugs); }, []);
 
   const search = useCallback(async (q: string) => {
     if (q.trim().length < 2) { setResults([]); setGeneMatches([]); return; }
@@ -175,7 +207,7 @@ export default function HeroSearch() {
 
           {!loading && hasResults && (
             <>
-              {/* Gene matches */}
+              {/* Gene matches — always link to local gene pages */}
               {geneMatches.length > 0 && (
                 <div style={{ padding: '8px 12px', borderBottom: '1px solid #f1f5f9' }}>
                   <div style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#2563eb', marginBottom: '6px', padding: '0 4px' }}>
@@ -206,7 +238,7 @@ export default function HeroSearch() {
                 </div>
               )}
 
-              {/* Condition matches */}
+              {/* Condition matches — local page or WUSTL external */}
               {results.length > 0 && (
                 <div>
                   <div style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#64748b', padding: '8px 16px 4px' }}>
@@ -215,11 +247,18 @@ export default function HeroSearch() {
                   {results.map((r, i) => {
                     const item = r.item;
                     const inhs = item.inheritance.split(',').map(s => s.trim()).filter(Boolean);
-                    const slug = slugify(item.name);
+                    const { href, external } = resultHref(item, localSlugs);
+
+                    const linkProps = external
+                      ? { href, target: '_blank' as const, rel: 'noopener' }
+                      : { href };
+
+                    const El = external ? 'a' : Link;
+
                     return (
-                      <Link
+                      <El
                         key={i}
-                        href={`/condition/${slug}`}
+                        {...linkProps}
                         onClick={() => setOpen(false)}
                         style={{
                           display: 'block', padding: '10px 16px',
@@ -233,13 +272,18 @@ export default function HeroSearch() {
                             const s = inhStyle(ih);
                             return <span key={ih} style={{ fontSize: '10px', fontWeight: 500, padding: '1px 6px', borderRadius: '99px', background: s.bg, color: s.fg }}>{ih}</span>;
                           })}
+                          {external && (
+                            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" style={{ flexShrink: 0, opacity: 0.4 }}>
+                              <path d="M2 10L10 2M10 2H5M10 2V7" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                          )}
                         </div>
                         {item.genes && (
                           <div style={{ fontSize: '11px', color: '#3b82f6', marginTop: '2px', fontFamily: 'ui-monospace, monospace' }}>
-                            {item.genes.split(/[,\s]+/).slice(0, 5).join(', ')}
+                            {item.genes.split(/[,\s]+/).filter(Boolean).slice(0, 5).join(', ')}
                           </div>
                         )}
-                      </Link>
+                      </El>
                     );
                   })}
 
@@ -251,8 +295,7 @@ export default function HeroSearch() {
                       display: 'block', padding: '10px 16px',
                       textAlign: 'center', fontSize: '12px', fontWeight: 600,
                       color: '#2563eb', textDecoration: 'none',
-                      borderTop: '1px solid #f1f5f9',
-                      background: '#f8fafc',
+                      borderTop: '1px solid #f1f5f9', background: '#f8fafc',
                     }}
                   >
                     See all results for &ldquo;{query}&rdquo;
