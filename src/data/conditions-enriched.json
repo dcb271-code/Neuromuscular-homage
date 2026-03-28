@@ -35,23 +35,17 @@
     "name": "Aarskog\\u2013Scott syndrome",
     "slug": "aarskog-u2013scott-syndrome",
     "letter": "A",
-    "category": "Systemic/Multisystem",
+    "category": "",
     "genes": [],
-    "inheritance": [
-      "X-Linked"
-    ],
-    "omimIds": [
-      "305400",
-      "300546",
-      "116952"
-    ],
-    "content": "Aarskog�Scott syndrome 25● Nosology Facio-digito-genital syndrome Tel Hashomer Camptodactyly Epidemiology: 59 patients Genetics Mutations: Missense most common; also deletion & insertion Allelic disorders Mental retardation, X-linked syndromic 16 (MRXS16) Tel Hashomer Camptodactyly Carrier females: Face dysmorphism FGD1 protein Guanine nucleotide exchange factor Activates CDC42 Clinical Face Ocular hypertelorism Nostrils: Anteverted Upper lip: Broad Ptosis Genital: �Shawl� scrotum; Cryptorchidism Joints: Arthropathy Arthrogryposis: Distal, Symmetric Fusiform swelling of proximal interphalangea",
+    "inheritance": [],
+    "omimIds": [],
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/msys/contract.html#aarssc",
     "adultOnset": false
   },
   {
-    "name": "Acute Flaccid Myelitis, EV-D68 (Motor neuronopathy; AFM)\n34",
-    "slug": "acute-flaccid-myelitis-ev-d68-motor-neuronopathy-afm-34",
+    "name": "Acute Flaccid Myelitis, EV-D68 (Motor neuronopathy; AFM)",
+    "slug": "acute-flaccid-myelitis-ev-d68-motor-neuronopathy-afm",
     "letter": "A",
     "category": "Other Neuromuscular",
     "genes": [
@@ -66,8 +60,8 @@
     "adultOnset": false
   },
   {
-    "name": "Acute Immune Neuropathies: Facial Diplegia Variant (BFP)\n22",
-    "slug": "acute-immune-neuropathies-facial-diplegia-variant-bfp-22",
+    "name": "Acute Immune Neuropathies: Facial Diplegia Variant (BFP)",
+    "slug": "acute-immune-neuropathies-facial-diplegia-variant-bfp",
     "letter": "A",
     "category": "Immune/Antibody",
     "genes": [
@@ -165,15 +159,11 @@
     "name": "Alexander disease",
     "slug": "alexander-disease",
     "letter": "A",
-    "category": "General",
+    "category": "",
     "genes": [],
     "inheritance": [],
-    "omimIds": [
-      "113610",
-      "137780",
-      "203450"
-    ],
-    "content": "Branchial Myoclonus with Spastic paraparesis & Cerebellar ataxia ● Nosology: Adult onset Alexander disease 24 Genetics Mutation: Val87Gly; Missense GFAP protein Intermediate-filament (IF) protein Location: Cytoplasm Specific for cells Astroglial lineage Lacking fibronectin GFAP immune disorder: Astrocytopathy Clinical Onset age: 12 to 71 years Branchial (Palatal) myoclonus Palate, pharynx, larynx, and face Differential diagnosis Hereditary ataxias: SCA2; MJD Dentato-rubro-olivary pathway disorders Demyelination; Infarction; Arteritis; Neoplasm; Trauma Cerebellar Truncal ataxia Nystagmus Bulbar",
+    "omimIds": [],
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/spinal/fsp.html#palatalmyo",
     "adultOnset": false
   },
@@ -190,7 +180,7 @@
     "adultOnset": false
   },
   {
-    "name": "ALS Genes: Hereditary\n\n & Susceptibility",
+    "name": "ALS Genes: Hereditary & Susceptibility",
     "slug": "als-genes-hereditary-susceptibility",
     "letter": "A",
     "category": "Motor Neuron / ALS",
@@ -214,28 +204,11 @@
     "name": "Andermann syndrome",
     "slug": "andermann-syndrome",
     "letter": "A",
-    "category": "Neuropathy (Hereditary)",
+    "category": "",
     "genes": [],
-    "inheritance": [
-      "Autosomal Recessive",
-      "Autosomal Dominant",
-      "De Novo",
-      "X-Linked"
-    ],
-    "omimIds": [
-      "218000",
-      "604878",
-      "620068",
-      "618511",
-      "179020",
-      "603287",
-      "266100",
-      "604436",
-      "258650",
-      "311070",
-      "214370"
-    ],
-    "content": "HMSN & Agenesis of Corpus Callosum: Andermann Syndrome (ACCPN) ● Solute carrier family 12 (Na+/Cl- transporter), Member 6 (KCC3; SLC12A6) ; Chromosome 15q14; Recessive Epidemiology French-Canadian: Charlevoix-Saguenay geographical focus; 1 in 2,100 live births KCC3 mutations also found in non-French-Canadian families Genetics Mutation type: Protein truncating Common mutations General: Arg1011X (Exon 22) French-Canadian: 2436delG Knockout mice develop similar syndrome Peripheral nerves have hypomyelination Normal corpus callosum: Other factors may be involved in agenesis Allelic disorders Motor",
+    "inheritance": [],
+    "omimIds": [],
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/time/hmsn.html#andermann",
     "adultOnset": false
   },
@@ -252,8 +225,8 @@
     "adultOnset": false
   },
   {
-    "name": "ANTIBODIES IN CONNECTIVE TISSUE DISORDERS\n1",
-    "slug": "antibodies-in-connective-tissue-disorders-1",
+    "name": "ANTIBODIES IN CONNECTIVE TISSUE DISORDERS",
+    "slug": "antibodies-in-connective-tissue-disorders",
     "letter": "A",
     "category": "Laboratory / Diagnostics",
     "genes": [
@@ -321,23 +294,17 @@
     "name": "ARSACS",
     "slug": "arsacs",
     "letter": "A",
-    "category": "Ataxia/Cerebellar",
+    "category": "",
     "genes": [],
-    "inheritance": [
-      "Autosomal Recessive",
-      "Variable"
-    ],
-    "omimIds": [
-      "270550",
-      "604490"
-    ],
-    "content": "Charlevoix-Saguenay - Spastic Ataxia (ARSACS; SPAX 6) 152 ● Sacsin (SACS; DNAJC29) ; Chromosome 13q12.12; Recessive Epidemiology Family locations: French-Canadian (Quebec); Tunisia 3 Worldwide: Frequent recessive ataxia Genetics Mutations > 200 Loss of function Common location: Exon 10 (80%) Deletions or point mutations in sacsin gene Produce stop codon Most common French-Canadian: c.6594delT (94%) Missense mutations & large deletions also described Similar locus to Early onset cerebellar ataxia + retained reflexes Tunisian family with milder phenotype 3 Variant syndromes Sacsin protein Expres",
+    "inheritance": [],
+    "omimIds": [],
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/ataxia/recatax.html#cssa",
     "adultOnset": false
   },
   {
-    "name": "Arthrogryposis Multiplex Congenita (AMC)\n29",
-    "slug": "arthrogryposis-multiplex-congenita-amc-29",
+    "name": "Arthrogryposis Multiplex Congenita (AMC)",
+    "slug": "arthrogryposis-multiplex-congenita-amc",
     "letter": "A",
     "category": "Systemic/Multisystem",
     "genes": [
@@ -386,19 +353,11 @@
     "name": "Ataxia-telangiectasia",
     "slug": "ataxia-telangiectasia",
     "letter": "A",
-    "category": "Ataxia/Cerebellar",
-    "genes": [
-      "CLL"
-    ],
-    "inheritance": [
-      "Variable"
-    ],
-    "omimIds": [
-      "208900",
-      "607585",
-      "191170"
-    ],
-    "content": "Ataxia Telangectasia ● Epidemiology Incidence: 1 in 40,000-300,000 live births: Differences in various ethnic groups Present in many populations world-wide Heterozygotes2 Frequency in populations: 0.35% to 1% Disease-causing mutants: Breast cancer risk increased 2.3-fold Other mutations (missense): No clear breast cancer risk ? Also prone to Cancer, Diabetes, Cardiovascular diseases ATM gene mutations Location: All over ATM gene; No hot spots > 270 unique mutations described Most are deletions or splice-related (43%) producing premature stop (> 80%) Some insertions & in-frame deletions 40% to ",
+    "category": "",
+    "genes": [],
+    "inheritance": [],
+    "omimIds": [],
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/ataxia/dnarep.html#at",
     "adultOnset": false
   },
@@ -582,8 +541,8 @@
     "adultOnset": false
   },
   {
-    "name": "Axon: Transport\n4",
-    "slug": "axon-transport-4",
+    "name": "Axon: Transport",
+    "slug": "axon-transport",
     "letter": "A",
     "category": "Other Neuromuscular",
     "genes": [
@@ -703,7 +662,7 @@
     "adultOnset": false
   },
   {
-    "name": "Axonal Sensory Neuropathies with Serum IgM binding to Trisulfated Heparin Disaccharide (TS-HDS)\n7",
+    "name": "Axonal Sensory Neuropathies with Serum IgM binding to Trisulfated Heparin Disaccharide (TS-HDS)",
     "slug": "axonal-sensory-neuropathies-with-serum-igm-binding-to-trisulfated-heparin-disacc",
     "letter": "A",
     "category": "Immune/Antibody",
@@ -723,24 +682,11 @@
     "name": "Barth syndrome",
     "slug": "barth-syndrome",
     "letter": "B",
-    "category": "Systemic/Multisystem",
-    "genes": [
-      "CL",
-      "CSF"
-    ],
-    "inheritance": [
-      "X-Linked",
-      "Mitochondrial",
-      "Autosomal Dominant",
-      "Variable"
-    ],
-    "omimIds": [
-      "302060",
-      "300394",
-      "300069",
-      "601239"
-    ],
-    "content": "X-linked dilated cardiomyopathyBarth syndrome 4● Genetics Mutations Locations: In all exons & some adjacent intron sequences Stop & Missense No strong genotype-phenotype correlations ? More severe heart disease with some exon 8 mutations Allelic with Cardiomyopathy, Dilated 3A (X-linked fatal infantile) Also see: Barth-like syndrome with mtRNA Leu mutations Tafazzin protein Superfamily: Acyl transferases involved in phospholipid synthesis Isoforms: 10 different proteins Membrane anchored types Contain hydrophobic N-terminus (1st 2 exons) High levels in heart & skeletal muscle Cytosolic types L",
+    "category": "",
+    "genes": [],
+    "inheritance": [],
+    "omimIds": [],
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/msys/cardiac.html#barth",
     "adultOnset": false
   },
@@ -748,14 +694,11 @@
     "name": "Batten disease (CLN3)",
     "slug": "batten-disease-cln3",
     "letter": "B",
-    "category": "Muscular Dystrophy",
+    "category": "",
     "genes": [],
     "inheritance": [],
-    "omimIds": [
-      "204200",
-      "607042"
-    ],
-    "content": "Cardiomyopathy, Retinal degeneration & Epilepsy (CLN3) 93● Nosology Ceroid lipofuscinosis, neuronal, 3 Batten disease Epidemiology: > 100 patients Genetics Mutations: Missense (Gly165Glu), Splice & Stop; Common 1 kb deletion Allelic disorder: Neuronal ceroid lipofuscinosis, juvenile form CLN3 protein Organs: Brain + other tissues Subcellular Membrane protein Nucleus & Cytoplasm Lysosomal (Endolysosomal) Highly glycosylated Cell types: Astrocytes & Endothelium Regulates Autophagic vacuoles: Maturation Actin-dependent events at plasma membrane Response to oxidative stress: Stress granule dynamic",
+    "omimIds": [],
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/musdist/lg.html#cln3",
     "adultOnset": false
   },
@@ -763,30 +706,11 @@
     "name": "Becker muscular dystrophy",
     "slug": "becker-muscular-dystrophy",
     "letter": "B",
-    "category": "Muscular Dystrophy",
+    "category": "",
     "genes": [],
-    "inheritance": [
-      "Autosomal Recessive",
-      "X-Linked",
-      "Variable"
-    ],
-    "omimIds": [
-      "300376",
-      "300069",
-      "302045",
-      "302060",
-      "300600",
-      "300200",
-      "307030",
-      "312610",
-      "309530",
-      "300206",
-      "311250",
-      "306400",
-      "300842",
-      "300405"
-    ],
-    "content": "Becker Muscular Dystrophy (BMD) Genotype: Dystrophin mutations 39 Inheritance Males: Recessive, X-linked Females Gene carriers Homzygous Exon 45-55 deletions 42 Exercise intolerance Rhabdomyolysis Deletion In-frame Frequency: 70% to 78% of patients Most common deletion locations Region: Exons 45-55 in 90% Specific Mutations: Exons 45-47 (40%); 45-48 Milder muscle phenotype: Exons 45-55 38 Deletion location: Central rod domain Weakness: Less than average Other: May have Cardiomyopathy Cognitive Δ ↓ Life expectancy Other locations: 45-49; 45-53; 10-12; 48-49; 49-51 Loss of ambulation vs del45-47",
+    "inheritance": [],
+    "omimIds": [],
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/musdist/dmd.html#Becker",
     "adultOnset": false
   },
@@ -818,29 +742,17 @@
     "name": "Bethlem myopathy",
     "slug": "bethlem-myopathy",
     "letter": "B",
-    "category": "Muscular Dystrophy",
+    "category": "",
     "genes": [],
-    "inheritance": [
-      "Autosomal Dominant",
-      "Autosomal Recessive",
-      "Variable"
-    ],
-    "omimIds": [
-      "158810",
-      "120220",
-      "620725",
-      "120240",
-      "620726",
-      "120250",
-      "616411"
-    ],
-    "content": "Bethlem Myopathies 1● Collagen ● ● Nosology: LGMD D5 Gene mutations: >50 identified Most mutations located between Exons 3 and 14 Most are amino acid substitutions: Glycine most common (Gly-X-Y) Usually in triple helix region Some mutations in globular region Disease pathogenesis: ? Dominant negative effect Inframe deletion in exon 14 of Collagen α1 (IVS14DS, G-A, +1): Common mutation Can also cause disease by stop codon : Produces haploinsufficiency Lower incidence of contractures Other disease correlations Most severe disease: COL6A1 multi-exon out-of-frame deletion; Mutations inside triple ",
+    "inheritance": [],
+    "omimIds": [],
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/musdist/lg.html#beth",
     "adultOnset": false
   },
   {
-    "name": "Bone Morphogenetic Proteins\n2",
-    "slug": "bone-morphogenetic-proteins-2",
+    "name": "Bone Morphogenetic Proteins",
+    "slug": "bone-morphogenetic-proteins",
     "letter": "B",
     "category": "Laboratory / Diagnostics",
     "genes": [
@@ -857,8 +769,8 @@
     "adultOnset": false
   },
   {
-    "name": "Brachial Plexus: Structure\n8",
-    "slug": "brachial-plexus-structure-8",
+    "name": "Brachial Plexus: Structure",
+    "slug": "brachial-plexus-structure",
     "letter": "B",
     "category": "Nerve Anatomy",
     "genes": [
@@ -874,8 +786,8 @@
     "adultOnset": false
   },
   {
-    "name": "Brachioradial Pruritis\n8",
-    "slug": "brachioradial-pruritis-8",
+    "name": "Brachioradial Pruritis",
+    "slug": "brachioradial-pruritis",
     "letter": "B",
     "category": "Other Neuromuscular",
     "genes": [
@@ -930,7 +842,7 @@
     "adultOnset": false
   },
   {
-    "name": "C.  Anti-GM1 Antibodies",
+    "name": "C. Anti-GM1 Antibodies",
     "slug": "c-anti-gm1-antibodies",
     "letter": "C",
     "category": "Immune/Antibody",
@@ -1004,8 +916,8 @@
     "adultOnset": false
   },
   {
-    "name": "CATECHOLAMINE-RELATED MOLECULES & DISORDERS\n1",
-    "slug": "catecholamine-related-molecules-disorders-1",
+    "name": "CATECHOLAMINE-RELATED MOLECULES & DISORDERS",
+    "slug": "catecholamine-related-molecules-disorders",
     "letter": "C",
     "category": "Laboratory / Diagnostics",
     "genes": [
@@ -1064,8 +976,8 @@
     "adultOnset": false
   },
   {
-    "name": "Celiac Disease (Gluten-sensitive enteropathy)\n\n\n2",
-    "slug": "celiac-disease-gluten-sensitive-enteropathy-2",
+    "name": "Celiac Disease (Gluten-sensitive enteropathy)",
+    "slug": "celiac-disease-gluten-sensitive-enteropathy",
     "letter": "C",
     "category": "Other Neuromuscular",
     "genes": [
@@ -1079,8 +991,8 @@
     "adultOnset": false
   },
   {
-    "name": "Cell Death/Damage: Mechanisms\n9",
-    "slug": "cell-death-damage-mechanisms-9",
+    "name": "Cell Death/Damage: Mechanisms",
+    "slug": "cell-death-damage-mechanisms",
     "letter": "C",
     "category": "Ion Channels / Membrane",
     "genes": [
@@ -1133,8 +1045,8 @@
     "adultOnset": false
   },
   {
-    "name": "CHANNEL TYPES: General\n9",
-    "slug": "channel-types-general-9",
+    "name": "CHANNEL TYPES: General",
+    "slug": "channel-types-general",
     "letter": "C",
     "category": "Ion Channels / Membrane",
     "genes": [
@@ -1219,28 +1131,6 @@
     "adultOnset": false
   },
   {
-    "name": "Classification",
-    "slug": "classification",
-    "letter": "C",
-    "category": "Ataxia/Cerebellar",
-    "genes": [
-      "MAG",
-      "GALOP"
-    ],
-    "inheritance": [
-      "Autosomal Dominant",
-      "Autosomal Recessive",
-      "X-Linked",
-      "Mitochondrial"
-    ],
-    "omimIds": [
-      "117200"
-    ],
-    "content": "Congenital Hereditary Dominant Recessive X-linked Congenital DNA repair defects Episodic Metabolic disorders Mitochondrial Multisystem disorders Comparative pathology Immune Acute cerebellar ataxia Miller-Fisher Multiple sclerosis Opsoclonus-Myoclonus Paraneoplastic Infections: CNS Acute ataxia: Viral Creutzfeldt-Jakob Meningitis Mass lesion Abscess Neoplasm Sarcoid Paroxysmal Epilepsy Febrile Hereditary Migraine Polyneuropathy Anti-MAG GALOP Sensory Neuron Large fiber Supratentorial Gait disorders Elderly Extrapyramidal Hydrocephalus Systemic Amyloid Autoimmune GAD antibodies Endocrine Hypopa",
-    "wustlUrl": "https://neuromuscular.wustl.edu/ataxia/aindex.html#Classification",
-    "adultOnset": false
-  },
-  {
     "name": "Classification of Acute Immune Neuropathies",
     "slug": "classification-of-acute-immune-neuropathies",
     "letter": "C",
@@ -1271,8 +1161,8 @@
     "adultOnset": false
   },
   {
-    "name": "CMT 1\n150",
-    "slug": "cmt-1-150",
+    "name": "CMT 1",
+    "slug": "cmt-1",
     "letter": "C",
     "category": "Neuropathy (Hereditary)",
     "genes": [
@@ -1287,22 +1177,6 @@
     ],
     "content": "● Epidemiology: 2 patients, 1 family Genetics Mutation: K28I (c.83A>T) Allelic disorder: CMT-DI c1orf194 protein Calcium regulator in neurons Clinical Onset age: 6 & 40 years Weakness Arms & Legs Distal Gait: Steppage Course: Progressive Sensory loss Distal Arms Modalities: Large & Small fiber Tendon reflexes: Absent in Legs Pes cavus Laboratory Nerve conduction Velocities: Demyelinating; Velocity 11 M/s SNAPs: Absent c1orf194 variant: CMT-DI Epidemiology: 6 patients. 1 family Genetics Mutation: I122N (c.365T>A) Inheritance: Dominant Clinical Onset age: 20 to 33 years Weakness Distal Legs Gait",
     "wustlUrl": "https://neuromuscular.wustl.edu/time/hmsn.html#CMT 1\n150",
-    "adultOnset": false
-  },
-  {
-    "name": "CMT 2",
-    "slug": "cmt-2",
-    "letter": "C",
-    "category": "Neuropathy (Hereditary)",
-    "genes": [
-      "P0"
-    ],
-    "inheritance": [
-      "Autosomal Dominant"
-    ],
-    "omimIds": [],
-    "content": "General features Axonal Neuropathy (NCV: Axonal Loss) Inheritance: Dominant Prevalence: 4 to 12 per 100,000 Onset: Peak in 2nd decade; Some as late as 7th decade Clinical Weakness: Symmetric; Distal in most Sensory loss: Distal; Panmodal Tendon reflexes: Reduced most at ankles; Often preserved proximally NCV: > 38 m/s in Median nerve Associated with: Increased frequency of restless legs syndrome Characteristic clinical features CMT 2A (MFN2; 1p36): Distal leg weakness early in course; ? Anticipation CMT 2B (RAB7; 3q13): Severe sensory loss; Acrodystrophy CMT 2C (TRPV4; 12q24): Vocal cord & Phr",
-    "wustlUrl": "https://neuromuscular.wustl.edu/time/hmsn.html#CMT 2",
     "adultOnset": false
   },
   {
@@ -1341,8 +1215,8 @@
     "adultOnset": false
   },
   {
-    "name": "CMYO13: Myopathy, Congenital, Bailey-Bloch\n\n\n25",
-    "slug": "cmyo13-myopathy-congenital-bailey-bloch-25",
+    "name": "CMYO13: Myopathy, Congenital, Bailey-Bloch",
+    "slug": "cmyo13-myopathy-congenital-bailey-bloch",
     "letter": "C",
     "category": "Systemic/Multisystem",
     "genes": [
@@ -1369,8 +1243,8 @@
     "adultOnset": false
   },
   {
-    "name": "Coenzyme Q10 Deficiency\n\n\n23",
-    "slug": "coenzyme-q10-deficiency-23",
+    "name": "Coenzyme Q10 Deficiency",
+    "slug": "coenzyme-q10-deficiency",
     "letter": "C",
     "category": "Systemic/Multisystem",
     "genes": [
@@ -1426,20 +1300,11 @@
     "name": "Danon disease",
     "slug": "danon-disease",
     "letter": "D",
-    "category": "Muscular Dystrophy",
-    "genes": [
-      "II"
-    ],
-    "inheritance": [
-      "X-Linked"
-    ],
-    "omimIds": [
-      "300257",
-      "309060",
-      "602610",
-      "600744"
-    ],
-    "content": "X-linked Vacuolar Cardiomyopathy & Myopathy (Danon disease) 122● Epidemiology Occurrence: Infrequent ~500 patients reported worldwide Hypertrophic cardiomyopathy: Higher frequency of LAMP2 mutations; 4% to 30%% Genetics Mutations Frameshift; Nonsense; Insertion Cause protein truncation Usually cause absent LAMP-2 in muscle: 1 family with some residual LAMP-2 May affect LAMP-2B only: No mental retardation in males; Milder or no signs in females Both LAMP-2 isoforms: Most common pattern; Typical disease manifestations Allelic disorders Scapuloperoneal muscular dystrophy with mental retardation &",
+    "category": "",
+    "genes": [],
+    "inheritance": [],
+    "omimIds": [],
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/musdist/lg.html#lamp2",
     "adultOnset": false
   },
@@ -1456,7 +1321,7 @@
     "adultOnset": false
   },
   {
-    "name": "Demyelinating ataxic neuropathy with IgM binding to GalNAc-GD1a\nand GM2 gangliosides\n10",
+    "name": "Demyelinating ataxic neuropathy with IgM binding to GalNAc-GD1a and GM2 gangliosides",
     "slug": "demyelinating-ataxic-neuropathy-with-igm-binding-to-galnac-gd1a-and-gm2-ganglios",
     "letter": "D",
     "category": "Immune/Antibody",
@@ -1517,8 +1382,8 @@
     "adultOnset": false
   },
   {
-    "name": "Distal Hereditary Motor Neuronopathy (Vocal cord involvement) (HMND14; HMN 7B)\n\n\n34",
-    "slug": "distal-hereditary-motor-neuronopathy-vocal-cord-involvement-hmnd14-hmn-7b-34",
+    "name": "Distal Hereditary Motor Neuronopathy (Vocal cord involvement) (HMND14; HMN 7B)",
+    "slug": "distal-hereditary-motor-neuronopathy-vocal-cord-involvement-hmnd14-hmn-7b",
     "letter": "D",
     "category": "Motor Neuron / ALS",
     "genes": [
@@ -1537,8 +1402,8 @@
     "adultOnset": false
   },
   {
-    "name": "Distal hereditary motor neuropathy I (HMND1; Distal HMN I)\n\n\n59",
-    "slug": "distal-hereditary-motor-neuropathy-i-hmnd1-distal-hmn-i-59",
+    "name": "Distal hereditary motor neuropathy I (HMND1; Distal HMN I)",
+    "slug": "distal-hereditary-motor-neuropathy-i-hmnd1-distal-hmn-i",
     "letter": "D",
     "category": "Motor Neuron / ALS",
     "genes": [
@@ -1596,8 +1461,8 @@
     "adultOnset": false
   },
   {
-    "name": "Distal Myopathies: Hereditary\n7",
-    "slug": "distal-myopathies-hereditary-7",
+    "name": "Distal Myopathies: Hereditary",
+    "slug": "distal-myopathies-hereditary",
     "letter": "D",
     "category": "Muscular Dystrophy",
     "genes": [
@@ -1614,8 +1479,8 @@
     "adultOnset": false
   },
   {
-    "name": "Distal Myopathy: MPD3\n\n\n9",
-    "slug": "distal-myopathy-mpd3-9",
+    "name": "Distal Myopathy: MPD3",
+    "slug": "distal-myopathy-mpd3",
     "letter": "D",
     "category": "Muscular Dystrophy",
     "genes": [
@@ -1633,8 +1498,8 @@
     "adultOnset": false
   },
   {
-    "name": "Distal SMA: Upper limb predominance (HMND13; HMN 5C)\n\n\n6",
-    "slug": "distal-sma-upper-limb-predominance-hmnd13-hmn-5c-6",
+    "name": "Distal SMA: Upper limb predominance (HMND13; HMN 5C)",
+    "slug": "distal-sma-upper-limb-predominance-hmnd13-hmn-5c",
     "letter": "D",
     "category": "Motor Neuron / ALS",
     "genes": [
@@ -1649,28 +1514,6 @@
     ],
     "content": "● Nosology: Also called HMN 5A Epidemiology European families Most common D-HMN Genetics Mutations Missense Exon 3 Common: Asn88Ser; Ser90Leu Located at N-glycosylation site Mutation effects Alters N-glycosylation site Aggregate formation BSCL2 allelic disorders Seipin protein Integral membrane protein: Endoplasmic reticulum Glycosylated Lipid droplets: Synthesis & ER contacts Clinical Onset Age: Mean 15 to 24 years; Range 2 to 40 years; Childhood often Weakness: Hands Weakness Hands Early involvement Thenar eminence > 1st Dorsal Interosseous Asymmetric Lower extremities Peroneal weakness (60%",
     "wustlUrl": "https://neuromuscular.wustl.edu/synmot.html#Distal SMA: Upper limb predominance (HMND13; HMN 5C)\n\n\n6",
-    "adultOnset": false
-  },
-  {
-    "name": "Dopamine",
-    "slug": "dopamine",
-    "letter": "D",
-    "category": "Laboratory / Diagnostics",
-    "genes": [
-      "DOPA"
-    ],
-    "inheritance": [],
-    "omimIds": [
-      "126449",
-      "126450",
-      "159900",
-      "126451",
-      "126452",
-      "126453",
-      "606798"
-    ],
-    "content": "Transmitter metabolism Precursors: Tyrosine � (a) L-dihydroxyphenylalanine (L-DOPA) (b) dopamine Synthesizing enzymes: (a) Tyrosine hydroxylase, (b) L-aromatic amino acid decarboxylase (DOPA decarboxylase) Metabolizing enzymes: MAO and COMT Metabolites: 3,4-Dihydroxyphenylacetic acid (DOPAC) Homovanillic acid (HVA) Dopamine Receptors Receptorsubtypes AgonistsAntagonistsSecond messengerDisorders D1 SKF 38393Dihydrexiedine Sch 23390SKF83566SCH39166 Positive: cAMP G-protein Stimulate adenylyl cyclase Mouse knockout Hyperactivity Diastolic hypertension D2 (+)PHNOBromocriptine (s)-SulpirideRaclopri",
-    "wustlUrl": "https://neuromuscular.wustl.edu/lab/catechol.htm#Dopamine",
     "adultOnset": false
   },
   {
@@ -1693,18 +1536,11 @@
     "name": "DRPLA",
     "slug": "drpla",
     "letter": "D",
-    "category": "Ataxia/Cerebellar",
+    "category": "",
     "genes": [],
-    "inheritance": [
-      "Mitochondrial",
-      "Autosomal Recessive"
-    ],
-    "omimIds": [
-      "125370",
-      "607462",
-      "140340"
-    ],
-    "content": "Dentatorubral-Pallidoluysian Atrophy 48● Epidemiology: Common in Japan & Portugal Mutation: CAG repeat expansion Disease size: 49 - 88 Normal: < 26 Intermediate size: 37 to 48 DRPLA protein Location: Nuronal cytoplasm Phosphoprotein Truncated protein with excess repeats in nuclear & perinuclear regions Genotype-Phenotype Correlations Homozygotes have more severe syndrome than heterozygotes Parental sex Paternal transmission: Usually increases repeat length by 5 or more Maternal transmission: Decrease repeat length or increase < 5 Repeat length Longer: Younger onset; Myoclonus epilepsy Shorter:",
+    "inheritance": [],
+    "omimIds": [],
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/ataxia/domatax.html#drpla",
     "adultOnset": false
   },
@@ -1762,7 +1598,7 @@
     "adultOnset": false
   },
   {
-    "name": "EGR2 mutations: CMT 1D \n\n\n& Other phenotypes",
+    "name": "EGR2 mutations: CMT 1D & Other phenotypes",
     "slug": "egr2-mutations-cmt-1d-other-phenotypes",
     "letter": "E",
     "category": "Neuropathy (Hereditary)",
@@ -1789,17 +1625,20 @@
     "name": "Emery-Dreifuss muscular dystrophy",
     "slug": "emery-dreifuss-muscular-dystrophy",
     "letter": "E",
-    "category": "",
+    "category": "Systemic/Multisystem",
     "genes": [],
-    "inheritance": [],
+    "inheritance": [
+      "Autosomal Recessive",
+      "Autosomal Dominant"
+    ],
     "omimIds": [],
-    "content": "",
+    "content": "EMD1: Emerin; Xq28; Recessive EMD2: Lamin A/C; 1q21.2; Dominant EMD3: Lamin A/C; 1q21.2; Recessive EMD4: SYNE1; 6q25; Dominant EMD5: SYNE2; 14q23; Dominant EMD6: FHL1; Xq26; Recessive or Semi-Dominant EMD7; TMEM43; 3p25; Dominant EMD: Titin; 2q31; Recessive EMD modifiers: SUN1; SUN2 Other: Sporadic & Dominant from A Kornberg MD",
     "wustlUrl": "https://neuromuscular.wustl.edu/musdist/edmd.html",
     "adultOnset": false
   },
   {
-    "name": "Eosinophilic Fasciitis\n137",
-    "slug": "eosinophilic-fasciitis-137",
+    "name": "Eosinophilic Fasciitis",
+    "slug": "eosinophilic-fasciitis",
     "letter": "E",
     "category": "Immune/Antibody",
     "genes": [
@@ -1910,19 +1749,11 @@
     "name": "Farber lipogranulomatosis",
     "slug": "farber-lipogranulomatosis",
     "letter": "F",
-    "category": "Motor Neuron / ALS",
-    "genes": [
-      "PME"
-    ],
-    "inheritance": [
-      "Autosomal Recessive"
-    ],
-    "omimIds": [
-      "159950",
-      "613468",
-      "228000"
-    ],
-    "content": "Proximal Spinal Muscular Atrophy with Progressive Myoclonic Epilepsy (SMA-PME; SMAPME) 91● Epidemiology: 50 patients Genetics Mutations Types: Missense (Thr42Met (Common), Thr42 Ala (Milder phenotype), Lys152Asn (Deafness)); Deletion, Small or whole gene Homozygous Allelic disorders Farber Lipogranulomatosis: Very low ASASH1 levels Progressive adult-onset brachydactyly due to osteolysis SMA without epilepsy ASAH1 protein Localization: Lysosome Maintains intralysosomal ceramide homeostasis Cleaves Ceramide into Sphingosine & free fatty acids at acid pH Clinical Onset age: 1 to 30 years; Mean 6 ",
+    "category": "",
+    "genes": [],
+    "inheritance": [],
+    "omimIds": [],
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/synmot.html#asah1",
     "adultOnset": false
   },
@@ -1967,8 +1798,8 @@
     "adultOnset": false
   },
   {
-    "name": "Ferroptosis\n14",
-    "slug": "ferroptosis-14",
+    "name": "Ferroptosis",
+    "slug": "ferroptosis",
     "letter": "F",
     "category": "Ion Channels / Membrane",
     "genes": [
@@ -2035,8 +1866,8 @@
     "adultOnset": false
   },
   {
-    "name": "Finger Flexion Weakness\n5",
-    "slug": "finger-flexion-weakness-5",
+    "name": "Finger Flexion Weakness",
+    "slug": "finger-flexion-weakness",
     "letter": "F",
     "category": "Muscular Dystrophy",
     "genes": [
@@ -2069,18 +1900,6 @@
     "name": "Friedreich ataxia",
     "slug": "friedreich-ataxia",
     "letter": "F",
-    "category": "",
-    "genes": [],
-    "inheritance": [],
-    "omimIds": [],
-    "content": "",
-    "wustlUrl": "https://neuromuscular.wustl.edu/ataxia/recatax.html#fa",
-    "adultOnset": false
-  },
-  {
-    "name": "Friedreich Ataxia\n\n\n2",
-    "slug": "friedreich-ataxia-2",
-    "letter": "F",
     "category": "Ataxia/Cerebellar",
     "genes": [
       "FRDA2"
@@ -2091,7 +1910,7 @@
       "601992"
     ],
     "content": "● ●FRDA2 11 Frataxin protein Genetic features Neurological features Pathology Systemic features Variant syndromes From Bramwell: Atlas of Clinical Medicine Friedreich Ataxia From Wikipedia",
-    "wustlUrl": "https://neuromuscular.wustl.edu/ataxia/recatax.html#Friedreich Ataxia\n\n\n2",
+    "wustlUrl": "https://neuromuscular.wustl.edu/ataxia/recatax.html#fa",
     "adultOnset": false
   },
   {
@@ -2201,8 +2020,8 @@
     "adultOnset": false
   },
   {
-    "name": "Granulomatous & Inflammatory Myopathies with Anti-mitochondrial antibodies\n72",
-    "slug": "granulomatous-inflammatory-myopathies-with-anti-mitochondrial-antibodies-72",
+    "name": "Granulomatous & Inflammatory Myopathies with Anti-mitochondrial antibodies",
+    "slug": "granulomatous-inflammatory-myopathies-with-anti-mitochondrial-antibodies",
     "letter": "G",
     "category": "Immune/Antibody",
     "genes": [
@@ -2222,8 +2041,8 @@
     "adultOnset": false
   },
   {
-    "name": "Granulomatous Myopathies\n132",
-    "slug": "granulomatous-myopathies-132",
+    "name": "Granulomatous Myopathies",
+    "slug": "granulomatous-myopathies",
     "letter": "G",
     "category": "Immune/Antibody",
     "genes": [
@@ -2240,8 +2059,8 @@
     "adultOnset": false
   },
   {
-    "name": "Guillain-Barré-like syndrome with serum IgM binding to GalNAc-GD1a ganglioside\n2",
-    "slug": "guillain-barr-like-syndrome-with-serum-igm-binding-to-galnac-gd1a-ganglioside-2",
+    "name": "Guillain-Barré-like syndrome with serum IgM binding to GalNAc-GD1a ganglioside",
+    "slug": "guillain-barr-like-syndrome-with-serum-igm-binding-to-galnac-gd1a-ganglioside",
     "letter": "G",
     "category": "Immune/Antibody",
     "genes": [
@@ -2253,22 +2072,6 @@
     "omimIds": [],
     "content": "Epidemiology Japanese patients Younger onset: Mean 3rd decade ? Female > Male Clinical Prodrome GI: Campylobacter jejuni (75%) Respiratory: Cytomegalovirus Weakness: Mild; Proximal + Distal Sensory: Paresthesias ± Loss (75%); More common with CMV prodrome Cranial nerves: Facial weakness (27% to 80%); More common with CMV prodrome Recovery: Good at 1 month; Better than with IgG or no antibodies Electrodiagnostic Demyelination in many (38% to 64%) Axonal loss uncommon Serum antibody IgM vs GalNAc-GD1a ganglioside Cross reactive with GM2 ganglioside: 100% with CMV prodrome; 50% with GI prodrome P",
     "wustlUrl": "https://neuromuscular.wustl.edu/antibody/gbs.htm#Guillain-Barré-like syndrome with serum IgM binding to GalNA",
-    "adultOnset": false
-  },
-  {
-    "name": "Hartnup",
-    "slug": "hartnup",
-    "letter": "H",
-    "category": "Ataxia/Cerebellar",
-    "genes": [
-      "SLC6A19"
-    ],
-    "inheritance": [],
-    "omimIds": [
-      "608893"
-    ],
-    "content": "● SLC6A19 protein Na+-dependent amino acid transporter Transports neutral amino acids Biochemistry Abnormal neutral α-amino acid transport Renal & Intestinal Clinical Features Rash: Photosensitive Ataxia: Intermittent Emotional Instability Seizures Treatment Nicotinamide: 25 mg/day",
-    "wustlUrl": "https://neuromuscular.wustl.edu/ataxia/metatax.html#Hartnup",
     "adultOnset": false
   },
   {
@@ -2289,8 +2092,8 @@
     "adultOnset": false
   },
   {
-    "name": "Hemophagocytic Lymphohistiocytosis\n41",
-    "slug": "hemophagocytic-lymphohistiocytosis-41",
+    "name": "Hemophagocytic Lymphohistiocytosis",
+    "slug": "hemophagocytic-lymphohistiocytosis",
     "letter": "H",
     "category": "Immune/Antibody",
     "genes": [
@@ -2319,8 +2122,8 @@
     "adultOnset": false
   },
   {
-    "name": "HEREDITARY ATAXIA: RECESSIVE, CONGENITAL & X-LINKED\n106",
-    "slug": "hereditary-ataxia-recessive-congenital-x-linked-106",
+    "name": "HEREDITARY ATAXIA: RECESSIVE, CONGENITAL & X-LINKED",
+    "slug": "hereditary-ataxia-recessive-congenital-x-linked",
     "letter": "H",
     "category": "Ataxia/Cerebellar",
     "genes": [
@@ -2422,7 +2225,7 @@
     "adultOnset": false
   },
   {
-    "name": "Hereditary Neuropathies\n(CMT 1H or D-HMN) ± Macular Degeneration & Hyperelastic Skin (HNARMD)\n\n\n91",
+    "name": "Hereditary Neuropathies (CMT 1H or D-HMN) ± Macular Degeneration & Hyperelastic Skin (HNARMD)",
     "slug": "hereditary-neuropathies-cmt-1h-or-d-hmn-macular-degeneration-hyperelastic-skin-h",
     "letter": "H",
     "category": "Neuropathy (Hereditary)",
@@ -2465,8 +2268,8 @@
     "adultOnset": false
   },
   {
-    "name": "HERPES ZOSTER (Varicella)\n2",
-    "slug": "herpes-zoster-varicella-2",
+    "name": "HERPES ZOSTER (Varicella)",
+    "slug": "herpes-zoster-varicella",
     "letter": "H",
     "category": "Other Neuromuscular",
     "genes": [
@@ -2479,52 +2282,6 @@
     "omimIds": [],
     "content": "Clinical features Neuralgia, Late Plexopathy Radiculopathy Ramsay Hunt Mononeuropathy Other Laboratory Organism Predisposing factors Treatment from CDC Varicella zoster Putnam Zoster Radiculopathy & Rash: T7 Head, Brain 1900 Viral properties Double-stranded DNA virus Herpes simplex types Herpes simplex 1 Herpes simplex 2 Varicella-zoster virus (VZV) Infection 1° infection: Systemic; Usually in 1st decades Invade & Replicate: In host nervous system Latent infection: Chronic Dorsal root ganglia Satellite cells Recurrent disease Caused by viral reactivation More likely with: Immune compromise DRG",
     "wustlUrl": "https://neuromuscular.wustl.edu/nother/infect.htm#HERPES ZOSTER (Varicella)\n2",
-    "adultOnset": false
-  },
-  {
-    "name": "hexA",
-    "slug": "hexa",
-    "letter": "H",
-    "category": "Motor Neuron / ALS",
-    "genes": [
-      "RBM28",
-      "SCN1A"
-    ],
-    "inheritance": [
-      "Autosomal Recessive",
-      "Autosomal Dominant",
-      "Mitochondrial"
-    ],
-    "omimIds": [
-      "272800",
-      "606869",
-      "268800",
-      "109150",
-      "183085",
-      "232500",
-      "263570",
-      "607839",
-      "205250",
-      "601162",
-      "138250",
-      "600274",
-      "157140",
-      "601104",
-      "260540",
-      "172700",
-      "168600",
-      "604260",
-      "600333",
-      "612079",
-      "612074",
-      "607208",
-      "182389",
-      "619216",
-      "611901",
-      "164210"
-    ],
-    "content": "Hexosaminidase A: GM2 Gangliosidosis, Late Onset ● β-Hexosaminidase A (HEXA) ; Chromosome 15q23; Recessive Nosology: Tay-Sachs, Late onset (LOTS) Genetic features Gly269Ser substitution in α chain Most common mutation in adult form Usually in compound heterozygosity with null mutation Other mutations with milder disease Missense: Arg499His; Arg499Cys; Arg504His; Arg504Cys Splice site: IVS7-7G General: Chilhood + Adult mutations Other mutations (null): More severe disease Exon 11: 4-bp insertion Exon 12: G to C mutation in splice junction Exon 1: A to T in initiation codon Misdiagnosis Pseudo-d",
-    "wustlUrl": "https://neuromuscular.wustl.edu/synmot.html#hexA",
     "adultOnset": false
   },
   {
@@ -2554,8 +2311,8 @@
     "adultOnset": false
   },
   {
-    "name": "HMSN III (Dejerine-Sottas)\n \n\n32",
-    "slug": "hmsn-iii-dejerine-sottas-32",
+    "name": "HMSN III (Dejerine-Sottas)",
+    "slug": "hmsn-iii-dejerine-sottas",
     "letter": "H",
     "category": "Neuropathy (Hereditary)",
     "genes": [
@@ -2599,11 +2356,11 @@
     "name": "HNPP",
     "slug": "hnpp",
     "letter": "H",
-    "category": "Nerve Anatomy",
+    "category": "",
     "genes": [],
     "inheritance": [],
     "omimIds": [],
-    "content": "Neuropathy with liability to pressure palsies (HNPP)●",
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/time/hmsn.html#hnpp",
     "adultOnset": false
   },
@@ -2689,7 +2446,7 @@
     "adultOnset": false
   },
   {
-    "name": "I.  Clinical Indications for Measurement of anti-MAG antibodies",
+    "name": "I. Clinical Indications for Measurement of anti-MAG antibodies",
     "slug": "i-clinical-indications-for-measurement-of-anti-mag-antibodies",
     "letter": "I",
     "category": "Immune/Antibody",
@@ -2703,7 +2460,7 @@
     "adultOnset": false
   },
   {
-    "name": "II. Results with Specificity and Sensitivity for\nSensory-Motor Neuropathies",
+    "name": "II. Results with Specificity and Sensitivity for Sensory-Motor Neuropathies",
     "slug": "ii-results-with-specificity-and-sensitivity-for-sensory-motor-neuropathies",
     "letter": "I",
     "category": "Immune/Antibody",
@@ -2731,8 +2488,8 @@
     "adultOnset": false
   },
   {
-    "name": "Immune & Inflammatory Myopathies: Neoplasm Associations\n15",
-    "slug": "immune-inflammatory-myopathies-neoplasm-associations-15",
+    "name": "Immune & Inflammatory Myopathies: Neoplasm Associations",
+    "slug": "immune-inflammatory-myopathies-neoplasm-associations",
     "letter": "I",
     "category": "Immune/Antibody",
     "genes": [
@@ -2746,8 +2503,8 @@
     "adultOnset": false
   },
   {
-    "name": "IMPP (Myofasciitis; EVIM) + Deafness: Enterovirus & Hypogammaglobulinemia-Related \n45",
-    "slug": "impp-myofasciitis-evim-deafness-enterovirus-hypogammaglobulinemia-related-45",
+    "name": "IMPP (Myofasciitis; EVIM) + Deafness: Enterovirus & Hypogammaglobulinemia-Related",
+    "slug": "impp-myofasciitis-evim-deafness-enterovirus-hypogammaglobulinemia-related",
     "letter": "I",
     "category": "Other Neuromuscular",
     "genes": [
@@ -2762,8 +2519,8 @@
     "adultOnset": false
   },
   {
-    "name": "Inclusion Body Myopathy with Paget disease of Bone & Dementia 1 (IBMPFD1)\n\n\n2",
-    "slug": "inclusion-body-myopathy-with-paget-disease-of-bone-dementia-1-ibmpfd1-2",
+    "name": "Inclusion Body Myopathy with Paget disease of Bone & Dementia 1 (IBMPFD1)",
+    "slug": "inclusion-body-myopathy-with-paget-disease-of-bone-dementia-1-ibmpfd1",
     "letter": "I",
     "category": "Muscular Dystrophy",
     "genes": [
@@ -2786,8 +2543,8 @@
     "adultOnset": false
   },
   {
-    "name": "Inclusion Body Myositis (IBM)\n22",
-    "slug": "inclusion-body-myositis-ibm-22",
+    "name": "Inclusion Body Myositis (IBM)",
+    "slug": "inclusion-body-myositis-ibm",
     "letter": "I",
     "category": "Immune/Antibody",
     "genes": [
@@ -2830,7 +2587,7 @@
     "adultOnset": false
   },
   {
-    "name": "Inflammatory Myopathy + Mitochondrial Pathology in muscle (IM-Mito),\n subtype of IM-VAMP\n42",
+    "name": "Inflammatory Myopathy + Mitochondrial Pathology in muscle (IM-Mito), subtype of IM-VAMP",
     "slug": "inflammatory-myopathy-mitochondrial-pathology-in-muscle-im-mito-subtype-of-im-va",
     "letter": "I",
     "category": "Immune/Antibody",
@@ -2844,8 +2601,8 @@
     "adultOnset": false
   },
   {
-    "name": "Inflammatory Myopathy with Abundant Macrophages (IMAM)\n40",
-    "slug": "inflammatory-myopathy-with-abundant-macrophages-imam-40",
+    "name": "Inflammatory Myopathy with Abundant Macrophages (IMAM)",
+    "slug": "inflammatory-myopathy-with-abundant-macrophages-imam",
     "letter": "I",
     "category": "Immune/Antibody",
     "genes": [
@@ -2998,15 +2755,12 @@
     "letter": "K",
     "category": "Systemic/Multisystem",
     "genes": [],
-    "inheritance": [
-      "Autosomal Dominant"
-    ],
+    "inheritance": [],
     "omimIds": [
-      "619542",
       "180901",
       "145600"
     ],
-    "content": "King-Denborough Syndrome ● Ryanodine Receptor ; Chromosome 19q13.1; Dominant ● ? Other; Autosomal Dominant, or Sporadic Nosology (Other names) King syndrome 10 Epidemiology Male preponderance (4:1) Genetics Ryr1 mutations: Missense; Lys33Glu, Thr2206Arg, Arg2452Trp, Arg2508Cys, Ser2776Phe Allelic disorders: Central core + Clinical Age of ascertainment: 2 to 14 years Malignant hyperthermia (94%) Triggered by heat or anesthesia Weakness (90%) Proximal Symmetric Mild Delayed motor development Scapular winging Myopathy often not present in other family members Tendon reflexes: Often reduced Skelet",
+    "content": "●Ryanodine Receptor ● Nosology (Other names) King syndrome 10 Epidemiology Male preponderance (4:1) Genetics Ryr1 mutations: Missense; Lys33Glu, Thr2206Arg, Arg2452Trp, Arg2508Cys, Ser2776Phe Allelic disorders: Central core + Clinical Age of ascertainment: 2 to 14 years Malignant hyperthermia (94%) Triggered by heat or anesthesia Weakness (90%) Proximal Symmetric Mild Delayed motor development Scapular winging Myopathy often not present in other family members Tendon reflexes: Often reduced Skeletal abnormalities: Noonan syndrome-like Short stature (90%): < 5th percentile Chest: Pectus carinat",
     "wustlUrl": "https://neuromuscular.wustl.edu/msys/myoglob.html#kd",
     "adultOnset": false
   },
@@ -3077,17 +2831,114 @@
     "name": "Leigh syndrome",
     "slug": "leigh-syndrome",
     "letter": "L",
-    "category": "",
-    "genes": [],
-    "inheritance": [],
-    "omimIds": [],
-    "content": "",
+    "category": "General",
+    "genes": [
+      "LRPPRC",
+      "NDUFA9",
+      "NDUFA2"
+    ],
+    "inheritance": [
+      "Variable",
+      "Mitochondrial",
+      "Autosomal Recessive",
+      "Autosomal Dominant",
+      "De Novo",
+      "X-Linked"
+    ],
+    "omimIds": [
+      "500015",
+      "516060",
+      "500011",
+      "194200",
+      "516001",
+      "516005",
+      "516006",
+      "516050",
+      "220110",
+      "185620",
+      "616684",
+      "220111",
+      "607544",
+      "619052",
+      "612958",
+      "619055",
+      "614770",
+      "604813",
+      "252010",
+      "618247",
+      "603834",
+      "618230",
+      "603846",
+      "618222",
+      "602141",
+      "618224",
+      "601825",
+      "618225",
+      "161015",
+      "203450",
+      "618251",
+      "615534",
+      "618239",
+      "612392",
+      "618243",
+      "603835",
+      "618241",
+      "613622",
+      "618235",
+      "602137",
+      "618244",
+      "614530",
+      "618252",
+      "602140",
+      "618776",
+      "618461",
+      "619170",
+      "603845",
+      "600857",
+      "619259",
+      "252011",
+      "256000",
+      "613642",
+      "613559",
+      "613541",
+      "615035",
+      "614947",
+      "611766",
+      "618248",
+      "617664",
+      "611994",
+      "608732",
+      "608770",
+      "246900",
+      "266150",
+      "608786",
+      "312170",
+      "300502",
+      "308930",
+      "179060",
+      "238331",
+      "614111",
+      "248600",
+      "203740",
+      "608348",
+      "608782",
+      "245349",
+      "608769",
+      "614741",
+      "614738",
+      "614737",
+      "250620",
+      "610690",
+      "616277",
+      "602292"
+    ],
+    "content": "Features Clinical Laboratory Types Causes of Leigh-like Syndrome 3 Defect Frequency (%) mtDNA mutation18-34 PDHc10 Complex I25 Complex IV14 Complex II or III 5 CoQ10 2 Other 26 From: R Bucelli From: R Bucelli Nosology: Subacute necrotizing encephalomyelopathy Epidemiology: Prevalence 1:30,000 to 1:40,000 Leigh syndrome: Genetics Multiple causes Clinical spectrum with NARP Leigh syndrome: Clinical features Onset age Usual: 1st 2 years; Most common from 3 to 12 months Occasionally: Later childhood or Adult Prodrome: Infection or illness, after initially normal development Hypotonia Episodic Vomi",
     "wustlUrl": "https://neuromuscular.wustl.edu/mitosyn.html#leigh",
     "adultOnset": false
   },
   {
-    "name": "LEPROSY\n6",
-    "slug": "leprosy-6",
+    "name": "LEPROSY",
+    "slug": "leprosy",
     "letter": "L",
     "category": "Other Neuromuscular",
     "genes": [
@@ -3183,8 +3034,8 @@
     "adultOnset": false
   },
   {
-    "name": "Long QT Syndromes\n\n\n16",
-    "slug": "long-qt-syndromes-16",
+    "name": "Long QT Syndromes",
+    "slug": "long-qt-syndromes",
     "letter": "L",
     "category": "Ion Channels / Membrane",
     "genes": [
@@ -3246,8 +3097,8 @@
     "adultOnset": false
   },
   {
-    "name": "Lower Motor Neuron Syndrome: Proximal Arm Predominant\n1,\n2",
-    "slug": "lower-motor-neuron-syndrome-proximal-arm-predominant-1-2",
+    "name": "Lower Motor Neuron Syndrome: Proximal Arm Predominant 1,",
+    "slug": "lower-motor-neuron-syndrome-proximal-arm-predominant-1",
     "letter": "L",
     "category": "Nerve Anatomy",
     "genes": [
@@ -3288,22 +3139,8 @@
     "adultOnset": false
   },
   {
-    "name": "m1-m2",
-    "slug": "m1-m2",
-    "letter": "M",
-    "category": "Laboratory / Diagnostics",
-    "genes": [
-      "DR"
-    ],
-    "inheritance": [],
-    "omimIds": [],
-    "content": "Macrophage Types 5 Properties M1 M2 Activation Path Classical Alternative Actions Pro-inflammatoryMicrobicidalTumorcidalTissue damage Anti-inflammatoryAngiogenesisTumor progressionTissue repairExtracellular matrix ↑ Polarization LPS, IFNγ, TNFα. IL-4, IL-10, IL-13, IL-21 Secretion TNFα, IL-1α, IL-1β, IL-6,IL-12, IL-23, CXCL9, CXCL10, CXCL11, CXCL16, CCL5 IL-10, TGFβ, CCL1, CCL17, CCL18, CCL22, CCL24, CXCL13 Effectors, other ROS, iNO VEGF, Arg-1 Antigen presenting Yes No Cell chemotaxis Th1, Th17 Th2, Treg Surface markers HLA-DR, CD11c, CD80, CD86, pSTAT1, TLR2, TLR4, iNOS CD163, CD204, CD206, ",
-    "wustlUrl": "https://neuromuscular.wustl.edu/lab/mbiopsy.htm#m1-m2",
-    "adultOnset": false
-  },
-  {
-    "name": "Macrophagic Myofasciitis\n4",
-    "slug": "macrophagic-myofasciitis-4",
+    "name": "Macrophagic Myofasciitis",
+    "slug": "macrophagic-myofasciitis",
     "letter": "M",
     "category": "Immune/Antibody",
     "genes": [
@@ -3397,11 +3234,31 @@
     "name": "MELAS",
     "slug": "melas",
     "letter": "M",
-    "category": "",
+    "category": "General",
     "genes": [],
-    "inheritance": [],
-    "omimIds": [],
-    "content": "",
+    "inheritance": [
+      "Mitochondrial",
+      "Variable"
+    ],
+    "omimIds": [
+      "590050",
+      "520000",
+      "590055",
+      "516050",
+      "590105",
+      "590080",
+      "590070",
+      "590020",
+      "590060",
+      "590040",
+      "590030",
+      "516000",
+      "516002",
+      "516005",
+      "516006",
+      "516020"
+    ],
+    "content": "Clinical Genetics Laboratory Pathology Nosology: Mitochondrial Encephalomyopathy; Lactic Acidosis; Stroke Epidemiology Incidence in children: 1:200,000 Genetics General Common causes: mtDNA point mutations in mtRNA genes Heteroplasmic mutations: Mutant mtDNA proportion ~ 56% to 95% Inheritance Maternal Occasional sporadic & non-inherited mutation (tRNA Leu) Clinical heterogeneity Rare to find more than 1 fully expressed MELAS in same family Maternal relatives often oligo- or asymptomatic Nuclear mutation (Rare): POLG1 Pathogenesis: mtDNA mutation leads to disordered mtDNA synthesis & function ",
     "wustlUrl": "https://neuromuscular.wustl.edu/mitosyn.html#melas",
     "adultOnset": false
   },
@@ -3409,11 +3266,22 @@
     "name": "MERRF",
     "slug": "merrf",
     "letter": "M",
-    "category": "",
+    "category": "General",
     "genes": [],
-    "inheritance": [],
-    "omimIds": [],
-    "content": "",
+    "inheritance": [
+      "Mitochondrial"
+    ],
+    "omimIds": [
+      "590060",
+      "590080",
+      "590085",
+      "590050",
+      "590070",
+      "590045",
+      "590040",
+      "590075"
+    ],
+    "content": "MERRF Genetics Inheritance: Maternal mtDNA point mutations: Heteroplasmic mtRNA Lys (MTTK) : A8344G (Frequent); T8356C; G8363A; G8361A Syndromes: MERRF or MERRF/MELAS overlap More likely inheritance: High mutation frequency in mother Other mitochondrial mtRNA Lys syndromes Cardiomyopathy (G8363A) PEO with myoclonus (G8342A) Deafness & Diabetes (A8296G) Multiple Symmetric Lipomatosis (A8344G) Leigh syndrome (A8344G) Parkinson syndrome, Neuropathy & Myopathy (A8344G) MELAS MNGIE (G8313A) Myopathy (MIMECK) (A8291G) ?? Madras MND (A8302) Genetic counseling: G8344A mutation Mutant load < 35% in mat",
     "wustlUrl": "https://neuromuscular.wustl.edu/mitosyn.html#merrf",
     "adultOnset": false
   },
@@ -3477,8 +3345,8 @@
     "adultOnset": false
   },
   {
-    "name": "Molecular Pathology: Immunohistochemistry for Inherited Myopathies\n1",
-    "slug": "molecular-pathology-immunohistochemistry-for-inherited-myopathies-1",
+    "name": "Molecular Pathology: Immunohistochemistry for Inherited Myopathies",
+    "slug": "molecular-pathology-immunohistochemistry-for-inherited-myopathies",
     "letter": "M",
     "category": "Laboratory / Diagnostics",
     "genes": [
@@ -3492,8 +3360,8 @@
     "adultOnset": false
   },
   {
-    "name": "Monoclonal Gammopathies of Unknown Significance (& Other)\n7",
-    "slug": "monoclonal-gammopathies-of-unknown-significance-other-7",
+    "name": "Monoclonal Gammopathies of Unknown Significance (& Other)",
+    "slug": "monoclonal-gammopathies-of-unknown-significance-other",
     "letter": "M",
     "category": "Immune/Antibody",
     "genes": [
@@ -3561,7 +3429,7 @@
     "adultOnset": false
   },
   {
-    "name": "Multifocal Motor Neuropathy (MMN) & Immune Motor Neuropathies (IMN)\n3,14",
+    "name": "Multifocal Motor Neuropathy (MMN) & Immune Motor Neuropathies (IMN) 3,14",
     "slug": "multifocal-motor-neuropathy-mmn-immune-motor-neuropathies-imn-3-14",
     "letter": "M",
     "category": "Immune/Antibody",
@@ -3718,8 +3586,8 @@
     "adultOnset": false
   },
   {
-    "name": "Myelin Glycoproteins\n1",
-    "slug": "myelin-glycoproteins-1",
+    "name": "Myelin Glycoproteins",
+    "slug": "myelin-glycoproteins",
     "letter": "M",
     "category": "Laboratory / Diagnostics",
     "genes": [
@@ -3732,7 +3600,7 @@
     "adultOnset": false
   },
   {
-    "name": "Myelin-Associated Glycoprotein (MAG; siglec-4)\n\n\n\n\n1,4",
+    "name": "Myelin-Associated Glycoprotein (MAG; siglec-4) 1,4",
     "slug": "myelin-associated-glycoprotein-mag-siglec-4-1-4",
     "letter": "M",
     "category": "Laboratory / Diagnostics",
@@ -3776,8 +3644,8 @@
     "adultOnset": false
   },
   {
-    "name": "Myofibrillar myopathies: General\n114",
-    "slug": "myofibrillar-myopathies-general-114",
+    "name": "Myofibrillar myopathies: General",
+    "slug": "myofibrillar-myopathies-general",
     "letter": "M",
     "category": "Muscular Dystrophy",
     "genes": [
@@ -3835,8 +3703,8 @@
     "adultOnset": false
   },
   {
-    "name": "Myokymia & Benign Neonatal Epilepsy (BFNS1)\n\n\n13",
-    "slug": "myokymia-benign-neonatal-epilepsy-bfns1-13",
+    "name": "Myokymia & Benign Neonatal Epilepsy (BFNS1)",
+    "slug": "myokymia-benign-neonatal-epilepsy-bfns1",
     "letter": "M",
     "category": "Ion Channels / Membrane",
     "genes": [
@@ -3855,8 +3723,8 @@
     "adultOnset": false
   },
   {
-    "name": "Myopathic Tremor\n58",
-    "slug": "myopathic-tremor-58",
+    "name": "Myopathic Tremor",
+    "slug": "myopathic-tremor",
     "letter": "M",
     "category": "Ion Channels / Membrane",
     "genes": [
@@ -4016,7 +3884,7 @@
     "adultOnset": false
   },
   {
-    "name": "Neuropathies (Chronic) with IgM binding to GD1a, GM3 & GT1b\ngangliosides",
+    "name": "Neuropathies (Chronic) with IgM binding to GD1a, GM3 & GT1b gangliosides",
     "slug": "neuropathies-chronic-with-igm-binding-to-gd1a-gm3-gt1b-gangliosides",
     "letter": "N",
     "category": "Immune/Antibody",
@@ -4032,8 +3900,8 @@
     "adultOnset": false
   },
   {
-    "name": "Neuropathy with IgM binding to Myelin-Associated Glycoprotein (MAG)\n\n\n\n\n67",
-    "slug": "neuropathy-with-igm-binding-to-myelin-associated-glycoprotein-mag-67",
+    "name": "Neuropathy with IgM binding to Myelin-Associated Glycoprotein (MAG)",
+    "slug": "neuropathy-with-igm-binding-to-myelin-associated-glycoprotein-mag",
     "letter": "N",
     "category": "Immune/Antibody",
     "genes": [
@@ -4056,8 +3924,8 @@
     "adultOnset": false
   },
   {
-    "name": "Neuropathy: CMT Genes & Drugs\n195",
-    "slug": "neuropathy-cmt-genes-drugs-195",
+    "name": "Neuropathy: CMT Genes & Drugs",
+    "slug": "neuropathy-cmt-genes-drugs",
     "letter": "N",
     "category": "Neuropathy (Hereditary)",
     "genes": [
@@ -4119,8 +3987,8 @@
     "adultOnset": false
   },
   {
-    "name": "NOTALGIA PARESTHETICA\n8",
-    "slug": "notalgia-paresthetica-8",
+    "name": "NOTALGIA PARESTHETICA",
+    "slug": "notalgia-paresthetica",
     "letter": "N",
     "category": "Nerve Anatomy",
     "genes": [
@@ -4136,8 +4004,8 @@
     "adultOnset": false
   },
   {
-    "name": "Nuclear Protein Disorders: Envelope & Matrix\n51",
-    "slug": "nuclear-protein-disorders-envelope-matrix-51",
+    "name": "Nuclear Protein Disorders: Envelope & Matrix",
+    "slug": "nuclear-protein-disorders-envelope-matrix",
     "letter": "N",
     "category": "Systemic/Multisystem",
     "genes": [
@@ -4168,8 +4036,8 @@
     "adultOnset": false
   },
   {
-    "name": "Nuclei: Muscle Fibers\n58",
-    "slug": "nuclei-muscle-fibers-58",
+    "name": "Nuclei: Muscle Fibers",
+    "slug": "nuclei-muscle-fibers",
     "letter": "N",
     "category": "Systemic/Multisystem",
     "genes": [
@@ -4198,8 +4066,8 @@
     "adultOnset": false
   },
   {
-    "name": "Oculopharyngeal Muscular Dystrophy (OPMD)\n\n\n5",
-    "slug": "oculopharyngeal-muscular-dystrophy-opmd-5",
+    "name": "Oculopharyngeal Muscular Dystrophy (OPMD)",
+    "slug": "oculopharyngeal-muscular-dystrophy-opmd",
     "letter": "O",
     "category": "Muscular Dystrophy",
     "genes": [
@@ -4228,8 +4096,8 @@
     "adultOnset": false
   },
   {
-    "name": "Oculopharyngeal Myopathy with Leukodystrophy (OPML1)\n\n\n6",
-    "slug": "oculopharyngeal-myopathy-with-leukodystrophy-opml1-6",
+    "name": "Oculopharyngeal Myopathy with Leukodystrophy (OPML1)",
+    "slug": "oculopharyngeal-myopathy-with-leukodystrophy-opml1",
     "letter": "O",
     "category": "Muscular Dystrophy",
     "genes": [
@@ -4285,8 +4153,8 @@
     "adultOnset": false
   },
   {
-    "name": "OVERVIEW\n119",
-    "slug": "overview-119",
+    "name": "OVERVIEW",
+    "slug": "overview",
     "letter": "O",
     "category": "Neuropathy (Hereditary)",
     "genes": [
@@ -4302,8 +4170,8 @@
     "adultOnset": false
   },
   {
-    "name": "Paraneoplastic Sensory Neuronopathy with Anti-Hu Antibodies\n1",
-    "slug": "paraneoplastic-sensory-neuronopathy-with-anti-hu-antibodies-1",
+    "name": "Paraneoplastic Sensory Neuronopathy with Anti-Hu Antibodies",
+    "slug": "paraneoplastic-sensory-neuronopathy-with-anti-hu-antibodies",
     "letter": "P",
     "category": "Immune/Antibody",
     "genes": [
@@ -4402,8 +4270,8 @@
     "adultOnset": false
   },
   {
-    "name": "POEMS Syndrome\n21",
-    "slug": "poems-syndrome-21",
+    "name": "POEMS Syndrome",
+    "slug": "poems-syndrome",
     "letter": "P",
     "category": "Immune/Antibody",
     "genes": [
@@ -4421,8 +4289,8 @@
     "adultOnset": false
   },
   {
-    "name": "POLYMYALGIA RHEUMATICA\n11",
-    "slug": "polymyalgia-rheumatica-11",
+    "name": "POLYMYALGIA RHEUMATICA",
+    "slug": "polymyalgia-rheumatica",
     "letter": "P",
     "category": "Ion Channels / Membrane",
     "genes": [
@@ -4545,8 +4413,8 @@
     "adultOnset": false
   },
   {
-    "name": "Protracted Febrile Myalgia (PFM)\n144",
-    "slug": "protracted-febrile-myalgia-pfm-144",
+    "name": "Protracted Febrile Myalgia (PFM)",
+    "slug": "protracted-febrile-myalgia-pfm",
     "letter": "P",
     "category": "Immune/Antibody",
     "genes": [
@@ -4627,52 +4495,11 @@
     "name": "Refsum disease",
     "slug": "refsum-disease",
     "letter": "R",
-    "category": "Neuropathy (Hereditary)",
-    "genes": [
-      "PEX7"
-    ],
-    "inheritance": [
-      "Autosomal Recessive",
-      "Autosomal Dominant",
-      "Mitochondrial"
-    ],
-    "omimIds": [
-      "266500",
-      "602026",
-      "603164",
-      "614882",
-      "600414",
-      "214110",
-      "601498",
-      "614862",
-      "601789",
-      "614883",
-      "614885",
-      "601791",
-      "614887",
-      "600279",
-      "614886",
-      "214100",
-      "601757",
-      "215100",
-      "266510",
-      "602136",
-      "614866",
-      "614867",
-      "170993",
-      "608666",
-      "202370",
-      "614877",
-      "603360",
-      "614876",
-      "614859",
-      "601758",
-      "612674",
-      "613599",
-      "616192",
-      "601184"
-    ],
-    "content": "REFSUM SYNDROMES (Peroxisome Biogenesis Disorders; Zellweger syndromes) Refsum disease: Childhood onset (< 20 yrs) : Classic form ● Phytanoyl-CoA Hydroxylase (PAHX: PHYH) ; Chromosome 10p13; Recessive Nosology: Heredopathia atactica polyneuritiformis (HAP) Epidemiology PHYH mutations: 90% of Adult Refsum syndromes PEX7: 10% of Adult Refsum syndromes Genetics PHYH gene mutations Missense most common Most mutations inactivate enzyme function Some mutations produce protein with Normal activity, but Defective targeting to peroxisomes PHYH Variant syndrome Adult onset Refsum's with Pipecolicacidemi",
+    "category": "Ataxia/Cerebellar",
+    "genes": [],
+    "inheritance": [],
+    "omimIds": [],
+    "content": "● Demyelinating Polyneuropathy Ataxia Eye: Pigmentary Retinal degeneration Skin: Ichthyosis Skeletal: 4th metacarpal shortening Deafness Cardiac failure Treatment Dietary: Phytanic Acid Restriction",
     "wustlUrl": "https://neuromuscular.wustl.edu/time/hmsn.html#refsum",
     "adultOnset": true
   },
@@ -4731,8 +4558,8 @@
     "adultOnset": false
   },
   {
-    "name": "Rhabdomyolysis, Exercise-related: Associations\n31",
-    "slug": "rhabdomyolysis-exercise-related-associations-31",
+    "name": "Rhabdomyolysis, Exercise-related: Associations",
+    "slug": "rhabdomyolysis-exercise-related-associations",
     "letter": "R",
     "category": "Systemic/Multisystem",
     "genes": [
@@ -4749,8 +4576,8 @@
     "adultOnset": false
   },
   {
-    "name": "Rhabdomyolysis, Recurrent (RHABDO2)\n\n\n58",
-    "slug": "rhabdomyolysis-recurrent-rhabdo2-58",
+    "name": "Rhabdomyolysis, Recurrent (RHABDO2)",
+    "slug": "rhabdomyolysis-recurrent-rhabdo2",
     "letter": "R",
     "category": "Systemic/Multisystem",
     "genes": [
@@ -4791,8 +4618,8 @@
     "adultOnset": false
   },
   {
-    "name": "Rippling Muscle Syndromes\n17",
-    "slug": "rippling-muscle-syndromes-17",
+    "name": "Rippling Muscle Syndromes",
+    "slug": "rippling-muscle-syndromes",
     "letter": "R",
     "category": "Ion Channels / Membrane",
     "genes": [
@@ -4907,8 +4734,8 @@
     "adultOnset": false
   },
   {
-    "name": "Schwann Cell Development\n2",
-    "slug": "schwann-cell-development-2",
+    "name": "Schwann Cell Development",
+    "slug": "schwann-cell-development",
     "letter": "S",
     "category": "Laboratory / Diagnostics",
     "genes": [
@@ -4955,8 +4782,8 @@
     "adultOnset": false
   },
   {
-    "name": "Schwartz-Jampel Type 2/Stuve-Wiedemann syndrome (SWS)\n26",
-    "slug": "schwartz-jampel-type-2-stuve-wiedemann-syndrome-sws-26",
+    "name": "Schwartz-Jampel Type 2/Stuve-Wiedemann syndrome (SWS)",
+    "slug": "schwartz-jampel-type-2-stuve-wiedemann-syndrome-sws",
     "letter": "S",
     "category": "Ion Channels / Membrane",
     "genes": [
@@ -4974,8 +4801,8 @@
     "adultOnset": false
   },
   {
-    "name": "Semaphorins\n3",
-    "slug": "semaphorins-3",
+    "name": "Semaphorins",
+    "slug": "semaphorins",
     "letter": "S",
     "category": "Laboratory / Diagnostics",
     "genes": [
@@ -4996,44 +4823,17 @@
     "name": "Sengers syndrome",
     "slug": "sengers-syndrome",
     "letter": "S",
-    "category": "General",
-    "genes": [
-      "NDUFA11",
-      "TRMT5",
-      "NDUFV2"
-    ],
-    "inheritance": [
-      "Autosomal Recessive",
-      "Mitochondrial",
-      "Autosomal Dominant"
-    ],
-    "omimIds": [
-      "212350",
-      "610345",
-      "614691",
-      "607251",
-      "617380",
-      "115150",
-      "164757",
-      "613706",
-      "602524",
-      "615499",
-      "617222",
-      "609988",
-      "617223",
-      "612638",
-      "602137",
-      "605810",
-      "614582",
-      "607118"
-    ],
-    "content": "Sengers syndrome: Cardiomyopathy, Hypertrophic & Cataracts (MTDPS10) 131 ● Acylglycerol Kinase (Multisubstrate lipid kinase) (AGK; MULK) ; Chromosome 7q34; Recessive Epidemiology: 43 patients Genetics AGK mutations: 34 identified; Most loss of function; Missense, Splicing or Stop Nonsense variants: More infant mortality; Lower age of death Allelic disorder: Cataract 38, Recessive AGK protein Mitochondrial Phosphorylates diacylglycerol, ceramide & 1-acylglycerol Assembly of ANT & Respiratory chain complexes Component of TIMM22 complex with TIMM29 Facilitates insertion of hydrophobic proteins in",
+    "category": "",
+    "genes": [],
+    "inheritance": [],
+    "omimIds": [],
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/mitosyn.html#sengers",
     "adultOnset": false
   },
   {
-    "name": "Sensory (± Ataxic) neuropathy with anti-GD1b & other Disialosyl antibodies\n3",
-    "slug": "sensory-ataxic-neuropathy-with-anti-gd1b-other-disialosyl-antibodies-3",
+    "name": "Sensory (± Ataxic) neuropathy with anti-GD1b & other Disialosyl antibodies",
+    "slug": "sensory-ataxic-neuropathy-with-anti-gd1b-other-disialosyl-antibodies",
     "letter": "S",
     "category": "Immune/Antibody",
     "genes": [
@@ -5062,8 +4862,8 @@
     "adultOnset": false
   },
   {
-    "name": "Sensory Neuronopathies\n14",
-    "slug": "sensory-neuronopathies-14",
+    "name": "Sensory Neuronopathies",
+    "slug": "sensory-neuronopathies",
     "letter": "S",
     "category": "Immune/Antibody",
     "genes": [
@@ -5079,7 +4879,7 @@
     "adultOnset": false
   },
   {
-    "name": "SERUM IgM BINDING TO MYELIN-ASSOCIATED GLYCOPROTEIN (MAG)\n\n\n  IN SENSORY-MOTOR NEUROPATHIES",
+    "name": "SERUM IgM BINDING TO MYELIN-ASSOCIATED GLYCOPROTEIN (MAG) IN SENSORY-MOTOR NEUROPATHIES",
     "slug": "serum-igm-binding-to-myelin-associated-glycoprotein-mag-in-sensory-motor-neuropa",
     "letter": "S",
     "category": "Immune/Antibody",
@@ -5090,20 +4890,6 @@
     "omimIds": [],
     "content": "Clinical Indications for measurement Interpretations of positive results Laboratory standards Patterns with specificity for demyelinating neuropathies Therapy: Guidelines Anti-MAG antibodies: Summary of indications MAG stainingon Western blot Indications Adult onset neuropathy: Distal; Symmetric; Sensory > Motor ↑ Likelihood of positive test: Age > 50 Gait disorder Tremor Disability 2° sensory or motor loss Demyelination Usually with ↑ Distal latency No conduction block Serum IgM M-protein: 85% Treatment follow-up Document sufficient cytoxan Best prognosis: Anti-MAG titers ↓ by > 60% Usually w",
     "wustlUrl": "https://neuromuscular.wustl.edu/antibody/mag.html#SERUM IgM BINDING TO MYELIN-ASSOCIATED GLYCOPROTEIN (MAG)\n\n\n",
-    "adultOnset": false
-  },
-  {
-    "name": "Several",
-    "slug": "several",
-    "letter": "S",
-    "category": "Immune/Antibody",
-    "genes": [
-      "LMNP-LMN"
-    ],
-    "inheritance": [],
-    "omimIds": [],
-    "content": "lower motor neuron syndromesD-LMNP-LMN syndromes",
-    "wustlUrl": "https://neuromuscular.wustl.edu/antibody/motpn2.htm#noab",
     "adultOnset": false
   },
   {
@@ -5148,38 +4934,11 @@
     "name": "Sj\\u00f6gren-Larsson syndrome",
     "slug": "sj-u00f6gren-larsson-syndrome",
     "letter": "S",
-    "category": "General",
-    "genes": [
-      "OH-LTB4",
-      "ICHTHYOSIS",
-      "ELOVL5",
-      "ELOVL4"
-    ],
-    "inheritance": [
-      "Autosomal Recessive",
-      "Variable",
-      "Autosomal Dominant",
-      "X-Linked"
-    ],
-    "omimIds": [
-      "270200",
-      "609523",
-      "614457",
-      "605512",
-      "600110",
-      "133190",
-      "133200",
-      "618527",
-      "611813",
-      "601608",
-      "309560",
-      "270750",
-      "612666",
-      "610805",
-      "611146",
-      "613280"
-    ],
-    "content": "Sjögren-Larsson Syndrome (SLS) 17 ● Fatty aldehyde dehydrogenase (ALDH3A2; ALDH10; FALDH) ; Chromosome 17p11.2; Recessive Epidemiology Common in Northern Sweden Other areas 0.4 per 100,000 Genetics ~ 50 different mutations Missense & Deletion most common FALDH protein Carboxyl terminal hydrophobic: Microsome membrane anchor Catalyzes medium & long chain fatty aldehydes to carboxylic acids Deficiency ? Increased fatty alcohols or aldehyde modified molecules Abnormal cell membrane integrity High levels of biologically active lipids Clinical Generally homogeneous phenotype Onset: Pre-term birth S",
+    "category": "",
+    "genes": [],
+    "inheritance": [],
+    "omimIds": [],
+    "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/spinal/fsp.html#sls",
     "adultOnset": false
   },
@@ -5239,8 +4998,8 @@
     "adultOnset": false
   },
   {
-    "name": "Spinal Muscular Atrophy 2\n5",
-    "slug": "spinal-muscular-atrophy-2-5",
+    "name": "Spinal Muscular Atrophy 2",
+    "slug": "spinal-muscular-atrophy-2",
     "letter": "S",
     "category": "Motor Neuron / ALS",
     "genes": [
@@ -5280,8 +5039,8 @@
     "adultOnset": false
   },
   {
-    "name": "Systemic connective tissue disorders & Vasculitis: Specific syndromes\n4",
-    "slug": "systemic-connective-tissue-disorders-vasculitis-specific-syndromes-4",
+    "name": "Systemic connective tissue disorders & Vasculitis: Specific syndromes",
+    "slug": "systemic-connective-tissue-disorders-vasculitis-specific-syndromes",
     "letter": "S",
     "category": "Immune/Antibody",
     "genes": [
@@ -5466,8 +5225,8 @@
     "adultOnset": false
   },
   {
-    "name": "TROPHIC FACTORS\n1",
-    "slug": "trophic-factors-1",
+    "name": "TROPHIC FACTORS",
+    "slug": "trophic-factors",
     "letter": "T",
     "category": "Laboratory / Diagnostics",
     "genes": [
@@ -5493,8 +5252,8 @@
     "adultOnset": false
   },
   {
-    "name": "TUBERCULOSIS\n17",
-    "slug": "tuberculosis-17",
+    "name": "TUBERCULOSIS",
+    "slug": "tuberculosis",
     "letter": "T",
     "category": "Other Neuromuscular",
     "genes": [
@@ -5524,23 +5283,6 @@
     "omimIds": [],
     "content": "",
     "wustlUrl": "https://neuromuscular.wustl.edu/musdist/dag2.htm#ullrich",
-    "adultOnset": false
-  },
-  {
-    "name": "Untitled",
-    "slug": "untitled",
-    "letter": "U",
-    "category": "Laboratory / Diagnostics",
-    "genes": [
-      "GM1",
-      "GD1A",
-      "HDS",
-      "MAG"
-    ],
-    "inheritance": [],
-    "omimIds": [],
-    "content": "NEUROMUSCULAR CLINICAL LABORATORY Neuromuscular Disease Center Department of Neurology Washington University School of Medicine Campus Box 8111, Room IWJ 404 660 South Euclid Avenue; St. Louis, MO 63110 Phone: 314-362-6981; Fax: 314-362-2826 Patient Name (Last, First, Initials):___________________________________________ Clinical diagnosis: ____________________________________________________ Physician requesting test: _____________________________ UPIN# ____________ Referring hospital: __________________________________________________ Name and address for report and/or charges ______________",
-    "wustlUrl": "https://neuromuscular.wustl.edu/lab/serumreqc.htm",
     "adultOnset": false
   },
   {
@@ -5614,22 +5356,8 @@
     "adultOnset": false
   },
   {
-    "name": "vitE",
-    "slug": "vite",
-    "letter": "V",
-    "category": "Other Neuromuscular",
-    "genes": [
-      "TR"
-    ],
-    "inheritance": [],
-    "omimIds": [],
-    "content": "Hypervitaminosis E Weakness: Proximal Myalgia Serum CK: High Muscle Necrosis GT stain: Paranuclear accumulation of red granular material Inclusion staining pattern: NADH-TR, Acid phosphatase, Esterase",
-    "wustlUrl": "https://neuromuscular.wustl.edu/nother/vitamin.htm#vitE",
-    "adultOnset": false
-  },
-  {
-    "name": "Vocal Cord & Pharyngeal Weakness (MPD2; VCPDM; ALS21; MSP5)\n\n\n37",
-    "slug": "vocal-cord-pharyngeal-weakness-mpd2-vcpdm-als21-msp5-37",
+    "name": "Vocal Cord & Pharyngeal Weakness (MPD2; VCPDM; ALS21; MSP5)",
+    "slug": "vocal-cord-pharyngeal-weakness-mpd2-vcpdm-als21-msp5",
     "letter": "V",
     "category": "Muscular Dystrophy",
     "genes": [
@@ -5728,8 +5456,8 @@
     "adultOnset": false
   },
   {
-    "name": "Zika virus\n36",
-    "slug": "zika-virus-36",
+    "name": "Zika virus",
+    "slug": "zika-virus",
     "letter": "Z",
     "category": "Other Neuromuscular",
     "genes": [

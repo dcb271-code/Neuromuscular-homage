@@ -32,20 +32,20 @@ const CLINICAL_CATEGORIES = [
   { name: 'Myoglobinuria / Rhabdomyolysis',       color: '#dc2626', url: 'https://neuromuscular.wustl.edu/msys/myoglob.html' },
 ];
 
-// Featured pediatric NMD conditions — now linking to local pages
+// Featured pediatric NMD conditions — original curated WUSTL deep links
 const FEATURED_CONDITIONS = [
-  { label: 'Duchenne MD',                         abbr: 'DMD',   gene: 'DMD',           color: '#7c3aed', url: '/gene/DMD' },
-  { label: 'Becker MD',                           abbr: 'BMD',   gene: 'DMD',           color: '#7c3aed', url: '/gene/DMD' },
-  { label: 'Spinal Muscular Atrophy',             abbr: 'SMA',   gene: 'SMN1',          color: '#dc2626', url: '/gene/SMN1' },
-  { label: 'Myotonic Dystrophy 1',                abbr: 'DM1',   gene: 'DMPK',          color: '#7c3aed', url: '/gene/DMPK' },
-  { label: 'Emery-Dreifuss MD',                   abbr: 'EDMD',  gene: 'EMD / LMNA',    color: '#db2777', url: '/gene/LMNA' },
-  { label: 'Childhood Myasthenia Gravis',          abbr: 'MG',    gene: 'CHRNA1 / MUSK', color: '#0891b2', url: '/search?q=myasthenia+gravis' },
-  { label: 'Central Core Disorders',              abbr: 'CCD',   gene: 'RYR1',          color: '#0d9488', url: '/gene/RYR1' },
-  { label: 'Bethlem Myopathies (COL6/12)',         abbr: 'BTHLM', gene: 'COL6A1-3',      color: '#db2777', url: '/search?q=bethlem' },
-  { label: 'Hereditary Neuropathy w/ Pressure Palsies', abbr: 'HNPP', gene: 'PMP22',    color: '#2563eb', url: '/gene/PMP22' },
-  { label: 'Friedreich Ataxia',                   abbr: 'FRDA',  gene: 'FXN',           color: '#16a34a', url: '/search?q=friedreich' },
-  { label: 'Kearns-Sayre Syndrome "Spectrum"',    abbr: 'KSS',   gene: 'mtDNA',         color: '#d97706', url: '/search?q=kearns-sayre' },
-  { label: 'AIDP / Guillain-Barre Syndrome',      abbr: 'GBS',   gene: '',              color: '#0891b2', url: '/search?q=guillain-barre' },
+  { label: 'Duchenne MD',                              abbr: 'DMD',   gene: 'DMD',           color: '#7c3aed', url: 'https://neuromuscular.wustl.edu/musdist/dmd.html#Duchenne' },
+  { label: 'Becker MD',                                abbr: 'BMD',   gene: 'DMD',           color: '#7c3aed', url: 'https://neuromuscular.wustl.edu/musdist/dmd.html#Becker' },
+  { label: 'Spinal Muscular Atrophy',                  abbr: 'SMA',   gene: 'SMN1',          color: '#dc2626', url: 'https://neuromuscular.wustl.edu/synmot.html#sma5q' },
+  { label: 'Myotonic Dystrophy 1',                     abbr: 'DM1',   gene: 'DMPK',          color: '#7c3aed', url: 'https://neuromuscular.wustl.edu/musdist/pe-eom.html#dm1' },
+  { label: 'Emery-Dreifuss MD',                        abbr: 'EDMD',  gene: 'EMD / LMNA',    color: '#db2777', url: 'https://neuromuscular.wustl.edu/msys/contract.html#emd' },
+  { label: 'Childhood Myasthenia Gravis',               abbr: 'MG',    gene: 'CHRNA1 / MUSK', color: '#0891b2', url: 'https://neuromuscular.wustl.edu/mtime/mgddx.html#childmg' },
+  { label: 'Central Core Disorders',                   abbr: 'CCD',   gene: 'RYR1',          color: '#0d9488', url: 'https://neuromuscular.wustl.edu/syncm.html#cc' },
+  { label: 'Bethlem Myopathies (COL6/12)',              abbr: 'BTHLM', gene: 'COL6A1-3',      color: '#db2777', url: 'https://neuromuscular.wustl.edu/musdist/lg.html#beth' },
+  { label: 'Hereditary Neuropathy w/ Pressure Palsies', abbr: 'HNPP', gene: 'PMP22',         color: '#2563eb', url: 'https://neuromuscular.wustl.edu/time/hmsn.html#pp' },
+  { label: 'Friedreich Ataxia',                        abbr: 'FRDA',  gene: 'FXN',           color: '#16a34a', url: 'https://neuromuscular.wustl.edu/ataxia/recatax.html#FA' },
+  { label: 'Kearns-Sayre Syndrome "Spectrum" (KSS)',   abbr: 'KSS',   gene: 'mtDNA',         color: '#d97706', url: 'https://neuromuscular.wustl.edu/mitosyn.html#ks' },
+  { label: 'AIDP / Guillain-Barre Syndrome',           abbr: 'GBS',   gene: '',              color: '#0891b2', url: 'https://neuromuscular.wustl.edu/antibody/gbs.htm#cgbs' },
 ];
 
 export default function Home() {

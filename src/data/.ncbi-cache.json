@@ -4698,5 +4698,603 @@
     "mapLocation": "16p11.2",
     "ncbiSummary": "This gene encodes a multifunctional protein component of the heterogeneous nuclear ribonucleoprotein (hnRNP) complex. The hnRNP complex is involved in pre-mRNA splicing and the export of fully processed mRNA to the cytoplasm. This protein belongs to the FET family of RNA-binding proteins which have been implicated in cellular processes that include regulation of gene expression, maintenance of genomic integrity and mRNA/microRNA processing. Alternative splicing results in multiple transcript variants. Defects in this gene result in amyotrophic lateral sclerosis type 6. [provided by RefSeq, Sep 2009]",
     "geneType": ""
+  },
+  "ABCD1": {
+    "ncbiGeneId": "215",
+    "officialSymbol": "ABCD1",
+    "officialName": "ATP binding cassette subfamily D member 1",
+    "aliases": [
+      "ABC42",
+      "ALD",
+      "ALDP",
+      "AMN"
+    ],
+    "otherDesignations": [
+      "ATP-binding cassette sub-family D member 1",
+      "ATP-binding cassette, sub-family D (ALD), member 1",
+      "adrenoleukodystrophy protein"
+    ],
+    "chromosome": "X",
+    "mapLocation": "Xq28",
+    "ncbiSummary": "The protein encoded by this gene is a member of the superfamily of ATP-binding cassette (ABC) transporters. ABC proteins transport various molecules across extra- and intra-cellular membranes. ABC genes are divided into seven distinct subfamilies (ABC1, MDR/TAP, MRP, ALD, OABP, GCN20, White). This protein is a member of the ALD subfamily, which is involved in peroxisomal import of fatty acids and/or fatty acyl-CoAs in the organelle. All known peroxisomal ABC transporters are half transporters which require a partner half transporter molecule to form a functional homodimeric or heterodimeric transporter. This peroxisomal membrane protein is likely involved in the peroxisomal transport or catabolism of very long chain fatty acids. Defects in this gene have been identified as the underlying cause of adrenoleukodystrophy, an X-chromosome recessively inherited demyelinating disorder of the nervous system. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "ACTN2": {
+    "ncbiGeneId": "88",
+    "officialSymbol": "ACTN2",
+    "officialName": "actinin alpha 2",
+    "aliases": [
+      "CMD1AA",
+      "CMH23",
+      "CMYO8",
+      "CMYP8",
+      "MPD6",
+      "MYOCOZ"
+    ],
+    "otherDesignations": [
+      "alpha-actinin-2",
+      "F-actin cross-linking protein",
+      "alpha-actinin skeletal muscle"
+    ],
+    "chromosome": "1",
+    "mapLocation": "1q43",
+    "ncbiSummary": "Alpha actinins belong to the spectrin gene superfamily which represents a diverse group of cytoskeletal proteins, including the alpha and beta spectrins and dystrophins. Alpha actinin is an actin-binding protein with multiple roles in different cell types. In nonmuscle cells, the cytoskeletal isoform is found along microfilament bundles and adherens-type junctions, where it is involved in binding actin to the membrane. In contrast, skeletal, cardiac, and smooth muscle isoforms are localized to the Z-disc and analogous dense bodies, where they help anchor the myofibrillar actin filaments. This gene encodes a muscle-specific, alpha actinin isoform that is expressed in both skeletal and cardiac muscles. Several transcript variants encoding different isoforms have been found for this gene. [provided by RefSeq, May 2013]",
+    "geneType": ""
+  },
+  "ACAD9": {
+    "ncbiGeneId": "28976",
+    "officialSymbol": "ACAD9",
+    "officialName": "acyl-CoA dehydrogenase family member 9",
+    "aliases": [
+      "MC1DN20",
+      "NPD002"
+    ],
+    "otherDesignations": [
+      "complex I assembly factor ACAD9, mitochondrial",
+      "acyl-Coenzyme A dehydrogenase family, member 9",
+      "very-long-chain acyl-CoA dehydrogenase VLCAD"
+    ],
+    "chromosome": "3",
+    "mapLocation": "3q21.3",
+    "ncbiSummary": "This gene encodes a member of the acyl-CoA dehydrogenase family. Members of this family of proteins localize to the mitochondria and catalyze the rate-limiting step in the beta-oxidation of fatty acyl-CoA. The encoded protein is specifically active toward palmitoyl-CoA and long-chain unsaturated substrates. Mutations in this gene cause acyl-CoA dehydrogenase family member type 9 deficiency. Alternate splicing results in multiple transcript variants.[provided by RefSeq, Mar 2010]",
+    "geneType": ""
+  },
+  "ATP1A3": {
+    "ncbiGeneId": "478",
+    "officialSymbol": "ATP1A3",
+    "officialName": "ATPase Na+/K+ transporting subunit alpha 3",
+    "aliases": [
+      "AHC2",
+      "CAPOS",
+      "DEE99",
+      "DYT12",
+      "RDP"
+    ],
+    "otherDesignations": [
+      "sodium/potassium-transporting ATPase subunit alpha-3",
+      "ATPase, Na+/K+ transporting, alpha 3 polypeptide",
+      "Na(+)/K(+) ATPase alpha(III) subunit",
+      "Na(+)/K(+) ATPase alpha-3 subunit",
+      "Na+, K+ activated adenosine triphosphatase alpha subunit",
+      "Na+/K+ ATPase 3",
+      "sodium pump subunit alpha-3",
+      "sodium-potassium ATPase catalytic subunit alpha-3",
+      "sodium-potassium-ATPase, alpha 3 polypeptide",
+      "sodium/potassium-transporting ATPase alpha-3 chain"
+    ],
+    "chromosome": "19",
+    "mapLocation": "19q13.2",
+    "ncbiSummary": "The protein encoded by this gene belongs to the family of P-type cation transport ATPases, and to the subfamily of Na+/K+ -ATPases. Na+/K+ -ATPase is an integral membrane protein responsible for establishing and maintaining the electrochemical gradients of Na and K ions across the plasma membrane. These gradients are essential for osmoregulation, for sodium-coupled transport of a variety of organic and inorganic molecules, and for electrical excitability of nerve and muscle. This enzyme is composed of two subunits, a large catalytic subunit (alpha) and a smaller glycoprotein subunit (beta). The catalytic subunit of Na+/K+ -ATPase is encoded by multiple genes. This gene encodes an alpha 3 subunit. Alternatively spliced transcript variants encoding different isoforms have been found for this gene. [provided by RefSeq, Jan 2012]",
+    "geneType": ""
+  },
+  "ATP7A": {
+    "ncbiGeneId": "538",
+    "officialSymbol": "ATP7A",
+    "officialName": "ATPase copper transporting alpha",
+    "aliases": [
+      "DSMAX",
+      "HMNX",
+      "MK",
+      "MNK",
+      "SMAX3"
+    ],
+    "otherDesignations": [
+      "copper-transporting ATPase 1",
+      "ATPase, Cu++ transporting, alpha polypeptide",
+      "Cu++-transporting P-type ATPase",
+      "Menkes disease-associated protein",
+      "copper pump 1"
+    ],
+    "chromosome": "X",
+    "mapLocation": "Xq21.1",
+    "ncbiSummary": "This gene encodes a transmembrane protein that functions in copper transport across membranes. This protein is localized to the trans Golgi network, where it is predicted to supply copper to copper-dependent enzymes in the secretory pathway. It relocalizes to the plasma membrane under conditions of elevated extracellular copper, and functions in the efflux of copper from cells. Mutations in this gene are associated with Menkes disease, X-linked distal spinal muscular atrophy, and occipital horn syndrome. Alternatively-spliced transcript variants have been observed. [provided by RefSeq, Aug 2013]",
+    "geneType": ""
+  },
+  "ATP13A2": {
+    "ncbiGeneId": "23400",
+    "officialSymbol": "ATP13A2",
+    "officialName": "ATPase cation transporting 13A2",
+    "aliases": [
+      "CLN12",
+      "HSA9947",
+      "KRPPD",
+      "PARK9",
+      "SPG78"
+    ],
+    "otherDesignations": [
+      "polyamine-transporting ATPase 13A2",
+      "ATPase 13A2",
+      "ATPase type 13A2",
+      "cation-transporting ATPase 13A2",
+      "probable cation-transporting ATPase 13A2"
+    ],
+    "chromosome": "1",
+    "mapLocation": "1p36.13",
+    "ncbiSummary": "This gene encodes a member of the P5 subfamily of ATPases which transports inorganic cations as well as other substrates. Mutations in this gene are associated with Kufor-Rakeb syndrome (KRS), also referred to as Parkinson disease 9. Multiple transcript variants encoding different isoforms have been found for this gene.[provided by RefSeq, Nov 2008]",
+    "geneType": ""
+  },
+  "CACNA1A": {
+    "ncbiGeneId": "773",
+    "officialSymbol": "CACNA1A",
+    "officialName": "calcium voltage-gated channel subunit alpha1 A",
+    "aliases": [
+      "APCA",
+      "BI",
+      "CACNL1A4",
+      "CAV2.1",
+      "DEE42",
+      "EA2",
+      "EIEE42",
+      "FHM",
+      "HPCA",
+      "MHP",
+      "MHP1",
+      "SCA6"
+    ],
+    "otherDesignations": [
+      "voltage-dependent P/Q-type calcium channel subunit alpha-1A",
+      "brain calcium channel 1",
+      "brain calcium channel I",
+      "calcium channel, L type, alpha-1 polypeptide",
+      "calcium channel, voltage-dependent, P/Q type, alpha 1A subunit",
+      "fetal brain Ca2+ voltage-gated channel alpha1A pore-forming subunit",
+      "voltage-gated calcium channel subunit alpha Cav2.1"
+    ],
+    "chromosome": "19",
+    "mapLocation": "19p13.13",
+    "ncbiSummary": "Voltage-dependent calcium channels mediate the entry of calcium ions into excitable cells, and are also involved in a variety of calcium-dependent processes, including muscle contraction, hormone or neurotransmitter release, and gene expression. Calcium channels are multisubunit complexes composed of alpha-1, beta, alpha-2/delta, and gamma subunits. The channel activity is directed by the pore-forming alpha-1 subunit, whereas, the others act as auxiliary subunits regulating this activity. The distinctive properties of the calcium channel types are related primarily to the expression of a variety of alpha-1 isoforms, alpha-1A, B, C, D, E, and S. This gene encodes the alpha-1A subunit, which is predominantly expressed in neuronal tissue. Mutations in this gene are associated with 2 neurologic disorders, familial hemiplegic migraine and episodic ataxia 2. This gene also exhibits polymorphic variation due to (CAG)n-repeats. Multiple transcript variants encoding different isoforms have been found for this gene. In one set of transcript variants, the (CAG)n-repeats occur in the 3' UTR, and are not associated with any disease. But in another set of variants, an insertion extends the coding region to include the (CAG)n-repeats which encode a polyglutamine tract. Expansion of the (CAG)n-repeats from the normal 4-18 to 21-33 in the coding region is associated with spinocerebellar ataxia 6. [provided by RefSeq, Jul 2016]",
+    "geneType": ""
+  },
+  "ATP8A2": {
+    "ncbiGeneId": "51761",
+    "officialSymbol": "ATP8A2",
+    "officialName": "ATPase phospholipid transporting 8A2",
+    "aliases": [
+      "ATP",
+      "ATPIB",
+      "CAMRQ4",
+      "IB",
+      "ML-1"
+    ],
+    "otherDesignations": [
+      "phospholipid-transporting ATPase IB",
+      "ATPase, aminophospholipid transporter, class I, type 8A, member 2",
+      "ATPase, aminophospholipid transporter-like, class I, type 8A, member 2",
+      "P4-ATPase flippase complex alpha subunit ATP8A2",
+      "probable phospholipid-transporting ATPase IB"
+    ],
+    "chromosome": "13",
+    "mapLocation": "13q12.13",
+    "ncbiSummary": "The protein encoded by this gene is a member of the P4 ATPase family of proteins, which are thought to be involved in a process called lipid flipping, whereby phospholipids are translocated inwards from the exoplasmic leaflet to the cytosolic leaflet of the cell membrane, which aids in generating and maintaining asymmetry in membrane lipids. This protein is predicted to contain an E1 E2 ATPase, a haloacid dehalogenase-like hydrolase (HAD) domain, and multiple transmembrane domains. Associations between this protein and cell cycle control protein 50A are important for translocation of phosphatidylserine across membranes. Mutations in this gene have been associated with a syndrome (CAMRQ4) characterized by cerebellar ataxia and cognitive disabilities. In addition, a translocation breakpoint within this gene was observed in an individual with neurological dysfunction. Alternative splicing results in multiple transcript variants encoding different isoforms. [provided by RefSeq, Jul 2017]",
+    "geneType": ""
+  },
+  "ELP1": {
+    "ncbiGeneId": "8518",
+    "officialSymbol": "ELP1",
+    "officialName": "elongator acetyltransferase complex subunit 1",
+    "aliases": [
+      "DYS",
+      "FD",
+      "IKAP",
+      "IKBKAP",
+      "IKI3",
+      "TOT1"
+    ],
+    "otherDesignations": [
+      "elongator complex protein 1",
+      "IKK complex-associated protein",
+      "ikappaB kinase complex-associated protein",
+      "inhibitor of kappa light polypeptide gene enhancer in B-cells, kinase complex-associated protein"
+    ],
+    "chromosome": "9",
+    "mapLocation": "9q31.3",
+    "ncbiSummary": "The protein encoded by this gene is a scaffold protein and a regulator for three different kinases involved in proinflammatory signaling. The encoded protein can bind NF-kappa-B-inducing kinase and I-kappa-B kinases through separate domains and assemble them into an active kinase complex. Mutations in this gene have been associated with familial dysautonomia. Alternative splicing results in multiple transcript variants encoding different isoforms. [provided by RefSeq, Jan 2016]",
+    "geneType": ""
+  },
+  "ETFDH": {
+    "ncbiGeneId": "2110",
+    "officialSymbol": "ETFDH",
+    "officialName": "electron transfer flavoprotein dehydrogenase",
+    "aliases": [
+      "ETFQO",
+      "MADD"
+    ],
+    "otherDesignations": [
+      "electron transfer flavoprotein-ubiquinone oxidoreductase, mitochondrial",
+      "ETF dehydrogenase",
+      "ETF-QO",
+      "ETF-ubiquinone oxidoreductase",
+      "electron-transferring-flavoprotein dehydrogenase",
+      "mutant electron transfer flavoprotein dehydrogenase"
+    ],
+    "chromosome": "4",
+    "mapLocation": "4q32.1",
+    "ncbiSummary": "This gene encodes a component of the electron-transfer system in mitochondria and is essential for electron transfer from a number of mitochondrial flavin-containing dehydrogenases to the main respiratory chain. Mutations in this gene are associated with glutaric acidemia. Alternatively spliced transcript variants that encode distinct isoforms have been observed. [provided by RefSeq, Aug 2013]",
+    "geneType": ""
+  },
+  "EGR2": {
+    "ncbiGeneId": "1959",
+    "officialSymbol": "EGR2",
+    "officialName": "early growth response 2",
+    "aliases": [
+      "AT591",
+      "CMT1D",
+      "CMT4E",
+      "KROX20"
+    ],
+    "otherDesignations": [
+      "E3 SUMO-protein ligase EGR2",
+      "E3 SUMO-protein transferase ERG2",
+      "KROX-20, Drosophila, homolog (early growth response-2)",
+      "early growth response protein 2",
+      "zinc finger protein Krox-20"
+    ],
+    "chromosome": "10",
+    "mapLocation": "10q21.3",
+    "ncbiSummary": "The protein encoded by this gene is a transcription factor with three tandem C2H2-type zinc fingers. Defects in this gene are associated with Charcot-Marie-Tooth disease type 1D (CMT1D), Charcot-Marie-Tooth disease type 4E (CMT4E), and with Dejerine-Sottas syndrome (DSS). Multiple transcript variants encoding two different isoforms have been found for this gene. [provided by RefSeq, Oct 2008]",
+    "geneType": ""
+  },
+  "FAM134B": {
+    "ncbiGeneId": "54463",
+    "officialSymbol": "RETREG1",
+    "officialName": "reticulophagy regulator 1",
+    "aliases": [
+      "FAM134B",
+      "JK-1",
+      "JK1"
+    ],
+    "otherDesignations": [
+      "reticulophagy regulator 1",
+      "family with sequence similarity 134 member B",
+      "protein FAM134B",
+      "reticulophagy receptor 1",
+      "reticulophagy receptor FAM134B"
+    ],
+    "chromosome": "5",
+    "mapLocation": "5p15.1",
+    "ncbiSummary": "The protein encoded by this gene is a cis-Golgi transmembrane protein that may be necessary for the long-term survival of nociceptive and autonomic ganglion neurons. Mutations in this gene are a cause of hereditary sensory and autonomic neuropathy type IIB (HSAN IIB), and this gene may also play a role in susceptibility to vascular dementia. Alternatively spliced transcript variants encoding multiple isoforms have been observed for this gene. [provided by RefSeq, Nov 2011]",
+    "geneType": ""
+  },
+  "GJC2": {
+    "ncbiGeneId": "57165",
+    "officialSymbol": "GJC2",
+    "officialName": "gap junction protein gamma 2",
+    "aliases": [
+      "CX46.6",
+      "Cx47",
+      "GJA12",
+      "HLD2",
+      "LMPH1C",
+      "LMPHM3",
+      "PMLDAR",
+      "SPG44"
+    ],
+    "otherDesignations": [
+      "gap junction gamma-2 protein",
+      "connexin-46.6",
+      "connexin-47",
+      "gap junction alpha-12 protein",
+      "gap junction protein, gamma 2, 47kDa"
+    ],
+    "chromosome": "1",
+    "mapLocation": "1q42.13",
+    "ncbiSummary": "This gene encodes a gap junction protein. Gap junction proteins are members of a large family of homologous connexins and comprise 4 transmembrane, 2 extracellular, and 3 cytoplasmic domains. This gene plays a key role in central myelination and is involved in peripheral myelination in humans. Defects in this gene are the cause of autosomal recessive Pelizaeus-Merzbacher-like disease-1. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "GOSR2": {
+    "ncbiGeneId": "9570",
+    "officialSymbol": "GOSR2",
+    "officialName": "golgi SNAP receptor complex member 2",
+    "aliases": [
+      "Bos1",
+      "EPM6",
+      "GS27",
+      "MYOS"
+    ],
+    "otherDesignations": [
+      "Golgi SNAP receptor complex member 2",
+      "27 kDa Golgi SNARE protein",
+      "membrin"
+    ],
+    "chromosome": "17",
+    "mapLocation": "17q21.32",
+    "ncbiSummary": "This gene encodes a trafficking membrane protein which transports proteins among the medial- and trans-Golgi compartments. Due to its chromosomal location and trafficking function, this gene may be involved in familial essential hypertension. [provided by RefSeq, Mar 2016]",
+    "geneType": ""
+  },
+  "LARGE1": {
+    "ncbiGeneId": "9215",
+    "officialSymbol": "LARGE1",
+    "officialName": "LARGE xylosyl- and glucuronyltransferase 1",
+    "aliases": [
+      "LARGE",
+      "MDC1D",
+      "MDDGA6",
+      "MDDGB6"
+    ],
+    "otherDesignations": [
+      "xylosyl- and glucuronyltransferase LARGE1",
+      "acetylglucosaminyltransferase-like 1A",
+      "acetylglucosaminyltransferase-like protein",
+      "glycosyltransferase-like protein LARGE1"
+    ],
+    "chromosome": "22",
+    "mapLocation": "22q12.3",
+    "ncbiSummary": "This gene encodes a member of the N-acetylglucosaminyltransferase gene family. It encodes a glycosyltransferase which participates in glycosylation of alpha-dystroglycan, and may carry out the synthesis of glycoprotein and glycosphingolipid sugar chains. It may also be involved in the addition of a repeated disaccharide unit. The protein encoded by this gene is the glycotransferase that adds the final xylose and glucuronic acid to alpha-dystroglycan and thereby allows alpha-dystroglycan to bind ligands including laminin 211 and neurexin. Mutations in this gene cause several forms of congenital muscular dystrophy characterized by cognitive disability and abnormal glycosylation of alpha-dystroglycan. Alternative splicing of this gene results in multiple transcript variants that encode the same protein. [provided by RefSeq, May 2018]",
+    "geneType": ""
+  },
+  "NPC1": {
+    "ncbiGeneId": "4864",
+    "officialSymbol": "NPC1",
+    "officialName": "NPC intracellular cholesterol transporter 1",
+    "aliases": [
+      "NPC",
+      "POGZ",
+      "SLC65A1"
+    ],
+    "otherDesignations": [
+      "NPC intracellular cholesterol transporter 1",
+      "Niemann-Pick C1 protein"
+    ],
+    "chromosome": "18",
+    "mapLocation": "18q11.2",
+    "ncbiSummary": "This gene encodes a large protein that resides in the limiting membrane of endosomes and lysosomes and mediates intracellular cholesterol trafficking via binding of cholesterol to its N-terminal domain. It is predicted to have a cytoplasmic C-terminus, 13 transmembrane domains, and 3 large loops in the lumen of the endosome - the last loop being at the N-terminus. This protein transports low-density lipoproteins to late endosomal/lysosomal compartments where they are hydrolized and released as free cholesterol. Defects in this gene cause Niemann-Pick type C disease, a rare autosomal recessive neurodegenerative disorder characterized by over accumulation of cholesterol and glycosphingolipids in late endosomal/lysosomal compartments.[provided by RefSeq, Aug 2009]",
+    "geneType": ""
+  },
+  "ORAI1": {
+    "ncbiGeneId": "84876",
+    "officialSymbol": "ORAI1",
+    "officialName": "ORAI calcium release-activated calcium modulator 1",
+    "aliases": [
+      "CRACM1",
+      "IMD9",
+      "ORAT1",
+      "TAM2",
+      "TMEM142A"
+    ],
+    "otherDesignations": [
+      "calcium release-activated calcium channel protein 1",
+      "calcium release-activated calcium modulator 1",
+      "protein orai-1",
+      "transmembrane protein 142A"
+    ],
+    "chromosome": "12",
+    "mapLocation": "12q24.31",
+    "ncbiSummary": "The protein encoded by this gene is a membrane calcium channel subunit that is activated by the calcium sensor STIM1 when calcium stores are depleted. This type of channel is the primary way for calcium influx into T-cells. Defects in this gene are a cause of immune dysfunction with T-cell inactivation due to calcium entry defect type 1 (IDTICED1). [provided by RefSeq, Sep 2011]",
+    "geneType": ""
+  },
+  "PANK2": {
+    "ncbiGeneId": "80025",
+    "officialSymbol": "PANK2",
+    "officialName": "pantothenate kinase 2",
+    "aliases": [
+      "C20orf48",
+      "HARP",
+      "HSS",
+      "NBIA1",
+      "PKAN"
+    ],
+    "otherDesignations": [
+      "pantothenate kinase 2, mitochondrial",
+      "Hallervorden-Spatz syndrome",
+      "pantothenate kinase-associated neurodegeneration",
+      "pantothenic acid kinase 2"
+    ],
+    "chromosome": "20",
+    "mapLocation": "20p13",
+    "ncbiSummary": "This gene encodes a protein belonging to the pantothenate kinase family and is the only member of that family to be expressed in mitochondria. Pantothenate kinase is a key regulatory enzyme in the biosynthesis of coenzyme A (CoA) in bacteria and mammalian cells. It catalyzes the first committed step in the universal biosynthetic pathway leading to CoA and is itself subject to regulation through feedback inhibition by acyl CoA species. Mutations in this gene are associated with HARP syndrome and pantothenate kinase-associated neurodegeneration (PKAN), formerly Hallervorden-Spatz syndrome. Alternative splicing, involving the use of alternate first exons, results in multiple transcripts encoding different isoforms. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "POLG2": {
+    "ncbiGeneId": "11232",
+    "officialSymbol": "POLG2",
+    "officialName": "DNA polymerase gamma 2, accessory subunit",
+    "aliases": [
+      "HP55",
+      "MTDPS16",
+      "MTDPS16A",
+      "MTDPS16B",
+      "MTPOLB",
+      "PEOA4",
+      "POLG-BETA",
+      "POLGB"
+    ],
+    "otherDesignations": [
+      "DNA polymerase subunit gamma-2",
+      "DNA polymerase gamma accessory 55 kDa subunit",
+      "DNA polymerase subunit gamma-2, mitochondrial",
+      "mitochondrial DNA polymerase subunit gamma-2",
+      "mitochondrial DNA polymerase, accessory subunit",
+      "polymerase (DNA directed), gamma 2, accessory subunit",
+      "polymerase (DNA) gamma 2, accessory subunit"
+    ],
+    "chromosome": "17",
+    "mapLocation": "17q23.3",
+    "ncbiSummary": "This gene encodes the processivity subunit of the mitochondrial DNA polymerase gamma. The encoded protein forms a heterotrimer containing one catalytic subunit and two processivity subunits. This protein enhances DNA binding and promotes processive DNA synthesis. Mutations in this gene result in autosomal dominant progressive external ophthalmoplegia with mitochondrial DNA deletions.[provided by RefSeq, Sep 2009]",
+    "geneType": ""
+  },
+  "RYR1": {
+    "ncbiGeneId": "6261",
+    "officialSymbol": "RYR1",
+    "officialName": "ryanodine receptor 1",
+    "aliases": [
+      "CCO",
+      "CMYO1A",
+      "CMYO1B",
+      "CMYP1A",
+      "CMYP1B",
+      "KDS",
+      "MHS",
+      "MHS1",
+      "PPP1R137",
+      "RYDR",
+      "RYR",
+      "RYR-1",
+      "SKRR"
+    ],
+    "otherDesignations": [
+      "ryanodine receptor 1",
+      "central core disease of muscle",
+      "protein phosphatase 1, regulatory subunit 137",
+      "ryanodine receptor 1 (skeletal)",
+      "sarcoplasmic reticulum calcium release channel",
+      "skeletal muscle calcium release channel",
+      "skeletal muscle ryanodine receptor",
+      "type 1-like ryanodine receptor"
+    ],
+    "chromosome": "19",
+    "mapLocation": "19q13.2",
+    "ncbiSummary": "This gene encodes a ryanodine receptor found in skeletal muscle. The encoded protein functions as a calcium release channel in the sarcoplasmic reticulum but also serves to connect the sarcoplasmic reticulum and transverse tubule. Mutations in this gene are associated with malignant hyperthermia susceptibility, central core disease, and minicore myopathy with external ophthalmoplegia. Alternatively spliced transcripts encoding different isoforms have been described. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "RNF216": {
+    "ncbiGeneId": "54476",
+    "officialSymbol": "RNF216",
+    "officialName": "ring finger protein 216",
+    "aliases": [
+      "CAHH",
+      "TRIAD3",
+      "U7I1",
+      "UBCE7IP1",
+      "ZIN"
+    ],
+    "otherDesignations": [
+      "E3 ubiquitin-protein ligase RNF216",
+      "RING-type E3 ubiquitin transferase RNF216",
+      "triad domain-containing protein 3",
+      "ubiquitin-conjugating enzyme 7-interacting protein 1",
+      "zinc finger protein inhibiting NF-kappa-B"
+    ],
+    "chromosome": "7",
+    "mapLocation": "7p22.1",
+    "ncbiSummary": "This gene encodes a cytoplasmic protein which specifically colocalizes and interacts with the serine/threonine protein kinase, receptor-interacting protein (RIP). Zinc finger domains of the encoded protein are required for its interaction with RIP and for inhibition of TNF- and IL1-induced NF-kappa B activation pathways. The encoded protein may also function as an E3 ubiquitin-protein ligase which accepts ubiquitin from E2 ubiquitin-conjugating enzymes and transfers it to substrates. Several alternatively spliced transcript variants have been described for this locus but the full-length natures of only some are known. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "DMD": {
+    "ncbiGeneId": "1756",
+    "officialSymbol": "DMD",
+    "officialName": "dystrophin",
+    "aliases": [
+      "BMD",
+      "CMD3B",
+      "DXS142",
+      "DXS164",
+      "DXS206",
+      "DXS230",
+      "DXS239",
+      "DXS268",
+      "DXS269",
+      "DXS270",
+      "DXS272",
+      "MRX85"
+    ],
+    "otherDesignations": [
+      "dystrophin",
+      "mutant dystrophin"
+    ],
+    "chromosome": "X",
+    "mapLocation": "Xp21.2-p21.1",
+    "ncbiSummary": "This gene spans a genomic range of greater than 2 Mb and encodes a large protein containing an N-terminal actin-binding domain and multiple spectrin repeats. The encoded protein forms a component of the dystrophin-glycoprotein complex (DGC), which bridges the inner cytoskeleton and the extracellular matrix. Deletions, duplications, and point mutations at this gene locus may cause Duchenne muscular dystrophy (DMD), Becker muscular dystrophy (BMD), or cardiomyopathy. Alternative promoter usage and alternative splicing result in numerous distinct transcript variants and protein isoforms for this gene. [provided by RefSeq, Dec 2016]",
+    "geneType": ""
+  },
+  "VPS13A": {
+    "ncbiGeneId": "23230",
+    "officialSymbol": "VPS13A",
+    "officialName": "vacuolar protein sorting 13 homolog A",
+    "aliases": [
+      "BLTP5A",
+      "CHAC",
+      "CHOREIN"
+    ],
+    "otherDesignations": [
+      "intermembrane lipid transfer protein VPS13A",
+      "bridge-like lipid transfer protein family member 5A",
+      "chorea-acanthocytosis protein",
+      "vacuolar protein sorting 13A",
+      "vacuolar protein sorting-associated protein 13A"
+    ],
+    "chromosome": "9",
+    "mapLocation": "9q21.2",
+    "ncbiSummary": "The protein encoded by this gene may control steps in the cycling of proteins through the trans-Golgi network to endosomes, lysosomes and the plasma membrane. Mutations in this gene cause the autosomal recessive disorder, chorea-acanthocytosis. Alternative splicing of this gene results in multiple transcript variants. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
+  },
+  "VMA21": {
+    "ncbiGeneId": "203547",
+    "officialSymbol": "VMA21",
+    "officialName": "vacuolar ATPase assembly factor VMA21",
+    "aliases": [
+      "MEAX",
+      "XMEA"
+    ],
+    "otherDesignations": [
+      "vacuolar ATPase assembly integral membrane protein VMA21",
+      "VMA21 vacuolar H+-ATPase homolog",
+      "VMA21, vacuolar ATPase assembly factor",
+      "myopathy with excessive autophagy protein"
+    ],
+    "chromosome": "X",
+    "mapLocation": "Xq28",
+    "ncbiSummary": "This gene encodes a chaperone for assembly of lysosomal vacuolar ATPase.[provided by RefSeq, Jul 2012]",
+    "geneType": ""
+  },
+  "VLDLR": {
+    "ncbiGeneId": "7436",
+    "officialSymbol": "VLDLR",
+    "officialName": "very low density lipoprotein receptor",
+    "aliases": [
+      "CAMRQ1",
+      "CARMQ1",
+      "CHRMQ1",
+      "VLDL-R",
+      "VLDLRCH"
+    ],
+    "otherDesignations": [
+      "very low-density lipoprotein receptor",
+      "VLDL receptor"
+    ],
+    "chromosome": "9",
+    "mapLocation": "9p24.2",
+    "ncbiSummary": "The low density lipoprotein receptor (LDLR) gene family consists of cell surface proteins involved in receptor-mediated endocytosis of specific ligands. This gene encodes a lipoprotein receptor that is a member of the LDLR family and plays important roles in VLDL-triglyceride metabolism and the reelin signaling pathway. Mutations in this gene cause VLDLR-associated cerebellar hypoplasia. Alternative splicing generates multiple transcript variants encoding distinct isoforms for this gene. [provided by RefSeq, Aug 2009]",
+    "geneType": ""
+  },
+  "COLQ": {
+    "ncbiGeneId": "8292",
+    "officialSymbol": "COLQ",
+    "officialName": "collagen like tail subunit of asymmetric acetylcholinesterase",
+    "aliases": [
+      "CMS5",
+      "EAD"
+    ],
+    "otherDesignations": [
+      "acetylcholinesterase collagenic tail peptide",
+      "AChE Q subunit",
+      "acetylcholinesterase-associated collagen",
+      "collagen-like tail subunit (single strand of homotrimer) of asymmetric acetylcholinesterase",
+      "collagenic tail of endplate acetylcholinesterase",
+      "single strand of homotrimeric collagen-like tail subunit of asymmetric acetylcholinesterase"
+    ],
+    "chromosome": "3",
+    "mapLocation": "3p25.1",
+    "ncbiSummary": "This gene encodes the subunit of a collagen-like molecule associated with acetylcholinesterase in skeletal muscle. Each molecule is composed of three identical subunits. Each subunit contains a proline-rich attachment domain (PRAD) that binds an acetylcholinesterase tetramer to anchor the catalytic subunit of the enzyme to the basal lamina. Mutations in this gene are associated with endplate acetylcholinesterase deficiency. Multiple transcript variants encoding different isoforms have been found for this gene. [provided by RefSeq, Jul 2008]",
+    "geneType": ""
   }
 }
