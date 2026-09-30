@@ -22,13 +22,10 @@ export default function Landing() {
       }}>
         <SectionLabel>About the name</SectionLabel>
         <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.65, margin: 0 }}>
-          <em>Pons asinorum</em>, the bridge of asses, was the medieval schoolroom&apos;s name for
-          Euclid&apos;s fifth proposition: the first proof in the <em>Elements</em> that sent
-          students back across the river. Its diagram even looks like a little trestle bridge, and
-          the slow of mind were said to stand at its foot like mules, refusing to cross.
-          Neurology is a country built of such bridges, the pons itself not least among them, and I
-          have planted my hooves at the foot of most of them. What follows are notes left on the far
-          bank by one stubborn ass who eventually got over, for whoever is standing where he stood.
+          <em>Pons asinorum</em>, the bridge of asses: Euclid&apos;s fifth proposition, where
+          medieval students balked like mules at the water&apos;s edge. Every discipline has one.
+          Neurology, with characteristic literalism, put its bridge in the brainstem. No shame in
+          standing at the foot of it. Only in refusing to cross.
         </p>
       </div>
 
