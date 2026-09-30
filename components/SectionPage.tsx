@@ -3,7 +3,7 @@ import { getSection, SECTIONS } from '@/src/sections';
 
 // Page shell for a learning section: header, optional live content, planned topics.
 // Keeps the site's visual language so the landing links never 404.
-export default function SectionPage({ slug, children }: { slug: string; children?: React.ReactNode }) {
+export default function SectionPage({ slug, children, hidePlanned }: { slug: string; children?: React.ReactNode; hidePlanned?: boolean }) {
   const section = getSection(slug);
   const others = SECTIONS.filter(s => s.slug !== slug);
 
@@ -28,7 +28,7 @@ export default function SectionPage({ slug, children }: { slug: string; children
             color: '#94a3b8', background: '#f8fafc', border: '1px solid #e2e8f0',
             padding: '2px 7px', borderRadius: '99px',
           }}>
-            {section.status === 'soon' ? 'In development' : 'Growing'}
+            {section.status === 'soon' ? 'In development' : section.status === 'live' ? 'Live' : 'Growing'}
           </span>
         </div>
         <h1 style={{
@@ -45,8 +45,8 @@ export default function SectionPage({ slug, children }: { slug: string; children
 
       {children && <div style={{ marginBottom: '36px' }}>{children}</div>}
 
-      <SectionLabel>{children ? 'Coming next' : 'Planned topics'}</SectionLabel>
-      <div style={{ display: 'grid', gap: '8px', marginBottom: '32px' }}>
+      {!hidePlanned && <SectionLabel>{children ? 'Coming next' : 'Planned topics'}</SectionLabel>}
+      {!hidePlanned && <div style={{ display: 'grid', gap: '8px', marginBottom: '32px' }}>
         {section.planned.map((topic, i) => (
           <div key={topic} style={{
             display: 'flex', alignItems: 'center', gap: '12px',
@@ -62,7 +62,7 @@ export default function SectionPage({ slug, children }: { slug: string; children
             <span style={{ fontSize: '13px', color: '#1e293b', fontWeight: 500 }}>{topic}</span>
           </div>
         ))}
-      </div>
+      </div>}
 
       <SectionLabel>Other sections</SectionLabel>
       <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>

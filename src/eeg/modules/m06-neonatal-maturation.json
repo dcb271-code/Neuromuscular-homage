@@ -1,0 +1,221 @@
+{
+  "id": "m06-neonatal-maturation",
+  "number": 6,
+  "title": "Neonatal EEG I: maturation by postmenstrual age",
+  "short": "Neonatal maturation",
+  "description": "Postmenstrual age as the reading age, and what continuity, synchrony, graphoelements and sleep states should look like at each week.",
+  "why": "A neonatal record is read against postmenstrual age, not days of life, because a pattern normal at 30 weeks is abnormal at term. None of the three core websites covers this in depth, so this module leans on dedicated neonatal material.",
+  "track": "neonatal",
+  "tags": [
+    "Neonatal & ICU"
+  ],
+  "difficulty": "intermediate",
+  "duration": "50 min",
+  "color": "#0d9488",
+  "objectives": [
+    "Calculate postmenstrual age and state what continuity, synchrony and graphoelements to expect at it.",
+    "Identify wake, active sleep and quiet sleep in a term neonate.",
+    "Recognize dysmature features: a record that looks younger than its postmenstrual age."
+  ],
+  "sections": [
+    {
+      "title": "Postmenstrual age is the reading age",
+      "content": "The neonatal brain changes faster than at any later time, and the EEG changes with it, week by week. A pattern that is the expected background at 30 weeks is a serious abnormality at term. So the first act of reading a neonatal record is not to look at the tracing; it is to work out how old the brain is, and the clock that matters is not the calendar.\n\n**Postmenstrual age = gestational age at birth + chronological age.** A baby born at 28 weeks who is now 6 weeks old is read as a 34-week record. A baby born at term and studied on day 3 is read as a 40-week record. The number goes at the top of the report, before the indication, and every later judgment is made against it, as the reporting order in [[m02-read-and-report|Module 2]] requires.\n\n**Why the maturation matters clinically**\n\nThe reasons this arithmetic comes first are practical. The preterm brain is discontinuous, asynchronous and full of transients that would be alarming in an older child, and a reader who does not know the postmenstrual age will either overcall a normal preterm record or, worse, miss an abnormal term one because it \"looks preterm\". The features that mature on a schedule, continuity, interhemispheric synchrony, the graphoelements, the sleep states and reactivity, are taught in the following sections, each tied to the weeks at which it appears and disappears. The tables give consensus ranges, and the sources differ by 1 to 4 weeks for most features ([André 2010](https://pubmed.ncbi.nlm.nih.gov/20510792/); [St. Louis 2016](https://www.ncbi.nlm.nih.gov/books/NBK390356/); the Current Practice chapter). Treat them as the shape of normal development, not as cutoffs.\n\n**A habit to build now**\n\nBefore looking at a neonatal tracing, write down the postmenstrual age and say aloud what you expect: continuous or discontinuous, synchronous or not, which graphoelements should be present and which should have gone. Then look. The sign-off for this module reverses the exercise, asking the resident to estimate postmenstrual age from the tracing to within 2 weeks, which is only possible if the expectations were learned in the first place. The same technical points from [[m01-signals|Module 1]] apply: check the page duration, and confirm the state from the ECG and respiration channels, because in a neonate the state changes what the background should look like.",
+      "keyPoints": [
+        "Postmenstrual age = gestational age at birth + chronological age; a baby born at 28 weeks and now 6 weeks old is read as 34 weeks.",
+        "Every neonatal feature is judged against postmenstrual age, not days of life; the same pattern can be normal at 30 weeks and abnormal at term.",
+        "Ages in the maturation tables are consensus ranges, and sources differ by 1 to 4 weeks for most features (André 2010; St. Louis 2016).",
+        "State the expected continuity, synchrony and graphoelements before looking at the tracing."
+      ],
+      "question": {
+        "question": "A baby born at 30 weeks' gestation is now 8 weeks old and has an EEG for apnoeic events. What postmenstrual age do you read the record against, and why does it matter?",
+        "options": [
+          "38 weeks, because postmenstrual age is gestational age at birth plus chronological age, and the expected continuity and graphoelements are tied to it",
+          "8 weeks, because chronological age determines the expected background",
+          "30 weeks, because the brain's maturation was set at birth",
+          "40 weeks, because any baby older than one month is read as term"
+        ],
+        "answer": 0,
+        "explanation": "Postmenstrual age is gestational age at birth plus chronological age: 30 plus 8 gives 38 weeks. The record is read against what a 38-week brain should show, which is near-term continuity in wake and active sleep, tracé alternant in quiet sleep, and the graphoelements of that age. Using chronological age alone would set expectations for an 8-week-old infant, which is a different record entirely. Freezing the age at birth ignores that the brain matured over the 8 weeks outside the womb. Rounding every older baby to term would miss the difference between 38 weeks and 40 weeks, which is small but real, and would badly misread a baby born at 26 weeks studied at 6 weeks of age."
+      }
+    },
+    {
+      "title": "Continuity and the interburst interval",
+      "content": "The most striking feature of a very preterm record is that it is not continuous. Activity comes in bursts separated by periods of low voltage, a pattern called **tracé discontinu**. This is the normal background of extreme prematurity, and it recedes on a schedule. Wake and active sleep become continuous from **about 30 to 34 weeks**, while discontinuity persists in quiet sleep to **about 34 weeks**, after which quiet sleep takes on the tracé alternant pattern described later in this module.\n\n**How long a gap is allowed**\n\nThe question a reader has to answer is whether the interburst intervals are too long for the age. The longest normal interburst interval shortens with maturation: about **60 s at 24 weeks**, **40 s at 26 weeks**, **20 s at 28 weeks**, **10 to 20 s at 30 to 34 weeks**, about **10 s at 34 to 36 weeks**, and about **6 s at term** (Learning EEG; consistent with Medscape). Those numbers are not the only ones in print. The French consensus reports wider maxima, for example **12 to 76 s at 24 to 26 weeks** ([André 2010](https://pubmed.ncbi.nlm.nih.gov/20510792/)). Some texts give median rather than maximum intervals, which explains much of the disagreement between sources. When you quote a limit, know which kind of limit it is.\n\n**What the numbers are for**\n\nThe practical use is to separate normal discontinuity from an excessively discontinuous or suppressed background, the abnormal categories defined in [[m07-neonatal-abnormal|Module 7]]. A 26-week record with 35-second interburst intervals is within the range of normal; a term record with the same intervals is grossly abnormal. Measure the longest intervals, not the typical one, and measure them in quiet sleep, where discontinuity is at its most pronounced at any age. Then compare with the postmenstrual age. A record whose intervals are appropriate for a younger age than the baby's is not \"a bit discontinuous\"; it is immature or abnormal for age, and the report should say which.\n\nTwo technical cautions from [[m01-signals|Module 1]] apply with force here. The neonatal page is often long, which compresses the tracing and makes an interburst interval look shorter than it is: measure against the time marks. And the definition of an interburst interval rests on amplitude, so the sensitivity setting must be known before a period of \"low voltage\" is called.",
+      "keyPoints": [
+        "Tracé discontinu is the normal background of extreme prematurity; wake and active sleep become continuous from about 30 to 34 weeks, and discontinuity persists in quiet sleep to about 34 weeks.",
+        "The longest normal interburst interval shortens with age: about 60 s at 24 weeks, 40 s at 26, 20 s at 28, 10 to 20 s at 30 to 34, about 10 s at 34 to 36, and about 6 s at term.",
+        "Sources disagree: the French consensus gives wider maxima, for example 12 to 76 s at 24 to 26 weeks (André 2010), and some texts report medians rather than maxima.",
+        "Measure the longest intervals in quiet sleep against the time marks, and compare them with postmenstrual age."
+      ],
+      "question": {
+        "question": "A 26-week postmenstrual age infant's record shows bursts separated by low-voltage periods of up to 35 s in quiet sleep. A colleague calls the record excessively discontinuous. What is the right response?",
+        "options": [
+          "Agree: any interburst interval over 20 s is abnormal at any age",
+          "Agree, but only if the sensitivity was set high",
+          "Neither: interburst intervals cannot be assessed before 30 weeks",
+          "Disagree: at 26 weeks the longest normal interburst interval is about 40 s by the commonly quoted values, and wider maxima are reported by the French consensus, so 35 s is within normal"
+        ],
+        "answer": 3,
+        "explanation": "At 26 weeks the longest normal interburst interval is about 40 s in the commonly quoted values, and the French consensus reports even wider maxima at 24 to 26 weeks (André 2010), so 35 s falls within the range of normal for the age. Calling it excessively discontinuous applies a term-age standard to an extremely preterm brain. A blanket limit of 20 s is the value for about 28 weeks, not 26, and no single limit applies at every age. The sensitivity setting matters for deciding what counts as low voltage, but it does not turn a normal 35-second interval into an abnormal one. Interburst intervals are exactly what is assessed in the very preterm record; discontinuity is its defining feature."
+      }
+    },
+    {
+      "title": "Synchrony and the graphoelements of prematurity",
+      "content": "Alongside continuity, two other things mature on a schedule: how well the two hemispheres burst together, and which transient waveforms, the **graphoelements**, are present.\n\n**Interhemispheric synchrony**\n\nSynchrony follows a curve rather than a line. Before **about 27 to 29 weeks** the record is **hypersynchronous**: bursts occur together across the hemispheres. Synchrony then falls, to only **about 70% at 29 to 30 weeks**, before rising again to **nearly 100% by term**. The ACNS neonatal terminology defines bursts as synchronous when they occur **within 1.5 s** of each other ([Tsuchida 2013](https://pubmed.ncbi.nlm.nih.gov/23545767/)). The clinical use is that asynchrony is expected around 30 weeks and abnormal at term, so the same finding reads differently by age.\n\n**The graphoelements**\n\n| Feature | When it is normal | Notes |\n|---|---|---|\n| Temporal theta (sawtooth) | From about 24 weeks; gone by about 32 to 34 weeks | Rhythmic temporal theta |\n| Delta brushes | Appear at about 24 to 28 weeks, peak at about 31 to 34 weeks, gone by 40 to 44 weeks | Fast activity riding on delta waves |\n| Frontal sharp transients (encoches frontales) | From about 34 to 35 weeks; normal to about 44 to 46 weeks | Blunt, often bilateral frontal sharp waves |\n\nEach of these is a marker of age. Temporal theta is a feature of the very preterm record and should have gone by the early thirties. Delta brushes, fast activity superimposed on slow waves, are the signature of the middle preterm period, most abundant at 31 to 34 weeks, and they should be largely gone by 40 to 44 weeks. Frontal sharp transients arrive later, around 34 to 35 weeks, and are still normal through 44 to 46 weeks; they are blunt, often bilateral, and a resident who has just learned the epileptiform criteria in [[m05-variants|Module 5]] must not score them as spikes. Anterior slow dysrhythmia appears near term, mostly during the shift from active to quiet sleep; no source gave firm age limits for it.\n\n**Reading the graphoelements**\n\nThe presence of a graphoelement past its time is the definition of a dysmature record, treated in the last section of this module. The absence of one at its peak is harder to interpret and should be read with the rest of the background. Ages in the table are consensus ranges, and sources differ by 1 to 4 weeks ([André 2010](https://pubmed.ncbi.nlm.nih.gov/20510792/); [St. Louis 2016](https://www.ncbi.nlm.nih.gov/books/NBK390356/); the Current Practice chapter), so a record one or two weeks off the table is not abnormal; a record six weeks off it is.",
+      "keyPoints": [
+        "Synchrony is hypersynchronous before about 27 to 29 weeks, falls to about 70% at 29 to 30 weeks, and is nearly 100% again by term; bursts within 1.5 s of each other count as synchronous (Tsuchida 2013).",
+        "Temporal theta runs from about 24 weeks to about 32 to 34 weeks; delta brushes appear at 24 to 28 weeks, peak at 31 to 34, and are gone by 40 to 44 weeks.",
+        "Frontal sharp transients (encoches frontales) appear at about 34 to 35 weeks and remain normal to about 44 to 46 weeks; they are blunt and bilateral, not spikes.",
+        "Sources differ by 1 to 4 weeks for most features; a record a week or two off the table is not abnormal."
+      ],
+      "question": {
+        "question": "A baby at 42 weeks postmenstrual age has abundant delta brushes in every state. What does that suggest, and how should it be reported?",
+        "options": [
+          "A normal term record; delta brushes are a feature of quiet sleep at term",
+          "A dysmature record, since delta brushes should have largely gone by 40 to 44 weeks; report it as immature for postmenstrual age",
+          "An epileptiform abnormality, since fast activity riding on slow waves meets the IFCN criteria",
+          "Electrode artifact, because fast activity in a neonate is muscle"
+        ],
+        "answer": 1,
+        "explanation": "Delta brushes peak at about 31 to 34 weeks and should be largely gone by 40 to 44 weeks. Abundant brushes in every state at 42 weeks are a graphoelement past its time, which is the definition of a dysmature record: a tracing that looks younger than the baby's postmenstrual age. The report should say that the record is immature for postmenstrual age, rather than either normalizing it or over-reading it. Delta brushes are not a term-age quiet-sleep feature; tracé alternant is. They are not epileptiform: fast activity riding on a slow wave is a normal preterm graphoelement, and applying the epileptiform criteria to it misreads the age-specific physiology. They are not muscle either; the fast component is superimposed on a delta wave in a stereotyped way that muscle artifact does not produce."
+      }
+    },
+    {
+      "title": "Sleep states at term",
+      "content": "By the last weeks before term, the neonatal record organizes into states, and each state has its own background. Reading a term record without identifying the state is like reading an older child's record without knowing whether the eyes were open. The ECG and respiration channels that [[m01-signals|Module 1]] asked for are how the state is identified: active sleep has irregular respiration and eye movements, quiet sleep has regular respiration and little movement, and the wake record is accompanied by the movement and muscle of an awake baby.\n\n**Three states, three backgrounds**\n\n- **Wake** is continuous, mixed-frequency and reactive.\n- **Active sleep** is continuous and looks much like wake on the EEG; the polygraphic channels separate them.\n- **Quiet sleep** at term shows **tracé alternant**: bursts of higher-voltage activity alternating with lower-voltage interburst periods. Tracé alternant appears at about **34 to 37 weeks** and is gone by about **44 to 46 weeks**, after which quiet sleep becomes continuous slow-wave sleep.\n\nTracé alternant is the point at which residents most often confuse normal with abnormal. It is discontinuous, and discontinuity at term sounds alarming. The difference from an abnormal discontinuous background lies in the interburst periods, which in tracé alternant are attenuated but not suppressed and still contain activity, and in the presence of the alternation only in quiet sleep, with a continuous record in wake and active sleep. [[m07-neonatal-abnormal|Module 7]] gives the ACNS definitions that draw the line.\n\n**Reactivity and the sleep cycle**\n\nTwo more features mark the maturing record. **Reactivity**, a change in the background with stimulation, appears from about **30 to 32 weeks** and is reliable by **35 to 36 weeks**. Its absence at term is an abnormal finding, and one of the things that distinguishes a burst-suppression background from tracé alternant. The **sleep cycle** also lengthens with age: **30 to 50 minutes below 35 weeks** and **50 to 65 minutes above 35 weeks** ([Tsuchida 2013](https://pubmed.ncbi.nlm.nih.gov/23545767/)). The practical consequence is that a recording must be long enough to capture at least one full cycle, including quiet sleep, before the background can be called normal. A 20-minute term record that shows only active sleep has not answered the question.",
+      "keyPoints": [
+        "Wake and active sleep are continuous at term; quiet sleep shows tracé alternant, which appears at about 34 to 37 weeks and is gone by about 44 to 46 weeks.",
+        "Identify the state from the ECG and respiration channels, not from the EEG alone.",
+        "Reactivity appears from about 30 to 32 weeks and is reliable by 35 to 36 weeks; its absence at term is abnormal.",
+        "The sleep cycle is 30 to 50 minutes below 35 weeks and 50 to 65 minutes above 35 weeks (Tsuchida 2013), so a record must be long enough to include quiet sleep."
+      ],
+      "question": {
+        "question": "A term newborn's quiet sleep shows bursts of higher-voltage activity alternating with lower-voltage periods of 3 to 5 s, while wake and active sleep are continuous. Normal or abnormal?",
+        "options": [
+          "Abnormal: any discontinuity at term is excessively discontinuous",
+          "Abnormal: this is burst suppression",
+          "Normal: tracé alternant is the expected quiet-sleep pattern at term",
+          "Cannot say without a longer record"
+        ],
+        "answer": 2,
+        "explanation": "Alternating bursts and lower-voltage periods confined to quiet sleep, with a continuous record in wake and active sleep, is tracé alternant, the normal quiet-sleep pattern at term (it appears at about 34 to 37 weeks and persists to about 44 to 46 weeks). Interburst periods of 3 to 5 s are within the expected range at term, where the longest normal interval is about 6 s. Calling all discontinuity at term abnormal ignores this state-specific physiology. Burst suppression is an invariant pattern with interburst voltage below 5 µV and no reactivity, present in every state, not a quiet-sleep alternation with continuous wake. The record already contains the states needed to answer the question, so a longer recording is not required for this call."
+      }
+    },
+    {
+      "title": "Dysmaturity, and the limits of the tables",
+      "content": "A **dysmature** record is one that looks younger than the baby's postmenstrual age: discontinuity that should have resolved, asynchrony that should have gone, graphoelements that should have disappeared, or a sleep organization that has not arrived. It is the single most useful concept in this module, because it turns a table of ages into a finding. The judgment is always relative: the same tracing is normal at one postmenstrual age and dysmature at another, and the only way to make it is to know the age first.\n\n**How much deviation counts**\n\nThe tables are consensus ranges, and the sources differ by **1 to 4 weeks** for most features ([André 2010](https://pubmed.ncbi.nlm.nih.gov/20510792/); [St. Louis 2016](https://www.ncbi.nlm.nih.gov/books/NBK390356/); the Current Practice chapter). A record that is a week or two younger than expected is within the uncertainty of the tables themselves, and it is more honest to describe the features and note that they are at the edge of the expected range than to call the record immature. A record that is several weeks younger, with more than one feature out of time, is dysmature, and the report should say so plainly: \"the background is immature for the stated postmenstrual age, with features expected at approximately N weeks.\" The sign-off for this module, estimating postmenstrual age from the tracing to within 2 weeks, is the skill that makes that sentence possible.\n\n**What a dysmature record means, and does not mean**\n\nDysmaturity is a description of the EEG, not a diagnosis. It says that maturation of the electrical background lags the stated age. The causes are for the clinician to consider, and they include mistakes in the stated dates as well as illness. The report should state the finding and its degree and leave the cause to the clinical correlation, exactly as [[m02-read-and-report|Module 2]] separates description from interpretation.\n\n**Using the free material**\n\nNone of the three core websites teaches neonatal maturation in depth, so this module leans on dedicated material. The Learning EEG neonatal chapter and its atlas pages show the graphoelements at each age; the Calgary Neonatal Brain Monitoring course walks through the same maturation with tracings; and the AES Neonatal EEG Basics module and the StatPearls chapter give a second pass through the vocabulary. Read one of them with the table from this module open, and check every age you meet against it.",
+      "keyPoints": [
+        "A dysmature record looks younger than its postmenstrual age: persistent discontinuity or asynchrony, graphoelements past their time, or sleep organization that has not arrived.",
+        "Sources differ by 1 to 4 weeks for most features, so a record a week or two off the tables is within their uncertainty; several weeks with more than one feature out of time is dysmature.",
+        "Report dysmaturity as a description with an estimated age (\"features expected at approximately N weeks\"), and leave the cause to the clinical correlation.",
+        "The core websites cover this thinly; use the Learning EEG neonatal chapter, the Calgary course and the AES neonatal module alongside the table."
+      ],
+      "question": {
+        "question": "A record labelled 40 weeks postmenstrual age shows discontinuity in every state, interhemispheric asynchrony, abundant delta brushes and no tracé alternant. Which report statement is best?",
+        "options": [
+          "Normal term EEG; the variability between sources means these features are within range",
+          "Burst suppression; recommend urgent neuroimaging",
+          "Mildly immature record; no further comment",
+          "The background is immature for the stated postmenstrual age, with features expected at approximately the low thirties of weeks; the clinical team should confirm the dates and consider causes of delayed maturation"
+        ],
+        "answer": 3,
+        "explanation": "Discontinuity in all states, asynchrony, abundant delta brushes and absent tracé alternant are each features of the low thirties of weeks, and together they put the record several weeks younger than the stated 40, well beyond the 1 to 4 weeks by which sources differ. That is a dysmature record, and the best report states the finding, estimates the age the features fit, and hands the cause, including a possible error in the dates, to the clinical correlation. Calling it normal stretches the uncertainty of the tables past what it covers. Burst suppression is a different and far graver pattern, invariant and unreactive with interburst voltage below 5 µV, and nothing here says the record is invariant or suppressed. 'Mildly immature' understates a multi-feature lag of many weeks and gives the clinician nothing to act on."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A baby born at 34 weeks is studied at 3 weeks of age. The record is continuous in wake and active sleep, shows tracé alternant in quiet sleep, has frequent frontal sharp transients, and is nearly synchronous. Which statement is correct?",
+      "options": [
+        "The frontal sharp transients are epileptiform and should be reported as discharges",
+        "Tracé alternant at 37 weeks indicates an excessively discontinuous background",
+        "At 37 weeks postmenstrual age these are all expected features and the record is normal for age",
+        "The record is dysmature because it should be fully continuous in all states"
+      ],
+      "answer": 2,
+      "explanation": "Postmenstrual age is 34 plus 3, or 37 weeks. At that age wake and active sleep are continuous, quiet sleep shows tracé alternant (present from about 34 to 37 weeks to about 44 to 46 weeks), frontal sharp transients are a normal graphoelement (from about 34 to 35 weeks to about 44 to 46 weeks), and synchrony is approaching the nearly 100% expected by term. Everything described is on time. Frontal sharp transients are blunt, bilateral, age-appropriate waves, not epileptiform discharges, and scoring them as spikes is a classic overread in the neonate. Tracé alternant is the normal quiet-sleep pattern at this age, not an abnormal discontinuity. Full continuity in every state is not expected until tracé alternant resolves after about 44 to 46 weeks."
+    },
+    {
+      "question": "A record from a 30-week postmenstrual age infant shows bursts that occur at different times in the two hemispheres in roughly a third of instances. How should this be read?",
+      "options": [
+        "Abnormal asynchrony; recommend imaging for a lesion of the corpus callosum",
+        "Normal: synchrony is only about 70% at 29 to 30 weeks before rising toward 100% by term",
+        "Abnormal hypersynchrony for the age",
+        "Artifact from unequal electrode impedance"
+      ],
+      "answer": 1,
+      "explanation": "Interhemispheric synchrony follows a curve: hypersynchrony before about 27 to 29 weeks, a fall to about 70% at 29 to 30 weeks, then a rise to nearly 100% by term. Bursts occurring out of step about a third of the time at 30 weeks is the expected 70% synchrony, using the ACNS definition of synchronous bursts as those within 1.5 s of each other (Tsuchida 2013). Reading it as abnormal asynchrony applies the term standard to a 30-week brain and would send a normal infant for imaging. Hypersynchrony is the opposite finding, and belongs to an earlier age. Unequal impedance changes the amplitude of a channel, not the timing of bursts across the hemispheres."
+    },
+    {
+      "question": "A 20-minute EEG on a term neonate shows only a continuous, reactive background with irregular respiration and eye movements throughout. The requesting team asks whether the background is normal. What should the report say?",
+      "options": [
+        "The record captured wake and active sleep only, with a normal continuous background in those states; quiet sleep was not recorded, so the study should be extended or repeated to include a full sleep cycle",
+        "The background is normal in all states",
+        "The background is abnormal because tracé alternant was not seen",
+        "The record is dysmature because quiet sleep did not appear"
+      ],
+      "answer": 0,
+      "explanation": "Irregular respiration and eye movements identify active sleep, and a continuous reactive background is normal in that state. What is missing is quiet sleep, whose tracé alternant is the term-age pattern most likely to be abnormal when something is wrong. The sleep cycle at term is 50 to 65 minutes (Tsuchida 2013), so a 20-minute record can easily miss quiet sleep entirely. The honest report describes the states that were captured, calls them normal, and states that quiet sleep was not recorded, with a recommendation to extend or repeat the study. Calling the background normal in all states claims more than was seen. Calling it abnormal for lacking tracé alternant, or dysmature, mistakes a short recording for a finding."
+    },
+    {
+      "question": "Which pair correctly matches a graphoelement with the age at which it should have disappeared?",
+      "options": [
+        "Temporal theta (sawtooth): gone by about 32 to 34 weeks",
+        "Delta brushes: gone by about 34 weeks",
+        "Frontal sharp transients: gone by about 37 weeks",
+        "Tracé alternant: gone by about 40 weeks"
+      ],
+      "answer": 0,
+      "explanation": "Temporal theta is a feature of the very preterm record, present from about 24 weeks and gone by about 32 to 34 weeks. Delta brushes peak at about 31 to 34 weeks and are not gone until about 40 to 44 weeks, so 34 weeks is their peak, not their end. Frontal sharp transients only begin at about 34 to 35 weeks and remain normal to about 44 to 46 weeks. Tracé alternant likewise persists to about 44 to 46 weeks. Confusing the peak of a feature with its disappearance is the commonest error with this table, and it matters because a graphoelement past its time is the definition of a dysmature record."
+    },
+    {
+      "question": "Two references you consult give different upper limits for the normal interburst interval at 28 weeks. What is the most likely explanation, and what should you do?",
+      "options": [
+        "One source is simply wrong; use the shorter limit to be safe",
+        "The interburst interval cannot be measured reliably, so ignore it",
+        "One is a maximum and the other a median, and the cohorts differ; know which kind of limit you are quoting, and treat the numbers as a guide rather than a cutoff",
+        "Use the longer limit, because overcalling discontinuity is the greater harm"
+      ],
+      "answer": 2,
+      "explanation": "The outline is explicit that sources disagree about the longest normal interburst interval: the commonly quoted values give about 20 s at 28 weeks, the French consensus reports wider maxima (André 2010), and some texts give medians rather than maxima, which explains much of the disagreement. The right response is to know which kind of limit a source reports and to treat all of them as guides to what is typical rather than as fixed cutoffs. Declaring one source wrong ignores that they measured different things in different cohorts. Discarding the measurement altogether throws away the main tool for separating normal discontinuity from an excessively discontinuous background. Choosing the longest limit as a rule would miss abnormal records; choosing the shortest would overcall normal ones. Neither replaces knowing what the number means."
+    }
+  ],
+  "resources": [
+    {
+      "label": "Learning EEG: Neonatal chapter",
+      "url": "https://www.learningeeg.com/neonatal.html"
+    },
+    {
+      "label": "Learning EEG: Atlas (neonatal pages)",
+      "url": "https://www.learningeeg.com/atlas.html"
+    },
+    {
+      "label": "AES EEG Essentials: Neonatal EEG Basics",
+      "url": "https://aesnet.org/education/education/eeg-essentials",
+      "note": "Free with a myAES account."
+    },
+    {
+      "label": "Neonatal Brain Monitoring course, Calgary Newborn Neuro-Intensive Care Program",
+      "url": "https://nncceducation.thinkific.com/courses/Neonatal-Brain-monitoring",
+      "note": "13 lessons, about 7.5 hours, free."
+    },
+    {
+      "label": "StatPearls: EEG Neonatal Visual Analysis",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK563258/",
+      "note": "Free."
+    },
+    {
+      "label": "St. Louis and Frey, EEG: An Introductory Text and Atlas",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK390356/",
+      "note": "Free on NCBI Bookshelf; developmental chapter. For reference also: André 2010 glossary; Mizrahi and Hrachovy, Atlas of Neonatal Electroencephalography."
+    }
+  ],
+  "signOff": "The resident reads five neonatal records of different postmenstrual ages and estimates the age from the tracing to within 2 weeks.",
+  "sources": [
+    "andre2010",
+    "tsuchida2013",
+    "stlouis2016",
+    "currentPractice"
+  ]
+}

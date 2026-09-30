@@ -1,0 +1,194 @@
+{
+  "id": "m04-normal-by-age",
+  "number": 4,
+  "title": "Normal EEG from infancy to adolescence",
+  "short": "Normal EEG by age",
+  "description": "When each normal feature appears and disappears, from the posterior dominant rhythm and sleep spindles to the drowsy patterns that get over-read.",
+  "why": "A record is normal or abnormal only for age, so the resident must know when each normal feature appears and disappears.",
+  "track": "foundation",
+  "tags": ["Normal & Variants"],
+  "difficulty": "beginner",
+  "duration": "50 min",
+  "color": "#2563eb",
+  "objectives": [
+    "Estimate the expected posterior dominant rhythm for any age from 3 months to adolescence.",
+    "Recognize age-specific normal sleep and drowsy patterns, and know when each appears.",
+    "Describe an age-appropriate response to hyperventilation and photic stimulation."
+  ],
+  "sections": [
+    {
+      "title": "Normal is defined by age",
+      "content": "There is no such thing as a normal pediatric EEG in the abstract. A reactive 4 Hz posterior rhythm is normal at 4 months and slow at 18 months. Bursts of high-voltage rhythmic theta in drowsiness are normal at 5 years and would be abnormal in an adult. Asynchronous sleep spindles are expected in the first year and would be a finding later. The reader's first act, as [[m02-read-and-report|Module 2]] made a reporting rule, is to fix the age, and the second is to recall what that age should look like.\n\nThe table below collects the maturation milestones this module teaches. It is the reference for the sections that follow, and it is the thing to have in mind before opening any child's record.\n\n| Feature | Normal age range or value | Source |\n|---|---|---|\n| Posterior dominant rhythm, 3 to 4 months | Reactive occipital rhythm of 3.5 to 4.5 Hz in about 75% of infants | Current Practice chapter |\n| Posterior dominant rhythm, 12 months | 5 to 6 Hz in about 70% (5 to 7 Hz in St. Louis) | Current Practice; St. Louis 2016 |\n| Posterior dominant rhythm, 3 years | Mean 8 Hz in 82% (range 7.5 to 9.5 Hz) | Current Practice |\n| Posterior dominant rhythm, 9 and 15 years | Mean 9 Hz by age 9 and 10 Hz by age 15 | Current Practice |\n| Sleep spindles | Appear at about 2 to 3 months post-term; often asynchronous until about 18 to 24 months | Current Practice; St. Louis 2016 |\n| Vertex waves | Often by 3 months, reliably by 6 months | Current Practice; St. Louis 2016 |\n| Hypnagogic hypersynchrony | 3 to 5 Hz, 75 to 350 µV bursts in drowsiness; 3 months to 13 years, typically 4 to 9 years | Kane 2017 |\n| Posterior slow waves of youth | Typically 4 to 25 years; about 25% of awake children aged 1 to 15 | Kane 2017; Current Practice |\n| Photic driving | From about 6 months | St. Louis 2016 |\n| Lambda waves | From about 3 to 5 years | St. Louis 2016 |\n| Hyperventilation | Usable from about age 3; marked slowing during it is normal in children | St. Louis 2016 |\n\n**A caution about the numbers**\n\nSources give slightly different ages for the same feature, because they studied different cohorts with different methods. The 12-month posterior rhythm is 5 to 6 Hz in the Current Practice chapter and 5 to 7 Hz in [St. Louis 2016](https://www.ncbi.nlm.nih.gov/books/NBK390356/). Treat the table as a guide to what is typical, not as fixed cutoffs, and when a child sits at the edge of a range, say so in the report rather than forcing a verdict. A rhythm one hertz below the typical value in a drowsy or unwell child is a prompt to check the state and look again, not an abnormality on its own.",
+      "keyPoints": [
+        "A pediatric record is normal or abnormal only for age; fix the age, then recall what that age should look like.",
+        "The maturation table is the reference: posterior rhythm, spindles, vertex waves, hypnagogic hypersynchrony, posterior slow waves of youth, photic driving, lambda waves and hyperventilation each have an age.",
+        "Sources give slightly different ages because they studied different cohorts; treat the ranges as typical values, not fixed cutoffs.",
+        "A value at the edge of a range is a prompt to check the state and look again, and to say so in the report."
+      ],
+      "question": {
+        "question": "An 18-month-old has a reactive 4 Hz posterior rhythm while clearly awake with eyes open and closed. How should this be read?",
+        "options": [
+          "Normal for age, since 4 Hz is within the infant range",
+          "Slow for age: 5 to 6 Hz is expected by 12 months, so confirm the child was fully awake and look for a cause",
+          "Abnormal and diagnostic of an encephalopathy, requiring urgent imaging",
+          "Uninterpretable, because a posterior rhythm cannot be identified before age 2"
+        ],
+        "answer": 1,
+        "explanation": "By 12 months the posterior dominant rhythm is 5 to 6 Hz in about 70% of infants (5 to 7 Hz in St. Louis), so a 4 Hz rhythm at 18 months is slow for age. The first response is to be sure the child was fully awake, because drowsiness slows the rhythm, and then to look for a cause in the history and the rest of the record. Calling 4 Hz normal applies the 3 to 4 month value to a much older child. Calling it diagnostic of an encephalopathy and demanding urgent imaging overstates a single background measure. A reactive occipital rhythm is identifiable from 3 to 4 months in most infants, so the record is interpretable."
+      }
+    },
+    {
+      "title": "The posterior dominant rhythm from 3 months to 15 years",
+      "content": "The posterior dominant rhythm is the single most useful number in a pediatric record, because it summarizes the maturation of the whole background in one measurement, and because its trajectory is well described.\n\nA **reactive occipital rhythm of 3.5 to 4.5 Hz** is present in about 75% of infants at 3 to 4 months (Current Practice chapter). By **12 months** it has reached **5 to 6 Hz** in about 70% of infants, or 5 to 7 Hz in the [St. Louis 2016](https://www.ncbi.nlm.nih.gov/books/NBK390356/) account. By **3 years** the mean is **8 Hz** in 82% of children, with a range of 7.5 to 9.5 Hz. The mean reaches **9 Hz by age 9** and **10 Hz by age 15** (Current Practice chapter). So the rhythm gains roughly one hertz a year over the first three years and then slows its climb to the adult value through adolescence.\n\n**What to measure, and how**\n\nFrequency is measured in the fully awake, relaxed child with eyes closed, counting cycles against the time marks rather than estimating by eye, a habit [[m01-signals|Module 1]] insisted on because the time base can mislead. **Reactivity** is the second measurement: the rhythm should attenuate with eye opening and return with eye closure. A rhythm of the right frequency that does not react is not a normal posterior dominant rhythm. **Symmetry** is the third: the two occipital regions should show similar frequency and amplitude, and a persistent difference in frequency between sides is a finding even when both are within range for age.\n\n**Why it matters at the bedside**\n\nA posterior rhythm slow for age is the commonest objective sign of a diffuse disturbance of cortical function, and [[m08-interictal|Module 8]] takes up what diffuse slowing suggests. But the finding is only as good as the state in which it was measured. The most frequent reason for a \"slow\" posterior rhythm in a child is that the child was drowsy, so before writing the number into the impression, find the most alert stretch of the record and measure there. If the child was never fully awake, the report should say the rhythm could not be assessed, not that it was slow.",
+      "keyPoints": [
+        "A reactive occipital rhythm of 3.5 to 4.5 Hz is present in about 75% of infants at 3 to 4 months (Current Practice chapter).",
+        "The rhythm reaches 5 to 6 Hz by 12 months, a mean of 8 Hz by 3 years, 9 Hz by age 9 and 10 Hz by age 15 (Current Practice; St. Louis 2016).",
+        "Measure frequency in the fully awake child by counting cycles, and check reactivity to eye opening and symmetry between sides.",
+        "The commonest cause of an apparently slow posterior rhythm is drowsiness; if the child was never fully awake, say the rhythm could not be assessed."
+      ],
+      "question": {
+        "question": "A 3-year-old's record, obtained after a long car ride, shows a 6 Hz posterior rhythm that attenuates with eye opening. The technologist notes the child was \"quiet and calm with eyes closed\" throughout. What is the correct handling?",
+        "options": [
+          "Report diffuse slowing of the background, because the mean posterior rhythm at 3 years is 8 Hz",
+          "Report a normal record, because a reactive rhythm is by definition normal",
+          "Report the rhythm as 6 Hz and recommend imaging",
+          "Search the record for the most alert stretch; if the child was never clearly awake, report that the posterior rhythm could not be assessed and note that drowsiness is the likely explanation"
+        ],
+        "answer": 3,
+        "explanation": "At 3 years the mean posterior rhythm is 8 Hz with a range of 7.5 to 9.5 Hz, so 6 Hz would be slow if measured in full wakefulness. But a quiet, calm child with eyes closed after a long car ride is very likely drowsy, and drowsiness slows the rhythm. The reader's job is to find the most alert epoch and measure there; if none exists, the honest report says the rhythm could not be assessed. Reporting diffuse slowing without confirming the state labels drowsiness as an abnormality. Reactivity shows the rhythm is a true posterior rhythm but does not make its frequency normal for age. Recommending imaging on a background measurement of uncertain state goes well beyond what the record supports."
+      }
+    },
+    {
+      "title": "Sleep architecture and the drowsy danger zone",
+      "content": "Sleep is where the pediatric record is richest, and also where it is most often misread. The features appear on a schedule.\n\n**Sleep spindles** appear at about **2 to 3 months post-term**. In the first years they are **often asynchronous** between the hemispheres, and that asynchrony is normal until about **18 to 24 months** (Current Practice chapter; [St. Louis 2016](https://www.ncbi.nlm.nih.gov/books/NBK390356/)). A resident who has learned adult EEG first may read asynchronous spindles in a 1-year-old as a lateralized finding; in an infant they are expected. After about 2 years, persistent asynchrony or absence of spindles on one side becomes a finding.\n\n**Vertex waves** are seen **often by 3 months and reliably by 6 months** (Current Practice; St. Louis 2016). In children they can be large and sharp, and they are one of the two drowsy or sleep patterns most often over-read as epileptiform.\n\n**Hypnagogic hypersynchrony** is the other. It consists of **3 to 5 Hz, 75 to 350 µV bursts** of rhythmic activity in drowsiness, occurring from **3 months to 13 years** and **typically between 4 and 9 years** ([Kane 2017](https://pubmed.ncbi.nlm.nih.gov/30214992/)). The bursts are diffuse, high-voltage and abrupt, which is exactly what a generalized discharge looks like at a glance, and they contain no spikes.\n\n**Drowsiness is the danger zone**\n\nThe over-reading of drowsy patterns is a documented route to the misdiagnosis of epilepsy, as [[m05-variants|Module 5]] shows with the evidence. The defence is procedural: **check the state first**. Before calling any sharp or rhythmic pattern in a child abnormal, ask whether the child was drowsy or asleep, whether the pattern is one that belongs to that state, and whether it has the features the state predicts, such as vertex waves maximal at the vertex and hypnagogic hypersynchrony without embedded spikes. A pattern that appears only in drowsiness, resolves with arousal, and matches the age-appropriate description is a normal pattern, however dramatic it looks.\n\nFinally, the report should say whether sleep was reached and whether the sleep features were present and symmetric for age. A record without sleep is a weaker negative, and asymmetric or absent sleep features in a child past the age at which they should be synchronous are findings that belong in the impression.",
+      "keyPoints": [
+        "Sleep spindles appear at about 2 to 3 months post-term and are often asynchronous until about 18 to 24 months (Current Practice; St. Louis 2016).",
+        "Vertex waves appear often by 3 months and reliably by 6 months, and in children can be large and sharp.",
+        "Hypnagogic hypersynchrony: 3 to 5 Hz, 75 to 350 µV bursts in drowsiness, from 3 months to 13 years, typically 4 to 9 years (Kane 2017).",
+        "Drowsiness is the danger zone: check the state before calling a sharp or rhythmic pattern in a child abnormal."
+      ],
+      "question": {
+        "question": "A drowsy 5-year-old has runs of diffuse, high-voltage 4 Hz rhythmic activity, lasting a few seconds at a time, with no embedded spikes, that disappear when the technologist speaks to the child. What is the likely explanation, and what goes in the report?",
+        "options": [
+          "Hypnagogic hypersynchrony, a normal drowsy pattern at this age; the report describes it as a normal feature of drowsiness",
+          "Generalized rhythmic delta activity, an encephalopathic pattern; the report lists it as abnormal",
+          "Absence seizures; the report recommends treatment",
+          "Frontal intermittent rhythmic delta; the report recommends imaging"
+        ],
+        "answer": 0,
+        "explanation": "Diffuse, high-voltage 3 to 5 Hz bursts in drowsiness in a child between 3 months and 13 years, and typically 4 to 9 years, are hypnagogic hypersynchrony (Kane 2017). The absence of embedded spikes and the disappearance with arousal are the confirming features. Generalized rhythmic delta as an encephalopathic pattern would not be confined to drowsiness and abolished by speaking to the child. Absence seizures are 3 Hz spike-and-wave with abrupt onset and offset and a clinical correlate, not spike-free rhythmic bursts that resolve with arousal. Frontal intermittent rhythmic delta is frontally predominant rather than diffuse and is not a drowsy pattern of childhood."
+      }
+    },
+    {
+      "title": "Awake features that arrive with age",
+      "content": "Three awake features appear during childhood, and each is a normal finding that a reader unfamiliar with children can mistake for something else.\n\n**Posterior slow waves of youth** are slow waves that **ride on the alpha rhythm** and **block with eye opening**, like the rhythm they sit on. They are seen **typically from 4 to 25 years**, and in about **25% of awake children aged 1 to 15** ([Kane 2017](https://pubmed.ncbi.nlm.nih.gov/30214992/); Current Practice chapter). Because they are slow, posterior and often asymmetric from moment to moment, they are read as occipital slowing by the unwary. The proof is their behaviour: they are fused with the posterior rhythm, they attenuate when the eyes open, and they return with eye closure. Occipital slowing over a lesion does neither.\n\n**Lambda waves** are the occipital potentials of visual scanning, and they appear from about **3 to 5 years** ([St. Louis 2016](https://www.ncbi.nlm.nih.gov/books/NBK390356/)). They occur with the eyes open while the child looks at something, and they stop when the child looks at a blank surface or closes the eyes. Their sharp contour and occipital location can suggest occipital spikes, but their dependence on visual scanning gives them away.\n\n**Photic driving** is the occipital response to flashing light, and it is present from about **6 months** (St. Louis 2016). It is a normal response, time-locked to the flash frequency or its harmonics, and its absence in an older child is not by itself abnormal. It is important to distinguish it from a photoparoxysmal response, which is an epileptiform discharge provoked by the flash and which [[m09-syndromes|Module 9]] discusses in the context of the generalized epilepsies.\n\n**The common thread**\n\nEach of these features is tied to a behaviour: posterior slow waves of youth to eye closure, lambda waves to visual scanning, photic driving to the flash. Each is normal because it appears with the behaviour and disappears without it. When a posterior waveform puzzles you, ask what the child was doing at the time, and check on the video. The state-and-behaviour rule that identified artifact in [[m03-artifacts|Module 3]] identifies normal variants in the same way.",
+      "keyPoints": [
+        "Posterior slow waves of youth ride on the alpha rhythm and block with eye opening; typically 4 to 25 years, in about 25% of awake children aged 1 to 15 (Kane 2017; Current Practice).",
+        "Lambda waves appear from about 3 to 5 years, with the eyes open during visual scanning (St. Louis 2016).",
+        "Photic driving is present from about 6 months and is a normal, time-locked occipital response to the flash, distinct from a photoparoxysmal response.",
+        "Each awake feature is tied to a behaviour; ask what the child was doing and check the video."
+      ],
+      "question": {
+        "question": "A 10-year-old has 3 Hz posterior waves riding on a 9 Hz alpha rhythm, and both the slow waves and the alpha rhythm are blocked by eye opening. What are they, and what should the report say?",
+        "options": [
+          "Occipital intermittent rhythmic delta; the report should recommend a search for absence seizures",
+          "Focal occipital slowing; the report should recommend imaging",
+          "Posterior slow waves of youth, a normal finding; the report describes them as a normal variant and does not list them as abnormal",
+          "Lambda waves; the report notes that the child was scanning"
+        ],
+        "answer": 2,
+        "explanation": "Slow waves fused with the posterior rhythm that block with eye opening exactly as the alpha does are posterior slow waves of youth, seen typically from 4 to 25 years and in about a quarter of awake children aged 1 to 15 (Kane 2017; Current Practice). They are a normal variant and do not belong in the list of abnormal findings. Occipital intermittent rhythmic delta is a run of rhythmic delta rather than slow waves riding on the alpha, and the module on interictal findings covers when it matters. Focal occipital slowing over a lesion does not block with eye opening. Lambda waves occur with the eyes open during scanning and would not be seen riding on an eyes-closed alpha rhythm."
+      }
+    },
+    {
+      "title": "Activation in children: hyperventilation and photic stimulation",
+      "content": "Activation procedures exist to provoke discharges that a resting record would miss, and in children both procedures have age-specific normal responses that the report must describe correctly.\n\n**Hyperventilation** is **usable from about age 3** ([St. Louis 2016](https://www.ncbi.nlm.nih.gov/books/NBK390356/)); younger children cannot perform it on request. In children who can, **marked slowing during hyperventilation is normal**, and often dramatic: high-voltage, diffuse, rhythmic slow activity that builds over the procedure and resolves after it. This is a physiologic response and not an abnormality, and calling it one is among the recognized errors that lead to misdiagnosis, as [[m05-variants|Module 5]] documents. What hyperventilation is for is the provocation of generalized spike-and-wave, and [[m02-read-and-report|Module 2]] set out the rule: in an untreated child, 3 minutes of well-performed hyperventilation without 2.5 to 4 Hz spike-wave argues against childhood absence epilepsy. The report therefore says three things: whether hyperventilation was done, whether the effort was adequate, and whether spike-wave appeared. Slowing is described as the expected response.\n\n**Photic stimulation** produces **photic driving** from about **6 months** (St. Louis 2016): occipital activity time-locked to the flash. Driving is normal and its absence is not by itself a finding. The response that matters is a **photoparoxysmal response**, an epileptiform discharge provoked by the flash, which is not a normal response at any age and which belongs in the impression. The two are separated by morphology and by behaviour: driving is a rhythmic response that follows the flash frequency and stops when the flash stops; a photoparoxysmal response is spike-and-wave or polyspike-and-wave and may outlast the stimulus.\n\n**What the report says**\n\nFor each procedure: done or not, adequate or not, and the response in standard terms. For a child under 3, state that hyperventilation could not be performed because of age, so the reader knows the negative for absence epilepsy has not been tested. The sign-off for this module, ten normal records from infancy to adolescence with the expected posterior rhythm stated before looking, includes reading the activation sections correctly: a record with marked hyperventilation slowing in a 6-year-old is still a normal record.",
+      "keyPoints": [
+        "Hyperventilation is usable from about age 3, and marked slowing during it is normal in children (St. Louis 2016).",
+        "Hyperventilation is done to provoke spike-and-wave; the report states whether it was done, whether the effort was adequate, and what appeared.",
+        "Photic driving is present from about 6 months and is normal; a photoparoxysmal response is an epileptiform discharge and is not.",
+        "For a child under 3, state that hyperventilation could not be performed, so the reader knows the negative for absence epilepsy is untested."
+      ],
+      "question": {
+        "question": "A 6-year-old referred for staring performs 3 minutes of vigorous hyperventilation. The record shows a build-up of high-voltage, diffuse, rhythmic slow activity that resolves within a minute of stopping, and no spike-and-wave. How should the activation section read?",
+        "options": [
+          "Hyperventilation produced generalized slowing, an abnormal response suggesting encephalopathy",
+          "Hyperventilation was adequate and produced the marked slowing that is normal in children; no spike-and-wave appeared, which in an untreated child argues against childhood absence epilepsy",
+          "Hyperventilation was inadequate because slowing rather than spike-and-wave appeared",
+          "Hyperventilation was normal, and the slowing should be listed in the impression as a finding"
+        ],
+        "answer": 1,
+        "explanation": "Marked, diffuse, rhythmic slowing that builds during hyperventilation and resolves afterwards is the normal response in children (St. Louis 2016), and its presence in fact shows that the effort was good. The important negative is the absence of 2.5 to 4 Hz spike-and-wave after 3 minutes of well-performed hyperventilation in an untreated child, which argues against childhood absence epilepsy (Hirsch E 2022). Calling the slowing an encephalopathic response is a recognized over-read. Slowing does not indicate inadequate effort; it indicates the opposite. And the slowing is described as the expected response in the activation section, not listed as a finding in the impression."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A 5-month-old's record shows a reactive 4 Hz occipital rhythm in wakefulness and sleep spindles that appear on the left and right at different times. Which reading is correct?",
+      "options": [
+        "Slow posterior rhythm and asynchronous spindles, both abnormal",
+        "Normal posterior rhythm, but the asynchronous spindles indicate a lateralized abnormality",
+        "Both findings are normal for age: a 3.5 to 4.5 Hz reactive occipital rhythm is expected at 3 to 4 months, and spindles are often asynchronous until about 18 to 24 months",
+        "The record cannot be interpreted before 6 months of age"
+      ],
+      "answer": 2,
+      "explanation": "At 3 to 4 months a reactive occipital rhythm of 3.5 to 4.5 Hz is present in about 75% of infants, so 4 Hz at 5 months is within expectation (Current Practice chapter). Sleep spindles appear at about 2 to 3 months post-term and are often asynchronous until about 18 to 24 months (Current Practice; St. Louis 2016), so asynchrony at 5 months is expected rather than lateralizing. Reading either as abnormal applies an older child's standard to an infant. The record is interpretable; the posterior rhythm and spindles are both identifiable at this age."
+    },
+    {
+      "question": "A 2-year-old's record shows sleep spindles only over the left hemisphere across all of a 40-minute sleep recording, with none identifiable on the right. What is the best reading?",
+      "options": [
+        "A finding worth listing: spindle asynchrony is expected only until about 18 to 24 months, and persistent absence on one side after that age is an asymmetry that belongs in the impression",
+        "Normal, because spindles are asynchronous throughout childhood",
+        "Artifact, because spindles cannot be unilateral",
+        "A normal finding, because spindles do not appear until age 3"
+      ],
+      "answer": 0,
+      "explanation": "Spindle asynchrony is normal in infancy but resolves by about 18 to 24 months (Current Practice; St. Louis 2016). At 2 years, spindles that are consistently present on one side and absent on the other across a full sleep recording are an asymmetry of sleep architecture, which is a finding in its own right and belongs in the impression with a note on which side is deficient. Calling asynchrony normal throughout childhood extends an infant rule too far. Unilateral spindles are not by themselves artifact. And spindles appear at about 2 to 3 months post-term, not at age 3."
+    },
+    {
+      "question": "A 4-year-old, awake and looking at a picture book during the recording, has sharply contoured occipital waves that stop when the technologist covers the book and the child looks at the blank ceiling. What are they?",
+      "options": [
+        "Occipital spikes; report them as epileptiform",
+        "Posterior slow waves of youth",
+        "Photic driving from the room lights",
+        "Lambda waves, the normal occipital potentials of visual scanning, seen from about 3 to 5 years"
+      ],
+      "answer": 3,
+      "explanation": "Sharp occipital waves that appear with the eyes open during visual scanning and stop when there is nothing to scan are lambda waves, present from about 3 to 5 years (St. Louis 2016). The dependence on scanning is the proof. Occipital spikes would not be abolished by removing the picture book. Posterior slow waves of youth ride on the eyes-closed alpha rhythm and block with eye opening, the opposite behaviour. Photic driving is time-locked to a flashing stimulus, not to steady room light or to scanning."
+    },
+    {
+      "question": "A 12-year-old's photic stimulation produces occipital activity at the flash frequency during each train, ending when the flash ends. At 15 Hz, a burst of generalized polyspike-and-wave appears and continues for 2 seconds after the flash stops. How should the report describe these two responses?",
+      "options": [
+        "Both are photic driving, a normal response",
+        "Photic driving, which is normal, and a photoparoxysmal response, which is an epileptiform discharge and belongs in the impression",
+        "Both are photoparoxysmal responses, one mild and one severe",
+        "Photic driving that became abnormal only because the flash frequency was too high"
+      ],
+      "answer": 1,
+      "explanation": "Occipital activity time-locked to the flash that stops with it is photic driving, a normal response present from about 6 months (St. Louis 2016). Generalized polyspike-and-wave provoked by the flash and outlasting it is a photoparoxysmal response, an epileptiform discharge that is not normal at any age and is listed in the impression. Calling both driving misses the epileptiform discharge. Calling both photoparoxysmal misclassifies the normal driving. Flash frequency does not turn driving into an abnormal response; the morphology and persistence of the discharge do."
+    },
+    {
+      "question": "During the sign-off exercise, a resident is handed a normal record from a 9-year-old and asked to state the expected posterior rhythm before looking. Which statement is correct?",
+      "options": [
+        "About 6 Hz, because the rhythm does not reach adult values until late adolescence",
+        "About 8 Hz, the value reached at age 3 and held until adulthood",
+        "A mean of about 9 Hz, rising to about 10 Hz by age 15",
+        "Exactly 10 Hz, since the adult value is reached by school age"
+      ],
+      "answer": 2,
+      "explanation": "The posterior dominant rhythm reaches a mean of 8 Hz by age 3, 9 Hz by age 9 and 10 Hz by age 15 (Current Practice chapter). At 9 years the expected value is therefore about 9 Hz, with the adult value still a few years away. Six hertz would be slow for a 9-year-old. Eight hertz is the 3-year value, and the rhythm continues to rise after that. Ten hertz is the value reached by about age 15, not by school age, and no source gives an exact single number rather than a mean."
+    }
+  ],
+  "resources": [
+    { "label": "Learning EEG: Normal Awake", "url": "https://www.learningeeg.com/normal-awake.html" },
+    { "label": "Learning EEG: Normal Asleep", "url": "https://www.learningeeg.com/normal-asleep.html" },
+    { "label": "Learning EEG: Pediatric", "url": "https://www.learningeeg.com/pediatric.html", "note": "The Infancy, Early Years and Adolescence sections." },
+    { "label": "Learning EEG: Atlas", "url": "https://www.learningeeg.com/atlas.html", "note": "The pediatric pages." },
+    { "label": "eeg-training.com: EEG Fundamentals", "url": "https://www.eeg-training.com/eeg-fundamentals.html", "note": "The age-change board." },
+    { "label": "EEGmaster atlas: Pediatric Normal module", "url": "https://eegmaster.com/eegmaster/", "note": "Free account required." },
+    { "label": "AES EEG Essentials: Pediatric EEG Basics", "url": "https://aesnet.org/education/education/eeg-essentials", "note": "Free with a myAES account." },
+    { "label": "St. Louis and Frey, AES introductory text and atlas", "url": "https://www.ncbi.nlm.nih.gov/books/NBK390356/", "note": "Developmental chapter, free." }
+  ],
+  "signOff": "The resident reads ten normal records spanning infancy to adolescence and states the expected posterior rhythm for each age before looking.",
+  "sources": ["kane2017", "stlouis2016", "currentPractice", "hirschE2022"]
+}

@@ -69,15 +69,13 @@ export const SECTIONS: Section[] = [
     short: 'EEG',
     tagline: 'Reading the rhythms',
     blurb:
-      'Normal rhythms, artifacts, benign variants, and epileptiform patterns, with an emphasis on the pediatric EEG across development.',
+      'A pediatric EEG reading curriculum: twelve self-paced modules from electrodes and montages to reading a neonatal or PICU record and writing the report, with decision questions, quizzes and faculty sign-offs.',
     color: '#d97706',
-    status: 'soon',
+    status: 'live',
     planned: [
-      'Normal awake and sleep EEG by age',
-      'Artifacts and benign variants',
-      'Interictal epileptiform discharges',
-      'Epilepsy syndromes and their EEG signatures',
-      'Neonatal EEG and aEEG basics',
+      'A waveform viewer with openly licensed tracings',
+      'Filter and sampling lab',
+      'Pattern gallery in flashcard style',
     ],
   },
 ];

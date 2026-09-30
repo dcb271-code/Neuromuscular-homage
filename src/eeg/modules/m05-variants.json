@@ -1,0 +1,190 @@
+{
+  "id": "m05-variants",
+  "number": 5,
+  "title": "Normal variants and how not to overcall",
+  "short": "Normal variants",
+  "description": "The benign variants by age, the IFCN rule for calling a transient epileptiform, and why a discharge alone does not make epilepsy.",
+  "why": "Overreading sharply contoured normal activity as epileptiform is a documented route to misdiagnosing epilepsy, so this module teaches a rule for calling a discharge, not just a list of variants.",
+  "track": "foundation",
+  "tags": ["Normal & Variants", "Clinical Decision-Making"],
+  "difficulty": "intermediate",
+  "duration": "45 min",
+  "color": "#2563eb",
+  "objectives": [
+    "Recognize the benign variants, and know which ages they belong to.",
+    "Apply the IFCN criteria before calling any transient epileptiform.",
+    "Explain why a single discharge in a child without seizures does not establish epilepsy."
+  ],
+  "sections": [
+    {
+      "title": "Why overreading is a clinical harm",
+      "content": "An EEG cannot cause a seizure, but it can cause an epilepsy diagnosis. A child who is labelled epileptic on the strength of an overread tracing acquires years of antiseizure medication, driving and activity restrictions later on, and a family that watches every stare. Reversing that label is far harder than avoiding it, and the record of how it happens is well documented. In patients referred to an epilepsy centre and found not to have epilepsy, the EEG findings that had been read as epileptiform were mostly **nonspecific fluctuations** of the background and **sharply contoured normal activity**, often over the temporal regions. Recognized normal variants were also overread, among them **wicket waves**, **hypnagogic hypersynchrony** and the **slowing produced by hyperventilation** ([Benbadis 2003](https://pubmed.ncbi.nlm.nih.gov/12684557/); [Benbadis 2008](https://pubmed.ncbi.nlm.nih.gov/18264016/)).\n\nThe common thread is that none of these findings is a discharge at all. They are the ordinary texture of a normal record, read by someone who was looking for a spike and found a wave that was sharp enough. That is the error this module is built to prevent. A resident who can recite the benign variants but has no rule for deciding when a transient is epileptiform is still at risk, because the sharply contoured background that causes most overreads does not have a name in the variant tables.\n\n**Two habits that protect the patient**\n\nThe first is to read the state and the age before reading any transient. Drowsiness and light sleep are where most variants live, and where the background itself becomes sharper and more irregular; a sharp wave that appears only as a child drifts off deserves more suspicion of the reader than of the brain. The second is to apply an explicit rule, the IFCN criteria taught later in this module, to every candidate transient, and to write down how many criteria it met. A transient that meets three criteria does not become epileptiform because the referral question was seizures. The clinical history belongs in the clinical correlation, as [[m02-read-and-report|Module 2]] describes; it must not leak into the description.",
+      "keyPoints": [
+        "In patients misdiagnosed with epilepsy, the overread EEG findings were mostly nonspecific fluctuations or sharply contoured background, often temporal (Benbadis 2003; Benbadis 2008).",
+        "Wickets, hypnagogic hypersynchrony and hyperventilation slowing were also overread as epileptiform.",
+        "Read the state and the age before reading any transient; most variants live in drowsiness and light sleep.",
+        "Apply an explicit rule to every candidate transient and record how many criteria it met; the referral question must not change the call."
+      ],
+      "question": {
+        "question": "A 12-year-old is referred with a history of two staring spells. In drowsiness, her record shows irregular, sharply contoured theta over both temporal regions with no consistent morphology and no after-going slow waves. The referring clinician is hoping for an answer. What should the description say?",
+        "options": [
+          "Bilateral temporal sharp waves, consistent with a focal epilepsy given the history",
+          "Sharply contoured temporal theta in drowsiness, a normal finding, with no epileptiform discharges seen",
+          "Possible epileptiform discharges; recommend treatment given the clinical concern",
+          "Nonspecific abnormality of uncertain significance; repeat the EEG before deciding"
+        ],
+        "answer": 1,
+        "explanation": "Irregular, sharply contoured temporal activity in drowsiness with no consistent morphology and no after-going slow wave is exactly the finding that most often leads to a false diagnosis of epilepsy (Benbadis 2003; Benbadis 2008). It is the normal texture of a drowsy record and should be described as such. Calling it sharp waves 'consistent with focal epilepsy' lets the referral question rewrite the tracing. Describing it as 'possible epileptiform' and recommending treatment does the same harm with a hedge attached. Labelling normal activity a 'nonspecific abnormality' is also wrong: it is not abnormal, and a repeat study will not make it so. The history of staring spells belongs in the clinical correlation, where the report can say that a normal EEG does not exclude epilepsy."
+      }
+    },
+    {
+      "title": "The benign variants, by age",
+      "content": "The variants have names because they recur, and each belongs to a state and an age. Learn them as a table, then learn what the table cannot do.\n\n| Variant | Typical age | Key features |\n|---|---|---|\n| Hypnagogic hypersynchrony | 3 months to 13 years | Diffuse rhythmic 3 to 5 Hz bursts in drowsiness |\n| Posterior slow waves of youth | 4 to 25 years | Slow waves riding on alpha, blocked by eye opening |\n| 14 and 6 Hz positive bursts | Peak in adolescence | 13 to 17 Hz and/or 5 to 7 Hz positive spikes, posterior temporal, in drowsiness and light sleep |\n| 6 Hz spike-and-wave (phantom) | Adolescents and adults | Brief 4 to 7 Hz, low-amplitude spike-wave |\n| Small sharp spikes (BETS) | Adults | Under 50 ms and 50 µV, temporal, in drowsiness and light sleep |\n| Wicket waves | Older adults | Arciform temporal waves, no after-going slow wave |\n\nAges are from the IFCN glossary ([Kane 2017](https://pubmed.ncbi.nlm.nih.gov/30214992/)) and from [St. Louis 2016](https://www.ncbi.nlm.nih.gov/books/NBK390356/). Wickets and small sharp spikes are rare in young children, but a pediatric reader meets them in adolescents, and in the parents whose records sometimes arrive for comparison.\n\n**What the variants have in common**\n\nEach is tied to a state. Hypnagogic hypersynchrony, the 14 and 6 Hz bursts, small sharp spikes and phantom spike-wave belong to drowsiness and light sleep, which is the same state in which the background becomes sharper and overreading is commonest. Posterior slow waves of youth belong to the awake record and behave like the alpha rhythm they ride on: they block with eye opening, as [[m04-normal-by-age|Module 4]] describes. Each also has a morphology that fails the epileptiform criteria in a characteristic way. Wickets have no after-going slow wave. The 14 and 6 Hz bursts are **positive**, the wrong polarity for most epileptiform discharges. Phantom spike-wave is too low in amplitude and too brief. Hypnagogic hypersynchrony is rhythmic and diffuse, without a spike.\n\nThe table also has a limit worth stating plainly: the sharply contoured background that causes most overreads is not on it. A variant list is a set of exceptions; the rule that decides everything else is the subject of the next section.",
+      "keyPoints": [
+        "Hypnagogic hypersynchrony (3 months to 13 years) and posterior slow waves of youth (4 to 25 years) are the childhood variants a pediatric reader sees most.",
+        "14 and 6 Hz positive bursts peak in adolescence: positive spikes, posterior temporal, in drowsiness and light sleep.",
+        "Small sharp spikes and wicket waves are adult variants, rare in young children (Kane 2017; St. Louis 2016).",
+        "Each variant is tied to a state, and each fails the epileptiform criteria in a characteristic way: wrong polarity, no after-going slow wave, too small, or no spike."
+      ],
+      "question": {
+        "question": "A 15-year-old has brief, positive, 14 Hz posterior temporal bursts in light sleep. What is the finding, and what goes in the report?",
+        "options": [
+          "Posterior temporal sharp waves; describe them as epileptiform and recommend a sleep-deprived study",
+          "Small sharp spikes; describe them as an adult variant that is abnormal at this age",
+          "14 and 6 Hz positive bursts, a normal variant; describe them as a variant, or leave them out of the impression, rather than calling them abnormal",
+          "Hypnagogic hypersynchrony; describe it as a drowsy pattern and note that it argues against epilepsy"
+        ],
+        "answer": 2,
+        "explanation": "Brief positive bursts at about 14 Hz over the posterior temporal region in drowsiness or light sleep in an adolescent are 14 and 6 Hz positive bursts, a benign variant that peaks at this age (Kane 2017; St. Louis 2016). The polarity alone should stop a reader from calling them epileptiform: they are positive, and most epileptiform discharges are surface-negative. The report may describe them as a normal variant or omit them from the impression; what it must not do is list them as an abnormality. Calling them sharp waves and recommending a further study treats a variant as a finding. Small sharp spikes are a different pattern, very brief and low in voltage, and are not abnormal at any age. Hypnagogic hypersynchrony is diffuse rhythmic 3 to 5 Hz activity in drowsiness, not a fast posterior temporal burst, and no variant 'argues against' epilepsy."
+      }
+    },
+    {
+      "title": "The IFCN criteria: a rule for calling a discharge",
+      "content": "The IFCN glossary gives six features of an epileptiform transient, and says that a transient is epileptiform if it meets **at least 4 of the 6** ([Kane 2017](https://pubmed.ncbi.nlm.nih.gov/30214992/)):\n\n1. Di- or triphasic, with a sharp or spiky morphology.\n2. Different duration from the ongoing background, shorter or longer.\n3. Asymmetric waveform: a sharply rising phase and a more slowly decaying one, or the reverse.\n4. Followed by an after-going slow wave.\n5. Disrupts the surrounding background.\n6. A scalp distribution of negative and positive potentials that implies a source in the brain.\n\nThe list turns an impression into a checklist. The first three criteria describe the shape of the wave itself; the fourth and fifth describe what it does to the record around it; the sixth is the field, the same test of a cerebral generator introduced in [[m01-signals|Module 1]] and used against artifact in [[m03-artifacts|Module 3]]. A sharply contoured piece of background usually scores on the first criterion and perhaps the second, and then stops: it has no after-going slow wave, it does not interrupt anything because it *is* the background, and it has no field beyond the electrode where it caught the eye.\n\n**Where to set the bar**\n\nThe criteria were tested prospectively. In a validation study of 100 patients, requiring **at least 5 of the 6** gave a specificity of **95.7%** and a sensitivity of **81.5%**, and the authors judged 5 the best threshold for clinical use ([Kural 2020](https://pubmed.ncbi.nlm.nih.gov/32321764/)). The lesson is not that 4 is wrong; it is that the cost of a false positive is high enough, for the reasons in the first section, that a stricter bar is defensible. In practice, a transient meeting 4 criteria deserves a careful search for a fifth, and a transient meeting 3 should not be called epileptiform at all.\n\n**Using the rule at the bench**\n\nScore every candidate, and score it in more than one montage, because the field (criterion 6) can only be judged where a phase reversal or a referential maximum is visible. Write the score down. The sign-off for this module asks exactly this: ten sharp transients chosen by faculty, each scored against the six criteria, with agreement on at least eight.",
+      "keyPoints": [
+        "A transient is epileptiform if it meets at least 4 of the 6 IFCN criteria: sharp di- or triphasic morphology, duration different from the background, asymmetric waveform, after-going slow wave, disruption of the background, and a field implying a cerebral source (Kane 2017).",
+        "Requiring at least 5 of 6 gave 95.7% specificity and 81.5% sensitivity in a validation study of 100 patients, and the authors judged 5 the best clinical threshold (Kural 2020).",
+        "Sharply contoured background usually scores on morphology and duration and then stops: no after-going slow wave, no disruption, no field.",
+        "Score every candidate transient in more than one montage and write the score down."
+      ],
+      "question": {
+        "question": "A sharp transient is spiky and biphasic, and briefer than the ongoing background, but it has no after-going slow wave, does not disrupt the background and has no field beyond one electrode. How many IFCN criteria does it meet, and what do you call it?",
+        "options": [
+          "Four: call it epileptiform, since it meets the IFCN threshold",
+          "Five: call it epileptiform, since it meets the Kural threshold",
+          "Six: it is a definite spike",
+          "Three at most (morphology, duration and possibly asymmetry): do not call it epileptiform"
+        ],
+        "answer": 3,
+        "explanation": "Score it against the list. Spiky and biphasic satisfies the morphology criterion. Briefer than the background satisfies the duration criterion. Whether its rising and falling phases are asymmetric is not stated, so asymmetry is possible but unproven. It fails the after-going slow wave, the disruption of the background, and the field criteria outright. That is three at most, below the IFCN threshold of 4 (Kane 2017) and further below the 5 that gave 95.7% specificity in validation (Kural 2020). Counting four or five requires crediting criteria the description explicitly denies. The absent field is the decisive failure: a transient with no distribution beyond one electrode has no evidence of a cerebral source at all, and is more likely artifact, as Module 3 teaches."
+      }
+    },
+    {
+      "title": "Discharges in healthy children",
+      "content": "Even a transient that passes the criteria is not a diagnosis. Epileptiform discharges occur in children who have never had a seizure and never will. In a prospective study of healthy children recorded with digital EEG, **6.5%** had epileptiform discharges and **4.2%** had rolandic (centrotemporal) discharges; earlier studies had reported **3.5% to 5%** ([Borusiak 2010](https://pubmed.ncbi.nlm.nih.gov/20002145/)). The centrotemporal spike is the one a pediatric reader must hold most lightly, because it is both the signature of the commonest self-limited focal epilepsy of childhood, described in [[m09-syndromes|Module 9]], and a finding in roughly one healthy child in twenty-five.\n\n**Epilepsy is a clinical diagnosis**\n\nThe EEG supports a diagnosis that the history makes; it does not make one. A child referred for headaches, or for a syncope, or for a sleep problem, whose record shows occasional centrotemporal spikes, does not have epilepsy on that basis. The correct report describes the discharges accurately, in the description, and then states in the clinical correlation that epileptiform discharges of this type occur in a small percentage of healthy children and that the diagnosis of epilepsy rests on the clinical events. A reader who instead writes \"consistent with epilepsy\" has converted a population base rate into an individual diagnosis.\n\n**The other direction**\n\nThe same reasoning runs the other way, and [[m02-read-and-report|Module 2]] makes it a reporting rule: a normal routine EEG does not exclude epilepsy. Many focal and generalized discharges appear only in drowsiness and sleep, which is why a record without sleep is a weaker negative, as [[m08-interictal|Module 8]] discusses. The reader's job is to describe what the tracing shows and to state plainly what it can and cannot settle. The discharge count belongs to the EEG; the diagnosis belongs to the clinician who has the history, and often that is the same person wearing a different hat.",
+      "keyPoints": [
+        "In a prospective study of healthy children, 6.5% had epileptiform discharges and 4.2% had rolandic discharges; earlier studies reported 3.5% to 5% (Borusiak 2010).",
+        "Centrotemporal spikes in a child with no seizures do not make epilepsy; the diagnosis rests on the clinical events.",
+        "Describe discharges in the description; state their base rate in healthy children in the clinical correlation.",
+        "A normal routine EEG does not exclude epilepsy, and a record without sleep is a weaker negative."
+      ],
+      "question": {
+        "question": "A 6-year-old referred for headaches has occasional right centrotemporal spikes on a routine EEG and has never had a seizure. Does she have epilepsy, and what should the report say?",
+        "options": [
+          "No. Describe the discharges, and state that centrotemporal discharges occur in about 4% of healthy children and that epilepsy is a clinical diagnosis",
+          "Yes. Centrotemporal spikes define self-limited epilepsy with centrotemporal spikes, so the diagnosis can be made from the EEG",
+          "Probably. Recommend starting an antiseizure medication to prevent the first seizure",
+          "Uncertain. Omit the discharges from the report to avoid alarming the family"
+        ],
+        "answer": 0,
+        "explanation": "Rolandic discharges were found in 4.2% of healthy children in a prospective study (Borusiak 2010), so their presence in a child with no seizures is an EEG finding, not a diagnosis. Epilepsy is defined by clinical events, and this child has had none. The report should describe the discharges accurately and put the base rate in the clinical correlation. Making the syndrome diagnosis from the EEG alone confuses a supporting feature with the disease. Starting medication to prevent a first seizure that may never come treats a population risk as an individual one. Omitting a real finding is not an option either: the description must be complete, and it is the interpretation that keeps it in proportion."
+      }
+    },
+    {
+      "title": "Putting a variant in the report",
+      "content": "Knowing that a waveform is benign is half the job; the other half is writing it so that the next reader is not misled. Reports outlive their authors. A phrase like \"sharp transients over the right temporal region\" in a description, with no comment in the impression, will be found by a clinician years later and read as a discharge. The structure taught in [[m02-read-and-report|Module 2]] gives the rule: the description says what was seen, in standard terms, and the impression says whether it was normal.\n\n**Three acceptable ways to handle a variant**\n\n- **Name it and place it.** \"14 and 6 Hz positive bursts were seen over the posterior temporal regions in light sleep, a normal variant.\" The name from the IFCN glossary tells any later reader what you saw and that you recognized it.\n- **Describe the state that explains it.** \"During drowsiness, diffuse rhythmic 3 to 5 Hz activity consistent with hypnagogic hypersynchrony was seen.\" The state is doing the explaining, so include it.\n- **Leave it out of the impression.** A variant does not need to be listed among the findings. The impression can read \"Normal awake and asleep EEG for age\" without contradiction.\n\nWhat is not acceptable is to hedge. \"Sharp waves of uncertain significance\" transfers the reader's uncertainty to the patient's chart and invites treatment. If the transient failed the criteria, say that the record contains no epileptiform discharges. If it truly met the criteria, describe it as epileptiform and let the clinical correlation carry the base rate.\n\n**A routine for the drowsy record**\n\nWhen a record is full of sharply contoured activity, slow down rather than speed up. Confirm the state from the polygraphic channels and the background. Look at the same activity in a referential montage to check for a field. Score any candidate transient against the six criteria and write the score in your notes, even if it does not go in the report. Then ask whether the finding, if real, would change anything the clinician does. That question, which [[m09-syndromes|Module 9]] and [[m10-seizures-status|Module 10]] return to, is the one an EEG report exists to answer.",
+      "keyPoints": [
+        "Name the variant with its glossary term and state the state it occurred in, or leave it out of the impression entirely.",
+        "Never write \"of uncertain significance\" for a transient that failed the criteria; say the record contains no epileptiform discharges.",
+        "A variant does not contradict an impression of \"Normal awake and asleep EEG for age\".",
+        "In a sharply contoured drowsy record, confirm the state, check the field in a referential montage, and score every candidate transient."
+      ],
+      "question": {
+        "question": "In a 9-year-old's record, a colleague's draft description reads \"occasional sharp transients over the right temporal region during drowsiness\" and the impression reads \"mildly abnormal EEG, sharp waves of uncertain significance.\" You review the transients: sharply contoured background theta, no after-going slow wave, no field. What should the final report say?",
+        "options": [
+          "Keep the draft; the hedge correctly conveys that the finding might matter",
+          "Upgrade the impression to \"right temporal epileptiform discharges\" so the clinician is not falsely reassured",
+          "Describe sharply contoured theta in drowsiness as a normal finding and give an impression of a normal EEG with no epileptiform discharges",
+          "Delete any mention of the temporal activity and report the study as normal without explanation"
+        ],
+        "answer": 2,
+        "explanation": "The transients failed the IFCN criteria: no after-going slow wave, no field, and a morphology that is the background itself. They are the sharply contoured drowsy activity that Benbadis found behind most misdiagnoses. The report should describe that activity for what it is, in the description, and state a normal impression with no epileptiform discharges. Keeping a hedge such as 'uncertain significance' transfers the reader's doubt to the chart and invites treatment. Upgrading the call to epileptiform is the overread itself. Deleting the description leaves the next reader unable to check the call; the description should be complete, and the impression should be clear."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A 5-year-old, drowsy at the end of a routine study, shows runs of diffuse, high-voltage, rhythmic 4 Hz activity for several seconds at a time, with no spikes and no change in the child on video. The technologist has flagged them as possible seizures. What do you conclude?",
+      "options": [
+        "Absence seizures; the runs are generalized and rhythmic",
+        "Hypnagogic hypersynchrony, a normal drowsy pattern at this age; no epileptiform discharges",
+        "Generalized slowing, suggesting an encephalopathy",
+        "Occipital intermittent rhythmic delta activity"
+      ],
+      "answer": 1,
+      "explanation": "Diffuse rhythmic 3 to 5 Hz bursts in drowsiness in a child aged 3 months to 13 years are hypnagogic hypersynchrony (Kane 2017), and this child is at the typical age. The pattern contains no spike, so it is not spike-wave, and absence seizures are recognized by 3 Hz spike-wave with an abrupt onset and offset, not by rhythmic slow activity alone. Generalized slowing of the background suggests an encephalopathy, but that is a sustained change of the awake background, not brief rhythmic runs at the moment of falling asleep. Occipital intermittent rhythmic delta is a posterior pattern, not diffuse. Reading the state first resolves the flag: this is what drowsiness looks like at 5."
+    },
+    {
+      "question": "A transient over C4 in a 7-year-old is triphasic and spiky, briefer than the background, asymmetric with a fast rise and slow decay, followed by a slow wave, interrupts the background, and shows a phase reversal at C4 in the longitudinal bipolar montage with a matching maximum in the referential montage. The child has never had a seizure. What is the correct call?",
+      "options": [
+        "Not epileptiform, because the child has no seizures",
+        "Epileptiform, but omit it from the report because it is probably a variant",
+        "Epileptiform on all six criteria; describe it as a right centrotemporal spike and state in the clinical correlation that such discharges occur in a small percentage of healthy children",
+        "Uncertain; recommend a sleep-deprived EEG before deciding"
+      ],
+      "answer": 2,
+      "explanation": "This transient meets all six IFCN criteria, including the field criterion, which the phase reversal and the referential maximum establish. It is a centrotemporal spike and should be described as epileptiform. What it is not is a diagnosis: rolandic discharges occur in about 4.2% of healthy children (Borusiak 2010), and this child has had no seizures, so the clinical correlation carries the base rate and the statement that epilepsy is a clinical diagnosis. Declaring it non-epileptiform because of the history reverses the logic of the criteria, which judge the waveform, not the patient. Omitting a real discharge makes the description incomplete. A further study is not needed to decide what this waveform is; the criteria have already decided."
+    },
+    {
+      "question": "Which finding is the most common source of a false diagnosis of epilepsy in the studies of overread EEGs?",
+      "options": [
+        "Nonspecific fluctuations and sharply contoured normal background, often temporal",
+        "Wicket waves in older adults",
+        "14 and 6 Hz positive bursts in adolescents",
+        "Photoparoxysmal responses during photic stimulation"
+      ],
+      "answer": 0,
+      "explanation": "In patients misdiagnosed with epilepsy, the findings that had been overread were mostly nonspecific fluctuations or sharply contoured background, often over the temporal regions (Benbadis 2003; Benbadis 2008). Recognized variants including wickets, hypnagogic hypersynchrony and hyperventilation slowing were also overread, but they were not the main source. The 14 and 6 Hz bursts are not named among the leading overreads in those reports. A photoparoxysmal response is a genuine epileptiform finding, discussed in Module 9, not an overread. The practical point is that a variant list does not protect against the commonest error; a rule applied to every sharp-looking wave does."
+    },
+    {
+      "question": "A resident scores a temporal transient in a 16-year-old at 4 of 6 IFCN criteria and wants to know whether to report it as epileptiform. Which statement best reflects the evidence?",
+      "options": [
+        "Four is the IFCN threshold, so it must be reported as epileptiform without further review",
+        "Four meets the IFCN threshold, but a validation study found 5 of 6 the best clinical threshold, so look carefully for a fifth criterion in other montages before calling it",
+        "Anything under 6 of 6 is not epileptiform",
+        "The criteria apply only to adults, so they cannot be used at 16"
+      ],
+      "answer": 1,
+      "explanation": "The IFCN glossary sets the threshold at 4 of 6 (Kane 2017), but in a prospective validation of 100 patients, requiring at least 5 gave 95.7% specificity and 81.5% sensitivity, and the authors judged 5 the best threshold for clinical use (Kural 2020). A transient scoring 4 therefore sits at the edge: it deserves a deliberate search for a fifth criterion, particularly the field, which is best judged across bipolar and referential montages. Insisting on 6 of 6 would discard the validated threshold and lose real discharges. Reporting at 4 without further review ignores the cost of a false positive that the first section of this module describes. Nothing in the criteria restricts them by age; the study population and the glossary are not age-limited in that way."
+    },
+    {
+      "question": "A record from an untreated 8-year-old shows diffuse slowing during hyperventilation that resolves within a minute of stopping, and nothing else. The draft impression reads \"abnormal, generalized slowing.\" What is the right correction?",
+      "options": [
+        "Keep the impression; any generalized slowing is abnormal",
+        "Change the impression to generalized spike-wave, since hyperventilation provoked it",
+        "Recommend neuroimaging for the slowing",
+        "Describe the slowing as an expected response to hyperventilation in a child and report the study as normal"
+      ],
+      "answer": 3,
+      "explanation": "Marked slowing during hyperventilation is normal in children, as Module 4 describes, and hyperventilation slowing is among the normal findings documented as overread in patients misdiagnosed with epilepsy (Benbadis 2003; Benbadis 2008). Slowing that appears with the procedure and resolves shortly after it is the physiologic response, not an abnormality of the background. Calling it generalized slowing turns a provoked, transient change into a sign of encephalopathy. Calling it spike-wave invents a discharge that was not seen; the outline's rule is that hyperventilation in an untreated child either produces 2.5 to 4 Hz spike-wave or it does not. Neuroimaging for a normal response has no basis. The report should record that hyperventilation was performed and adequate, describe the response, and give a normal impression."
+    }
+  ],
+  "resources": [
+    { "label": "Learning EEG: Normal Variants", "url": "https://www.learningeeg.com/normal-variants.html" },
+    { "label": "eeg-training.com: EEG Fundamentals", "url": "https://www.eeg-training.com/eeg-fundamentals.html", "note": "The normal-variants unit." },
+    { "label": "EEGmaster atlas: Benign EEG Variants module", "url": "https://eegmaster.com/eegmaster/", "note": "Free account required." },
+    { "label": "Kural 2020 in Neurology", "url": "https://doi.org/10.1212/WNL.0000000000009439", "note": "The validation study of the IFCN criteria." }
+  ],
+  "signOff": "On ten sharp transients chosen by faculty, the resident scores each against the six IFCN criteria and agrees with the faculty call on at least eight.",
+  "sources": ["kane2017", "kural2020", "borusiak2010", "benbadis2003", "benbadis2008", "stlouis2016"]
+}

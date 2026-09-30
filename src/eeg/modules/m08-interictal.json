@@ -1,0 +1,216 @@
+{
+  "id": "m08-interictal",
+  "number": 8,
+  "title": "Interictal epileptiform and non-epileptiform abnormalities",
+  "short": "Interictal findings",
+  "description": "How to describe an epileptiform discharge precisely, and how to separate it from slowing, rhythmic delta and asymmetries, each of which points to a different set of causes.",
+  "why": "Once a transient passes the Module 5 test, the resident must describe it precisely and separate epileptiform findings from slowing, which points to a different set of causes.",
+  "track": "abnormal",
+  "tags": [
+    "Abnormal & Ictal"
+  ],
+  "difficulty": "intermediate",
+  "duration": "50 min",
+  "color": "#7c3aed",
+  "objectives": [
+    "Describe an epileptiform discharge by type, location, field, prevalence and state.",
+    "Distinguish focal from generalized discharges, and recognize secondary bilateral synchrony as a possibility.",
+    "Recognize focal and diffuse slowing, intermittent rhythmic delta and asymmetries, and state what each suggests."
+  ],
+  "sections": [
+    {
+      "title": "Describing an epileptiform discharge",
+      "content": "A discharge that has passed the six IFCN criteria from [[m05-variants|Module 5]] still has to be described before it can be interpreted, and the description is what the next reader, and the clinician, will act on. Five elements make it complete: **type**, **location**, **field**, **prevalence** and **state**.\n\n**Type.** By the IFCN glossary, a **spike** lasts 20 to under 70 ms and a **sharp wave** 70 to 200 ms ([Kane 2017](https://pubmed.ncbi.nlm.nih.gov/30214992/)). Measure the duration at the base of the transient, not by impression. The distinction is worth recording because the vocabulary is standard, but it carries little clinical weight: a sharp wave over the left temporal region means much the same as a spike there. Location and field matter more than the width of the wave. Note also whether the transient stands alone or is followed by a slow wave (spike-and-slow-wave) or is repetitive (polyspikes).\n\n**Location and field.** Name the electrode of maximum negativity, found by phase reversal or referential amplitude as in [[m01-signals|Module 1]], and then the electrodes over which the field spreads. A discharge with a maximum at C4 and a field over F4 and P4 is a different finding from one confined to C4 and T4, and a horizontal dipole with a positive end deserves its own sentence, because it is one of the clues to the centrotemporal discharges of [[m09-syndromes|Module 9]].\n\n**Prevalence and state.** Say how often the discharge occurred during the record and in which state it appeared. A single sharp wave in drowsiness and a discharge that recurred every few seconds throughout sleep are different findings with different weight. Stating the state also protects the reader from the commonest over-read, since drowsiness and sleep are where the normal variants of Module 5 live.\n\nA description built from these five elements lets the impression follow without argument, and lets a later reader compare records across time. A description that omits any of them leaves the clinician to guess.",
+      "keyPoints": [
+        "A complete description names type, location, field, prevalence and state.",
+        "By the IFCN glossary a spike lasts 20 to under 70 ms and a sharp wave 70 to 200 ms (Kane 2017); the distinction has little clinical weight.",
+        "Location and field matter more than the width of the transient; name the maximum and the electrodes it spreads to.",
+        "Prevalence and state let the next reader weigh the finding and compare records over time."
+      ],
+      "question": {
+        "question": "Two residents describe the same finding on a 6-year-old's record. One writes \"spikes.\" The other writes \"occasional left centrotemporal sharp waves, maximum C3 with a field over T3 and P3, seen only in drowsiness and light sleep.\" A colleague argues the first is adequate because the transient measured 60 ms and so is technically a spike. Which description should the report use, and why?",
+        "options": [
+          "The first, because the IFCN duration measurement is the defining feature and the second misnames a spike as a sharp wave",
+          "Neither; the transient should be re-measured before anything is written, since a 60 ms wave sits close to the boundary",
+          "The second, corrected to \"spikes,\" because location, field, prevalence and state carry the clinical weight and the duration is the least important element",
+          "The first, because prevalence and state belong in the impression rather than the description"
+        ],
+        "answer": 2,
+        "explanation": "The five elements of a description are type, location, field, prevalence and state. The second description supplies four of them and only mislabels the type; the first supplies one. Location, field, prevalence and state are what tell the clinician whether this is a centrotemporal discharge activated by sleep, which is the pattern Module 9 and Module 5 both discuss, so the second description is the one to keep, with the type corrected to spikes since 60 ms falls in the 20 to under 70 ms range (Kane 2017). Treating the duration as the defining feature reverses the priority: the IFCN glossary gives the boundary, but the outline is explicit that the distinction carries little clinical weight. Re-measuring before writing anything delays a report over the least important element. Prevalence and state belong in the description, not the impression; the impression states whether the record is normal or abnormal and lists the findings."
+      }
+    },
+    {
+      "title": "Focal, generalized, and the possibility of secondary bilateral synchrony",
+      "content": "Epileptiform discharges are broadly **focal** or **generalized**, and the split matters because it points toward different syndromes and different studies. A focal discharge has a maximum at one electrode or region, with a field that falls away from it. A generalized discharge appears over both hemispheres at once, usually with a frontal or fronto-central maximum, and is described by its **frequency** and by the **activation** that brings it out: sleep, hyperventilation or photic stimulation. The main generalized patterns are **spike-wave**, **polyspike-wave** and **slow spike-wave**, and their frequencies are what separate the syndromes of [[m09-syndromes|Module 9]], where the 3 Hz spike-wave of childhood absence epilepsy, the 3 to 5.5 Hz polyspike-wave of juvenile myoclonic epilepsy and the slow spike-wave below 2.5 Hz of Lennox-Gastaut syndrome are set out in the ILAE 2022 definitions.\n\n**Secondary bilateral synchrony**\n\nNot every bilateral discharge is generalized in origin. A focal generator, most often frontal, can drive both hemispheres so quickly that the discharge looks generalized on a routine read. The clue is consistency: the same side leads, by a fraction of a second, discharge after discharge, or the discharge is repeatedly asymmetric with the same hemisphere larger. That is **secondary bilateral synchrony**, and it should be raised as a possibility whenever generalized-looking discharges have a stable lead or a stable asymmetry, because it changes the syndrome under consideration and the imaging question. The reverse error also happens: the outline notes that in juvenile myoclonic epilepsy the generalized discharges can look focal or asymmetric on a given record, so a single asymmetric burst does not make a focal epilepsy.\n\n**What the split changes**\n\nA focal discharge raises the question of a focal epilepsy and, depending on its location, morphology and the child's history, of a structural cause. A generalized discharge raises the idiopathic generalized and developmental and epileptic encephalopathy syndromes, whose EEG signatures Module 9 sets out. The description therefore needs to say which it is, and, when the record cannot decide, to say that too.",
+      "keyPoints": [
+        "Focal discharges have a maximum and a field that falls away from it; generalized discharges appear over both hemispheres, usually with a frontal or fronto-central maximum.",
+        "Generalized spike-wave, polyspike-wave and slow spike-wave are described by frequency and by what activates them: sleep, hyperventilation or photic stimulation.",
+        "A stable lead or a stable asymmetry across repeated bilateral discharges raises secondary bilateral synchrony from a focal generator.",
+        "In juvenile myoclonic epilepsy, generalized discharges can look focal or asymmetric on a single record."
+      ],
+      "question": {
+        "question": "A 10-year-old's record shows repeated bursts of bilateral spike-wave. On close review, the right frontal channels lead every burst by a fraction of a second and are consistently larger. The referring note says \"generalized epilepsy.\" What should the report do?",
+        "options": [
+          "Describe generalized spike-wave, since bilateral discharges are by definition generalized",
+          "Describe the bursts and their consistent right frontal lead, and raise secondary bilateral synchrony from a focal generator as a possibility",
+          "Describe right frontal spikes only, since the leading side identifies the sole abnormality",
+          "Describe generalized spike-wave with a note that asymmetry is a normal feature of generalized discharges in children"
+        ],
+        "answer": 1,
+        "explanation": "A consistent lead from one side, repeated across discharges, is the signature of secondary bilateral synchrony, in which a focal, often frontal, generator drives both hemispheres. The report should describe what was seen, including the lead and the asymmetry, and state the possibility, because it changes the syndrome question and may raise an imaging question. Calling the discharges generalized by definition ignores the lead. Reducing the finding to right frontal spikes discards the bilateral spread that was actually recorded. Dismissing the asymmetry as normal overstates the outline's caution about juvenile myoclonic epilepsy, where a single burst can look asymmetric; a stable lead across every burst is a different matter and deserves to be named."
+      }
+    },
+    {
+      "title": "Sleep activates, and a record without sleep is a weaker negative",
+      "content": "Many focal and generalized discharges appear only in **drowsiness and sleep**. The centrotemporal discharges of SeLECTS are the classic example: they are activated in drowsiness and sleep, and a fully awake record can be normal in a child who will show abundant discharges within minutes of falling asleep. Generalized discharges behave the same way in many children, and the spike-wave of DEE-SWAS and EE-SWAS is, by definition, markedly activated in non-REM sleep ([Specchio 2022](https://pubmed.ncbi.nlm.nih.gov/35503717/)). The mechanism is the shift in thalamocortical rhythms that comes with sleep onset: the same circuits that generate spindles become more synchronized, and a cortex with a lowered threshold discharges into that synchrony.\n\n**What this means for the read**\n\nA routine record that did not capture sleep is a **weaker negative**. It can still be reported as normal, but the report must say that sleep was not obtained, because the clinician will otherwise read \"normal\" as \"no discharges\" when the record never sampled the state in which discharges occur. This is one of the elements of the technical description that [[m02-read-and-report|Module 2]] insists on.\n\n**What this means for the recommendation**\n\nWhen the question is a syndrome whose discharges live in sleep, ask for the study that samples sleep. Module 9 makes the pairing explicit: sleep for SeLECTS and for spike-wave activation in sleep, hyperventilation for absence, and a recorded event for spasms. A second routine study without sleep answers the same non-question twice.\n\n**The other direction**\n\nSleep also brings out the normal variants of [[m05-variants|Module 5]], so a discharge found in drowsiness has to pass the same six criteria as one found awake. State is part of the description precisely so that the reader can weigh it.",
+      "keyPoints": [
+        "Many focal and generalized discharges appear only in drowsiness and sleep; centrotemporal spikes and sleep-activated spike-wave are the clearest examples.",
+        "A record without sleep is a weaker negative, and the report must say that sleep was not obtained.",
+        "Match the study to the question: sleep for SeLECTS and sleep-activated spike-wave, hyperventilation for absence, a recorded event for spasms.",
+        "Drowsiness also brings out normal variants, so state is part of every description."
+      ],
+      "question": {
+        "question": "A 7-year-old with two nocturnal seizures involving facial twitching and drooling has a normal 25-minute awake routine EEG. Sleep was not obtained. The referring physician asks whether the normal study rules out self-limited epilepsy with centrotemporal spikes. What should you say?",
+        "options": [
+          "Yes; a normal routine study makes the diagnosis unlikely, and a repeat routine study is unnecessary",
+          "No; centrotemporal discharges are activated in drowsiness and sleep, so an awake-only record is a weaker negative, and a study that captures sleep is the right next step",
+          "No; the diagnosis requires a recorded event, so video-EEG monitoring for several days is the right next step",
+          "Yes, provided hyperventilation was performed adequately, since that is the activation procedure for this syndrome"
+        ],
+        "answer": 1,
+        "explanation": "The discharges of SeLECTS are activated in drowsiness and sleep, so a record that never sampled sleep has not tested the hypothesis, and the report should say that sleep was not obtained. The right next step is a study that captures sleep, which is the pairing Module 9 sets out. Calling the diagnosis unlikely on an awake-only record reads a weak negative as a strong one. Prolonged monitoring to capture an event is the study for spasms or for event characterization, not the first step for a syndrome defined by an interictal pattern that sleep brings out. Hyperventilation is the activation procedure for absence epilepsy, not for centrotemporal discharges."
+      }
+    },
+    {
+      "title": "Slowing: focal and diffuse",
+      "content": "Slowing is the other great family of abnormality, and it points to a different set of causes from epileptiform discharges. The reading question is always twofold: is the slowing **focal** or **diffuse**, and is it **continuous** or **intermittent**?\n\n**Focal polymorphic delta**\n\nIrregular, mixed-frequency delta over one region that is **continuous** and **does not react** to state or stimulation suggests a **structural lesion** on that side. The physiology is a cortex that is deafferented or damaged: the normal faster rhythms are lost and what remains is slow, disorganized activity. The report should describe the slowing by location, frequency, continuity and reactivity, and the clinical correlation should say what it suggests. If the child has not had neuroimaging, recommending it is part of the read. Focal slowing that is intermittent and reactive is a weaker finding, and post-ictal slowing after a focal seizure is expected and transient, so the history and the timing of the study matter.\n\n**Diffuse slowing**\n\nSlowing of the whole background **for age** suggests **encephalopathy**, and the causes are metabolic, toxic, post-ictal or diffusely structural. \"For age\" is the operative phrase: a 4 Hz posterior rhythm is normal at 18 months and slow at 10 years, and the normal values by age in [[m04-normal-by-age|Module 4]] are the reference. Diffuse slowing is a state of the whole brain, so the impression should not name a location, and the clinical correlation should list the causes the history makes likely rather than pick one. Sedating medication is a common cause in the hospital, which is why [[m02-read-and-report|Module 2]] requires the medications to be stated.\n\n**Why the distinction matters**\n\nFocal continuous slowing sends the child toward imaging. Diffuse slowing sends the clinician back to the metabolic panel, the medication list and the events of the preceding days. Placing each finding on the right side of the epileptiform versus non-epileptiform line, and on the right side of the focal versus diffuse line, is the skill this module's sign-off tests.",
+      "keyPoints": [
+        "Continuous, non-reactive focal polymorphic delta suggests a structural lesion on that side; recommend neuroimaging if it has not been done.",
+        "Diffuse slowing of the background for age suggests encephalopathy, from metabolic, toxic, post-ictal or diffuse structural causes.",
+        "Judge slowing against the normal values for age, and describe location, frequency, continuity and reactivity.",
+        "Focal slowing points toward imaging; diffuse slowing points back to the history, the metabolic panel and the medication list."
+      ],
+      "question": {
+        "question": "A 9-year-old has continuous, irregular 1 to 2 Hz delta over the left temporal region that does not change with state or stimulation. The rest of the background is normal for age. No imaging has been done. What does the finding suggest, and what should the report recommend?",
+        "options": [
+          "A structural lesion on the left; recommend neuroimaging",
+          "Diffuse encephalopathy; recommend a metabolic evaluation and review of medications",
+          "A post-ictal state; recommend a repeat study in a week",
+          "A normal variant of childhood; recommend no further evaluation"
+        ],
+        "answer": 0,
+        "explanation": "Focal polymorphic delta that is continuous and does not react is the pattern that suggests a structural lesion on that side, and the outline's answer is to recommend neuroimaging if it has not been done. Diffuse encephalopathy would slow the whole background for age, and here the rest of the record is normal, so the finding is focal, not diffuse. A post-ictal state produces slowing that is transient and is tied to a recent seizure in the history; continuous, non-reactive slowing without that history should not be waited out. None of the normal variants of Module 5 consists of continuous focal delta, so calling it a variant is an over-normalization rather than an over-read."
+      }
+    },
+    {
+      "title": "Intermittent rhythmic delta, asymmetries and breach",
+      "content": "Three further non-epileptiform findings recur in pediatric records, and each is easy to misplace.\n\n**Intermittent rhythmic delta**\n\nRhythmic, monomorphic delta that comes in runs is a different finding from polymorphic slowing, and its location changes its meaning. **Occipital intermittent rhythmic delta activity (OIRDA)** is a childhood pattern, often seen with absence epilepsy; when you find it, look through the rest of the record, and especially through hyperventilation, for generalized 3 Hz spike-wave. **Frontal intermittent rhythmic delta activity (FIRDA)** is usually a nonspecific sign of encephalopathy and should be read alongside the background rather than as a localizing finding. Both are rhythmic and both are intermittent, so the distinction from an evolving ictal pattern rests on the absence of evolution, a point [[m10-seizures-status|Module 10]] develops.\n\n**Asymmetry**\n\nA hemisphere with **lower voltage** than the other has two kinds of explanation, and the report should name both. The first is **cortical dysfunction** on the low side. The second is something **between the cortex and the electrodes** that attenuates the signal: a subdural collection, scalp swelling, or any fluid layer. After a head injury the second explanation is at least as likely as the first, and the recommendation follows from that. An asymmetry can also be a montage or electrode problem, so check impedances and the referential montage before you commit.\n\n**Breach rhythm**\n\nOver a **skull defect**, the bone that normally attenuates the signal is missing, so the activity beneath is **higher in voltage and sharper** than on the other side. That is a **breach rhythm**, and it is **not epileptiform**. Its sharp contour is the trap: faster rhythms with sharpened peaks over a craniotomy site fail the field and morphology criteria of [[m05-variants|Module 5]] once the skull history is known. Ask about surgery before calling anything over a scar.\n\n**Placing each finding**\n\nOIRDA and FIRDA are rhythmic slowing; asymmetries are amplitude findings; breach is a technical consequence of anatomy. None is epileptiform, and describing them as such is one of the routes to misdiagnosing epilepsy that Module 5 warns about.",
+      "keyPoints": [
+        "OIRDA is a childhood pattern often seen with absence epilepsy: look for generalized 3 Hz spike-wave, especially during hyperventilation.",
+        "FIRDA is usually a nonspecific sign of encephalopathy, not a localizing finding.",
+        "A lower-voltage hemisphere means cortical dysfunction or something between cortex and electrodes, such as a subdural collection or scalp swelling; after head injury, name both.",
+        "A breach rhythm over a skull defect is higher in voltage and sharper, and is not epileptiform."
+      ],
+      "question": {
+        "question": "A 6-year-old referred for staring spells has runs of rhythmic 3 Hz delta over both occipital regions that block with eye opening. What is the pattern, and what should you do with the rest of the record?",
+        "options": [
+          "Occipital polymorphic slowing suggesting a posterior structural lesion; recommend neuroimaging",
+          "Posterior slow waves of youth; report the record as normal",
+          "Occipital intermittent rhythmic delta activity (OIRDA); look for generalized 3 Hz spike-wave, especially during hyperventilation",
+          "Occipital seizures; describe each run as an electrographic seizure"
+        ],
+        "answer": 2,
+        "explanation": "Rhythmic, monomorphic delta in runs over both occipital regions in a child is OIRDA, a childhood pattern often seen with absence epilepsy, and the outline's instruction is to look for generalized 3 Hz spike-wave, especially during hyperventilation, since the referral question is staring. Polymorphic slowing suggesting a lesion is irregular and continuous, and unilateral, which this is not. Posterior slow waves of youth ride on the alpha rhythm and block with eye opening, but they are individual slow waves fused with the background, not bilateral runs of rhythmic 3 Hz delta in a 6-year-old with a clinical question. Calling the runs seizures ignores that they do not evolve; Module 10 sets out why evolution, not rhythmicity alone, defines an electrographic seizure."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A child has lower voltage over the right hemisphere on a record obtained after a head injury. Which pair of explanations should the report name?",
+      "options": [
+        "Right cortical dysfunction, or a right-sided breach rhythm from the injury",
+        "Right cortical dysfunction, or fluid or swelling between cortex and electrodes such as a subdural hematoma",
+        "A normal childhood asymmetry, or a montage artifact",
+        "Right cortical dysfunction, or post-ictal slowing on the right"
+      ],
+      "answer": 1,
+      "explanation": "The outline gives two explanations for a lower-voltage side: cortical dysfunction on that side, or something between the cortex and the electrodes, such as a subdural collection or scalp swelling. After a head injury the second is at least as likely as the first, and the report should name both so the clinician can image. A breach rhythm raises voltage over a skull defect rather than lowering it, so it explains the opposite finding. A montage artifact is worth excluding at the reading station, but a normal childhood asymmetry is not a recognized explanation for a hemispheric voltage difference after trauma. Post-ictal slowing changes frequency rather than producing a persistent voltage asymmetry, and there is no seizure in the history."
+    },
+    {
+      "question": "A transient measured at 90 ms with a maximum at T3 and a field over F7 and T5 was recorded eight times during light sleep in a 5-year-old. Which report description is complete?",
+      "options": [
+        "Left temporal spikes",
+        "Left temporal epileptiform discharges, frequent",
+        "Occasional left mid-temporal sharp waves, maximum T3 with a field over F7 and T5, occurring in light sleep only",
+        "Epileptiform discharges consistent with a focal epilepsy"
+      ],
+      "answer": 2,
+      "explanation": "A complete description gives type, location, field, prevalence and state. At 90 ms the transient is a sharp wave by the IFCN glossary, which puts sharp waves at 70 to 200 ms (Kane 2017); the maximum and field are named; eight occurrences in a record are a prevalence; light sleep is the state. Calling them spikes misclassifies a 90 ms transient, though the outline notes the distinction carries little clinical weight, and it omits field, prevalence and state. Naming them frequent without a maximum, a field or a state leaves the next reader unable to weigh the finding. A statement about a focal epilepsy is clinical correlation, not description, and belongs in a different part of the report, as Module 2 sets out."
+    },
+    {
+      "question": "A 14-year-old with morning jerks has one burst of generalized polyspike-wave that is larger over the left hemisphere. The resident proposes describing a left focal epileptiform discharge. What is the better course?",
+      "options": [
+        "Describe generalized polyspike-wave with a left-sided asymmetry, noting that generalized discharges in juvenile myoclonic epilepsy can look focal or asymmetric",
+        "Describe a left frontal focus with secondary bilateral synchrony, since asymmetry proves a focal generator",
+        "Describe a left focal discharge and recommend neuroimaging",
+        "Describe a normal record, since a single burst is not enough to report"
+      ],
+      "answer": 0,
+      "explanation": "The outline states that in juvenile myoclonic epilepsy the generalized discharges can look focal or asymmetric on a given record, so a single asymmetric burst of polyspike-wave in an adolescent with morning jerks should be described as what it is, generalized polyspike-wave with an asymmetry, rather than relabelled as focal. Secondary bilateral synchrony is raised when the same side leads consistently across repeated discharges; one burst does not establish a stable lead. Describing a focal discharge and recommending imaging turns a known pitfall into an imaging workup. Ignoring the burst is wrong in the other direction: a generalized polyspike-wave burst is an abnormal finding and belongs in the report."
+    },
+    {
+      "question": "A hospitalized 8-year-old on a sedative infusion has a background of 4 to 5 Hz activity over both hemispheres with no focal features and no epileptiform discharges. How should the finding be placed, and what should the clinical correlation say?",
+      "options": [
+        "Focal slowing; recommend neuroimaging",
+        "A normal record, since 4 to 5 Hz activity is within the range for childhood",
+        "Diffuse slowing suggesting a left hemispheric lesion, since sedation cannot slow the background",
+        "Diffuse slowing for age suggesting encephalopathy; note that metabolic, toxic including the sedative, post-ictal and diffuse structural causes should be considered"
+      ],
+      "answer": 3,
+      "explanation": "Slowing of the whole background for age with no focal features is diffuse slowing, and the outline places it with encephalopathy from metabolic, toxic, post-ictal or diffuse structural causes. The sedative is a toxic cause in this sense and is exactly why medications belong in the report. Focal slowing requires a regional maximum, which is absent. A 4 to 5 Hz background is slow for an 8-year-old, whose expected posterior rhythm is set out in Module 4, so calling the record normal ignores the age reference. A diffuse finding cannot suggest a left hemispheric lesion, and sedatives do slow the background."
+    },
+    {
+      "question": "A 12-year-old who had a craniotomy last year has sharply contoured, higher-voltage faster rhythms over the operative site. The rest of the record is unremarkable. How should this be reported?",
+      "options": [
+        "As focal epileptiform discharges at the operative site, since sharp contour and higher voltage are two of the IFCN criteria",
+        "As focal slowing suggesting a structural lesion, given the surgical history",
+        "As a breach rhythm over the skull defect, which is not epileptiform",
+        "As an artifact from the scar tissue, to be ignored"
+      ],
+      "answer": 2,
+      "explanation": "Over a skull defect the missing bone no longer attenuates the signal, so the activity beneath looks higher in voltage and sharper: a breach rhythm, which the outline states is not epileptiform. The sharp contour is the trap, and it is why the surgical history has to be known before anything sharp over a scar is called a discharge; sharpened normal rhythms do not meet the morphology and field criteria of Module 5 once the anatomy is understood. The finding is faster, not slower, so it is not focal slowing. It is not an artifact either: it is genuine cerebral activity seen through a window, and it should be described and named so that later readers do not over-read it."
+    }
+  ],
+  "resources": [
+    {
+      "label": "Learning EEG: Non-Epileptiform",
+      "url": "https://www.learningeeg.com/nonepileptiform.html"
+    },
+    {
+      "label": "Learning EEG: Epileptiform Discharges",
+      "url": "https://www.learningeeg.com/epileptiform.html"
+    },
+    {
+      "label": "eeg-training.com: EEG Fundamentals",
+      "url": "https://www.eeg-training.com/eeg-fundamentals.html",
+      "note": "The interictal patterns unit."
+    },
+    {
+      "label": "eeg-training.com: EEG Videos",
+      "url": "https://www.eeg-training.com/eeg_videos.html",
+      "note": "The interictal abnormalities, focal slowing and diffuse slowing lessons."
+    },
+    {
+      "label": "EEGmaster atlas",
+      "url": "https://eegmaster.com/eegmaster/",
+      "note": "Nonepileptiform and Interictal Epileptiform modules. Free account required."
+    }
+  ],
+  "signOff": "The resident describes ten abnormal records in full, with each finding placed correctly as epileptiform or non-epileptiform.",
+  "sources": [
+    "kane2017",
+    "specchio2022",
+    "hirschE2022",
+    "borusiak2010"
+  ]
+}

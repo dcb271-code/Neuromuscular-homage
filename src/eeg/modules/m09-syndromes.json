@@ -1,0 +1,219 @@
+{
+  "id": "m09-syndromes",
+  "number": 9,
+  "title": "EEG of the pediatric epilepsy syndromes",
+  "short": "Epilepsy syndromes",
+  "description": "The EEG features that define, support or argue against the common infant and childhood epilepsy syndromes under the ILAE 2022 definitions, and which study to order for each question.",
+  "why": "The ILAE 2022 syndrome definitions each list mandatory EEG features, alerts and exclusions, so the EEG often confirms or rules out a syndrome outright.",
+  "track": "abnormal",
+  "tags": [
+    "Abnormal & Ictal",
+    "Clinical Decision-Making"
+  ],
+  "difficulty": "intermediate",
+  "duration": "55 min",
+  "color": "#7c3aed",
+  "objectives": [
+    "State the mandatory EEG features of the common infant and childhood syndromes.",
+    "Know which findings argue against a syndrome, for example no spike-wave in an untreated child after adequate hyperventilation.",
+    "Recommend the right study for the question: sleep for SeLECTS and spike-wave activation in sleep, hyperventilation for absence, and a recorded event for spasms."
+  ],
+  "sections": [
+    {
+      "title": "How the ILAE 2022 definitions use the EEG",
+      "content": "The 2022 ILAE position papers define each epilepsy syndrome by a structured set of features, and the EEG is written into that structure. For each syndrome the definitions list **mandatory** features, which must be present, **alerts**, which are findings that should make you reconsider the diagnosis, and **exclusionary** features, which rule it out. Three papers cover the pediatric range: syndromes with onset in neonates and infants ([Zuberi 2022](https://pubmed.ncbi.nlm.nih.gov/35503712/)), syndromes with onset in childhood ([Specchio 2022](https://pubmed.ncbi.nlm.nih.gov/35503717/)), and the idiopathic generalized epilepsies ([Hirsch E 2022](https://pubmed.ncbi.nlm.nih.gov/35503716/)). The ILAE's [epilepsydiagnosis.org](https://www.epilepsydiagnosis.org/) site presents the same material syndrome by syndrome, with an EEG tab on each page.\n\n**What this changes for the reader**\n\nBecause the definitions are explicit, the EEG can do more than support a clinical impression: it can **confirm** a syndrome when the mandatory features are present, and it can **argue against** one when an alert or an exclusion is met. That means the report's clinical correlation can be specific, and it also means the reader has to know the criteria rather than a list of classic patterns. A pattern that is characteristic but not mandatory, such as hypsarrhythmia in infantile epileptic spasms syndrome, cannot be used to withhold a diagnosis, and a finding listed as an alert, such as the absence of spike-wave after adequate hyperventilation in an untreated child with suspected absence epilepsy, has to be reported as such.\n\n**Matching the study to the question**\n\nThe definitions also tell you which recording answers which question. The discharges of SeLECTS and the sleep-activated spike-wave of DEE-SWAS and EE-SWAS live in **sleep**, so ask for a study that captures it. Childhood absence epilepsy is provoked by **hyperventilation** in most untreated patients, so a study without adequate hyperventilation has not tested for it. Spasms are diagnosed by their ictal EEG, so the question needs a **recorded event**, which usually means prolonged video-EEG. Ordering a routine awake record for each of these three questions is the commonest way to get an uninformative negative, a point [[m08-interictal|Module 8]] makes about sleep and [[m02-read-and-report|Module 2]] makes about activation procedures.",
+      "keyPoints": [
+        "ILAE 2022 defines each syndrome by mandatory, alert and exclusionary features, and the EEG is part of each list (Zuberi 2022; Specchio 2022; Hirsch E 2022).",
+        "The EEG can confirm a syndrome when mandatory features are present and argue against one when an alert or exclusion is met.",
+        "A characteristic but non-mandatory pattern, such as hypsarrhythmia, cannot be used to withhold a diagnosis.",
+        "Match the study to the question: sleep for SeLECTS and sleep-activated spike-wave, hyperventilation for absence, a recorded event for spasms."
+      ],
+      "question": {
+        "question": "A pediatrician asks for \"a routine EEG\" on three children: a 4-year-old with brief nocturnal facial seizures, a 6-year-old with daily staring, and a 6-month-old with clusters of flexion. Which set of studies matches each question?",
+        "options": [
+          "A routine awake study for all three, repeated if negative",
+          "A study that captures sleep for the 4-year-old, adequate hyperventilation for the 6-year-old, and prolonged video-EEG to record an event for the 6-month-old",
+          "Prolonged video-EEG for all three, since it captures sleep, hyperventilation and events",
+          "A sleep-deprived study for the 6-year-old, hyperventilation for the 4-year-old, and a routine awake study for the 6-month-old"
+        ],
+        "answer": 1,
+        "explanation": "The outline pairs each syndrome question with the recording that answers it: sleep for SeLECTS, hyperventilation for absence, and a recorded event for spasms. Nocturnal facial seizures raise SeLECTS, whose discharges are activated in drowsiness and sleep; daily staring raises childhood absence epilepsy, which hyperventilation provokes in most untreated patients; clusters of flexion in an infant raise infantile epileptic spasms syndrome, whose diagnosis rests on the ictal recording of a spasm. A routine awake study for all three gives an uninformative negative for each. Prolonged monitoring for all three is not wrong so much as wasteful for the first two, whose questions a well-performed routine study with sleep or hyperventilation can answer. The last option swaps the activation procedures between the first two children and leaves the infant's spasms unrecorded."
+      }
+    },
+    {
+      "title": "Infantile onset: EIDEE and infantile epileptic spasms syndrome",
+      "content": "The two infantile-onset syndromes in this module are developmental and epileptic encephalopathies, and their EEG features are set out in [Zuberi 2022](https://pubmed.ncbi.nlm.nih.gov/35503712/).\n\n| Syndrome | Key EEG features | Pitfalls |\n|---|---|---|\n| Early infantile DEE (EIDEE) | Burst suppression or multifocal discharges, with diffuse slowing | None listed in the outline |\n| Infantile epileptic spasms syndrome (IESS) | Interictal: hypsarrhythmia, or multifocal or focal discharges. Ictal: a high-amplitude generalized wave, then low-amplitude fast activity (electrodecrement) | Hypsarrhythmia is not required and may be absent early; do not delay treatment for it. A normal EEG during recorded spasms argues against IESS and should prompt you to reconsider the diagnosis |\n\n**EIDEE**\n\nEarly infantile developmental and epileptic encephalopathy is the 2022 term that brings together the earlier eponymous syndromes of the neonatal and early infantile period. Its EEG is a **burst suppression** pattern or **multifocal discharges**, on a background of **diffuse slowing**. The neonatal background categories of [[m07-neonatal-abnormal|Module 7]] are the vocabulary for describing it, and burst suppression there carries the same definition: invariant, abnormally composed bursts with interburst voltage below 5 µV and no variability or reactivity.\n\n**Infantile epileptic spasms syndrome**\n\nTwo findings are described. The **interictal** record classically shows **hypsarrhythmia**, a chaotic, high-voltage, disorganized background with multifocal spikes, but the definition also admits multifocal or focal discharges. The **ictal** record of a spasm shows a **high-amplitude generalized slow wave followed by low-amplitude fast activity**, the **electrodecrement**. The two pitfalls in the table are the ones that change management. First, hypsarrhythmia is **not required** and may be absent early in the course, so an infant with clinical spasms and a non-hypsarrhythmic record should not have treatment delayed while a repeat study is awaited. Second, a **normal EEG during recorded spasms** argues against the syndrome; if the event that the family calls a spasm is captured and the EEG does not change, the diagnosis needs to be reconsidered and the events re-examined. Both pitfalls are reasons why the right study for suspected spasms is one that records an event.",
+      "keyPoints": [
+        "EIDEE: burst suppression or multifocal discharges, with diffuse slowing (Zuberi 2022).",
+        "IESS interictal: hypsarrhythmia, or multifocal or focal discharges; ictal: a high-amplitude generalized wave then low-amplitude fast activity (electrodecrement).",
+        "Hypsarrhythmia is not required and may be absent early; do not delay treatment for it.",
+        "A normal EEG during recorded spasms argues against IESS and should prompt you to reconsider the diagnosis."
+      ],
+      "question": {
+        "question": "A 5-month-old with a two-week history of clusters of head drops and arm flexion has a routine EEG showing multifocal spikes on a moderately slow background, without hypsarrhythmia. No event was recorded. The team proposes waiting two weeks for a repeat study to \"see if hypsarrhythmia develops\" before starting treatment. What should you advise?",
+        "options": [
+          "Agree; hypsarrhythmia is the mandatory interictal feature and treatment should follow its appearance",
+          "Report the record as normal for age and reassure the family",
+          "Diagnose EIDEE, since multifocal discharges with slowing define it",
+          "Do not delay treatment for hypsarrhythmia, which is not required and may be absent early; arrange prolonged video-EEG to record an event, since the ictal electrodecrement is what confirms the syndrome"
+        ],
+        "answer": 3,
+        "explanation": "The ILAE 2022 definition admits multifocal or focal interictal discharges as well as hypsarrhythmia, and the outline is explicit that hypsarrhythmia is not required, may be absent early, and should not delay treatment. What confirms the syndrome is the ictal recording of a spasm, with its high-amplitude generalized wave followed by an electrodecrement, so the useful next study is one that records an event. Waiting for hypsarrhythmia treats a characteristic pattern as a mandatory one. Multifocal spikes on a slow background are not a normal record, so reassurance is wrong. EIDEE is a syndrome of neonatal and early infantile onset defined by burst suppression or multifocal discharges with diffuse slowing, and it should not be assigned to a 5-month-old with clinical spasms on the basis of the interictal record alone."
+      }
+    },
+    {
+      "title": "Childhood onset: absence, SeLECTS and SeLEAS",
+      "content": "Three childhood-onset syndromes account for much of the pediatric EEG workload, and each has a defining pattern with a defining pitfall.\n\n| Syndrome | Key EEG features | Pitfalls |\n|---|---|---|\n| Childhood absence epilepsy | Generalized 3 Hz (range 2.5 to 4 Hz) spike-wave, provoked by hyperventilation in most untreated patients; photic stimulation triggers it in 21% | No spike-wave after 3 minutes of well-performed hyperventilation in an untreated child makes it very unlikely (an alert in ILAE 2022; exclusionary on epilepsydiagnosis.org) |\n| SeLECTS (self-limited epilepsy with centrotemporal spikes) | High-amplitude centrotemporal sharp-and-slow waves, activated in drowsiness and sleep, with a horizontal dipole (frontal positive, temporo-parietal negative) | Also seen in healthy children |\n| SeLEAS (Panayiotopoulos) | Multifocal, high-voltage spike or sharp-and-slow waves, often posterior, shifting between recordings | Do not read the shifting foci as a structural lesion |\n\n**Childhood absence epilepsy**\n\nThe discharge is **generalized 3 Hz spike-wave**, with a range of 2.5 to 4 Hz, and it is **provoked by hyperventilation** in most untreated patients; photic stimulation triggers it in 21% ([Hirsch E 2022](https://pubmed.ncbi.nlm.nih.gov/35503716/)). The pitfall runs the other way: **no spike-wave after 3 minutes of well-performed hyperventilation in an untreated child** makes the syndrome very unlikely. ILAE 2022 lists this as an alert; epilepsydiagnosis.org treats it as exclusionary. Either way, the report must state whether hyperventilation was adequate, because a poor effort leaves the question open, which is the reporting rule [[m02-read-and-report|Module 2]] sets.\n\n**SeLECTS**\n\nThe discharges are **high-amplitude centrotemporal sharp-and-slow waves**, activated in drowsiness and sleep, with a **horizontal dipole**: frontal positive and temporo-parietal negative ([Specchio 2022](https://pubmed.ncbi.nlm.nih.gov/35503717/)). The dipole is the reason the discharge can phase-reverse with opposite polarities in different chains, a montage effect [[m01-signals|Module 1]] prepares you for. The pitfall is that the same discharges occur in **healthy children**: in the prospective study cited in [[m05-variants|Module 5]], 4.2% of healthy children had rolandic discharges ([Borusiak 2010](https://pubmed.ncbi.nlm.nih.gov/20002145/)). Centrotemporal spikes support the diagnosis in a child with the right seizures; they do not make it in a child without.\n\n**SeLEAS**\n\nSelf-limited epilepsy with autonomic seizures shows **multifocal, high-voltage spike or sharp-and-slow waves**, often posterior, that **shift between recordings**. The pitfall is to read a focus that has moved as evidence of a structural lesion. The shifting is the pattern.",
+      "keyPoints": [
+        "Childhood absence epilepsy: generalized 3 Hz (2.5 to 4 Hz) spike-wave, provoked by hyperventilation in most untreated patients; photic stimulation triggers it in 21% (Hirsch E 2022).",
+        "No spike-wave after 3 minutes of well-performed hyperventilation in an untreated child makes absence epilepsy very unlikely; the report must say whether hyperventilation was adequate.",
+        "SeLECTS: high-amplitude centrotemporal sharp-and-slow waves, activated in drowsiness and sleep, with a horizontal dipole; the same discharges occur in 4.2% of healthy children (Borusiak 2010).",
+        "SeLEAS: multifocal, often posterior, high-voltage discharges that shift between recordings; do not read the shifting foci as a lesion."
+      ],
+      "question": {
+        "question": "An untreated 6-year-old with frequent staring spells does 3 minutes of vigorous, well-performed hyperventilation with no spike-wave at any point in the record. What does this mean for childhood absence epilepsy, and what should the report say?",
+        "options": [
+          "It makes childhood absence epilepsy very unlikely; ILAE 2022 treats it as an alert to reconsider the diagnosis, and the report should state that hyperventilation was well performed",
+          "It confirms the diagnosis by exclusion of other causes, since hyperventilation is the standard provocation",
+          "It is uninformative, because absence discharges are activated by sleep rather than hyperventilation",
+          "It means the child should be treated empirically and re-recorded on medication"
+        ],
+        "answer": 0,
+        "explanation": "Hyperventilation provokes 3 Hz spike-wave in most untreated patients with childhood absence epilepsy, so its absence after 3 minutes of well-performed hyperventilation in an untreated child makes the syndrome very unlikely; ILAE 2022 lists it as an alert and epilepsydiagnosis.org treats it as exclusionary. The report should state that hyperventilation was adequate, because that is what gives the negative its weight. A negative activation cannot confirm a diagnosis. Sleep activation is the pattern of SeLECTS and of DEE-SWAS and EE-SWAS, not of absence epilepsy. Treating empirically and re-recording on medication would be expected to suppress discharges and would make the question harder to answer, not easier."
+      }
+    },
+    {
+      "title": "Lennox-Gastaut syndrome and the sleep-activated spike-wave encephalopathies",
+      "content": "Two childhood syndromes are defined by patterns that a routine awake record can miss, and both come with a rule about what is required.\n\n| Syndrome | Key EEG features | Pitfalls |\n|---|---|---|\n| Lennox-Gastaut syndrome | Generalized slow spike-wave below 2.5 Hz, and generalized paroxysmal fast activity (10 Hz or more), often in sleep | Both are required; one alone is not enough |\n| DEE-SWAS and EE-SWAS (formerly ESES/CSWS) | Slow (about 1.5 to 2 Hz) spike-wave markedly activated in NREM sleep | ILAE sets no spike-wave index threshold; the old 85% cutoff is not required |\n\n**Lennox-Gastaut syndrome**\n\nThe definition requires two patterns: **generalized slow spike-wave below 2.5 Hz** and **generalized paroxysmal fast activity of 10 Hz or more**, the latter often seen in sleep ([Specchio 2022](https://pubmed.ncbi.nlm.nih.gov/35503717/)). **Both are required; one alone is not enough.** Slow spike-wave on its own is a nonspecific finding of several encephalopathies, and paroxysmal fast activity on its own can be seen in other tonic-seizure disorders, so a record that shows only one should be described as showing that pattern, with the syndrome held open rather than assigned. Because the fast activity is often confined to sleep, a study that captures sleep is again the study that can answer the question.\n\n**DEE-SWAS and EE-SWAS**\n\nDevelopmental and/or epileptic encephalopathy with spike-wave activation in sleep is the 2022 name for the conditions formerly called ESES and CSWS. The pattern is **slow spike-wave, at about 1.5 to 2 Hz, markedly activated in non-REM sleep**. The pitfall is a number that generations of readers learned: the ILAE definition **sets no spike-wave index threshold**, and the old **85% cutoff is not required**. What the definition asks for is marked activation in sleep in a child with the clinical picture, including regression, so a record with sparse discharges awake and near-continuous discharges in non-REM sleep meets the EEG criterion without any percentage being calculated. The mechanism, a cortex that discharges into the synchrony of non-REM sleep, is the same one [[m08-interictal|Module 8]] describes for sleep activation in general, taken to its extreme.\n\n**The common thread**\n\nBoth syndromes are defined in part by patterns that live in sleep, and both have a rule that stops the reader short of the diagnosis on a partial finding: two patterns for Lennox-Gastaut, no index for the SWAS encephalopathies. Know the rules and the report will say exactly what was and was not seen.",
+      "keyPoints": [
+        "Lennox-Gastaut syndrome requires both generalized slow spike-wave below 2.5 Hz and generalized paroxysmal fast activity of 10 Hz or more, often in sleep; one alone is not enough (Specchio 2022).",
+        "DEE-SWAS and EE-SWAS: slow (about 1.5 to 2 Hz) spike-wave markedly activated in NREM sleep.",
+        "ILAE 2022 sets no spike-wave index threshold for DEE-SWAS and EE-SWAS; the old 85% cutoff is not required.",
+        "Both syndromes depend on sleep patterns, so a study that captures sleep is the one that can answer the question."
+      ],
+      "question": {
+        "question": "A 5-year-old with language regression has spike-wave that is sparse when awake and nearly continuous in NREM sleep. A colleague says the syndrome cannot be considered because the spike-wave index was calculated at 70%, below the 85% threshold. Which syndrome family should you consider, and is the index required?",
+        "options": [
+          "Lennox-Gastaut syndrome; the 85% index is required and 70% excludes it",
+          "Childhood absence epilepsy; the sleep activation is incidental and hyperventilation should be repeated",
+          "DEE-SWAS or EE-SWAS; ILAE 2022 requires marked activation in sleep, not a specific spike-wave index, so the 85% cutoff does not apply",
+          "DEE-SWAS or EE-SWAS, but only if the index reaches 85% on a repeat overnight study"
+        ],
+        "answer": 2,
+        "explanation": "Spike-wave that is sparse awake and nearly continuous in non-REM sleep, in a child with regression, is the pattern of DEE-SWAS and EE-SWAS, and the outline is explicit that ILAE 2022 sets no spike-wave index threshold and that the old 85% cutoff is not required. Marked activation in sleep is the criterion, and this record shows it. Lennox-Gastaut syndrome is defined by slow spike-wave below 2.5 Hz together with generalized paroxysmal fast activity, and it does not use a spike-wave index at all. Childhood absence epilepsy is a 3 Hz spike-wave syndrome provoked by hyperventilation, not a sleep-activated encephalopathy with regression. Requiring 85% on a repeat study reinstates the threshold the definition removed."
+      }
+    },
+    {
+      "title": "Adolescent onset: juvenile myoclonic epilepsy",
+      "content": "Juvenile myoclonic epilepsy is the idiopathic generalized epilepsy of adolescence, and its EEG is defined in [Hirsch E 2022](https://pubmed.ncbi.nlm.nih.gov/35503716/).\n\n| Syndrome | Key EEG features | Pitfalls |\n|---|---|---|\n| Juvenile myoclonic epilepsy | Generalized 3 to 5.5 Hz polyspike-wave and spike-wave; photoparoxysmal response in more than a third | Discharges can look focal or asymmetric |\n\n**The pattern**\n\nThe interictal discharge is **generalized polyspike-wave and spike-wave at 3 to 5.5 Hz**, faster on average than the 3 Hz spike-wave of childhood absence epilepsy and often with more than one spike preceding the slow wave. A **photoparoxysmal response** occurs in more than a third of patients, so photic stimulation is not a formality in an adolescent with morning jerks; it is one of the activation procedures that can bring out the defining discharge, and the report should say it was done and how the patient responded.\n\n**The pitfall**\n\nThe discharges **can look focal or asymmetric**. On a single record a polyspike-wave burst may be larger over one hemisphere, or a fragment may appear over one region only, and an unwary reader will describe a focal discharge and set off a focal-epilepsy workup, including imaging, in a patient with a generalized syndrome. [[m08-interictal|Module 8]] draws the line: a single asymmetric burst does not make a focal epilepsy, whereas a **stable lead** from the same side across repeated discharges is what raises secondary bilateral synchrony. Read the whole record, count the bursts, and describe the asymmetry as an asymmetry of generalized discharges when that is what it is.\n\n**Why it matters at the bedside**\n\nThe distinction between a generalized and a focal epilepsy changes the treatment conversation, and an EEG report that mislabels a generalized discharge as focal can push a patient toward the wrong path. As with the other syndromes in this module, the safeguard is to describe exactly what was seen, in the standard terms, and then to place it against the definition rather than against a remembered picture.",
+      "keyPoints": [
+        "Juvenile myoclonic epilepsy: generalized 3 to 5.5 Hz polyspike-wave and spike-wave (Hirsch E 2022).",
+        "A photoparoxysmal response occurs in more than a third, so photic stimulation should be performed and reported.",
+        "The discharges can look focal or asymmetric on a single record; describe an asymmetry of generalized discharges rather than a focal discharge.",
+        "A stable lead across repeated discharges, not a single asymmetric burst, is what raises secondary bilateral synchrony."
+      ],
+      "question": {
+        "question": "A 15-year-old with early-morning jerks of both arms has a record with several bursts of generalized 4 Hz polyspike-wave and a clear photoparoxysmal response. One burst is larger over the right hemisphere. The report draft reads \"right hemispheric epileptiform discharges; recommend MRI.\" How should the draft be corrected?",
+        "options": [
+          "Leave it; asymmetry identifies a focal generator and imaging is warranted",
+          "Change it to \"generalized 4 Hz polyspike-wave with a photoparoxysmal response, one burst asymmetric to the right,\" noting that discharges in juvenile myoclonic epilepsy can look focal or asymmetric",
+          "Change it to \"normal record,\" since polyspike-wave is a normal variant of adolescence",
+          "Change it to \"right frontal focus with secondary bilateral synchrony,\" since one asymmetric burst establishes a lead"
+        ],
+        "answer": 1,
+        "explanation": "Generalized 3 to 5.5 Hz polyspike-wave with a photoparoxysmal response in an adolescent with morning jerks is the EEG of juvenile myoclonic epilepsy, and the outline warns that its discharges can look focal or asymmetric on a single record. The correct description names the generalized pattern and the photic response, and reports the one asymmetric burst as an asymmetry. Treating the asymmetry as a focal generator sends a patient with a generalized syndrome to a focal-epilepsy workup. Polyspike-wave is an abnormal generalized discharge, not one of the normal variants of Module 5, so the record is not normal. Secondary bilateral synchrony is raised by a stable lead across repeated discharges, and a single larger burst does not establish one."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A 7-month-old with clusters of flexor spasms has a chaotic, high-voltage record with multifocal spikes. A recorded spasm shows a generalized high-amplitude slow wave followed by low-voltage fast activity. What is the diagnosis?",
+      "options": [
+        "Early infantile DEE, because multifocal discharges with a disorganized background define it",
+        "Lennox-Gastaut syndrome, because the fast activity is generalized paroxysmal fast activity",
+        "Infantile epileptic spasms syndrome, with hypsarrhythmia and an ictal electrodecremental response",
+        "A non-epileptic event, because the ictal change is a slow wave rather than a spike"
+      ],
+      "answer": 2,
+      "explanation": "A chaotic, high-voltage, multifocal interictal record is hypsarrhythmia, and a spasm whose ictal EEG shows a high-amplitude generalized wave followed by low-amplitude fast activity is the electrodecrement; together, in an infant with clusters of flexor spasms, they are infantile epileptic spasms syndrome as defined in Zuberi 2022. EIDEE is a syndrome of neonatal and early infantile onset defined by burst suppression or multifocal discharges with diffuse slowing, without the ictal electrodecrement of a spasm. Lennox-Gastaut syndrome requires slow spike-wave below 2.5 Hz together with generalized paroxysmal fast activity of 10 Hz or more, a different pair of findings in an older child. The recorded event has a clear ictal correlate, so it is not a non-epileptic event; the outline's alert about a normal EEG during a spasm applies only when the EEG does not change."
+    },
+    {
+      "question": "A 9-year-old with nocturnal seizures has centrotemporal sharp-and-slow waves in drowsiness with a horizontal dipole, frontal positive and temporo-parietal negative. The referring physician is puzzled that the discharge phase-reverses upward in one chain and downward in another and asks whether this indicates two separate foci. What is the explanation?",
+      "options": [
+        "A single horizontal dipole with a positive frontal end and a negative temporo-parietal end, which produces reversals of opposite polarity in different chains; this is the expected SeLECTS pattern",
+        "Two independent foci, one frontal and one temporo-parietal, which should each be described",
+        "A montage error; the record should be re-run",
+        "Secondary bilateral synchrony from a frontal generator"
+      ],
+      "answer": 0,
+      "explanation": "The ILAE 2022 definition of SeLECTS describes centrotemporal sharp-and-slow waves with a horizontal dipole, frontal positive and temporo-parietal negative (Specchio 2022). A dipole with two ends produces a negative phase reversal in the chain that passes over its negative end and a positive reversal in the chain that passes over its positive end, which is the montage effect Module 1 explains. Two independent foci would each need a field falling away from its own maximum, and the fields here are two ends of one generator. Nothing about the record is a montage error. Secondary bilateral synchrony concerns bilateral discharges with a stable lead, and these discharges are unilateral and centrotemporal."
+    },
+    {
+      "question": "A 4-year-old with autonomic seizures has high-voltage posterior spikes on the left on a first record and high-voltage right frontal spikes on a second record three months later. The team wants an MRI to find the lesion \"that keeps moving.\" What should the report say?",
+      "options": [
+        "Recommend MRI, since a change in localization between records suggests an evolving structural lesion",
+        "The second record is likely artifact, since a true focus does not move",
+        "The child has two separate focal epilepsies and both need investigation",
+        "The shifting multifocal, high-voltage, often posterior discharges are the expected pattern of self-limited epilepsy with autonomic seizures (SeLEAS), and should not be read as a structural lesion"
+      ],
+      "answer": 3,
+      "explanation": "Multifocal, high-voltage spike or sharp-and-slow waves, often posterior, that shift between recordings are the defining EEG of SeLEAS in Specchio 2022, and the outline's pitfall is exactly this one: do not read the shifting foci as a structural lesion. In a 4-year-old with autonomic seizures the moving focus is the syndrome, not a lesion on the move. Recommending MRI for the shift treats the defining pattern as a red flag. The second record is not artifact; high-voltage discharges with a proper field are cerebral. Two separate focal epilepsies would need two stable foci, and the whole point is that these are not stable."
+    },
+    {
+      "question": "A 6-year-old with tonic seizures and developmental delay has abundant generalized slow spike-wave at 2 Hz on an awake record, with no fast activity seen. Sleep was not captured. Can Lennox-Gastaut syndrome be assigned from this record?",
+      "options": [
+        "Yes; slow spike-wave below 2.5 Hz is the mandatory feature and the clinical picture completes it",
+        "No; the definition requires both slow spike-wave below 2.5 Hz and generalized paroxysmal fast activity of 10 Hz or more, which is often confined to sleep, so a study that captures sleep is needed before the syndrome can be assigned",
+        "No; slow spike-wave at 2 Hz is too fast, since the syndrome requires spike-wave at 1.5 Hz or below",
+        "Yes, provided the spike-wave index exceeds 85%"
+      ],
+      "answer": 1,
+      "explanation": "Specchio 2022 defines the EEG of Lennox-Gastaut syndrome by two patterns, generalized slow spike-wave below 2.5 Hz and generalized paroxysmal fast activity of 10 Hz or more, and the outline states that both are required and one alone is not enough. The fast activity is often seen in sleep, and this record did not capture sleep, so the report should describe the slow spike-wave, state that sleep was not obtained, and recommend a study that captures it. Treating slow spike-wave alone as sufficient ignores the second requirement. Spike-wave at 2 Hz is below 2.5 Hz and so meets the first pattern; there is no 1.5 Hz ceiling. The spike-wave index belongs to the old ESES criteria, which ILAE 2022 no longer requires even for DEE-SWAS and EE-SWAS, and it plays no part in Lennox-Gastaut syndrome."
+    },
+    {
+      "question": "A 13-year-old with new absences has generalized 3 Hz spike-wave provoked by hyperventilation, and photic stimulation also triggers a discharge. The reader wonders whether the photic response means the diagnosis is juvenile myoclonic epilepsy rather than an absence epilepsy. Which statement is correct?",
+      "options": [
+        "A photoparoxysmal response is exclusionary for absence epilepsy and confirms juvenile myoclonic epilepsy",
+        "Photic stimulation should not have been performed in a patient with absences",
+        "The 3 Hz frequency excludes juvenile myoclonic epilepsy, whose discharges are always below 3 Hz",
+        "Photic stimulation triggers spike-wave in 21% of childhood absence epilepsy, and a photoparoxysmal response occurs in more than a third of juvenile myoclonic epilepsy; the photic response alone does not decide between them, so the seizure types and the discharge frequency carry the weight"
+      ],
+      "answer": 3,
+      "explanation": "Hirsch E 2022 records that photic stimulation triggers spike-wave in 21% of childhood absence epilepsy and that a photoparoxysmal response occurs in more than a third of juvenile myoclonic epilepsy, so a photic response is compatible with either syndrome and cannot by itself decide the question. The seizure types, myoclonus versus absences, and the discharge, 3 Hz spike-wave versus 3 to 5.5 Hz polyspike-wave, are what separate them. Calling the photic response exclusionary contradicts the 21% figure. Photic stimulation is a standard activation procedure and should be performed and reported. Juvenile myoclonic epilepsy discharges run at 3 to 5.5 Hz, so 3 Hz does not exclude it."
+    }
+  ],
+  "resources": [
+    {
+      "label": "Learning EEG: Pediatric",
+      "url": "https://www.learningeeg.com/pediatric.html",
+      "note": "The Ohtahara (EIDEE), hypsarrhythmia and infantile spasms, LGS, SeLECTS, absence, ESES and JME sections."
+    },
+    {
+      "label": "EEGmaster atlas",
+      "url": "https://eegmaster.com/eegmaster/",
+      "note": "Pediatric Epilepsy module. Free account required."
+    },
+    {
+      "label": "eeg-training.com: ILAE Classification",
+      "url": "https://www.eeg-training.com/ilae_classification.html",
+      "note": "The 2022 syndrome lookup."
+    },
+    {
+      "label": "AES EEG Essentials",
+      "url": "https://aesnet.org/education/education/eeg-essentials",
+      "note": "Pediatric Epilepsy Spectrums. Free with a myAES account."
+    },
+    {
+      "label": "epilepsydiagnosis.org",
+      "url": "https://www.epilepsydiagnosis.org/",
+      "note": "The EEG tab of each syndrome page."
+    }
+  ],
+  "signOff": "The resident identifies the syndrome-defining features in at least one record each of IESS, an absence epilepsy and SeLECTS.",
+  "sources": [
+    "zuberi2022",
+    "specchio2022",
+    "hirschE2022",
+    "borusiak2010"
+  ]
+}

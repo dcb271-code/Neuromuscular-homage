@@ -1,0 +1,216 @@
+{
+  "id": "m10-seizures-status",
+  "number": 10,
+  "title": "Seizures and status epilepticus on EEG",
+  "short": "Seizures and status",
+  "description": "How a seizure is recognized on EEG by evolution, how the ACNS 2021 definitions turn that into thresholds for seizures and status epilepticus, and which seizures the scalp EEG can miss.",
+  "why": "A seizure on EEG is recognized by evolution, not by any single waveform, and the ACNS thresholds turn that into a definition residents can apply.",
+  "track": "abnormal",
+  "tags": [
+    "Abnormal & Ictal",
+    "Clinical Decision-Making"
+  ],
+  "difficulty": "intermediate",
+  "duration": "50 min",
+  "color": "#7c3aed",
+  "objectives": [
+    "Recognize evolution in frequency, morphology and location, and the common scalp ictal patterns in children.",
+    "Apply the ACNS 2021 definitions of electrographic and electroclinical seizures and status epilepticus.",
+    "Know which seizures a scalp EEG can miss."
+  ],
+  "sections": [
+    {
+      "title": "Evolution: what makes a pattern a seizure",
+      "content": "No single waveform identifies a seizure. Spikes occur between seizures, rhythmic activity occurs in sleep and in encephalopathy, and fast activity occurs with muscle. What separates an ictal pattern from all of these is that it **changes over time in an orderly way**: a seizure recruits and spreads, and the EEG shows that as **evolution** in frequency, morphology or location. The physiology is a cortical population that is progressively synchronized, so the discharge frequency shifts as the seizure builds, the waveforms change shape as more of the cortex joins, and the field moves as the seizure propagates.\n\nThe ACNS 2021 terminology turns this into a definition that can be applied at the reading station ([Hirsch LJ 2021](https://pubmed.ncbi.nlm.nih.gov/33475321/)). **Evolution** is at least **2 unequivocal, sequential changes** in frequency, morphology or location, with a frequency change of **at least 0.5 Hz**, and each stage lasting **at least 3 cycles**. Two changes, not one: a pattern that speeds up once and then holds has shown a change, not evolution. Sequential: the changes follow one another in time. Unequivocal: if you have to argue for it, it is not there. The 3-cycle rule stops a single odd wave from counting as a stage.\n\n**Muscle can hide the onset**\n\nA convulsive seizure floods the record with muscle artifact at exactly the moment you most want to see the brain. Look for the **first change before the muscle starts**: a focal attenuation, a run of rhythmic activity, a shift in the background. Then look at the **post-ictal slowing** after the muscle stops, which confirms that something cerebral happened and often lateralizes it. The seizure is read at its edges when its middle is obscured.\n\n**What this changes**\n\nEvolution is the criterion that separates an electrographic seizure from the rhythmic and periodic patterns of the ICU, which is why [[m11-critical-care|Module 11]] builds on this module. It is also the reason a rhythmic artifact from patting or ventilation is not a seizure, as [[m03-artifacts|Module 3]] explains: it does not evolve.",
+      "keyPoints": [
+        "A seizure on EEG is recognized by evolution, not by any single waveform.",
+        "ACNS 2021 evolution: at least 2 unequivocal, sequential changes in frequency (by at least 0.5 Hz), morphology or location, each lasting at least 3 cycles (Hirsch LJ 2021).",
+        "When muscle obscures a convulsive seizure, read the first change before the artifact begins and the post-ictal slowing after it ends.",
+        "Rhythmic artifacts and ICU rhythmic patterns do not evolve; that is what separates them from seizures."
+      ],
+      "question": {
+        "question": "A run of rhythmic 3 Hz activity over the right temporal region lasts 40 s. At 15 s it speeds to 4 Hz and stays there. There is no change in morphology or location. Does this meet the ACNS 2021 criterion for evolution?",
+        "options": [
+          "Yes; a frequency change of at least 0.5 Hz sustained for at least 3 cycles is evolution",
+          "No; evolution requires at least 2 unequivocal sequential changes, and one frequency change is a single change",
+          "Yes; any rhythmic pattern lasting over 10 s is a seizure regardless of change",
+          "No; evolution requires a change in location, and frequency changes do not count"
+        ],
+        "answer": 1,
+        "explanation": "ACNS 2021 defines evolution as at least 2 unequivocal, sequential changes in frequency, morphology or location, each lasting at least 3 cycles, with frequency changes of at least 0.5 Hz (Hirsch LJ 2021). One shift from 3 to 4 Hz is a single change, so the pattern has changed but has not evolved; it may still be a seizure by the frequency criterion of the next section if the discharges are epileptiform and average more than 2.5 Hz for at least 10 s, but not by evolution. Counting one change as evolution misses the requirement for two. Duration alone does not make a seizure; a rhythmic pattern lasting more than 10 s without evolution and without epileptiform discharges above 2.5 Hz is not one. Frequency changes do count; location is one of the three domains, not the only one."
+      }
+    },
+    {
+      "title": "The ACNS 2021 definitions of a seizure",
+      "content": "The 2021 revision of the ACNS critical care terminology gives explicit definitions that apply to children as well as adults ([Hirsch LJ 2021](https://pubmed.ncbi.nlm.nih.gov/33475321/)). Learn the table; the questions at the end of this module and in [[m11-critical-care|Module 11]] are answered from it.\n\n| Term | Definition |\n|---|---|\n| Electrographic seizure | Epileptiform discharges averaging more than 2.5 Hz for at least 10 s, or any pattern with definite evolution lasting at least 10 s |\n| Electrographic status epilepticus | Electrographic seizure for at least 10 continuous minutes, or for at least 20% of any 60-minute period |\n| Electroclinical seizure | Any pattern with a definite clinical correlate time-locked to it, or with EEG and clinical improvement after a parenteral antiseizure medication |\n| Electroclinical status epilepticus | At least 10 continuous minutes or 20% of any hour; only 5 continuous minutes if there is bilateral tonic-clonic activity |\n| Evolution | At least 2 unequivocal, sequential changes in frequency (by at least 0.5 Hz), morphology or location, each lasting at least 3 cycles |\n\n**Two routes to an electrographic seizure**\n\nThe first route is **frequency**: epileptiform discharges averaging **more than 2.5 Hz** for **at least 10 s**. Note the word *averaging* and the word *more*: discharges at exactly 2.5 Hz do not qualify, and a brief run above 2.5 Hz inside a slower pattern does not either. The second route is **evolution**: any pattern with definite evolution, as defined in the previous section, lasting at least 10 s. A pattern that meets neither route is not an electrographic seizure, however alarming it looks, and the rhythmic and periodic patterns that fall short belong to the ictal-interictal continuum that Module 11 describes.\n\n**Electroclinical seizures**\n\nA pattern becomes an **electroclinical seizure** when it has a **definite clinical correlate time-locked** to it, or when both the EEG and the clinical state **improve after a parenteral antiseizure medication**. The second clause matters at the bedside: a pattern that does not meet the electrographic definition can still be treated as a seizure if a trial of medication improves both the tracing and the child. The video is therefore part of the read, and so is the medication record.\n\n**Applying the definitions**\n\nWhen a colleague asks whether a pattern was a seizure, answer with the definition: which route it met, for how long, and with what clinical correlate. That is what makes the read reproducible, and it is what the sign-off for this module tests.",
+      "keyPoints": [
+        "Electrographic seizure: epileptiform discharges averaging more than 2.5 Hz for at least 10 s, or any pattern with definite evolution lasting at least 10 s (Hirsch LJ 2021).",
+        "Discharges at exactly 2.5 Hz, or a brief run above it, do not meet the frequency route.",
+        "Electroclinical seizure: a definite clinical correlate time-locked to the pattern, or EEG and clinical improvement after a parenteral antiseizure medication.",
+        "A pattern that meets neither route is not an electrographic seizure; it may belong to the ictal-interictal continuum."
+      ],
+      "question": {
+        "question": "A 9-year-old shows generalized 2 Hz spike-wave for 12 s with no clinical change and no change in frequency, morphology or location. Is this an electrographic seizure?",
+        "options": [
+          "Yes; any epileptiform pattern lasting at least 10 s is an electrographic seizure",
+          "Yes; generalized spike-wave is ictal by definition in a child",
+          "No; 2 Hz is not more than 2.5 Hz, and without definite evolution the pattern does not meet either route, so it falls on the ictal-interictal continuum",
+          "No; an electrographic seizure requires a clinical correlate"
+        ],
+        "answer": 2,
+        "explanation": "The frequency route requires epileptiform discharges averaging more than 2.5 Hz for at least 10 s, and 2 Hz does not reach it. The evolution route requires definite evolution lasting at least 10 s, and this pattern does not change. Meeting neither, it is not an electrographic seizure; the outline places such a pattern on the ictal-interictal continuum, which Module 11 defines. Duration alone does not make a seizure. Generalized spike-wave is an interictal finding in many children and is ictal only when it meets the definition. A clinical correlate is what makes a seizure electroclinical, not what makes it electrographic; electrographic seizures by definition may have no clinical sign."
+      }
+    },
+    {
+      "title": "Status epilepticus: thresholds by duration and by burden",
+      "content": "The 2021 terminology defines status epilepticus in two ways, by **continuous duration** and by **burden**, and gives a separate rule for convulsive activity ([Hirsch LJ 2021](https://pubmed.ncbi.nlm.nih.gov/33475321/)).\n\n**Electrographic status epilepticus** is an electrographic seizure lasting **at least 10 continuous minutes**, or electrographic seizures occupying **at least 20% of any 60-minute period**. The burden rule captures the child who has many short seizures without any single long one: five 3-minute seizures in an hour add up to 15 minutes, which is 25% of the hour and meets the threshold, even though no seizure lasted 10 minutes. Reading a continuous record therefore means adding up seizure time, not only measuring the longest event, and the quantitative trends of [[m11-critical-care|Module 11]] exist partly to make that arithmetic visible.\n\n**Electroclinical status epilepticus** uses the same thresholds, at least 10 continuous minutes or 20% of any hour, with one change: **only 5 continuous minutes** if there is **bilateral tonic-clonic activity**. Convulsive status is declared sooner because its clinical danger is greater and because its treatment should not wait for a 10-minute mark.\n\n**Neonates are different**\n\nThe neonatal definitions of [[m07-neonatal-abnormal|Module 7]] use their own thresholds, and mixing them up is a common error. A **neonatal seizure** needs only evolution and **10 s**. **Neonatal status epilepticus** is seizures summing to **at least 50% of any 1-hour epoch**, not 20%. A burden that would be status in a 9-year-old is not status in a 2-day-old, and the reverse. Keep the two tables apart.\n\n**Why the thresholds exist**\n\nThe burden rule is not arbitrary. Module 11 sets out the pediatric evidence that links seizure burden to outcome, and the thresholds in these definitions are the ones that evidence uses. Applying them consistently is what lets the report say \"electrographic status epilepticus\" and have the words mean the same thing to every reader.",
+      "keyPoints": [
+        "Electrographic status epilepticus: an electrographic seizure for at least 10 continuous minutes, or seizures for at least 20% of any 60-minute period (Hirsch LJ 2021).",
+        "Electroclinical status uses the same thresholds, but only 5 continuous minutes if there is bilateral tonic-clonic activity.",
+        "Add up seizure time across the hour; many short seizures can meet the 20% burden without any single long one.",
+        "Neonates differ: a neonatal seizure needs evolution and 10 s, and neonatal status is 50% of an hour, not 20%."
+      ],
+      "question": {
+        "question": "A PICU patient has electrographic seizures of 3 minutes each, 5 per hour, with no clinical change and none lasting 10 minutes. Does this meet electrographic status epilepticus?",
+        "options": [
+          "No; no single seizure reached 10 continuous minutes",
+          "No; electrographic status requires a clinical correlate",
+          "Yes, but only if the patient is a neonate, since the burden rule applies to neonates alone",
+          "Yes; 15 minutes of seizure is 25% of the hour, which exceeds the 20% burden threshold"
+        ],
+        "answer": 3,
+        "explanation": "Electrographic status epilepticus is met either by at least 10 continuous minutes or by seizures occupying at least 20% of any 60-minute period. Five seizures of 3 minutes sum to 15 minutes, which is 25% of the hour, so the burden route is met even though no seizure was long. Requiring a single 10-minute seizure ignores the second route. A clinical correlate is what distinguishes electroclinical from electrographic status; electrographic status needs none. The burden rule applies to children and adults; neonates have their own threshold of 50% of an hour, and this patient is not a neonate."
+      }
+    },
+    {
+      "title": "Common ictal patterns in children",
+      "content": "Evolution is the rule, but knowing how seizures usually begin and look on the scalp makes the rule easier to apply.\n\n**Focal seizures** often start as **rhythmic theta or alpha** over one region that **slows and spreads** as the seizure recruits neighbouring cortex, which is evolution in frequency and location happening in front of you. Some begin instead with **focal attenuation**, a flattening of the background over the region of onset, before rhythmic activity appears; the attenuation is easy to miss and is often the true onset. The post-ictal record then shows focal slowing over the same region, which helps lateralize a seizure whose onset was obscured.\n\n**Absence seizures** are the exception to gradual onset. They **start and stop abruptly** with generalized **3 Hz spike-wave**, the discharge of childhood absence epilepsy from [[m09-syndromes|Module 9]]. There is little to evolve: the pattern appears fully formed and ends as suddenly. The ictal and interictal discharge are the same pattern, and what makes a run ictal is its duration and its clinical correlate on video.\n\n**Tonic seizures and spasms** show **generalized fast activity or an electrodecrement**, the abrupt drop in amplitude with low-voltage fast activity that [[m09-syndromes|Module 9]] describes as the ictal signature of a spasm. These are the seizures most easily hidden by muscle, because the clinical event is a contraction, so the first change before the artifact and the recovery after it are the parts to study.\n\n**Reading with the pattern in mind**\n\nWhen a stereotyped event is recorded, ask which of these shapes it takes, then apply the definitions of the previous two sections: did it evolve, for how long, and what was the child doing? The sign-off for this module asks the resident to identify onset, evolution and offset in five recorded seizures, at least one generalized and one focal, which is the habit these patterns make possible.",
+      "keyPoints": [
+        "Focal seizures often start as rhythmic theta or alpha that slows and spreads, or as focal attenuation of the background.",
+        "Absence seizures start and stop abruptly with generalized 3 Hz spike-wave.",
+        "Tonic seizures and spasms show generalized fast activity or an electrodecrement, and are the seizures most easily hidden by muscle.",
+        "For every recorded event, identify onset, evolution and offset, then apply the ACNS definitions."
+      ],
+      "question": {
+        "question": "During a recording, a 10-year-old's left temporal channels flatten for several seconds, then show rhythmic 6 Hz activity that slows to 4 Hz and spreads to the left frontal channels over 30 s, followed by left temporal slowing. The technologist's note says the child \"looked fine.\" What is the correct description?",
+        "options": [
+          "A focal electrographic seizure with onset marked by left temporal attenuation, evolving in frequency and location, with post-ictal slowing; review the video for a subtle clinical correlate",
+          "Left temporal focal slowing, since the record ended with slowing",
+          "An artifact, since the child had no clinical change",
+          "Rhythmic mid-temporal theta, a normal variant, because the activity began at 6 Hz"
+        ],
+        "answer": 0,
+        "explanation": "Focal attenuation followed by rhythmic activity that slows and spreads is the typical onset of a focal seizure, and the change from 6 to 4 Hz together with spread from temporal to frontal channels is two sequential changes, in frequency and in location, each well beyond 3 cycles over 30 s: definite evolution lasting more than 10 s, which meets the electrographic seizure definition. The post-ictal slowing over the same region confirms it. Describing only the final slowing misses the seizure that caused it. The absence of an obvious clinical change does not make a pattern artifact; electrographic seizures may have no clinical sign, and the video should be reviewed for a subtle correlate. A normal variant does not evolve, spread and leave post-ictal slowing."
+      }
+    },
+    {
+      "title": "What the scalp EEG can miss",
+      "content": "A normal EEG during an event is strong evidence, but it is not proof that nothing happened in the brain. Some seizures do not reach the scalp.\n\n**Focal aware seizures** may have **no clear scalp correlate**. A seizure confined to a small region of cortex, or to cortex that is deep or tangentially oriented, generates a field too small or too poorly aligned to be seen through the skull, the same geometry [[m01-signals|Module 1]] describes for interictal discharges. **Some deep or frontal seizures** behave the same way: a mesial frontal or orbitofrontal onset may show only muscle and movement artifact until it spreads, by which time the onset is unreadable.\n\n**What this means for the read**\n\nA normal EEG during a **stereotyped event** does **not always exclude a seizure**, so the report should say what was recorded and what it does and does not show, and the clinician should correlate with the **semiology**. A rising epigastric sensation reported during a recording with no EEG change is not disproved by the tracing; it is a focal aware seizure until the history says otherwise. The opposite error is as real: a recorded event with no EEG change and a semiology that does not fit any seizure type is evidence for a non-epileptic event, and the report can say so. The tracing decides less than residents expect, and the video and the history decide more.\n\n**Practical rules**\n\n- Say what state the child was in and what the video showed at the time of the event.\n- When an event has no correlate, describe the event, state that no ictal pattern was seen, and note that focal aware seizures and some deep or frontal seizures may lack a scalp correlate.\n- When muscle obscures an event, report the first change before the artifact and the post-ictal state after it, as the first section of this module describes.\n- Do not write \"non-epileptic\" on the strength of a normal tracing alone.",
+      "keyPoints": [
+        "Focal aware seizures, and some deep or frontal seizures, may have no clear scalp correlate.",
+        "A normal EEG during a stereotyped event does not always exclude a seizure; correlate with the semiology.",
+        "Report what the video showed at the time of the event and state that no ictal pattern was seen, rather than declaring the event non-epileptic on the tracing alone.",
+        "When muscle obscures an event, read the first change before the artifact and the post-ictal state after it."
+      ],
+      "question": {
+        "question": "A 12-year-old reports a rising epigastric sensation lasting a minute during the recording. The EEG shows no change. The resident proposes writing \"the event was non-epileptic.\" What should the report say instead?",
+        "options": [
+          "The event was non-epileptic, since a seizure lasting a minute would always be visible on the scalp",
+          "The event was an absence seizure, since the child was aware and the EEG was unrevealing",
+          "The event was recorded with no ictal EEG change; focal aware seizures may lack a scalp correlate, so this does not exclude a focal seizure, and the semiology should guide the diagnosis",
+          "The recording was technically inadequate and should be repeated with more electrodes"
+        ],
+        "answer": 2,
+        "explanation": "The outline is explicit that focal aware seizures often have no scalp correlate, so a normal tracing during a stereotyped event does not exclude a focal seizure. The report should describe the event, state that no ictal change was seen, and defer to the semiology, which here, a rising epigastric sensation, is a recognizable focal aware seizure. Declaring the event non-epileptic on the tracing alone is the error this section warns against. An absence seizure is a generalized seizure with 3 Hz spike-wave on the EEG and impaired awareness, neither of which fits. The recording is not inadequate; the limitation is the physics of a small or deep generator, which more scalp electrodes do not overcome."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A 7-year-old in the emergency department has had bilateral tonic-clonic activity for 6 continuous minutes, with a matching ictal pattern on the EEG. Which ACNS 2021 category applies, and why does the threshold differ from the 10-minute rule?",
+      "options": [
+        "Electroclinical seizure only; status requires 10 continuous minutes",
+        "Electroclinical status epilepticus; with bilateral tonic-clonic activity the threshold is 5 continuous minutes",
+        "Electrographic status epilepticus; the burden threshold of 20% has been exceeded",
+        "Neonatal status epilepticus; the 50% rule applies to convulsive seizures at any age"
+      ],
+      "answer": 1,
+      "explanation": "ACNS 2021 defines electroclinical status epilepticus as at least 10 continuous minutes or 20% of any hour, with the threshold reduced to 5 continuous minutes when there is bilateral tonic-clonic activity (Hirsch LJ 2021). Six minutes of convulsive seizure with an ictal correlate therefore meets it. Applying the 10-minute rule ignores the convulsive exception. The 20% burden rule is met over an hour, and 6 minutes is not 20% of 60; more to the point, the pattern has a clinical correlate, so the electroclinical definition is the one to use. The 50% rule belongs to neonatal status epilepticus and does not apply to a 7-year-old."
+    },
+    {
+      "question": "A continuous EEG in a 4-year-old shows bursts of epileptiform discharges at 3 Hz over the left hemisphere lasting 8 s each, recurring every few minutes, with no evolution within a burst. Do the bursts meet the definition of an electrographic seizure?",
+      "options": [
+        "Yes; discharges above 2.5 Hz are seizures at any duration",
+        "Yes; recurrence every few minutes constitutes evolution in time",
+        "No; the frequency route requires at least 10 s, and the bursts last 8 s and do not evolve",
+        "No; a seizure must be generalized"
+      ],
+      "answer": 2,
+      "explanation": "The frequency route requires epileptiform discharges averaging more than 2.5 Hz for at least 10 s, and these bursts last 8 s. The evolution route requires definite evolution lasting at least 10 s, and the bursts do not evolve. They meet neither, so they are not electrographic seizures by the 2021 definition; Module 11 describes where brief rhythmic and periodic patterns that fall short of the definition are placed. Frequency without the 10 s duration is not enough. Recurrence is not evolution; evolution is change within a pattern in frequency, morphology or location. Seizures may be focal or generalized, so lateralization does not disqualify anything."
+    },
+    {
+      "question": "A 2-day-old in the NICU has electrographic seizures totalling 25 minutes in one hour. A 9-year-old in the PICU has electrographic seizures totalling 25 minutes in one hour. Which statement is correct?",
+      "options": [
+        "Both meet status epilepticus, since 25 minutes exceeds 20% of an hour in each",
+        "Neither meets status epilepticus, since no single seizure lasted 10 minutes",
+        "The 9-year-old meets electrographic status epilepticus by the 20% burden rule, but the neonate does not, because neonatal status requires seizures summing to at least 50% of the hour",
+        "The neonate meets status epilepticus and the 9-year-old does not, because the neonatal threshold is lower"
+      ],
+      "answer": 2,
+      "explanation": "The pediatric and adult definition of electrographic status epilepticus is at least 10 continuous minutes or at least 20% of any 60-minute period (Hirsch LJ 2021), so 25 minutes in an hour, about 42%, meets it for the 9-year-old. Neonatal status epilepticus, as Module 7 sets out, is seizures summing to at least 50% of any 1-hour epoch, so 25 minutes falls short for the neonate. Applying the 20% rule to both ignores the separate neonatal threshold. Requiring a single 10-minute seizure ignores the burden route. The neonatal threshold is higher, not lower."
+    },
+    {
+      "question": "A resident reviewing a convulsive seizure finds the entire event obscured by muscle artifact and proposes reporting it as \"uninterpretable.\" What is the better approach?",
+      "options": [
+        "Report it as uninterpretable; nothing can be said about a record obscured by muscle",
+        "Lower the high-frequency filter until an ictal pattern appears within the artifact",
+        "Report the first change before the muscle artifact began and the post-ictal slowing after it stopped, which together show that a cerebral event occurred and may lateralize it",
+        "Report the event as non-epileptic, since no evolving pattern was visible"
+      ],
+      "answer": 2,
+      "explanation": "The outline's instruction for a seizure hidden by muscle is to look for the first change before the artifact starts and at the post-ictal slowing afterward; the seizure is read at its edges. A focal attenuation or rhythmic run at onset, and focal or diffuse slowing after offset, establish that a cerebral event occurred and often lateralize it. Calling the record uninterpretable discards those edges. Lowering the high-frequency filter smooths muscle into sharply contoured waves that can look like an ictal pattern, the trap Module 1 describes, and does not recover the underlying signal. Declaring the event non-epileptic because muscle hid the tracing reverses the burden of proof."
+    },
+    {
+      "question": "A pattern in a sedated 6-year-old does not meet the electrographic seizure definition, but after a parenteral antiseizure medication both the tracing and the child's responsiveness improve within minutes. How does ACNS 2021 classify the pattern?",
+      "options": [
+        "As an electroclinical seizure, because EEG and clinical improvement after a parenteral antiseizure medication is one of the two ways a pattern qualifies",
+        "As an electrographic seizure, because improvement with medication proves the pattern was above 2.5 Hz",
+        "As no seizure, because the pattern never met the electrographic definition",
+        "As status epilepticus, because a treatment response defines status"
+      ],
+      "answer": 0,
+      "explanation": "ACNS 2021 defines an electroclinical seizure as any pattern with a definite clinical correlate time-locked to it, or with EEG and clinical improvement after a parenteral antiseizure medication (Hirsch LJ 2021). The second clause applies here, so the pattern is an electroclinical seizure even though it did not meet the electrographic definition. Improvement with medication does not retroactively change the discharge frequency, so it does not make the pattern electrographic by the frequency route. Concluding there was no seizure ignores the treatment-response clause, which exists precisely for this situation. Status epilepticus is defined by duration and burden, not by treatment response."
+    }
+  ],
+  "resources": [
+    {
+      "label": "Learning EEG: Seizures",
+      "url": "https://www.learningeeg.com/seizures.html"
+    },
+    {
+      "label": "eeg-training.com: EEG Fundamentals",
+      "url": "https://www.eeg-training.com/eeg-fundamentals.html",
+      "note": "The seizure-recognition unit and seizure-evolution playback."
+    },
+    {
+      "label": "EEGmaster atlas",
+      "url": "https://eegmaster.com/eegmaster/",
+      "note": "Ictal EEG module. Free account required."
+    },
+    {
+      "label": "EEGmaster seizure atlas",
+      "url": "https://eegmaster.com/seizure-atlas"
+    },
+    {
+      "label": "ACNS 2021 critical care EEG terminology (free PDF)",
+      "url": "https://www.acns.org/UserFiles/file/ACNSStandardizedCriticalCareEEGTerminology_rev2021.pdf"
+    }
+  ],
+  "signOff": "The resident identifies onset, evolution and offset in five recorded seizures, including at least one generalized and one focal.",
+  "sources": [
+    "hirschLJ2021",
+    "tsuchida2013",
+    "pressler2021",
+    "hirschE2022"
+  ]
+}

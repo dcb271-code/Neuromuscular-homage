@@ -1,0 +1,213 @@
+{
+  "id": "m07-neonatal-abnormal",
+  "number": 7,
+  "title": "Neonatal EEG II: abnormal background, seizures and NICU monitoring",
+  "short": "Neonatal seizures",
+  "description": "Grading a neonatal background in ACNS terms, defining a neonatal seizure and status epilepticus, and knowing when and how long to monitor.",
+  "why": "Most neonatal seizures cannot be diagnosed at the bedside, so the resident must be able to grade a background and call a seizure on EEG in ACNS terms.",
+  "track": "neonatal",
+  "tags": [
+    "Neonatal & ICU",
+    "Abnormal & Ictal"
+  ],
+  "difficulty": "advanced",
+  "duration": "50 min",
+  "color": "#0d9488",
+  "objectives": [
+    "Grade a neonatal background using the ACNS neonatal categories.",
+    "Define a neonatal electrographic seizure and neonatal status epilepticus, and how they differ from the pediatric and adult definitions.",
+    "Explain why clinical observation alone misses and overcalls neonatal seizures, and when continuous monitoring is indicated."
+  ],
+  "sections": [
+    {
+      "title": "Grading the background in ACNS terms",
+      "content": "The neonatal background is the single most informative part of the record, and the ACNS standardized terminology gives it a vocabulary that every reader in the unit can share ([Tsuchida 2013](https://pubmed.ncbi.nlm.nih.gov/23545767/)). The categories are defined by voltage and by the length of the interburst interval, which is why the maturation tables from [[m06-neonatal-maturation|Module 6]] and the sensitivity setting from [[m01-signals|Module 1]] both have to be known before a grade can be given.\n\n| Term | Definition |\n|---|---|\n| Continuous | Less than 2 s of attenuation below 25 µV |\n| Discontinuous | Interburst intervals of at least 2 s, attenuated below 25 to 50 µV |\n| Excessively discontinuous | Interburst intervals too long or too low for postmenstrual age; bursts still contain some normal features. No numeric cutoff |\n| Burst suppression | Invariant, abnormally composed bursts; interburst voltage below 5 µV; no variability or reactivity |\n| Borderline low voltage | Continuous, with some normal features, but persistently 10 to under 25 µV |\n| Low voltage suppressed | No normal features; baseline below 10 µV |\n\n**Reading the table**\n\nThe first two rows are descriptions, not verdicts. A discontinuous background is normal at many postmenstrual ages and in quiet sleep at term, as tracé alternant. It becomes **excessively discontinuous** only when the interburst intervals are too long or too low for the age, and the terminology deliberately sets no numeric cutoff, because the cutoff is the age-specific limit from the maturation tables. The bursts in an excessively discontinuous record still contain some normal features.\n\n**Burst suppression** is different in kind, not degree. The bursts are abnormally composed, the interburst voltage is below 5 µV, and, most tellingly, the pattern is **invariant**: it does not change with state and does not react to stimulation. Reactivity, which [[m06-neonatal-maturation|Module 6]] showed becomes reliable by 35 to 36 weeks, is the feature that most reliably separates burst suppression from tracé alternant in a term baby. The two low-voltage categories describe a continuous record whose amplitude is too low: **borderline low voltage** keeps some normal features at 10 to under 25 µV, and **low voltage suppressed** has none, with a baseline below 10 µV.\n\nGrade the background in every state that was recorded, note whether it reacts, and state the postmenstrual age against which the grade was made. The grade is the part of the report that the NICU team will act on most, and the sign-off asks the resident to grade five neonatal backgrounds in agreement with the faculty read.",
+      "keyPoints": [
+        "ACNS defines continuous as less than 2 s of attenuation below 25 µV and discontinuous as interburst intervals of at least 2 s attenuated below 25 to 50 µV (Tsuchida 2013).",
+        "Excessively discontinuous means intervals too long or too low for postmenstrual age, with bursts that still contain some normal features; there is no numeric cutoff.",
+        "Burst suppression is invariant and unreactive, with abnormally composed bursts and interburst voltage below 5 µV.",
+        "Borderline low voltage is continuous at 10 to under 25 µV with some normal features; low voltage suppressed has no normal features and a baseline below 10 µV."
+      ],
+      "question": {
+        "question": "A term baby's background is invariant, with abnormally composed bursts separated by periods under 5 µV, and it does not change with stimulation or between states. Which ACNS category applies, and what feature settles it?",
+        "options": [
+          "Discontinuous: the interburst intervals are at least 2 s",
+          "Excessively discontinuous: the intervals are too long for term",
+          "Burst suppression: invariant, unreactive, with interburst voltage below 5 µV",
+          "Low voltage suppressed: the interburst periods are below 10 µV"
+        ],
+        "answer": 2,
+        "explanation": "The defining features of burst suppression in the ACNS terminology are an invariant pattern with abnormally composed bursts, interburst voltage below 5 µV, and no variability or reactivity (Tsuchida 2013). This record has all of them, and the absence of any change with stimulation or state is what separates it from a discontinuous or excessively discontinuous record. 'Discontinuous' is a description that fits many normal records and does not capture the invariance or the depth of suppression. 'Excessively discontinuous' still has bursts containing some normal features and is defined by intervals that are too long for age, not by invariance. 'Low voltage suppressed' describes a continuous record with a baseline below 10 µV and no normal features, not a burst pattern."
+      }
+    },
+    {
+      "title": "What counts as a neonatal seizure",
+      "content": "A seizure on EEG is recognized by **evolution**, and in the neonate the ACNS terminology turns that into a definition with two numbers. A neonatal electrographic **seizure** is a sudden, repetitive, evolving pattern of at least **2 µV** lasting at least **10 s** ([Tsuchida 2013](https://pubmed.ncbi.nlm.nih.gov/23545767/)). An evolving rhythmic pattern that lasts **under 10 s** is a **brief rhythmic discharge (BRD)**, named separately so that it is neither ignored nor counted as a seizure. **Neonatal status epilepticus** is seizures summing to at least **50% of any 1-hour epoch**.\n\n**How this differs from older patients**\n\nThe pediatric and adult definitions in [[m10-seizures-status|Module 10]] are stricter about what qualifies and looser about how much is needed for status. An electrographic seizure in an older patient needs either discharges averaging more than 2.5 Hz or definite evolution, for at least 10 s; the neonatal definition asks only for evolution and 10 s. Status in the older patient is 10 continuous minutes or 20% of an hour; in the neonate the threshold is 50% of the hour. A resident who reads both populations must keep the two sets of numbers apart, and the commonest error is to apply the 20% rule to a neonate and call status where the terminology does not.\n\n**Reading evolution**\n\nEvolution means a change in frequency, morphology or location across the run, not merely rhythmicity. Rhythmic activity that begins and ends without changing is the pattern [[m03-artifacts|Module 3]] warned about: the ventilator, patting, sucking. A neonatal seizure characteristically begins as rhythmic activity at one location, slows or speeds, changes shape, and spreads to a neighbouring region before it stops. Because the ACNS definition needs no clinical accompaniment, an evolving run with nothing visible on video is a seizure in full, an **electrographic-only seizure**, and the next sections explain why these are the majority in some populations.\n\nMeasure the run against the time marks, in the state in which it occurred, and describe onset, evolution and offset. A 40-second run at C3 that speeds from 1 Hz to 2 Hz and spreads to T3 is a seizure whether or not the baby moved.",
+      "keyPoints": [
+        "A neonatal seizure is a sudden, repetitive, evolving pattern of at least 2 µV lasting at least 10 s; an evolving pattern under 10 s is a brief rhythmic discharge (Tsuchida 2013).",
+        "Neonatal status epilepticus is seizures summing to at least 50% of any 1-hour epoch, not the 20% used in older patients.",
+        "The neonatal definition needs only evolution and 10 s; no clinical accompaniment is required.",
+        "Rhythmic activity that does not evolve in frequency, morphology or location is not a seizure; check the video and the ventilator."
+      ],
+      "question": {
+        "question": "A cooled term neonate has rhythmic 1 Hz sharp waves at C3 that speed to 2 Hz and spread to T3 over 40 s. No clinical change is seen on video. Is it a seizure?",
+        "options": [
+          "No: without a clinical correlate it is an interictal pattern",
+          "Yes: it is repetitive, evolves in frequency and location, and lasts at least 10 s, so it is an electrographic-only seizure",
+          "No: the frequency never exceeds 2.5 Hz, so it does not meet the seizure definition",
+          "It is a brief rhythmic discharge, because it started below 2 Hz"
+        ],
+        "answer": 1,
+        "explanation": "The ACNS neonatal definition asks for a sudden, repetitive, evolving pattern of at least 2 µV lasting at least 10 s (Tsuchida 2013). This run evolves in both frequency and location and lasts 40 s, so it is a seizure, and because nothing is seen on video it is an electrographic-only seizure, which is a full seizure and not a lesser category. A clinical correlate is not part of the definition; the video is checked to exclude artifact, not to confirm a seizure. The 2.5 Hz criterion belongs to the pediatric and adult terminology in Module 10, not to the neonate, whose definition rests on evolution alone. A brief rhythmic discharge is an evolving pattern lasting under 10 s; this one lasted 40."
+      }
+    },
+    {
+      "title": "The ILAE neonatal classification",
+      "content": "The EEG definition tells you that a seizure happened; the ILAE classification tells you what to call it. The 2021 modification of the ILAE framework for the neonate makes four points that change how a reader works ([Pressler 2021](https://pubmed.ncbi.nlm.nih.gov/33522601/)).\n\n**Video-EEG is the gold standard for diagnosis.** The classification is built on the recording, not on what a bedside observer saw, and the next section shows why.\n\n**Neonatal seizures are treated as focal in onset.** There is no focal-versus-generalized split in the neonatal scheme. Every neonatal seizure is described from its site of onset on the EEG, which is another reason the localization skills from [[m01-signals|Module 1]] are needed in the NICU.\n\n**Seizures are typed by their predominant clinical feature.** The categories are motor (automatisms, clonic, epileptic spasms, myoclonic, tonic), non-motor (autonomic, behaviour arrest) or sequential, when several features follow one another. The type is read from the video that runs alongside the EEG.\n\n**Electrographic-only seizures are a category of their own.** This is the point with the largest clinical weight. The paper cites **50% to 80%** of seizures being electrographic-only in selected populations with hypoxic-ischemic encephalopathy. In other words, in the babies most likely to be monitored, most seizures have no visible expression at all.\n\n**What changes at the desk**\n\nThe classification means that a neonatal seizure report has two parts: the EEG description (onset, evolution, offset, duration, and burden over the hour) and the clinical type from the video, which may be \"electrographic-only\". It also means that the absence of clinical signs, far from arguing against seizures, is the expected finding in encephalopathic neonates. The reader who waits for the baby to move before calling a seizure will miss most of them.",
+      "keyPoints": [
+        "Video-EEG is the gold standard for diagnosing neonatal seizures (Pressler 2021).",
+        "Neonatal seizures are treated as focal in onset; there is no focal versus generalized split.",
+        "Seizures are typed by their predominant feature: motor (automatisms, clonic, epileptic spasms, myoclonic, tonic), non-motor (autonomic, behaviour arrest) or sequential.",
+        "Electrographic-only seizures are their own category; 50% to 80% of seizures are electrographic-only in selected populations with hypoxic-ischemic encephalopathy."
+      ],
+      "question": {
+        "question": "A NICU fellow asks you to classify a neonate's seizure as 'generalized' because the EEG discharge eventually involved both hemispheres. Using the ILAE 2021 neonatal framework, how do you respond?",
+        "options": [
+          "Agree; bilateral involvement defines a generalized seizure at any age",
+          "Explain that the seizure cannot be classified without a clinical correlate",
+          "Classify it as 'unknown onset' because it spread",
+          "Explain that neonatal seizures are treated as focal in onset, so the seizure is described by its site of onset and its clinical type, with no focal-versus-generalized split"
+        ],
+        "answer": 3,
+        "explanation": "The ILAE 2021 modification for neonates treats all neonatal seizures as focal in onset and removes the focal-versus-generalized distinction (Pressler 2021). A discharge that begins at one site and spreads to both hemispheres is described by where it started and by its predominant clinical feature, or as electrographic-only if there was none. Calling it generalized imports the older-child scheme into a population where it does not apply. A clinical correlate is not required for classification; electrographic-only seizures are their own category. 'Unknown onset' is not the answer to spread; the EEG shows the onset, and that is what is recorded."
+      }
+    },
+    {
+      "title": "Why bedside observation fails",
+      "content": "The case for monitoring rests on one study that every resident should be able to quote. In a study of **51 monitored neonates**, **526 electrographic seizures** occurred in **9 babies**. Only **34%** of those seizures had any clinical sign on video, and staff recognized **9%**. The error ran both ways: of **177 events** that staff suspected were seizures, only **27%** had an EEG correlate ([Murray 2008](https://pubmed.ncbi.nlm.nih.gov/17626147/)).\n\n**Reading those numbers**\n\nTwo-thirds of the seizures had no visible expression at all, which matches the ILAE's 50% to 80% electrographic-only figure in encephalopathic populations ([Pressler 2021](https://pubmed.ncbi.nlm.nih.gov/33522601/)). Of the third that did show something, most were still not recognized by experienced staff, so fewer than one seizure in ten was identified at the bedside. And nearly three-quarters of the movements that staff *did* call seizures were not seizures. Bedside observation therefore both undercounts and overcounts, and a treatment plan based on it will give antiseizure medication to babies who are not seizing while leaving most of the seizure burden untreated in babies who are.\n\n**What follows for the reader**\n\nThe EEG is not confirming a clinical diagnosis; it *is* the diagnosis. That has three consequences. First, the reader must review the whole record, not the epochs around the nurses' event marks, because the seizures are mostly elsewhere. Second, the video must be checked for every EEG seizure, to type it and to exclude the rhythmic artifacts of [[m03-artifacts|Module 3]], but the absence of movement never argues against a seizure. Third, the reader owes the team a seizure **burden**, expressed as minutes per hour, because that is the number the definition of status depends on and the number that tracks the response to treatment. The sign-off asks the resident to identify seizures on two continuous EEG studies in agreement with the faculty read; the Murray data are the reason that skill cannot be delegated to the bedside.",
+      "keyPoints": [
+        "In 51 monitored neonates, 526 electrographic seizures occurred in 9 babies; only 34% had any clinical sign on video and staff recognized 9% (Murray 2008).",
+        "Of 177 events staff suspected were seizures, only 27% had an EEG correlate: bedside observation both misses and overcalls.",
+        "Review the whole record, not just the marked events; most seizures are elsewhere.",
+        "Report seizure burden in minutes per hour; it drives the status definition and tracks treatment."
+      ],
+      "question": {
+        "question": "A NICU team proposes to monitor a cooled neonate by nursing observation with a bedside EEG placed only when a suspected event occurs. Based on Murray 2008, what should you advise?",
+        "options": [
+          "The plan will miss most seizures, since only 34% had any clinical sign on video and staff recognized 9%, and it will overtreat, since only 27% of suspected events were seizures; continuous EEG is needed",
+          "The plan is adequate, because most neonatal seizures have a recognizable clinical sign",
+          "The plan is adequate if the nurses are experienced",
+          "The plan should be replaced by a single 20-minute EEG at admission"
+        ],
+        "answer": 0,
+        "explanation": "In the monitored cohort, only 34% of electrographic seizures had any clinical sign on video, staff recognized 9%, and only 27% of the events staff suspected were seizures on EEG (Murray 2008). An observation-triggered plan therefore misses roughly nine seizures in ten and treats a majority of non-seizure events. Experience does not fix this, because the seizures have no visible expression to be experienced at. A single short EEG at admission assesses the background but cannot capture seizures that occur over the following day. For high-risk neonates the ACNS guidance, covered in the next section, is continuous monitoring, and the data here are the reason."
+      }
+    },
+    {
+      "title": "When to monitor, and for how long",
+      "content": "Because most neonatal seizures are invisible at the bedside, the question is not whether to record but whom and for how long. For **high-risk neonates**, the ACNS guideline recommends **24 hours of conventional EEG** to screen for seizures, **at least 1 hour** to assess the background, and, after a seizure, monitoring **until 24 hours seizure-free** ([Shellhaas 2011](https://pubmed.ncbi.nlm.nih.gov/22146359/)). A **2025** ACNS guideline updates the indications; its recommendations are **conditional**, because the evidence is of very low certainty ([Wusthoff 2025](https://pubmed.ncbi.nlm.nih.gov/39752571/)).\n\n**The three numbers, and what each is for**\n\n- **One hour** is enough to grade the background in the ACNS categories from the first section, provided it includes more than one state. It is the minimum for a study whose only question is the background.\n- **Twenty-four hours** is the screening window for a baby at risk who has not yet had a seizure on EEG. The risk populations are those the ILAE and the Murray data describe: encephalopathy, especially after hypoxia-ischemia, and other acute brain injury.\n- **Twenty-four hours seizure-free** is the stopping rule once seizures have occurred. It is a criterion on the EEG, not on the bedside, for the reasons the previous section gave.\n\n**Using the definitions together**\n\nOver a monitored day, the reader grades the background in each state, identifies every run that meets the seizure definition, sums the seizure time in each hour, and reports whether any hour reached the **50%** threshold for neonatal status epilepticus ([Tsuchida 2013](https://pubmed.ncbi.nlm.nih.gov/23545767/)). A team reading that report can see both the trajectory of the background, which carries prognostic weight, and the seizure burden, which guides treatment. The ACNS terminology PDFs linked below are short; read the neonatal one in full before the first NICU read, and keep the definitions table beside the screen.\n\n**Amplitude-integrated EEG**\n\nMany units run amplitude-integrated EEG (aEEG) at the bedside. It is a compressed trend, useful for spotting a change in background or a candidate seizure over hours, but a trend is not a diagnosis. Every event seen on a trend must be confirmed on the raw EEG, a rule [[m11-critical-care|Module 11]] applies to all quantitative EEG. The Calgary course linked below has lessons on both the seizure read and aEEG.",
+      "keyPoints": [
+        "For high-risk neonates, ACNS recommends 24 hours of conventional EEG to screen for seizures, at least 1 hour to assess the background, and monitoring until 24 hours seizure-free after a seizure (Shellhaas 2011).",
+        "A 2025 ACNS guideline updates the indications with conditional recommendations, because the evidence is of very low certainty (Wusthoff 2025).",
+        "Report the background grade by state, every seizure with onset and evolution, and the seizure burden per hour against the 50% status threshold.",
+        "Amplitude-integrated EEG is a trend; confirm every event on the raw EEG."
+      ],
+      "question": {
+        "question": "Over one hour of continuous EEG in a term neonate, electrographic seizures total 34 minutes. Is this neonatal status epilepticus, and what does the monitoring plan become?",
+        "options": [
+          "No: status requires at least 10 continuous minutes of seizure",
+          "No: 34 minutes is under the 50% threshold",
+          "Yes, if 20% of the hour is exceeded; continue monitoring for 24 hours seizure-free",
+          "Yes: 34 minutes is at least 50% of the hour, meeting the ACNS neonatal definition; continue monitoring until 24 hours seizure-free"
+        ],
+        "answer": 3,
+        "explanation": "Neonatal status epilepticus is defined by the ACNS terminology as seizures summing to at least 50% of any 1-hour epoch (Tsuchida 2013). Thirty-four minutes is more than half of sixty, so the definition is met, and the ACNS guideline then calls for monitoring to continue until the baby has been seizure-free for 24 hours (Shellhaas 2011). The 10-continuous-minute and 20%-of-an-hour thresholds belong to the pediatric and adult terminology in Module 10, not to the neonate, and applying them here is the commonest cross-population error. Thirty-four minutes is not under 50%; the arithmetic is simple, and getting it wrong changes treatment."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A 39-week postmenstrual age neonate has a continuous background with recognizable state changes, but the amplitude is persistently between 10 and 20 µV in every state. Which ACNS category fits?",
+      "options": [
+        "Borderline low voltage",
+        "Low voltage suppressed",
+        "Excessively discontinuous",
+        "Continuous normal voltage, because state changes are preserved"
+      ],
+      "answer": 0,
+      "explanation": "The ACNS terminology defines borderline low voltage as a continuous background with some normal features that is persistently 10 to under 25 µV (Tsuchida 2013). Preserved state changes are the normal features, and the amplitude range fits. Low voltage suppressed requires no normal features and a baseline below 10 µV, neither of which is described. Excessively discontinuous describes long interburst intervals for age, and this record is continuous. The presence of state changes does not make a record normal when its amplitude is persistently below 25 µV; that is precisely what the borderline category exists to capture."
+    },
+    {
+      "question": "A rhythmic 8-second run of sharp waves at T4 in a term neonate evolves from 2 Hz to 3 Hz and then stops. It recurs several times over the hour. How should each run be described?",
+      "options": [
+        "As a seizure, since it evolves",
+        "As artifact, since runs under 10 s are not cerebral",
+        "As a brief rhythmic discharge, an evolving rhythmic pattern lasting under 10 s, with the count and timing reported",
+        "As an interictal sharp wave"
+      ],
+      "answer": 2,
+      "explanation": "An evolving rhythmic pattern that lasts under 10 s is a brief rhythmic discharge in the ACNS neonatal terminology (Tsuchida 2013), named as its own category so that it is neither dismissed nor counted as a seizure. The 10-second threshold is part of the seizure definition, so an 8-second run does not qualify as a seizure even though it evolves. Nothing about a short duration makes a run artifact; artifact is excluded by the absence of evolution and by the video, as Module 3 teaches, and this run evolves. A single interictal sharp wave is a transient, not an 8-second rhythmic run. Report the BRDs with their number and timing, because they are a finding the team will want to follow."
+    },
+    {
+      "question": "A neonate with hypoxic-ischemic encephalopathy has had no visible seizures for 12 hours, and the team asks to stop continuous EEG, which has recorded 3 electrographic seizures in the last 6 hours. What does the ACNS guidance support?",
+      "options": [
+        "Stop now, since the baby has been clinically seizure-free for 12 hours",
+        "Continue until 24 hours seizure-free on EEG, because the stopping rule is electrographic and the last seizure was within the past 6 hours",
+        "Stop after a single 1-hour background assessment",
+        "Switch to nursing observation, since most seizures in HIE are clinically apparent"
+      ],
+      "answer": 1,
+      "explanation": "The ACNS neonatal guideline recommends that monitoring continue until 24 hours seizure-free after a seizure (Shellhaas 2011), and the criterion is the EEG, not the bedside. This baby's most recent electrographic seizure was within the last 6 hours, so the 24-hour clock has not run. Clinical freedom from seizures is not informative here: in encephalopathic neonates, 50% to 80% of seizures are electrographic-only (Pressler 2021), and staff recognized only 9% of seizures in the monitored cohort (Murray 2008). A 1-hour recording is the minimum for a background assessment, not a stopping rule after seizures. Nursing observation would miss most of the burden that the EEG has already shown to be present."
+    },
+    {
+      "question": "Which comparison of the neonatal and the pediatric/adult definitions is correct?",
+      "options": [
+        "Both require discharges above 2.5 Hz or definite evolution for at least 10 s",
+        "The neonatal definition requires a clinical correlate; the adult definition does not",
+        "The neonatal seizure definition requires only evolution and at least 10 s, and neonatal status is at least 50% of an hour, whereas older patients need 2.5 Hz or evolution for a seizure and 10 continuous minutes or 20% of an hour for status",
+        "Neonatal status is 20% of an hour and adult status is 50%"
+      ],
+      "answer": 2,
+      "explanation": "The ACNS neonatal terminology defines a seizure as a sudden, repetitive, evolving pattern of at least 2 µV lasting at least 10 s, and status as seizures summing to at least 50% of any 1-hour epoch (Tsuchida 2013). The pediatric and adult terminology in Module 10 requires discharges averaging more than 2.5 Hz for at least 10 s or a definitely evolving pattern for at least 10 s, and sets status at 10 continuous minutes or 20% of any hour. The neonatal seizure definition has no frequency criterion and no clinical requirement; electrographic-only seizures are a category of their own. Reversing the 20% and 50% figures is the error that most often changes treatment in the NICU."
+    },
+    {
+      "question": "A NICU consult asks how many of a monitored neonate's seizures would be expected to have a clinical sign, and how reliable nurses' event marks are as a guide to when seizures occurred. What do you tell them, and what follows for the read?",
+      "options": [
+        "About a third had a clinical sign on video and staff recognized about a tenth, while about a quarter of suspected events were seizures (Murray 2008); read the whole record, not just the marked epochs",
+        "Nearly all had a clinical sign; the event marks are a reliable guide",
+        "None had a clinical sign, so the video can be ignored",
+        "About half were recognized by staff; review the marked epochs first and the rest if time allows"
+      ],
+      "answer": 0,
+      "explanation": "In the monitored cohort of 51 neonates, only 34% of the 526 electrographic seizures had any clinical sign on video, staff recognized 9%, and only 27% of the 177 suspected events had an EEG correlate (Murray 2008). The event marks therefore point to the wrong places most of the time, and the seizures are mostly elsewhere in the record, so the whole record must be read. The video is still reviewed for every EEG seizure, to type it under the ILAE scheme and to exclude rhythmic artifact, but the absence of movement never argues against a seizure. Claiming that nearly all seizures are visible, or that half were recognized, overstates bedside detection several-fold and would justify the observation-only plans that the data show to fail."
+    }
+  ],
+  "resources": [
+    {
+      "label": "ACNS neonatal terminology (Guideline 16, free PDF)",
+      "url": "https://www.acns.org/pdf/guidelines/Guideline-16.pdf"
+    },
+    {
+      "label": "ACNS neonatal monitoring guideline (Guideline 13, free PDF)",
+      "url": "https://www.acns.org/pdf/guidelines/Guideline-13.pdf"
+    },
+    {
+      "label": "Learning EEG: Neonatal chapter",
+      "url": "https://www.learningeeg.com/neonatal.html",
+      "note": "The epileptiform abnormalities section and its \"find the sharp transient\" exercise."
+    },
+    {
+      "label": "Neonatal Brain Monitoring course, Calgary",
+      "url": "https://nncceducation.thinkific.com/courses/Neonatal-Brain-monitoring",
+      "note": "Free; the seizure and amplitude-integrated EEG lessons. For reference also: Sansevere and Harrar, Atlas of Pediatric and Neonatal ICU EEG."
+    }
+  ],
+  "signOff": "The resident grades five neonatal backgrounds and identifies seizures on two continuous EEG studies, agreeing with the faculty read.",
+  "sources": [
+    "tsuchida2013",
+    "pressler2021",
+    "murray2008",
+    "shellhaas2011",
+    "wusthoff2025"
+  ]
+}

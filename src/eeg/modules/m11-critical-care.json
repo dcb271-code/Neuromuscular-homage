@@ -1,0 +1,236 @@
+{
+  "id": "m11-critical-care",
+  "number": 11,
+  "title": "Critical care EEG in children",
+  "short": "Critical care EEG",
+  "description": "Naming rhythmic and periodic ICU patterns in ACNS 2021 terms, applying the ictal-interictal continuum, and knowing when seizure burden changes outcome.",
+  "why": "About a third of critically ill children on continuous EEG have electrographic seizures, and many have no clinical sign, so the resident on call must be able to name ICU patterns in ACNS terms and know when they matter.",
+  "track": "icu",
+  "tags": [
+    "Neonatal & ICU",
+    "Abnormal & Ictal",
+    "Clinical Decision-Making"
+  ],
+  "difficulty": "advanced",
+  "duration": "55 min",
+  "color": "#4f46e5",
+  "objectives": [
+    "Name any rhythmic or periodic pattern with the ACNS 2021 main terms, modifiers and frequency qualifiers.",
+    "Apply the ictal-interictal continuum criteria, and know what to do with a pattern that falls on it.",
+    "Summarize the pediatric evidence linking seizure burden to outcome.",
+    "Use quantitative trends to find events, then confirm them on the raw EEG."
+  ],
+  "sections": [
+    {
+      "title": "Why the ICU needs its own vocabulary",
+      "content": "Continuous EEG in a pediatric intensive care unit finds seizures that nobody at the bedside can see. In a cohort of **550 children at 11 centers**, electrographic seizures occurred in **30%**, and in **36%** of those children every seizure was exclusively electrographic, with no clinical sign at all. Electrographic status epilepticus occurred in **38%** of the children with seizures and was associated with in-hospital death ([Abend 2013](https://pubmed.ncbi.nlm.nih.gov/23794680/)). A sedated, paralysed or comatose child cannot show you a seizure, so the monitor has to.\n\nThe second reason the ICU needs its own vocabulary is that the patterns it produces do not fit the routine-EEG categories. A comatose child after cardiac arrest, a child with encephalitis, or a child in the hours after a long convulsion produces rhythmic and periodic activity that is neither clearly a seizure nor clearly interictal. Two readers looking at the same page will disagree unless they share a set of defined terms. That is what the **American Clinical Neurophysiology Society's 2021 critical care EEG terminology** provides: a standardized way to say where a pattern is, what it is, how much of the record it occupies, and whether it meets criteria for a seizure or sits on the continuum below one ([Hirsch LJ 2021](https://pubmed.ncbi.nlm.nih.gov/33475321/)).\n\n**Who gets monitored**\n\nIndications for continuous EEG in critically ill children follow the ACNS consensus statement on continuous EEG in critically ill adults and children ([Herman 2015](https://pubmed.ncbi.nlm.nih.gov/25626778/)). The common thread is a child whose mental status cannot be explained, or whose clinical events cannot be trusted: after convulsive status epilepticus, with encephalopathy of uncertain cause, after cardiac arrest, with acute brain injury, or when paralysis or sedation removes the clinical signs.\n\nThis module builds on two earlier ones. The seizure definitions in [[m10-seizures-status|Module 10]] are the ceiling of the ICU vocabulary; everything here describes activity that either meets them or falls short. The neonatal definitions in [[m07-neonatal-abnormal|Module 7]] differ, and the numbers must not be mixed: a neonatal seizure needs only evolution and 10 seconds, and neonatal status is 50% of an hour, whereas the pediatric and adult threshold for electrographic status is 10 continuous minutes or 20% of any hour.",
+      "keyPoints": [
+        "In 550 critically ill children, 30% had electrographic seizures and 36% of those had exclusively electrographic seizures with no clinical sign (Abend 2013).",
+        "ACNS 2021 terminology exists because ICU patterns fall between clear seizure and clear interictal activity, and readers must describe them the same way (Hirsch LJ 2021).",
+        "Indications for continuous EEG in critically ill children follow the ACNS consensus statement (Herman 2015).",
+        "Neonatal and pediatric thresholds differ: neonatal status is 50% of an hour, pediatric and adult electrographic status is 10 minutes or 20% of an hour."
+      ],
+      "question": {
+        "question": "A 4-year-old is admitted after 40 minutes of convulsive status epilepticus, now treated with a benzodiazepine and levetiracetam, intubated and sedated. The convulsions have stopped and the child is unresponsive. The intensivist asks whether continuous EEG is worth ordering, since \"the seizure is over.\" What is the best response?",
+        "options": [
+          "Agree: once convulsive activity stops, ongoing seizures are rare and a routine 20-minute EEG in the morning is sufficient",
+          "Recommend continuous EEG, because in critically ill children a large share of electrographic seizures have no clinical sign, and this child is sedated and cannot show one",
+          "Recommend continuous EEG only if the child fails to wake within 24 hours, since that is when electrographic status becomes likely",
+          "Recommend amplitude-integrated EEG alone, which is adequate to exclude seizures in a child of this age"
+        ],
+        "answer": 1,
+        "explanation": "This child meets the ACNS consensus indications for continuous EEG on two counts: recent convulsive status epilepticus and an unexplained, sedated mental status (Herman 2015). The Abend cohort found electrographic seizures in 30% of critically ill children, with 36% of those having seizures that were exclusively electrographic (Abend 2013). A sedated, intubated child cannot show a seizure, so waiting for a clinical sign, or for a failure to wake, means waiting for something that will not appear. A routine 20-minute study samples a fraction of the period at risk. Amplitude-integrated EEG is a trend tool that helps find events in long records, but any change it shows must be confirmed on the raw EEG, and it does not replace conventional monitoring in this setting."
+      }
+    },
+    {
+      "title": "Naming the pattern: main terms and plus modifiers",
+      "content": "Every rhythmic or periodic ICU pattern gets a two-part name, and the parts always come in the same order ([Hirsch LJ 2021](https://pubmed.ncbi.nlm.nih.gov/33475321/)).\n\n**Main term 1: where**\n\n| Abbreviation | Location |\n|---|---|\n| G | Generalized |\n| L | Lateralized |\n| BI | Bilateral independent |\n| UI | Unilateral independent |\n| Mf | Multifocal |\n\n**Main term 2: what**\n\n| Abbreviation | Pattern |\n|---|---|\n| PDs | Periodic discharges |\n| RDA | Rhythmic delta activity |\n| SW | Spike-and-wave |\n\nCombined, they give **GPDs**, **LPDs**, **BIPDs**, **GRDA**, **LRDA**, **GSW** and so on. The distinction between periodic and rhythmic is the distinction between discharges separated by a measurable gap and waves that run into each other without one. It matters because the two carry different weight on the continuum below, and because a periodic discharge with a stereotyped morphology is often the residue of an injury, whereas rhythmic delta can be a nonspecific sign of dysfunction.\n\n**Plus modifiers**\n\nA plus modifier says the pattern carries something extra that makes it look more ictal:\n\n- **+F**: superimposed fast activity.\n- **+R**: superimposed rhythmic delta activity, which applies to periodic discharges only.\n- **+S**: superimposed sharp waves or spikes, which applies to rhythmic delta activity only.\n\nThe modifiers are not decoration. As the ictal-interictal continuum section shows, a plus modifier can move a slow periodic pattern onto the continuum, and it is part of what a reader must record before deciding whether a pattern deserves a treatment trial.\n\n**Read the name aloud**\n\nBuild the name in order every time: location, pattern, modifier, then the frequency and prevalence qualifiers from the next section. \"Left-sided rhythmic delta with superimposed sharp waves\" becomes **LRDA+S**. \"Periodic discharges over both hemispheres, arising independently on each side, with fast activity riding on them\" becomes **BIPDs+F**. A name built this way tells a colleague on the phone exactly what the page looks like, and lets the ictal-interictal continuum criteria be applied mechanically rather than by impression.",
+      "keyPoints": [
+        "Main term 1 gives location: G, L, BI, UI or Mf. Main term 2 gives pattern: PDs, RDA or SW (Hirsch LJ 2021).",
+        "Combine them in order to name a pattern: GPDs, LPDs, BIPDs, GRDA, LRDA, and so on.",
+        "+F is superimposed fast activity; +R is superimposed rhythmic delta (PDs only); +S is superimposed sharp waves or spikes (RDA only).",
+        "Plus modifiers can move a pattern onto the ictal-interictal continuum, so record them before deciding what a pattern means."
+      ],
+      "question": {
+        "question": "A resident describes an ICU tracing as \"right hemisphere rhythmic delta with spikes on top of it.\" A second resident, reading the same page, writes \"LPDs+S.\" The attending says the first description is right and the second name is wrong. Which correction should the second resident make?",
+        "options": [
+          "Change the name to LRDA+S: the pattern is rhythmic delta, not periodic discharges, and the +S modifier belongs to rhythmic delta activity",
+          "Change the name to LPDs+R: periodic discharges with rhythmic delta superimposed",
+          "Keep LPDs+S, since a spike on any lateralized pattern is a periodic discharge with sharp features",
+          "Change the name to GRDA+S, because delta activity with spikes is by definition generalized"
+        ],
+        "answer": 0,
+        "explanation": "The pattern as described is lateralized (main term 1: L) rhythmic delta (main term 2: RDA) with superimposed sharp waves or spikes, which is the +S modifier, and +S applies to rhythmic delta activity only. The correct name is LRDA+S. Naming it LPDs+S is wrong twice: rhythmic delta is not periodic discharges, and +S is not a modifier for PDs. LPDs+R describes periodic discharges with rhythmic delta superimposed, the reverse of what was seen. Calling it generalized ignores the stated lateralization; the location term reports what the tracing shows, and lateralized activity with spikes does not become generalized because of the spikes."
+      }
+    },
+    {
+      "title": "Prevalence, frequency and BIRDs",
+      "content": "Once a pattern has a name, the reader states how much of the record it occupies and how fast it runs. Both qualifiers come from the same ACNS 2021 standard ([Hirsch LJ 2021](https://pubmed.ncbi.nlm.nih.gov/33475321/)), and both feed the decisions in the next section.\n\n**Prevalence**\n\n| Term | Share of the record |\n|---|---|\n| Continuous | At least 90% |\n| Abundant | 50% to 89% |\n| Frequent | 10% to 49% |\n| Occasional | 1% to 9% |\n| Rare | Under 1% |\n\nPrevalence is a fraction of the epoch being described, so state which epoch: the whole day, the last hour, or the page. A pattern that is rare over 24 hours but continuous in the last hour is telling you something has changed.\n\n**Frequency**\n\nFrequency is stated in hertz for periodic discharges and rhythmic activity, and it is the single number that decides where a pattern sits on the ictal-interictal continuum. The thresholds in the next section are all frequency thresholds, so measure the frequency rather than estimate it: count discharges against the time marks over a full 10-second page, and check the page duration first, as [[m01-signals|Module 1]] warns.\n\n**BIRDs**\n\n**Brief potentially ictal rhythmic discharges** are rhythmic activity at **more than 4 Hz**, lasting **0.5 seconds to under 10 seconds**, with **no clinical correlate**. They are too short to meet the seizure definition in [[m10-seizures-status|Module 10]], which requires 10 seconds, but they look like the beginning of one. A BIRD is more convincing when its location matches the patient's known epileptiform discharges or seizures, and a reader who finds BIRDs should look harder at the rest of the record for longer runs that do meet the seizure threshold.\n\nThe practical value of these qualifiers is that they force the report to say what a colleague needs: not \"periodic discharges on the left\" but \"abundant LPDs at 1.5 Hz in the last hour, with occasional BIRDs in the same location.\" The first phrase is an impression; the second can be acted on.",
+      "keyPoints": [
+        "Prevalence bands: continuous at least 90%, abundant 50% to 89%, frequent 10% to 49%, occasional 1% to 9%, rare under 1% (Hirsch LJ 2021).",
+        "State the epoch a prevalence refers to; a change in prevalence over time is itself a finding.",
+        "Frequency in hertz decides where a pattern sits on the ictal-interictal continuum, so measure it against the time marks.",
+        "BIRDs are rhythmic activity above 4 Hz, lasting 0.5 to under 10 s, with no clinical correlate; a BIRD in the location of the patient's discharges should prompt a search for longer runs."
+      ],
+      "question": {
+        "question": "In a child with known right temporal spikes, the continuous EEG shows a 6-second run of 6 Hz rhythmic activity at T4 with no clinical change, and then nothing similar for the rest of the hour. How should this be described, and what does it change?",
+        "options": [
+          "As an electrographic seizure, because rhythmic activity above 2.5 Hz in the patient's epileptogenic zone is ictal regardless of duration",
+          "As a normal variant, because activity under 10 seconds is never clinically relevant",
+          "As a definite BIRD (above 4 Hz, 0.5 to under 10 s, no clinical correlate, in the location of the patient's spikes), which does not meet the seizure definition but should prompt a search of the record for longer runs",
+          "As LRDA+S at 6 Hz, rare, which belongs on the ictal-interictal continuum"
+        ],
+        "answer": 2,
+        "explanation": "The run is rhythmic, faster than 4 Hz, between 0.5 and 10 seconds long and has no clinical correlate, so it is a brief potentially ictal rhythmic discharge, and its location at the site of the patient's spikes makes it a definite one. It does not meet the electrographic seizure definition, which requires at least 10 seconds (Module 10); calling it a seizure applies the frequency rule without the duration rule. Calling it a normal variant discards a pattern that ACNS defines precisely because it may be the start of a seizure. Rhythmic delta activity is by definition delta, so 6 Hz activity cannot be named LRDA; the frequency qualifier and the pattern name must agree."
+      }
+    },
+    {
+      "title": "The ictal-interictal continuum",
+      "content": "The ictal-interictal continuum is the set of patterns that are **not seizures** by the definitions in [[m10-seizures-status|Module 10]] but are too fast, too sharp or too unstable to be dismissed as interictal. ACNS 2021 defines it by frequency, pattern and modifier ([Hirsch LJ 2021](https://pubmed.ncbi.nlm.nih.gov/33475321/)). A pattern is on the continuum if it is any one of the following:\n\n1. Periodic discharges or spike-and-wave at **more than 1 Hz and up to 2.5 Hz**.\n2. Periodic discharges or spike-and-wave at **0.5 to 1 Hz** with a **plus modifier** or with **fluctuation**.\n3. **Lateralized rhythmic delta activity** at **more than 1 Hz** with a plus modifier or with fluctuation.\n\nAbove 2.5 Hz for at least 10 seconds, or with definite evolution for at least 10 seconds, the pattern is an electrographic seizure, not a continuum pattern. Below these thresholds without a modifier or fluctuation, it is interictal.\n\n**Fluctuation versus evolution**\n\nThe continuum criteria hinge on a distinction that residents often blur. **Evolution** is the seizure criterion from Module 10: at least 2 unequivocal, sequential changes in frequency (by at least 0.5 Hz), morphology or location, each lasting at least 3 cycles. **Fluctuation** is a pattern that changes without meeting that standard: **3 or more changes, no more than 1 minute apart**, in frequency, morphology or location, that do not satisfy the evolution criteria. Fluctuation moves a slow pattern onto the continuum; evolution moves any pattern across the line into seizure. Ask first whether the changes are sequential and sustained enough to be evolution; if not, ask whether there are enough of them to be fluctuation.\n\n**What to do with a continuum pattern**\n\nA continuum pattern is a description, not a diagnosis, and the response is a set of actions rather than a reflex. Name it fully, with frequency, prevalence and modifiers, so that the next reader sees what you saw. Correlate it with the child's examination, imaging and course, because the same pattern means different things after cardiac arrest and in encephalitis. Watch it over time: a pattern that becomes faster, more prevalent or more organized is heading toward the seizure threshold, and one that slows and fragments is heading away. Where the clinical picture supports it, the electroclinical seizure definition from Module 10 offers a test: EEG and clinical improvement after a parenteral antiseizure medication makes the pattern electroclinical. Whether to run that trial is a decision for the treating team with the epilepsy service, and it should be documented as a trial, not as treatment of a proven seizure.",
+      "keyPoints": [
+        "A pattern is on the ictal-interictal continuum if it is PDs or SW at more than 1 and up to 2.5 Hz; PDs or SW at 0.5 to 1 Hz with a plus modifier or fluctuation; or lateralized RDA above 1 Hz with a plus modifier or fluctuation (Hirsch LJ 2021).",
+        "Fluctuation is 3 or more changes, no more than 1 minute apart, that do not meet the evolution criteria; evolution is the seizure criterion.",
+        "A continuum pattern is described fully, correlated with the clinical picture, and followed over time.",
+        "A treatment trial can test whether a continuum pattern is electroclinical, but the decision belongs to the treating team and must be documented as a trial."
+      ],
+      "question": {
+        "question": "A child after cardiac arrest has generalized periodic discharges at 1.5 Hz, abundant, with no evolution and no clinical change. The night resident asks whether this is status epilepticus and whether to start a second antiseizure medication. What is the correct classification, and what does it imply?",
+        "options": [
+          "Electrographic status epilepticus, because periodic discharges above 1 Hz that are abundant meet the 20% of an hour threshold; escalate treatment",
+          "An interictal pattern with no ictal significance, because 1.5 Hz is below 2.5 Hz; no further EEG action is needed",
+          "A definite BIRD, because the discharges are rhythmic and above 1 Hz",
+          "GPDs at 1.5 Hz on the ictal-interictal continuum, because the rate is above 1 and no more than 2.5 Hz; name it fully, correlate clinically, follow it over time, and discuss any treatment trial with the treating team rather than treating it as proven status"
+        ],
+        "answer": 3,
+        "explanation": "Abundant GPDs at 1.5 Hz fall squarely on the ictal-interictal continuum: periodic discharges at more than 1 and up to 2.5 Hz, without evolution. That is neither a seizure nor interictal, and the response is description, clinical correlation and observation, with a treatment trial as a team decision. Calling it status epilepticus confuses the prevalence band with the seizure definition: the 20% threshold applies to time spent in electrographic seizure, and a pattern that never meets the seizure definition contributes nothing to it. Dismissing it as interictal ignores the continuum criteria that exist precisely for patterns between 1 and 2.5 Hz. A BIRD is rhythmic activity above 4 Hz lasting under 10 seconds, which this pattern is not on either count."
+      }
+    },
+    {
+      "title": "Seizure burden, outcome and quantitative EEG",
+      "content": "Whether ICU seizures matter is an empirical question, and three pediatric cohorts answer it in a consistent direction.\n\n| Study | Children | Finding |\n|---|---|---|\n| [Abend 2013](https://pubmed.ncbi.nlm.nih.gov/23794680/) | 550 at 11 centers | Electrographic seizures in 30%; exclusively electrographic in 36% of those; electrographic status in 38% of those with seizures, and associated with in-hospital death |\n| [Topjian 2013](https://pubmed.ncbi.nlm.nih.gov/23164815/) | 200 | Electrographic status in 21.5%; associated with death (odds ratio 5.1) and neurologic decline (odds ratio 17.3). Seizures without status did not independently predict outcome |\n| [Payne 2014](https://pubmed.ncbi.nlm.nih.gov/24595203/) | 259 | Seizures in 36%. Neurologic decline rose sharply above a maximum hourly seizure burden of 20% (12 minutes per hour); odds ratio 1.13 for each 1% rise |\n\nRead together, the studies say that **burden**, not the mere presence of seizures, tracks outcome. In the Topjian cohort, seizures that did not reach status did not independently predict a worse outcome, whereas status did, and strongly. In the Payne cohort the relationship was continuous, with each 1% rise in maximum hourly burden carrying an odds ratio of 1.13, and a sharp increase in neurologic decline above a burden of 20%, or 12 minutes in an hour. That 20% figure is the same threshold ACNS uses to define electrographic status epilepticus in children and adults, which is one reason the definition is worth applying exactly. These are associations in observational cohorts, and none of them proves that treating the seizures changes the outcome; they justify finding and quantifying seizures, and they set the level at which a reader should be alarmed.\n\n**Quantitative EEG**\n\nA day of continuous EEG is thousands of pages, and no one reads them all at the same attention. Quantitative trends compress the record so that events stand out: **spectrograms** show a rise in power at seizure frequencies, **amplitude-integrated EEG** shows a rise in the amplitude envelope, and **asymmetry** trends show one hemisphere departing from the other. Use them to find candidate events and to see the rhythm of a day, including whether a treatment changed anything.\n\nThe rule that goes with them has no exceptions: **always confirm a trend change on the raw EEG before calling it**. Trends cannot tell rhythmic artifact from a seizure, a change in state from a change in the brain, or a disconnected electrode from suppression. Chest physiotherapy, patting and ventilator rhythms, the artifacts of [[m03-artifacts|Module 3]], all produce convincing trend changes. The trend points; the raw page decides.\n\n**Sign-off**\n\nThe sign-off for this module has two parts. The resident passes the ACNS Critical Care EEG Monitoring Research Consortium certification test, which follows free training slides with a self-assessment of 50 questions and 25 EEG examples and awards a certificate at 80% or above. Then the resident reviews two pediatric continuous EEG days with faculty, naming every pattern in full ACNS terms.",
+      "keyPoints": [
+        "Electrographic status, not seizures alone, independently predicted death and neurologic decline in 200 children (Topjian 2013: odds ratios 5.1 and 17.3).",
+        "Neurologic decline rose sharply above a maximum hourly seizure burden of 20%, or 12 minutes per hour, with an odds ratio of 1.13 per 1% rise (Payne 2014).",
+        "Spectrograms, amplitude-integrated EEG and asymmetry trends help find events in long records; every trend change must be confirmed on the raw EEG before it is called.",
+        "Sign-off: pass the ACNS CCEMRC certification test and review two pediatric cEEG days with faculty, naming every pattern."
+      ],
+      "question": {
+        "question": "Overnight, the spectrogram on a monitored 3-year-old with encephalitis shows six episodes of increased power in the theta band, each lasting a few minutes, over the left hemisphere. The nurse's notes record chest physiotherapy at about the same times. What should the resident do before reporting seizure burden?",
+        "options": [
+          "Report six electrographic seizures totalling their duration, since a spectrogram rise in a monitored encephalitic child is ictal until proven otherwise",
+          "Open the raw EEG at each trend change and confirm that the activity is cerebral and shows evolution, because rhythmic artifact from physiotherapy produces the same trend and only the raw page can tell them apart",
+          "Discount all six episodes as physiotherapy artifact, since the timing matches",
+          "Switch to amplitude-integrated EEG, which is less susceptible to movement artifact than a spectrogram"
+        ],
+        "answer": 1,
+        "explanation": "Quantitative trends find candidate events; they do not diagnose them. Rhythmic patting during physiotherapy produces a rise in band power that looks like a seizure on a spectrogram, and only the raw EEG, with video, can show whether the activity has a cerebral field and evolves in frequency, morphology or location. Reporting the episodes as seizures without looking would add artifact to the seizure burden and could prompt escalation of treatment. Discounting them because the timing matches is the opposite error: a child with encephalitis can have seizures during physiotherapy, and timing alone proves nothing. Amplitude-integrated EEG is another trend and is subject to the same artifacts; it does not remove the need to read the raw page."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A child after cardiac arrest has generalized periodic discharges at 1.5 Hz that occupy about 70% of the last hour, with no evolution. Which is the complete ACNS name, and where does the pattern sit?",
+      "options": [
+        "Continuous GPDs at 1.5 Hz; electrographic status epilepticus",
+        "Abundant GPDs at 1.5 Hz; on the ictal-interictal continuum, because the rate is above 1 and no more than 2.5 Hz",
+        "Frequent GRDA at 1.5 Hz; interictal",
+        "Abundant GPDs+F at 1.5 Hz; electrographic seizure"
+      ],
+      "answer": 1,
+      "explanation": "Periodic discharges over both hemispheres are GPDs. A prevalence of 70% falls in the abundant band, which runs from 50% to 89%; continuous requires at least 90%. At 1.5 Hz with no evolution, the pattern is on the ictal-interictal continuum, because periodic discharges at more than 1 and up to 2.5 Hz qualify. It is not status epilepticus, because it never meets the seizure definition, and prevalence in a band is not the same as time spent in seizure. It is not rhythmic delta activity, because the discharges are periodic. A +F modifier cannot be added to a pattern that has no superimposed fast activity, and even with one the pattern would remain on the continuum rather than becoming a seizure."
+    },
+    {
+      "question": "Left-sided rhythmic delta at 1.5 Hz with superimposed sharp waves runs for several minutes without clinical change and without meeting the evolution criteria. Name it and place it.",
+      "options": [
+        "LRDA+S at 1.5 Hz; on the ictal-interictal continuum, because lateralized rhythmic delta above 1 Hz with a plus modifier qualifies",
+        "LPDs+S at 1.5 Hz; on the ictal-interictal continuum",
+        "LRDA at 1.5 Hz; interictal, because rhythmic delta never reaches the continuum",
+        "LRDA+S at 1.5 Hz; an electrographic seizure, because sharp waves at more than 1 Hz are ictal"
+      ],
+      "answer": 0,
+      "explanation": "Lateralized rhythmic delta with superimposed sharp waves is LRDA+S, since +S is the modifier that belongs to rhythmic delta activity. Lateralized RDA at more than 1 Hz with a plus modifier is one of the three continuum criteria, so the pattern sits on the ictal-interictal continuum. Calling it periodic discharges misnames rhythmic delta, and +S is not a PDs modifier. Rhythmic delta does reach the continuum when it is lateralized, faster than 1 Hz, and carries a modifier or fluctuates, so the interictal label is wrong. It is not a seizure: seizure requires discharges averaging more than 2.5 Hz for at least 10 seconds or definite evolution for at least 10 seconds, and neither is present."
+    },
+    {
+      "question": "A 6-second run of 6 Hz rhythmic activity appears at T4 in a child whose interictal spikes are at T4. It has no clinical correlate. What is it?",
+      "options": [
+        "An electrographic seizure",
+        "LRDA at 6 Hz, rare",
+        "An artifact, because activity confined to one electrode has no field",
+        "A definite BIRD: rhythmic, above 4 Hz, under 10 s, with no clinical correlate, in the location of the patient's discharges"
+      ],
+      "answer": 3,
+      "explanation": "Rhythmic activity above 4 Hz lasting from 0.5 to under 10 seconds with no clinical correlate is a brief potentially ictal rhythmic discharge, and one that shares the location of the patient's known spikes is a definite BIRD. It is not a seizure, because the seizure definition requires at least 10 seconds. Rhythmic delta activity is by definition in the delta range, so 6 Hz activity cannot be LRDA. Nothing in the stem says the activity lacks a field; a run at T4 in a child with T4 spikes is exactly where a cerebral discharge would be expected, and BIRDs are defined because they matter."
+    },
+    {
+      "question": "In a 200-child PICU cohort, which finding was independently associated with death and neurologic decline, and what does that imply for how a reader should describe a monitored record?",
+      "options": [
+        "Any electrographic seizure, regardless of duration, so the report need only state whether seizures were present",
+        "Interictal epileptiform discharges, so the report should count spikes per hour",
+        "Electrographic status epilepticus (odds ratio 5.1 for death and 17.3 for decline), whereas seizures without status did not independently predict outcome; the report should quantify seizure burden, not only note presence (Topjian 2013)",
+        "Continuum patterns such as GPDs, so the report should state their prevalence but need not quantify seizures"
+      ],
+      "answer": 2,
+      "explanation": "In the Topjian cohort, electrographic status epilepticus occurred in 21.5% of children and was associated with death (odds ratio 5.1) and neurologic decline (odds ratio 17.3), while electrographic seizures that did not reach status did not independently predict outcome (Topjian 2013). The Payne cohort found the same direction as a continuous relationship, with decline rising sharply above a 20% hourly burden (Payne 2014). The implication is that burden is the measurement that carries prognostic weight, so the reader quantifies it: minutes per hour and maximum hourly burden. Noting presence alone loses that information. Interictal discharges and continuum patterns are described in ACNS terms, but neither cohort tied outcome to them in the way it did to seizure burden."
+    },
+    {
+      "question": "Over one hour, a monitored 8-year-old has three electrographic seizures lasting 4, 5 and 6 minutes, none reaching 10 continuous minutes. Which statement is correct?",
+      "options": [
+        "This is not electrographic status epilepticus, because no single seizure lasted 10 minutes",
+        "This is neonatal-type status epilepticus only if the seizures total 50% of the hour, which they do not",
+        "This is on the ictal-interictal continuum, because the seizures are intermittent",
+        "This is electrographic status epilepticus, because 15 minutes is 25% of the hour, which exceeds the 20% threshold; it is also above the burden at which neurologic decline rose sharply in the Payne cohort"
+      ],
+      "answer": 3,
+      "explanation": "ACNS 2021 defines electrographic status epilepticus as an electrographic seizure lasting at least 10 continuous minutes or seizures occupying at least 20% of any 60-minute period. Fifteen minutes in an hour is 25%, so the second arm of the definition is met even though no single seizure reached 10 minutes. The 20% threshold is also where the Payne cohort saw neurologic decline rise sharply (Payne 2014). The 50% threshold belongs to neonatal status epilepticus and does not apply to an 8-year-old. The ictal-interictal continuum describes patterns that fall short of the seizure definition; these events meet it, so they are seizures, and their sum meets status."
+    },
+    {
+      "question": "A resident is summarizing an overnight record: \"There were periodic discharges on the right that got faster and slower a few times.\" The attending asks for the ACNS description. Which reply is complete and applies the terminology correctly?",
+      "options": [
+        "\"LPDs with fluctuation: at least 3 changes in frequency within a minute of each other that did not meet evolution criteria; I will add the frequency and prevalence, because fluctuation at 0.5 to 1 Hz places the pattern on the ictal-interictal continuum\"",
+        "\"LPDs with evolution, so this was an electrographic seizure\"",
+        "\"Multifocal PDs, because the frequency changed\"",
+        "\"LRDA, because the discharges changed frequency\""
+      ],
+      "answer": 0,
+      "explanation": "Changes in frequency that come and go without meeting the evolution criteria are fluctuation, defined by ACNS 2021 as 3 or more changes no more than 1 minute apart that do not satisfy evolution. Fluctuation matters because it can move a slow periodic pattern onto the ictal-interictal continuum: PDs at 0.5 to 1 Hz qualify with fluctuation, and PDs above 1 and up to 2.5 Hz qualify anyway. The description is incomplete until frequency and prevalence are added. Evolution requires at least 2 unequivocal sequential changes each lasting at least 3 cycles, and would make the pattern a seizure, which the resident has not shown. Multifocal refers to location, not to changing frequency. Rhythmic delta activity is a different main term from periodic discharges, and a change in rate does not convert one into the other."
+    }
+  ],
+  "resources": [
+    {
+      "label": "ACNS Standardized Critical Care EEG Terminology, 2021 (free PDF)",
+      "url": "https://www.acns.org/UserFiles/file/ACNSStandardizedCriticalCareEEGTerminology_rev2021.pdf"
+    },
+    {
+      "label": "ACNS CCEMRC training and certification",
+      "url": "https://www.acns.org/research/critical-care-eeg-monitoring-research-consortium-ccemrc/education",
+      "note": "Free slides, then a self-assessment of 50 questions and 25 EEG examples, with a certificate at 80% or above."
+    },
+    {
+      "label": "ACNS Critical Care EEG Monitoring Research Consortium",
+      "url": "https://www.acns.org/research/critical-care-eeg-monitoring-research-consortium-ccemrc"
+    },
+    {
+      "label": "eeg-training.com: ACNS Terminology",
+      "url": "https://www.eeg-training.com/acns_criteria.html",
+      "note": "The 2012-to-2021 mapping, pattern-name builder and strip-reading drills."
+    },
+    {
+      "label": "Learning EEG: Rhythmicity & Periodicity",
+      "url": "https://www.learningeeg.com/rhythmicity-periodicity.html",
+      "note": "With an interactive ictal-interictal continuum diagram."
+    },
+    {
+      "label": "EEGmaster atlas",
+      "url": "https://eegmaster.com/eegmaster/",
+      "note": "ICU Background, ICU Patterns, ICU Ictal and Quantitative EEG modules; free account required."
+    }
+  ],
+  "signOff": "The resident passes the ACNS CCEMRC certification test and reviews two pediatric cEEG days with faculty, naming every pattern.",
+  "sources": [
+    "hirschLJ2021",
+    "abend2013",
+    "topjian2013",
+    "payne2014",
+    "herman2015"
+  ]
+}

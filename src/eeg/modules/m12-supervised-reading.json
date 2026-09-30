@@ -1,0 +1,205 @@
+{
+  "id": "m12-supervised-reading",
+  "number": 12,
+  "title": "Supervised reading and final sign-off",
+  "short": "Supervised reading",
+  "description": "Pre-reading real studies against the attending's read, logging the disagreements, and what it takes to sign the curriculum off.",
+  "why": "Self-study builds vocabulary, but reading skill comes from pre-reading real studies and comparing each read with an attending's. So this module runs alongside the others from the first week.",
+  "track": "longitudinal",
+  "tags": [
+    "Clinical Decision-Making"
+  ],
+  "difficulty": "intermediate",
+  "duration": "30 min",
+  "color": "#475569",
+  "objectives": [
+    "Pre-read a study and write a full draft report before seeing the official one, then log the study, the draft impression and any disagreement.",
+    "Review the log with a faculty reader each month for recurring errors, and name the module that addresses each one.",
+    "State what the published evidence says about EEG training time and competency measurement in child neurology programs.",
+    "Track a local reading target and the objective tests, and complete the sign-off for every module."
+  ],
+  "sections": [
+    {
+      "title": "Pre-read, compare, log",
+      "content": "The eleven modules before this one teach vocabulary and rules. None of them can teach the thing that makes a reader: the moment when a page looks one way to you and another way to the attending, and you find out why. This module is a method for producing that moment on purpose, many times, from the first week of training.\n\n**The routine**\n\n1. **Pre-read.** Take a study that has not yet been reported, or one whose report you have not seen, and read it in the fixed order from [[m02-read-and-report|Module 2]]: technical description, background, sleep, activation, abnormalities, impression, clinical correlation. Write a **full draft report**, not notes. A draft that stops at \"probably normal\" cannot be compared with anything.\n2. **Compare.** Read the attending's report, or review the study together. Line up the two impressions.\n3. **Log.** Record the study, the draft impression, the attending's impression and any disagreement. Write down what you called that the attending did not, and what the attending called that you missed.\n\nThe log is the product. A resident who has read sixty studies without one has sixty impressions; a resident with a log has a map of their own errors.\n\n**What to do with a disagreement**\n\nWhen the draft and the attending read differ, the first question is which of the two is right, and the honest answer is sometimes neither, or that the record does not decide it. Go back to the page together and apply the rule the disagreement turns on: the six IFCN criteria from [[m05-variants|Module 5]] if the question is whether a transient is epileptiform, the field and video from [[m03-artifacts|Module 3]] if it is whether a waveform is cerebral, the ACNS thresholds from [[m10-seizures-status|Module 10]] if it is whether a run is a seizure. A disagreement resolved by rule is a lesson; a disagreement resolved by rank is not.\n\n**The monthly review**\n\nEach month, the resident and a faculty reader go through the log looking for **recurring errors**, not single ones. Two patterns are common enough to expect: **overcalling** sharply contoured normal activity as epileptiform, which is the subject of Module 5 and a documented route to misdiagnosing epilepsy, and **missed artifact**, which Module 3 addresses. When the review finds a pattern, the response is to reread that module and to bias the next month's studies toward the records that expose it.",
+      "keyPoints": [
+        "Pre-read the study and write a full draft report before seeing the official one; a draft that is only notes cannot be compared.",
+        "Log every study: the draft impression, the attending's impression and any disagreement.",
+        "Resolve a disagreement by going back to the page and applying the rule it turns on, not by deferring to rank.",
+        "Review the log monthly with a faculty reader for recurring errors, such as overcalling (Module 5) or missed artifact (Module 3)."
+      ],
+      "question": {
+        "question": "A resident's draft calls a 12-year-old's record abnormal for left temporal sharp waves; the attending's report calls it normal. Both look at the page together and still disagree. What should happen next?",
+        "options": [
+          "The resident adopts the attending's read and logs the study as a normal record, since the attending is the reader of record",
+          "The resident leaves the study out of the log, because unresolved disagreements distort the error count",
+          "The resident asks a second attending to break the tie and logs whichever impression wins",
+          "The two score each of the disputed transients against the six IFCN criteria together, log the disagreement and its resolution, and the resident flags overcalling as a pattern to watch at the monthly review"
+        ],
+        "answer": 3,
+        "explanation": "The disagreement turns on whether the transients are epileptiform, and the curriculum has a rule for that: the IFCN criteria from Module 5, with the validation threshold of 5 of 6. Applying the rule together converts an argument into a lesson, and logging both the disagreement and how it was resolved is what makes the monthly review useful. Adopting the attending's read without the rule teaches deference, not reading; the attending may well be right, but the resident learns nothing about why. Leaving the study out hides exactly the kind of disagreement the log exists to capture. A second opinion may be sensible for the patient's report, but a tie-break by vote does not teach the criterion the readers disagreed about."
+      }
+    },
+    {
+      "title": "What the evidence says about training",
+      "content": "The curriculum is structured around explicit sign-offs and a reading log because the published evidence says that most programs have neither.\n\nIn a **2024 survey of US and Canadian child neurology and neurodevelopmental disabilities program directors**, **62%** used no objective EEG competency measure and **93%** set no minimum number of reads. Programs required a mean of **7.3 weeks** of EEG training ([Katyal 2024](https://pubmed.ncbi.nlm.nih.gov/39360148/)). In an **online routine-EEG examination** given to adult and child neurology residents, residents scored **72%** against experts' **82%**, and the authors concluded that residents need **more than 8 weeks, ideally more than 12**, of EEG training for minimal routine-EEG competency ([Nascimento 2023](https://pubmed.ncbi.nlm.nih.gov/39359319/), as summarized in Katyal 2024). Set beside each other, the two papers say that the typical program provides less training time than the examination data suggest is needed, and rarely checks the result.\n\n**What competency looks like on paper**\n\nThe ACGME Child Neurology Milestones describe EEG competence in five levels, and the outline of this curriculum maps its modules onto them ([ACGME 2020](https://www.acgme.org/specialties/child-neurology/milestones/)):\n\n| Milestone level | Wording (ACGME) | Modules |\n|---|---|---|\n| Level 1 | Describes general indications for an EEG | 2 |\n| Level 2 | Describes normal EEG features using correct terminology, including common artifacts, across the lifespan | 1 to 4 |\n| Level 3 | Describes patterns of status epilepticus, normal EEG variants and common abnormalities, across the lifespan | 5, 8, 10 |\n| Level 4 | Interprets common EEG abnormalities and creates a report | 9, 12 |\n| Level 5 | Interprets uncommon EEG abnormalities | 7, 11 |\n\nThe ILAE competency roadmap places the same skills at its Level 2, proficiency, including background and sleep at all ages, artifacts and normal variants, and interictal and ictal patterns ([Blümcke 2019](https://pubmed.ncbi.nlm.nih.gov/30892268/)). The milestones describe what a competent reader can do; they do not say how many studies it takes to get there, and no published minimum has been validated.\n\n**What this means for you**\n\nTwo things follow. First, the number of weeks on a rotation is a poor proxy for competence, so the sign-offs in this curriculum test what you can do on real records rather than how long you have been in the reading room. Second, because the median program does not measure EEG competence objectively, you may need to build the measurement yourself: the log, the sign-offs and the objective tests in the last section are that measurement.",
+      "keyPoints": [
+        "In a 2024 survey, 62% of child neurology programs used no objective EEG competency measure and 93% set no minimum number of reads; the mean requirement was 7.3 weeks (Katyal 2024).",
+        "On an online routine-EEG examination, residents scored 72% against experts' 82%; the authors concluded more than 8 weeks, ideally more than 12, of training is needed (Nascimento 2023, as summarized in Katyal 2024).",
+        "The ACGME Child Neurology Milestones describe EEG competence in five levels, from stating indications to interpreting uncommon abnormalities; the curriculum maps onto them.",
+        "No minimum number of reads has been validated, so competence is shown by sign-offs on real records, not by time served."
+      ],
+      "question": {
+        "question": "A program director proposes that residents be considered EEG-competent after completing an 8-week rotation, with no other assessment. Drawing on the published evidence, what is the most defensible response?",
+        "options": [
+          "Agree, because 8 weeks is above the mean of 7.3 weeks that programs currently require",
+          "Propose 12 weeks instead, which the examination data identify as the point at which no further assessment is needed",
+          "Point out that examination data suggest more than 8 weeks, ideally more than 12, are needed for minimal competency, and that time alone is a poor proxy: add an objective measure such as sign-offs on real records and the milestone-aligned competency tests",
+          "Reject any time-based requirement, because the ACGME milestones prohibit measuring competence by rotation length"
+        ],
+        "answer": 2,
+        "explanation": "Nascimento 2023 concluded that residents need more than 8 weeks, ideally more than 12, for minimal routine-EEG competency, so an 8-week rotation sits at the bottom of that range. More importantly, the same body of work shows that 62% of programs used no objective measure, and the residents in the examination study scored 72% against experts' 82% (Katyal 2024). The defensible response adds measurement rather than arguing about weeks. Being above the current mean is not a standard, since the mean describes what programs do, not what works. Twelve weeks is the preferred duration, not a point at which assessment becomes unnecessary; no minimum has been validated. The milestones describe levels of competence and are silent on rotation length; they do not prohibit a time requirement, they simply do not substitute for assessment."
+      }
+    },
+    {
+      "title": "How many studies: a suggested mix",
+      "content": "There is **no validated minimum number of studies**. In the 2024 survey, 93% of child neurology programs set none ([Katyal 2024](https://pubmed.ncbi.nlm.nih.gov/39360148/)). That is not a reason to have no number; it is a reason to set a local one, state it, and track it, so that the program can look back and see whether it was enough.\n\n**A starting mix, offered as a suggestion rather than a standard**\n\n- **60 routine studies**, at least **20 of them in children under 2**.\n- **10 neonatal studies** across a range of postmenstrual ages.\n- **10 days of pediatric or neonatal continuous EEG**.\n- At least **one recorded example each** of infantile epileptic spasms syndrome, an absence epilepsy and self-limited epilepsy with centrotemporal spikes.\n\nThe mix is shaped by where residents go wrong. The under-2 requirement exists because the normal record changes fastest in the first two years, as [[m04-normal-by-age|Module 4]] shows, and because the artifacts of infancy in [[m03-artifacts|Module 3]] are not learned from adult records. The neonatal studies must span postmenstrual ages, because a reader who has only seen term records cannot judge a 32-week background against [[m06-neonatal-maturation|Module 6]]. The continuous EEG days are there because ICU patterns and seizure burden, the subject of [[m11-critical-care|Module 11]], cannot be learned from 20-minute studies. The three named syndromes are the ones whose EEG features [[m09-syndromes|Module 9]] treats as syndrome-defining, and a reader should have seen each at least once before signing off.\n\n**Tracking**\n\nThe log from the first section is the tracking tool. Add a column for study type and one for postmenstrual or chronological age, and the mix counts itself. Review the totals at the monthly meeting alongside the error patterns, because the two interact: a resident who keeps overcalling temporal transients needs more adolescent records, not more of the same, and a resident who has never logged a disagreement on a neonatal study has probably not read enough of them.\n\nTreat the numbers as a floor to revise, not a ceiling to reach. The point of setting a local target is to be able to say, a year later, whether the residents who met it read competently, and to move the target if they did not.",
+      "keyPoints": [
+        "No minimum number of studies has been validated; 93% of programs set none (Katyal 2024). Set a local target and track it.",
+        "Suggested mix: 60 routine studies with at least 20 in children under 2; 10 neonatal studies across postmenstrual ages; 10 days of pediatric or neonatal continuous EEG; one recorded example each of IESS, an absence epilepsy and SeLECTS.",
+        "The mix targets where readers go wrong: infancy, neonatal maturation, ICU patterns and syndrome-defining features.",
+        "Use the reading log to count the mix, and revise the target once outcomes can be seen."
+      ],
+      "question": {
+        "question": "Three months into training, a resident's log shows 45 routine studies (all in children over 5), no neonatal studies and no continuous EEG days. The monthly review is due. What is the right adjustment?",
+        "options": [
+          "Redirect the next month's reading toward children under 2, neonatal studies across a range of postmenstrual ages, and continuous EEG days, because the routine count is ahead while every component that targets a known error area is empty",
+          "None yet; 45 studies is on pace for 60, and the neonatal and ICU components can be added in the final month",
+          "Count the 45 studies as complete for the routine component and reduce the target to reflect the program's caseload",
+          "Replace the neonatal and continuous EEG components with additional routine studies, since routine reading is the core competency"
+        ],
+        "answer": 0,
+        "explanation": "The suggested mix is deliberately weighted toward the records that expose the errors residents make: under-2 records for the fastest-changing normal EEG and the artifacts of infancy, neonatal studies across postmenstrual ages, and continuous EEG for ICU patterns. A log with 45 studies all in older children has met none of those aims, however many studies it holds. Waiting until the final month leaves no time for a second monthly review to check whether the errors those records expose have been corrected. Reducing the target because of caseload abandons the purpose of tracking, which is to find out whether the target was enough. Replacing the neonatal and ICU components with routine studies removes the parts of the mix that routine reading cannot teach."
+      }
+    },
+    {
+      "title": "Objective tests and the final sign-off",
+      "content": "Sign-off in this curriculum has two layers: **objective tests** that can be scored by a machine, and **sign-offs on real records** that only a faculty reader can give. Neither replaces the other.\n\n**Objective testing**\n\n- [EEGmaster](https://eegmaster.com/curriculum_intro) offers **six milestone-aligned competency tests of 25 questions each**. A trainee can name the program director as \"Program Officer,\" who can then track results. A free account is required.\n- The **ACNS CCEMRC certification** covers the ICU and is the first half of the [[m11-critical-care|Module 11]] sign-off: free training slides, then a self-assessment of 50 questions and 25 EEG examples, with a certificate at 80% or above.\n\nThe tests measure recognition and rule application against a fixed key. They cannot measure whether you write a usable report or localize on a real bipolar chain, which is why the record-based sign-offs exist.\n\n**Final sign-off checklist**\n\nEach item is the faculty-verified competency from its module. Tick it only when a faculty reader has verified it; the site records your tick as self-reported.\n\n- Module 1: localized five discharges in bipolar and referential montages.\n- Module 2: five full reports accepted with minor edits.\n- Module 3: labeled ten artifacts, at least three from infants or the ICU.\n- Module 4: read ten normal records from infancy to adolescence.\n- Module 5: scored ten sharp transients against the IFCN criteria, agreeing on at least eight.\n- Module 6: estimated postmenstrual age within 2 weeks on five neonatal records.\n- Module 7: graded five neonatal backgrounds and identified seizures on two cEEG studies.\n- Module 8: described ten abnormal records in full.\n- Module 9: identified syndrome-defining features of IESS, an absence epilepsy and SeLECTS.\n- Module 10: marked onset, evolution and offset in five recorded seizures.\n- Module 11: passed the ACNS CCEMRC certification and reviewed two pediatric cEEG days.\n- Module 12: completed the local reading target and all six EEGmaster competency tests.\n\n**Reading the checklist as a curriculum**\n\nThe items are not interchangeable. Modules 1 to 5 are signed off on skills that every later read depends on, and a resident who has not been signed off on localization (Module 1) or on the IFCN criteria (Module 5) is not ready for the abnormal-EEG sequence. The neonatal pair (6 and 7) and the abnormal sequence (8 to 10) can be completed in either order, and both lead into Module 11. Module 12 is signed off last, because its target counts the reading done during all the others. When every box is ticked by a faculty reader, the resident has met the curriculum's definition of a competent pediatric EEG reader: not a number of weeks, but a set of things they can do on real records.",
+      "keyPoints": [
+        "EEGmaster has six milestone-aligned competency tests of 25 questions each, with program-director tracking; the ACNS CCEMRC certification covers the ICU.",
+        "Objective tests measure recognition and rule application; sign-offs on real records measure reading and reporting. Both are required.",
+        "Each module's sign-off is a faculty-verified competency on real records; a self-reported tick is not a sign-off.",
+        "Modules 1 to 5 come first, the neonatal and abnormal tracks in either order, then 11; Module 12 is signed off last."
+      ],
+      "question": {
+        "question": "A resident has scored above 80% on all six EEGmaster competency tests and holds the ACNS CCEMRC certificate, but has not yet done the record-based sign-offs for Modules 1, 2 and 5. The resident asks to be signed off on the curriculum. What is the correct response?",
+        "options": [
+          "Sign off the curriculum: the objective tests are milestone-aligned and cover the same skills as the record-based sign-offs",
+          "Sign off Modules 1, 2 and 5 on the strength of the test scores, and complete the remaining record-based sign-offs later",
+          "Decline for now: the tests measure recognition and rule application, and the outstanding sign-offs test localization on real montages, report writing and scoring real transients against the IFCN criteria, which a fixed-key test cannot verify",
+          "Decline, because the ACNS certificate is valid only for adult ICU reading and must be repeated for pediatric records"
+        ],
+        "answer": 2,
+        "explanation": "The curriculum's sign-off has two layers on purpose. The EEGmaster tests and the CCEMRC certificate are objective measures of recognition and rule application, and passing them is required. The Module 1, 2 and 5 sign-offs measure something the tests cannot: localizing five discharges on real bipolar and referential montages, writing five reports a faculty reader accepts, and scoring ten real sharp transients against the IFCN criteria with agreement on at least eight. Treating the tests as equivalent to those sign-offs collapses the two layers into one. Signing off modules on test scores alone does the same thing module by module. The CCEMRC certification is the first half of the Module 11 sign-off, and nothing in the curriculum requires it to be repeated for pediatric records; the second half is reviewing two pediatric cEEG days with faculty."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "During a pre-read, a resident sees a sharp wave that appears only in the T5-O1 channel of a longitudinal bipolar montage, largest there, with no phase reversal. The draft report localizes it to O1. What should the monthly review say about this call?",
+      "options": [
+        "The call is sound: the largest deflection in a bipolar chain marks the maximum",
+        "The call is unsupported: O1 is at the end of the chain and cannot phase-reverse, so the maximum could be at T5 or O1 and must be checked in a referential montage or a transverse chain before it is localized",
+        "The call should have been T5, since the first electrode of the channel is always the maximum when there is no reversal",
+        "The transient should have been reported as artifact, because a cerebral discharge always phase-reverses"
+      ],
+      "answer": 1,
+      "explanation": "An electrode at the end of a bipolar chain is input to only one channel, so a maximum there has nothing to reverse against. The discharge appears large in the last channel and nowhere else, which is what an end-of-chain maximum looks like, and it could sit at either electrode of that channel. The rule from Module 1 is to confirm it by amplitude in a referential montage or by reversal in a transverse chain. Taking the largest bipolar deflection as the maximum ignores the geometry of the chain. Assigning it to the first electrode is a guess in the other direction. Real discharges at the end of a chain do not reverse, so their failure to do so is not evidence of artifact."
+    },
+    {
+      "question": "A resident pre-reads a NICU record and drafts \"electrographic seizure\" for 20 minutes of 10 Hz rhythmic activity present in every channel, unchanged in frequency throughout, in a 3-week-old on high-frequency oscillatory ventilation. The attending calls it artifact. Which rule settles the disagreement?",
+      "options": [
+        "The neonatal seizure definition: any rhythmic pattern lasting at least 10 s in a neonate is a seizure",
+        "Prevalence: a pattern present for 20 minutes of an hour is below the 50% neonatal status threshold, so it is not ictal",
+        "Location: cerebral seizures in neonates are always focal, so a diffuse pattern is artifact by definition",
+        "Seizures evolve and artifact does not: a diffuse rhythm that matches the ventilator rate and never changes in frequency, morphology or location is artifact, and the video and ventilator setting confirm it"
+      ],
+      "answer": 3,
+      "explanation": "The neonatal seizure definition requires a sudden, repetitive, evolving pattern lasting at least 10 seconds, and evolution is what this pattern lacks: it holds one frequency in every channel for 20 minutes and matches a ventilator rate. Module 3 makes the point that rhythmic artifact from ventilation, patting or sucking does not evolve the way seizures do, and that the video and the device setting are the confirmation. Duration alone does not make a neonatal seizure; evolution is part of the definition. The 50% threshold defines neonatal status epilepticus and says nothing about whether a single pattern is a seizure. Neonatal seizures are treated as focal in onset, but that is a classification rule, not a way to exclude a pattern by its distribution."
+    },
+    {
+      "question": "In the log, a resident has called three sharply contoured transients epileptiform that the attending called normal. On review, each transient is spiky and biphasic, and briefer than the background, but has no after-going slow wave, does not disrupt the background and has no field. How should the resident score them, and what does the pattern in the log suggest?",
+      "options": [
+        "Each meets at most 3 of the 6 IFCN criteria, below the 4-of-6 definition and the 5-of-6 threshold that gave the best specificity in validation; the log shows overcalling, so the resident should reread Module 5 and bias the next month toward records with sharply contoured normal activity",
+        "Each meets 4 of the 6 criteria, so the resident's call stands and the attending is underreading",
+        "The criteria do not apply to sharply contoured transients, only to spikes, so the disagreement cannot be resolved",
+        "Two of three meet the criteria, so the resident's error rate is acceptable and no change is needed"
+      ],
+      "answer": 0,
+      "explanation": "The IFCN glossary defines a transient as epileptiform when it meets at least 4 of 6 criteria (Kane 2017), and the validation study found that requiring 5 of 6 gave 95.7% specificity and 81.5% sensitivity, judging 5 the best threshold for clinical use (Kural 2020). A spiky, biphasic transient that is briefer than the background meets criteria 1 and 2, and possibly 3 for asymmetry; without an after-going slow wave, background disruption or a field, it cannot reach 4. Three such calls in one log is the overcalling pattern that the monthly review exists to catch, and the remedy is Module 5 and more of the records that expose it. Crediting 4 criteria awards points the description does not support. The criteria apply to any sharp transient under consideration, which is their purpose. Two of three would not be acceptable either, but the description does not support it."
+    },
+    {
+      "question": "A resident pre-reading a neonatal continuous EEG finds seizures totalling 34 minutes in one hour, and drafts \"seizures present, below the status epilepticus threshold\" on the grounds that the threshold is 20% of an hour. Which correction belongs in the log?",
+      "options": [
+        "The draft is correct: 34 minutes is 57% of the hour, but neonatal status requires 10 continuous minutes",
+        "The 20% threshold is the pediatric and adult definition; neonatal status epilepticus is seizures summing to at least 50% of any 1-hour epoch, and 34 minutes meets it",
+        "Neonatal status epilepticus is not defined electrographically, so the draft should describe the burden without a label",
+        "The threshold in neonates is 20% of a 30-minute epoch, which 34 minutes exceeds"
+      ],
+      "answer": 1,
+      "explanation": "The neonatal and pediatric definitions differ, and mixing them is one of the errors this curriculum repeats a warning about. ACNS neonatal terminology defines neonatal status epilepticus as seizures summing to at least 50% of any 1-hour epoch (Module 7); 34 minutes is more than half an hour, so the record meets it. The 10-continuous-minute arm and the 20% arm belong to the pediatric and adult definition from Module 10. Neonatal status is defined electrographically, which is why the burden can be totalled and compared with the threshold. There is no 30-minute epoch in either definition."
+    },
+    {
+      "question": "A monitored 9-year-old has five electrographic seizures of 3 minutes each in one hour, none lasting 10 minutes. The resident's draft reports \"five brief seizures, no status.\" What should the attending's correction say?",
+      "options": [
+        "The draft is correct, because electrographic status requires a single seizure of at least 10 continuous minutes",
+        "The draft is correct, because 15 minutes is below the 50% threshold for status epilepticus",
+        "The draft is wrong: electrographic status epilepticus is also met when seizures occupy at least 20% of any 60-minute period, and 15 minutes is 25% of the hour",
+        "The draft is wrong: five seizures in an hour meets status regardless of their duration"
+      ],
+      "answer": 2,
+      "explanation": "The ACNS 2021 definition of electrographic status epilepticus has two arms: an electrographic seizure lasting at least 10 continuous minutes, or seizures occupying at least 20% of any 60-minute period (Module 10). Five 3-minute seizures total 15 minutes, which is 25% of the hour and meets the second arm. Requiring a single 10-minute seizure ignores that arm. The 50% threshold is the neonatal definition and does not apply to a 9-year-old. The count of seizures is not part of the definition; their summed duration is, which is why the burden should be totalled and reported in minutes per hour, the same quantity that tracked outcome in the pediatric cohorts of Module 11."
+    }
+  ],
+  "resources": [
+    {
+      "label": "EEGmaster curriculum and competency tests",
+      "url": "https://eegmaster.com/curriculum_intro",
+      "note": "Six milestone-aligned tests of 25 questions each; a program director can be named as Program Officer to track results. Free account required."
+    },
+    {
+      "label": "ACNS CCEMRC training and certification",
+      "url": "https://www.acns.org/research/critical-care-eeg-monitoring-research-consortium-ccemrc/education",
+      "note": "Covers the ICU (Module 11)."
+    },
+    {
+      "label": "Learning EEG",
+      "url": "https://www.learningeeg.com/",
+      "note": "Free, no login. Strongest for the pediatric and neonatal chapters."
+    },
+    {
+      "label": "eeg-training.com (NeuroLogic)",
+      "url": "https://www.eeg-training.com/",
+      "note": "Free; most interactive for montage, filter, artifact and ACNS drills. Adult-oriented."
+    },
+    {
+      "label": "EEGmaster atlas and EEG of the Week",
+      "url": "https://eegmaster.com/eegmaster/",
+      "note": "Free account required."
+    },
+    {
+      "label": "AES introductory text and atlas (St. Louis and Frey)",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK390356/",
+      "note": "Free on NCBI Bookshelf."
+    }
+  ],
+  "signOff": "The resident completes the local reading target and all six EEGmaster competency tests, and every module's sign-off has been verified by a faculty reader.",
+  "sources": [
+    "katyal2024",
+    "nascimento2023",
+    "acgme2020",
+    "blumcke2019",
+    "kane2017",
+    "kural2020"
+  ]
+}

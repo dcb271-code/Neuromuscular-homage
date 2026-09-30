@@ -1,0 +1,189 @@
+{
+  "id": "m02-read-and-report",
+  "number": 2,
+  "title": "A systematic read and the report",
+  "short": "Read and report",
+  "description": "When an EEG is indicated, a fixed order for reading every record, and a report that keeps description, impression and clinical correlation apart.",
+  "why": "A fixed reading order prevents the commonest resident error, which is jumping to the one abnormal-looking wave before describing the background.",
+  "track": "foundation",
+  "tags": ["EEG Fundamentals", "Clinical Decision-Making"],
+  "difficulty": "beginner",
+  "duration": "45 min",
+  "color": "#2563eb",
+  "objectives": [
+    "State when an EEG is indicated and what a single study can and cannot answer.",
+    "Read every record in the same order and describe it in standard terms before interpreting it.",
+    "Write a report whose description, impression and clinical correlation are kept separate."
+  ],
+  "sections": [
+    {
+      "title": "What a single EEG can and cannot answer",
+      "content": "An EEG is ordered to answer a question, and the first job of the reader is to know which questions a routine study can answer. It can show the state of the background, which reflects diffuse cortical function at the moment of recording. It can show interictal epileptiform discharges, which raise or lower the probability of an epilepsy and point to a syndrome. It can capture an event, if one happens during the recording, and settle whether it had an electrographic correlate. It can grade the severity of an encephalopathy and follow it over time.\n\nWhat it cannot do is decide whether a child has epilepsy by itself. **A normal routine EEG does not exclude epilepsy.** A routine study samples a short window, usually with the child awake for much of it, and many discharges appear only in drowsiness or sleep, or only on some days. The converse is also true: **an interictal discharge does not by itself make the diagnosis.** Epileptiform discharges occur in a small proportion of children who have never had a seizure, and sharply contoured normal activity is often over-read as epileptiform. [[m05-variants|Module 5]] gives the numbers and the criteria. Epilepsy is a clinical diagnosis, and the EEG supports or weakens it.\n\n**Framing the indication**\n\nThe indication shapes the read. A child referred after a first unprovoked seizure needs a careful search for a syndrome-defining pattern, because that changes prognosis and treatment. A child referred for staring spells needs adequate hyperventilation, because the absence of spike-wave after a good effort argues against childhood absence epilepsy. A child referred with regression needs sleep, because some patterns are marked only in sleep. When the indication and the study do not match, say so in the report and recommend the study that would answer the question. A report that interprets an inadequate study as if it were adequate misleads everyone downstream.",
+      "keyPoints": [
+        "A routine EEG answers questions about the background, interictal discharges, captured events and encephalopathy; it does not diagnose epilepsy on its own.",
+        "A normal routine EEG does not exclude epilepsy, because it samples a short window and many discharges appear only in sleep.",
+        "An interictal discharge does not by itself establish epilepsy; the diagnosis is clinical.",
+        "Match the study to the indication, and say in the report when the study could not answer the question asked."
+      ],
+      "question": {
+        "question": "A 6-year-old had a single unprovoked generalized tonic-clonic seizure. Her routine awake EEG, without sleep, is normal. The referring clinician asks whether the normal study rules out epilepsy. What should the report say?",
+        "options": [
+          "A normal routine EEG does not exclude epilepsy; sleep was not obtained, and a sleep-deprived or sleep study would increase the yield if the clinical question remains",
+          "The normal study excludes epilepsy, and no further EEG is needed unless a second seizure occurs",
+          "The normal study makes a genetic generalized epilepsy unlikely, so treatment can be deferred indefinitely",
+          "The study is uninterpretable without sleep and should not be reported"
+        ],
+        "answer": 0,
+        "explanation": "A routine study samples a short window, and many discharges appear only in drowsiness or sleep, so a normal awake record lowers but does not remove the probability of epilepsy. The honest report describes the normal awake background, states that sleep was not obtained, and recommends a sleep or sleep-deprived study if the question persists. Saying the study excludes epilepsy overstates what a single normal record can show. Deferring treatment indefinitely on the basis of one normal EEG confuses a supportive test with the clinical diagnosis. Calling the study uninterpretable is also wrong: an awake record is interpretable, it is simply limited, and the report should say what it did and did not include."
+      }
+    },
+    {
+      "title": "Before the tracing: the technical description",
+      "content": "The read begins before the first page. Four facts set the expectations for everything that follows, and each belongs in the technical description at the top of the report.\n\n**Age.** A record is normal or abnormal only for age. For neonates, state the **postmenstrual age**, not the days of life, because a pattern normal at 30 weeks is abnormal at term; [[m06-neonatal-maturation|Module 6]] makes this the whole lesson. For older children, the expected posterior rhythm, sleep features and responses to activation all change with age, as [[m04-normal-by-age|Module 4]] sets out.\n\n**Indication.** The clinical question decides what you look for and what an adequate study needs to contain, as the previous section argued.\n\n**Medications and sedation.** Drugs change the record, and a reader who does not know what the child received will misread what they see. Sedatives add beta activity and can alter sleep, so a record full of fast activity in a sedated child is not a finding. Antiseizure medications can suppress discharges and slow the background, so a normal record on treatment is a weaker negative than one off treatment, and mild diffuse slowing in a treated child may be the drug. State every relevant medication and any sedation given for the study.\n\n**State.** Say what state the child was in during the recording: awake, drowsy, asleep, or all three, and whether the child was crying, feeding or being held. The state determines which features are expected and which are abnormal. A pattern that is normal in drowsiness, such as hypnagogic hypersynchrony, is exactly the kind of activity that gets over-read when the state is not noticed first.\n\nA reader who has written these four lines has already protected the report against the commonest errors: reading a neonate against the wrong age, calling drug effect an abnormality, and calling a state-dependent normal pattern epileptiform.",
+      "keyPoints": [
+        "State age (postmenstrual age for neonates), indication, medications and sedation, and the child's state before describing the tracing.",
+        "Sedatives add beta activity and can alter sleep; antiseizure medications can suppress discharges and slow the background.",
+        "A normal record on antiseizure treatment is a weaker negative than one off treatment.",
+        "Naming the state first prevents state-dependent normal patterns from being over-read."
+      ],
+      "question": {
+        "question": "A 4-year-old's EEG shows abundant diffuse fast activity and mild diffuse slowing of the background. The requisition lists no medications. Before describing the record as abnormal, what should you do?",
+        "options": [
+          "Describe the fast activity as beta excess and the slowing as encephalopathy, since the requisition lists no drugs",
+          "Attribute the fast activity to muscle artifact and the slowing to drowsiness",
+          "Find out whether the child received sedation for the study or takes an antiseizure medication, because sedatives add beta activity and antiseizure drugs can slow the background",
+          "Report the record as normal, because diffuse fast activity is a normal finding at age 4"
+        ],
+        "answer": 2,
+        "explanation": "Diffuse fast activity with mild background slowing is the picture a sedative produces, and antiseizure medications can slow the background as well. A requisition that lists no medications is often incomplete, so the reader asks before interpreting. Describing the pattern as beta excess and encephalopathy without knowing the drug history risks labelling a drug effect as brain dysfunction. Muscle artifact is spiky and confined to the channels near active muscle, not a diffuse rhythmic fast activity, and drowsiness would come with other drowsy features and change with arousal. Calling the record normal ignores the slowing, which needs an explanation either way."
+      }
+    },
+    {
+      "title": "The fixed reading order: background, sleep, activation",
+      "content": "Read every record in the same order, and describe each element before moving to the next. The order below is the one the report will follow, so reading in it means the report writes itself.\n\n**Background.** Start with the posterior dominant rhythm: its **frequency** and whether it is **reactive**, blocking with eye opening. Then judge **symmetry** between the hemispheres, **continuity** (relevant in neonates and in encephalopathy), **amplitude**, and the **anterior-to-posterior gradient**, meaning that faster, lower-voltage activity should dominate anteriorly and the slower dominant rhythm posteriorly. A background that is slow for age, asymmetric, discontinuous, or lacking its gradient is abnormal before any discharge has been considered, and diffuse background changes often matter more for the child than a single sharp wave.\n\n**Sleep.** Say whether sleep was reached. If it was, describe the sleep features expected for age, such as spindles and vertex waves, and whether they are present and symmetric. Absent or asymmetric sleep features are findings in their own right. If sleep was not reached, say so, because the record is then a weaker negative for discharges that appear only in sleep.\n\n**Activation.** Say whether hyperventilation and photic stimulation were done, and whether they were done **adequately**. Adequacy is not a formality. In an untreated child, **3 minutes of well-performed hyperventilation without 2.5 to 4 Hz spike-wave argues against childhood absence epilepsy** ([Hirsch E 2022](https://pubmed.ncbi.nlm.nih.gov/35503716/)). That negative finding is only as strong as the effort: a child who \"attempted\" hyperventilation for a few breaths has not tested the hypothesis, and the report should say the effort was inadequate and suggest repeating it. Marked slowing during hyperventilation is a normal response in children and should not be called abnormal.\n\nReading in this order is what stops the eye from jumping to the one abnormal-looking wave. By the time you reach the abnormalities, you already know the age, the state, the background and the sleep, and the wave is read in context.",
+      "keyPoints": [
+        "Describe the background first: posterior dominant rhythm frequency and reactivity, symmetry, continuity, amplitude and the anterior-to-posterior gradient.",
+        "State whether sleep was reached and whether spindles, vertex waves and other sleep features are present and symmetric for age.",
+        "Record whether hyperventilation and photic stimulation were done and whether they were adequate.",
+        "In an untreated child, 3 minutes of well-performed hyperventilation without 2.5 to 4 Hz spike-wave argues against childhood absence epilepsy (Hirsch E 2022)."
+      ],
+      "question": {
+        "question": "A 7-year-old with daily staring spells has a normal awake record. The technologist's note lists hyperventilation as \"attempted\" and describes the child as breathing deeply for about 30 seconds before stopping. What must the report say?",
+        "options": [
+          "That hyperventilation was normal, since no spike-wave appeared during it",
+          "That hyperventilation was done, and that the normal result makes childhood absence epilepsy unlikely",
+          "Nothing about hyperventilation, because a normal awake record already answers the question",
+          "That hyperventilation was inadequate, so the negative finding for absence epilepsy is weak, and that the study should be repeated with 3 minutes of good effort"
+        ],
+        "answer": 3,
+        "explanation": "The strength of a negative hyperventilation result depends on the effort. The evidence that argues against childhood absence epilepsy is 3 minutes of well-performed hyperventilation without 2.5 to 4 Hz spike-wave in an untreated child (Hirsch E 2022); 30 seconds of deep breathing has not tested the question. Calling the response normal, or saying the normal result makes absence unlikely, presents an untested hypothesis as evidence, which is the error that delays diagnosis in a child with daily events. Leaving hyperventilation out of the report hides the study's main limitation from the clinician who has to decide what to do next."
+      }
+    },
+    {
+      "title": "Describing abnormalities in standard terms",
+      "content": "Once the background, sleep and activation are described, turn to the abnormalities. Each one is described in four dimensions before anything is said about what it means.\n\n- **Location:** the electrode or region of maximum, and the field, established by the montage rules in [[m01-signals|Module 1]].\n- **Morphology:** what the waveform is, in the vocabulary of the standards: spike, sharp wave, spike-and-wave, polyspike, slow wave, rhythmic delta, periodic discharge.\n- **Prevalence:** how much of the record it occupies, from rare to continuous.\n- **State:** the state in which it occurs, since many discharges appear only in drowsiness or sleep, and some patterns are defined by their activation in sleep.\n\n**Use the shared vocabulary**\n\nStandard terms exist so that a report written in one hospital means the same thing in another. The **IFCN glossary** defines the terms most commonly used by electroencephalographers and proposes a report format ([Kane 2017](https://pubmed.ncbi.nlm.nih.gov/30214992/)); it is free in full text and worth reading once from beginning to end. For rhythmic and periodic patterns in critically ill patients, the **ACNS critical care terminology** supplies the main terms and modifiers that [[m11-critical-care|Module 11]] teaches. **ACNS Guideline 7** sets out how a report should be structured ([Tatum 2016](https://pubmed.ncbi.nlm.nih.gov/27482790/)). **SCORE** is a structured, computer-based alternative that turns the report into coded fields ([Beniczky 2017](https://pubmed.ncbi.nlm.nih.gov/28838815/)); whether or not your laboratory uses it, its structure is a good model of what a complete description contains.\n\nDescription is not interpretation. \"Sharp waves at T3, occasional, in drowsiness and sleep, with a field to F7 and T5\" is a description. It contains no diagnosis, and a reader who disagrees with your interpretation can still use it. Keep the words that carry clinical meaning, such as \"epileptiform\" and \"consistent with\", for the impression and the correlation, and use the description to record what was seen.",
+      "keyPoints": [
+        "Describe each abnormality by location, morphology, prevalence and state before saying what it means.",
+        "Use the IFCN glossary (Kane 2017) and ACNS terminology so the report means the same thing everywhere.",
+        "ACNS Guideline 7 (Tatum 2016) sets the report structure; SCORE (Beniczky 2017) is a structured, coded alternative.",
+        "The description records what was seen; interpretation belongs in the impression and clinical correlation."
+      ],
+      "question": {
+        "question": "A resident's draft description reads: \"Epileptiform activity consistent with a left temporal focus.\" The attending returns it. What is missing, and where does the phrase belong?",
+        "options": [
+          "Nothing is missing; the phrase is a complete description and can stand as written",
+          "The description should state location, morphology, prevalence and state in standard terms; \"consistent with a left temporal focus\" is interpretation and belongs in the impression and clinical correlation",
+          "The phrase should be moved to the technical description, since it identifies the montage used",
+          "The word \"epileptiform\" should be replaced with \"abnormal\", and the phrase can then stay in the description"
+        ],
+        "answer": 1,
+        "explanation": "A description records what was seen: the electrode of maximum and its field, the waveform in glossary terms, how often it occurred, and in which state. The draft skips all four and jumps to an interpretation. \"Consistent with a left temporal focus\" is a clinical judgement and belongs in the impression or clinical correlation, where it can be read as the reader's opinion rather than as an observation. The technical description covers montage, filters and recording conditions, not findings. Swapping \"epileptiform\" for \"abnormal\" keeps an interpretation in the description and still leaves out the four elements that make the description useful."
+      }
+    },
+    {
+      "title": "Impression and clinical correlation, kept apart",
+      "content": "The report ends with two short sections that do different jobs, and the discipline of this module is to keep them separate.\n\n**The impression** states whether the record is **normal or abnormal**, then lists the findings as a **numbered list**. Each item is a finding, not a diagnosis: \"1. Occasional sharp waves, maximum at T3, in drowsiness and sleep. 2. Normal background and sleep architecture for age.\" A numbered list makes the report scannable and lets a clinician see at a glance how many findings there are and which is first.\n\n**The clinical correlation** says what the findings mean for this child, and it is stated as **support, not diagnosis**. \"The findings support a diagnosis of focal epilepsy\" is a correlation. \"The patient has focal epilepsy\" is a diagnosis, and it is not the electroencephalographer's to make from the tracing alone. The correlation is also where the study's limits are stated: sleep not obtained, hyperventilation inadequate, a normal record on treatment. Those limits tell the referring clinician whether the question was actually answered.\n\n**Why the separation matters**\n\nWhen description and correlation are mixed, the reader cannot tell what was seen from what was concluded. \"Sharp waves at T3\" belongs in the description; \"consistent with a focal epilepsy\" belongs in the correlation. Keeping them apart means a colleague who disagrees with the conclusion can still use the observation, and it keeps the reader honest: a finding that is hard to describe in standard terms is often one that should not be interpreted at all.\n\nThe sign-off for this module is five full reports that a faculty reader accepts with minor edits. The commonest edits a faculty reader makes are moving interpretive language out of the description, adding the state to a described abnormality, and adding a sentence about adequacy of activation. Write the first draft with those three in mind and the edits will be few.",
+      "keyPoints": [
+        "The impression states normal or abnormal, then a numbered list of findings.",
+        "The clinical correlation says what the findings mean for this child, stated as support, not diagnosis.",
+        "\"Sharp waves at T3\" is description; \"consistent with a focal epilepsy\" is clinical correlation.",
+        "State the study's limits in the correlation, so the clinician knows whether the question was answered."
+      ],
+      "question": {
+        "question": "Which pairing correctly places these two phrases in a report: \"sharp waves at T3\" and \"consistent with a focal epilepsy\"?",
+        "options": [
+          "Both belong in the impression, as the first and second numbered findings",
+          "Both belong in the clinical correlation, since each carries clinical meaning",
+          "\"Sharp waves at T3\" is description; \"consistent with a focal epilepsy\" is clinical correlation",
+          "\"Consistent with a focal epilepsy\" is description; \"sharp waves at T3\" is clinical correlation"
+        ],
+        "answer": 2,
+        "explanation": "\"Sharp waves at T3\" records what was seen and its location, which is description; with morphology, prevalence and state added it becomes a complete descriptive item. \"Consistent with a focal epilepsy\" is a judgement about what the finding means for the child, which is clinical correlation, and it is phrased as support rather than diagnosis. Putting both in the impression mixes an observation with an interpretation. Putting both in the correlation loses the observation. Reversing them makes the interpretation an observation, which is the confusion the report structure exists to prevent."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A 3-week-old born at 32 weeks is referred for possible seizures. The requisition gives only the date of birth. What is the first thing the report must establish before the background can be described?",
+      "options": [
+        "The infant's weight, because amplitude scales with head size",
+        "The postmenstrual age, because a neonatal background is normal or abnormal only for postmenstrual age",
+        "Whether the infant is breast- or formula-fed, because feeding artifact is common",
+        "The indication alone, since age does not change the neonatal read"
+      ],
+      "answer": 1,
+      "explanation": "A neonatal record is read against postmenstrual age, which here is the gestational age at birth plus the chronological age. A pattern that is normal at one postmenstrual age is abnormal at another, so reporting a neonatal background without the postmenstrual age is reporting it against no standard at all. Weight is not the reference for neonatal background features. Feeding matters for artifact but does not set the expected background. Saying age does not change the neonatal read is the opposite of the truth: it is the single most important fact in the technical description."
+    },
+    {
+      "question": "A resident is asked to give two reasons for stating medications and sedation in the report. Which pair is correct?",
+      "options": [
+        "Sedatives slow the posterior rhythm; antiseizure drugs add sleep spindles",
+        "Sedatives abolish sleep entirely; antiseizure drugs increase the number of discharges",
+        "Sedatives make the record uninterpretable; antiseizure drugs have no effect on the record",
+        "Sedatives add beta activity and can alter sleep; antiseizure drugs can suppress discharges and slow the background"
+      ],
+      "answer": 3,
+      "explanation": "Sedatives add fast activity and change sleep, so fast activity or an unusual sleep pattern in a sedated child may be the drug rather than the brain. Antiseizure medications can suppress discharges and slow the background, so a normal record on treatment is a weaker negative and mild slowing on treatment may be pharmacological. The pairing that has sedatives slowing the posterior rhythm and antiseizure drugs adding spindles gets both effects wrong. Sedatives do not abolish sleep, and antiseizure drugs tend to reduce discharges rather than increase them. A sedated record is not uninterpretable, it is interpretable with the drug in mind, and antiseizure drugs plainly do affect the record."
+    },
+    {
+      "question": "A 9-year-old with a first seizure has a record that a resident summarizes as: \"Normal, apart from possible sharp waves over the right central region.\" Reading it in the fixed order, what should the resident have described first, and why?",
+      "options": [
+        "The background, sleep and activation, because a discharge is read in the context of the whole record and the background may carry more meaning for the child than a single transient",
+        "The possible sharp waves, because the indication was a seizure and the discharge answers the question",
+        "The photic response, because photosensitivity is the most important finding at this age",
+        "The medication list, because it replaces the need to describe the background"
+      ],
+      "answer": 0,
+      "explanation": "The fixed order exists so that the abnormal-looking wave is read last, in context. Describing the posterior rhythm, symmetry, continuity, gradient, sleep features and activation first tells the reader whether the record is otherwise normal and whether the transient occurred in a state where sharply contoured normal activity is common. Jumping to the possible sharp waves is the error the module is built to prevent, and \"possible\" discharges in a summary that has skipped the background are the ones most often over-read. Photic response is one element of activation, not the first item. Medications belong in the technical description and never replace the background description."
+    },
+    {
+      "question": "A record shows generalized 3 Hz spike-and-wave during hyperventilation in an untreated 6-year-old with staring spells. Which impression follows the structure the module teaches?",
+      "options": [
+        "Impression: childhood absence epilepsy",
+        "Impression: abnormal record, consistent with childhood absence epilepsy, treat with ethosuximide",
+        "Impression: abnormal. 1. Generalized 3 Hz spike-and-wave, provoked by hyperventilation. 2. Normal background for age. Clinical correlation: the findings support a diagnosis of childhood absence epilepsy",
+        "Impression: normal apart from spike-wave during hyperventilation, which is a normal response in children"
+      ],
+      "answer": 2,
+      "explanation": "The impression states normal or abnormal and then lists the findings by number; the clinical correlation then says what they mean for this child, as support rather than diagnosis. Writing the diagnosis as the impression skips the findings and states a diagnosis the tracing alone cannot make. Adding a treatment recommendation goes beyond the report's role. Calling generalized spike-and-wave a normal hyperventilation response confuses the marked slowing that is normal during hyperventilation in children with an epileptiform pattern that is not."
+    },
+    {
+      "question": "A faculty reader returns a resident's report on a 2-year-old with the comment \"limits not stated\". The record was awake only, hyperventilation was not possible, and the child takes levetiracetam. What should be added, and where?",
+      "options": [
+        "A note in the technical description that the child was uncooperative",
+        "A sentence in the clinical correlation stating that sleep was not obtained, hyperventilation was not performed because of age, and the record was obtained on antiseizure treatment, so a normal result is a weaker negative",
+        "A recommendation in the impression to stop levetiracetam before the next study",
+        "Nothing; a 2-year-old cannot hyperventilate, so the limits are self-evident"
+      ],
+      "answer": 1,
+      "explanation": "The clinical correlation is where the study's limits are stated, because that is where the referring clinician learns whether the question was answered. Here three limits apply: no sleep, no hyperventilation, and a record obtained on a drug that can suppress discharges, so a normal result carries less weight. A note about cooperation describes the recording but does not tell the clinician what the study could not show. Recommending that treatment be stopped is a clinical decision beyond the report's role. Assuming the limits are self-evident leaves them out of the document the clinician actually reads."
+    }
+  ],
+  "resources": [
+    { "label": "eeg-training.com: EEG Fundamentals", "url": "https://www.eeg-training.com/eeg-fundamentals.html", "note": "The description-language and report-writing units, including the model report." },
+    { "label": "eeg-training.com: ACNS Terminology", "url": "https://www.eeg-training.com/acns_criteria.html", "note": "The report writer tool." },
+    { "label": "IFCN revised glossary (Kane 2017)", "url": "https://doi.org/10.1016/j.cnp.2017.07.002", "note": "Free full text; the standard vocabulary and a report format." }
+  ],
+  "signOff": "The resident writes five full reports that a faculty reader accepts with minor edits.",
+  "sources": ["hirschE2022", "tatum2016", "kane2017", "beniczky2017"]
+}

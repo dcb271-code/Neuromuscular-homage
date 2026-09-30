@@ -1,0 +1,218 @@
+{
+  "id": "m01-signals",
+  "number": 1,
+  "title": "Signals, montages and technical settings",
+  "short": "Signals, montages",
+  "description": "Where the scalp signal comes from, how a montage turns it into channels, and how filters and time base change what you see.",
+  "why": "Every later judgment depends on reading polarity and field correctly, so this module comes first and is signed off on localization, not recall.",
+  "track": "foundation",
+  "tags": [
+    "EEG Fundamentals"
+  ],
+  "difficulty": "beginner",
+  "duration": "45 min",
+  "color": "#2563eb",
+  "objectives": [
+    "Explain how cortical dipoles produce scalp potentials, and the negative-up display convention.",
+    "Localize a discharge by phase reversal in a bipolar chain and by maximum amplitude in a referential montage.",
+    "Predict how changing the low-frequency filter, high-frequency filter, notch filter, sensitivity and time base changes the tracing.",
+    "Name what differs when recording a neonate or young child."
+  ],
+  "sections": [
+    {
+      "title": "Where the signal comes from",
+      "content": "The scalp EEG is a record of voltage differences, not of neurons firing. What the electrode sees is the summed **postsynaptic current** of many thousands of cortical pyramidal cells whose apical dendrites lie parallel to one another and perpendicular to the cortical surface. When those cells are depolarized together, each behaves as a tiny **dipole** with a negative pole and a positive pole. Only when the dipoles are aligned and synchronous does their field reach the scalp; single action potentials are too brief and too scattered to contribute. This is why the EEG reflects the state of a cortical *population*, and why a small, deep or tangentially oriented generator can produce a large discharge at depth and nothing on the surface.\n\nThe skull and scalp smear the field. A generator under one electrode also raises the voltage at its neighbours, falling off with distance, which is what an electroencephalographer means by a discharge's **field**. A genuine cerebral event therefore has a plausible field: a maximum at one electrode, smaller deflections at adjacent ones, and a gradient that makes anatomical sense. Something confined to a single electrode with no field at all is far more likely to be artifact, a rule you will meet again in [[m03-artifacts|Module 3]] and as one of the six IFCN criteria in [[m05-variants|Module 5]].\n\n**The display convention**\n\nEvery channel displays the voltage at **input 1 minus input 2**. By convention, a *negative* difference is drawn as an *upward* deflection. Most epileptiform discharges are surface-negative, so they point up, which is convenient, but it also means the direction of a pen deflection tells you nothing by itself. What matters is the *sign* of the difference between two electrodes, and that depends on the montage. The same discharge will look different, and even point in opposite directions, in different montages, without any change in the brain. Reading polarity correctly is the skill on which every later localization rests.",
+      "keyPoints": [
+        "The scalp EEG sums postsynaptic currents of aligned, synchronous cortical pyramidal cells; single action potentials do not contribute.",
+        "Each channel displays input 1 minus input 2, and a negative difference is drawn upward.",
+        "A cerebral discharge has a field: a maximum with smaller deflections at neighbouring electrodes. A waveform confined to one electrode is usually artifact.",
+        "Deep or tangential generators can be large in the cortex and invisible at the scalp."
+      ],
+      "question": {
+        "question": "A sharp transient is seen only at electrode F7, with nothing at Fp1, F3 or T3 in any montage. Before describing it as a left anterior temporal sharp wave, what should you conclude from its lack of field?",
+        "options": [
+          "The generator must be very small and superficial, so the finding is more specific for a focal lesion",
+          "It is most likely artifact, because a cerebral generator raises the voltage at neighbouring electrodes as well",
+          "The reference electrode was probably contaminated, so a bipolar montage will confirm it",
+          "It is a deep generator, so a sphenoidal electrode should be added"
+        ],
+        "answer": 1,
+        "explanation": "A cerebral generator produces a field that falls off with distance, so neighbouring electrodes always share some of the deflection. A transient confined to one electrode has no physiologic field and is usually an electrode artifact (a pop or a poor contact). A small superficial source would still spread to adjacent electrodes, so 'small and superficial' does not explain a field of one. Reference contamination affects every channel that uses the reference, not one electrode alone. A deep generator is a reason for a discharge to be small or absent at the scalp, not for it to appear at one electrode only."
+      }
+    },
+    {
+      "title": "Bipolar chains and phase reversal",
+      "figure": "montage-lab",
+      "content": "A **bipolar montage** links electrodes in chains, each channel comparing one electrode with the next: Fp1-F3, F3-C3, C3-P3, P3-O1 in the longitudinal (\"double banana\") arrangement. Because each electrode is input 2 of one channel and input 1 of the next, a negative maximum at a shared electrode produces deflections that **point toward each other** in the two adjacent channels. That is a **negative phase reversal**, and it marks the electrode of maximum negativity. A positive maximum produces the mirror image, deflections pointing away from each other, which you will see with some artifacts and with the positive end of a horizontal dipole.\n\nUse the figure above to convince yourself of this. Move the source along the chain and watch which channel pair reverses. Then widen the field and notice that the phase reversal stays at the maximum even as the neighbouring channels grow. Localization by phase reversal is arithmetic on differences: the montage is a choice of subtraction, and the brain does not change when you change it.\n\n**The end-of-chain problem**\n\nA phase reversal needs a channel on each side of the maximum. An electrode at the **end of a chain**, such as Fp1, Fp2, O1 or O2 in the longitudinal montage, is input to only one channel, so a maximum there **cannot reverse**. The discharge simply appears in the last channel, largest there, with no reversal to prove where the peak lies. When a sharp transient sits at the end of a chain with no reversal, do not guess. Read it in a **referential montage**, where the maximum shows as the largest amplitude, or in a **transverse chain**, where the same electrode may sit in the middle and can reverse.\n\nBipolar montages have one more property to keep in mind: they subtract what two neighbouring electrodes share. A broad, diffuse field looks small in a bipolar chain because adjacent electrodes see nearly the same voltage, and the difference between them is close to zero. A focal discharge, by contrast, is emphasized. That makes bipolar montages good for finding focal maxima and poor for judging the true amplitude or extent of widespread activity.",
+      "keyPoints": [
+        "In a bipolar chain, adjacent channels whose deflections point toward each other mark a negative phase reversal at the shared electrode.",
+        "An end-of-chain maximum (Fp1, Fp2, O1, O2 in a longitudinal montage) cannot phase-reverse; confirm it in a referential montage or a transverse chain.",
+        "Bipolar montages emphasize focal differences and shrink broad, diffuse fields.",
+        "The montage is a choice of subtraction; the brain's activity is the same in all of them."
+      ],
+      "question": {
+        "question": "In the chain Fp1-F3, F3-C3, C3-P3, a sharp transient deflects downward in F3-C3 and upward in C3-P3. Where is its negative maximum, and what does the downward deflection in F3-C3 tell you?",
+        "options": [
+          "F3: the downward deflection means F3 is negative, so the maximum is at F3",
+          "P3: the upward deflection in C3-P3 means P3 is the negative electrode",
+          "C3: the deflections point toward each other at C3, which is negative relative to both F3 and P3",
+          "It cannot be localized, because a downward deflection means the transient is positive"
+        ],
+        "answer": 2,
+        "explanation": "Each channel is input 1 minus input 2, negative up. F3-C3 deflecting downward means F3 minus C3 is positive, so C3 is more negative than F3. C3-P3 deflecting upward means C3 minus P3 is negative, so C3 is also more negative than P3. Both channels point toward C3: a negative phase reversal at C3. Reading the downward deflection as negativity at F3 misreads input 1. Reading the upward deflection as negativity at P3 ignores that C3 is input 1 of that channel. And the direction of a single deflection never tells you the polarity of the source; only the pair of channels can."
+      }
+    },
+    {
+      "title": "Referential montages and the reference problem",
+      "content": "A **referential montage** compares every electrode with the same reference, so the channel with the **largest deflection** is the electrode closest to the maximum. There is no phase reversal to look for; amplitude does the work. This makes referential montages the right place to confirm an end-of-chain maximum, to judge the true amplitude of a discharge, and to appreciate a broad field that a bipolar chain would flatten.\n\nThe price is that everything depends on the reference being quiet. If the reference electrode itself picks up the discharge, that voltage is subtracted from every channel, and the discharge appears everywhere, sometimes with reversed polarity in channels far from the true source. An ear or mastoid reference is close to the temporal lobe, so a temporal discharge can contaminate it. A **common average reference** sums all electrodes and so dilutes any one source, but a large discharge still leaks into the average and shows up as a small, opposite-polarity deflection across the other channels. When a referential montage shows a discharge in an implausible distribution, or the same waveform at every electrode, suspect the reference before you suspect the brain.\n\n**A working routine**\n\nRead a suspicious transient in more than one montage before you commit to a location. Find the phase reversal in a longitudinal bipolar chain, check that it holds in a transverse chain, then confirm the maximum by amplitude in a referential montage. If the three agree, the localization is secure. If they disagree, one of them is misleading you, and the usual culprits are an end-of-chain maximum in the bipolar montage or an active reference in the referential one. This routine is what the sign-off for this module tests: five discharges localized on real records in both bipolar and referential montages, with a faculty reader.",
+      "keyPoints": [
+        "In a referential montage the maximum is the channel with the largest amplitude; there is no phase reversal.",
+        "A reference that picks up the discharge spreads it into every channel; ear references are vulnerable to temporal sources, and an average reference leaks large discharges into all channels.",
+        "Confirm a localization across a longitudinal bipolar chain, a transverse chain and a referential montage before committing to it.",
+        "Referential montages show true amplitude and broad fields; bipolar montages show focal maxima."
+      ],
+      "question": {
+        "question": "In an ipsilateral-ear referential montage, a sharp wave appears in every left-hemisphere channel with almost the same amplitude, and in the right-hemisphere channels it is small and points the opposite way. What is the most likely explanation, and what should you do?",
+        "options": [
+          "The left ear reference is picking up a temporal discharge; re-read it in a bipolar montage and a different reference",
+          "A widespread left-hemisphere discharge; report it as lateralized and move on",
+          "A generalized discharge with secondary bilateral synchrony; look for the leading side",
+          "Electrode pop at the left ear; ignore the finding"
+        ],
+        "answer": 0,
+        "explanation": "A discharge of nearly equal amplitude in every channel that shares one reference, with a small opposite-polarity image in the channels that use the other reference, is the signature of an active reference. The left ear electrode is close to the temporal lobe and is picking up a temporal sharp wave, which is then subtracted from every left-sided channel. A true widespread discharge would show a gradient, not uniform amplitude, so calling it a lateralized discharge over-reads it. Secondary bilateral synchrony describes a focal discharge that spreads to both hemispheres in a well-referenced record, not a reference artifact. A pop at the reference would be a steep, non-physiologic transient, not a sharp wave with a plausible temporal morphology; the finding is real, but its location is not where the montage puts it."
+      }
+    },
+    {
+      "title": "Filters, sensitivity and time base",
+      "content": "The tracing you read is shaped by four settings, and each can create or hide a finding.\n\n**The low-frequency filter** (high-pass) attenuates slow activity. Raising it makes a record look cleaner by removing sweat and movement drift, but it also shrinks slow waves that are real. Focal delta over a lesion can become inconspicuous, and the after-going slow wave that helps identify a spike can be lost. When slowing is the question, read the record with the low-frequency filter as low as the record tolerates.\n\n**The high-frequency filter** (low-pass) attenuates fast activity. Lowering it smooths muscle artifact, which is why it is tempting in a restless child, but the smoothing turns fast, spiky muscle potentials into rounded, **sharply contoured waves that can look like spikes or sharp waves**. A record that is \"cleaned up\" this way can acquire epileptiform-looking transients it did not have. If you must lower the high-frequency filter, note that you did, and go back to the unfiltered record before calling anything epileptiform.\n\n**The notch filter** removes line frequency. It is useful when an electrode has poor contact and a thick band of line noise obscures the channel, but it is a patch. Persistent line noise in one channel means that electrode's impedance is high, and the fix is at the scalp, not in software.\n\n**Sensitivity** scales voltage to display height. Too low a sensitivity setting (fewer microvolts per millimetre) exaggerates amplitude and can make ordinary activity look high-voltage; too high a setting flattens a low-voltage record. Judge amplitude by the number shown, not by the height of the trace.\n\n**Time base**\n\nThe page duration sets how compressed the waveforms are. Neonatal records are often reviewed at a slower paper speed than routine records, which compresses each wave and makes activity look faster and spikier than it is. A frequency judged by eye on a compressed page will be wrong. Always check the page duration before judging frequency, and count cycles against the time marks rather than by impression.",
+      "keyPoints": [
+        "Raising the low-frequency filter attenuates slow activity, so real focal delta and after-going slow waves can shrink.",
+        "Lowering the high-frequency filter smooths muscle into sharply contoured waves that can look like spikes; go back to the unfiltered record before calling a discharge.",
+        "The notch filter patches line noise; persistent noise in one channel is an impedance problem at the scalp.",
+        "Check the page duration before judging frequency, because a compressed time base makes activity look faster than it is."
+      ],
+      "question": {
+        "question": "A resident lowers the high-frequency filter from 70 Hz to 15 Hz to \"clean up\" a record full of muscle artifact from a crying 2-year-old, and now sees several sharply contoured transients over both temporal regions. What is the right next step?",
+        "options": [
+          "Report bilateral temporal sharp waves, since the filter removed the artifact that was hiding them",
+          "Add the notch filter, which will remove the remaining artifact and confirm the sharp waves",
+          "Raise the low-frequency filter as well, which will isolate the epileptiform activity",
+          "Restore the filter and re-read the same epochs, because smoothed muscle potentials can look like sharp waves"
+        ],
+        "answer": 3,
+        "explanation": "A low high-frequency filter rounds off fast muscle potentials into waves with the contour of sharp waves, so transients that appear only after filtering are suspect until seen unfiltered. Restore the original setting and look at the same epochs, ideally when the child is quiet or asleep and the muscle is gone. Reporting the transients treats a filter artifact as a finding. The notch filter removes line frequency, not muscle, and would not resolve the question. Raising the low-frequency filter attenuates slow activity and has no bearing on muscle-derived sharp transients."
+      }
+    },
+    {
+      "title": "Recording neonates and children",
+      "content": "Children are not small adults on the recording table, and the technical standards say so explicitly. For neonates, the American Clinical Neurophysiology Society recommends a **10-20 array modified for the small head**, with a reduced electrode set, and it asks for **ECG and respiration channels** as part of the recording, because heart rate and breathing are needed to identify sleep state and to separate physiologic events from cerebral ones ([Shellhaas 2011](https://pubmed.ncbi.nlm.nih.gov/22146359/)). Eye-movement and chin electromyography channels are often useful for staging neonatal sleep but are not universally required. Sleep staging matters more in a neonate than at any other age, because, as [[m06-neonatal-maturation|Module 6]] shows, the same background can be normal in one state and abnormal in another.\n\nFor older infants and children, **ACNS Guideline 5** sets the minimum technical standards for pediatric EEG ([Kuratani 2016](https://pubmed.ncbi.nlm.nih.gov/27482791/)). Read it once, in full, so that you know what a technically adequate pediatric study looks like and can recognize when a study falls short: too few electrodes, no sleep obtained, activation procedures skipped, or no video when the question is an event. A report that interprets an inadequate study without saying so misleads the reader.\n\n**What changes at the bedside**\n\nA neonate's head is small, so electrodes are close together and the field of any discharge spans fewer of them. The record is often reviewed on a longer page, so check the time base before judging frequency, as in the previous section. Infants and toddlers move, feed and cry through their studies, which is why the recording needs video and why [[m03-artifacts|Module 3]] spends so long on the artifacts of infancy. Hyperventilation cannot be obtained from a very young child and photic stimulation may be limited, so the report must state which activation procedures were done and how adequately. Finally, sedation and medications change the record: sedatives add fast activity and alter sleep, and antiseizure medications can suppress discharges and slow the background, so both belong in the technical description of every study, a point [[m02-read-and-report|Module 2]] turns into a reporting rule.",
+      "keyPoints": [
+        "ACNS recommends a 10-20 array modified for neonates, with ECG and respiration channels; EOG and chin EMG are often useful for staging sleep but are not universally required (Shellhaas 2011).",
+        "ACNS Guideline 5 sets the minimum technical standards for pediatric EEG (Kuratani 2016); know what an adequate study looks like so you can say when one is not.",
+        "In a neonate the head is small, electrodes are close, the page is often longer, and sleep state must be identified from polygraphic channels.",
+        "State activation procedures, sedation and medications in every report, because each changes the record."
+      ],
+      "question": {
+        "question": "A neonatal EEG arrives for review with scalp electrodes only: no ECG and no respiration channel. The background is discontinuous. What is the most important consequence for your read?",
+        "options": [
+          "None; the discontinuity can be graded from the scalp channels alone",
+          "You cannot reliably identify sleep state, so you cannot say whether the discontinuity is normal quiet sleep or an abnormal background",
+          "The record must be rejected outright, since ACNS requires a full 10-20 array in neonates",
+          "Discontinuity is always abnormal in a neonate, so the missing channels do not change the impression"
+        ],
+        "answer": 1,
+        "explanation": "In a neonate, discontinuity is normal in quiet sleep at some postmenstrual ages and abnormal in others, so the state is part of the finding. ACNS asks for ECG and respiration channels precisely because heart rate and breathing pattern identify the state (Shellhaas 2011). Without them, the read is limited and the report should say so. Rejecting the record outright overstates the guideline, which recommends a reduced array modified for the small head, not a full adult set; the record is limited, not void. Calling discontinuity always abnormal is wrong on the physiology: it is expected in quiet sleep in the preterm and near-term period. Grading from scalp channels alone ignores that the same pattern carries opposite meanings in different states."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A sharp wave appears only in the T5-O1 channel of a longitudinal bipolar montage, largest there, with no phase reversal anywhere in the chain. What do you do next?",
+      "options": [
+        "Report a left posterior temporal sharp wave with maximum at T5",
+        "Report an occipital sharp wave with maximum at O1, since O1 is input 2",
+        "Re-read it in a referential montage, because an end-of-chain maximum cannot phase-reverse",
+        "Dismiss it as artifact, because a real discharge always phase-reverses"
+      ],
+      "answer": 2,
+      "explanation": "O1 is the last electrode in the chain and is input to only one channel, so a maximum at O1 has no second channel to reverse against. The discharge appears large in T5-O1 and nowhere else, which is exactly what an end-of-chain maximum looks like. The location cannot be settled from this montage: it could be at T5 or at O1, and reporting either electrode is a guess. A referential montage will show which electrode has the largest amplitude, and a transverse chain may put the electrode in the middle where it can reverse. Dismissing it as artifact is wrong because end-of-chain maxima are real discharges that cannot reverse for geometric reasons."
+    },
+    {
+      "question": "In a longitudinal bipolar montage, a transient deflects upward in Fp2-F4 and downward in F4-C4, with the deflections pointing away from each other at F4. What does this indicate?",
+      "options": [
+        "A positive maximum at F4",
+        "A negative maximum at F4",
+        "A negative maximum at Fp2",
+        "An artifact, because cerebral discharges only produce negative phase reversals"
+      ],
+      "answer": 0,
+      "explanation": "Deflections pointing toward each other mark a negative phase reversal; deflections pointing away from each other mark a positive one. Here Fp2-F4 is negative (up), so F4 is more positive than Fp2, and F4-C4 is positive (down), so F4 is more positive than C4. F4 is the most positive electrode: a positive phase reversal. Positive maxima are less common than negative ones but they are real, seen at the positive end of a horizontal dipole and with some artifacts, so they are not automatically artifact. Placing the maximum at Fp2 puts it at the end of the chain, where no reversal is possible."
+    },
+    {
+      "question": "A 6-year-old's record shows continuous 1 to 2 Hz activity over the right temporal region in an unfiltered read. A colleague reviewing the same record with the low-frequency filter raised sees nothing abnormal. Which statement is correct?",
+      "options": [
+        "The colleague's read is more reliable, because a higher low-frequency filter removes artifact and reveals the true background",
+        "The discrepancy proves the slowing is sweat artifact, which the filter correctly removed",
+        "Both reads are valid and the report should state that the slowing was filter-dependent and therefore not significant",
+        "Raising the low-frequency filter attenuates slow activity, so the focal delta was filtered out; the unfiltered read stands and the finding should be described"
+      ],
+      "answer": 3,
+      "explanation": "The low-frequency filter attenuates slow waves, so continuous focal delta can shrink or disappear when it is raised. That is a property of the filter, not evidence about the brain. The unfiltered read shows continuous focal slowing, which is a real finding that points toward a structural cause, as Module 8 discusses. Preferring the filtered read reverses the logic of the filter. Sweat artifact is very slow, high-amplitude drift, usually frontal or temporal in a warm child, and would be recognizable as such; it is not diagnosed by its disappearance with filtering. Calling the slowing 'filter-dependent and not significant' would let a display setting erase a finding."
+    },
+    {
+      "question": "A neonatal record reviewed at a slow paper speed appears to contain runs of fast, spiky activity over both central regions. What is the first thing to check before describing it?",
+      "options": [
+        "The high-frequency filter, which may have been set too high",
+        "The page duration, because a compressed time base makes activity look faster and spikier than it is",
+        "The ECG channel, since fast central activity in neonates is usually pulse artifact",
+        "The sensitivity, because too low a sensitivity setting creates spiky waveforms"
+      ],
+      "answer": 1,
+      "explanation": "Neonatal records are often displayed on a longer page than routine records. Compressing more seconds into the same width narrows every wave, so ordinary activity can look fast and sharply contoured. Checking the page duration and counting cycles against the time marks resolves it. The high-frequency filter setting affects how much fast activity is passed but does not compress the display. Pulse artifact is slow and rhythmic, following the QRS with a delay, not fast and spiky. Sensitivity changes the height of the trace, not its horizontal shape."
+    },
+    {
+      "question": "A resident is asked which polygraphic channels the ACNS guideline asks for in a neonatal EEG, and why. Which answer is correct?",
+      "options": [
+        "A full adult 10-20 array with 21 electrodes; polygraphic channels are optional",
+        "Scalp electrodes plus chin EMG only, because muscle tone is the primary marker of neonatal sleep",
+        "A 10-20 array modified for the neonatal head, with ECG and respiration channels, because heart rate and breathing help identify state and separate physiologic events from cerebral ones",
+        "Scalp electrodes plus bilateral EOG only, because eye movements are the primary marker of neonatal sleep"
+      ],
+      "answer": 2,
+      "explanation": "The ACNS neonatal guideline recommends a 10-20 array modified for the small neonatal head together with ECG and respiration channels (Shellhaas 2011). Those channels allow the reader to identify wake, active sleep and quiet sleep, which changes what the background should look like, and to recognize physiologic events. EOG and chin EMG are often useful for staging sleep but are not universally required, so the answers that make chin EMG or EOG the single required channel each promote an optional channel and omit the two that are recommended. A full adult 21-electrode array applies an adult standard to a neonate."
+    }
+  ],
+  "resources": [
+    {
+      "label": "Learning EEG: Physiology & Terminology",
+      "url": "https://www.learningeeg.com/physiology-terminology.html"
+    },
+    {
+      "label": "Learning EEG: 10-20 & Montages",
+      "url": "https://www.learningeeg.com/montages.html"
+    },
+    {
+      "label": "eeg-training.com: EEG Fundamentals",
+      "url": "https://www.eeg-training.com/eeg-fundamentals.html",
+      "note": "Signal physiology, 10-20 and montage, and recording-technology units, plus the bipolar math simulator, montage comparison lab and filter toggles."
+    },
+    {
+      "label": "eeg-training.com: EEG Videos",
+      "url": "https://www.eeg-training.com/eeg_videos.html",
+      "note": "The polarity and montage lessons, from the Moeller video curriculum (Moeller 2017)."
+    },
+    {
+      "label": "ACNS guidelines index",
+      "url": "https://www.acns.org/practice/guidelines",
+      "note": "Guideline 1 (minimum technical requirements), Guideline 2 (electrode nomenclature) and Guideline 5 (pediatric standards)."
+    }
+  ],
+  "signOff": "The resident localizes five discharges on real records, in both bipolar and referential montages, with a faculty reader.",
+  "sources": [
+    "shellhaas2011",
+    "kuratani2016",
+    "moeller2017",
+    "kane2017"
+  ]
+}
