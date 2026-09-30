@@ -20,6 +20,7 @@ export const PLANNED_IDS = [
   'm10-seizures-status', 'm11-critical-care', 'm12-supervised-reading',
 ];
 const allIds = new Set(PLANNED_IDS);
+const figureIds = new Set(JSON.parse(readFileSync(new URL('../src/eeg/figures.json', import.meta.url), 'utf8')).map(f => f.id));
 
 const TRACKS = ['foundation', 'neonatal', 'abnormal', 'icu', 'longitudinal'];
 const TAGS = ['EEG Fundamentals', 'Normal & Variants', 'Neonatal & ICU', 'Abnormal & Ictal', 'Clinical Decision-Making'];
@@ -73,6 +74,7 @@ for (const f of files) {
     if (words > 700) warn(f, `${where}: prose is ${words} words; consider splitting`);
     if (!s.keyPoints || s.keyPoints.length < 3 || s.keyPoints.length > 5) fail(f, `${where}: keyPoints ${s.keyPoints?.length ?? 0} (want 3–5)`);
     checkMarkup(f, s.content || '', where);
+    for (const id of s.figures || []) if (!figureIds.has(id)) fail(f, `${where}: unknown figure ${id}`);
     if (s.question) { checkQuestion(f, s.question, where + ' inline'); answers.push(s.question.answer); }
     else warn(f, `${where}: no inline question`);
     if ((s.content || '').split('\n').some(l => l.trim().startsWith('|') && l.includes('[['))) fail(f, `${where}: wiki-link inside a table row`);

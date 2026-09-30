@@ -30,6 +30,21 @@ export interface Section {
   question?: QuizQuestion; // one decision-oriented inline question
   /** Optional computed figure rendered above the prose. */
   figure?: 'montage-lab' | 'filter-lab' | 'curriculum-map';
+  /** Tracings from the figure registry (src/eeg/figures.json), shown after the prose. */
+  figures?: string[];
+}
+
+export interface EegFigure {
+  id: string; // e.g. "aes-f26"
+  number: number;
+  title: string;
+  caption: string;
+  page: number;
+  file: string; // public path
+  width: number;
+  height: number;
+  credit: string;
+  licence: string;
 }
 
 export interface Resource {

@@ -13,6 +13,11 @@ import { FormattedContent } from './FormattedContent';
 import { InlineQuestion } from './InlineQuestion';
 import { KeyPoints } from './KeyPoints';
 import { MontageLab } from './MontageLab';
+import { FigureStrip } from './Figure';
+import figuresJson from '@/src/eeg/figures.json';
+import type { EegFigure } from '@/src/eeg/types';
+
+const FIGURES: Record<string, EegFigure> = Object.fromEntries((figuresJson as EegFigure[]).map(f => [f.id, f]));
 
 export function ModulePage({ module: m, prev, next }: { module: EegModule; prev?: EegModule; next?: EegModule }) {
   const accent = m.color;
@@ -114,6 +119,7 @@ export function ModulePage({ module: m, prev, next }: { module: EegModule; prev?
               </div>
               {s.figure === 'montage-lab' && <MontageLab accent={accent} />}
               <FormattedContent content={s.content} accent={accent} />
+              <FigureStrip figs={(s.figures ?? []).map(id => FIGURES[id]).filter(Boolean)} accent={accent} />
               <div data-section-end={i} aria-hidden="true" />
               <KeyPoints points={s.keyPoints} accent={accent}
                 isFlagged={k => !!store.flags[`${m.id}:${i}:${k}`]}
@@ -158,11 +164,12 @@ export function ModulePage({ module: m, prev, next }: { module: EegModule; prev?
                 return <li key={k}>{s.citation}{url && <> <a href={url} target="_blank" rel="noopener noreferrer" className="no-underline hover:underline" style={{ color: accent }}>{s.pmid ? `PMID ${s.pmid}` : 'link'} ↗</a></>}</li>;
               })}
             </ol>
-            <p className="text-[11px] text-slate-400 mt-3">For education. Not for clinical decision-making; consult primary sources and your attending.</p>
+            <p className="text-[11px] text-slate-400 mt-3">Tracings are from St. Louis and Frey (eds), Electroencephalography, American Epilepsy Society 2016, CC BY-NC-SA 4.0 (<a href="/eeg/ATTRIBUTIONS.md" target="_blank" rel="noopener noreferrer" className="underline">credits</a>). For education. Not for clinical decision-making; consult primary sources and your attending.</p>
           </section>
 
           <nav className="flex gap-3 justify-between border-t border-slate-100 pt-5 text-[13px]">
             {prev ? <Link href={`/eeg/${prev.id}`} className="no-underline text-slate-600 hover:text-slate-900">← {String(prev.number).padStart(2, '0')} {prev.short}</Link> : <span />}
+            <Link href="/eeg/gallery" className="no-underline text-slate-500 hover:text-slate-900 text-center">Pattern gallery</Link>
             {next ? <Link href={`/eeg/${next.id}`} className="no-underline font-semibold text-right" style={{ color: accent }}>{String(next.number).padStart(2, '0')} {next.short} →</Link> : <Link href="/eeg" className="no-underline font-semibold" style={{ color: accent }}>Back to the curriculum →</Link>}
           </nav>
         </div>

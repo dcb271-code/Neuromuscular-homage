@@ -6,7 +6,9 @@
   "description": "The physiologic and non-physiologic artifacts of childhood, the rhythmic artifacts of the NICU and PICU, and a method for proving that a waveform is not cerebral.",
   "why": "Children move, feed and cry through their recordings, and rhythmic artifact in the NICU and PICU can look like a seizure.",
   "track": "foundation",
-  "tags": ["EEG Fundamentals"],
+  "tags": [
+    "EEG Fundamentals"
+  ],
   "difficulty": "beginner",
   "duration": "40 min",
   "color": "#2563eb",
@@ -56,7 +58,15 @@
         ],
         "answer": 0,
         "explanation": "A horizontal saccade carries the positive cornea toward one side, so F7 and F8 deflect in opposite directions, and the brief lateral rectus spike at the start of the movement precedes the slower eye-movement wave. The mirror image across the hemispheres and the timing with looking around are the proof, and the video confirms it. Bilateral independent sharp waves would not be locked in mirror-image polarity to each other. Electrode pops are abrupt, steep and confined to one electrode without a paired opposite deflection. Glossokinetic artifact is slow and comes with tongue movement, and it lacks the sharp lateral rectus spike."
-      }
+      },
+      "figures": [
+        "aes-f83",
+        "aes-f84",
+        "aes-f85",
+        "aes-f87",
+        "aes-f89",
+        "aes-f92"
+      ]
     },
     {
       "title": "Non-physiologic artifacts: electrodes, lines and equipment",
@@ -77,7 +87,13 @@
         ],
         "answer": 3,
         "explanation": "A cerebral spike at T4 would produce smaller deflections at F8, C4 and T6, because a scalp field falls off with distance rather than stopping at one electrode. A transient with no field at all is an electrode artifact, and its abrupt, steep shape is typical of a pop. Recurrence does not make it cerebral, because pops recur as long as the contact is poor. ECG artifact is time-locked to the QRS and usually visible in more than one channel, and lining it up with the ECG channel would show no relationship here. A deep generator explains a discharge that is small or absent at the scalp, not one that is large at a single electrode with nothing around it."
-      }
+      },
+      "figures": [
+        "aes-f86",
+        "aes-f88",
+        "aes-f90",
+        "aes-f91"
+      ]
     },
     {
       "title": "Rhythmic artifacts of infancy and the ICU",
@@ -98,7 +114,12 @@
         ],
         "answer": 1,
         "explanation": "Rhythmic activity in every channel, at one unchanging frequency, for 20 minutes is the signature of a machine. A seizure evolves in frequency, morphology or location and has a field that makes anatomical sense, not a uniform presence in every channel. The neonatal seizure definition does require at least 10 seconds, but it also requires an evolving pattern, and duration alone never makes a seizure. A ventilator rate that matches the observed frequency is the confirmation, and checking the setting takes seconds. Taking the infant off the ventilator to repeat the study is neither safe nor necessary when the setting and the video answer the question."
-      }
+      },
+      "figures": [
+        "aes-f21",
+        "aes-f22",
+        "aes-f35"
+      ]
     },
     {
       "title": "A method for deciding: cerebral or not",
@@ -180,11 +201,29 @@
     }
   ],
   "resources": [
-    { "label": "Learning EEG: Artifacts", "url": "https://www.learningeeg.com/artifacts.html" },
-    { "label": "eeg-training.com: EEG Fundamentals", "url": "https://www.eeg-training.com/eeg-fundamentals.html", "note": "The artifacts unit and the Artifact Hunter exercise." },
-    { "label": "EEGmaster atlas: Artifacts module", "url": "https://eegmaster.com/eegmaster/", "note": "Free account required." },
-    { "label": "eeg-training.com: EEG Videos", "url": "https://www.eeg-training.com/eeg_videos.html", "note": "The eye-movement and technical-artifact lessons." }
+    {
+      "label": "Learning EEG: Artifacts",
+      "url": "https://www.learningeeg.com/artifacts.html"
+    },
+    {
+      "label": "eeg-training.com: EEG Fundamentals",
+      "url": "https://www.eeg-training.com/eeg-fundamentals.html",
+      "note": "The artifacts unit and the Artifact Hunter exercise."
+    },
+    {
+      "label": "EEGmaster atlas: Artifacts module",
+      "url": "https://eegmaster.com/eegmaster/",
+      "note": "Free account required."
+    },
+    {
+      "label": "eeg-training.com: EEG Videos",
+      "url": "https://www.eeg-training.com/eeg_videos.html",
+      "note": "The eye-movement and technical-artifact lessons."
+    }
   ],
   "signOff": "The resident correctly labels ten artifacts on real records, including at least three from infants or the ICU.",
-  "sources": ["nascimento2022", "kane2017"]
+  "sources": [
+    "nascimento2022",
+    "kane2017"
+  ]
 }

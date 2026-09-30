@@ -6,7 +6,10 @@
   "description": "The benign variants by age, the IFCN rule for calling a transient epileptiform, and why a discharge alone does not make epilepsy.",
   "why": "Overreading sharply contoured normal activity as epileptiform is a documented route to misdiagnosing epilepsy, so this module teaches a rule for calling a discharge, not just a list of variants.",
   "track": "foundation",
-  "tags": ["Normal & Variants", "Clinical Decision-Making"],
+  "tags": [
+    "Normal & Variants",
+    "Clinical Decision-Making"
+  ],
   "difficulty": "intermediate",
   "duration": "45 min",
   "color": "#2563eb",
@@ -56,7 +59,10 @@
         ],
         "answer": 2,
         "explanation": "Brief positive bursts at about 14 Hz over the posterior temporal region in drowsiness or light sleep in an adolescent are 14 and 6 Hz positive bursts, a benign variant that peaks at this age (Kane 2017; St. Louis 2016). The polarity alone should stop a reader from calling them epileptiform: they are positive, and most epileptiform discharges are surface-negative. The report may describe them as a normal variant or omit them from the impression; what it must not do is list them as an abnormality. Calling them sharp waves and recommending a further study treats a variant as a finding. Small sharp spikes are a different pattern, very brief and low in voltage, and are not abnormal at any age. Hypnagogic hypersynchrony is diffuse rhythmic 3 to 5 Hz activity in drowsiness, not a fast posterior temporal burst, and no variant 'argues against' epilepsy."
-      }
+      },
+      "figures": [
+        "aes-f51"
+      ]
     },
     {
       "title": "The IFCN criteria: a rule for calling a discharge",
@@ -180,11 +186,33 @@
     }
   ],
   "resources": [
-    { "label": "Learning EEG: Normal Variants", "url": "https://www.learningeeg.com/normal-variants.html" },
-    { "label": "eeg-training.com: EEG Fundamentals", "url": "https://www.eeg-training.com/eeg-fundamentals.html", "note": "The normal-variants unit." },
-    { "label": "EEGmaster atlas: Benign EEG Variants module", "url": "https://eegmaster.com/eegmaster/", "note": "Free account required." },
-    { "label": "Kural 2020 in Neurology", "url": "https://doi.org/10.1212/WNL.0000000000009439", "note": "The validation study of the IFCN criteria." }
+    {
+      "label": "Learning EEG: Normal Variants",
+      "url": "https://www.learningeeg.com/normal-variants.html"
+    },
+    {
+      "label": "eeg-training.com: EEG Fundamentals",
+      "url": "https://www.eeg-training.com/eeg-fundamentals.html",
+      "note": "The normal-variants unit."
+    },
+    {
+      "label": "EEGmaster atlas: Benign EEG Variants module",
+      "url": "https://eegmaster.com/eegmaster/",
+      "note": "Free account required."
+    },
+    {
+      "label": "Kural 2020 in Neurology",
+      "url": "https://doi.org/10.1212/WNL.0000000000009439",
+      "note": "The validation study of the IFCN criteria."
+    }
   ],
   "signOff": "On ten sharp transients chosen by faculty, the resident scores each against the six IFCN criteria and agrees with the faculty call on at least eight.",
-  "sources": ["kane2017", "kural2020", "borusiak2010", "benbadis2003", "benbadis2008", "stlouis2016"]
+  "sources": [
+    "kane2017",
+    "kural2020",
+    "borusiak2010",
+    "benbadis2003",
+    "benbadis2008",
+    "stlouis2016"
+  ]
 }

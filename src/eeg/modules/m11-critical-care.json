@@ -40,7 +40,10 @@
         ],
         "answer": 1,
         "explanation": "This child meets the ACNS consensus indications for continuous EEG on two counts: recent convulsive status epilepticus and an unexplained, sedated mental status (Herman 2015). The Abend cohort found electrographic seizures in 30% of critically ill children, with 36% of those having seizures that were exclusively electrographic (Abend 2013). A sedated, intubated child cannot show a seizure, so waiting for a clinical sign, or for a failure to wake, means waiting for something that will not appear. A routine 20-minute study samples a fraction of the period at risk. Amplitude-integrated EEG is a trend tool that helps find events in long records, but any change it shows must be confirmed on the raw EEG, and it does not replace conventional monitoring in this setting."
-      }
+      },
+      "figures": [
+        "aes-f79"
+      ]
     },
     {
       "title": "Naming the pattern: main terms and plus modifiers",
@@ -61,7 +64,12 @@
         ],
         "answer": 0,
         "explanation": "The pattern as described is lateralized (main term 1: L) rhythmic delta (main term 2: RDA) with superimposed sharp waves or spikes, which is the +S modifier, and +S applies to rhythmic delta activity only. The correct name is LRDA+S. Naming it LPDs+S is wrong twice: rhythmic delta is not periodic discharges, and +S is not a modifier for PDs. LPDs+R describes periodic discharges with rhythmic delta superimposed, the reverse of what was seen. Calling it generalized ignores the stated lateralization; the location term reports what the tracing shows, and lateralized activity with spikes does not become generalized because of the spikes."
-      }
+      },
+      "figures": [
+        "aes-f80",
+        "aes-f81",
+        "aes-f82"
+      ]
     },
     {
       "title": "Prevalence, frequency and BIRDs",

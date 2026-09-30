@@ -123,7 +123,11 @@
         ],
         "answer": 1,
         "explanation": "In a neonate, discontinuity is normal in quiet sleep at some postmenstrual ages and abnormal in others, so the state is part of the finding. ACNS asks for ECG and respiration channels precisely because heart rate and breathing pattern identify the state (Shellhaas 2011). Without them, the read is limited and the report should say so. Rejecting the record outright overstates the guideline, which recommends a reduced array modified for the small head, not a full adult set; the record is limited, not void. Calling discontinuity always abnormal is wrong on the physiology: it is expected in quiet sleep in the preterm and near-term period. Grading from scalp channels alone ignores that the same pattern carries opposite meanings in different states."
-      }
+      },
+      "figures": [
+        "aes-f19",
+        "aes-f20"
+      ]
     }
   ],
   "quiz": [

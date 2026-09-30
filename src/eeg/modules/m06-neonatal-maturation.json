@@ -58,7 +58,12 @@
         ],
         "answer": 3,
         "explanation": "At 26 weeks the longest normal interburst interval is about 40 s in the commonly quoted values, and the French consensus reports even wider maxima at 24 to 26 weeks (André 2010), so 35 s falls within the range of normal for the age. Calling it excessively discontinuous applies a term-age standard to an extremely preterm brain. A blanket limit of 20 s is the value for about 28 weeks, not 26, and no single limit applies at every age. The sensitivity setting matters for deciding what counts as low voltage, but it does not turn a normal 35-second interval into an abnormal one. Interburst intervals are exactly what is assessed in the very preterm record; discontinuity is its defining feature."
-      }
+      },
+      "figures": [
+        "aes-f23",
+        "aes-f24",
+        "aes-f25"
+      ]
     },
     {
       "title": "Synchrony and the graphoelements of prematurity",
@@ -79,7 +84,13 @@
         ],
         "answer": 1,
         "explanation": "Delta brushes peak at about 31 to 34 weeks and should be largely gone by 40 to 44 weeks. Abundant brushes in every state at 42 weeks are a graphoelement past its time, which is the definition of a dysmature record: a tracing that looks younger than the baby's postmenstrual age. The report should say that the record is immature for postmenstrual age, rather than either normalizing it or over-reading it. Delta brushes are not a term-age quiet-sleep feature; tracé alternant is. They are not epileptiform: fast activity riding on a slow wave is a normal preterm graphoelement, and applying the epileptiform criteria to it misreads the age-specific physiology. They are not muscle either; the fast component is superimposed on a delta wave in a stereotyped way that muscle artifact does not produce."
-      }
+      },
+      "figures": [
+        "aes-f28",
+        "aes-f32",
+        "aes-f33",
+        "aes-f34"
+      ]
     },
     {
       "title": "Sleep states at term",
@@ -100,7 +111,11 @@
         ],
         "answer": 2,
         "explanation": "Alternating bursts and lower-voltage periods confined to quiet sleep, with a continuous record in wake and active sleep, is tracé alternant, the normal quiet-sleep pattern at term (it appears at about 34 to 37 weeks and persists to about 44 to 46 weeks). Interburst periods of 3 to 5 s are within the expected range at term, where the longest normal interval is about 6 s. Calling all discontinuity at term abnormal ignores this state-specific physiology. Burst suppression is an invariant pattern with interburst voltage below 5 µV and no reactivity, present in every state, not a quiet-sleep alternation with continuous wake. The record already contains the states needed to answer the question, so a longer recording is not required for this call."
-      }
+      },
+      "figures": [
+        "aes-f26",
+        "aes-f31"
+      ]
     },
     {
       "title": "Dysmaturity, and the limits of the tables",

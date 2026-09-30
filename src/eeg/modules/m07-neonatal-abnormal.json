@@ -38,7 +38,13 @@
         ],
         "answer": 2,
         "explanation": "The defining features of burst suppression in the ACNS terminology are an invariant pattern with abnormally composed bursts, interburst voltage below 5 µV, and no variability or reactivity (Tsuchida 2013). This record has all of them, and the absence of any change with stimulation or state is what separates it from a discontinuous or excessively discontinuous record. 'Discontinuous' is a description that fits many normal records and does not capture the invariance or the depth of suppression. 'Excessively discontinuous' still has bursts containing some normal features and is defined by intervals that are too long for age, not by invariance. 'Low voltage suppressed' describes a continuous record with a baseline below 10 µV and no normal features, not a burst pattern."
-      }
+      },
+      "figures": [
+        "aes-f27",
+        "aes-f29",
+        "aes-f30",
+        "aes-f36"
+      ]
     },
     {
       "title": "What counts as a neonatal seizure",

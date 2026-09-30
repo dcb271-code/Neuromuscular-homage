@@ -33,6 +33,15 @@ export function CurriculumHome({ modules }: { modules: EegModule[] }) {
         </Link>
       )}
 
+      <Link href="/eeg/gallery" className="nm-card-link no-underline block mb-8 rounded-2xl border border-slate-200 bg-white px-5 py-4 flex items-center gap-4">
+        <span className="font-mono text-[20px] font-extrabold text-slate-400">≋</span>
+        <div className="min-w-0">
+          <div className="text-[14px] font-semibold text-slate-900">Pattern gallery</div>
+          <div className="text-[12.5px] text-slate-500">Licensed tracings from the AES atlas, browsable or as a name-the-pattern quiz. Each one links to the section that teaches it.</div>
+        </div>
+        <span className="ml-auto text-[13px] font-semibold text-slate-400">→</span>
+      </Link>
+
       {/* How to use */}
       <SectionLabel>How to use this curriculum</SectionLabel>
       <div className="nm-2col mb-9">

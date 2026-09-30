@@ -6,7 +6,9 @@
   "description": "When each normal feature appears and disappears, from the posterior dominant rhythm and sleep spindles to the drowsy patterns that get over-read.",
   "why": "A record is normal or abnormal only for age, so the resident must know when each normal feature appears and disappears.",
   "track": "foundation",
-  "tags": ["Normal & Variants"],
+  "tags": [
+    "Normal & Variants"
+  ],
   "difficulty": "beginner",
   "duration": "50 min",
   "color": "#2563eb",
@@ -56,7 +58,14 @@
         ],
         "answer": 3,
         "explanation": "At 3 years the mean posterior rhythm is 8 Hz with a range of 7.5 to 9.5 Hz, so 6 Hz would be slow if measured in full wakefulness. But a quiet, calm child with eyes closed after a long car ride is very likely drowsy, and drowsiness slows the rhythm. The reader's job is to find the most alert epoch and measure there; if none exists, the honest report says the rhythm could not be assessed. Reporting diffuse slowing without confirming the state labels drowsiness as an abnormality. Reactivity shows the rhythm is a true posterior rhythm but does not make its frequency normal for age. Recommending imaging on a background measurement of uncertain state goes well beyond what the record supports."
-      }
+      },
+      "figures": [
+        "aes-f37",
+        "aes-f38",
+        "aes-f39",
+        "aes-f40",
+        "aes-f43"
+      ]
     },
     {
       "title": "Sleep architecture and the drowsy danger zone",
@@ -77,7 +86,12 @@
         ],
         "answer": 0,
         "explanation": "Diffuse, high-voltage 3 to 5 Hz bursts in drowsiness in a child between 3 months and 13 years, and typically 4 to 9 years, are hypnagogic hypersynchrony (Kane 2017). The absence of embedded spikes and the disappearance with arousal are the confirming features. Generalized rhythmic delta as an encephalopathic pattern would not be confined to drowsiness and abolished by speaking to the child. Absence seizures are 3 Hz spike-and-wave with abrupt onset and offset and a clinical correlate, not spike-free rhythmic bursts that resolve with arousal. Frontal intermittent rhythmic delta is frontally predominant rather than diffuse and is not a drowsy pattern of childhood."
-      }
+      },
+      "figures": [
+        "aes-f41",
+        "aes-f42",
+        "aes-f44"
+      ]
     },
     {
       "title": "Awake features that arrive with age",
@@ -119,7 +133,12 @@
         ],
         "answer": 1,
         "explanation": "Marked, diffuse, rhythmic slowing that builds during hyperventilation and resolves afterwards is the normal response in children (St. Louis 2016), and its presence in fact shows that the effort was good. The important negative is the absence of 2.5 to 4 Hz spike-and-wave after 3 minutes of well-performed hyperventilation in an untreated child, which argues against childhood absence epilepsy (Hirsch E 2022). Calling the slowing an encephalopathic response is a recognized over-read. Slowing does not indicate inadequate effort; it indicates the opposite. And the slowing is described as the expected response in the activation section, not listed as a finding in the impression."
-      }
+      },
+      "figures": [
+        "aes-f45",
+        "aes-f46",
+        "aes-f47"
+      ]
     }
   ],
   "quiz": [
@@ -180,15 +199,50 @@
     }
   ],
   "resources": [
-    { "label": "Learning EEG: Normal Awake", "url": "https://www.learningeeg.com/normal-awake.html" },
-    { "label": "Learning EEG: Normal Asleep", "url": "https://www.learningeeg.com/normal-asleep.html" },
-    { "label": "Learning EEG: Pediatric", "url": "https://www.learningeeg.com/pediatric.html", "note": "The Infancy, Early Years and Adolescence sections." },
-    { "label": "Learning EEG: Atlas", "url": "https://www.learningeeg.com/atlas.html", "note": "The pediatric pages." },
-    { "label": "eeg-training.com: EEG Fundamentals", "url": "https://www.eeg-training.com/eeg-fundamentals.html", "note": "The age-change board." },
-    { "label": "EEGmaster atlas: Pediatric Normal module", "url": "https://eegmaster.com/eegmaster/", "note": "Free account required." },
-    { "label": "AES EEG Essentials: Pediatric EEG Basics", "url": "https://aesnet.org/education/education/eeg-essentials", "note": "Free with a myAES account." },
-    { "label": "St. Louis and Frey, AES introductory text and atlas", "url": "https://www.ncbi.nlm.nih.gov/books/NBK390356/", "note": "Developmental chapter, free." }
+    {
+      "label": "Learning EEG: Normal Awake",
+      "url": "https://www.learningeeg.com/normal-awake.html"
+    },
+    {
+      "label": "Learning EEG: Normal Asleep",
+      "url": "https://www.learningeeg.com/normal-asleep.html"
+    },
+    {
+      "label": "Learning EEG: Pediatric",
+      "url": "https://www.learningeeg.com/pediatric.html",
+      "note": "The Infancy, Early Years and Adolescence sections."
+    },
+    {
+      "label": "Learning EEG: Atlas",
+      "url": "https://www.learningeeg.com/atlas.html",
+      "note": "The pediatric pages."
+    },
+    {
+      "label": "eeg-training.com: EEG Fundamentals",
+      "url": "https://www.eeg-training.com/eeg-fundamentals.html",
+      "note": "The age-change board."
+    },
+    {
+      "label": "EEGmaster atlas: Pediatric Normal module",
+      "url": "https://eegmaster.com/eegmaster/",
+      "note": "Free account required."
+    },
+    {
+      "label": "AES EEG Essentials: Pediatric EEG Basics",
+      "url": "https://aesnet.org/education/education/eeg-essentials",
+      "note": "Free with a myAES account."
+    },
+    {
+      "label": "St. Louis and Frey, AES introductory text and atlas",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK390356/",
+      "note": "Developmental chapter, free."
+    }
   ],
   "signOff": "The resident reads ten normal records spanning infancy to adolescence and states the expected posterior rhythm for each age before looking.",
-  "sources": ["kane2017", "stlouis2016", "currentPractice", "hirschE2022"]
+  "sources": [
+    "kane2017",
+    "stlouis2016",
+    "currentPractice",
+    "hirschE2022"
+  ]
 }

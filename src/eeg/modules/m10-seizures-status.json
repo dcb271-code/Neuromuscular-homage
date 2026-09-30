@@ -80,7 +80,10 @@
         ],
         "answer": 3,
         "explanation": "Electrographic status epilepticus is met either by at least 10 continuous minutes or by seizures occupying at least 20% of any 60-minute period. Five seizures of 3 minutes sum to 15 minutes, which is 25% of the hour, so the burden route is met even though no seizure was long. Requiring a single 10-minute seizure ignores the second route. A clinical correlate is what distinguishes electroclinical from electrographic status; electrographic status needs none. The burden rule applies to children and adults; neonates have their own threshold of 50% of an hour, and this patient is not a neonate."
-      }
+      },
+      "figures": [
+        "aes-f79"
+      ]
     },
     {
       "title": "Common ictal patterns in children",
