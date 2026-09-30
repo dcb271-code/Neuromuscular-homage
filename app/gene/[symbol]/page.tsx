@@ -18,7 +18,7 @@ export function generateMetadata({ params }: { params: { symbol: string } }) {
   if (!gene) return { title: 'Gene not found' };
   const title = `${gene.symbol} — ${gene.fullName || gene.rawName}`;
   return {
-    title: `${title} | Neuromuscular HOMEPAGE`,
+    title: `${title} | Pons Asinorum`,
     description: gene.phenotype || gene.ncbiSummary || `Gene page for ${gene.symbol}`,
   };
 }
@@ -71,7 +71,7 @@ export default function GenePage({ params }: { params: { symbol: string } }) {
     <div style={{ maxWidth: '860px', margin: '0 auto' }}>
       {/* Breadcrumb */}
       <nav style={{ fontSize: '12px', color: '#94a3b8', marginBottom: '24px', display: 'flex', gap: '6px', alignItems: 'center' }}>
-        <Link href="/" style={{ color: '#64748b', textDecoration: 'none' }}>Home</Link>
+        <Link href="/neuromuscular" style={{ color: '#64748b', textDecoration: 'none' }}>Neuromuscular</Link>
         <span>/</span>
         <Link href="/browse" style={{ color: '#64748b', textDecoration: 'none' }}>Browse</Link>
         <span>/</span>

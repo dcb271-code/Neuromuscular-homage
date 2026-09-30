@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import GlobalSearch from '@/components/GlobalSearch';
+import { SECTIONS } from '@/src/sections';
 
 export const metadata: Metadata = {
-  title: 'Neuromuscular Homage — neuromuscular.wustl.edu',
-  description: 'Searchable index of neuromuscular diseases, genes, and inheritance patterns — sourced from neuromuscular.wustl.edu',
+  title: 'Pons Asinorum — a neurology learning resource',
+  description: 'Pons Asinorum: neuromuscular disease index, neuroradiology, localization and the neuro exam, and EEG learning resources.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -23,12 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   letterSpacing: '-0.5px',
                   color: '#f1f5f9',
                 }}>
-                  <span className="nm-hide-sm">Neuromuscular{' '}</span>
-                  <span style={{ color: '#60a5fa' }}>
-                    HOME
-                    <span style={{ fontSize: '9px', verticalAlign: 'middle', opacity: 0.75, fontWeight: 600, letterSpacing: '0.02em' }}>ep</span>
-                    AGE
-                  </span>
+                  Pons <span style={{ color: '#60a5fa' }}>Asinorum</span>
                 </span>
                 <div className="nm-hide-sm" style={{
                   fontSize: '9px',
@@ -37,21 +33,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   marginTop: '2px',
                   textTransform: 'uppercase',
                   fontFamily: 'ui-monospace, monospace',
-                }}>neuromuscular.wustl.edu</div>
+                }}>ponsasinorum.vercel.app</div>
               </div>
             </a>
 
-            {/* Search */}
+            {/* Search (neuromuscular index) */}
             <div className="flex-1 min-w-0 max-w-lg">
               <GlobalSearch />
             </div>
 
-            {/* Nav — full on desktop */}
-            <nav className="nm-hide-sm" style={{ display: 'flex', gap: '4px', flexShrink: 0 }}>
-              <NavLink href="/search">Search</NavLink>
-              <NavLink href="/browse">Browse</NavLink>
+            {/* Section nav — desktop */}
+            <nav className="hidden md:flex" style={{ gap: '4px', flexShrink: 0 }}>
+              {SECTIONS.map(s => (
+                <NavLink key={s.slug} href={`/${s.slug}`} color={s.color}>{s.short}</NavLink>
+              ))}
             </nav>
-            {/* Nav — compact on mobile */}
+            {/* Compact link — mobile */}
             <a href="/browse" className="nm-show-sm"
               style={{
                 flexShrink: 0,
@@ -72,12 +69,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   );
 }
 
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+function NavLink({ href, color, children }: { href: string; color: string; children: React.ReactNode }) {
   return (
     <a
       href={href}
       style={{
-        padding: '5px 12px',
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '6px',
+        padding: '5px 10px',
         fontSize: '12px',
         fontWeight: 500,
         color: 'rgba(148,163,184,0.9)',
@@ -86,8 +86,10 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
         background: 'rgba(255,255,255,0.06)',
         border: '1px solid rgba(255,255,255,0.08)',
         letterSpacing: '0.02em',
+        whiteSpace: 'nowrap',
       }}
     >
+      <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: color, flexShrink: 0 }} />
       {children}
     </a>
   );

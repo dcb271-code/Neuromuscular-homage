@@ -69,3 +69,7 @@
 @media (max-width: 360px) {
   .nm-3col { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Landing section cards (server-rendered, hover via CSS) */
+.nm-card-link { transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s; }
+.nm-card-link:hover { border-color: #cbd5e1 !important; box-shadow: 0 4px 16px rgba(15,23,42,0.08) !important; transform: translateY(-1px); }

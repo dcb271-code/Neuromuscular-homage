@@ -28,7 +28,7 @@ export default function LetterPageClient({
     <div>
       {/* Breadcrumb */}
       <div style={{ marginBottom: '20px', fontSize: '12px', color: '#94a3b8' }}>
-        <Link href="/" style={{ color: '#94a3b8', textDecoration: 'none' }}>Home</Link>
+        <Link href="/neuromuscular" style={{ color: '#94a3b8', textDecoration: 'none' }}>Neuromuscular</Link>
         <span style={{ margin: '0 6px' }}>/</span>
         <Link href="/browse" style={{ color: '#94a3b8', textDecoration: 'none' }}>Browse</Link>
         <span style={{ margin: '0 6px' }}>/</span>

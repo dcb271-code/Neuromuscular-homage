@@ -20,7 +20,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   const cond = condMap.get(params.slug);
   if (!cond) return { title: 'Condition not found' };
   return {
-    title: `${cond.name} | Neuromuscular HOMEPAGE`,
+    title: `${cond.name} | Pons Asinorum`,
     description: cond.content?.slice(0, 200) || `Condition page for ${cond.name}`,
   };
 }
@@ -60,7 +60,7 @@ export default function ConditionPage({ params }: { params: { slug: string } }) 
     <div style={{ maxWidth: '860px', margin: '0 auto' }}>
       {/* Breadcrumb */}
       <nav style={{ fontSize: '12px', color: '#94a3b8', marginBottom: '24px', display: 'flex', gap: '6px', alignItems: 'center' }}>
-        <Link href="/" style={{ color: '#64748b', textDecoration: 'none' }}>Home</Link>
+        <Link href="/neuromuscular" style={{ color: '#64748b', textDecoration: 'none' }}>Neuromuscular</Link>
         <span>/</span>
         <Link href="/browse" style={{ color: '#64748b', textDecoration: 'none' }}>Browse</Link>
         <span>/</span>
