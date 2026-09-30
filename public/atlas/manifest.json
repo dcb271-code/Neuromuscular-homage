@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29",
+  "generated": "2026-09-30",
   "source": "TemplateFlow (https://www.templateflow.org), public S3 bucket",
   "default": "pma40w",
   "ages": [
@@ -74,6 +74,7 @@
             0.5
           ],
           "colormap": "labels/dhcp-structures.json",
+          "label_set": "dhcp",
           "preview": "pma36w/labels_preview.nii.gz",
           "preview_bytes": 117195,
           "preview_shape": [
@@ -155,6 +156,7 @@
             0.5
           ],
           "colormap": "labels/dhcp-structures.json",
+          "label_set": "dhcp",
           "preview": "pma40w/labels_preview.nii.gz",
           "preview_bytes": 120962,
           "preview_shape": [
@@ -343,6 +345,120 @@
       }
     },
     {
+      "id": "unc1y",
+      "label": "1 yr",
+      "detail": "1-year-olds, T1 with 90 AAL grey-matter regions (UNC infant)",
+      "template": "UNCInfant",
+      "cohort": 2,
+      "files": {
+        "T1w": {
+          "full": "unc1y/T1w.nii.gz",
+          "bytes": 1584820,
+          "shape": [
+            181,
+            217,
+            181
+          ],
+          "voxel_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_source": [
+            2745.0,
+            10122.0
+          ],
+          "preview": "unc1y/T1w_preview.nii.gz",
+          "preview_bytes": 224618,
+          "preview_shape": [
+            90,
+            108,
+            90
+          ]
+        },
+        "labels": {
+          "full": "unc1y/labels.nii.gz",
+          "bytes": 209531,
+          "shape": [
+            181,
+            217,
+            181
+          ],
+          "voxel_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "colormap": "labels/aal.json",
+          "label_set": "aal",
+          "preview": "unc1y/labels_preview.nii.gz",
+          "preview_bytes": 40551,
+          "preview_shape": [
+            90,
+            108,
+            90
+          ]
+        }
+      }
+    },
+    {
+      "id": "unc2y",
+      "label": "2 yr",
+      "detail": "2-year-olds, T1 with 90 AAL grey-matter regions (UNC infant)",
+      "template": "UNCInfant",
+      "cohort": 3,
+      "files": {
+        "T1w": {
+          "full": "unc2y/T1w.nii.gz",
+          "bytes": 1765094,
+          "shape": [
+            181,
+            217,
+            181
+          ],
+          "voxel_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_source": [
+            2672.0,
+            10022.0
+          ],
+          "preview": "unc2y/T1w_preview.nii.gz",
+          "preview_bytes": 252105,
+          "preview_shape": [
+            90,
+            108,
+            90
+          ]
+        },
+        "labels": {
+          "full": "unc2y/labels.nii.gz",
+          "bytes": 243317,
+          "shape": [
+            181,
+            217,
+            181
+          ],
+          "voxel_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "colormap": "labels/aal.json",
+          "label_set": "aal",
+          "preview": "unc2y/labels_preview.nii.gz",
+          "preview_bytes": 46694,
+          "preview_shape": [
+            90,
+            108,
+            90
+          ]
+        }
+      }
+    },
+    {
       "id": "y4to8",
       "label": "4.5\u20138.5 yr",
       "detail": "Children 4.5 to 8.5 years, prepubertal (MNI pediatric, cohort 2)",
@@ -483,6 +599,18 @@
       ],
       "license": "MNI/McGill permissive licence (copyright notice must accompany all copies)",
       "license_url": null
+    },
+    "UNCInfant": {
+      "name": "UNC infant 0\u20131\u20132 atlases, with AAL parcellation",
+      "authors": "Shi F, Yap PT, Wu G, Jia H, Gilmore JH, Lin W, Shen D",
+      "citation": "Shi F, et al. Infant brain atlases from neonates to 1- and 2-year-olds. PLoS One 2011;6(4):e18746. doi:10.1371/journal.pone.0018746. Structure labels follow the AAL atlas: Tzourio-Mazoyer N, et al. NeuroImage 2002;15(1):273\u2013289. doi:10.1006/nimg.2001.0978",
+      "links": [
+        "https://doi.org/10.1371/journal.pone.0018746",
+        "http://www.nitrc.org/projects/pediatricatlas",
+        "https://doi.org/10.1006/nimg.2001.0978"
+      ],
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     "dhcpVol": {
       "name": "dHCP neonatal volumetric atlas",

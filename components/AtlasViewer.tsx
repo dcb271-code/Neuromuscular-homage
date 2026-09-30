@@ -6,7 +6,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { Niivue } from '@niivue/niivue';
 
-type FileSet = { full: string; preview?: string; colormap?: string; bytes: number; preview_bytes?: number };
+type FileSet = { full: string; preview?: string; colormap?: string; bytes: number; preview_bytes?: number; voxel_mm?: number[] };
 type Age = { id: string; label: string; detail: string; template: string; files: Record<string, FileSet> };
 type TemplateMeta = { name: string; authors: string; citation: string; links: string[]; license: string; license_url: string | null };
 type Manifest = { default: string; ages: Age[]; templates: Record<string, TemplateMeta> };
@@ -27,6 +27,7 @@ const ACCENT = '#7c3aed';
 const GROUPS: { name: string; ids: string[] }[] = [
   { name: 'Neonate', ids: ['pma36w', 'pma40w'] },
   { name: 'Infant', ids: ['m06', 'm12', 'm24'] },
+  { name: 'Infant · labelled', ids: ['unc1y', 'unc2y'] },
   { name: 'Child', ids: ['y4to8'] },
   { name: 'Adolescent', ids: ['y13to18'] },
 ];
@@ -40,11 +41,19 @@ const PLANES = [
 
 const LABEL_OPACITY = 0.45;
 
+// Phones get the downsampled preview only for sub-millimetre templates (the 0.5 mm neonatal
+// ones, whose preview is still 1 mm). The 1 mm templates are small enough to send in full.
+function shouldPreview(f: FileSet | undefined, mobile: boolean): boolean {
+  return !!f && mobile && !!f.preview && (f.voxel_mm?.[0] ?? 1) < 0.9;
+}
+
 export default function AtlasViewer() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const nvRef = useRef<Niivue | null>(null);
-  const labelMapRef = useRef<LabelMap | null>(null);
+  const labelMapRef = useRef<LabelMap | null>(null);          // map for the loaded age
+  const labelCacheRef = useRef<Record<string, LabelMap>>({});
   const hasLabelVolRef = useRef(false);
+  const loadedAgeRef = useRef<string | null>(null);
 
   const [ready, setReady] = useState(false);
   const [manifest, setManifest] = useState<Manifest | null>(null);
@@ -69,11 +78,6 @@ export default function AtlasViewer() {
       .then(r => r.json())
       .then((m: Manifest) => { if (!disposed) { setManifest(m); setAgeId(m.default); } })
       .catch(() => setError('Could not load the atlas manifest.'));
-    fetch(`${BASE}/labels/dhcp-structures.json`)
-      .then(r => r.json())
-      .then((l: LabelMap) => { labelMapRef.current = l; })
-      .catch(() => {});
-
     (async () => {
       try {
         const { Niivue, SHOW_RENDER } = await import('@niivue/niivue');
@@ -127,14 +131,16 @@ export default function AtlasViewer() {
 
   const age = manifest?.ages.find(a => a.id === ageId);
   const hasLabels = !!age?.files.labels;
+  // Some templates (UNC) are T1 only; fall back without forgetting the user's choice.
+  const activeContrast: 'T1w' | 'T2w' = age && !age.files[contrast] ? (age.files.T1w ? 'T1w' : 'T2w') : contrast;
 
   // (Re)load volumes when the age, contrast, or resolution changes.
   useEffect(() => {
     const nv = nvRef.current;
     if (!ready || !nv || !age) return;
-    const pick = (f: FileSet) => `${BASE}/${mobile && f.preview ? f.preview : f.full}`;
+    const pick = (f: FileSet) => `${BASE}/${shouldPreview(f, mobile) ? f.preview : f.full}`;
     const vols: { url: string; opacity?: number; colormap?: string }[] = [
-      { url: pick(age.files[contrast]), colormap: 'gray' },
+      { url: pick(age.files[activeContrast]), colormap: 'gray' },
     ];
     const lab = age.files.labels;
     // The label volume always loads when available, hidden unless "Structures" is on,
@@ -147,11 +153,22 @@ export default function AtlasViewer() {
       .then(async () => {
         if (cancelled) return;
         if (lab?.colormap && nv.volumes[1]) {
-          const cm = labelMapRef.current ?? await fetch(`${BASE}/${lab.colormap}`).then(r => r.json());
+          const cm = labelCacheRef.current[lab.colormap]
+            ?? await fetch(`${BASE}/${lab.colormap}`).then(r => r.json());
+          if (cancelled) return;
+          labelCacheRef.current[lab.colormap] = cm;
           labelMapRef.current = cm;
           nv.volumes[1].setColormapLabel(padLabelColormap(cm));
           nv.updateGLVolume();
           hasLabelVolRef.current = true;
+        }
+        // Templates differ in field of view, so a crosshair carried over from another age can
+        // land outside the head. Re-centre on age changes; keep position on T1/T2 switches.
+        if (loadedAgeRef.current !== age.id) {
+          nv.scene.crosshairPos = [0.5, 0.5, 0.5];
+          nv.createOnLocationChange();
+          nv.drawScene();
+          loadedAgeRef.current = age.id;
         }
         setWhere({ mm: '', structure: null });
         setLoading(false);
@@ -160,7 +177,7 @@ export default function AtlasViewer() {
     return () => { cancelled = true; };
     // showLabels is applied by the opacity effect below without a reload
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ready, age, contrast, mobile]);
+  }, [ready, age, activeContrast, mobile]);
 
   useEffect(() => {
     const nv = nvRef.current;
@@ -193,9 +210,11 @@ export default function AtlasViewer() {
     moveSlice(target - Math.round(nv.frac2vox(nv.scene.crosshairPos)[railAxis]));
   };
 
+  const loadedFiles = age ? [age.files[activeContrast], age.files.labels].filter(Boolean) as FileSet[] : [];
   const sizeMB = age
-    ? (Object.values(age.files).reduce((s, f) => s + ((mobile && f.preview_bytes) || f.bytes), 0) / 1e6).toFixed(1)
+    ? (loadedFiles.reduce((s, f) => s + (shouldPreview(f, mobile) ? f.preview_bytes ?? f.bytes : f.bytes), 0) / 1e6).toFixed(1)
     : null;
+  const previewing = age ? shouldPreview(age.files[activeContrast], mobile) : false;
 
   return (
     <div>
@@ -233,8 +252,11 @@ export default function AtlasViewer() {
 
           <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
             <Segmented
-              options={[{ label: 'T1', value: 'T1w' }, { label: 'T2', value: 'T2w' }]}
-              value={contrast} onChange={v => setContrast(v as 'T1w' | 'T2w')}
+              options={[
+                { label: 'T1', value: 'T1w', disabled: !!age && !age.files.T1w },
+                { label: 'T2', value: 'T2w', disabled: !!age && !age.files.T2w, title: 'This template is T1 only' },
+              ]}
+              value={activeContrast} onChange={v => setContrast(v as 'T1w' | 'T2w')}
             />
             <Segmented
               options={PLANES.map(p => ({ label: p.label, value: String(p.value) }))}
@@ -243,18 +265,18 @@ export default function AtlasViewer() {
             <label style={{
               display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '12px', fontWeight: 500,
               color: hasLabels ? '#334155' : '#cbd5e1', cursor: hasLabels ? 'pointer' : 'default',
-            }} title={hasLabels ? '' : 'Structure labels are available for the 36 and 40 week templates'}>
+            }} title={hasLabels ? '' : 'Structure labels are available for the neonatal templates and the labelled 1 and 2 year templates'}>
               <input type="checkbox" disabled={!hasLabels} checked={hasLabels && showLabels}
                 onChange={e => setShowLabels(e.target.checked)} style={{ accentColor: ACCENT }} />
               Structures
-              {!hasLabels && <span style={{ fontSize: '10px' }}>(neonatal only)</span>}
+              {!hasLabels && <span style={{ fontSize: '10px' }}>(not for this age)</span>}
             </label>
           </div>
 
           {age && (
             <div style={{ fontSize: '12px', color: '#64748b' }}>
               {age.detail}
-              {sizeMB && <span style={{ color: '#cbd5e1' }}> · {sizeMB} MB{mobile ? ' (2 mm preview)' : ''}</span>}
+              {sizeMB && <span style={{ color: '#cbd5e1' }}> · {sizeMB} MB{previewing ? ' (1 mm preview)' : ''}</span>}
             </div>
           )}
         </div>
@@ -293,7 +315,8 @@ export default function AtlasViewer() {
             <span style={{ fontWeight: 600, color: '#1e293b' }}>{where.structure}</span>
           ) : (
             <span style={{ color: '#94a3b8' }}>
-              {hasLabels ? 'Click or tap to name a structure' : 'Click or tap to move the crosshair'}
+              {!hasLabels ? 'Click or tap to move the crosshair'
+                : where.mm ? 'No labelled structure here' : 'Click or tap to name a structure'}
             </span>
           )}
           {where.mm && <span style={{ color: '#94a3b8', fontFamily: 'ui-monospace, monospace', fontSize: '11px', marginLeft: 'auto' }}>{where.mm}</span>}
@@ -330,7 +353,7 @@ function Sources({ manifest }: { manifest: Manifest }) {
         ))}
         <div>
           Templates obtained from <a href="https://www.templateflow.org" target="_blank" rel="noopener" style={{ color: ACCENT }}>TemplateFlow</a> and
-          modified for the web: intensities rescaled to 8-bit, 2 mm previews added, and dHCP structure colours reassigned.
+          modified for the web: intensities rescaled to 8-bit, 2 mm previews added, structure colours assigned, and AAL region names expanded.
           Full details in <a href={`${BASE}/ATTRIBUTION.md`} target="_blank" rel="noopener" style={{ color: ACCENT }}>ATTRIBUTION.md</a>.
           These are population averages for education, not reference standards for diagnosis.
         </div>
@@ -457,14 +480,15 @@ function Pill({ active, onClick, children }: { active: boolean; onClick: () => v
 }
 
 function Segmented({ options, value, onChange }: {
-  options: { label: string; value: string }[]; value: string; onChange: (v: string) => void;
+  options: { label: string; value: string; disabled?: boolean; title?: string }[]; value: string; onChange: (v: string) => void;
 }) {
   return (
     <div style={{ display: 'inline-flex', background: '#f1f5f9', borderRadius: '8px', padding: '2px', gap: '2px' }}>
       {options.map(o => (
-        <button key={o.value} onClick={() => onChange(o.value)} style={{
-          fontSize: '12px', fontWeight: 600, padding: '4px 10px', borderRadius: '6px', cursor: 'pointer', border: 'none',
-          color: o.value === value ? '#1e293b' : '#64748b',
+        <button key={o.value} onClick={() => onChange(o.value)} disabled={o.disabled} title={o.disabled ? o.title : undefined} style={{
+          fontSize: '12px', fontWeight: 600, padding: '4px 10px', borderRadius: '6px', border: 'none',
+          cursor: o.disabled ? 'default' : 'pointer',
+          color: o.disabled ? '#cbd5e1' : o.value === value ? '#1e293b' : '#64748b',
           background: o.value === value ? '#fff' : 'transparent',
           boxShadow: o.value === value ? '0 1px 2px rgba(0,0,0,0.08)' : 'none',
         }}>

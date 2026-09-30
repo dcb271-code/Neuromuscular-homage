@@ -20,6 +20,14 @@ under their original licences, reproduced in `licenses/`.
 - Licence: MNI/McGill permissive licence (copyright notice must accompany all copies). Full text: `licenses/MNIPediatricAsym/LICENSE`.
 - Links: https://doi.org/10.1016/j.neuroimage.2010.07.033, http://nist.mni.mcgill.ca/?p=974
 
+## UNC infant 0–1–2 atlases, with AAL parcellation (`tpl-UNCInfant`)
+
+- Ages used here: 1 yr, 2 yr
+- Authors: Shi F, Yap PT, Wu G, Jia H, Gilmore JH, Lin W, Shen D
+- Cite: Shi F, et al. Infant brain atlases from neonates to 1- and 2-year-olds. PLoS One 2011;6(4):e18746. doi:10.1371/journal.pone.0018746. Structure labels follow the AAL atlas: Tzourio-Mazoyer N, et al. NeuroImage 2002;15(1):273–289. doi:10.1006/nimg.2001.0978
+- Licence: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Full text: `licenses/UNCInfant/LICENSE`.
+- Links: https://doi.org/10.1371/journal.pone.0018746, http://www.nitrc.org/projects/pediatricatlas, https://doi.org/10.1006/nimg.2001.0978
+
 ## dHCP neonatal volumetric atlas (`tpl-dhcpVol`)
 
 - Ages used here: 36 wk PMA, 40 wk PMA (term)
@@ -40,5 +48,9 @@ These files are modified versions of the originals, as CC BY 4.0 requires us to 
 - dHCP structure labels: the two background labels (84, 85) were set to 0.
 - dHCP structure colours were reassigned for 85 of 85 structures so that
   neighbouring structures are distinguishable. Label numbers and names are unchanged.
+- UNC AAL labels: the source has no colour table or names file, so colours were assigned
+  and the standard AAL region names were attached (abbreviations expanded, e.g.
+  `Frontal_Inf_Tri_L` → "Inferior frontal gyrus, triangular part left").
+- UNC templates are T1-weighted only.
 
-Generated 2026-09-29.
+Generated 2026-09-30.
