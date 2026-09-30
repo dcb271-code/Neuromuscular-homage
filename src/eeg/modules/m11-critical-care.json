@@ -42,7 +42,11 @@
         "explanation": "This child meets the ACNS consensus indications for continuous EEG on two counts: recent convulsive status epilepticus and an unexplained, sedated mental status (Herman 2015). The Abend cohort found electrographic seizures in 30% of critically ill children, with 36% of those having seizures that were exclusively electrographic (Abend 2013). A sedated, intubated child cannot show a seizure, so waiting for a clinical sign, or for a failure to wake, means waiting for something that will not appear. A routine 20-minute study samples a fraction of the period at risk. Amplitude-integrated EEG is a trend tool that helps find events in long records, but any change it shows must be confirmed on the raw EEG, and it does not replace conventional monitoring in this setting."
       },
       "figures": [
-        "aes-f79"
+        "aes-f79",
+        "shoup-s26",
+        "shoup-s28",
+        "shoup-s30",
+        "shoup-s33"
       ]
     },
     {

@@ -6,13 +6,19 @@
 
 - Add the owner's own slide decks and PDFs once uploaded (see `resources-to-integrate.md`): extract figures only where the licence allows, otherwise link.
 - Filter and sampling lab (Module 1): apply low-pass, high-pass and notch to a synthetic spike, muscle burst and alpha, and show what each does to morphology. Pure model + tests, like the montage lab.
-- Tracings for Modules 8 and 9 (interictal discharges, hypsarrhythmia, 3 Hz spike-wave, slow spike-wave): the AES atlas versions are Mayo-copyrighted. Candidates: the owner's colleagues' decks (permission given; provenance of each tracing to confirm and identifiers to crop), or Learning EEG by link.
+- Tracings for Module 9 (hypsarrhythmia, 3 Hz spike-wave, slow spike-wave, centrotemporal spikes): the AES atlas versions are Mayo-copyrighted and the Shoup deck has none. Candidates: the DeStefano deck (permission given; identifiers to crop), or Learning EEG by link.
 - Waveform viewer with real tracings: needs de-identified records with a licence. The AES figures are static images, not raw EEG.
 - Baseline (pre) and comprehensive (post) assessments, mirroring the neurogenetics curriculum's 25-question baseline with no feedback and 50-question exam with explanations.
 - Cross-link the sibling sites where content overlaps: neurogenetics `epilepsy` module ↔ Module 9 (syndrome EEG) and Module 7 (burst suppression); restate no number that does not match the sibling exactly.
 - Second-pass accuracy audit: read every section against `outline.md` and cut any number the outline does not carry.
 
 ## History
+
+### 2026-09-30 · Twelve tracings from Jaime Shoup's non-epileptiform lecture
+- **Target:** give Module 8 (slowing, rhythmic deltas) and Module 11 (ICU backgrounds) real tracings.
+- **Change:** owner confirmed the deck's recordings may be used. `scripts/extract_shoup_figures.py` takes 12 slides (excluding three Mayo-permission tracings, a scanned journal figure and an unlabelled slide), writes `shoup-sNN.jpg` and merges them into the registry with the credit "used with permission"; `scripts/build_eeg_attributions.py` now renders `ATTRIBUTIONS.md` for both sources. Placed in Module 8 sections 4 and 5 and Module 11 section 1.
+- **Outcome:** see commit on `main`.
+- **Follow-ups:** Module 9 still has no tracings.
 
 ### 2026-09-30 · Licensed tracings from the AES atlas, pattern gallery
 - **Target:** put real tracings beside the prose without breaching anyone's copyright.

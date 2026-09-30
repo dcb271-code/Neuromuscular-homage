@@ -27,7 +27,7 @@ export function GalleryPage({ figures, modules }: { figures: EegFigure[]; module
       <nav className="text-[12px] text-slate-400 mb-5 flex gap-1.5 items-center"><Link href="/eeg" className="text-slate-500 no-underline hover:underline">EEG</Link><span>/</span><span className="text-slate-800 font-semibold">Pattern gallery</span></nav>
       <h1 className="font-mono font-extrabold tracking-tight text-slate-900 mb-2" style={{ fontSize: 'clamp(24px, 5.5vw, 34px)' }}>Pattern gallery</h1>
       <p className="text-[14px] text-slate-600 mb-5 leading-relaxed max-w-[680px]">
-        {figures.length} tracings from the AES introductory text and atlas (St. Louis and Frey, 2016), reproduced under its Creative Commons licence. In quiz mode the caption is hidden until you tap the card: name the pattern first, then check.
+        {figures.length} tracings: from the AES introductory text and atlas (St. Louis and Frey, 2016, Creative Commons) and from Jaime Shoup, MD, University of Louisville (used with permission). In quiz mode the caption is hidden until you tap the card: name the pattern first, then check.
       </p>
 
       <div className="flex items-center gap-2 flex-wrap mb-5">
@@ -77,7 +77,7 @@ export function GalleryPage({ figures, modules }: { figures: EegFigure[]; module
         })}
       </div>
       <p className="text-[11px] text-slate-400 mt-6 leading-relaxed">
-        Source: St. Louis EK, Frey LC, eds. Electroencephalography: An Introductory Text and Atlas of Normal and Abnormal Findings in Adults, Children, and Infants. American Epilepsy Society; 2016. CC BY-NC-SA 4.0. Images resized and captions shortened; full credits in <a href="/eeg/ATTRIBUTIONS.md" target="_blank" rel="noopener noreferrer" className="underline">ATTRIBUTIONS.md</a>. Figures the book marks with a separate copyright were not reproduced.
+        Sources: St. Louis EK, Frey LC, eds. Electroencephalography: An Introductory Text and Atlas of Normal and Abnormal Findings in Adults, Children, and Infants. American Epilepsy Society; 2016, CC BY-NC-SA 4.0; and Jaime Shoup, MD, University of Louisville, used with permission (not for further copying). Images resized and captions shortened; full credits in <a href="/eeg/ATTRIBUTIONS.md" target="_blank" rel="noopener noreferrer" className="underline">ATTRIBUTIONS.md</a>. Figures the book marks with a separate copyright were not reproduced.
       </p>
     </div>
   );

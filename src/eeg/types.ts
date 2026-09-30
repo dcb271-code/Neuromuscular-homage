@@ -45,6 +45,7 @@ export interface EegFigure {
   height: number;
   credit: string;
   licence: string;
+  source?: 'aes' | 'shoup';
 }
 
 export interface Resource {

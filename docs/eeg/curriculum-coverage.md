@@ -212,6 +212,6 @@
 
 - ⚠️ Module 1: filter lab not built (montage lab only); filters taught in prose.
 - ⚠️ Module 3: no interactive artifact hunter; links to eeg-training.com instead.
-- ⚠️ Tracings: 45 CC BY-NC-SA figures from the AES atlas are placed in Modules 1, 3, 4, 5, 6, 7, 10 and 11 (`public/eeg/figures/`). Modules 2, 8, 9 and 12 have none; the atlas's ictal, syndrome and adult-slowing figures carry a Mayo copyright and were not reproduced.
+- ⚠️ Tracings: 45 CC BY-NC-SA figures from the AES atlas plus 12 from Jaime Shoup, MD (used with permission) are placed in Modules 1, 3, 4, 5, 6, 7, 8, 10 and 11 (`public/eeg/figures/`). Module 9 (syndromes) still has none: hypsarrhythmia, 3 Hz spike-wave and slow spike-wave figures in the atlas carry a Mayo copyright.
 - ➖ Adult-only variants beyond the outline table (wickets, small sharp spikes) are mentioned, not taught.
 - ➖ Slide decks: not part of v1.

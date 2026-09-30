@@ -164,7 +164,7 @@ export function ModulePage({ module: m, prev, next }: { module: EegModule; prev?
                 return <li key={k}>{s.citation}{url && <> <a href={url} target="_blank" rel="noopener noreferrer" className="no-underline hover:underline" style={{ color: accent }}>{s.pmid ? `PMID ${s.pmid}` : 'link'} ↗</a></>}</li>;
               })}
             </ol>
-            <p className="text-[11px] text-slate-400 mt-3">Tracings are from St. Louis and Frey (eds), Electroencephalography, American Epilepsy Society 2016, CC BY-NC-SA 4.0 (<a href="/eeg/ATTRIBUTIONS.md" target="_blank" rel="noopener noreferrer" className="underline">credits</a>). For education. Not for clinical decision-making; consult primary sources and your attending.</p>
+            <p className="text-[11px] text-slate-400 mt-3">Tracings are from St. Louis and Frey (eds), Electroencephalography, AES 2016, CC BY-NC-SA 4.0, or reproduced with their author's permission as stated under each figure (<a href="/eeg/ATTRIBUTIONS.md" target="_blank" rel="noopener noreferrer" className="underline">credits</a>). For education. Not for clinical decision-making; consult primary sources and your attending.</p>
           </section>
 
           <nav className="flex gap-3 justify-between border-t border-slate-100 pt-5 text-[13px]">

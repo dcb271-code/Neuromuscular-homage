@@ -100,7 +100,14 @@
         ],
         "answer": 0,
         "explanation": "Focal polymorphic delta that is continuous and does not react is the pattern that suggests a structural lesion on that side, and the outline's answer is to recommend neuroimaging if it has not been done. Diffuse encephalopathy would slow the whole background for age, and here the rest of the record is normal, so the finding is focal, not diffuse. A post-ictal state produces slowing that is transient and is tied to a recent seizure in the history; continuous, non-reactive slowing without that history should not be waited out. None of the normal variants of Module 5 consists of continuous focal delta, so calling it a variant is an over-normalization rather than an over-read."
-      }
+      },
+      "figures": [
+        "shoup-s01",
+        "shoup-s06",
+        "shoup-s10",
+        "shoup-s11",
+        "shoup-s12"
+      ]
     },
     {
       "title": "Intermittent rhythmic delta, asymmetries and breach",
@@ -121,7 +128,12 @@
         ],
         "answer": 2,
         "explanation": "Rhythmic, monomorphic delta in runs over both occipital regions in a child is OIRDA, a childhood pattern often seen with absence epilepsy, and the outline's instruction is to look for generalized 3 Hz spike-wave, especially during hyperventilation, since the referral question is staring. Polymorphic slowing suggesting a lesion is irregular and continuous, and unilateral, which this is not. Posterior slow waves of youth ride on the alpha rhythm and block with eye opening, but they are individual slow waves fused with the background, not bilateral runs of rhythmic 3 Hz delta in a 6-year-old with a clinical question. Calling the runs seizures ignores that they do not evolve; Module 10 sets out why evolution, not rhythmicity alone, defines an electrographic seizure."
-      }
+      },
+      "figures": [
+        "shoup-s15",
+        "shoup-s18",
+        "shoup-s20"
+      ]
     }
   ],
   "quiz": [
