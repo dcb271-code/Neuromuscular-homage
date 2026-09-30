@@ -104,3 +104,5 @@
 }
 .atlas-rail [role=slider]:focus { outline: none; }
 .atlas-rail [role=slider]:focus-visible { outline: 2px solid #7c3aed; outline-offset: -2px; border-radius: 6px; }
+.atlas-canvas-wrap canvas:focus { outline: none; }
+.atlas-canvas-wrap canvas:focus-visible { outline: 2px solid #7c3aed; outline-offset: -2px; }

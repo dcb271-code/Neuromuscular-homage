@@ -83,6 +83,7 @@ export default function AtlasViewer() {
           show3Dcrosshair: true,
           crosshairColor: [0.49, 0.36, 0.93, 0.9],
           isOrientationTextVisible: true,
+          sagittalNoseLeft: true, // radiology convention: face left, cerebellum right
           multiplanarShowRender: SHOW_RENDER.NEVER,
         });
         nv.onLocationChange = (raw: unknown) => {
@@ -303,7 +304,7 @@ export default function AtlasViewer() {
       <div style={{ fontSize: '11px', color: '#94a3b8', lineHeight: 1.7, marginTop: '10px' }}>
         <b style={{ color: '#64748b' }}>Mouse:</b> scroll or use the slider on the right to page through slices · click to move the crosshair · right-drag to adjust window and level.{' '}
         <b style={{ color: '#64748b' }}>Touch:</b> tap to move the crosshair · drag the slider on the right, or tap its arrows, to page through slices.{' '}
-        Radiological convention: the patient&apos;s left is on the right of the screen.
+        Radiological convention: the patient&apos;s left is on the right of the screen, and sagittal images face left.
       </div>
 
       {manifest && <Sources manifest={manifest} />}
