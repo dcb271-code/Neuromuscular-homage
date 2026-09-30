@@ -65,6 +65,7 @@ export function RotatingCategories() {
               href={cat.url}
               target="_blank"
               rel="noopener"
+              className="nm-cat"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -91,7 +92,7 @@ export function RotatingCategories() {
                 background: cat.color,
                 flexShrink: 0,
               }} />
-              <span style={{ fontSize: '13px', fontWeight: 500, color: '#1e293b', flex: 1 }}>{cat.name}</span>
+              <span style={{ fontSize: '13px', fontWeight: 500, color: '#1e293b', flex: 1, minWidth: 0, overflowWrap: 'break-word', hyphens: 'auto' }}>{cat.name}</span>
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ flexShrink: 0 }}>
                 <path d="M2 10L10 2M10 2H5M10 2V7" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

@@ -19,11 +19,11 @@
 }
 
 /* ── Responsive grid helpers ─────────────────────────────────── */
-.nm-3col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-.nm-4col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-.nm-2col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.nm-3col { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.nm-4col { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.nm-2col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 /* Always 2 columns regardless of viewport — used for daily spotlight rows */
-.nm-2col-pinned { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.nm-2col-pinned { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 
 /* Homepage 2-column layout: browse left, daily right */
 .nm-home-grid {
@@ -38,8 +38,8 @@
 }
 
 @media (max-width: 640px) {
-  .nm-3col { grid-template-columns: repeat(2, 1fr); gap: 6px; }
-  .nm-4col { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .nm-3col { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .nm-4col { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .nm-2col { grid-template-columns: 1fr; gap: 8px; }
   .nm-hide-sm { display: none !important; }
 }
@@ -60,3 +60,12 @@
 .badge-mt  { @apply bg-amber-100 text-amber-800; }
 .badge-dn  { @apply bg-teal-100 text-teal-800; }
 .badge-gen { @apply bg-slate-100 text-slate-600; }
+
+/* Category cards: tighter on phones so long labels have room */
+@media (max-width: 640px) {
+  .nm-cat { padding: 12px 12px !important; gap: 8px !important; }
+}
+/* Very narrow phones: single column for card grids */
+@media (max-width: 360px) {
+  .nm-3col { grid-template-columns: minmax(0, 1fr); }
+}

@@ -128,16 +128,16 @@ function SiteHero() {
         marginBottom: '10px',
       }}>
         <span style={{
-          fontSize: '22px', fontWeight: 600, color: '#94a3b8',
+          fontSize: 'clamp(15px, 5.6vw, 22px)', fontWeight: 600, color: '#94a3b8',
           letterSpacing: '0.4em', textTransform: 'uppercase',
           display: 'block', marginBottom: '4px',
         }}>
           Neuromuscular
         </span>
         <span style={{ display: 'inline-flex', alignItems: 'baseline', gap: 0 }}>
-          <span style={{ fontSize: '72px', fontWeight: 800, color: '#60a5fa', letterSpacing: '-2px' }}>HOM</span>
-          <span style={{ fontSize: '28px', fontWeight: 600, color: '#93c5fd', opacity: 0.7, letterSpacing: '0.02em', verticalAlign: 'middle', position: 'relative', top: '-6px' }}>ep</span>
-          <span style={{ fontSize: '72px', fontWeight: 800, color: '#60a5fa', letterSpacing: '-2px' }}>AGE</span>
+          <span style={{ fontSize: 'clamp(48px, 18vw, 72px)', fontWeight: 800, color: '#60a5fa', letterSpacing: '-2px' }}>HOM</span>
+          <span style={{ fontSize: 'clamp(19px, 7vw, 28px)', fontWeight: 600, color: '#93c5fd', opacity: 0.7, letterSpacing: '0.02em', verticalAlign: 'middle', position: 'relative', top: '-6px' }}>ep</span>
+          <span style={{ fontSize: 'clamp(48px, 18vw, 72px)', fontWeight: 800, color: '#60a5fa', letterSpacing: '-2px' }}>AGE</span>
         </span>
       </div>
       <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: 1.5, letterSpacing: '0.01em' }}>

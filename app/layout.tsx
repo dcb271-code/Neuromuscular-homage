@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="min-h-screen">
         <header style={{ backgroundColor: '#0f172a' }} className="sticky top-0 z-40">
-          <div className="max-w-6xl mx-auto px-6 h-14 flex items-center gap-6">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center gap-3 sm:gap-6">
             {/* Brand */}
             <a href="/" style={{ textDecoration: 'none', flexShrink: 0 }}>
               <div style={{ lineHeight: 1 }}>
@@ -23,14 +23,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   letterSpacing: '-0.5px',
                   color: '#f1f5f9',
                 }}>
-                  Neuromuscular{' '}
+                  <span className="nm-hide-sm">Neuromuscular{' '}</span>
                   <span style={{ color: '#60a5fa' }}>
                     HOME
                     <span style={{ fontSize: '9px', verticalAlign: 'middle', opacity: 0.75, fontWeight: 600, letterSpacing: '0.02em' }}>ep</span>
                     AGE
                   </span>
                 </span>
-                <div style={{
+                <div className="nm-hide-sm" style={{
                   fontSize: '9px',
                   color: 'rgba(148,163,184,0.6)',
                   letterSpacing: '0.08em',
@@ -42,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </a>
 
             {/* Search */}
-            <div className="flex-1 max-w-lg">
+            <div className="flex-1 min-w-0 max-w-lg">
               <GlobalSearch />
             </div>
 
@@ -64,7 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </header>
 
-        <main className="max-w-6xl mx-auto px-6 py-8">
+        <main className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
           {children}
         </main>
       </body>
