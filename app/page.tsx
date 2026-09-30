@@ -22,10 +22,13 @@ export default function Landing() {
       }}>
         <SectionLabel>About the name</SectionLabel>
         <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.65, margin: 0 }}>
-          <em>Pons asinorum</em>, the bridge of asses, is Euclid&apos;s fifth proposition: the first
-          theorem in the <em>Elements</em> that stopped beginners cold, and the one that showed who
-          would go on. Neurology has its own bridges. This site collects them, section by section,
-          as a study resource for trainees.
+          <em>Pons asinorum</em>, the bridge of asses, was the medieval schoolroom&apos;s name for
+          Euclid&apos;s fifth proposition: the first proof in the <em>Elements</em> that sent
+          students back across the river. Its diagram even looks like a little trestle bridge, and
+          the slow of mind were said to stand at its foot like mules, refusing to cross.
+          Neurology is a country built of such bridges, the pons itself not least among them, and I
+          have planted my hooves at the foot of most of them. What follows are notes left on the far
+          bank by one stubborn ass who eventually got over, for whoever is standing where he stood.
         </p>
       </div>
 
