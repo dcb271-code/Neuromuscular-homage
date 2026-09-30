@@ -51,6 +51,9 @@ export default function AtlasViewer() {
   const [ageId, setAgeId] = useState('pma40w');
   const [contrast, setContrast] = useState<'T1w' | 'T2w'>('T2w');
   const [plane, setPlane] = useState(3);
+  const planeRef = useRef(3);
+  const [railPlane, setRailPlane] = useState(0); // 0 axial, 1 coronal, 2 sagittal (NiiVue SLICE_TYPE)
+  const [frac, setFrac] = useState<[number, number, number]>([0.5, 0.5, 0.5]);
   const [showLabels, setShowLabels] = useState(false);
   const [mobile, setMobile] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -83,7 +86,10 @@ export default function AtlasViewer() {
           multiplanarShowRender: SHOW_RENDER.NEVER,
         });
         nv.onLocationChange = (raw: unknown) => {
-          const d = raw as { mm: number[]; values: { value: number }[] };
+          const d = raw as { mm: number[]; frac: number[]; axCorSag: number; values: { value: number }[] };
+          if (d.frac) setFrac([d.frac[0], d.frac[1], d.frac[2]]);
+          // In 3-plane view the slice rail follows whichever pane was last touched.
+          if (planeRef.current === 3 && d.axCorSag >= 0 && d.axCorSag <= 2) setRailPlane(d.axCorSag);
           const mm = d.mm ? `${d.mm.slice(0, 3).map(v => v.toFixed(0)).join(', ')} mm` : '';
           let structure: string | null = null;
           if (hasLabelVolRef.current && d.values?.[1]) {
@@ -161,7 +167,30 @@ export default function AtlasViewer() {
     nv.setOpacity(1, showLabels ? LABEL_OPACITY : 0);
   }, [showLabels, loading]);
 
-  useEffect(() => { nvRef.current?.setSliceType(plane); }, [plane, ready]);
+  useEffect(() => {
+    planeRef.current = plane;
+    if (plane !== 3) setRailPlane(plane);
+    nvRef.current?.setSliceType(plane);
+  }, [plane, ready]);
+
+  // Slice rail: RAS axis for each plane (axial moves z, coronal y, sagittal x).
+  const railAxis = 2 - railPlane;
+  const nSlices = () => nvRef.current?.volumes[0]?.dimsRAS?.[railAxis + 1] ?? 1;
+  const moveSlice = (delta: number) => {
+    const nv = nvRef.current;
+    if (!nv?.volumes.length || !delta) return;
+    const step: [number, number, number] = [0, 0, 0];
+    step[railAxis] = delta;
+    nv.moveCrosshairInVox(step[0], step[1], step[2]);
+    nv.drawScene();
+  };
+  const goToFrac = (f: number) => {
+    const nv = nvRef.current;
+    if (!nv?.volumes.length) return;
+    const n = nSlices();
+    const target = Math.round(Math.min(1, Math.max(0, f)) * (n - 1));
+    moveSlice(target - Math.round(nv.frac2vox(nv.scene.crosshairPos)[railAxis]));
+  };
 
   const sizeMB = age
     ? (Object.values(age.files).reduce((s, f) => s + ((mobile && f.preview_bytes) || f.bytes), 0) / 1e6).toFixed(1)
@@ -230,17 +259,28 @@ export default function AtlasViewer() {
         </div>
 
         {/* Canvas. NiiVue sizes the canvas to this parent, so it must have a height. */}
-        <div className="atlas-canvas-wrap" style={{ position: 'relative', background: '#000' }}>
-          <canvas ref={canvasRef} style={{ display: 'block', width: '100%', height: '100%', touchAction: 'none' }} />
-          {(loading || error) && (
-            <div style={{
-              position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
-              color: error ? '#fca5a5' : '#94a3b8', fontSize: '12px', letterSpacing: '0.04em', pointerEvents: 'none',
-              background: 'rgba(0,0,0,0.35)', textAlign: 'center', padding: '0 16px',
-            }}>
-              {error ?? `Loading ${age?.label ?? 'atlas'}…`}
-            </div>
-          )}
+        <div className="atlas-canvas-wrap" style={{ display: 'flex', background: '#000' }}>
+          <div style={{ position: 'relative', flex: 1, minWidth: 0 }}>
+            <canvas ref={canvasRef} style={{ display: 'block', width: '100%', height: '100%', touchAction: 'none' }} />
+            {(loading || error) && (
+              <div className="atlas-loading" style={{
+                position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                color: error ? '#fca5a5' : '#94a3b8', fontSize: '12px', letterSpacing: '0.04em', pointerEvents: 'none',
+                background: 'rgba(0,0,0,0.35)', textAlign: 'center', padding: '0 16px',
+              }}>
+                {error ?? `Loading ${age?.label ?? 'atlas'}…`}
+              </div>
+            )}
+          </div>
+          <SliceRail
+            plane={railPlane}
+            frac={frac[railAxis]}
+            total={ready && !loading ? nSlices() : 0}
+            canCycle={plane === 3}
+            onCycle={() => setRailPlane(p => (p + 1) % 3)}
+            onStep={moveSlice}
+            onScrub={goToFrac}
+          />
         </div>
 
         {/* Readout */}
@@ -261,8 +301,8 @@ export default function AtlasViewer() {
 
       {/* How to use */}
       <div style={{ fontSize: '11px', color: '#94a3b8', lineHeight: 1.7, marginTop: '10px' }}>
-        <b style={{ color: '#64748b' }}>Mouse:</b> scroll to page through slices · click to move the crosshair · right-drag to adjust window and level.{' '}
-        <b style={{ color: '#64748b' }}>Touch:</b> tap to move the crosshair · two-finger pinch to page through slices.{' '}
+        <b style={{ color: '#64748b' }}>Mouse:</b> scroll or use the slider on the right to page through slices · click to move the crosshair · right-drag to adjust window and level.{' '}
+        <b style={{ color: '#64748b' }}>Touch:</b> tap to move the crosshair · drag the slider on the right, or tap its arrows, to page through slices.{' '}
         Radiological convention: the patient&apos;s left is on the right of the screen.
       </div>
 
@@ -295,6 +335,109 @@ function Sources({ manifest }: { manifest: Manifest }) {
         </div>
       </div>
     </details>
+  );
+}
+
+// Vertical slice scrubber beside the image: drag the track, or tap / hold the arrows.
+const RAIL_PLANES = [
+  { short: 'AX', name: 'Axial', top: 'S', bottom: 'I' },
+  { short: 'COR', name: 'Coronal', top: 'A', bottom: 'P' },
+  { short: 'SAG', name: 'Sagittal', top: 'R', bottom: 'L' },
+];
+
+function SliceRail({ plane, frac, total, canCycle, onCycle, onStep, onScrub }: {
+  plane: number; frac: number; total: number; canCycle: boolean;
+  onCycle: () => void; onStep: (delta: number) => void; onScrub: (frac: number) => void;
+}) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const repeatRef = useRef<{ t?: ReturnType<typeof setTimeout>; i?: ReturnType<typeof setInterval> }>({});
+  const p = RAIL_PLANES[plane];
+  const disabled = total <= 1;
+  const slice = Math.round(frac * (total - 1)) + 1;
+
+  const stopRepeat = () => {
+    clearTimeout(repeatRef.current.t);
+    clearInterval(repeatRef.current.i);
+    repeatRef.current = {};
+  };
+  useEffect(() => stopRepeat, []);
+  const startStep = (delta: number) => {
+    stopRepeat();
+    onStep(delta);
+    repeatRef.current.t = setTimeout(() => {
+      repeatRef.current.i = setInterval(() => onStep(delta), 55);
+    }, 350);
+  };
+  const scrubAt = (clientY: number) => {
+    const r = trackRef.current?.getBoundingClientRect();
+    if (r) onScrub(1 - (clientY - r.top) / r.height);
+  };
+
+  const arrow = (delta: number, label: string, glyph: string) => (
+    <button
+      aria-label={label}
+      disabled={disabled}
+      onPointerDown={e => { e.preventDefault(); startStep(delta); }}
+      onPointerUp={stopRepeat}
+      onPointerLeave={stopRepeat}
+      onPointerCancel={stopRepeat}
+      onContextMenu={e => e.preventDefault()}
+      className="atlas-rail-btn"
+    >
+      {glyph}
+    </button>
+  );
+
+  return (
+    <div className="atlas-rail" style={{ opacity: disabled ? 0.4 : 1 }}>
+      {arrow(1, `Next ${p.name.toLowerCase()} slice`, '▲')}
+      <span style={{ fontSize: '9px', color: '#64748b', fontWeight: 700 }}>{p.top}</span>
+      <div
+        ref={trackRef}
+        role="slider"
+        aria-label={`${p.name} slice`}
+        aria-valuemin={1}
+        aria-valuemax={total}
+        aria-valuenow={slice}
+        tabIndex={0}
+        onKeyDown={e => {
+          if (e.key === 'ArrowUp') { e.preventDefault(); onStep(1); }
+          if (e.key === 'ArrowDown') { e.preventDefault(); onStep(-1); }
+        }}
+        onPointerDown={e => {
+          if (disabled) return;
+          (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+          scrubAt(e.clientY);
+        }}
+        onPointerMove={e => {
+          if ((e.currentTarget as HTMLElement).hasPointerCapture(e.pointerId)) scrubAt(e.clientY);
+        }}
+        style={{ position: 'relative', flex: 1, width: '100%', cursor: disabled ? 'default' : 'ns-resize', touchAction: 'none' }}
+      >
+        <div style={{ position: 'absolute', left: '50%', top: 0, bottom: 0, width: '4px', marginLeft: '-2px', borderRadius: '2px', background: '#1e293b' }} />
+        <div style={{
+          position: 'absolute', left: '50%', bottom: 0, width: '4px', marginLeft: '-2px', borderRadius: '2px',
+          height: `${frac * 100}%`, background: ACCENT + '66',
+        }} />
+        <div style={{
+          position: 'absolute', left: '50%', bottom: `${frac * 100}%`, transform: 'translate(-50%, 50%)',
+          width: '26px', height: '14px', borderRadius: '7px', background: ACCENT,
+          boxShadow: '0 0 0 3px rgba(124,58,237,0.25)',
+        }} />
+      </div>
+      <span style={{ fontSize: '9px', color: '#64748b', fontWeight: 700 }}>{p.bottom}</span>
+      {arrow(-1, `Previous ${p.name.toLowerCase()} slice`, '▼')}
+      <button
+        onClick={onCycle}
+        disabled={!canCycle}
+        title={canCycle ? 'Tap to switch which plane the rail scrolls' : undefined}
+        className="atlas-rail-plane"
+        style={{ cursor: canCycle ? 'pointer' : 'default' }}
+      >
+        <span style={{ color: '#e2e8f0' }}>{p.short}</span>
+        <span style={{ color: '#64748b', fontWeight: 500 }}>{disabled ? '–' : slice}</span>
+      </button>
+    </div>
   );
 }
 

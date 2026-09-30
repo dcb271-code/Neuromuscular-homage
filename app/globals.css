@@ -82,3 +82,25 @@
   .atlas-age-row { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; margin: 0 -18px; padding-left: 18px; padding-right: 18px; scrollbar-width: none; }
   .atlas-age-row::-webkit-scrollbar { display: none; }
 }
+.atlas-rail {
+  width: 44px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center;
+  gap: 4px; padding: 6px 0; background: #0b1120; border-left: 1px solid #1e293b;
+  user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
+}
+.atlas-rail-btn {
+  width: 36px; height: 32px; border-radius: 8px; border: 1px solid #1e293b; background: #111827;
+  color: #a78bfa; font-size: 11px; cursor: pointer; touch-action: none; flex-shrink: 0;
+}
+.atlas-rail-btn:active:not(:disabled) { background: #1e1b4b; }
+.atlas-rail-plane {
+  display: flex; flex-direction: column; align-items: center; gap: 1px; width: 38px; padding: 4px 0;
+  border: none; border-radius: 6px; background: transparent; font-size: 9px; font-weight: 700;
+  letter-spacing: 0.06em; font-family: ui-monospace, monospace; flex-shrink: 0;
+}
+.atlas-rail-plane:enabled:hover { background: #111827; }
+@media (max-width: 640px) {
+  .atlas-rail { width: 48px; }
+  .atlas-rail-btn { width: 40px; height: 38px; }
+}
+.atlas-rail [role=slider]:focus { outline: none; }
+.atlas-rail [role=slider]:focus-visible { outline: 2px solid #7c3aed; outline-offset: -2px; border-radius: 6px; }
