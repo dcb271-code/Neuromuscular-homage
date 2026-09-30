@@ -27,3 +27,6 @@ npm-debug.log*
 .atlas-cache/
 .venv/
 __pycache__/
+
+# Owner source decks/PDFs (large, not redistributable)
+docs/eeg/sources/
