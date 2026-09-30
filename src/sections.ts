@@ -1,7 +1,7 @@
 // Top-level learning sections of Pons Asinorum.
 // Used by the landing page, the header nav, and the section stub pages.
 
-export type SectionStatus = 'live' | 'soon';
+export type SectionStatus = 'live' | 'partial' | 'soon';
 
 export type Section = {
   slug: string;
@@ -11,6 +11,7 @@ export type Section = {
   blurb: string;        // 1–2 sentences for the landing card
   color: string;        // accent color
   status: SectionStatus;
+  now?: string;        // what is already live, for 'partial' sections
   planned: string[];    // topic list shown on stub pages
 };
 
@@ -34,8 +35,10 @@ export const SECTIONS: Section[] = [
     blurb:
       'Reading neuroimaging the way a neurologist needs to: sequences, anatomy, and the classic patterns behind stroke, demyelination, tumors, infection, and pediatric disorders.',
     color: '#7c3aed',
-    status: 'soon',
+    status: 'partial',
+    now: 'Live now: an interactive pediatric brain MRI atlas, 36 weeks to 18 years',
     planned: [
+      'Myelination milestones, age by age',
       'MRI sequences and what each one shows',
       'Stroke territories and time course',
       'Demyelinating and inflammatory patterns',

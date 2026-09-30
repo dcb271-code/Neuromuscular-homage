@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import SectionStub from '@/components/SectionStub';
+import SectionPage from '@/components/SectionPage';
 
 export const metadata: Metadata = { title: 'EEG | Pons Asinorum' };
 
 export default function Page() {
-  return <SectionStub slug="eeg" />;
+  return <SectionPage slug="eeg" />;
 }

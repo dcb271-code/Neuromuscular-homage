@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { getSection, SECTIONS } from '@/src/sections';
 
-// Placeholder page for a section that is not built yet.
+// Page shell for a learning section: header, optional live content, planned topics.
 // Keeps the site's visual language so the landing links never 404.
-export default function SectionStub({ slug }: { slug: string }) {
+export default function SectionPage({ slug, children }: { slug: string; children?: React.ReactNode }) {
   const section = getSection(slug);
   const others = SECTIONS.filter(s => s.slug !== slug);
 
@@ -28,7 +28,7 @@ export default function SectionStub({ slug }: { slug: string }) {
             color: '#94a3b8', background: '#f8fafc', border: '1px solid #e2e8f0',
             padding: '2px 7px', borderRadius: '99px',
           }}>
-            In development
+            {section.status === 'soon' ? 'In development' : 'Growing'}
           </span>
         </div>
         <h1 style={{
@@ -43,7 +43,9 @@ export default function SectionStub({ slug }: { slug: string }) {
         </p>
       </div>
 
-      <SectionLabel>Planned topics</SectionLabel>
+      {children && <div style={{ marginBottom: '36px' }}>{children}</div>}
+
+      <SectionLabel>{children ? 'Coming next' : 'Planned topics'}</SectionLabel>
       <div style={{ display: 'grid', gap: '8px', marginBottom: '32px' }}>
         {section.planned.map((topic, i) => (
           <div key={topic} style={{

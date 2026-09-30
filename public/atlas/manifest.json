@@ -1,0 +1,500 @@
+{
+  "generated": "2026-09-29",
+  "source": "TemplateFlow (https://www.templateflow.org), public S3 bucket",
+  "default": "pma40w",
+  "ages": [
+    {
+      "id": "pma36w",
+      "label": "36 wk PMA",
+      "detail": "36 weeks postmenstrual age at scan (dHCP)",
+      "template": "dhcpVol",
+      "cohort": 36,
+      "files": {
+        "T1w": {
+          "full": "pma36w/T1w.nii.gz",
+          "bytes": 3800541,
+          "shape": [
+            202,
+            274,
+            217
+          ],
+          "voxel_mm": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "window_source": [
+            99.947,
+            5949.035
+          ],
+          "preview": "pma36w/T1w_preview.nii.gz",
+          "preview_bytes": 510133,
+          "preview_shape": [
+            101,
+            137,
+            108
+          ]
+        },
+        "T2w": {
+          "full": "pma36w/T2w.nii.gz",
+          "bytes": 3198970,
+          "shape": [
+            202,
+            274,
+            217
+          ],
+          "voxel_mm": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "window_source": [
+            814.984,
+            8240.939
+          ],
+          "preview": "pma36w/T2w_preview.nii.gz",
+          "preview_bytes": 445618,
+          "preview_shape": [
+            101,
+            137,
+            108
+          ]
+        },
+        "labels": {
+          "full": "pma36w/labels.nii.gz",
+          "bytes": 618252,
+          "shape": [
+            202,
+            274,
+            217
+          ],
+          "voxel_mm": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "colormap": "labels/dhcp-structures.json",
+          "preview": "pma36w/labels_preview.nii.gz",
+          "preview_bytes": 117195,
+          "preview_shape": [
+            101,
+            137,
+            108
+          ]
+        }
+      }
+    },
+    {
+      "id": "pma40w",
+      "label": "40 wk PMA (term)",
+      "detail": "40 weeks postmenstrual age at scan, term-equivalent (dHCP)",
+      "template": "dhcpVol",
+      "cohort": 40,
+      "files": {
+        "T1w": {
+          "full": "pma40w/T1w.nii.gz",
+          "bytes": 3783286,
+          "shape": [
+            202,
+            274,
+            217
+          ],
+          "voxel_mm": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "window_source": [
+            99.947,
+            6061.952
+          ],
+          "preview": "pma40w/T1w_preview.nii.gz",
+          "preview_bytes": 507281,
+          "preview_shape": [
+            101,
+            137,
+            108
+          ]
+        },
+        "T2w": {
+          "full": "pma40w/T2w.nii.gz",
+          "bytes": 3217783,
+          "shape": [
+            202,
+            274,
+            217
+          ],
+          "voxel_mm": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "window_source": [
+            915.999,
+            7719.997
+          ],
+          "preview": "pma40w/T2w_preview.nii.gz",
+          "preview_bytes": 445758,
+          "preview_shape": [
+            101,
+            137,
+            108
+          ]
+        },
+        "labels": {
+          "full": "pma40w/labels.nii.gz",
+          "bytes": 640853,
+          "shape": [
+            202,
+            274,
+            217
+          ],
+          "voxel_mm": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "colormap": "labels/dhcp-structures.json",
+          "preview": "pma40w/labels_preview.nii.gz",
+          "preview_bytes": 120962,
+          "preview_shape": [
+            101,
+            137,
+            108
+          ]
+        }
+      }
+    },
+    {
+      "id": "m06",
+      "label": "5\u20138 mo",
+      "detail": "Infants 5 to 8 months (MNI infant, cohort 3)",
+      "template": "MNIInfant",
+      "cohort": 3,
+      "files": {
+        "T1w": {
+          "full": "m06/T1w.nii.gz",
+          "bytes": 1479306,
+          "shape": [
+            195,
+            233,
+            159
+          ],
+          "voxel_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_source": [
+            36.462,
+            79.355
+          ],
+          "preview": "m06/T1w_preview.nii.gz",
+          "preview_bytes": 218376,
+          "preview_shape": [
+            97,
+            116,
+            79
+          ]
+        },
+        "T2w": {
+          "full": "m06/T2w.nii.gz",
+          "bytes": 1232163,
+          "shape": [
+            195,
+            233,
+            159
+          ],
+          "voxel_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_source": [
+            53.619,
+            100.0
+          ],
+          "preview": "m06/T2w_preview.nii.gz",
+          "preview_bytes": 180249,
+          "preview_shape": [
+            97,
+            116,
+            79
+          ]
+        }
+      }
+    },
+    {
+      "id": "m12",
+      "label": "11\u201314 mo",
+      "detail": "Infants 11 to 14 months (MNI infant, cohort 5)",
+      "template": "MNIInfant",
+      "cohort": 5,
+      "files": {
+        "T1w": {
+          "full": "m12/T1w.nii.gz",
+          "bytes": 1520167,
+          "shape": [
+            195,
+            233,
+            159
+          ],
+          "voxel_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_source": [
+            38.164,
+            85.359
+          ],
+          "preview": "m12/T1w_preview.nii.gz",
+          "preview_bytes": 223607,
+          "preview_shape": [
+            97,
+            116,
+            79
+          ]
+        },
+        "T2w": {
+          "full": "m12/T2w.nii.gz",
+          "bytes": 1289402,
+          "shape": [
+            195,
+            233,
+            159
+          ],
+          "voxel_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_source": [
+            51.707,
+            100.0
+          ],
+          "preview": "m12/T2w_preview.nii.gz",
+          "preview_bytes": 187396,
+          "preview_shape": [
+            97,
+            116,
+            79
+          ]
+        }
+      }
+    },
+    {
+      "id": "m24",
+      "label": "21\u201327 mo",
+      "detail": "Toddlers 21 to 27 months (MNI infant, cohort 8)",
+      "template": "MNIInfant",
+      "cohort": 8,
+      "files": {
+        "T1w": {
+          "full": "m24/T1w.nii.gz",
+          "bytes": 1574435,
+          "shape": [
+            195,
+            233,
+            159
+          ],
+          "voxel_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_source": [
+            39.65,
+            89.644
+          ],
+          "preview": "m24/T1w_preview.nii.gz",
+          "preview_bytes": 231272,
+          "preview_shape": [
+            97,
+            116,
+            79
+          ]
+        },
+        "T2w": {
+          "full": "m24/T2w.nii.gz",
+          "bytes": 1376637,
+          "shape": [
+            195,
+            233,
+            159
+          ],
+          "voxel_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_source": [
+            49.878,
+            100.0
+          ],
+          "preview": "m24/T2w_preview.nii.gz",
+          "preview_bytes": 199064,
+          "preview_shape": [
+            97,
+            116,
+            79
+          ]
+        }
+      }
+    },
+    {
+      "id": "y4to8",
+      "label": "4.5\u20138.5 yr",
+      "detail": "Children 4.5 to 8.5 years, prepubertal (MNI pediatric, cohort 2)",
+      "template": "MNIPediatricAsym",
+      "cohort": 2,
+      "files": {
+        "T1w": {
+          "full": "y4to8/T1w.nii.gz",
+          "bytes": 2409869,
+          "shape": [
+            197,
+            233,
+            189
+          ],
+          "voxel_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_source": [
+            12.0,
+            93.0
+          ],
+          "preview": "y4to8/T1w_preview.nii.gz",
+          "preview_bytes": 450195,
+          "preview_shape": [
+            98,
+            116,
+            94
+          ]
+        },
+        "T2w": {
+          "full": "y4to8/T2w.nii.gz",
+          "bytes": 2342923,
+          "shape": [
+            197,
+            233,
+            189
+          ],
+          "voxel_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_source": [
+            15.0,
+            99.0
+          ],
+          "preview": "y4to8/T2w_preview.nii.gz",
+          "preview_bytes": 428545,
+          "preview_shape": [
+            98,
+            116,
+            94
+          ]
+        }
+      }
+    },
+    {
+      "id": "y13to18",
+      "label": "13\u201318.5 yr",
+      "detail": "Adolescents 13 to 18.5 years, postpubertal (MNI pediatric, cohort 6)",
+      "template": "MNIPediatricAsym",
+      "cohort": 6,
+      "files": {
+        "T1w": {
+          "full": "y13to18/T1w.nii.gz",
+          "bytes": 2674283,
+          "shape": [
+            197,
+            233,
+            189
+          ],
+          "voxel_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_source": [
+            10.0,
+            87.0
+          ],
+          "preview": "y13to18/T1w_preview.nii.gz",
+          "preview_bytes": 525444,
+          "preview_shape": [
+            98,
+            116,
+            94
+          ]
+        },
+        "T2w": {
+          "full": "y13to18/T2w.nii.gz",
+          "bytes": 2599240,
+          "shape": [
+            197,
+            233,
+            189
+          ],
+          "voxel_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_source": [
+            16.0,
+            99.0
+          ],
+          "preview": "y13to18/T2w_preview.nii.gz",
+          "preview_bytes": 486763,
+          "preview_shape": [
+            98,
+            116,
+            94
+          ]
+        }
+      }
+    }
+  ],
+  "templates": {
+    "MNIInfant": {
+      "name": "MNI unbiased nonlinear infant atlases, 0\u20134.5 yr",
+      "authors": "Fonov V, Evans AC, Botteron K, Almli CR, McKinstry RC, Collins DL",
+      "citation": "Fonov V, et al. Unbiased nonlinear average age-appropriate brain templates from birth to adulthood. NeuroImage 2009;47:S102. doi:10.1016/S1053-8119(09)70884-5",
+      "links": [
+        "https://doi.org/10.1016/S1053-8119(09)70884-5",
+        "http://nist.mni.mcgill.ca/?p=1005"
+      ],
+      "license": "MNI/McGill permissive licence (copyright notice must accompany all copies)",
+      "license_url": null
+    },
+    "MNIPediatricAsym": {
+      "name": "MNI unbiased pediatric templates, 4.5\u201318.5 yr",
+      "authors": "Fonov V, Evans AC, Botteron K, Almli CR, McKinstry RC, Collins DL",
+      "citation": "Fonov V, et al. Unbiased average age-appropriate atlases for pediatric studies. NeuroImage 2011;54(1):313\u2013327. doi:10.1016/j.neuroimage.2010.07.033",
+      "links": [
+        "https://doi.org/10.1016/j.neuroimage.2010.07.033",
+        "http://nist.mni.mcgill.ca/?p=974"
+      ],
+      "license": "MNI/McGill permissive licence (copyright notice must accompany all copies)",
+      "license_url": null
+    },
+    "dhcpVol": {
+      "name": "dHCP neonatal volumetric atlas",
+      "authors": "Schuh A, Makropoulos A, Robinson EC, Cordero-Grande L, Hughes E, Hutter J, Price AN, Murgasova M, Teixeira RPA, Tusor N, Steinweg JK, Victor S, Rutherford MA, Hajnal JV, Edwards AD, Rueckert D",
+      "citation": "Schuh A, et al. Unbiased construction of a temporally consistent morphological atlas of neonatal brain development. bioRxiv 2018. doi:10.1101/251512",
+      "links": [
+        "https://doi.org/10.1101/251512",
+        "https://doi.org/10.12751/g-node.d2b353"
+      ],
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "attribution": "ATTRIBUTION.md"
+}

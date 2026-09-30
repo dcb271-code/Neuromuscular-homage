@@ -1,0 +1,332 @@
+'use client';
+
+// Pediatric brain MRI atlas viewer (NiiVue).
+// Data comes from public/atlas/, built by scripts/prepare_atlas.py.
+
+import { useEffect, useRef, useState } from 'react';
+import type { Niivue } from '@niivue/niivue';
+
+type FileSet = { full: string; preview?: string; colormap?: string; bytes: number; preview_bytes?: number };
+type Age = { id: string; label: string; detail: string; template: string; files: Record<string, FileSet> };
+type TemplateMeta = { name: string; authors: string; citation: string; links: string[]; license: string; license_url: string | null };
+type Manifest = { default: string; ages: Age[]; templates: Record<string, TemplateMeta> };
+type LabelMap = { R: number[]; G: number[]; B: number[]; A: number[]; I: number[]; labels: string[] };
+
+// NiiVue samples its label lookup table at the edge of entry 0, so the background picks up a
+// faint tint from label 1 (red). A transparent entry below 0 keeps the background clear.
+function padLabelColormap(cm: LabelMap): LabelMap {
+  return {
+    R: [0, ...cm.R], G: [0, ...cm.G], B: [0, ...cm.B], A: [0, ...cm.A],
+    I: [-1, ...cm.I], labels: ['', ...cm.labels],
+  };
+}
+
+const BASE = '/atlas';
+const ACCENT = '#7c3aed';
+
+const GROUPS: { name: string; ids: string[] }[] = [
+  { name: 'Neonate', ids: ['pma36w', 'pma40w'] },
+  { name: 'Infant', ids: ['m06', 'm12', 'm24'] },
+  { name: 'Child', ids: ['y4to8'] },
+  { name: 'Adolescent', ids: ['y13to18'] },
+];
+
+const PLANES = [
+  { label: '3-plane', value: 3 },
+  { label: 'Axial', value: 0 },
+  { label: 'Coronal', value: 1 },
+  { label: 'Sagittal', value: 2 },
+];
+
+const LABEL_OPACITY = 0.45;
+
+export default function AtlasViewer() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const nvRef = useRef<Niivue | null>(null);
+  const labelMapRef = useRef<LabelMap | null>(null);
+  const hasLabelVolRef = useRef(false);
+
+  const [ready, setReady] = useState(false);
+  const [manifest, setManifest] = useState<Manifest | null>(null);
+  const [ageId, setAgeId] = useState('pma40w');
+  const [contrast, setContrast] = useState<'T1w' | 'T2w'>('T2w');
+  const [plane, setPlane] = useState(3);
+  const [showLabels, setShowLabels] = useState(false);
+  const [mobile, setMobile] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [where, setWhere] = useState<{ mm: string; structure: string | null }>({ mm: '', structure: null });
+
+  // Create NiiVue once. Imported dynamically: it needs window/WebGL, so it can't run during prerender.
+  useEffect(() => {
+    let disposed = false;
+    setMobile(window.matchMedia('(max-width: 640px)').matches);
+
+    fetch(`${BASE}/manifest.json`)
+      .then(r => r.json())
+      .then((m: Manifest) => { if (!disposed) { setManifest(m); setAgeId(m.default); } })
+      .catch(() => setError('Could not load the atlas manifest.'));
+    fetch(`${BASE}/labels/dhcp-structures.json`)
+      .then(r => r.json())
+      .then((l: LabelMap) => { labelMapRef.current = l; })
+      .catch(() => {});
+
+    (async () => {
+      try {
+        const { Niivue, SHOW_RENDER } = await import('@niivue/niivue');
+        if (disposed || !canvasRef.current) return;
+        const nv = new Niivue({
+          backColor: [0, 0, 0, 1],
+          show3Dcrosshair: true,
+          crosshairColor: [0.49, 0.36, 0.93, 0.9],
+          isOrientationTextVisible: true,
+          multiplanarShowRender: SHOW_RENDER.NEVER,
+        });
+        nv.onLocationChange = (raw: unknown) => {
+          const d = raw as { mm: number[]; values: { value: number }[] };
+          const mm = d.mm ? `${d.mm.slice(0, 3).map(v => v.toFixed(0)).join(', ')} mm` : '';
+          let structure: string | null = null;
+          if (hasLabelVolRef.current && d.values?.[1]) {
+            const idx = Math.round(d.values[1].value);
+            structure = idx > 0 ? labelMapRef.current?.labels[idx] || null : null;
+          }
+          setWhere({ mm, structure });
+        };
+        // NiiVue 0.69 derives decimal places from the scene's field of view. While volumes are
+        // being swapped the scene is empty, the field of view is 0, and toFixed(Infinity) throws.
+        // Skip location updates in that window instead of letting the error escape.
+        const nvAny = nv as unknown as { createOnLocationChange: (a?: number) => void };
+        const createOnLocationChange = nvAny.createOnLocationChange.bind(nv);
+        nvAny.createOnLocationChange = (a?: number) => {
+          if (!nv.volumes.length) return;
+          try { createOnLocationChange(a); } catch { /* transient: scene not ready */ }
+        };
+        await nv.attachToCanvas(canvasRef.current);
+        nv.setRadiologicalConvention(true);
+        nv.setSliceType(3);
+        nvRef.current = nv;
+        setReady(true);
+      } catch {
+        setError('This browser could not start the WebGL2 viewer.');
+      }
+    })();
+
+    return () => {
+      disposed = true;
+      try { nvRef.current?.cleanup(); } catch { /* already gone */ }
+      nvRef.current = null;
+    };
+  }, []);
+
+  const age = manifest?.ages.find(a => a.id === ageId);
+  const hasLabels = !!age?.files.labels;
+
+  // (Re)load volumes when the age, contrast, or resolution changes.
+  useEffect(() => {
+    const nv = nvRef.current;
+    if (!ready || !nv || !age) return;
+    const pick = (f: FileSet) => `${BASE}/${mobile && f.preview ? f.preview : f.full}`;
+    const vols: { url: string; opacity?: number; colormap?: string }[] = [
+      { url: pick(age.files[contrast]), colormap: 'gray' },
+    ];
+    const lab = age.files.labels;
+    // The label volume always loads when available, hidden unless "Structures" is on,
+    // so the readout can name the structure under the crosshair either way.
+    if (lab) vols.push({ url: pick(lab), opacity: showLabels ? LABEL_OPACITY : 0 });
+    let cancelled = false;
+    setLoading(true);
+    hasLabelVolRef.current = false;
+    nv.loadVolumes(vols)
+      .then(async () => {
+        if (cancelled) return;
+        if (lab?.colormap && nv.volumes[1]) {
+          const cm = labelMapRef.current ?? await fetch(`${BASE}/${lab.colormap}`).then(r => r.json());
+          labelMapRef.current = cm;
+          nv.volumes[1].setColormapLabel(padLabelColormap(cm));
+          nv.updateGLVolume();
+          hasLabelVolRef.current = true;
+        }
+        setWhere({ mm: '', structure: null });
+        setLoading(false);
+      })
+      .catch(() => { if (!cancelled) { setError('Could not load this template.'); setLoading(false); } });
+    return () => { cancelled = true; };
+    // showLabels is applied by the opacity effect below without a reload
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ready, age, contrast, mobile]);
+
+  useEffect(() => {
+    const nv = nvRef.current;
+    if (!nv || loading || nv.volumes.length < 2) return;
+    nv.setOpacity(1, showLabels ? LABEL_OPACITY : 0);
+  }, [showLabels, loading]);
+
+  useEffect(() => { nvRef.current?.setSliceType(plane); }, [plane, ready]);
+
+  const sizeMB = age
+    ? (Object.values(age.files).reduce((s, f) => s + ((mobile && f.preview_bytes) || f.bytes), 0) / 1e6).toFixed(1)
+    : null;
+
+  return (
+    <div>
+      <div style={{
+        background: '#fff', border: '1px solid #e2e8f0', borderRadius: '16px',
+        overflow: 'hidden', boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
+      }}>
+        {/* Header */}
+        <div style={{ padding: '14px 18px 12px', borderBottom: '1px solid #f1f5f9', display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+          <span style={{
+            fontSize: '10px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase',
+            color: ACCENT, background: ACCENT + '14', padding: '3px 8px', borderRadius: '99px',
+          }}>Pediatric brain MRI atlas</span>
+          <span style={{ fontSize: '11px', color: '#94a3b8' }}>Population-average templates, 36 weeks to 18 years</span>
+        </div>
+
+        {/* Controls */}
+        <div style={{ padding: '14px 18px', display: 'grid', gap: '12px', borderBottom: '1px solid #f1f5f9' }}>
+          <div className="atlas-age-row">
+            {GROUPS.map(g => {
+              const ages = g.ids.map(id => manifest?.ages.find(a => a.id === id)).filter(Boolean) as Age[];
+              if (manifest && !ages.length) return null;
+              return (
+                <div key={g.name} style={{ display: 'flex', flexDirection: 'column', gap: '4px', flexShrink: 0 }}>
+                  <span style={{ fontSize: '9px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#94a3b8' }}>{g.name}</span>
+                  <div style={{ display: 'flex', gap: '4px' }}>
+                    {(manifest ? ages : g.ids.map(id => ({ id, label: '…' } as Age))).map(a => (
+                      <Pill key={a.id} active={a.id === ageId} onClick={() => setAgeId(a.id)}>{a.label}</Pill>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
+            <Segmented
+              options={[{ label: 'T1', value: 'T1w' }, { label: 'T2', value: 'T2w' }]}
+              value={contrast} onChange={v => setContrast(v as 'T1w' | 'T2w')}
+            />
+            <Segmented
+              options={PLANES.map(p => ({ label: p.label, value: String(p.value) }))}
+              value={String(plane)} onChange={v => setPlane(Number(v))}
+            />
+            <label style={{
+              display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '12px', fontWeight: 500,
+              color: hasLabels ? '#334155' : '#cbd5e1', cursor: hasLabels ? 'pointer' : 'default',
+            }} title={hasLabels ? '' : 'Structure labels are available for the 36 and 40 week templates'}>
+              <input type="checkbox" disabled={!hasLabels} checked={hasLabels && showLabels}
+                onChange={e => setShowLabels(e.target.checked)} style={{ accentColor: ACCENT }} />
+              Structures
+              {!hasLabels && <span style={{ fontSize: '10px' }}>(neonatal only)</span>}
+            </label>
+          </div>
+
+          {age && (
+            <div style={{ fontSize: '12px', color: '#64748b' }}>
+              {age.detail}
+              {sizeMB && <span style={{ color: '#cbd5e1' }}> · {sizeMB} MB{mobile ? ' (2 mm preview)' : ''}</span>}
+            </div>
+          )}
+        </div>
+
+        {/* Canvas. NiiVue sizes the canvas to this parent, so it must have a height. */}
+        <div className="atlas-canvas-wrap" style={{ position: 'relative', background: '#000' }}>
+          <canvas ref={canvasRef} style={{ display: 'block', width: '100%', height: '100%', touchAction: 'none' }} />
+          {(loading || error) && (
+            <div style={{
+              position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+              color: error ? '#fca5a5' : '#94a3b8', fontSize: '12px', letterSpacing: '0.04em', pointerEvents: 'none',
+              background: 'rgba(0,0,0,0.35)', textAlign: 'center', padding: '0 16px',
+            }}>
+              {error ?? `Loading ${age?.label ?? 'atlas'}…`}
+            </div>
+          )}
+        </div>
+
+        {/* Readout */}
+        <div style={{
+          padding: '10px 18px', display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap',
+          fontSize: '12px', minHeight: '40px', borderTop: '1px solid #f1f5f9',
+        }}>
+          {where.structure ? (
+            <span style={{ fontWeight: 600, color: '#1e293b' }}>{where.structure}</span>
+          ) : (
+            <span style={{ color: '#94a3b8' }}>
+              {hasLabels ? 'Click or tap to name a structure' : 'Click or tap to move the crosshair'}
+            </span>
+          )}
+          {where.mm && <span style={{ color: '#94a3b8', fontFamily: 'ui-monospace, monospace', fontSize: '11px', marginLeft: 'auto' }}>{where.mm}</span>}
+        </div>
+      </div>
+
+      {/* How to use */}
+      <div style={{ fontSize: '11px', color: '#94a3b8', lineHeight: 1.7, marginTop: '10px' }}>
+        <b style={{ color: '#64748b' }}>Mouse:</b> scroll to page through slices · click to move the crosshair · right-drag to adjust window and level.{' '}
+        <b style={{ color: '#64748b' }}>Touch:</b> tap to move the crosshair · two-finger pinch to page through slices.{' '}
+        Radiological convention: the patient&apos;s left is on the right of the screen.
+      </div>
+
+      {manifest && <Sources manifest={manifest} />}
+    </div>
+  );
+}
+
+function Sources({ manifest }: { manifest: Manifest }) {
+  return (
+    <details style={{ marginTop: '14px', fontSize: '11px', color: '#64748b' }}>
+      <summary style={{ cursor: 'pointer', fontWeight: 600, color: '#64748b' }}>Sources and licences</summary>
+      <div style={{ display: 'grid', gap: '10px', marginTop: '10px', lineHeight: 1.6 }}>
+        {Object.entries(manifest.templates).map(([id, t]) => (
+          <div key={id}>
+            <div style={{ fontWeight: 600, color: '#334155' }}>{t.name}</div>
+            <div>{t.citation}</div>
+            <div>
+              {t.license_url ? <a href={t.license_url} target="_blank" rel="noopener" style={{ color: ACCENT }}>{t.license}</a> : t.license}
+              {' · '}
+              <a href={`${BASE}/licenses/${id}/LICENSE`} target="_blank" rel="noopener" style={{ color: ACCENT }}>licence text</a>
+            </div>
+          </div>
+        ))}
+        <div>
+          Templates obtained from <a href="https://www.templateflow.org" target="_blank" rel="noopener" style={{ color: ACCENT }}>TemplateFlow</a> and
+          modified for the web: intensities rescaled to 8-bit, 2 mm previews added, and dHCP structure colours reassigned.
+          Full details in <a href={`${BASE}/ATTRIBUTION.md`} target="_blank" rel="noopener" style={{ color: ACCENT }}>ATTRIBUTION.md</a>.
+          These are population averages for education, not reference standards for diagnosis.
+        </div>
+      </div>
+    </details>
+  );
+}
+
+function Pill({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
+  return (
+    <button onClick={onClick} style={{
+      fontSize: '12px', fontWeight: 600, whiteSpace: 'nowrap', cursor: 'pointer',
+      padding: '5px 10px', borderRadius: '8px',
+      color: active ? '#fff' : '#475569',
+      background: active ? ACCENT : '#f8fafc',
+      border: `1px solid ${active ? ACCENT : '#e2e8f0'}`,
+    }}>
+      {children}
+    </button>
+  );
+}
+
+function Segmented({ options, value, onChange }: {
+  options: { label: string; value: string }[]; value: string; onChange: (v: string) => void;
+}) {
+  return (
+    <div style={{ display: 'inline-flex', background: '#f1f5f9', borderRadius: '8px', padding: '2px', gap: '2px' }}>
+      {options.map(o => (
+        <button key={o.value} onClick={() => onChange(o.value)} style={{
+          fontSize: '12px', fontWeight: 600, padding: '4px 10px', borderRadius: '6px', cursor: 'pointer', border: 'none',
+          color: o.value === value ? '#1e293b' : '#64748b',
+          background: o.value === value ? '#fff' : 'transparent',
+          boxShadow: o.value === value ? '0 1px 2px rgba(0,0,0,0.08)' : 'none',
+        }}>
+          {o.label}
+        </button>
+      ))}
+    </div>
+  );
+}

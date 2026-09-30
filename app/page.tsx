@@ -70,6 +70,7 @@ function LandingHero() {
 
 function SectionCard({ section }: { section: Section }) {
   const live = section.status === 'live';
+  const partial = section.status === 'partial';
   return (
     <Link href={`/${section.slug}`} className="nm-card-link" style={{
       display: 'flex', flexDirection: 'column', gap: '10px',
@@ -88,12 +89,12 @@ function SectionCard({ section }: { section: Section }) {
         <span style={{
           marginLeft: 'auto', fontSize: '10px', fontWeight: 600, letterSpacing: '0.06em',
           textTransform: 'uppercase', whiteSpace: 'nowrap',
-          color: live ? '#16a34a' : '#94a3b8',
-          background: live ? '#f0fdf4' : '#f8fafc',
-          border: `1px solid ${live ? '#bbf7d0' : '#e2e8f0'}`,
+          color: live || partial ? '#16a34a' : '#94a3b8',
+          background: live || partial ? '#f0fdf4' : '#f8fafc',
+          border: `1px solid ${live || partial ? '#bbf7d0' : '#e2e8f0'}`,
           padding: '2px 7px', borderRadius: '99px',
         }}>
-          {live ? 'Live' : 'Coming soon'}
+          {live ? 'Live' : partial ? 'Atlas live' : 'Coming soon'}
         </span>
       </div>
 
@@ -110,6 +111,11 @@ function SectionCard({ section }: { section: Section }) {
           <Stat value={genesEnriched.length.toLocaleString()} label="gene pages" />
           <Stat value={summary.totalSections.toLocaleString()} label="entries" />
           <Stat value={summary.crawledPages.toLocaleString()} label="source pages" />
+        </div>
+      ) : partial ? (
+        <div style={{ display: 'grid', gap: '4px', marginTop: '4px' }}>
+          <div style={{ fontSize: '12px', fontWeight: 600, color: section.color }}>{section.now}</div>
+          <div style={{ fontSize: '11px', color: '#94a3b8' }}>Next: {section.planned.slice(0, 2).join(' · ')}</div>
         </div>
       ) : (
         <div style={{ fontSize: '11px', color: '#94a3b8', marginTop: '4px' }}>

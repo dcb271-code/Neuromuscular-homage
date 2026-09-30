@@ -1,8 +1,16 @@
 import type { Metadata } from 'next';
-import SectionStub from '@/components/SectionStub';
+import SectionPage from '@/components/SectionPage';
+import AtlasViewer from '@/components/AtlasViewer';
 
-export const metadata: Metadata = { title: 'Neuroradiology | Pons Asinorum' };
+export const metadata: Metadata = {
+  title: 'Neuroradiology | Pons Asinorum',
+  description: 'Interactive pediatric brain MRI atlas from 36 weeks postmenstrual age to 18 years, with T1, T2 and neonatal structure labels.',
+};
 
 export default function Page() {
-  return <SectionStub slug="neuroradiology" />;
+  return (
+    <SectionPage slug="neuroradiology">
+      <AtlasViewer />
+    </SectionPage>
+  );
 }
