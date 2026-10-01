@@ -23,7 +23,7 @@ const allIds = new Set(PLANNED_IDS);
 const figureIds = new Set();
 
 const TRACKS = ['doctrine', 'periphery', 'axis', 'hemispheres', 'synthesis'];
-const WIDGETS = ['localizer', 'localizer-intro', 'localizer-floppy', 'localizer-motor-unit', 'exam-order', 'reflex-timeline', 'root-nerve', 'cord-sim', 'brainstem-sim', 'gait-by-level', 'visual-fields', 'coma-levels', 'where-when'];
+const WIDGETS = ['localizer', 'localizer-intro', 'localizer-floppy', 'localizer-motor-unit', 'exam-order', 'reflex-timeline', 'root-nerve', 'cord-sim', 'brainstem-sim', 'gait-by-level', 'visual-fields', 'coma-levels', 'where-when', 'lesion-voices', 'pretest', 'lesion-ladder', 'map-sort', 'aphasia-switches', 'vertigo-sorter'];
 const EEG_ONLY_LINK = /\]\(\/eeg/;
 const TAGS = ['The Doctrine', 'Periphery', 'Neuraxis', 'Hemispheres', 'Clinical Decision-Making', 'Pediatric Exam'];
 const HEDGES = /\b(often|may|can|usually|typically|commonly|frequently|rarely)\b[^.]*\b\d+(\.\d+)?\s*%/i;
@@ -91,6 +91,9 @@ for (const f of files) {
   for (const k of m.sources || []) if (!knownKeys.has(k)) fail(f, `unknown source key ${k}`);
   for (const r of m.resources || []) if (!/^https?:\/\//.test(r.url || '')) fail(f, `resource "${r.label}" has no URL`);
   if (!m.signOff || m.signOff.length < 40) fail(f, `signOff missing or too short`);
+  if (!m.opener || !(m.opener.parable || m.opener.history)) fail(f, `missing opener (parable and/or history)`);
+  if (m.opener?.history && !m.opener.source) fail(f, `opener history needs a source`);
+  for (const k of ['parable', 'history']) if (m.opener?.[k] && m.opener[k].split(/\s+/).length > 90) fail(f, `opener ${k} is over 90 words`);
   if (/\u2014/.test(JSON.stringify(m))) fail(f, `contains an em dash`);
   console.log(`${problems === before ? '✓' : '✗'} ${f}: ${m.sections?.length} sections, ${m.quiz?.length} quiz, ${answers.length} questions`);
 }

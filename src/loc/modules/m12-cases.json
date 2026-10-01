@@ -3,7 +3,7 @@
   "number": 12,
   "title": "Cases: where, when, what",
   "short": "Cases",
-  "description": "Five children to work from history to examination to level, tempo and differential, each followed by the attending's debrief.",
+  "description": "Six children to work from history to examination to level, tempo and differential, each followed by the attending's debrief.",
   "why": "The doctrine only counts when it works on a real child, in order: where, then when, then what.",
   "track": "synthesis",
   "tags": [
@@ -132,6 +132,29 @@
         "answer": 1,
         "explanation": "Chaotic, multidirectional eye movements, myoclonic jerks and irritability added to ataxia are the picture of opsoclonus-myoclonus-ataxia, which can begin as ataxia alone. It calls for a search for a neuroblastoma and specialist treatment. Post-infectious ataxia improves over time and does not produce opsoclonus, so continued observation would miss it. An ingestion would not explain a new syndrome emerging five days into a stable illness. Nerve conduction studies examine the peripheral nervous system, which is not where this problem lies."
       }
+    },
+    {
+      "title": "Case 6: a 7-year-old who sees double when looking to one side",
+      "figure": "case:icp",
+      "discussion": true,
+      "content": "**Where.** Start with the sign that brought her in, because it is the one most likely to mislead. A weak lateral rectus invites you to the sixth-nerve nucleus in the pons, or to the nerve somewhere along its route. But the sixth nerve has a long course, and it is among the first to suffer when the pressure inside the skull rises, whether from a tumour above or below the tentorium, hydrocephalus or idiopathic intracranial hypertension (Pearl 2014, p. 43). Pearl and Emsellem file it as a nonlocalizing sign (Pearl 2014, p. 48), and Brazis names it, with papilloedema, as the commonest of the **false localizing signs** (Brazis 2011, p. 622). It is the messenger, not the address.\n\nThe address comes from the company. Swollen discs say the pressure is high. A wide-based, staggering gait with only mild limb overshoot is the midline cerebellar pattern (Brazis 2011, p. 412). A normal face and swallow argue against an intrinsic pontine lesion, where damage near the sixth-nerve nucleus tends to produce a gaze palsy rather than one weak eye (Pearl 2014, p. 43).\n\n**When.** Weeks, with each symptom added to the last: headache, then double vision, then unsteadiness. That is the tempo of something growing.\n\n**What.** One midline mass in the posterior fossa explains everything at once. It unsettles the trunk, compresses the fourth ventricle, and the trapped fluid raises the pressure that swells the discs and stretches the sixth nerve (Arslan 2014, p. 98). Posterior fossa tumours are common in children, medulloblastoma and cystic astrocytoma chief among them (Pearl 2014, p. 63).\n\n**The prior.** Examined alone, a sixth-nerve palsy has a long list of possible sites and causes along its whole route (Brazis 2011, p. 202), and a clinician who looked only at the eyes could defend almost any of them. The fundi change the question before a single test is ordered. Once the discs are swollen, every hypothesis that cannot raise the pressure falls away, and the scan becomes a confirmation rather than a search. Gill and colleagues describe a test as an opinion modifier acting on a prior ([Gill 2005](https://pubmed.ncbi.nlm.nih.gov/15879401/)). Here the ophthalmoscope set the prior, and it did so for free.\n\n**The trap.** Two. The first is skipping the fundi in a child with headache because a fidgety child is hard to examine; it is the one examination here that changes the plan. The second is the lumbar puncture: a suspected posterior fossa mass is a reason to image before any needle (DeMyer, pp. 545-546).\n\nWhere, when, what: \"Posterior fossa, midline cerebellum, with raised pressure; subacute over weeks; most likely a tumour with obstructive hydrocephalus, the sixth-nerve palsy a false localizing sign. Urgent imaging and neurosurgery.\"",
+      "keyPoints": [
+        "A sixth-nerve palsy is an early, nonlocalizing sign of raised pressure from many causes (Pearl 2014, pp. 43, 48; Brazis 2011, p. 622).",
+        "The address comes from the company: papilloedema with a wide-based gait points to a midline posterior fossa mass (Brazis 2011, p. 412).",
+        "The fundi set the prior: once the discs are swollen, the sixth nerve needs no address of its own.",
+        "Suspect a posterior fossa mass and image before any lumbar puncture (DeMyer, pp. 545-546)."
+      ],
+      "question": {
+        "question": "A 9-year-old boy has had two weeks of morning headaches and now sees double when he looks to the right; his right eye does not move fully outward. The clinic is running late and you have not yet looked at his fundi. What do you do next?",
+        "options": [
+          "Refer him to orthoptics for a squint assessment, since the problem is in the eye",
+          "Request imaging aimed at the pons, where the sixth-nerve nucleus lies",
+          "Reassure the family and review him in a month",
+          "Examine his fundi now, because swollen discs would turn the palsy into a sign of raised pressure and change the urgency"
+        ],
+        "answer": 3,
+        "explanation": "On its own, a sixth-nerve palsy cannot tell you where the problem is: its long course leaves it vulnerable to raised pressure from many causes (Pearl 2014, p. 43). The fundi decide what the palsy means. Swollen discs make it a false localizing sign and make imaging urgent; normal discs reopen the local causes along the nerve. Imaging aimed at the pons treats the messenger as the address. A squint referral or a month's wait would leave raised pressure unrecognized if it is there, and morning headaches with a new palsy are not a reason to wait."
+      }
     }
   ],
   "quiz": [
@@ -189,6 +212,17 @@
       ],
       "answer": 2,
       "explanation": "Weak dorsiflexion and eversion with normal inversion and hip abduction separate a common peroneal nerve lesion from an L5 root lesion: inversion (tibial nerve) and hip abduction (superior gluteal nerve) share the L5 root but not the peroneal nerve, so both would be weak in an L5 radiculopathy (Morris 2012, p. 26). Sitting cross-legged compresses the peroneal nerve at the fibular head. A sciatic lesion would weaken inversion through the tibial branch. A cord lesion would bring upper motor neuron signs and usually affect both legs."
+    },
+    {
+      "question": "A 6-year-old boy has had three weeks of morning headaches and vomiting. Both optic discs are swollen, his left eye does not abduct fully, and he walks on a wide base while his finger-nose testing is nearly normal. His mother asks whether a lumbar puncture would be quicker than a scan. What do you advise?",
+      "options": [
+        "A lumbar puncture first, to measure the opening pressure",
+        "A lumbar puncture first, because a sixth-nerve palsy with papilloedema means idiopathic intracranial hypertension",
+        "Neither yet: refer to ophthalmology for the double vision",
+        "Brain imaging first, because a posterior fossa mass is likely and a lumbar puncture could precipitate herniation"
+      ],
+      "answer": 3,
+      "explanation": "Papilloedema with a wide-based gait and little limb ataxia points to a midline posterior fossa mass raising the pressure, and the sixth-nerve palsy is a false localizing sign of that pressure (Brazis 2011, pp. 412, 622). A suspected posterior fossa mass is a reason to image before any lumbar puncture (DeMyer, pp. 545-546). Measuring the pressure first puts the needle before the scan. Idiopathic intracranial hypertension can cause the same eye signs, but it is raised pressure without a mass (Arslan 2014, p. 191), so it can only be diagnosed after imaging. An eye referral treats the messenger and delays the scan."
     }
   ],
   "resources": [
@@ -208,12 +242,21 @@
       "note": "Review of central and peripheral hypotonia, including when to suspect infant botulism."
     }
   ],
-  "signOff": "The resident completes all five cases and presents one of them, or a real patient, to faculty in where, when, what form.",
+  "signOff": "The resident completes all six cases and presents one of them, or a real patient, to faculty in where, when, what form.",
   "sources": [
     "peredo2009",
     "brazis2011",
     "demyer",
     "morris2012",
-    "utah"
-  ]
+    "utah",
+    "pearl2014",
+    "arslan2014",
+    "gill2005"
+  ],
+  "opener": {
+    "parable": "Cases are where the doctrine stops being an opinion. Commit before you look: a localization you can revise is worth more than a list you never had to defend.",
+    "history": "Georges Guillain (1876–1961) and J. A. Barré (1880–1967), French neurologists, gave their names to the paralysis in the first case: weakness that climbs, reflexes that vanish, a child who stops walking.",
+    "source": "Morris 2012, p. 20"
+  },
+  "core": false
 }

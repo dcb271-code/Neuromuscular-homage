@@ -62,7 +62,20 @@ Every figure runs a small model of the anatomy and draws its output, so the lear
 | `gait-by-level` | Pick a gait; see the level it points to and the company it keeps | Lookup |
 | `coma-levels` | Set breathing, pupils, eye movements and posture; see which level they agree on, or that they don't (think metabolic) | Pearl's coma table as data |
 | `where-when` | Choose a level and a tempo; get the mechanisms that fit and pediatric examples | Level × tempo grid |
+| `coma-levels` (descent) | "Watch a herniation descend" plays the rostrocaudal sequence: the level as a trajectory | `HERNIATION` stages |
+| `lesion-voices` | Pick a structure; see how it subtracts, irritates, releases or fills in | Structure × voice table (Pearl pages per cell) |
+| `pretest` | Choose MRI, EEG or gene panel and how well the exam predicted the finding; a 100-child icon array gives the post-test probability | Bayes in odds form; sourced false-positive rates (Li 2021, Borusiak 2010) |
+| `lesion-ladder` | Move a lesion up the facial nerve, radial nerve or foot-drop pathway; deficits accumulate until the pattern changes | Ordered branch points with removals and pattern changes |
+| `map-sort` | Read a pattern, name the map it obeys (artery, length, segment, nerve, level, system, none) | Pattern cards → map → mechanism |
+| `aphasia-switches` | Set fluency, comprehension, repetition, naming; one shared picture described by each syndrome | Four-switch classifier |
+| `vertigo-sorter` | Mark nystagmus features and neighbours; one central feature overrules the peripheral ones | Weighted features (Brazis p. 265) |
 | `case:<id>` | Work a case: history → choose exam elements → commit to a level → commit to a tempo → pick a differential → discussion | Staged case JSON |
+
+## Openers and the core path
+
+Every module opens with a parable (our own, one to three sentences), a historical note (a named neurologist or document, with a cited book page or registered paper), or both. The validator requires one, and requires a source for any history. Six modules carry `core: true` and form the short path shown on the section home: 1, 3, 4, 6, 7, 11.
+
+Boxed callouts use a paragraph whose lines all start with `> `, written as `> **Bedside trick.** ...` with a citation.
 
 ## Section content rules
 

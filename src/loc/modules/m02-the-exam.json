@@ -11,14 +11,15 @@
     "Pediatric Exam"
   ],
   "difficulty": "beginner",
-  "duration": "45 min",
+  "duration": "55 min",
   "color": "#0d9488",
   "objectives": [
     "Explain each part of the examination as a test of a circuit, and record observations before interpretations.",
     "Collect most of a child's examination by observation before touching.",
     "Adapt the examination to newborns, infants, toddlers, school-age children and adolescents.",
     "Order a toddler examination so that cooperation lasts, and avoid the common technical errors.",
-    "Use the primitive reflexes and postural reactions to detect upper motor neuron dysfunction in infancy."
+    "Use the primitive reflexes and postural reactions to detect upper motor neuron dysfunction in infancy.",
+    "Read each infant finding as a pair of finding and age, and explain why age is a coordinate of localization."
   ],
   "sections": [
     {
@@ -132,6 +133,28 @@
         "answer": 3,
         "explanation": "A Moro and asymmetric tonic neck reflex still present at 6 months are abnormal, and persistent primitive reflexes with absent postural reactions are the hallmark of an upper motor neuron abnormality in an infant (Utah PediNeuroLogic Exam). Together with increased leg tone in a preterm infant, this suggests evolving cerebral palsy and calls for referral now, not at 18 months. Prematurity is accounted for by correcting age, not by ignoring the pattern. Peripheral nerve and muscle disorders lower tone and do not cause persistent primitive reflexes. The Moro has a vestibular trigger, but its persistence reflects failed descending suppression, not a vestibular lesion."
       }
+    },
+    {
+      "title": "Age is a coordinate",
+      "content": "A map needs three coordinates to place a lesion. A child needs a fourth: **time since birth**. In an adult a finding keeps its meaning; an upgoing toe is an upper motor neuron sign on Monday and on Friday. In a child the same observation can be a milestone, a warning or a relic, depending on when you see it. The honest unit of the pediatric exam is not the finding but the pair: **(finding, age)**.\n\nDeMyer's first standard of abnormality is comparison with the norm for the patient's age (DeMyer, p. 36). In a child it is half the interpretation.\n\n**One observation, several meanings**\n\n- An **upgoing toe** is normal in the first year, while myelination is incomplete; later it is an upper motor neuron sign ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/newborn_n.html)).\n- **Hand preference** is ordinary in a schoolchild and abnormal before 12 months, when it points to weakness of the other hand ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/06month.html)).\n- The **primitive reflexes** are expected in a newborn and should fade on schedule; their persistence, with postural reactions that fail to arrive, is an upper motor neuron sign in an infant ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/introduction.html)) and an early marker of cerebral palsy ([Zafeiriou 2004](https://pubmed.ncbi.nlm.nih.gov/15246484/)).\n- The same grasp, suck and rooting responses can **return** later in life when frontal control fails, now called frontal release signs (Pearl 2014, p. 114).\n\nFollow the palmar grasp across a life and its meaning changes three times: present and normal, then absent and normal, then present again and abnormal. The reflex did not change; the age did, and with it the question the reflex answers. In the newborn it shows the low machinery works; its fading shows descending control arriving; its return shows that control leaving.\n\n**Absence is a finding too**\n\nAge turns absences into signs. A postural reaction that should have arrived and has not is as informative as a reflex that should have gone and has not ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/introduction.html)). The reflex timeline in section 5 is a table of such pairs: drag its slider and you move along the fourth coordinate while the finding stays put.\n\n**Why this is localization, not just development**\n\nAge norms are often filed under development, apart from localization. That splits one idea in two. A Moro still present at 6 months and an upgoing toe at 6 years make the same claim: the descending motor pathway is not doing its job ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/introduction.html)). Age only moves the line where normal ends. When [[m03-first-fork|Module 3]] asks upper or lower motor neuron, an infant's answer comes partly from reflexes that failed to leave.\n\nWrite the age beside the finding. A finding without its age is half a sign.",
+      "keyPoints": [
+        "In a child, localization has a fourth coordinate, time since birth: a sign is a pair (finding, age).",
+        "An upgoing toe is normal in the first year; hand preference before 12 months is abnormal (Utah PediNeuroLogic Exam).",
+        "Primitive reflexes should fade on schedule; their persistence is an upper motor neuron sign in infancy (Utah PediNeuroLogic Exam; Zafeiriou 2004).",
+        "The same reflexes can return later as frontal release signs (Pearl 2014, p. 114).",
+        "Age does not change what a sign says about the circuit; it moves the line where normal ends."
+      ],
+      "question": {
+        "question": "Two children grip your fingers firmly and will not let go when you stroke their palms. One is a 2-week-old who is feeding well. The other is a 12-year-old who has become apathetic and disinhibited over three months and cannot stop grasping even when asked not to hold on. How should the grasp be read in each?",
+        "options": [
+          "Normal in both, because the grasp is a normal human reflex",
+          "Abnormal in both, because a grasp reflex always means frontal lobe disease",
+          "Normal in the newborn; in the 12-year-old a release sign pointing to the frontal lobes, which needs investigation",
+          "Abnormal in the newborn, who should have lost it before birth; normal in the 12-year-old"
+        ],
+        "answer": 2,
+        "explanation": "The finding is identical; the age coordinate is not. The palmar grasp is expected in a newborn and fades over the first months (Utah PediNeuroLogic Exam). In a 12-year-old a grasp the child cannot suppress on request is a frontal release sign, an infant reflex returning because frontal control has failed (Pearl 2014, p. 114), and with a change in behaviour it needs investigation. Calling both normal ignores the age. Calling both abnormal treats the reflex as a sign in itself, when only the pair of finding and age is. The newborn has not lost the grasp before birth; it is present at term."
+      }
     }
   ],
   "quiz": [
@@ -235,6 +258,13 @@
     "morris2012",
     "brazis2011",
     "utah",
-    "zafeiriou2004"
-  ]
+    "zafeiriou2004",
+    "pearl2014"
+  ],
+  "opener": {
+    "parable": "Every manoeuvre is a question put to one circuit. Ask it carelessly and a different circuit answers. Ask a toddler carelessly and nothing answers at all.",
+    "history": "Harvey Cushing (1869–1939) wrote that the instruments of precision multiplying around him were \"as nothing compared with\" the careful study of the patient by a keen observer using eyes, ears and fingers.",
+    "source": "DeMyer, p. 539"
+  },
+  "core": false
 }

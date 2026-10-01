@@ -10,12 +10,14 @@
     "The Doctrine"
   ],
   "difficulty": "beginner",
-  "duration": "35 min",
+  "duration": "50 min",
   "color": "#0d9488",
   "objectives": [
     "Explain why clinical localization should come before imaging, and the four steps of neurologic diagnosis.",
     "Name the eleven levels of the neuraxis and use findings to exclude levels.",
+    "Tell a destructive lesion from an irritative or releasing one by the direction of its signs.",
     "Separate what the examination contributes (where) from what the history contributes (when).",
+    "Explain how localization sets the pretest probability that gives a scan, EEG or gene result its meaning.",
     "Decide when several findings should be explained by one lesion and when by more than one.",
     "Describe how development changes the meaning of findings in a child."
   ],
@@ -65,8 +67,31 @@
       }
     },
     {
+      "title": "Subtract, irritate, release",
+      "figure": "lesion-voices",
+      "content": "The address is half the answer. The other half is what the lesion is *doing* there, because one address can speak in opposite voices. Pearl and Emsellem credit Hughlings Jackson with treating the nervous system as a sensorimotor machine with no need of a soul in the wiring (Pearl 2014, p. 10). Machines fail in more than one way: a part stops, a part races, or a brake gives out and something else runs on. DeMyer files the results under **deficit** and **release** (DeMyer, p. 292). Add irritation, and one stranger voice, and you have four.\n\n**Subtract.** Destroyed tissue stops working, and the signs are **negative**: a weak hand, a blind half-field, numb skin. Destroy one frontal eye field and its partner pushes unopposed, so the eyes drift *toward* the damaged side (Pearl 2014, pp. 9, 43).\n\n**Irritate.** Excited tissue produces **positive** signs, and they often point the other way. A seizure in that same eye field drives the eyes *away* from the focus (Pearl 2014, p. 9). When the discharge ends and the exhausted focus falls quiet, the eyes may swing back toward it (DeMyer, p. 182): one address, opposite directions. An irritated vagus slows the heart; a destroyed one lets it race (Pearl 2014, p. 56).\n\n**Release.** Some structures exist mainly to hold others back. Remove upper motor neuron restraint and the lower motor neuron, unsupervised, overreacts: brisk reflexes, clonus, rising tone, an upgoing toe (Pearl 2014, pp. 65, 108). The grasp shows the idea across a lifetime. In a newborn the palmar grasp is normal and should fade within months ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/introduction.html)). In an older child or adult whose frontal lobes are failing, the same grasp can come back as a **frontal release sign** (Pearl 2014, p. 114). The infant's reflex has not yet been tamed; the patient's has lost its tamer.\n\n**Fill in.** Lose an input and the brain does not always report a blank. A patient blinded by damage to both occipital lobes may deny it and invent what they see (Pearl 2014, p. 29). A patient with a right parietal lesion may insist that a paralysed left arm moves, a lack of awareness Babinski named **anosognosia** (DeMyer, p. 441). The sign is not an absence but a confident story told where the function used to be.\n\n**The direction is data.** Eyes turned to the left can mean a left-sided lesion that destroys or a right-sided focus that fires. The company decides: a still, weak arm sides with destruction, a jerking one with irritation. **Use the figure above.** Pick a structure and step through its voices: irritation often points opposite to destruction, and only some structures can release or fill in.",
+      "keyPoints": [
+        "A lesion can subtract (negative signs), irritate (positive signs), release what it restrained, or leave the brain to fill the gap.",
+        "Destroy a frontal eye field and the eyes look toward the lesion; a seizure there drives them away (Pearl 2014, pp. 9, 43).",
+        "Brisk reflexes, clonus and an upgoing toe are release: the lower motor neuron freed from restraint (Pearl 2014, pp. 65, 108; DeMyer, p. 292).",
+        "The newborn's grasp is a milestone; the same grasp returning later in frontal disease is a release sign (Utah PediNeuroLogic Exam; Pearl 2014, p. 114).",
+        "Denied blindness and denied paralysis are the brain filling in a lost input (Pearl 2014, p. 29; DeMyer, p. 441)."
+      ],
+      "question": {
+        "question": "A 7-year-old who was well at breakfast is brought in mid-event: her head and eyes are forced to the left, and her left face and arm are jerking rhythmically. Where is the lesion, and what is it doing?",
+        "options": [
+          "The left frontal lobe, destroyed, so the eyes look toward the damaged side",
+          "The right pons, destroyed, so the eyes look away from it",
+          "The left frontal lobe, firing, so the eyes turn toward the focus",
+          "The right frontal lobe, firing, so the eyes are driven away from the focus"
+        ],
+        "answer": 3,
+        "explanation": "Rhythmic jerking is a positive, irritative sign, and its company settles the eyes: a right frontal seizure drives the eyes to the left while the right motor cortex jerks the left face and arm (Pearl 2014, pp. 9, 104). A destroyed left frontal eye field also leaves the eyes looking left, which makes it tempting, but destruction subtracts: it would bring a still, weak right side, not a jerking left one. A right pontine lesion turns the eyes left too, yet produces no jerking. A left-sided focus would drive the eyes to the right and jerk the right limbs. Once the seizure ends, the eyes may drift briefly to the right as the exhausted focus goes quiet (DeMyer, p. 182)."
+      }
+    },
+    {
       "title": "The exam says where, the story says when",
-      "content": "Neurologists divide the labour between history and examination in a way that surprises students. For finding *where*, Brazis says, the examination is far more important than the history, and you can often localize a lesion from the examination alone. The sensory findings a patient reports during the exam count as examination data: a complaint of numbness can be as objective as a wrist drop (Brazis 2011, p. 4).\n\nWhat the history contributes, above all, is **time**. Brazis's example is a left hemiparesis found on examination. If it arrived over minutes, think of a vascular event or a seizure. If it evolved over a few days, think of infection or demyelination. If it crept in over months, think of a tumour or a degenerative process (Brazis 2011, p. 4). The examination places the lesion; the tempo suggests what kind of lesion it is. That pairing, *where* from the exam and *when* from the story, is the backbone of the whole curriculum, and [[m11-where-to-what|Module 11]] builds it into a working differential.\n\n**Three questions at the bedside**\n\nMorris and Jankovic close every examination with three questions: *Where is the lesion? What is the phenomenology? What is the likely underlying cause?* They add a piece of advice worth taping to the wall: commit yourself to a diagnosis, with a short differential if you must, rather than listing every possible cause for fear of being wrong. If you prove wrong, you will have learned something (Morris 2012, p. xxix). They also note that neurology is unusual among the specialties in relying on localization, or on recognition of the phenomenon, before it can reach a cause (Morris 2012, p. xxv). The middle question matters for disorders that have no focal lesion at all: a tremor, a seizure type or a tic is recognized by what it looks like, and that recognition does the work localization does elsewhere.\n\n**When in a child**\n\nA child adds a second clock. Besides \"how long has this been happening?\" you must ask \"since when in development?\" A weakness present since early infancy, a skill that never arrived, and a skill that was there and has been lost are three different stories, even if today's examination looks the same. Section 5 of this module returns to that idea.",
+      "content": "Neurologists divide the labour between history and examination in a way that surprises students. For finding *where*, Brazis says, the examination is far more important than the history, and you can often localize a lesion from the examination alone. The sensory findings a patient reports during the exam count as examination data: a complaint of numbness can be as objective as a wrist drop (Brazis 2011, p. 4).\n\nWhat the history contributes, above all, is **time**. Brazis's example is a left hemiparesis found on examination. If it arrived over minutes, think of a vascular event or a seizure. If it evolved over a few days, think of infection or demyelination. If it crept in over months, think of a tumour or a degenerative process (Brazis 2011, p. 4). The examination places the lesion; the tempo suggests what kind of lesion it is. That pairing, *where* from the exam and *when* from the story, is the backbone of the whole curriculum, and [[m11-where-to-what|Module 11]] builds it into a working differential.\n\n**Three questions at the bedside**\n\nMorris and Jankovic close every examination with three questions: *Where is the lesion? What is the phenomenology? What is the likely underlying cause?* They add a piece of advice worth taping to the wall: commit yourself to a diagnosis, with a short differential if you must, rather than listing every possible cause for fear of being wrong. If you prove wrong, you will have learned something (Morris 2012, p. xxix). They also note that neurology is unusual among the specialties in relying on localization, or on recognition of the phenomenon, before it can reach a cause (Morris 2012, p. xxv). The middle question matters for disorders that have no focal lesion at all: a tremor, a seizure type or a tic is recognized by what it looks like, and that recognition does the work localization does elsewhere.\n\n**When in a child**\n\nA child adds a second clock. Besides \"how long has this been happening?\" you must ask \"since when in development?\" A weakness present since early infancy, a skill that never arrived, and a skill that was there and has been lost are three different stories, even if today's examination looks the same. The last section of this module returns to that idea.",
       "keyPoints": [
         "For localization, the examination matters more than the history, and reported sensory findings count as examination data (Brazis 2011, p. 4).",
         "The history supplies tempo: minutes suggest vascular or seizure, days suggest infection or demyelination, months suggest tumour or degeneration (Brazis 2011, p. 4).",
@@ -83,6 +108,29 @@
         ],
         "answer": 0,
         "explanation": "The examination gives the place (a right hemisphere or descending motor pathway lesion) and the history gives the tempo: steady progression over months points first to a tumour or another slowly progressive process (Brazis 2011, p. 4). Stroke and a seizure with post-ictal weakness both arrive over minutes, not months. Guillain-Barré syndrome is a peripheral, usually symmetric disorder that evolves over days to weeks and would not produce a hemiparesis."
+      }
+    },
+    {
+      "title": "The exam as a prior: scans, EEGs and genes",
+      "figure": "pretest",
+      "content": "Section 1 told the story of the innocent cyst. This section gives the arithmetic behind it, and the arithmetic is the strongest argument for the whole doctrine.\n\nA test does not deliver a verdict; it moves a belief. Thomas Bayes, an 18th-century British vicar and amateur mathematician, gave the movement its form, which clinicians use daily without naming it: **pretest odds × likelihood ratio = post-test odds**. Gill and colleagues call a test an \"opinion modifier\" ([Gill 2005](https://pubmed.ncbi.nlm.nih.gov/15879401/)). The uncomfortable corollary is that an identical report means different things in different children, because it lands on different priors.\n\n**The exam sets the prior**\n\nA localization is a prediction: the lesion is in the right frontal lobe, or the left peroneal nerve, or somewhere no scanner can see. A finding at the predicted address inherits the exam's weight. A finding at an address the exam excluded starts near zero and needs overwhelming evidence. Brazis puts clinical diagnosis ahead of ancillary tests for exactly this reason: the false positives of \"gunshot\" imaging are avoided only by careful localization (Brazis 2011, p. 1).\n\n**What healthy children's tests show**\n\nThe base rates are not small. Research MRI of 9- and 10-year-olds found incidental findings in 21.1%, most needing no referral ([Li 2021](https://pubmed.ncbi.nlm.nih.gov/33749724/)). Epileptiform discharges appeared in 6.5% of healthy 6- to 13-year-olds ([Borusiak 2010](https://pubmed.ncbi.nlm.nih.gov/20002145/)). Ordinary background fluctuations, sharply contoured rhythms and fragmented alpha, are overread as epileptiform and help sustain a wrong diagnosis of epilepsy ([Benbadis 2003](https://pubmed.ncbi.nlm.nih.gov/12684557/)). Gene reports grade variants on five tiers from benign to pathogenic, with **uncertain significance** in the middle ([Richards 2015](https://pubmed.ncbi.nlm.nih.gov/25741868/)). A variant of uncertain significance is not a positive result; whether it matters depends on how well the child matches what the gene does, which is a question for the exam.\n\n**Scan versus story**\n\nThe mismatch runs both ways. Much disease lies below the resolution of imaging, and the scan and the clinical picture can simply disagree (Pearl 2014, p. 1). A child weak from disease of nerve or neuromuscular junction has a normal brain MRI because the disease is not in the brain; the normal scan acquits nothing. Conversely, an abnormal scan convicts nothing unless the exam put the lesion there.\n\n**Use the figure above.** Choose a test, then a prior. The false-positive rates are the sourced ones; the priors are illustrative. Hold the result fixed and move the prior: the meaning of the same positive report rises and falls with the exam.\n\n> **Rule of thumb.** After the history and examination, choose the one or two tests most likely to confirm or refute the tentative diagnosis, not every test that might find something (DeMyer, p. 539).\n\nLocalize first, then test the localization.",
+      "keyPoints": [
+        "A test modifies an opinion: pretest odds × likelihood ratio = post-test odds (Gill 2005).",
+        "Localization sets the pretest probability; a finding where the exam predicted means far more than one the exam excluded (Brazis 2011, p. 1).",
+        "Healthy children have findings: incidental MRI findings in 21.1% at 9-10 years (Li 2021), epileptiform discharges in 6.5% at 6-13 years (Borusiak 2010).",
+        "A variant of uncertain significance is not a positive result; the child's phenotype decides its weight (Richards 2015).",
+        "A normal scan cannot clear disease below imaging resolution, and an abnormal one cannot convict without the exam (Pearl 2014, p. 1)."
+      ],
+      "question": {
+        "question": "An 11-year-old has fainted three times in a year, each time after standing in a hot school assembly: she felt lightheaded, her vision greyed out, she slumped, and she was herself again within a minute. Her examination is normal. A routine EEG reports a few focal epileptiform discharges. What do the discharges most likely mean?",
+        "options": [
+          "They prove the episodes are focal seizures, so treatment for epilepsy should start",
+          "They make syncope and epilepsy equally likely, so both should be treated",
+          "They outweigh the history, because an EEG is objective and a story is not",
+          "They are most likely a trait some healthy children carry; the story still points to fainting"
+        ],
+        "answer": 3,
+        "explanation": "The story sets a low prior for epilepsy: provoked by standing in the heat, with greying vision, a slump and rapid recovery, it is the history of a vasovagal or orthostatic faint, which Pearl lists among the mimics of epilepsy (Pearl 2014, p. 104). Epileptiform discharges occur in 6.5% of healthy 6- to 13-year-olds (Borusiak 2010), so a positive EEG moves a low prior only a little. Treating it as proof of seizures is the tempting error: an objective test still needs a prior, and the tracing itself is worth reviewing because normal fluctuations are overread (Benbadis 2003). The result does not make the two diagnoses equal, and treating both chases a test rather than the child."
       }
     },
     {
@@ -196,6 +244,17 @@
       ],
       "answer": 2,
       "explanation": "Regression, the loss of a skill once acquired, implies an active process damaging the nervous system and is the most urgent of the three time courses. The static deficit since birth fits a fixed early lesion. The slowly progressive deficit also needs investigation, but slow progression has several possible causes and does not always mean a tumour. Identical examinations on one day do not make the stories equivalent; the time axis is part of the localization in children."
+    },
+    {
+      "question": "Two children have identical MRI reports describing a small area of abnormal signal in the left frontal lobe. The first has had focal seizures with jerking of the right arm and now a weak right hand. The second was scanned for headaches and has a normal examination. How should the same finding be weighed in each?",
+      "options": [
+        "It is far more likely to be the cause in the first child, because the exam predicted a lesion at that address",
+        "It means the same in both, because the reports are identical",
+        "It is more likely to matter in the second child, because a normal exam cannot rule a lesion out",
+        "Neither can be interpreted until a repeat scan shows whether it changes"
+      ],
+      "answer": 0,
+      "explanation": "The report is the same, but the priors are not. In the first child the exam localized to the left motor cortex before the scan, so the finding lands on a high pretest probability and becomes very likely the cause; post-test odds are pretest odds multiplied by the test's likelihood ratio (Gill 2005). In the second, no localization predicted it, and incidental findings appear in 21.1% of research MRIs in 9- to 10-year-olds (Li 2021). Treating the reports as equivalent ignores the prior. A normal exam does not raise the chance that a finding matters, and a repeat scan may be reasonable later but does not replace the reasoning now."
     }
   ],
   "resources": [
@@ -222,6 +281,17 @@
     "demyer",
     "hilliard2004",
     "rosenbaum2007",
-    "utah"
-  ]
+    "utah",
+    "li2021",
+    "borusiak2010",
+    "benbadis2003",
+    "richards2015",
+    "gill2005"
+  ],
+  "opener": {
+    "parable": "A letter without an address is not lost; it simply cannot be delivered yet. A symptom without a localization is the same, and every test you send it to is a guess at the address.",
+    "history": "The oldest localization on record is Egyptian. A surgeon writing more than four thousand years ago described a man with a wound in the temple who could not answer when spoken to. Much later the Hippocratic physicians recorded that injury to the left of the brain weakens the right of the body.",
+    "source": "Brazis 2011, p. 1"
+  },
+  "core": true
 }

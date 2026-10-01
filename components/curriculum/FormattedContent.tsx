@@ -58,6 +58,16 @@ export function FormattedContent({ content, accent = '#2563eb', className = '', 
           );
         }
 
+        // Callout: every line starts with "> " (e.g. "> **Bedside trick.** ...")
+        if (lines.every(l => /^>\s?/.test(l))) {
+          const body = lines.map(l => l.replace(/^>\s?/, '')).join(' ');
+          return (
+            <aside key={bi} className="mb-5 rounded-xl border px-4 py-3 text-[14px] leading-[1.7]" style={{ borderColor: accent + '40', background: accent + '0a' }}>
+              {renderInline(body, accent, basePath)}
+            </aside>
+          );
+        }
+
         // Sub-heading: a lone **Bold** line
         if (lines.length === 1 && /^\*\*[^*]+\*\*[:.]?\s*$/.test(trimmed)) {
           return <h4 key={bi} className="text-[15px] font-semibold text-slate-900 mt-6 mb-1.5 first:mt-0">{trimmed.replace(/^\*\*/, '').replace(/\*\*[:.]?\s*$/, '')}</h4>;

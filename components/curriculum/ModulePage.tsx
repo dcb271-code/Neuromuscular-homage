@@ -66,6 +66,17 @@ export function ModulePage({ kind, module: m, prev, next }: { kind: CurriculumKi
           <span style={{ color: accent }}>{String(m.number).padStart(2, '0')}</span> {m.title}
         </h1>
         <p className="text-[15px] text-slate-600 leading-relaxed max-w-[640px]">{m.why}</p>
+        {m.opener && (m.opener.parable || m.opener.history) && (
+          <div className="mt-5 max-w-[640px] rounded-xl border-l-[3px] bg-slate-50 px-4 py-3" style={{ borderColor: accent }}>
+            {m.opener.parable && <p className="text-[14.5px] italic text-slate-700 leading-relaxed">{m.opener.parable}</p>}
+            {m.opener.history && (
+              <div className={m.opener.parable ? 'mt-3 pt-3 border-t border-slate-200' : ''}>
+                <div className="text-[10px] font-bold uppercase tracking-[0.1em] mb-1" style={{ color: accent }}>From the history</div>
+                <p className="text-[13.5px] text-slate-600 leading-relaxed">{m.opener.history}{m.opener.source && <span className="text-slate-400"> ({m.opener.source})</span>}</p>
+              </div>
+            )}
+          </div>
+        )}
       </header>
 
       <div className="grid gap-8 md:grid-cols-[200px_1fr] md:items-start">

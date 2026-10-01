@@ -70,6 +70,17 @@ export function comaVerdict(choice: Record<string, string>) {
   return { kind: 'scattered' as const, text: `The signs point to different levels (${uniq.join(', ')}). When they do not agree, think multifocal or metabolic disease; when they move downward over time, think herniation.` };
 }
 
+// ── Herniation as a moving level: the rostrocaudal sequence after Pearl 2014, pp. 92-98
+//    (clouding to stupor to coma; normal breathing to hyperventilation; an enlarging, sluggish
+//    pupil; flexor then extensor posturing) and Brazis 2011 (central and uncal syndromes). ──
+export const HERNIATION: { stage: string; choice: Record<string, string>; text: string }[] = [
+  { stage: 'Hemispheres and diencephalon', choice: { breathing: 'cheyne', pupils: 'small-react', eyes: 'intact', posture: 'localizes' }, text: 'Drowsy, breathing waxes and wanes, small reactive pupils, full doll\'s eyes, localizes pain. Every sign still sits above the brainstem.' },
+  { stage: 'Diencephalon failing', choice: { breathing: 'cheyne', pupils: 'small-react', eyes: 'intact', posture: 'flexor' }, text: 'The arms now bend to pain. The lesion has reached the deep structures above the midbrain.' },
+  { stage: 'Midbrain', choice: { breathing: 'hypervent', pupils: 'mid-fixed', eyes: 'cn3', posture: 'extensor' }, text: 'Deep, fast breathing; pupils fixed in mid-position; vertical movements lost; arms straighten. Breathing faster is not improvement.' },
+  { stage: 'Pons', choice: { breathing: 'apneustic', pupils: 'mid-fixed', eyes: 'no-horizontal', posture: 'extensor' }, text: 'Pauses at full inspiration and no horizontal doll\'s-eye movement: the pons is failing.' },
+  { stage: 'Medulla', choice: { breathing: 'ataxic', pupils: 'mid-fixed', eyes: 'none', posture: 'flaccid' }, text: 'Chaotic breathing and no response at all. The level has reached the respiratory centres.' },
+];
+
 // ── Gait by level, bottom up (Pearl 2014 pp. 114-117; DeMyer p. 338; Brazis 2011 p. 17) ──
 export const GAITS: { id: string; name: string; level: string; looks: string; child: string }[] = [
   { id: 'waddle', name: 'Waddling', level: 'Muscle (proximal weakness)', looks: 'Trunk sways side to side as weak hip abductors fail to hold the pelvis level; exaggerated lumbar lordosis.', child: 'With a Gowers manoeuvre and big calves, think Duchenne muscular dystrophy.' },
@@ -109,12 +120,12 @@ export function examOrderScore(order: string[]) {
 //    seizure; days: infection or demyelination; months: tumour or degeneration), with the
 //    pediatric tempos (static, regression) added. Examples are illustrative, not exhaustive. ──
 export type Tempo = 'sudden' | 'acute' | 'subacute' | 'chronic' | 'episodic' | 'static' | 'regression';
-export const TEMPOS: { id: Tempo; name: string; span: string; mechanisms: string[] }[] = [
+export const TEMPOS: { id: Tempo; name: string; span: string; mechanisms: string[]; mimics?: string[] }[] = [
   { id: 'sudden', name: 'Sudden', span: 'Seconds to minutes', mechanisms: ['Vascular (stroke, haemorrhage)', 'Seizure', 'Trauma'] },
   { id: 'acute', name: 'Acute', span: 'Hours to days', mechanisms: ['Infection', 'Immune and inflammatory', 'Toxic or metabolic', 'Trauma and its complications'] },
   { id: 'subacute', name: 'Subacute', span: 'Days to weeks', mechanisms: ['Demyelinating and inflammatory', 'Infection (abscess, slower organisms)', 'Fast-growing tumour', 'Raised intracranial pressure'] },
   { id: 'chronic', name: 'Chronic progressive', span: 'Months to years', mechanisms: ['Tumour', 'Neurodegenerative', 'Genetic and metabolic', 'Hydrocephalus', 'Nutritional'] },
-  { id: 'episodic', name: 'Episodic', span: 'Attacks with recovery between', mechanisms: ['Seizure', 'Migraine', 'Channelopathy', 'Syncope', 'Intermittent metabolic decompensation', 'Functional'] },
+  { id: 'episodic', name: 'Episodic', span: 'Attacks with recovery between', mechanisms: ['Seizure', 'Migraine', 'Channelopathy', 'Syncope', 'Intermittent metabolic decompensation', 'Functional'], mimics: ['Breath-holding spells (6 months to 6 years), after crying or a fright', 'Night terrors (2 to 10 years), a partial arousal from deep sleep', 'Syncope'] },
   { id: 'static', name: 'Static', span: 'Present from early life, not worsening', mechanisms: ['Malformation', 'Prenatal or perinatal injury', 'Fixed result of an earlier insult'] },
   { id: 'regression', name: 'Regression', span: 'Loss of skills once acquired', mechanisms: ['Neurodegenerative and genetic-metabolic', 'Epileptic encephalopathy', 'Acquired encephalitis', 'Untreated hydrocephalus'] },
 ];

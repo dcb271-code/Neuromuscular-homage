@@ -4,7 +4,6 @@
 
 ## Queued
 
-- **Neuro-Logic integration.** Eleven ranked additions from a full read of Pearl and Emsellem, with page references, in `neuro-logic-review.md`: subtract/irritate/release doctrine, a lesion-ladder widget, "which map does the deficit obey", false-localizing signs with a raised-pressure case, age as a coordinate, scan versus story, inside-the-nerve anatomy, vestibular time, a moving coma level, an aphasia switch model, episodic mimics. Also its errors not to repeat.
 - **Owner's read-through.** Every module was drafted from the outline by a writer working from the books; the owner should read each one for clinical judgement, especially Modules 11 and 12 (differentials and cases).
 - **Link Utah videos per element.** Sections on reflexes, tone and gait could link the specific Utah video for each element (CC BY-NC-SA; link, do not re-host).
 - **Draw-it builder.** A layer-by-layer cord and brainstem drawing (Fisch's method) that the learner builds step by step, then places lesions on.
@@ -15,6 +14,17 @@
 
 
 ## History
+
+### 2026-10-01 · v2: Neuro-Logic integration, Bayes, history and parable openers
+- **Target:** integrate the eleven recommendations in `neuro-logic-review.md`, add a Bayesian thread (localization as the prior for imaging, EEG and genetic results), and open every module with a parable, a historical note, or both.
+- **Change:**
+  - Engine: module `opener` (parable / history / source) and `core` flag; `> ` callout blocks in the shared renderer; core path on the section home. Validator requires an opener and a source for any history.
+  - Models (48 new tests, 143 total): `voices.ts`, `bayes.ts`, `ladder.ts`, `maps.ts`, `aphasia.ts`, `vestibular.ts`; herniation stages and episodic mimics in `data.ts`.
+  - Widgets: lesion-voices, pretest, lesion-ladder, map-sort, aphasia-switches, vertigo-sorter; coma-levels plays a descending herniation; where-when lists episodic mimics.
+  - Content: 10 new sections (m01 ×2, m02, m05, m07, m08, m09, m10, m11 ×2), case 6 (raised pressure, the sixth nerve as messenger), bedside-trick callouts, 10 new quiz items. New verified sources: li2021, borusiak2010, benbadis2003, richards2015, gill2005, george1992.
+  - Corrections found on the way: Pearl's spiral-groove triceps claim (p. 83) contradicts the branch order (Brazis p. 45); C7 sensory loss is the third and fourth digits (Brazis p. 93).
+- **Outcome:** see commit on `main`.
+- **Follow-ups:** owner's read-through of the new sections; pediatric brain-death and functional-gait sources if those topics are added.
 
 ### 2026-10-01 · v1: twelve modules, twelve interactive figures, shared module engine
 - **Target:** build the section the site is named for, structured like the EEG curriculum but more interactive, from the owner's seven source files.

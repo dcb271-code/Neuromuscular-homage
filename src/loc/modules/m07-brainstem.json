@@ -105,6 +105,28 @@
       }
     },
     {
+      "title": "Inside the nerve",
+      "content": "Most of this module asks where a lesion sits along the brainstem. This section shrinks the question to a single nerve: where does the lesion sit **inside** it? For the third nerve, the answer predicts the mechanism.\n\n**Who rides on the outside**\n\nThe parasympathetic fibres that constrict the pupil are wrapped around the surface of the third nerve, while the fibres to the eye muscles and the lid run through its core (Pearl 2014, pp. 35-36). The blood supply runs the other way, feeding the nerve from outside in, so the core is the part that starves first (Pearl 2014, p. 38). Two mechanisms leave two signatures:\n\n- **Compression** presses on the surface. The pupil fibres fail early and the pupil dilates (Pearl 2014, p. 36).\n- **Ischaemia** starves the core. Ptosis and an eye that will not adduct, with a normal pupil (Pearl 2014, p. 38; Brazis 2011, p. 190).\n\nBrazis supplies the hedges: a compressive lesion occasionally spares the pupil, an ischaemic one sometimes involves it a little, and an incomplete palsy with a normal pupil can still hide a mass (Brazis 2011, p. 190). The rule is a probability, not a verdict.\n\n**What changes in a child**\n\nAdult teaching runs on two examples, the aneurysm that compresses and the diabetic nerve that starves (Pearl 2014, pp. 35, 38). Children bring a different list, and the texts name some of it:\n\n- **Congenital palsy**, rare and usually unilateral, sometimes with other cranial nerve or brain malformations. The pupil is usually involved, but more often **small** than large, probably from aberrant regeneration (Brazis 2011, p. 192). The rule meets its exception.\n- **Ophthalmoplegic migraine**, a reversible cause (Pearl 2014, p. 38) that usually begins in the first decade (Brazis 2011, p. 192).\n- **Trauma**, and infection or inflammation of the meninges along the nerve's course (Brazis 2011, p. 191).\n\n**The pupil that tells the side**\n\nThe same anatomy explains uncal herniation. A swelling temporal lobe stretches the third nerve; the pupil dilates first and the eye movements fail later (Brazis 2011, p. 191). The hemiparesis may sit on the wrong side, but the dilated pupil reliably marks the side of the mass (Pearl 2014, p. 37). [[m10-everywhere|Module 10]] follows the descent.\n\n> **Bedside trick.** Myasthenia can imitate a pupil-sparing third-nerve palsy, so think of it whenever ptosis or double vision is painless and the pupil normal. Have the child hold an upward gaze: myasthenic ptosis deepens with the effort, and the lid may twitch as the eyes return from looking down (Brazis 2011, p. 181).",
+      "keyPoints": [
+        "Pupil fibres ride on the outside of the third nerve; the blood supply feeds it from outside in (Pearl 2014, pp. 35-38).",
+        "Compression dilates the pupil early; ischaemia of the core spares it. A probability, not a verdict (Brazis 2011, p. 190).",
+        "In children think of congenital palsy (pupil often small), ophthalmoplegic migraine and trauma (Brazis 2011, pp. 191-192; Pearl 2014, p. 38).",
+        "In uncal herniation the dilated pupil, not the hemiparesis, marks the side of the mass (Pearl 2014, p. 37).",
+        "Painless, pupil-sparing ptosis or diplopia: think of myasthenia (Brazis 2011, p. 181)."
+      ],
+      "question": {
+        "question": "A 12-year-old has two weeks of worsening headache. His left lid droops, the left eye cannot adduct or look up, and the left pupil is larger than the right and reacts sluggishly. What does the pupil add to your reasoning?",
+        "options": [
+          "Nothing: the pupil does not help separate causes of a third-nerve palsy",
+          "It favours ischaemia of the core of the nerve, so observe",
+          "It suggests something pressing on the surface of the nerve; image urgently",
+          "It points to myasthenia, which commonly enlarges the pupil"
+        ],
+        "answer": 2,
+        "explanation": "The pupil fibres travel on the outside of the third nerve, so a dilated, sluggish pupil with the palsy suggests compression from outside, and with a worsening headache that calls for urgent imaging (Pearl 2014, pp. 35-36). Ischaemia is the tempting wrong answer for anyone trained on adult diabetic palsies, but it starves the core and typically spares the pupil (Pearl 2014, p. 38). Myasthenia mimics a pupil-sparing palsy precisely because it leaves the pupil alone (Brazis 2011, p. 181). And the pupil is the most useful single sign here, not a neutral one."
+      }
+    },
+    {
       "title": "The child's brainstem",
       "content": "In adults, brainstem localization is taught through strokes. In children it is taught through tumours, malformations and inflammation, and the localizing logic has to work with lesions that grow, infiltrate and compress rather than respect an arterial territory.\n\n**The posterior fossa**\n\nPrimary posterior fossa tumours are common in children, and Pearl names the two that dominate: medulloblastoma and the cystic cerebellar astrocytoma (Pearl 2014, p. 63). Medulloblastoma tends to begin in the caudal vermis, giving staggering gait and truncal imbalance with little limb ataxia at first; Brazis estimates it at about 20% of pediatric brain tumours (Brazis 2011, p. 412). As it grows it blocks the fourth ventricle, and the presenting picture becomes raised intracranial pressure: morning headache, vomiting, and papilloedema.\n\n**A new sixth-nerve palsy**\n\nThe sixth nerve has a long course across the base of the skull, which makes it vulnerable to raised pressure anywhere, above or below the tentorium. An abducens palsy can therefore be an early sign of a tumour, hydrocephalus or idiopathic intracranial hypertension rather than a lesion of the nerve itself (Pearl 2014, p. 43). This is the classic false localizing sign, and the rule of four helps you decide whether to believe it. Ask what keeps it company:\n\n- **Papilloedema and nothing else**: think raised pressure; the sixth nerve is a messenger, not the address.\n- **A facial palsy on the same side, a gaze palsy, ataxia or long-tract signs**: think of a lesion in the pons itself, because a single lesion there would catch the sixth nucleus, the facial fascicle that loops round it, and the tracts beside them.\n\n**Infiltrating pontine tumours and the Chiari malformation**\n\nA tumour that infiltrates the pons does not stay medial or lateral; it gathers cranial nerves and long tracts as it grows, which is exactly the accumulation the rule of four predicts. A Chiari malformation compresses the lower brainstem and cerebellum from below and can be associated with a syrinx, so look for lower cranial nerve signs and for a cape of lost pain sensation from the [[m06-spinal-cord|spinal cord module]].\n\n**What to examine**\n\nWhen a child presents with any brainstem sign: look at the optic discs, test every cranial nerve including the palate and tongue, watch the gait and tandem walk, and check the reflexes and plantars on both sides. Then decide how urgent the scan is.",
       "keyPoints": [
@@ -192,6 +214,17 @@
       ],
       "answer": 3,
       "explanation": "The trochlear nerve is the only cranial nerve whose fibres cross completely before leaving the brainstem, and it leaves from the back. A nuclear lesion therefore weakens the opposite superior oblique, which breaks the rule that motor cranial nerve findings sit on the side of the lesion. Assuming same-side weakness is the error the rule would lead you into. The fourth nerve is motor, not sensory, and its nuclei are paired, not fused."
+    },
+    {
+      "question": "A 3-week-old has had a droopy left eyelid since birth. The left eye rests down and out and moves poorly up and in, and the left pupil is smaller than the right and barely reacts to light. How do you read this?",
+      "options": [
+        "A congenital third-nerve palsy, in which the pupil is often small rather than large",
+        "A left Horner syndrome, because the pupil is small",
+        "An ischaemic third-nerve palsy, because the pupil is not dilated",
+        "Myasthenia, because the pupil is abnormal"
+      ],
+      "answer": 0,
+      "explanation": "Ptosis with an eye down and out and poor elevation and adduction is a third-nerve palsy. In the congenital form the pupil is usually involved but more often small than dilated, probably from aberrant regeneration (Brazis 2011, p. 192), so the adult rule that a big pupil means compression does not translate. Horner syndrome is the tempting wrong answer because of the small pupil, but it gives a mild ptosis with miosis (Brazis 2011, p. 275) and does not paralyse the eye muscles. Ischaemic palsy is an adult vascular story that spares the pupil rather than shrinking it. Myasthenia spares the pupil (Brazis 2011, p. 181)."
     }
   ],
   "resources": [
@@ -216,5 +249,11 @@
     "gates2011",
     "brazis2011",
     "pearl2014"
-  ]
+  ],
+  "opener": {
+    "parable": "The brainstem is a crowded street. No lesion there is ever alone, so no single sign localizes; the company it keeps does.",
+    "history": "The brainstem syndromes are dated like letters: Millard and Gubler in 1858, Weber in 1863, Benedikt in 1872, Wallenberg in 1895, Dejerine in 1914. Each name marks a neighbourhood where a cranial nerve and a long tract meet.",
+    "source": "Pearl 2014, pp. 109-112"
+  },
+  "core": true
 }

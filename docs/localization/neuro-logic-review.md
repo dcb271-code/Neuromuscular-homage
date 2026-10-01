@@ -66,6 +66,7 @@ Ranked by value to a child neurology learner. Each is our own construction; the 
   - The uncus described as herniating over the edge of the *falx* (p. 37). It is the tentorium, as the book itself says on p. 92.
   - Klumpke palsy described as the *complete* congenital plexus palsy (p. 80). Lower plexus and complete plexus palsy are different things.
   - The figure legend on spinal shock (p. 67) garbles its timing.
+  - Radial palsy at the spiral groove is listed with absent triceps function (p. 83). The triceps branch leaves above the groove, so the triceps is spared there (Brazis 2011, p. 45).
   - Brain death is described with the adult Harvard criteria and local policy (pp. 98-99). Pediatric determination now has its own consensus guideline, which we would need to source separately.
   - Functional gait is taught with *la belle indifference* (p. 117), which is no longer considered a useful discriminator. Teach positive functional signs from the owner's deck instead.
   - The claim that Lyme disease is the most common cause of bilateral facial palsy (p. 52) is regional and should not be taught without a pediatric source.

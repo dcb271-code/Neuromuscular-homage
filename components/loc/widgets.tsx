@@ -9,6 +9,7 @@ import { VisualFields } from './VisualFields';
 import { CasePlayer } from './CasePlayer';
 import { ComaLevels, ExamOrder, GaitByLevel, ReflexTimeline, RootNerve, WhereWhen } from './SmallWidgets';
 import { CASES } from '@/src/loc/cases';
+import { AphasiaSwitches, LesionLadder, LesionVoices, MapSort, Pretest, VertigoSorter } from './DoctrineWidgets';
 
 type W = ComponentType<{ accent: string }>;
 
@@ -40,5 +41,11 @@ export const LOC_WIDGETS: Record<string, W> = {
   'visual-fields': VisualFields,
   'coma-levels': ComaLevels,
   'where-when': WhereWhen,
+  'lesion-voices': LesionVoices,
+  pretest: Pretest,
+  'lesion-ladder': LesionLadder,
+  'map-sort': MapSort,
+  'aphasia-switches': AphasiaSwitches,
+  'vertigo-sorter': VertigoSorter,
   ...caseWidgets,
 };

@@ -69,4 +69,8 @@ export interface EegModule {
   resources: Resource[]; // "Read and watch": free external material, linked not copied
   signOff: string; // what a faculty reader checks before the module counts as done
   sources: string[]; // keys into src/eeg/sources.ts
+  /** Optional opener shown under `why`: a short parable, a historical note, or both. */
+  opener?: { parable?: string; history?: string; source?: string };
+  /** Part of the shorter "core path" through the curriculum. */
+  core?: boolean;
 }

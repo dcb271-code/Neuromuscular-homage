@@ -37,6 +37,20 @@ export function LocHome({ modules }: { modules: EegModule[] }) {
         </p>
       </div>
 
+      {modules.some(m => m.core) && (
+        <div className="rounded-2xl border border-slate-200 bg-white px-5 py-4 mb-6">
+          <div className="text-[10px] font-bold uppercase tracking-[0.1em] mb-1" style={{ color: accent }}>Short on time? The core path</div>
+          <p className="text-[13px] text-slate-600 leading-relaxed mb-2">Six modules carry the method. Do these first; the rest deepen it.</p>
+          <div className="flex flex-wrap gap-1.5">
+            {modules.filter(m => m.core).map(m => (
+              <Link key={m.id} href={`/localization/${m.id}`} className="no-underline rounded-lg border px-2.5 py-1 text-[12px] font-medium" style={{ borderColor: m.color + '55', color: m.color, background: m.color + '0a' }}>
+                {String(m.number).padStart(2, '0')} · {m.short}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 mb-2">Try it before you read anything</div>
       <Localizer accent={accent} variant="intro" />
 
@@ -64,6 +78,7 @@ export function LocHome({ modules }: { modules: EegModule[] }) {
                     </div>
                     <p className="text-[13px] text-slate-600 leading-relaxed">{m.description}</p>
                     <div className="flex items-center gap-2 flex-wrap text-[11px] text-slate-400 mt-1">
+                      {m.core && <span className="font-bold uppercase tracking-[0.06em] text-[10px] px-1.5 py-[1px] rounded" style={{ color: m.color, background: m.color + '14' }}>core</span>}
                       <span>{m.sections.length} sections</span><span>·</span><span>{widgets} interactive</span><span>·</span><span>{m.duration}</span>
                       {q && <span className="ml-auto font-semibold" style={{ color: m.color }}>Quiz {q.score}/{q.total}</span>}
                     </div>

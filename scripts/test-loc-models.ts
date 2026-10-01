@@ -5,7 +5,13 @@ import { cordLesion, idx, STT_OFFSET } from '../src/loc/models/cord.ts';
 import { brainstemLesion } from '../src/loc/models/brainstem.ts';
 import { fieldsFor, isLost, sparesMacula } from '../src/loc/models/visual.ts';
 import { candidates, RN_PRESETS, ITEMS, NERVE_LESIONS } from '../src/loc/models/rootNerve.ts';
-import { TIMELINE, timelineState, comaVerdict, examOrderScore, EXAM_STEPS, WHERE_WHEN, TEMPOS } from '../src/loc/models/data.ts';
+import { TIMELINE, timelineState, comaVerdict, examOrderScore, EXAM_STEPS, WHERE_WHEN, TEMPOS, HERNIATION, COMA_SIGNS } from '../src/loc/models/data.ts';
+import { STRUCTURES, VOICES, voiceAt } from '../src/loc/models/voices.ts';
+import { posttest, likelihoodRatios, frequencies, TESTS, PRIORS } from '../src/loc/models/bayes.ts';
+import { LADDERS, deficitsAt } from '../src/loc/models/ladder.ts';
+import { MAPS, MAP_CASES, checkMap } from '../src/loc/models/maps.ts';
+import { classify } from '../src/loc/models/aphasia.ts';
+import { vestVerdict, VEST_FEATURES } from '../src/loc/models/vestibular.ts';
 
 let pass = 0, fail = 0;
 const t = (name: string, cond: boolean, detail = '') => { if (cond) pass++; else { fail++; console.log(`✗ ${name}${detail ? ' — ' + detail : ''}`); } };
@@ -113,6 +119,79 @@ t('exam order: tier order has no inversions', examOrderScore([...EXAM_STEPS].sor
 t('exam order: fundi first is penalised', examOrderScore(['fundi', ...EXAM_STEPS.filter(s => s.id !== 'fundi').map(s => s.id)]).inversions >= 6);
 t('where-when keys are known tempos', Object.values(WHERE_WHEN).every(row => Object.keys(row ?? {}).every(k => TEMPOS.some(tp => tp.id === k))));
 t('where-when keys are known levels', Object.keys(WHERE_WHEN).every(k => LEVELS.some(l => l.id === k)));
+
+// ── Voices of a lesion
+t('frontal eye field: lesion and seizure point opposite ways', /toward/.test(voiceAt('fef', 'subtract')!.sign) && /away/.test(voiceAt('fef', 'irritate')!.sign));
+t('upper motor neuron signs are release, not irritation', !!voiceAt('ust', 'release') && !voiceAt('ust', 'irritate'));
+t('infant reflexes return as release signs', /grasp/.test(voiceAt('frontal', 'release')!.sign));
+t('vagus: irritation slows the heart, loss speeds it', /slows/.test(voiceAt('vagus', 'irritate')!.sign) && /fast/.test(voiceAt('vagus', 'subtract')!.sign));
+t('every structure has at least one voice, every cell a citation', STRUCTURES.every(st => Object.keys(st.cells).length > 0 && Object.values(st.cells).every(c => c!.cite.length > 4)));
+t('voices are the four declared', VOICES.length === 4);
+
+// ── Bayes
+const mri = { sensitivity: 0.9, falsePositive: 0.211 };
+t('LR+ = sens / false-positive rate', Math.abs(likelihoodRatios(mri).positive - 0.9 / 0.211) < 1e-9);
+t('posttest rises with pretest for the same positive result', posttest(0.5, mri, true) > posttest(0.1, mri, true) && posttest(0.1, mri, true) > posttest(0.02, mri, true));
+t('a positive scan when the exam pointed elsewhere is still probably incidental', posttest(0.02, mri, true) < 0.1);
+t('a positive scan where the exam predicted is probably real', posttest(0.5, mri, true) > 0.75);
+t('a negative result lowers probability', posttest(0.5, mri, false) < 0.5);
+t('Bayes matches the natural-frequency count', Math.abs(frequencies(10000, 0.1, mri).ppv - posttest(0.1, mri, true)) < 0.01);
+const eeg = { sensitivity: 0.5, falsePositive: 0.065 };
+t('EEG discharges with a vague story: well under half are epilepsy', posttest(0.1, eeg, true) < 0.5);
+t('sourced false-positive rates are the published ones', TESTS.find(x => x.id === 'mri')!.falsePositive === 0.211 && TESTS.find(x => x.id === 'eeg')!.falsePositive === 0.065);
+t('priors are ordered fits > loose > elsewhere', PRIORS[0].p > PRIORS[1].p && PRIORS[1].p > PRIORS[2].p);
+
+// ── Lesion ladder
+const facial = LADDERS.find(l => l.id === 'facial')!;
+const fi = (id: string) => facial.rungs.findIndex(r => r.id === id);
+const ftext = (id: string) => deficitsAt(facial, fi(id)).map(d => d.text).join(' | ');
+t('facial at the stylomastoid foramen: face only, taste spared', /forehead included/.test(ftext('face')) && !/Taste/.test(ftext('face')));
+t('facial above chorda tympani adds taste but not hyperacusis', /Taste/.test(ftext('taste')) && !/hyperacusis/.test(ftext('taste')));
+t('facial above stapedius adds hyperacusis, tears still normal', /hyperacusis/.test(ftext('stapedius')) && !/tears/.test(ftext('stapedius')));
+t('facial at geniculate: face, taste, hyperacusis and tears', ['forehead', 'Taste', 'hyperacusis', 'tears'].every(k => ftext('tears').includes(k)));
+t('facial in the canal: deafness replaces hyperacusis (Brazis p. 326)', /Hearing loss/.test(ftext('canal')) && !/hyperacusis/.test(ftext('canal')));
+t('facial nucleus: crossed limbs and gaze, not the peripheral branches', /opposite side/.test(ftext('pons')) && /look toward/.test(ftext('pons')) && !/Taste/.test(ftext('pons')));
+t('supranuclear: forehead relatively spared', /Forehead relatively spared/.test(ftext('cortex')));
+const radial = LADDERS.find(l => l.id === 'radial')!;
+const rtext = (id: string) => deficitsAt(radial, radial.rungs.findIndex(r => r.id === id)).map(d => d.text).join(' | ');
+t('radial at spiral groove: wrist drop, triceps spared', /Wrist drop/.test(rtext('groove')) && !/Triceps weak/.test(rtext('groove')));
+t('radial in the axilla: triceps weak', /Triceps weak/.test(rtext('axilla')));
+t('posterior interosseous: no numbness listed', !/Numb/.test(rtext('pin')));
+t('C7 root: weakness outside the radial nerve', /outside the radial nerve/.test(rtext('c7')));
+const foot = LADDERS.find(l => l.id === 'footdrop')!;
+const ptext = (id: string) => deficitsAt(foot, foot.rungs.findIndex(r => r.id === id)).map(d => d.text).join(' | ');
+t('common peroneal: inversion spared', !/Inversion/.test(ptext('common')));
+t('L5: inversion and hip abduction weak', /Inversion weak/.test(ptext('l5')) && /Hip abduction/.test(ptext('l5')));
+t('new deficits are flagged at their own rung only', deficitsAt(facial, fi('taste')).filter(d => d.isNew).every(d => /Taste|saliva/.test(d.text)));
+
+// ── Which map
+t('every map case points to a known map', MAP_CASES.every(c => MAPS.some(m => m.id === c.answer)));
+t('every map is used by at least one case', MAPS.every(m => MAP_CASES.some(c => c.answer === m.id)));
+t('face and arm > leg obeys an artery', checkMap('mca', 'artery').correct && !checkMap('mca', 'level').correct);
+t('length-dependent neuropathy obeys length', checkMap('vinca', 'length').correct);
+
+// ── Aphasia switches
+t('nonfluent, understands, cannot repeat → Broca', classify({ fluent: false, comprehends: true, repeats: false, names: false }).id === 'broca');
+t('fluent, poor comprehension, cannot repeat → Wernicke', classify({ fluent: true, comprehends: false, repeats: false, names: false }).id === 'wernicke');
+t('fluent, understands, cannot repeat → conduction', classify({ fluent: true, comprehends: true, repeats: false, names: false }).id === 'conduction');
+t('repetition spared + nonfluent + understands → transcortical motor', classify({ fluent: false, comprehends: true, repeats: true, names: false }).id === 'tcm');
+t('repetition spared + fluent + poor comprehension → transcortical sensory', classify({ fluent: true, comprehends: false, repeats: true, names: false }).id === 'tcs');
+t('only naming lost → anomic', classify({ fluent: true, comprehends: true, repeats: true, names: false }).id === 'anomic');
+t('everything lost → global', classify({ fluent: false, comprehends: false, repeats: false, names: false }).id === 'global');
+
+// ── Vertigo
+t('one central sign outweighs all peripheral signs', vestVerdict(['one-direction', 'fixation', 'hearing', 'neighbours']).lean === 'central');
+t('fixation-suppressed unidirectional nystagmus → peripheral', vestVerdict(['one-direction', 'fixation']).lean === 'peripheral');
+t('pure vertical nystagmus → central', vestVerdict(['vertical']).lean === 'central');
+t('every vestibular feature cites a page', VEST_FEATURES.every(f => /p{1,2}\. \d/.test(f.why)));
+
+// ── Herniation descends
+const levelOrder = ['hemispheres', 'midbrain', 'pons', 'medulla'];
+const breathLevel = (st: typeof HERNIATION[number]) => COMA_SIGNS[0].options.find(o => o.id === st.choice.breathing)!.level!;
+t('herniation stages use known options', HERNIATION.every(st => Object.entries(st.choice).every(([k, v]) => COMA_SIGNS.find(c => c.id === k)!.options.some(o => o.id === v))));
+t('breathing level never rises during herniation', HERNIATION.every((st, i) => i === 0 || levelOrder.indexOf(breathLevel(st)) >= levelOrder.indexOf(breathLevel(HERNIATION[i - 1]))));
+t('herniation ends at the medulla', breathLevel(HERNIATION[HERNIATION.length - 1]) === 'medulla');
+t('episodic tempo lists breath-holding and night terrors as mimics', (TEMPOS.find(x => x.id === 'episodic')!.mimics ?? []).join(' ').match(/Breath-holding.*Night terrors/) !== null);
 
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

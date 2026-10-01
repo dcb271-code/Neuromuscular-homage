@@ -590,5 +590,126 @@ export const CASES: LocCase[] = [
       ]
     },
     "reveal": "**Post-infectious acute cerebellar ataxia.** The clinching features are an overnight midline ataxia in a well, alert child after a viral illness, with no opsoclonus, no papilloedema and normal reflexes. A toxicology screen is reasonable; imaging is for atypical features, persistence or worsening. Review again in the coming days, looking specifically for opsoclonus, myoclonus and irritability."
+  },
+  {
+    "id": "icp",
+    "title": "Posterior fossa tumour with obstructive hydrocephalus",
+    "teaser": "A 7-year-old who sees double when looking to one side",
+    "history": "A 7-year-old girl has had headaches for three or four weeks. They are worst when she wakes, and on several mornings she has vomited before breakfast, then felt well enough to go to school. For the past week she has seen double when she looks to the left, and she has started turning her whole head to read the board. Her teacher says she has become clumsy in the playground, and her father thinks she walks \"as if the floor were moving\". She has had no fever, no injury and no recent illness, and she takes no medicines. She can still read small print. Her parents wonder whether she needs glasses.",
+    "examPicks": 4,
+    "exam": [
+      {
+        "id": "fundi",
+        "label": "Fundi",
+        "finding": "Both optic discs are swollen, with blurred margins and no venous pulsations.",
+        "key": true
+      },
+      {
+        "id": "eyes",
+        "label": "Eye movements",
+        "finding": "The left eye does not move fully outward on looking left, and the double vision is worst in that direction. All other movements are full.",
+        "key": true
+      },
+      {
+        "id": "gait",
+        "label": "Gait, then heel-to-toe walking",
+        "finding": "Wide-based and unsteady; she cannot walk heel to toe and sways when standing with her feet together, even with her eyes open.",
+        "key": true
+      },
+      {
+        "id": "face",
+        "label": "Facial strength and swallowing",
+        "finding": "Normal: full eye closure, a symmetric smile, a normal voice and swallow.",
+        "key": true
+      },
+      {
+        "id": "fingernose",
+        "label": "Finger to nose",
+        "finding": "Mild overshoot on both sides, far less striking than the gait.",
+        "key": false
+      },
+      {
+        "id": "reflexes",
+        "label": "Deep tendon reflexes",
+        "finding": "Present and symmetric.",
+        "key": false
+      },
+      {
+        "id": "plantar",
+        "label": "Plantar responses",
+        "finding": "Flexor on both sides.",
+        "key": false
+      },
+      {
+        "id": "level",
+        "label": "Look for a sensory level on the trunk",
+        "finding": "None.",
+        "key": false
+      },
+      {
+        "id": "head",
+        "label": "Head circumference",
+        "finding": "Within the normal range and unchanged from earlier measurements.",
+        "key": false
+      },
+      {
+        "id": "mental",
+        "label": "Alertness and behaviour",
+        "finding": "Alert and oriented; quieter and more tired than usual, but answers appropriately.",
+        "key": false
+      }
+    ],
+    "level": {
+      "answer": "cerebellum",
+      "also": [
+        "brainstem"
+      ],
+      "explanation": "The sixth nerve is the messenger, not the address. Its long course makes it an early casualty of raised pressure from almost any cause (Pearl 2014, p. 43), and with papilloedema it is one of the commonest false localizing signs (Brazis 2011, p. 622). The address comes from the company it keeps: a wide-based, staggering gait with little limb ataxia is the midline cerebellar pattern (Brazis 2011, p. 412), and a cerebellar mass that presses on the fourth ventricle is what raises the pressure (Arslan 2014, p. 98). Brainstem is defensible, because it shares the posterior fossa, but the normal face and swallow argue against an intrinsic pontine lesion, and a lesion at the sixth-nerve nucleus tends to cause a gaze palsy rather than one weak lateral rectus (Pearl 2014, p. 43)."
+    },
+    "tempo": {
+      "answer": "subacute",
+      "explanation": "Weeks: morning headaches for three or four weeks, then double vision, then unsteadiness, each new symptom added to the old. A steady build-up over weeks is the tempo of rising pressure and a growing mass, not of a post-infectious illness that peaks within a day or two."
+    },
+    "differential": {
+      "pick": 2,
+      "options": [
+        {
+          "label": "Posterior fossa tumour (medulloblastoma, cerebellar astrocytoma)",
+          "correct": true,
+          "why": "Posterior fossa tumours are common in children, medulloblastoma and cystic astrocytoma above all (Pearl 2014, p. 63). A midline mass explains the truncal ataxia and, by obstructing the fourth ventricle, the morning headache and vomiting, the papilloedema and the sixth-nerve palsy (Arslan 2014, p. 98)."
+        },
+        {
+          "label": "Obstructive hydrocephalus from another cause",
+          "correct": true,
+          "why": "Hydrocephalus raises the pressure and can bring the same papilloedema and sixth-nerve palsy (Brazis 2011, p. 158; Pearl 2014, p. 43). The scan, not the bedside, separates a tumour from other causes of obstruction."
+        },
+        {
+          "label": "Idiopathic intracranial hypertension",
+          "correct": false,
+          "why": "It can produce the same headache, papilloedema and sixth-nerve palsy (Brazis 2011, p. 202), but by definition it is raised pressure without a tumour or other cause (Arslan 2014, p. 191), so it can be named only after a scan. A clear midline ataxia sends you to the posterior fossa first."
+        },
+        {
+          "label": "Diffuse midline glioma of the pons",
+          "correct": false,
+          "why": "It lives in the same compartment, but tumours within the pons seldom block the flow of cerebrospinal fluid early, so papilloedema is not their usual opening sign (Arslan 2014, p. 330), and a lesion at the sixth-nerve nucleus tends to cause a gaze palsy instead (Pearl 2014, p. 43). Her face and swallow are normal. Imaging will settle it."
+        },
+        {
+          "label": "Migraine",
+          "correct": false,
+          "why": "Migraine comes in attacks with recovery between them. Headaches that build over weeks, wake her with vomiting and arrive with swollen discs and a cranial nerve palsy are not migraine until a scan says otherwise."
+        },
+        {
+          "label": "Sinusitis, a squint or a need for glasses",
+          "correct": false,
+          "why": "None of these swells both optic discs or makes a child unsteady. The double vision is real, but the eye is reporting a problem that lies behind it."
+        },
+        {
+          "label": "Post-infectious acute cerebellar ataxia",
+          "correct": false,
+          "why": "The wrong tempo and the wrong company: it comes on overnight in a well child after an infection, with sharp discs (compare Case 5), not over weeks with headache, vomiting and papilloedema."
+        }
+      ]
+    },
+    "reveal": "**A posterior fossa mass with obstructive hydrocephalus**, to be confirmed by urgent imaging. The clinching sign is the papilloedema, because it explains the double vision: once the pressure is known to be high, the sixth-nerve palsy needs no address of its own (Pearl 2014, p. 43; Brazis 2011, p. 622), and the wide-based gait is left to localize, to the midline cerebellum (Brazis 2011, p. 412). Posterior fossa tumours are common in children, medulloblastoma and cystic astrocytoma among them (Pearl 2014, p. 63). Arrange brain imaging the same day and involve neurosurgery at once. Do not perform a lumbar puncture first: a suspected posterior fossa mass is a reason to image before any needle (DeMyer, pp. 545-546)."
   }
 ];

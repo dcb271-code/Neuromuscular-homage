@@ -3,8 +3,8 @@
 // The smaller localization widgets: exam order, reflex timeline, root vs nerve, gait by level,
 // coma levels, and where × when. Models: src/loc/models/{data,rootNerve,localizer}.ts.
 
-import { useMemo, useState } from 'react';
-import { COMA_SIGNS, EXAM_STEPS, GAITS, TEMPOS, TIMELINE, WHERE_WHEN, comaVerdict, examOrderScore, timelineState, type Tempo, type TimelineState } from '@/src/loc/models/data';
+import { useEffect, useMemo, useState } from 'react';
+import { COMA_SIGNS, EXAM_STEPS, GAITS, TEMPOS, TIMELINE, WHERE_WHEN, comaVerdict, examOrderScore, timelineState, type Tempo, type TimelineState, HERNIATION } from '@/src/loc/models/data';
 import { ITEMS, RN_PRESETS, candidates, type Exam } from '@/src/loc/models/rootNerve';
 import { LEVELS } from '@/src/loc/models/localizer';
 import { Chip, Label, Segmented, WidgetFrame } from './ui';
@@ -165,17 +165,26 @@ export function GaitByLevel({ accent }: { accent: string }) {
 // ── Coma levels ─────────────────────────────────────────────────────────────────────────────
 export function ComaLevels({ accent }: { accent: string }) {
   const [choice, setChoice] = useState<Record<string, string>>({});
+  const [stage, setStage] = useState<number | null>(null);
   const v = comaVerdict(choice);
   const rows = ['hemispheres', 'midbrain', 'pons', 'medulla'] as const;
+  useEffect(() => {
+    if (stage === null) return;
+    setChoice(HERNIATION[stage].choice);
+    if (stage >= HERNIATION.length - 1) return;
+    const id = setTimeout(() => setStage(s => (s === null ? null : s + 1)), 2600);
+    return () => clearTimeout(id);
+  }, [stage]);
+  const pick = (sid: string, oid: string) => { setStage(null); setChoice(c => ({ ...c, [sid]: c[sid] === oid ? '' : oid })); };
   return (
     <WidgetFrame accent={accent} label="Coma as a level-finder" subtitle="Choose what you see for each sign. If they all point to one level, the lesion is there; if they scatter, think metabolic."
-      footnote="After Pearl 2014, pp. 94-97, and Brazis 2011, pp. 608-613. Describe responsiveness in plain words rather than labels (Brazis 2011, p. 603).">
+      footnote="After Pearl 2014, pp. 94-98, and Brazis 2011, pp. 608-613. Describe responsiveness in plain words rather than labels (Brazis 2011, p. 603). The herniation sequence shows a level that moves: the signs descend rather than scatter.">
       <div className="grid gap-4 md:grid-cols-[1fr_minmax(0,220px)]">
         <div className="space-y-3">
           {COMA_SIGNS.map(s => (
             <div key={s.id}>
               <Label>{s.name}</Label>
-              <div className="flex flex-wrap gap-1.5">{s.options.map(o => <Chip key={o.id} accent={accent} on={choice[s.id] === o.id} onClick={() => setChoice(c => ({ ...c, [s.id]: c[s.id] === o.id ? '' : o.id }))}>{o.label}</Chip>)}</div>
+              <div className="flex flex-wrap gap-1.5">{s.options.map(o => <Chip key={o.id} accent={accent} on={choice[s.id] === o.id} onClick={() => pick(s.id, o.id)}>{o.label}</Chip>)}</div>
             </div>
           ))}
         </div>
@@ -187,7 +196,12 @@ export function ComaLevels({ accent }: { accent: string }) {
               return <li key={r} className="flex items-center gap-2 px-3 py-2 border-b border-slate-100 last:border-0 text-[12.5px]" style={{ background: n ? accent + '12' : undefined }}><span className="capitalize text-slate-700">{r}</span><span className="ml-auto font-mono" style={{ color: accent }}>{'●'.repeat(n)}</span></li>;
             })}
           </ol>
-          <p className="mt-2 text-[12.5px] leading-snug rounded-lg px-3 py-2" style={{ background: v.kind === 'none' ? '#f1f5f9' : accent + '12', color: '#334155' }}>{v.text}</p>
+          {stage === null
+            ? <p className="mt-2 text-[12.5px] leading-snug rounded-lg px-3 py-2" style={{ background: v.kind === 'none' ? '#f1f5f9' : accent + '12', color: '#334155' }}>{v.text}</p>
+            : <p className="mt-2 text-[12.5px] leading-snug rounded-lg px-3 py-2" style={{ background: '#fef3c7', color: '#334155' }}><b>{stage + 1}/{HERNIATION.length} · {HERNIATION[stage].stage}.</b> {HERNIATION[stage].text}</p>}
+          <button onClick={() => setStage(stage === null ? 0 : null)} className="mt-2 w-full rounded-lg border px-3 py-1.5 text-[12px] font-semibold" style={{ borderColor: accent, color: stage === null ? accent : '#fff', background: stage === null ? '#fff' : accent }}>
+            {stage === null ? '▶ Watch a herniation descend' : stage >= HERNIATION.length - 1 ? 'Done: clear' : '■ Stop'}
+          </button>
         </div>
       </div>
     </WidgetFrame>
@@ -209,6 +223,11 @@ export function WhereWhen({ accent }: { accent: string }) {
         <div className="rounded-xl border border-slate-200 bg-white p-3">
           <div className="text-[10px] font-bold uppercase tracking-[0.08em] mb-1" style={{ color: accent }}>{t.name}: {t.span.toLowerCase()}</div>
           <ul className="list-disc ml-4 text-[12.5px] text-slate-700 space-y-0.5">{t.mechanisms.map(m => <li key={m}>{m}</li>)}</ul>
+          {t.mimics && (<>
+            <div className="text-[10px] font-bold uppercase tracking-[0.08em] mt-2 mb-1 text-amber-600">Not a lesion at all: mimics</div>
+            <ul className="list-disc ml-4 text-[12.5px] text-slate-700 space-y-0.5">{t.mimics.map(m => <li key={m}>{m}</li>)}</ul>
+            <p className="text-[11px] text-slate-400 mt-1">Pearl 2014, p. 104.</p>
+          </>)}
         </div>
         <div className="rounded-xl border border-slate-200 bg-white p-3">
           <div className="text-[10px] font-bold uppercase tracking-[0.08em] mb-1" style={{ color: accent }}>{LEVELS.find(l => l.id === level)!.short} + {t.name.toLowerCase()}: in a child</div>

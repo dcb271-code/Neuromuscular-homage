@@ -88,6 +88,29 @@
       }
     },
     {
+      "title": "The lesion ladder",
+      "content": "This is the module's opening parable, labelled. A nerve sheds its branches in a fixed order, so a lesion removes every branch below it and spares every branch above. Find the **highest branch that is lost** and the lesion sits just above it. Climb higher and the deficits pile up.\n\n**The facial nerve: the clearest ladder**\n\nIn the temporal bone the facial nerve drops three passengers before the face: the branch for tears at the geniculate ganglion, the nerve to stapedius, and the chorda tympani with taste from the front of the tongue (Brazis 2011, pp. 322-323). Brazis walks a lesion up that ladder (Brazis 2011, pp. 326-327):\n\n- Below the chorda tympani: the face alone.\n- Above the chorda: add lost taste.\n- Above the stapedius branch: add **hyperacusis**, ordinary sounds too loud on that side.\n- At or above the geniculate ganglion: add a **dry eye**.\n- In the internal auditory canal: the eighth nerve rides alongside, so deafness joins. Brazis says it replaces the hyperacusis; Pearl says hyperacusis may persist (Brazis 2011, p. 326; Pearl 2014, p. 51).\n\nPearl draws it as three sites on one nerve (Pearl 2014, p. 52); the figure lets you climb it.\n\n**In a child**\n\nBell palsy is still the commonest cause, but not every facial palsy is Bell's (Brazis 2011, p. 329). Look carefully at the middle ear in every child with facial weakness, since otitis media and mastoiditis can reach the nerve (Brazis 2011, p. 330). Pearl calls Lyme disease the commonest cause of a bilateral palsy (Pearl 2014, p. 52); treat that as a regional truth, not a universal one.\n\n**The other ladders**\n\nThe radial ladder climbs from the posterior interosseous branch (fingers drop, wrist spared) to the spiral groove (wrist drops, triceps spared) to the axilla, where triceps goes too (Brazis 2011, pp. 44-45). Pearl lists absent triceps under the spiral-groove palsy (Pearl 2014, p. 83); the branch order says otherwise. The foot-drop ladder runs from the deep peroneal branch to the common peroneal nerve to the sciatic, which adds inversion, plantar flexion and the hamstrings (Pearl 2014, p. 87). The leg section above named the discriminators; the ladder shows why hip abduction decides: gluteus medius hangs on the superior gluteal nerve, off the sciatic ladder (Brazis 2011, p. 53).\n\n**Where the ladder breaks**\n\nAt the top the pattern stops growing and changes shape. In the pons a facial palsy brings a gaze palsy and a crossed hemiparesis (Brazis 2011, p. 325); above the nucleus the forehead is relatively spared (Pearl 2014, p. 50); at the C7 or L5 root, muscles of several nerves fail together. A change of shape means you have left the cable.",
+      "keyPoints": [
+        "A nerve sheds branches in order; the highest lost branch marks the lesion, and proximal lesions accumulate deficits.",
+        "Facial nerve, bottom up: face, then taste (chorda tympani), then hyperacusis (stapedius), then a dry eye (geniculate), then deafness in the canal (Brazis 2011, pp. 326-327).",
+        "Look at the middle ear in every child with facial weakness; not every facial palsy is Bell's (Brazis 2011, pp. 329-330).",
+        "Radial: a spiral-groove lesion spares triceps; foot drop: hip abduction lies off the sciatic ladder (Brazis 2011, pp. 45, 53).",
+        "When the pattern stops growing and changes shape (pons, supranuclear, root), you have left the nerve."
+      ],
+      "question": {
+        "question": "A 9-year-old has a right facial palsy that includes the forehead. She says the television sounds painfully loud in her right ear, and taste is lost on the right front of the tongue. Hearing is normal and tear production is equal on the two sides. Where along the nerve is the lesion?",
+        "options": [
+          "Distal to the stylomastoid foramen, in the parotid",
+          "In the internal auditory canal",
+          "In the facial canal, above the nerve to stapedius but below the geniculate ganglion",
+          "In the left hemisphere"
+        ],
+        "answer": 2,
+        "explanation": "Hyperacusis puts the lesion above the branch to stapedius, and lost taste agrees, since the chorda tympani leaves below that; equal tears put it below the geniculate ganglion, where the branch for lacrimation leaves (Brazis 2011, p. 326). A lesion in the parotid spares taste and hearing and gives the face alone (Brazis 2011, p. 327). The internal auditory canal is tempting because it sits higher still, but there the lesion would also dry the eye and usually bring deafness from the eighth nerve. A hemispheric lesion spares the forehead and leaves taste and hearing alone."
+      },
+      "figure": "lesion-ladder"
+    },
+    {
       "title": "The brachial plexus at birth",
       "content": "A newborn whose arm lies still after a difficult delivery gives you the plexus problem in its purest form, with one extra difficulty: the patient cannot follow a single instruction. Everything has to be read from posture, spontaneous movement and reflexes.\n\n**The two classic patterns**\n\nFisch's drawing starts with three horizontal trunks: C5 and C6 join to form the upper trunk at a spot called Erb's point, C7 forms the middle trunk, and C8 and T1 form the lower trunk (Fisch 2012, p. 30). Pearl and Emsellem describe the **upper trunk (C5, C6) lesion, Erb palsy**, usually associated with shoulder dystocia: weak shoulder abductors and external rotators, deltoid and biceps, with the arm hanging limply at the side, turned in and pronated (Pearl 2014, p. 80). They describe the **lower plexus injury, Klumpke palsy**, as weakness of the intrinsic hand muscles and finger flexors (Pearl 2014, p. 80). Note that Pearl groups C7 with the lower plexus here, whereas Fisch draws the lower trunk from C8 and T1 alone; the figure follows Fisch.\n\n**Root or trunk? The branches that leave early**\n\nTwo nerves leave the roots before the plexus forms: the dorsal scapular nerve to the rhomboids, from C5, and the long thoracic nerve to serratus anterior, from the upper roots (Fisch 2012, p. 31). The suprascapular nerve leaves later, from the upper trunk itself (Fisch 2012, p. 35). This sequence is a ruler. If the rhomboids and serratus work but the deltoid, biceps and infraspinatus do not, the injury is beyond the roots, in the upper trunk. If the root-level muscles are weak too, the damage is at the roots, where the surgical questions are different.\n\n**Examining the newborn arm**\n\nWatch the infant's spontaneous movement and the Moro response, which shows whether each shoulder abducts and each elbow flexes ([[m02-the-exam|Module 2]] covers the Moro in detail). Feel the biceps reflex; in an upper trunk injury it is absent. Watch the hand: a grasp that works in an arm that otherwise hangs still says the lower trunk is intact. Look for winging of the scapula when the infant pushes against your hand, which tests serratus.\n\n**Not every still arm is a plexus**\n\nA clavicle or humerus fracture can make a newborn refuse to move a painful arm, and a perinatal stroke weakens the arm from above. The plexus is localized by a lower motor neuron pattern in a root distribution, with the reflex lost.",
       "keyPoints": [
@@ -187,6 +210,17 @@
       ],
       "answer": 0,
       "explanation": "Adjacent dorsal roots overlap so much that a single root lesion may cause little or no sensory loss, so a normal sensory exam does not rule a root lesion out (Brazis 2011, p. 89). Pain that shoots along a root's territory and worsens with coughing or straining is typical of root irritation (Brazis 2011, p. 89), but it suggests a root lesion rather than proving one, so 'confirmed' overreaches. Normal reflexes do not exclude it either; an irritative lesion can spare the reflex arc. 'Always numbs its dermatome' is exactly the misconception the overlap corrects."
+    },
+    {
+      "question": "A 14-year-old has a foot drop after an intramuscular injection into the buttock. Dorsiflexion, eversion, inversion and plantar flexion are weak, knee flexion is weak, and the ankle reflex is lost. Hip abduction is strong. Where is the lesion?",
+      "options": [
+        "The common peroneal nerve at the fibular head",
+        "The L5 root",
+        "The tibial nerve in the popliteal fossa",
+        "The sciatic nerve in the buttock"
+      ],
+      "answer": 3,
+      "explanation": "Weakness of both the peroneal and tibial territories plus the hamstrings means the lesion is above the point where the sciatic nerve divides and above its hamstring branches, which fits a misplaced buttock injection (Pearl 2014, p. 87; Brazis 2011, p. 58). The L5 root is the tempting alternative, but it would weaken hip abduction through gluteus medius, which is supplied by the superior gluteal nerve and lies off the sciatic ladder (Brazis 2011, p. 53), and it would not explain the lost ankle reflex. A common peroneal lesion spares inversion and plantar flexion. A tibial lesion spares dorsiflexion and eversion."
     }
   ],
   "resources": [
@@ -217,5 +251,11 @@
     "morris2012",
     "pearl2014",
     "fisch2012"
-  ]
+  ],
+  "opener": {
+    "parable": "A nerve is a cable with taps along its length. Cut it anywhere and every tap below runs dry. Find the highest dry tap and you have found the cut.",
+    "history": "Charles Bell (1774–1842), Scottish anatomist and surgeon, gave his name to the commonest facial palsy. The facial nerve sheds its branches in order (tears, then the muscle that damps loud sound, then taste, then the face), which makes it the clearest ladder in the body.",
+    "source": "Morris 2012, p. 40; Brazis 2011, p. 326"
+  },
+  "core": false
 }

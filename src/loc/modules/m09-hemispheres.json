@@ -105,8 +105,31 @@
       }
     },
     {
+      "title": "Aphasia as four switches",
+      "figure": "aphasia-switches",
+      "content": "The previous section separated language never gained from language lost. This one assumes the language was there and asks which part has gone. The answer still rests on the two addresses in this module's opening, Broca's frontal lobe and Wernicke's temporal lobe, and on the path between them, which Wernicke said could cause aphasia wherever it was cut (Brazis 2011, p. 2).\n\n**Four switches**\n\nFour bedside tests do most of the work (Pearl 2014, pp. 18-20):\n\n- **Fluency:** is speech effortful and sparse, or does it flow?\n- **Comprehension:** can the child carry out a spoken command without copying you?\n- **Repetition:** can the child say a phrase back word for word?\n- **Naming:** can the child name a cup, a key, a shoe?\n\nSet the switches and the classic syndrome falls out (Pearl 2014, p. 20, Table 2.1). Nonfluent speech with understanding kept is **Broca** aphasia, from the dominant frontal lobe; fluent speech with understanding lost is **Wernicke** aphasia, from the dominant temporal lobe (Pearl 2014, pp. 18-19). Both lost is **global**, usually a large lesion. Repetition splits each pair. When it survives, the lesion has spared the core and sits in the cortex around it: the **transcortical** motor and sensory forms, and a **mixed** form when both output and understanding fail (Pearl 2014, p. 20). Fluent speech and good understanding with failed repetition is **conduction** aphasia: intelligible talk, sound errors, a sentence that will not come back intact, from lesions around the supramarginal gyrus or the connection between the language areas (Brazis 2011, p. 524). Even the dominant thalamus can do it, with a mixed transcortical picture that tends to improve over weeks (Brazis 2011, p. 448; Pearl 2014, p. 20).\n\nNaming fails in almost every row, which is why **anomia** on its own is relatively nonlocalizing (Pearl 2014, p. 20). It tells you the language network is unwell, not where.\n\n**Same picture, different lesion**\n\nThe figure holds the stimulus still, a kite in a tree and a brother on a wobbling ladder, while you flip the switches. The picture never changes; only the lesion does.\n\n**What aphasia is not**\n\nSlurred but well-built sentences are **dysarthria**, a problem of articulation, not of language (Pearl 2014, p. 20). A child who falls silent after removal of a cerebellar tumour has **cerebellar mutism**, not a cortical aphasia (Pearl 2014, p. 20). A confused, encephalopathic child can sound aphasic, and the two are hard to separate (Pearl 2014, p. 20).\n\n**Not adult rules**\n\nThe switches were built from adults. Do not assume that a child's acquired aphasia will sort as neatly, sit where an adult's would, or recover on an adult's schedule. Describe with them; promise nothing from them.",
+      "keyPoints": [
+        "Four bedside tests sort the aphasias: fluency, comprehension, repetition and naming (Pearl 2014, p. 20, Table 2.1).",
+        "Preserved repetition puts the lesion in the cortex around the language core: the transcortical aphasias (Pearl 2014, p. 20).",
+        "Fluent speech and good understanding with failed repetition is conduction aphasia (Brazis 2011, p. 524); a dominant thalamic lesion gives a mixed transcortical picture that improves over weeks (Brazis 2011, p. 448).",
+        "Anomia alone is relatively nonlocalizing (Pearl 2014, p. 20).",
+        "Dysarthria, cerebellar mutism after posterior fossa surgery and encephalopathy can all imitate aphasia (Pearl 2014, p. 20)."
+      ],
+      "question": {
+        "question": "A 12-year-old is recovering from a left hemisphere injury. She talks in full sentences at a normal rate and carries out three-step commands. Asked to repeat \"the ladder wobbles\", she says \"the lather... the ladder wobbers\" and gives up. Naming is patchy, with sound errors. How do you classify her language, and what does it suggest about the lesion?",
+        "options": [
+          "Broca aphasia, from the dominant inferior frontal lobe",
+          "Conduction aphasia, from a lesion around the supramarginal gyrus or the connection between the language areas",
+          "Transcortical sensory aphasia, from the cortex around Wernicke's area",
+          "Anomic aphasia, which does not localize"
+        ],
+        "answer": 1,
+        "explanation": "Fluent speech and intact comprehension with failed repetition and sound errors is conduction aphasia, which Brazis ties to lesions around the supramarginal gyrus or the pathway linking the language areas (Brazis 2011, p. 524; Pearl 2014, p. 20). Broca aphasia is nonfluent. Transcortical sensory aphasia is the reverse pattern: understanding lost and repetition kept. Anomic aphasia is tempting because naming is poor, but it requires repetition to be intact; the repetition switch is the one that localizes here. Treat the label as a description: a child's lesion need not sit exactly where an adult's would."
+      }
+    },
+    {
       "title": "Perinatal brain injury",
-      "content": "The hemispheres can be injured before a child has done anything with them. Two patterns are common enough that every child neurologist should recognise them from the exam alone, and both teach the same lesson as the rest of this module: the shape of the deficit reflects where the injury fell.\n\n**The hand that is never chosen**\n\nA stroke around the time of birth often goes unnoticed in the newborn period. The first sign may be a baby who reaches with only one hand. Hand preference before the first birthday is abnormal and points to weakness of the other hand; true handedness develops after twelve months ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/home_exam.html)). The child who emerges has a hemiplegic cerebral palsy, with the arm and hand more affected than the leg, a fisted hand, and a leg that circumducts when walking (DeMyer, p. 340). The proportions are those of the lateral cortex, the middle cerebral territory.\n\n**Legs more than arms**\n\nThe premature brain is vulnerable in a different place. The characteristic injury of prematurity is periventricular leukomalacia, damage to the white matter around the lateral ventricles, often with injury to neurons and axons as well ([Volpe 2009](https://pubmed.ncbi.nlm.nih.gov/19081519/)). The fibres for the legs pass closest to the ventricles on their way down from the medial cortex, so they are caught first. The result is spastic diplegia: severe spasticity in the legs, little in the arms, and little or no trouble with speech or swallowing, in contrast with a double hemiplegia, where the arms are weaker than the legs (DeMyer, p. 340). The children toe-walk, scissor, or walk in a crouch.\n\n**Deep grey matter**\n\nA third pattern follows injury to the basal ganglia and thalamus around birth: involuntary writhing movements mixed with spasticity (DeMyer, p. 340). That localization belongs to the [[m08-loops|loops]], but the timing belongs here.\n\n**The bedside decision**\n\nWhen an infant has an early hand preference, examine the neglected hand for tone, reflexes and fisting, and ask about the pregnancy and delivery. When a child born early walks on the toes with stiff legs and good hands, the history and the proportions point to the periventricular white matter before any imaging does. The exam names the level; the birth history names the time.",
+      "content": "The hemispheres can be injured before a child has done anything with them. Two patterns are common enough that every child neurologist should recognise them from the exam alone, and both teach the same lesson as the rest of this module: the shape of the deficit reflects where the injury fell. The question of how such injuries arise is an old one: in the nineteenth century both W. J. Little and Sigmund Freud wrote on the origins of cerebral palsy ([George 1992](https://pubmed.ncbi.nlm.nih.gov/11618412/)).\n\n**The hand that is never chosen**\n\nA stroke around the time of birth often goes unnoticed in the newborn period. The first sign may be a baby who reaches with only one hand. Hand preference before the first birthday is abnormal and points to weakness of the other hand; true handedness develops after twelve months ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/home_exam.html)). The child who emerges has a hemiplegic cerebral palsy, with the arm and hand more affected than the leg, a fisted hand, and a leg that circumducts when walking (DeMyer, p. 340). The proportions are those of the lateral cortex, the middle cerebral territory.\n\n**Legs more than arms**\n\nThe premature brain is vulnerable in a different place. The characteristic injury of prematurity is periventricular leukomalacia, damage to the white matter around the lateral ventricles, often with injury to neurons and axons as well ([Volpe 2009](https://pubmed.ncbi.nlm.nih.gov/19081519/)). The fibres for the legs pass closest to the ventricles on their way down from the medial cortex, so they are caught first. The result is spastic diplegia: severe spasticity in the legs, little in the arms, and little or no trouble with speech or swallowing, in contrast with a double hemiplegia, where the arms are weaker than the legs (DeMyer, p. 340). The children toe-walk, scissor, or walk in a crouch.\n\n**Deep grey matter**\n\nA third pattern follows injury to the basal ganglia and thalamus around birth: involuntary writhing movements mixed with spasticity (DeMyer, p. 340). That localization belongs to the [[m08-loops|loops]], but the timing belongs here.\n\n**The bedside decision**\n\nWhen an infant has an early hand preference, examine the neglected hand for tone, reflexes and fisting, and ask about the pregnancy and delivery. When a child born early walks on the toes with stiff legs and good hands, the history and the proportions point to the periventricular white matter before any imaging does. The exam names the level; the birth history names the time.",
       "keyPoints": [
         "Hand preference before the first birthday is abnormal and points to weakness of the other hand (Utah PediNeuroLogic Exam).",
         "Hemiplegic cerebral palsy after perinatal stroke: arm more than leg, fisted hand, circumducting leg (DeMyer, p. 340).",
@@ -192,6 +215,17 @@
       ],
       "answer": 2,
       "explanation": "Halting, effortful, sparse speech with preserved comprehension is the pattern Broca described in lesions of the left inferior frontal gyrus (Brazis 2011, p. 1), and with right face and arm weakness it fits the lateral cortex of the left hemisphere (Pearl 2014, p. 10). A left posterior temporal lesion would impair comprehension more. The right hemisphere is rarely dominant for language in a right-hander. An occipital lesion would affect vision and reading, not fluency."
+    },
+    {
+      "question": "A 6-year-old has stopped speaking since removal of a tumour from her cerebellum. She watches faces, carries out simple commands, and moves both arms and legs equally. A trainee writes \"global aphasia, ?left hemisphere stroke\". How should her silence be framed?",
+      "options": [
+        "Global aphasia from a new left hemisphere stroke, which needs imaging of the left middle cerebral territory before anything else",
+        "Selective mutism from the stress of the operation",
+        "Broca aphasia, because she is not fluent",
+        "Cerebellar mutism, a communication disorder that follows posterior fossa surgery and should not be read as a cortical aphasia"
+      ],
+      "answer": 3,
+      "explanation": "Pearl lists cerebellar mutism after posterior fossa surgery, especially removal of a cerebellar tumour, among the communication problems that must not be confused with the cerebral aphasias (Pearl 2014, p. 20). The operation was below the tentorium, and a child who understands commands and moves all four limbs equally gives no sign of a large dominant-hemisphere lesion. Global aphasia would take comprehension too and would usually come with right-sided weakness. Calling it Broca aphasia applies the fluency switch to a child who is not producing speech at all, and selective mutism describes silence in some settings with normal speech in others."
     }
   ],
   "resources": [
@@ -225,6 +259,13 @@
     "pearl2014",
     "demyer",
     "volpe2009",
-    "utah"
-  ]
+    "utah",
+    "george1992"
+  ],
+  "opener": {
+    "parable": "The cortex is the least precise address in the nervous system and the most revealing one: it is where a lesion can take away a word, a side of space, or the knowledge that anything is missing.",
+    "history": "In 1865 Paul Broca (1824–1880) wrote that we speak with the left hemisphere, and noticed that a small lesion could abolish speech while a much larger one only dented it. Nine years later Carl Wernicke (1848–1905) placed the understanding of words in the temporal lobe.",
+    "source": "Brazis 2011, pp. 1-2"
+  },
+  "core": false
 }
