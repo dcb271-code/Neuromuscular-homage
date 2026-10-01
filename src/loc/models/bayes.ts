@@ -41,7 +41,7 @@ export const TESTS: TestScenario[] = [
     falsePositive: 0.211, fpSource: 'Incidental findings in 21.1% of 9-10-year-olds scanned for research (Li 2021)', defaultSensitivity: 0.9,
     note: 'A scan shows structure rather than function, and a child weak from Guillain-Barré syndrome or botulism has a normal brain MRI. A normal result only helps if the exam predicted a structural lesion the scan could see.' },
   { id: 'eeg', name: 'Routine EEG', finding: 'The report describes epileptiform discharges', target: 'the events are epileptic seizures',
-    falsePositive: 0.065, fpSource: 'Epileptiform discharges in 6.5% of healthy 6-13-year-olds (Borusiak 2010)', defaultSensitivity: 0.5,
+    falsePositive: 0.065, fpSource: 'Epileptiform discharges in 6.5% of healthy 6-13-year-olds recorded after a minor head injury (Borusiak 2010)', defaultSensitivity: 0.5,
     note: 'Some healthy children carry discharges as a trait. Normal background fluctuations are also overread as epileptiform (Benbadis 2003). The story of the events sets the prior.' },
   { id: 'gene', name: 'Gene panel or exome', finding: 'The report lists a variant in a gene that can cause the phenotype', target: 'the variant explains the child',
     falsePositive: null, fpSource: 'No single rate applies; laboratories classify each variant on a five-step scale from benign to pathogenic (Richards 2015)', defaultSensitivity: 0.5,

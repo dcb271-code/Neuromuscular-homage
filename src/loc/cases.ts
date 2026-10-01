@@ -204,7 +204,7 @@ export const CASES: LocCase[] = [
     ],
     "level": {
       "answer": "nmj",
-      "explanation": "Ptosis, a weak suck and gag, and a weak cry that all fade with use are fatigable bulbar and ocular weakness, the signature of the junction. The absence of fasciculations argues against the horn cell. The constipation fits the junction too, because the toxin blocks acetylcholine release in the gut as well."
+      "explanation": "Ptosis, a weak suck and gag, and a weak cry that all fade with use are fatigable bulbar and ocular weakness, the signature of the junction. The absence of tongue fasciculations argues against the horn cell, and so does the weakness of the eyelids and eye movements, which spinal muscular atrophy spares. The constipation fits the junction too, because the toxin blocks acetylcholine release in the gut as well."
     },
     "tempo": {
       "answer": "acute",
@@ -216,12 +216,12 @@ export const CASES: LocCase[] = [
         {
           "label": "Infant botulism",
           "correct": true,
-          "why": "Peredo 2009 advises suspecting it under 6 months with constipation, listlessness, poor feeding, a weak cry and a reduced gag, and every one of those features is here."
+          "why": "It should be suspected under 6 months with constipation, listlessness, poor feeding, a weak cry and a reduced gag (Peredo 2009), and every one of those features is here."
         },
         {
           "label": "Spinal muscular atrophy",
           "correct": true,
-          "why": "A floppy, weak, alert infant belongs on the list until the pattern excludes it, and here the absence of tongue fasciculations and the acute course argue against it."
+          "why": "A floppy, weak, alert infant belongs on the list until the pattern excludes it, and here the absence of tongue fasciculations, the weak eyelids and eye movements, and the acute course argue against it."
         },
         {
           "label": "Sepsis or a metabolic crisis",
@@ -231,7 +231,7 @@ export const CASES: LocCase[] = [
         {
           "label": "Congenital myasthenic syndrome",
           "correct": false,
-          "why": "A congenital junction disorder is present from birth, and this baby was normal a week ago."
+          "why": "A congenital junction disorder is usually evident from birth or soon after, and this baby was normal a week ago."
         },
         {
           "label": "Cerebral palsy",
@@ -250,7 +250,7 @@ export const CASES: LocCase[] = [
         }
       ]
     },
-    "reveal": "**Infant botulism.** What clinches it is constipation together with fatigable ptosis, a weak suck and a fading cry in a previously normal infant under 6 months ([Peredo 2009](https://pubmed.ncbi.nlm.nih.gov/19726697/)). Admit her with close monitoring of the airway and feeding, send stool for toxin testing, and discuss specific antitoxin treatment with the infectious diseases team without waiting for the result."
+    "reveal": "**Infant botulism.** What clinches it is constipation together with fatigable ptosis, a weak suck and a fading cry in a previously normal infant under 6 months ([Peredo 2009](https://pubmed.ncbi.nlm.nih.gov/19726697/)). Admit her with close monitoring of the airway and feeding, send stool for toxin testing, and discuss treatment with botulism immune globulin (BabyBIG) with the infectious diseases team without waiting for the result. Avoid aminoglycoside antibiotics, which can deepen the blockade at the junction."
   },
   {
     "id": "duchenne",
@@ -431,7 +431,7 @@ export const CASES: LocCase[] = [
     ],
     "level": {
       "answer": "cord",
-      "explanation": "Weak legs with a sensory level on the trunk and early urinary retention can only come from the cord, and the sensory level is the most powerful of the three because no other level makes one. Reduced reflexes in the first days do not move the lesion out of the cord, since an acute, severe lesion can produce spinal shock (DeMyer, pp. 273-274), and the upgoing toes already show the upper motor neuron. The real lesion may sit several segments above the level on the skin (Brazis 2011, p. 104), so the imaging has to extend above it."
+      "explanation": "Weak legs with a sensory level on the trunk and early urinary retention point to the cord. The sensory level is the most powerful of the three, because almost nothing outside the cord makes one (Brazis 2011, p. 104). Reduced reflexes in the first days do not move the lesion out of the cord, since an acute, severe lesion can produce spinal shock (DeMyer, pp. 273-274), and the upgoing toes already show the upper motor neuron. The real lesion may sit several segments above the level on the skin (Brazis 2011, p. 104), so the imaging has to extend above it."
     },
     "tempo": {
       "answer": "acute",
@@ -664,7 +664,7 @@ export const CASES: LocCase[] = [
       "also": [
         "brainstem"
       ],
-      "explanation": "The sixth-nerve palsy is better read as a messenger reporting raised pressure than as a marker of where the lesion sits. The nerve's long course makes it an early casualty of raised pressure from almost any cause (Pearl 2014, p. 43), and together with papilledema it is one of the commonest false localizing signs (Brazis 2011, p. 622). The address comes from the company it keeps. A wide-based, staggering gait with little limb ataxia is the midline cerebellar pattern (Brazis 2011, p. 412), and a cerebellar mass pressing on the fourth ventricle is what raises the pressure (Arslan 2014, p. 98). Brainstem is defensible, because it shares the posterior fossa, but the normal face and swallow argue against an intrinsic pontine lesion, and a lesion at the sixth-nerve nucleus tends to cause a gaze palsy rather than one weak lateral rectus (Pearl 2014, p. 43)."
+      "explanation": "The sixth-nerve palsy is better read as a sign of raised pressure than as a marker of where the lesion sits. The nerve's long course makes it an early casualty of raised pressure from almost any cause (Pearl 2014, p. 43), and together with papilledema it is one of the commonest false localizing signs (Brazis 2011, p. 622). The address comes from the company it keeps. A wide-based, staggering gait with little limb ataxia is the midline cerebellar pattern (Brazis 2011, p. 412), and a cerebellar mass pressing on the fourth ventricle is what raises the pressure (Arslan 2014, p. 98). Brainstem is defensible, because it shares the posterior fossa. However, the normal face and swallow argue against an intrinsic pontine lesion, and a lesion at the sixth-nerve nucleus tends to cause a gaze palsy rather than one weak lateral rectus (Pearl 2014, p. 43)."
     },
     "tempo": {
       "answer": "subacute",
@@ -676,7 +676,7 @@ export const CASES: LocCase[] = [
         {
           "label": "Posterior fossa tumor (medulloblastoma, cerebellar astrocytoma)",
           "correct": true,
-          "why": "Posterior fossa tumors are common in children, medulloblastoma and cystic astrocytoma above all (Pearl 2014, p. 63). A midline mass explains the truncal ataxia, and by obstructing the fourth ventricle it also explains the morning headache and vomiting, the papilledema and the sixth-nerve palsy (Arslan 2014, p. 98)."
+          "why": "Posterior fossa tumors are common in children, medulloblastoma and cystic (pilocytic) astrocytoma above all, with ependymoma the third to remember (Pearl 2014, p. 63). A midline mass explains the truncal ataxia, and by obstructing the fourth ventricle it also explains the morning headache and vomiting, the papilledema and the sixth-nerve palsy (Arslan 2014, p. 98)."
         },
         {
           "label": "Obstructive hydrocephalus from another cause",
@@ -691,7 +691,7 @@ export const CASES: LocCase[] = [
         {
           "label": "Diffuse midline glioma of the pons",
           "correct": false,
-          "why": "It lives in the same compartment, but tumors within the pons seldom block the flow of cerebrospinal fluid early, so papilledema is not their usual opening sign (Arslan 2014, p. 330), and a lesion at the sixth-nerve nucleus tends to cause a gaze palsy instead (Pearl 2014, p. 43). Her face and swallow are normal, and imaging will settle the question."
+          "why": "It lives in the same compartment, but tumors within the pons seldom block the flow of cerebrospinal fluid early, so papilledema is not their usual opening sign (Arslan 2014, p. 330). A lesion at the sixth-nerve nucleus tends to cause a gaze palsy instead (Pearl 2014, p. 43). Her face and swallow are normal, and imaging will settle the question."
         },
         {
           "label": "Migraine",
@@ -710,6 +710,6 @@ export const CASES: LocCase[] = [
         }
       ]
     },
-    "reveal": "**A posterior fossa mass with obstructive hydrocephalus**, to be confirmed by urgent imaging. The clinching sign is the papilledema, because it explains the double vision. Once the pressure is known to be high, the sixth-nerve palsy needs no address of its own (Pearl 2014, p. 43; Brazis 2011, p. 622), which leaves the wide-based gait to do the localizing, to the midline cerebellum (Brazis 2011, p. 412). Posterior fossa tumors are common in children, medulloblastoma and cystic astrocytoma among them (Pearl 2014, p. 63). Arrange brain imaging the same day and involve neurosurgery at once. A lumbar puncture should not come first, because a suspected posterior fossa mass is a reason to image before any needle (DeMyer, pp. 545-546)."
+    "reveal": "**A posterior fossa mass with obstructive hydrocephalus**, to be confirmed by urgent imaging. The clinching sign is the papilledema, because it explains the double vision. Once the pressure is known to be high, the sixth-nerve palsy needs no address of its own (Pearl 2014, p. 43; Brazis 2011, p. 622), which leaves the wide-based gait to do the localizing, to the midline cerebellum (Brazis 2011, p. 412). Posterior fossa tumors are common in children, medulloblastoma and cystic (pilocytic) astrocytoma among them, along with ependymoma (Pearl 2014, p. 63). Arrange brain imaging the same day and involve neurosurgery at once. A lumbar puncture should not come first, because a suspected posterior fossa mass is a reason to image before any needle (DeMyer, pp. 545-546)."
   }
 ];

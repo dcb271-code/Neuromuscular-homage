@@ -135,7 +135,7 @@ export const FINDINGS: Finding[] = [
       ...ex(BRAIN, 'Cerebral lesions spare the reflex arc; reflexes are normal or brisk once the acute phase passes.'),
       brainstem: 'A brainstem lesion spares the spinal reflex arc.',
     },
-    caveat: 'An acute, severe upper motor neuron lesion (spinal or cerebral shock) can be flaccid and areflexic at first, so the cord is not excluded (DeMyer, pp. 273-274). Junction disorders usually keep reflexes; myopathies lose them only in proportion to weakness. Axonal Guillain-Barré may keep reflexes.',
+    caveat: 'An acute, severe upper motor neuron lesion (spinal or cerebral shock) can be flaccid and areflexic at first, so the cord is not excluded (DeMyer, pp. 273-274). Myasthenia usually keeps reflexes, although Lambert-Eaton syndrome and botulism can reduce them, and myopathies lose them only in proportion to weakness. Axonal Guillain-Barré may keep reflexes.',
   },
   {
     id: 'babinski', group: 'tone & reflexes',
@@ -154,11 +154,11 @@ export const FINDINGS: Finding[] = [
     label: 'Fasciculations and wasting (including tongue fasciculations)',
     fits: ['horn', 'root', 'nerve'],
     excludes: {
-      ...ex(CNS, 'Fasciculations come from denervated motor units; central lesions do not denervate muscle.'),
-      nmj: 'The junction does not denervate muscle.',
+      ...ex(CNS, 'Fasciculations come from a diseased lower motor neuron or its axon, and a central lesion leaves the lower motor neuron intact.'),
+      nmj: 'Junction disorders do not produce fasciculations, apart from an excess of cholinergic drugs or poisons.',
       muscle: 'Primary muscle disease does not fasciculate.',
     },
-    caveat: 'Brief benign fasciculations in a healthy person are common and mean nothing on their own. Tongue fasciculations in a weak, areflexic infant are the classic sign of spinal muscular atrophy.',
+    caveat: 'Brief benign fasciculations are common in healthy people and are usually harmless on their own. Tongue fasciculations in a weak, areflexic infant are the classic sign of spinal muscular atrophy.',
   },
   {
     id: 'fatigable', group: 'muscle',

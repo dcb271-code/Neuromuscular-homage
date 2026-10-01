@@ -4,6 +4,25 @@
 
 ## Queued
 
+### Owner decisions (clinical judgment calls raised by the 2026-10-01 fact-check)
+- Ages taken from the Utah exam: upgoing toe "normal in the first year" (many references allow 12-24 months) and hand preference before 12 months (some use 18). Conus at L3 at term (Brazis p. 99); newer ultrasound data put it at or above L2-L3, with a conus at or below L3 prompting a look for tethering.
+- Uncited safety additions to confirm: acquired third-nerve palsy in a child needs imaging even when the pupil is spared (m07); opioids and clonidine mimic pontine pupils, hypoglycemia can cause focal signs, and hydrocephalus causes upgaze failure (m10); hearing check before diagnosing a language disorder (m09).
+- Currency: "pseudotumor cerebri" and "cerebellar mutism" (now idiopathic intracranial hypertension and cerebellar mutism syndrome); vertigo still taught from nystagmus with only a note on HINTS; Brazis p. 493's claim about absent frontal asymmetry in autism rests on older small studies.
+- Floppy-infant next steps should name SMN1 testing and CK before EMG, and SMA newborn screening; the Duchenne case could do the same.
+
+### Content to add
+- Missing pediatric topics: transient neonatal myasthenia; myositis (juvenile dermatomyositis, benign acute childhood myositis); acute flaccid myelitis as a localizer preset; MOG antibody disease and ADEM in myelitis work-up; syrinx presenting as scoliosis; drug-induced parkinsonism and Wilson disease; non-convulsive status and when coma needs continuous EEG (link /eeg); infants with open sutures (fontanelle, head growth, setting-sun eyes), the pediatric coma scale and current pediatric brain death standards; Landau-Kleffner syndrome and ESES; craniopharyngioma and optic pathway glioma in NF1; pediatric gait mimics (in-toeing, tibial torsion).
+- New cases: regression in a 2-year-old (autism-associated regression, Landau-Kleffner, metachromatic leukodystrophy, anti-NMDA receptor encephalitis); functional weakness with a positive Hoover sign before the MRI is revealed; adolescent spondylolisthesis with L5 radiculopathy; toddler with acute ataxia unfolding over time; opioid or clonidine ingestion versus pontine hemorrhage; incidental findings (Chiari 4 mm, pineal cyst, white-matter spots, an SCN1A VUS) worked through the pretest figure.
+
+### Interactivity
+- Case player: staged re-examination ("day 3"), and a "rank by cost of missing" step so the treatable emergency must come first.
+- Calibration game: the learner states a probability before each reveal and is scored (Brier score), tying the Bayes thread to their own judgment.
+- Brainstem simulator "growing tumor" mode; third-nerve cross-section (compression versus ischemia); vertigo sorter with head impulse and skew; cord simulator conus-versus-cauda toggle and a "misleading level" mode; root-nerve presets for Erb-plus and total plexus with Horner; reflex timeline with corrected age for preterm infants.
+- "Write the note" exercise: describe a Utah video in words, with "WNL" and "non-focal" flagged.
+- Cross-site links: lesion sites in the localizer and cord, brainstem and visual figures could open the matching slice of the MRI atlas; the coma and seizure sections could link the EEG modules.
+- Tone, plantar and fatigability trainers from short video clips (Utah, CC BY-NC-SA, linked not re-hosted).
+
+### Carried over
 - **Owner's read-through.** Every module was drafted from the outline by a writer working from the books; the owner should read each one for clinical judgement, especially Modules 11 and 12 (differentials and cases).
 - **Link Utah videos per element.** Sections on reflexes, tone and gait could link the specific Utah video for each element (CC BY-NC-SA; link, do not re-host).
 - **Draw-it builder.** A layer-by-layer cord and brainstem drawing (Fisch's method) that the learner builds step by step, then places lesions on.
@@ -14,6 +33,12 @@
 
 
 ## History
+
+### 2026-10-01 · v4: proofread, American spelling, fact-check
+- **Target:** owner asked for prose that does not name the books directly, reads easily, uses American spelling, and is checked for accuracy.
+- **Change:** American spelling throughout (code identifiers untouched); sources no longer named in running prose (199 → 0); long sentences and average sentence length reduced (average 24.8 → 19.4 words); every cited page re-read against the extracted texts. About 60 corrections, among them fasciculations versus fibrillations, the double crossing of cerebellar outflow, the facial fascicle in the pons, the sixth-nerve fascicle in crossed pontine palsy, pontine pupils in coma, bladder timing after acute cord injury, the still newborn arm, botulism immune globulin and the aminoglycoside warning, and several overstatements of what a page says.
+- **Outcome:** see commit on `main`.
+- **Follow-ups:** the owner decisions and ideas under Queued.
 
 ### 2026-10-01 · v3: voice rewrite
 - **Target:** the owner found the prose read as machine-written (clipped aphorisms, "not X but Y", colon reveals, paragraph-ending zingers) and asked for a natural, narrative register in the manner of Gladwell or Lehrer.
