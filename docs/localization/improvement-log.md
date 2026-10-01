@@ -4,6 +4,7 @@
 
 ## Queued
 
+- **Neuro-Logic integration.** Eleven ranked additions from a full read of Pearl and Emsellem, with page references, in `neuro-logic-review.md`: subtract/irritate/release doctrine, a lesion-ladder widget, "which map does the deficit obey", false-localizing signs with a raised-pressure case, age as a coordinate, scan versus story, inside-the-nerve anatomy, vestibular time, a moving coma level, an aphasia switch model, episodic mimics. Also its errors not to repeat.
 - **Owner's read-through.** Every module was drafted from the outline by a writer working from the books; the owner should read each one for clinical judgement, especially Modules 11 and 12 (differentials and cases).
 - **Link Utah videos per element.** Sections on reflexes, tone and gait could link the specific Utah video for each element (CC BY-NC-SA; link, do not re-host).
 - **Draw-it builder.** A layer-by-layer cord and brainstem drawing (Fisch's method) that the learner builds step by step, then places lesions on.
@@ -11,6 +12,7 @@
 - **Dermatome accuracy.** The cord simulator's body map uses simplified dermatomes (one region per segment group); a finer map would show the saddle and the C4/T2 jump better.
 - **Pediatric numbers.** Facts with ages beyond the Utah site (e.g. primitive reflex persistence thresholds by study) need a full-text source before they go in; Zafeiriou 2004 is registered but only its abstract has been read.
 - **Cross-link the sibling sites.** Module 3's floppy infant ↔ the neurogenetics portal's hypotonia figure; Module 4 ↔ `/neuromuscular` gene pages.
+
 
 ## History
 
