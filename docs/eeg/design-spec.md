@@ -1,6 +1,6 @@
 # EEG curriculum: design spec
 
-_Written 2026-09-30. Source of truth for the EEG section of Pons Asinorum (`/eeg`). The content outline is Dylan's "Pediatric EEG Reading Curriculum" doc (claude.ai/artifact/SUCMBLecNSAETwu7t2ZUGr); the didactic architecture follows the Neurogenetics Curriculum brief (`docs/eeg/briefs/`)._
+_Written 2026-09-30. Source of truth for the EEG section of Where Before What (`/eeg`). The content outline is Dylan's "Pediatric EEG Reading Curriculum" doc (claude.ai/artifact/SUCMBLecNSAETwu7t2ZUGr); the didactic architecture follows the Neurogenetics Curriculum brief (`docs/eeg/briefs/`)._
 
 ## Purpose
 

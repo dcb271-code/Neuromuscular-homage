@@ -5,7 +5,7 @@ import figures from '@/src/eeg/figures.json';
 import type { EegFigure } from '@/src/eeg/types';
 
 export const metadata: Metadata = {
-  title: 'Pattern gallery | EEG | Pons Asinorum',
+  title: 'Pattern gallery | EEG | Where Before What',
   description: 'EEG tracings from the AES introductory atlas, as a browsable gallery and a name-the-pattern quiz.',
 };
 

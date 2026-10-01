@@ -10,7 +10,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { module: string } }): Metadata {
   const m = getEegModule(params.module);
   if (!m) return { title: 'Module not found' };
-  return { title: `${m.number}. ${m.title} | EEG | Pons Asinorum`, description: m.description };
+  return { title: `${m.number}. ${m.title} | EEG | Where Before What`, description: m.description };
 }
 
 export default function Page({ params }: { params: { module: string } }) {

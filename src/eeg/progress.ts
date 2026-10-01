@@ -18,7 +18,7 @@ export interface EegStore {
   lastModule?: string;
 }
 
-const KEY = 'pons.eeg.v1';
+const KEY = 'pons.eeg.v1'; // historical key from the site's first name; changing it would reset everyone's progress
 const EMPTY: EegStore = { read: {}, quiz: {}, flags: {}, missed: {}, signOff: {} };
 
 function load(): EegStore {

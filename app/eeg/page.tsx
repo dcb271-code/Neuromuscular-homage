@@ -4,7 +4,7 @@ import { CurriculumHome } from '@/components/eeg/CurriculumHome';
 import { EEG_MODULES } from '@/src/eeg/modules';
 
 export const metadata: Metadata = {
-  title: 'EEG | Pons Asinorum',
+  title: 'EEG | Where Before What',
   description: 'A pediatric EEG reading curriculum: twelve self-paced modules from electrodes and montages to reading a neonatal or PICU record and writing the report.',
 };
 

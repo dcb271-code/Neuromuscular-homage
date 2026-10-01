@@ -1,4 +1,4 @@
-// Top-level learning sections of Pons Asinorum.
+// Top-level learning sections of Where Before What.
 // Used by the landing page, the header nav, and the section stub pages.
 
 export type SectionStatus = 'live' | 'partial' | 'soon';

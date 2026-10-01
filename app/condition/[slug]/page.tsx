@@ -20,7 +20,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   const cond = condMap.get(params.slug);
   if (!cond) return { title: 'Condition not found' };
   return {
-    title: `${cond.name} | Pons Asinorum`,
+    title: `${cond.name} | Where Before What`,
     description: cond.content?.slice(0, 200) || `Condition page for ${cond.name}`,
   };
 }

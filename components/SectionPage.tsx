@@ -10,7 +10,7 @@ export default function SectionPage({ slug, children, hidePlanned }: { slug: str
   return (
     <div style={{ maxWidth: '860px', margin: '0 auto' }}>
       <nav style={{ fontSize: '12px', color: '#94a3b8', marginBottom: '24px', display: 'flex', gap: '6px', alignItems: 'center' }}>
-        <Link href="/" style={{ color: '#64748b', textDecoration: 'none' }}>Pons Asinorum</Link>
+        <Link href="/" style={{ color: '#64748b', textDecoration: 'none' }}>Where Before What</Link>
         <span>/</span>
         <span style={{ color: '#1e293b', fontWeight: 600 }}>{section.name}</span>
       </nav>

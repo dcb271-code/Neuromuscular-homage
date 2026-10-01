@@ -2,6 +2,8 @@ import Link from 'next/link';
 import indexData from '@/src/data/index.json';
 import genesEnriched from '@/src/data/genes-enriched.json';
 import { SECTIONS, type Section } from '@/src/sections';
+import { EEG_MODULES } from '@/src/eeg/modules';
+import eegFigures from '@/src/eeg/figures.json';
 
 type Summary = { crawledPages: number; totalSections: number; withGenes: number; withInheritance: number };
 const summary = indexData as Summary;
@@ -22,10 +24,10 @@ export default function Landing() {
       }}>
         <SectionLabel>About the name</SectionLabel>
         <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.65, margin: 0 }}>
-          <em>Pons asinorum</em>, the bridge of asses: Euclid&apos;s fifth proposition, where
-          medieval students balked like mules at the water&apos;s edge. Every discipline has one.
-          Neurology, with characteristic literalism, put its bridge in the brainstem. No shame in
-          standing at the foot of it. Only in refusing to cross.
+          <strong>Where before what.</strong> The oldest rule in neurology: find the lesion before you
+          name the disease. A weak hand, a lost reflex, a child who stopped walking are addresses first and
+          diagnoses second. Fix the address and the list of suspects writes itself; skip it and the list is
+          everyone. The sections here keep that order, from muscle and nerve to image to rhythm.
         </p>
       </div>
 
@@ -55,12 +57,13 @@ function LandingHero() {
           Neurology · Learning
         </span>
         <span style={{ display: 'inline-flex', alignItems: 'baseline', flexWrap: 'wrap', justifyContent: 'center', columnGap: '0.35em' }}>
-          <span style={{ fontSize: 'clamp(40px, 12vw, 64px)', fontWeight: 800, color: '#60a5fa', letterSpacing: '-2px' }}>PONS</span>
-          <span style={{ fontSize: 'clamp(40px, 12vw, 64px)', fontWeight: 800, color: '#60a5fa', letterSpacing: '-2px' }}>ASINORUM</span>
+          <span style={{ fontSize: 'clamp(36px, 11vw, 60px)', fontWeight: 800, color: '#60a5fa', letterSpacing: '-2px' }}>WHERE</span>
+          <span style={{ fontSize: 'clamp(36px, 11vw, 60px)', fontWeight: 600, color: '#93c5fd', letterSpacing: '-1px' }}>BEFORE</span>
+          <span style={{ fontSize: 'clamp(36px, 11vw, 60px)', fontWeight: 800, color: '#60a5fa', letterSpacing: '-2px' }}>WHAT</span>
         </span>
       </div>
       <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: 1.5, letterSpacing: '0.01em' }}>
-        <em>the bridge of asses</em>
+        <em>localize the lesion before you name the disease</em>
         <br />
         A (Pediatric) Neurology Learning Resource
       </p>
@@ -106,11 +109,18 @@ function SectionCard({ section }: { section: Section }) {
         {section.blurb}
       </p>
 
-      {live ? (
+      {live && section.slug === 'neuromuscular' ? (
         <div style={{ display: 'flex', gap: '14px', marginTop: '4px', flexWrap: 'wrap' }}>
           <Stat value={genesEnriched.length.toLocaleString()} label="gene pages" />
           <Stat value={summary.totalSections.toLocaleString()} label="entries" />
           <Stat value={summary.crawledPages.toLocaleString()} label="source pages" />
+        </div>
+      ) : live && section.slug === 'eeg' ? (
+        <div style={{ display: 'flex', gap: '14px', marginTop: '4px', flexWrap: 'wrap' }}>
+          <Stat value={String(EEG_MODULES.length)} label="modules" />
+          <Stat value={String(EEG_MODULES.reduce((n, m) => n + m.sections.length, 0))} label="sections" />
+          <Stat value={String(EEG_MODULES.reduce((n, m) => n + m.quiz.length + m.sections.filter(s => s.question).length, 0))} label="questions" />
+          <Stat value={String(eegFigures.length)} label="tracings" />
         </div>
       ) : partial ? (
         <div style={{ display: 'grid', gap: '4px', marginTop: '4px' }}>

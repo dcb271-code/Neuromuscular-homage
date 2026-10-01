@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 import GlobalSearch from '@/components/GlobalSearch';
 import { SECTIONS } from '@/src/sections';
+import { SITE } from '@/src/site';
 
 export const metadata: Metadata = {
-  title: 'Pons Asinorum — a neurology learning resource',
-  description: 'Pons Asinorum: neuromuscular disease index, neuroradiology, localization and the neuro exam, and EEG learning resources.',
+  title: `${SITE.name}: localize first`,
+  description: SITE.description,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -24,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   letterSpacing: '-0.5px',
                   color: '#f1f5f9',
                 }}>
-                  Pons <span style={{ color: '#60a5fa' }}>Asinorum</span>
+                  Where<span style={{ color: '#60a5fa' }}>Before</span>What
                 </span>
                 <div className="nm-hide-sm" style={{
                   fontSize: '9px',
@@ -33,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   marginTop: '2px',
                   textTransform: 'uppercase',
                   fontFamily: 'ui-monospace, monospace',
-                }}>ponsasinorum.vercel.app</div>
+                }}>{SITE.domain}</div>
               </div>
             </a>
 

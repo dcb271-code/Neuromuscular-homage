@@ -18,7 +18,7 @@ export function generateMetadata({ params }: { params: { symbol: string } }) {
   if (!gene) return { title: 'Gene not found' };
   const title = `${gene.symbol} — ${gene.fullName || gene.rawName}`;
   return {
-    title: `${title} | Pons Asinorum`,
+    title: `${title} | Where Before What`,
     description: gene.phenotype || gene.ncbiSummary || `Gene page for ${gene.symbol}`,
   };
 }

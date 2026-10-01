@@ -8,7 +8,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Neuromuscular | Pons Asinorum',
+  title: 'Neuromuscular | Where Before What',
   description: 'Searchable index of neuromuscular diseases, genes, and inheritance patterns, sourced from neuromuscular.wustl.edu',
 };
 
