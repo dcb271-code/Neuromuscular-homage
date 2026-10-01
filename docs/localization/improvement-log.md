@@ -15,6 +15,12 @@
 
 ## History
 
+### 2026-10-01 · v3: voice rewrite
+- **Target:** the owner found the prose read as machine-written (clipped aphorisms, "not X but Y", colon reveals, paragraph-ending zingers) and asked for a natural, narrative register in the manner of Gladwell or Lehrer.
+- **Change:** `docs/localization/style-guide.md`; `scripts/style-loc.mjs` counts the habits; `scripts/check-preserve-loc.mjs` guards citations, links, figures and answer keys against git HEAD. All twelve modules, the six cases, the openers, widget copy, track blurbs and the section home rewritten. Totals before → after: short sentences 10% → 2%, antitheses 28 → 0, colon reveals 213 → 7, stock phrases 12 → 0, paragraph-ending zingers 49 → 1.
+- **Outcome:** see commit on `main`. No citation, figure placement or answer key changed.
+- **Follow-ups:** owner read-through for voice; hypothetical scenes should read as hypothetical.
+
 ### 2026-10-01 · v2: Neuro-Logic integration, Bayes, history and parable openers
 - **Target:** integrate the eleven recommendations in `neuro-logic-review.md`, add a Bayesian thread (localization as the prior for imaging, EEG and genetic results), and open every module with a parable, a historical note, or both.
 - **Change:**

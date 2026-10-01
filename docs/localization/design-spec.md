@@ -4,7 +4,7 @@ _Written 2026-10-01. Source of truth for the `/localization` section of Where Be
 
 ## Why this section is the heart of the site
 
-The site is named for the doctrine this section teaches: **find the lesion before you name the disease.** Every other section is an application of it. The tone is therefore a little more philosophical than the EEG curriculum: each module argues for a way of thinking, then hands the reader a tool to practise it.
+The site is named for the doctrine this section teaches: **find the lesion before you name the disease.** Every other section is an application of it. The writing argues for a way of thinking and then hands the reader a tool to practise it. Its voice is narrative and conversational, in the register of good science writing, and is set out in `style-guide.md`.
 
 ## Sources and how they are used
 
@@ -83,7 +83,7 @@ Same as `docs/eeg/design-spec.md` (markup subset, 4-option decision questions wi
 
 1. **Own words.** Never reproduce book text. A short phrase in quotation marks only when it is memorable, with author and page.
 2. **Numbers.** A specific number, age, percentage or threshold must come from a verified PMID in `src/loc/sources.ts`, from the Utah site, or from a book page the writer actually read in the local PDF (cite as e.g. "(Brazis 2011, p. 99)"). If a number cannot be sourced, write the principle without it.
-3. **Philosophy earns its place.** Each module opens with a short argument for why the idea matters, then mechanism, then the bedside decision. History (Broca, Jackson, Charcot, Gowers, Babinski) is used when it sharpens the point, not as decoration.
+3. **Write the way the style guide describes.** Each section starts from something concrete (a child, a historical figure, a puzzle), explains the mechanism, and arrives at the bedside decision. History is used when it illuminates the idea, always from a cited page. `node scripts/style-loc.mjs` counts the habits to avoid.
 4. **Children first.** Every module names what changes in a child: development, the infant exam, pediatric causes. Adult-only content (spondylosis, metastatic compression, elderly gait) is translated or left out.
 5. **Admit the shaky rules.** Where the books disagree or a rule is a heuristic with exceptions (upper-face sparing, the rule of 4, conus = UMN), say so.
 6. **Link out, don't re-teach.** Neuromuscular disease detail links to `/neuromuscular`; EEG to `/eeg`; imaging to `/neuroradiology`.

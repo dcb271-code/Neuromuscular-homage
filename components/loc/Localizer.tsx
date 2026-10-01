@@ -9,10 +9,10 @@ import { Chip, Label, WidgetFrame } from './ui';
 
 const GROUP_ORDER: FindingGroup[] = ['distribution', 'tone & reflexes', 'muscle', 'sensation', 'other'];
 const SUBTITLES: Record<string, string> = {
-  intro: 'Pick what you found. Each finding rules levels out; what survives is where the lesion can be.',
-  full: 'Every finding has levels it fits and levels it cannot come from. Combine them; open a struck level to see why it fell.',
-  floppy: 'A floppy infant: is the problem central (brain) or peripheral (motor unit)?',
-  'motor-unit': 'Four addresses in the motor unit, each with a fingerprint.',
+  intro: 'Pick the findings in front of you. Each one rules out some levels of the nervous system, and whatever survives is where the lesion can be.',
+  full: 'Every finding fits some levels and cannot come from others. Combine several, and open any level that has been struck out to see the reason.',
+  floppy: 'Faced with a floppy infant, the first question is whether the problem lies in the brain or in the motor unit.',
+  'motor-unit': 'The motor unit has four parts that can fail, and each leaves a recognisable pattern on the examination.',
 };
 
 export function Localizer({ accent, variant = 'full' }: { accent: string; variant?: keyof typeof FINDING_SETS }) {

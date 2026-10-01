@@ -5,10 +5,10 @@
 
 export type Voice = 'subtract' | 'irritate' | 'release' | 'fill';
 export const VOICES: { id: Voice; name: string; gist: string }[] = [
-  { id: 'subtract', name: 'Subtract', gist: 'A function is lost: a negative sign.' },
-  { id: 'irritate', name: 'Irritate', gist: 'The same tissue is excited: a positive sign, pointing the other way.' },
-  { id: 'release', name: 'Release', gist: 'A restraint is lost, so something below it speaks louder.' },
-  { id: 'fill', name: 'Fill in', gist: 'Input is lost and the brain supplies its own answer.' },
+  { id: 'subtract', name: 'Goes quiet', gist: 'Damaged tissue stops working, giving a negative sign.' },
+  { id: 'irritate', name: 'Fires', gist: 'Excited tissue overacts, giving a positive sign that often points the other way.' },
+  { id: 'release', name: 'Lets go', gist: 'A structure that held something back fails, and what it restrained becomes overactive.' },
+  { id: 'fill', name: 'Fills in', gist: 'An input is lost and the brain supplies an answer of its own.' },
 ];
 
 export interface VoiceCell { sign: string; cite: string }
@@ -18,7 +18,7 @@ export const STRUCTURES: Structure[] = [
   { id: 'fef', name: 'Frontal eye field', cells: {
     subtract: { sign: 'The eyes drift toward the side of the lesion: the opposite eye field pushes unopposed.', cite: 'Pearl 2014, pp. 9, 43' },
     irritate: { sign: 'A seizure drives the eyes away from the side of the focus.', cite: 'Pearl 2014, p. 9' },
-  }, note: 'Same address, opposite directions. The direction of the eyes tells you whether tissue is lost or firing.' },
+  }, note: 'Because a destroyed eye field and a firing one push the eyes in opposite directions, the direction of the eyes, read with the rest of the exam, tells you which is happening.' },
   { id: 'motor', name: 'Motor cortex', cells: {
     subtract: { sign: 'Weakness of the opposite face, arm or leg, in proportion to which part of the strip is lost.', cite: 'Pearl 2014, pp. 7-8' },
     irritate: { sign: 'Clonic jerking that can march from face to hand to arm as the discharge spreads along the strip.', cite: 'Pearl 2014, p. 10' },
@@ -26,10 +26,10 @@ export const STRUCTURES: Structure[] = [
   { id: 'ust', name: 'Upper motor neuron pathway', cells: {
     subtract: { sign: 'Weakness, loss of fine finger movement.', cite: 'Pearl 2014, p. 108' },
     release: { sign: 'The lower motor neuron, freed from restraint, overreacts: brisk reflexes, clonus, rising tone, an upgoing toe.', cite: 'Pearl 2014, pp. 65, 108' },
-  }, note: 'Spasticity is not something the lesion adds. It is something the lesion stops holding back.' },
+  }, note: 'Spasticity comes from activity the upper motor neurons used to restrain, which is why it appears below a lesion rather than at it.' },
   { id: 'frontal', name: 'Frontal lobes (maturing or failing)', cells: {
     release: { sign: 'Infant reflexes held down by maturation (grasp, suck, rooting, snout) reappear when frontal control fails later in life.', cite: 'Pearl 2014, p. 114; Utah' },
-  }, note: 'In an infant the same reflexes are normal and should fade on schedule. Age decides whether a reflex is a milestone or a sign.' },
+  }, note: 'In an infant these reflexes are normal and should fade on schedule, so the same finding means something different depending on the age of the child.' },
   { id: 'occipital', name: 'Occipital cortex', cells: {
     subtract: { sign: 'A hemianopia on the opposite side.', cite: 'Pearl 2014, pp. 27-28' },
     irritate: { sign: 'Simple visual phenomena: flashes, zigzags, coloured lights.', cite: 'Pearl 2014, p. 30' },

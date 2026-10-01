@@ -33,14 +33,14 @@ export function LocHome({ modules }: { modules: EegModule[] }) {
 
       <div className="rounded-2xl border border-slate-200 bg-white p-5 mb-6">
         <p className="text-[15px] text-slate-700 leading-relaxed max-w-[720px]">
-          A weak hand, a lost reflex, a child who stopped walking: each is an <b>address</b> before it is a diagnosis. The exam tells you <b>where</b>; the story tells you <b>when</b>; together they tell you <b>what</b>. These twelve modules teach that order, with figures you can push on: every one is computed from a model of the anatomy, not copied from a book.
+          When a child stops walking, it is tempting to reach straight for a diagnosis. Neurologists have long done something else first. They use the examination to work out <b>where</b> in the nervous system the problem must be, use the story of how it unfolded to judge <b>when</b> and how fast, and only then ask <b>what</b> it is. These twelve modules teach that habit with figures you can experiment with, each one calculated from a model of the anatomy so that you can change a finding and watch the answer move.
         </p>
       </div>
 
       {modules.some(m => m.core) && (
         <div className="rounded-2xl border border-slate-200 bg-white px-5 py-4 mb-6">
           <div className="text-[10px] font-bold uppercase tracking-[0.1em] mb-1" style={{ color: accent }}>Short on time? The core path</div>
-          <p className="text-[13px] text-slate-600 leading-relaxed mb-2">Six modules carry the method. Do these first; the rest deepen it.</p>
+          <p className="text-[13px] text-slate-600 leading-relaxed mb-2">If you only have time for part of the course, these six modules carry the core method, and the others build on them.</p>
           <div className="flex flex-wrap gap-1.5">
             {modules.filter(m => m.core).map(m => (
               <Link key={m.id} href={`/localization/${m.id}`} className="no-underline rounded-lg border px-2.5 py-1 text-[12px] font-medium" style={{ borderColor: m.color + '55', color: m.color, background: m.color + '0a' }}>

@@ -44,7 +44,7 @@ export function VisualFields({ accent }: { accent: string }) {
   const info = SITES.find(s => s.id === site)!;
   const N = NODES;
   return (
-    <WidgetFrame accent={accent} label="Visual pathway" subtitle="Tap a point on the pathway. Each eye's field is worked out by following its fibres: only nasal fibres cross at the chiasm."
+    <WidgetFrame accent={accent} label="Visual pathway" subtitle="Tap a point on the pathway. Each eye's field is calculated by following its fibres, and only the nasal fibres cross at the chiasm."
       footnote="Fields are drawn as the patient sees them, left field on the left. Black is lost. Macular sparing in occipital lesions reflects the occipital pole's dual blood supply.">
       <div className="grid gap-4 md:grid-cols-[minmax(0,320px)_1fr] items-start">
         <div className="rounded-xl border border-slate-200 bg-white p-2">

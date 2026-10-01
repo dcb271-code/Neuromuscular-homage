@@ -52,7 +52,7 @@ export const SECTIONS: Section[] = [
     short: 'Localization',
     tagline: 'From findings to lesion',
     blurb:
-      'Where before what: the doctrine this site is named for. Twelve interactive modules on localization and the neurologic exam in children, from the first fork between upper and lower motor neuron to building the differential.',
+      'The habit this site is named for: working out where the problem is before deciding what it is. Twelve interactive modules on localization and the neurologic examination in children, from telling upper from lower motor neuron weakness to building a differential.',
     color: '#0d9488',
     status: 'live',
     planned: [],

@@ -27,7 +27,7 @@ export function BrainstemSim({ accent }: { accent: string }) {
   const hit = (s: string) => (zone === 'medial' ? MEDIAL : LATERAL).includes(s) && !(level === 'midbrain' && s === 'Sensory nucleus of 5');
 
   return (
-    <WidgetFrame accent={accent} label="Rule of four" subtitle="Four medial structures begin with M, four lateral ones with S; four cranial nerves per level. Place the lesion and read the result."
+    <WidgetFrame accent={accent} label="Rule of four" subtitle="The rule of four groups the brainstem into four medial structures beginning with M, four lateral ones beginning with S, and four cranial nerves at each level. Place a lesion to see what follows."
       footnote="A teaching heuristic (Gates 2005; Gates 2011), not a law. Its known exceptions are listed with each result.">
       <div className="flex flex-wrap gap-3 mb-3">
         <div><Label>Level</Label><Segmented accent={accent} value={level} onChange={setLevel} options={[{ id: 'midbrain', label: 'Midbrain' }, { id: 'pons', label: 'Pons' }, { id: 'medulla', label: 'Medulla' }]} /></div>

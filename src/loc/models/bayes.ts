@@ -39,13 +39,13 @@ export interface TestScenario {
 export const TESTS: TestScenario[] = [
   { id: 'mri', name: 'Brain MRI', finding: 'The report describes an abnormality', target: 'the abnormality is the cause of the symptom',
     falsePositive: 0.211, fpSource: 'Incidental findings in 21.1% of 9-10-year-olds scanned for research (Li 2021)', defaultSensitivity: 0.9,
-    note: 'A scan sees structure, not function: a child with Guillain-Barré syndrome or botulism has a normal brain MRI. A normal result only helps if the exam predicted a structural lesion the scan could see.' },
+    note: 'A scan shows structure rather than function, and a child weak from Guillain-Barré syndrome or botulism has a normal brain MRI. A normal result only helps if the exam predicted a structural lesion the scan could see.' },
   { id: 'eeg', name: 'Routine EEG', finding: 'The report describes epileptiform discharges', target: 'the events are epileptic seizures',
     falsePositive: 0.065, fpSource: 'Epileptiform discharges in 6.5% of healthy 6-13-year-olds (Borusiak 2010)', defaultSensitivity: 0.5,
-    note: 'Discharges are a trait some healthy children carry. Normal background fluctuations are also overread as epileptiform (Benbadis 2003). The story of the events sets the prior.' },
+    note: 'Some healthy children carry discharges as a trait. Normal background fluctuations are also overread as epileptiform (Benbadis 2003). The story of the events sets the prior.' },
   { id: 'gene', name: 'Gene panel or exome', finding: 'The report lists a variant in a gene that can cause the phenotype', target: 'the variant explains the child',
     falsePositive: null, fpSource: 'No single rate applies; laboratories classify each variant on a five-step scale from benign to pathogenic (Richards 2015)', defaultSensitivity: 0.5,
-    note: 'A variant of uncertain significance is not a positive result. Whether it is worth pursuing depends on how well the child, examined and localized, matches what that gene does.' },
+    note: 'A variant of uncertain significance should not be read as a positive result. Whether it is worth pursuing depends on how well the child, examined and localized, matches what that gene does.' },
 ];
 
 /** Pretest probabilities set by localization (illustrative). */

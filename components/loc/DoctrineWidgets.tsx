@@ -20,8 +20,8 @@ export function LesionVoices({ accent }: { accent: string }) {
   const [sid, setSid] = useState('fef');
   const st = STRUCTURES.find(s => s.id === sid)!;
   return (
-    <WidgetFrame accent={accent} label="Three voices of a lesion" subtitle="Choose a structure. The same address can lose a function, fire it, or stop restraining what lies below."
-      footnote="Examples gathered from Pearl 2014 (pages on each card), DeMyer and the Utah PediNeuroLogic Exam. DeMyer frames the positive and negative effects of motor lesions as deficit and release phenomena (DeMyer, p. 292); the fourth voice and the grouping are ours.">
+    <WidgetFrame accent={accent} label="How a lesion shows itself" subtitle="Choose a structure and see the kinds of sign it can produce, depending on whether the damage silences it, excites it, or removes the brake it applies to something else."
+      footnote="Examples gathered from Pearl 2014 (pages on each card), DeMyer and the Utah PediNeuroLogic Exam. DeMyer frames the positive and negative effects of motor lesions as deficit and release phenomena (DeMyer, p. 292); the fourth category and the grouping are ours.">
       <div className="mb-3"><Label>Structure</Label>
         <div className="flex flex-wrap gap-1.5">{STRUCTURES.map(s => <Chip key={s.id} accent={accent} on={sid === s.id} onClick={() => setSid(s.id)}>{s.name}</Chip>)}</div>
       </div>
@@ -35,7 +35,7 @@ export function LesionVoices({ accent }: { accent: string }) {
                 <span className="text-[11px] text-slate-400">{v.gist}</span>
               </div>
               {cell ? <p className="text-[13px] text-slate-700 leading-snug">{cell.sign} <span className="text-slate-400 text-[11px]">({cell.cite})</span></p>
-                : <p className="text-[12.5px] text-slate-400 leading-snug">No classic sign in this voice.</p>}
+                : <p className="text-[12.5px] text-slate-400 leading-snug">This structure has no classic sign of this kind.</p>}
             </div>
           );
         })}
@@ -65,7 +65,7 @@ export function Pretest({ accent }: { accent: string }) {
   }, [f]);
   const colour = { tp: accent, fn: '#fff', fp: '#f59e0b', tn: '#e2e8f0' } as const;
   return (
-    <WidgetFrame accent={accent} label="The exam as a prior" subtitle="Same result, different children. Choose a test and how well the exam predicted the finding, then read the result."
+    <WidgetFrame accent={accent} label="The exam as a prior" subtitle="Choose a test and how well the examination predicted the finding, and watch how much the same positive report is worth for a child like this one."
       footnote={<>Bayes in odds form: post-test odds = pretest odds × likelihood ratio (Gill 2005). False-positive rates are published: incidental MRI findings in 21.1% of 9-10-year-olds (Li 2021); epileptiform discharges in 6.5% of healthy 6-13-year-olds (Borusiak 2010). Pretest probabilities and sensitivities are illustrative; move them.</>}>
       <div className="grid gap-3 sm:grid-cols-2 mb-3">
         <div><Label>Test</Label><Segmented accent={accent} value={tid} onChange={setTid} options={TESTS.map(t => ({ id: t.id, label: t.name }))} /></div>
@@ -122,7 +122,7 @@ export function LesionLadder({ accent }: { accent: string }) {
   const deficits = deficitsAt(ladder, i);
   const top = [...ladder.rungs.keys()].reverse();
   return (
-    <WidgetFrame accent={accent} label="Lesion ladder" subtitle="Move the lesion up the nerve. Everything that branches below it is lost, so the highest lost branch marks the site."
+    <WidgetFrame accent={accent} label="Lesion ladder" subtitle="Move the lesion up the nerve and watch the deficits accumulate, since a lesion takes out every branch that leaves below it."
       footnote={ladder.footnote}>
       <div className="mb-3"><Segmented accent={accent} value={lid} onChange={v => { setLid(v); setIdx(0); }} options={LADDERS.map(l => ({ id: l.id, label: l.short }))} /></div>
       <div className="grid gap-4 md:grid-cols-[minmax(0,260px)_1fr] items-start">
@@ -152,7 +152,7 @@ export function LesionLadder({ accent }: { accent: string }) {
           </ul>
           <p className="text-[12.5px] text-slate-700 leading-snug"><b style={{ color: accent }}>The test that places it:</b> {rung.clue}.</p>
           <p className="text-[12px] text-slate-500 leading-snug mt-1">In a child: {rung.example}.</p>
-          {rung.mode === 'replace' && <p className="text-[12px] text-slate-500 leading-snug mt-1">◆ Above a dashed line the pattern changes rather than grows: the lesion is no longer on the same cable.</p>}
+          {rung.mode === 'replace' && <p className="text-[12px] text-slate-500 leading-snug mt-1">◆ Above a dashed line the pattern changes shape instead of growing, because the lesion has left the nerve itself.</p>}
         </div>
       </div>
     </WidgetFrame>
@@ -167,7 +167,7 @@ export function MapSort({ accent }: { accent: string }) {
   const r = pick ? checkMap(c.id, pick) : null;
   const go = (d: number) => { setK((k + d + MAP_CASES.length) % MAP_CASES.length); setPick(null); };
   return (
-    <WidgetFrame accent={accent} label="Which map does the deficit obey?" subtitle="Each mechanism respects a different map of the body. Read the pattern, name the map, and the mechanism follows."
+    <WidgetFrame accent={accent} label="Which map does the deficit obey?" subtitle="Strokes, neuropathies, root lesions and tumours each respect a different map of the body. Read the pattern and decide which map it follows."
       footnote="Maps after Pearl 2014 (pages on each answer). Cases are teaching sketches, not complete differentials.">
       <div className="flex items-center gap-2 mb-2">
         <button onClick={() => go(-1)} className="px-2 py-1 rounded-md border border-slate-200 bg-white text-[12px]" aria-label="Previous pattern">←</button>
@@ -198,7 +198,7 @@ export function AphasiaSwitches({ accent }: { accent: string }) {
   const [s, setS] = useState<Switches>({ fluent: false, comprehends: true, repeats: false, names: false });
   const a = classify(s);
   return (
-    <WidgetFrame accent={accent} label="Aphasia as four switches" subtitle="Same picture, different lesion. Set the four bedside tests and watch the syndrome, and its address, fall out."
+    <WidgetFrame accent={accent} label="Aphasia as four switches" subtitle="Every patient below describes the same picture. Set the four bedside tests and see which syndrome, and which part of the brain, fits the result."
       footnote="After Pearl 2014, p. 20 (Table 2.1), with conduction and mixed transcortical aphasia from Brazis 2011, pp. 524 and 448. The adult classification; acquired aphasia in children does not always follow it. Sample speech is ours.">
       <div className="grid gap-2 sm:grid-cols-2 mb-3">
         {SWITCHES.map(w => (
@@ -222,7 +222,7 @@ export function VertigoSorter({ accent }: { accent: string }) {
   const v = vestVerdict(on);
   const toggle = (id: string) => setOn(x => x.includes(id) ? x.filter(y => y !== id) : [...x, id]);
   return (
-    <WidgetFrame accent={accent} label="Vertigo: ear or brain?" subtitle="Choose what you find. Peripheral features add up; a single central feature overrules them."
+    <WidgetFrame accent={accent} label="Vertigo: ear or brain?" subtitle="Mark what you find. Peripheral features can accumulate without settling the question, while a single central feature is enough to treat the problem as central."
       footnote="Features after Brazis 2011, p. 265, and Pearl 2014, pp. 119-122. A teaching sort, not a validated rule.">
       <div className="grid gap-1.5 mb-3">
         {VEST_FEATURES.map(f => (

@@ -17,7 +17,7 @@ export function ExamOrder({ accent }: { accent: string }) {
   const done = order.length === EXAM_STEPS.length;
   const score = done ? examOrderScore(order) : null;
   return (
-    <WidgetFrame accent={accent} label="Examining a toddler" subtitle="Tap the steps in the order you would do them. Then see what the order costs you."
+    <WidgetFrame accent={accent} label="Examining a toddler" subtitle="Tap the steps in the order you would do them with a toddler, and see which ones you have made harder by doing them too early."
       footnote={'After the owner\'s rule: stop, look and listen; make it a game; save the worst for last. Reflexes late and on a lap (Utah PediNeuroLogic Exam).'}>
       <div className="nm-2col">
         <div>
@@ -65,7 +65,7 @@ export function ReflexTimeline({ accent }: { accent: string }) {
   const [m, setM] = useState(6);
   const tone = (t: string) => t === 'ok' ? { background: accent + '18', color: accent } : t === 'flag' ? { background: '#1e293b', color: '#fff' } : t === 'mid' ? { background: '#e2e8f0', color: '#334155' } : { background: '#f1f5f9', color: '#94a3b8' };
   return (
-    <WidgetFrame accent={accent} label="Reflexes that come and go" subtitle="Drag the age. Primitive reflexes should fade; postural reactions should arrive. Either one out of time is an upper motor neuron sign in an infant."
+    <WidgetFrame accent={accent} label="Reflexes that come and go" subtitle="Drag the age slider. Primitive reflexes should fade and postural reactions should appear on schedule, and in an infant either one arriving out of time suggests an upper motor neuron problem."
       footnote={<>Ages from the <a href="https://neurologicexam.med.utah.edu/pediatric/html/home_exam.html" target="_blank" rel="noopener noreferrer" className="underline">Utah PediNeuroLogic Exam</a> (Larsen and Stensaas), which has a video of each reflex. Boundaries are typical ages, not cut-offs; asymmetry at any age matters more than timing.</>}>
       <div className="mb-3">
         <div className="flex items-baseline justify-between"><Label>Age</Label><span className="font-mono text-[14px] font-bold" style={{ color: accent }}>{m === 0 ? 'newborn' : `${m} month${m === 1 ? '' : 's'}`}</span></div>
@@ -149,7 +149,7 @@ export function GaitByLevel({ accent }: { accent: string }) {
   const [g, setG] = useState(GAITS[0].id);
   const gait = GAITS.find(x => x.id === g)!;
   return (
-    <WidgetFrame accent={accent} label="Gait by level" subtitle="Every level of the nervous system has a walk. Pick one; read where it points and what keeps it company in a child."
+    <WidgetFrame accent={accent} label="Gait by level" subtitle="Each level of the nervous system changes walking in its own way. Pick a gait to see where it points and what usually accompanies it in a child."
       footnote="After Pearl 2014, pp. 114-117 (bottom up, muscle to cortex); toe walking after DeMyer, p. 338.">
       <div className="flex flex-wrap gap-1.5 mb-3">{GAITS.map(x => <Chip key={x.id} accent={accent} on={g === x.id} onClick={() => setG(x.id)}>{x.name}</Chip>)}</div>
       <div className="rounded-xl border border-slate-200 bg-white p-4">
@@ -177,7 +177,7 @@ export function ComaLevels({ accent }: { accent: string }) {
   }, [stage]);
   const pick = (sid: string, oid: string) => { setStage(null); setChoice(c => ({ ...c, [sid]: c[sid] === oid ? '' : oid })); };
   return (
-    <WidgetFrame accent={accent} label="Coma as a level-finder" subtitle="Choose what you see for each sign. If they all point to one level, the lesion is there; if they scatter, think metabolic."
+    <WidgetFrame accent={accent} label="Coma as a level-finder" subtitle="Choose what you see for each sign. When they agree on one level, a structural lesion there is likely, and when they disagree, a metabolic cause becomes more likely."
       footnote="After Pearl 2014, pp. 94-98, and Brazis 2011, pp. 608-613. Describe responsiveness in plain words rather than labels (Brazis 2011, p. 603). The herniation sequence shows a level that moves: the signs descend rather than scatter.">
       <div className="grid gap-4 md:grid-cols-[1fr_minmax(0,220px)]">
         <div className="space-y-3">
@@ -215,7 +215,7 @@ export function WhereWhen({ accent }: { accent: string }) {
   const t = TEMPOS.find(x => x.id === tempo)!;
   const ex = WHERE_WHEN[level]?.[tempo] ?? [];
   return (
-    <WidgetFrame accent={accent} label="Where × when → what" subtitle="The exam gives the level; the time course gives the mechanism. Choose both and the list writes itself."
+    <WidgetFrame accent={accent} label="Where × when → what" subtitle="The examination gives you the level and the time course suggests the mechanism. Choose both to see the causes that fit a child at that address."
       footnote="Tempo and mechanism after Brazis 2011, p. 4, with the child's own tempos added (static, regression). Examples are illustrative, not a complete differential.">
       <div className="mb-3"><Label>Where</Label><div className="flex flex-wrap gap-1.5">{LEVELS.map(l => <Chip key={l.id} accent={accent} on={level === l.id} onClick={() => setLevel(l.id)}>{l.short}</Chip>)}</div></div>
       <div className="mb-3"><Label>When</Label><div className="flex flex-wrap gap-1.5">{TEMPOS.map(x => <Chip key={x.id} accent={accent} on={tempo === x.id} onClick={() => setTempo(x.id)}>{x.name}</Chip>)}</div></div>
