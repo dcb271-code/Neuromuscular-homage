@@ -1,0 +1,219 @@
+{
+  "id": "m12-cases",
+  "number": 12,
+  "title": "Cases: where, when, what",
+  "short": "Cases",
+  "description": "Five children to work from history to examination to level, tempo and differential, each followed by the attending's debrief.",
+  "why": "The doctrine only counts when it works on a real child, in order: where, then when, then what.",
+  "track": "synthesis",
+  "tags": [
+    "Clinical Decision-Making"
+  ],
+  "difficulty": "intermediate",
+  "duration": "40 min",
+  "color": "#475569",
+  "objectives": [
+    "Work a case in order: choose the high-yield examination, commit to a level, then a tempo, then a differential.",
+    "Name the one sign that clinches each localization and the trap that most often derails it.",
+    "Present a case in where, when, what form."
+  ],
+  "sections": [
+    {
+      "title": "Case 1: a 6-year-old who has stopped walking",
+      "figure": "case:gbs",
+      "discussion": true,
+      "content": "**Where.** The examination that matters most here takes a minute: the reflexes. They are gone everywhere, and areflexia pushes the lesion out of the brain and spinal cord and into the motor unit. Distal tingling then removes the horn cell, the junction and the muscle, all of which are purely motor, and leaves the nerves and roots. Guillain-Barré syndrome is a polyradiculoneuropathy, so if you chose nerve or root, you were right. The bilateral facial weakness is not a second lesion: the facial nerves are peripheral nerves, and the same process can reach them.\n\n**When.** Four days of climbing weakness, two weeks after an infection. Hours to days points to an immune or inflammatory cause.\n\n**What.** Guillain-Barré is the diagnosis, but the list has to protect two others. Tick paralysis looks the same and is cured by finding the tick. A cord lesion can look the same in its first days, because an acute, severe upper motor neuron lesion produces spinal shock, a flaccid, areflexic paralysis (DeMyer, pp. 273-274). What rescued the localization here was the search for a sensory level: none was found, and the bladder was normal.\n\n**The trap.** Two traps, really. The first is calling weakness in a child who \"won't walk\" behavioural before the reflex hammer has been used: absent reflexes cannot be produced on purpose. The second is the breathing count. It did not help you localize, but it is the examination you will repeat every few hours, because the danger in Guillain-Barré is not the legs but the diaphragm and the autonomic nervous system.\n\nIn where, when, what form: \"Peripheral nerve and root, acute over days after an infection, most likely Guillain-Barré syndrome; tick paralysis and an early cord lesion excluded at the bedside.\"",
+      "keyPoints": [
+        "Generalized areflexia places the lesion in the motor unit; distal sensory symptoms narrow it to nerve and root.",
+        "A cord lesion can be flaccid and areflexic in its first days (spinal shock), so look for a sensory level and check the bladder (DeMyer, pp. 273-274).",
+        "Tick paralysis mimics Guillain-Barré and is cured by removing the tick.",
+        "Monitor breathing and autonomic function serially; that, not the leg weakness, is where the danger lies."
+      ],
+      "question": {
+        "question": "On day three of admission the same boy's single-breath count has fallen steadily and his voice is softer. His leg strength is unchanged. What does this change mean?",
+        "options": [
+          "Nothing, because his legs are stable",
+          "His respiratory and bulbar muscles are now involved, and he needs urgent assessment for respiratory support",
+          "The diagnosis is wrong and he has myasthenia gravis",
+          "He is anxious, which explains the change"
+        ],
+        "answer": 1,
+        "explanation": "In Guillain-Barré syndrome the weakness can spread to the diaphragm and the bulbar muscles while the legs look stable, and a falling breath count with a softening voice is the warning. It calls for urgent assessment of respiratory function and a plan for support, not reassurance. Stable legs do not mean a stable illness. Bulbar and respiratory involvement is part of Guillain-Barré and does not on its own change the diagnosis to myasthenia. Anxiety does not reduce a measured breath count steadily over days."
+      }
+    },
+    {
+      "title": "Case 2: a 3-month-old who stopped feeding well",
+      "figure": "case:botulism",
+      "discussion": true,
+      "content": "**Where.** In an infant who cannot report anything, the exam you choose is the localization. Ptosis that worsens as you examine, a suck that fades after a few seconds and a cry that weakens are fatigable bulbar and ocular weakness, which is the signature of the neuromuscular junction. The tongue without fasciculations matters as much as anything you found: it is the sign that most argues against spinal muscular atrophy, the other great cause of a weak, alert, floppy infant.\n\n**When.** Days. This baby held her head well a week ago, so this is not a congenital or static problem, and congenital myasthenic syndromes and cerebral palsy fall away.\n\n**What.** Peredo and Hannibal list exactly this presentation: suspect infant botulism in an infant under 6 months with constipation, listlessness, poor feeding, a weak cry and a reduced gag ([Peredo 2009](https://pubmed.ncbi.nlm.nih.gov/19726697/)). The constipation is not an aside; the toxin blocks acetylcholine release in the gut as well as at the muscle. The same review notes that central causes account for most hypotonia in infants, which is why sepsis and metabolic crises stay on the list in parallel: a floppy, poorly feeding baby is a sick baby until proved otherwise.\n\n**The trap.** Calling the hypotonia central because it is common. Central hypotonia comes with a depressed level of consciousness, axial more than limb weakness, and normal or brisk reflexes ([Peredo 2009](https://pubmed.ncbi.nlm.nih.gov/19726697/)). This baby is awake and following faces, with weakness that fatigues. The level of alertness is the single most useful fork in the floppy infant, and it points here to the periphery.\n\nWhere, when, what: \"Neuromuscular junction, acute over days in a previously normal infant, most likely infant botulism; sepsis and metabolic crisis excluded in parallel.\"",
+      "keyPoints": [
+        "Fatigable ptosis, a fading suck and a weakening cry localize to the neuromuscular junction.",
+        "No tongue fasciculations argues against spinal muscular atrophy.",
+        "Suspect infant botulism under 6 months with constipation, poor feeding, a weak cry and a reduced gag (Peredo 2009).",
+        "In the floppy infant, the level of alertness is the first fork: an alert baby with real weakness points to the periphery."
+      ],
+      "question": {
+        "question": "Which single finding in this baby most strongly separated a peripheral cause from the commoner central causes of infant hypotonia?",
+        "options": [
+          "The constipation",
+          "The soft fontanelle",
+          "That she was alert and following faces while genuinely weak and fatiguing",
+          "The absence of a rash"
+        ],
+        "answer": 2,
+        "explanation": "Central hypotonia typically comes with a depressed level of consciousness, axial weakness and preserved or brisk reflexes. An alert infant who follows faces but has real, fatigable weakness points to the motor unit, which is why the level of alertness is the first fork in the floppy infant. Constipation was a strong clue to botulism once the junction was suspected, but it does not on its own separate central from peripheral. A soft fontanelle and the absence of a rash are reassuring but do not localize."
+      }
+    },
+    {
+      "title": "Case 3: a 4-year-old boy who climbs up his own legs",
+      "figure": "case:duchenne",
+      "discussion": true,
+      "content": "**Where.** You probably had the localization before you touched him: watching a child get up from the floor is the most efficient examination in pediatric neuromuscular medicine. A Gowers manoeuvre means proximal hip weakness. Add symmetric girdle weakness, normal sensation and no fasciculations, and the motor unit narrows to muscle or the anterior horn cell. The calves decide between them: calf enlargement, lumbar lordosis, a waddling gait and toe walking together point to a dystrophy (Brazis 2011, p. 13).\n\n**When.** Months to years, read through development. He walked late and has fallen steadily further behind his friends without ever losing a skill. In a toddler, slow progression often looks like a developmental delay that is not catching up.\n\n**What.** Duchenne muscular dystrophy heads the list, with Becker, its milder relative, beside it. The maternal uncle who needed a wheelchair as a teenager is the history behind the examination: an X-linked pattern. Spinal muscular atrophy stays on the list until a creatine kinase level answers it, because it also produces proximal weakness and a Gowers sign.\n\n**The trap.** Toe walking. It is the reason this boy was nearly referred to orthopaedics, and it is also a feature of spastic diplegia and of idiopathic toe walking (DeMyer, p. 338). The rest of the examination decides: brisk reflexes and increased tone point to the upper motor neuron; a Gowers manoeuvre and big calves point to muscle; a completely normal examination allows the idiopathic label. A second trap is ordering the creatine kinase as an afterthought. In a boy who walks late and falls, it is a simple test that can save a long diagnostic journey.\n\nWhere, when, what: \"Muscle, chronic since early childhood, most likely a dystrophinopathy; check creatine kinase, then dystrophin genetics.\" See the [Neuromuscular section](/neuromuscular).",
+      "keyPoints": [
+        "A Gowers manoeuvre means proximal hip weakness; watch every weak child get up from the floor.",
+        "Calf enlargement, lordosis, waddling and toe walking point to a dystrophy (Brazis 2011, p. 13).",
+        "Toe walking has several causes; the rest of the examination decides between muscle, upper motor neuron and idiopathic (DeMyer, p. 338).",
+        "In a boy who walks late and falls, check the creatine kinase early."
+      ],
+      "question": {
+        "question": "Another 4-year-old boy walks on his toes. He gets up from the floor without using his hands, his knee reflexes are brisk with a few beats of ankle clonus, and his calves are slim. Where is the problem most likely to be?",
+        "options": [
+          "Upper motor neuron, as in spastic diplegia, because toe walking comes with brisk reflexes and clonus rather than proximal weakness",
+          "Muscle, because he walks on his toes",
+          "Peripheral nerve, because the calves are slim",
+          "Nowhere: this is idiopathic toe walking"
+        ],
+        "answer": 0,
+        "explanation": "Toe walking is a sign with several addresses. Here there is no Gowers manoeuvre, so no proximal weakness, while brisk reflexes and clonus point to the upper motor neuron, as in spastic diplegia. The muscle answer rests on the toe walking alone and ignores the reflexes. A neuropathy would lower the reflexes, not make them brisk. Idiopathic toe walking requires an otherwise normal examination, and brisk reflexes with clonus are not normal."
+      }
+    },
+    {
+      "title": "Case 4: a 13-year-old whose legs went numb from the waist down",
+      "figure": "case:myelitis",
+      "discussion": true,
+      "content": "**Where.** Three findings, one address. Weak legs could come from many places, and reduced reflexes might have tempted you toward the periphery. But a sensory level on the trunk can only be made by the cord, and early urinary retention agrees with it. The upgoing toes settle the matter: the reflexes are reduced because the lesion is acute and severe enough to cause spinal shock, not because the lesion is peripheral (DeMyer, pp. 273-274). Expect the reflexes to become brisk as she recovers.\n\n**When.** Hours to days, ten days after an infection, with back pain at the start.\n\n**What.** The order of the list matters more than its contents. A compressing epidural abscess, haematoma or tumour is less likely than inflammation, but it is the diagnosis that delay makes permanent, so it is excluded first with urgent imaging. Transverse myelitis fits the tempo and the preceding infection. The blurred vision with an afferent pupillary defect is the clue many would miss: optic neuritis with myelitis points toward neuromyelitis optica spectrum disorder or MOG antibody disease, which changes both testing and treatment.\n\n**The trap.** Imaging at the level of the skin. The sensory level can sit several segments below the actual lesion, especially with lesions outside the cord (Brazis 2011, p. 104). A T10 level on the skin does not mean a T10 lesion; image the whole spine. The second trap is Guillain-Barré: reduced reflexes and weak legs after an infection invite it, but Guillain-Barré does not make a sensory level, early retention or upgoing toes.\n\nWhere, when, what: \"Spinal cord, acute over a day after an infection, with recent optic neuritis: compression excluded first, then transverse myelitis with antibody testing for neuromyelitis optica spectrum and MOG antibody disease.\"",
+      "keyPoints": [
+        "A sensory level on the trunk can only come from the cord; early retention agrees.",
+        "Reduced reflexes in an acute cord lesion are spinal shock; upgoing toes still show the upper motor neuron (DeMyer, pp. 273-274).",
+        "The sensory level on the skin can lie several segments below the lesion, so image the whole spine (Brazis 2011, p. 104).",
+        "Exclude compression first; optic neuritis plus myelitis points to antibody-mediated disease."
+      ],
+      "question": {
+        "question": "Her sensory level is at T10. The radiographer asks whether imaging only the lower thoracic spine will do. What do you answer?",
+        "options": [
+          "Yes, because the lesion is at T10",
+          "Image only the lumbar spine, because the legs are weak",
+          "No: image the whole spine (and the brain, given the optic neuritis), because the true lesion can lie several segments above the level on the skin",
+          "No imaging is needed until the cerebrospinal fluid results return"
+        ],
+        "answer": 2,
+        "explanation": "The sensory level on the trunk marks the lowest point of normal sensation, not the lesion itself, and with some lesions it sits many segments below the real level. Imaging only around T10 risks missing a higher lesion, and the recent optic neuritis makes brain imaging part of the same question. Imaging only the lumbar spine looks below the level entirely. Delaying imaging for cerebrospinal fluid is dangerous, because compression must be excluded first and lumbar puncture does not exclude it."
+      }
+    },
+    {
+      "title": "Case 5: a 3-year-old who suddenly cannot walk straight",
+      "figure": "case:ataxia",
+      "discussion": true,
+      "content": "**Where.** Ataxia is only cerebellar when weakness and sensory loss have been excluded, because weakness and lost position sense both make a child unsteady. Here strength, reflexes and the plantar responses are normal, so the unsteadiness is coordination failure: the cerebellum or its connections. A wide-based, staggering gait with only mild limb overshoot points to the midline, because disorders of the midline cerebellum affect the trunk and balance most (Brazis 2011, p. 411).\n\n**When.** Overnight, ten days after a viral illness with a rash.\n\n**What.** Post-infectious acute cerebellar ataxia is the commonest cause in a well, alert young child, and it is the diagnosis here. But the list has to carry two others with it. A toxic ingestion is always on the list for a toddler with acute ataxia, however carefully the house was checked. Opsoclonus-myoclonus-ataxia can begin with ataxia alone, before the chaotic eye movements, the jerks and the irritability appear, and it matters because it sends you looking for a neuroblastoma.\n\n**The trap.** Choosing imaging or reassurance by reflex rather than by the clock. A posterior fossa tumour is the fear behind every ataxic child, but tumours evolve over weeks, usually with headache, morning vomiting or papilloedema. An overnight onset with sharp discs and a cheerful child fits poorly; persistence or worsening is what should change your mind. The second trap is examining the eyes once. Opsoclonus may not be there on the first day, and the most useful plan is a second look in a few days with that question in mind.\n\nWhere, when, what: \"Cerebellum, midline, acute overnight after a viral illness, most likely post-infectious acute cerebellar ataxia; ingestion screened, and a planned review for opsoclonus and myoclonus.\"",
+      "keyPoints": [
+        "Ataxia is cerebellar only once weakness and sensory loss have been excluded.",
+        "Midline cerebellar disease affects the trunk and balance most; hemispheric disease affects the limbs on the same side (Brazis 2011, p. 411).",
+        "Acute ataxia in a toddler: post-infectious ataxia first, ingestion always, and opsoclonus-myoclonus-ataxia watched for.",
+        "Tumours evolve over weeks; an overnight onset with a normal fundus fits poorly, but persistence or worsening calls for imaging."
+      ],
+      "question": {
+        "question": "Five days later the same boy is more irritable, has jerks of his arms, and his eyes make rapid, chaotic movements in all directions. What should happen next?",
+        "options": [
+          "Continue observation, because post-infectious ataxia takes weeks to resolve",
+          "Treat the new findings as opsoclonus-myoclonus-ataxia and search for a neuroblastoma",
+          "Send a toxicology screen, because the new movements suggest an ingestion",
+          "Arrange nerve conduction studies"
+        ],
+        "answer": 1,
+        "explanation": "Chaotic, multidirectional eye movements, myoclonic jerks and irritability added to ataxia are the picture of opsoclonus-myoclonus-ataxia, which can begin as ataxia alone. It calls for a search for a neuroblastoma and specialist treatment. Post-infectious ataxia improves over time and does not produce opsoclonus, so continued observation would miss it. An ingestion would not explain a new syndrome emerging five days into a stable illness. Nerve conduction studies examine the peripheral nervous system, which is not where this problem lies."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A 10-year-old woke with weakness of the right face, arm and leg and cannot find his words. His reflexes are brisk on the right. Where is the lesion?",
+      "options": [
+        "Left cerebral hemisphere, cortex",
+        "Right cerebral hemisphere",
+        "Spinal cord",
+        "Left pons"
+      ],
+      "answer": 0,
+      "explanation": "Weakness of face, arm and leg on the same side places the lesion above the facial nucleus, and difficulty finding words is a cortical sign of the dominant hemisphere, which for most children is the left. Right-sided weakness means the left hemisphere, because the corticospinal tract crosses. The cord cannot weaken the face or cause aphasia. A pontine lesion would usually give a crossed pattern, a cranial nerve on one side and the body on the other, and would not cause aphasia."
+    },
+    {
+      "question": "A 15-year-old's eyelids droop by the evening, and her voice fades as she talks. Her reflexes and sensation are normal. Where is the problem?",
+      "options": [
+        "Muscle",
+        "Brainstem",
+        "Peripheral nerve",
+        "Neuromuscular junction"
+      ],
+      "answer": 3,
+      "explanation": "Weakness that worsens with use and recovers with rest, in the eyelids and the voice, is fatigable ocular and bulbar weakness: the signature of the neuromuscular junction, as in juvenile myasthenia gravis. A myopathy can cause ptosis but does not usually fluctuate this way. A brainstem lesion causes fixed rather than fatigable deficits, usually with other signs. A peripheral nerve lesion would reduce reflexes or cause sensory loss, and both are normal."
+    },
+    {
+      "question": "An alert 4-month-old is floppy, with absent reflexes and fine fasciculations of the tongue. She has no sensory abnormality you can detect. Which level fits best?",
+      "options": [
+        "Muscle",
+        "Anterior horn cell",
+        "Cerebral cortex",
+        "Neuromuscular junction"
+      ],
+      "answer": 1,
+      "explanation": "An alert, floppy infant with absent reflexes and tongue fasciculations has denervated muscle, and a purely motor picture with fasciculations points to the anterior horn cell, as in spinal muscular atrophy. Primary muscle disease does not fasciculate. Cortical hypotonia comes with depressed alertness and normal or brisk reflexes. The junction does not cause fasciculations, and reflexes are usually preserved."
+    },
+    {
+      "question": "A 12-year-old has a left sixth-nerve palsy and a weak right arm and leg. Where is the lesion?",
+      "options": [
+        "Left medial pons",
+        "Right medial pons",
+        "Left internal capsule",
+        "Right cerebral cortex"
+      ],
+      "answer": 0,
+      "explanation": "A cranial nerve sign on one side with weakness of the body on the other is a crossed pattern, which only the brainstem can produce. The cranial nerve marks the side and level of the lesion: the sixth nerve nucleus sits medially in the pons, beside the corticospinal tract, which has not yet crossed. So a left medial pontine lesion gives a left sixth-nerve palsy and right hemiparesis. A right pontine lesion would give a right sixth-nerve palsy. Capsular and cortical lesions do not cause a sixth-nerve palsy."
+    },
+    {
+      "question": "An 8-year-old developed foot drop after weeks of sitting cross-legged during a long hospital stay. Ankle dorsiflexion and eversion are weak; inversion and hip abduction are normal; the ankle reflex is present. Where is the lesion?",
+      "options": [
+        "L5 root",
+        "Sciatic nerve",
+        "Common peroneal nerve at the fibular head",
+        "Spinal cord"
+      ],
+      "answer": 2,
+      "explanation": "Weak dorsiflexion and eversion with normal inversion and hip abduction separate a common peroneal nerve lesion from an L5 root lesion: inversion (tibial nerve) and hip abduction (superior gluteal nerve) share the L5 root but not the peroneal nerve, so both would be weak in an L5 radiculopathy (Morris 2012, p. 26). Sitting cross-legged compresses the peroneal nerve at the fibular head. A sciatic lesion would weaken inversion through the tibial branch. A cord lesion would bring upper motor neuron signs and usually affect both legs."
+    }
+  ],
+  "resources": [
+    {
+      "label": "Neurologic Cases (University of Utah)",
+      "url": "https://neurologicexam.med.utah.edu/adult/cases/home_cases.html",
+      "note": "Free video cases to practise localization from examination findings."
+    },
+    {
+      "label": "PediNeuroLogic Exam (University of Utah)",
+      "url": "https://neurologicexam.med.utah.edu/pediatric/html/home_exam.html",
+      "note": "The normal examination at each age, for comparison with the abnormal findings in these cases. Videos licensed CC BY-NC-SA."
+    },
+    {
+      "label": "Peredo 2009: the floppy infant",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19726697/",
+      "note": "Review of central and peripheral hypotonia, including when to suspect infant botulism."
+    }
+  ],
+  "signOff": "The resident completes all five cases and presents one of them, or a real patient, to faculty in where, when, what form.",
+  "sources": [
+    "peredo2009",
+    "brazis2011",
+    "demyer",
+    "morris2012",
+    "utah"
+  ]
+}

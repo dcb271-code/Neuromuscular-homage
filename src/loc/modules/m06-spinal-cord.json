@@ -1,0 +1,220 @@
+{
+  "id": "m06-spinal-cord",
+  "number": 6,
+  "title": "The spinal cord: tracts, levels and syndromes",
+  "short": "Spinal cord",
+  "description": "Three tracts and where they cross explain every cord syndrome; three independent signs find the level.",
+  "why": "The cord is the most predictable structure in the nervous system: three tracts and where they cross explain every syndrome.",
+  "track": "axis",
+  "tags": [
+    "Neuraxis"
+  ],
+  "difficulty": "intermediate",
+  "duration": "50 min",
+  "color": "#7c3aed",
+  "objectives": [
+    "Draw the dorsal columns, spinothalamic tract and lateral corticospinal tract and state where each crosses.",
+    "Find the level of a cord lesion from lower motor neuron signs, reflexes and the sensory level, and explain why the sensory level can mislead.",
+    "Predict the complete, hemisection, anterior, central and posterior cord syndromes.",
+    "Distinguish conus from cauda equina lesions and recognize the signs of a tethered cord.",
+    "Recognize the cord emergencies of childhood and why they need urgent imaging of the whole spine."
+  ],
+  "sections": [
+    {
+      "title": "Three tracts and where they cross",
+      "content": "Of all the structures in the nervous system, the spinal cord is the most obliging. It is a tube of long tracts wrapped around a column of grey matter, built the same way at every level, and three tracts are enough to predict almost every cord syndrome you will meet. Learn where each one crosses and the cord becomes arithmetic.\n\nFisch asks you to draw the three on a single cross-section, and the drawing is the lesson (Fisch 2012, pp. 116-117):\n\n- **Dorsal columns** (vibration, joint position, fine touch). The fibres ascend **on the same side** they entered, all the way up the cord, and cross only in the lower medulla, where the next neurons form the medial lemniscus (Brazis 2011, p. 13).\n- **Spinothalamic tract** (pain and temperature). The fibres synapse in the dorsal horn and **cross within a segment or two** of entering, then ascend on the opposite side.\n- **Lateral corticospinal tract** (voluntary movement). The fibres have already crossed, in the lower medulla, where Brazis puts the proportion that cross at about 75% to 90% (Brazis 2011, p. 5). In the cord, the tract therefore runs **on the same side as the muscles it drives**.\n\n**One rule from three tracts**\n\nWithin the cord, then, weakness and loss of position sense from a one-sided lesion appear on the **same** side as the lesion, below it; loss of pain and temperature appears on the **opposite** side, starting a little below. Brazis gives the offset for the spinothalamic loss as usually one or two segments below the lesion (Brazis 2011, p. 106). The simulator in this module draws it two segments down.\n\n**Why this matters at the bedside**\n\nA pattern that splits modalities between the two sides, with weakness on one side and pain loss on the other, is almost a signature of the cord. Nowhere else in the nervous system do the motor and pain pathways run on opposite sides of a single small structure.\n\n**In a child**\n\nThe tracts are the same at every age, but the corticospinal tract is still myelinating in infancy, which is why an upgoing toe is normal in the first year (Utah PediNeuroLogic Exam; see [[m02-the-exam|Module 2]]). In a toddler, a sensory level is hard to map by questioning, so the motor signs, the reflexes and the bladder carry more of the weight.",
+      "keyPoints": [
+        "Dorsal columns ascend on the same side and cross in the lower medulla (Brazis 2011, p. 13).",
+        "Spinothalamic fibres cross within one or two segments of entering (Brazis 2011, p. 106).",
+        "The lateral corticospinal tract has already crossed in the lower medulla, so in the cord it serves the same side (Brazis 2011, p. 5).",
+        "A one-sided cord lesion: weakness and position-sense loss on the same side below it; pain and temperature loss on the opposite side, starting a little below.",
+        "Draw the three tracts on one cross-section and the cord syndromes follow (Fisch 2012, pp. 116-117)."
+      ],
+      "question": {
+        "question": "A lesion destroys the left half of the spinal cord at T6. Which deficit appears on the right side of the body?",
+        "options": [
+          "Weakness of the right leg",
+          "Loss of vibration and position sense in the right leg",
+          "A band of complete sensory loss at T6 on the right",
+          "Loss of pain and temperature sensation from a level a little below T6"
+        ],
+        "answer": 3,
+        "explanation": "Spinothalamic fibres cross within a segment or two of entering, so a left-sided lesion interrupts pain and temperature from the right side, starting one or two segments below the lesion (Brazis 2011, p. 106). Weakness is on the left, because the corticospinal tract has already crossed in the medulla. Vibration and position loss are on the left, because the dorsal columns are still uncrossed in the cord. The band of complete loss at the level comes from the entering roots on the side of the lesion, the left."
+      }
+    },
+    {
+      "title": "Finding the level",
+      "content": "Knowing that a lesion is in the cord is half the job; the scan still needs to be pointed at the right segment. The cord gives you three independent ways to find the level, and when they agree you can be confident.\n\n**The reflex level**\n\nIn a cord lesion the reflexes are lost at the level of the lesion and increased below it (Brazis 2011, p. 12; Morris 2012, p. xxix). Brazis gives the example of a lesion at the C5 segment: the biceps and brachioradialis reflexes, served by C5 and C6, are lost or reduced, while the triceps and finger flexor reflexes below are exaggerated (Brazis 2011, p. 12). The lower motor neuron signs at the level, weakness, wasting and lost reflexes in a segmental distribution, are what pin the lesion to a specific segment, though they can be subtle in the thoracic cord (Brazis 2011, p. 106).\n\n**The sensory level, and why it can mislead**\n\nBrazis calls pinprick loss below a segmental level the most valuable sensory sign, and warns that it is easily missed unless sought carefully and sometimes repeatedly (Brazis 2011, p. 104). He also warns that in complete lesions, particularly compression from outside the cord, the level on the skin may be many segments below the real lesion; a high thoracic lesion can present with a level in the upper lumbar segments (Brazis 2011, p. 104). Band-like pain or tingling at the level of the lesion, and tenderness when the spine is tapped, may localize better (Brazis 2011, p. 104). The practical rule: image **from the sensory level upward**, never only at it.\n\n**The abdominal clues**\n\nBrazis gives two thoracic markers (Brazis 2011, p. 117). With a lesion at T10, the upper abdominal muscles work and the lower ones do not, so when the patient lifts the head against resistance the umbilicus moves upward (Beevor sign). Superficial abdominal reflexes are absent with a lesion above T6.\n\n**Spinal shock**\n\nAn acute, severe cord lesion can leave the legs flaccid and areflexic at first, with the brisk reflexes and upgoing toes arriving later (Brazis 2011, p. 106). Absent reflexes in the first days do not move the lesion out of the cord.\n\n**In a child**\n\nThe cord ends lower in a baby. Brazis notes the conus sits at L3 at term and reaches the adult L1 to L2 level by about 2 months of age (Brazis 2011, p. 99). Above that point a lesion gives upper motor neuron signs in the legs; below it, only roots remain (Morris 2012, p. 29).",
+      "keyPoints": [
+        "Reflexes are lost at the level of a cord lesion and brisk below it (Brazis 2011, p. 12; Morris 2012, p. xxix).",
+        "Pinprick level is the key sensory sign, but in compression it can sit many segments below the lesion (Brazis 2011, p. 104): image from the level upward.",
+        "Beevor sign marks T10; abdominal reflexes are absent with lesions above T6 (Brazis 2011, p. 117).",
+        "Spinal shock: an acute cord lesion may be flaccid and areflexic at first (Brazis 2011, p. 106).",
+        "The conus is at L3 at term and at the adult L1 to L2 level by about 2 months (Brazis 2011, p. 99)."
+      ],
+      "question": {
+        "question": "A 15-year-old has spastic legs, brisk knee and ankle reflexes and a pinprick level at the umbilicus. An MRI of the spine at T10 is normal. What should happen next?",
+        "options": [
+          "Conclude the problem is functional, since imaging at the level is normal",
+          "Image the spine above T10, because the sensory level can sit many segments below the lesion",
+          "Perform nerve conduction studies of the legs",
+          "Image the lumbar spine, below the level"
+        ],
+        "answer": 1,
+        "explanation": "Brazis warns that the sensory level, especially with compression from outside the cord, can sit many segments below the true lesion (Brazis 2011, p. 104), so a normal scan at the level means the scan must move upward, toward the cervical and upper thoracic cord. Spastic legs with brisk reflexes are organic upper motor neuron signs and cannot be dismissed because one scan was normal. Nerve conduction studies examine the peripheral nerves, which cannot produce spasticity or a sensory level. The lumbar spine lies below the level and cannot explain a level at the umbilicus."
+      }
+    },
+    {
+      "title": "Five syndromes from one cross-section",
+      "figure": "cord-sim",
+      "content": "Choose a level and a lesion pattern in the simulator above. The body map is computed from the three tracts, the anterior horn and the entering roots, so every syndrome below is a consequence you can check rather than a list to memorize.\n\n**Complete transverse lesion.** Everything is cut. Weakness below the level on both sides, lower motor neuron signs at the level, all sensation lost below a level, and loss of bladder and bowel control. Sphincter dysfunction may occur with a transverse myelopathy; Brazis notes that urgency is the usual bladder symptom, with retention later (Brazis 2011, p. 106).\n\n**Hemisection (Brown-Séquard).** Weakness and loss of position sense on the side of the lesion, below it; loss of pain and temperature on the opposite side, starting one or two segments down (Brazis 2011, p. 106). Brazis notes that the syndrome is characteristically produced by lesions outside the cord pressing on one side (Brazis 2011, p. 106).\n\n**Anterior cord.** The anterior spinal artery supplies the front of the cord, so an infarct takes the corticospinal and spinothalamic tracts and the anterior horns, and **spares the dorsal columns**. The child cannot move the legs or feel a pin, yet feels the tuning fork.\n\n**Central cord, the syrinx.** A cavity in the centre of the cord first cuts the pain fibres crossing in front of it. The result is loss of pain and temperature over just the segments involved, often the shoulders and arms like a cape, with normal sensation above and below and touch preserved: a dissociated, suspended loss. As the cavity reaches the anterior horns, the hands waste. Brazis notes the association of syringomyelia with Chiari type I and II and Dandy-Walker malformations (Brazis 2011, p. 106), which is why a syrinx in a child sends you to look at the back of the skull.\n\n**Posterior columns.** Vibration and position sense are lost below the lesion; strength and pain sensation are kept. The child sways or falls with eyes closed and walks on a broad base, watching the feet.\n\n**Inside or outside the cord?**\n\nBrazis tabulates clues (Brazis 2011, p. 114, Table 5.11). Lesions outside the cord tend to cause early radicular pain and vertebral pain and early upper motor neuron signs. Lesions inside the cord tend to cause burning, poorly localized pain, prominent lower motor neuron signs, upper motor neuron signs late, and early sphincter trouble when they lie low.",
+      "keyPoints": [
+        "Complete lesion: all modalities and strength lost below, lower motor neuron signs at the level, bladder affected.",
+        "Brown-Séquard: same-side weakness and position-sense loss, opposite-side pain loss one or two segments down (Brazis 2011, p. 106).",
+        "Anterior cord: motor and pain pathways lost, dorsal columns spared.",
+        "Syrinx: cape-like, suspended loss of pain and temperature with touch spared; look for a Chiari malformation (Brazis 2011, p. 106).",
+        "Outside the cord: early radicular and vertebral pain; inside: prominent lower motor neuron signs and late upper motor neuron signs (Brazis 2011, p. 114)."
+      ],
+      "question": {
+        "question": "A 12-year-old burned her hands on a stove without noticing. Pain and temperature sensation are lost over both shoulders and arms but normal on the trunk and legs; touch is normal everywhere; the small hand muscles are wasted. What should you look for next?",
+        "options": [
+          "A Chiari malformation, because a central cavity (syrinx) explains the pattern",
+          "Bilateral carpal tunnel syndrome",
+          "A peripheral neuropathy affecting small fibres",
+          "An anterior spinal artery infarct"
+        ],
+        "answer": 0,
+        "explanation": "A cape of pain and temperature loss confined to a few segments, with touch spared and normal sensation above and below, is the signature of a central cord cavity cutting the crossing pain fibres; hand wasting means it has reached the anterior horns. Syringomyelia is associated with Chiari malformations (Brazis 2011, p. 106). Carpal tunnel syndrome would not numb the shoulders. A small-fibre neuropathy is length-dependent and would affect the feet first. An anterior spinal artery infarct causes weakness and pain loss below the lesion, not a suspended band."
+      }
+    },
+    {
+      "title": "Conus, cauda equina and the tethered cord",
+      "content": "At the bottom of the cord the anatomy changes character. The cord tapers into the conus medullaris, and below it the canal holds only the bundle of lumbar and sacral roots, the cauda equina. A lesion in the conus is a cord lesion; a lesion of the cauda is a root lesion. The two sit a few centimetres apart and produce overlapping pictures, and the overlap is exactly where a careful exam earns its keep.\n\n**Conus**\n\nBrazis describes conus lesions as causing early sphincter dysfunction: an autonomous bladder with no voluntary start to urination, retained urine and absent bladder sensation, often with constipation, and a **symmetric saddle anaesthesia**; pain is not common (Brazis 2011, p. 117).\n\n**Cauda equina**\n\nCauda equina lesions compress the lumbosacral roots below the L3 vertebra and cause **early radicular pain**, often one-sided or asymmetric and worse with straining (Brazis 2011, p. 118). The weakness is lower motor neuron, in root distributions, with lost reflexes. Morris adds a practical point: in any patient with absent ankle reflexes, test sensation over the buttocks, because a cauda equina lesion may spare sensation elsewhere (Morris 2012, p. 29).\n\nA teaching shorthand says the conus gives upper motor neuron signs and the cauda gives lower motor neuron signs. That is too tidy: conus lesions often damage nearby roots too, so expect a mixture. The early, symmetric sphincter failure with little pain is the more reliable conus clue.\n\n**The tethered cord**\n\nIn a child, the most important lesion in this region is a cord held too low and stretched as the spine grows. Brazis describes the tethered cord as presenting with a combination of neurologic, urologic, orthopaedic and skin findings: bladder and bowel trouble, foot deformities such as a high arch or clubfoot, scoliosis, and the **cutaneous markers of spinal dysraphism**, a midline hair tuft, a midline birthmark, a dermal sinus, excess hair or a fatty lump over the low back (Brazis 2011, p. 118). Many cases are associated with spina bifida occulta or a previous myelomeningocele repair (Brazis 2011, p. 118).\n\n**At the bedside**\n\nUndress the child enough to see the lower back, and look at the feet. A new high arch on one side, new wetting in a child who was dry, and a hairy patch at the base of the spine belong together.",
+      "keyPoints": [
+        "Conus: early sphincter failure, symmetric saddle anaesthesia, little pain (Brazis 2011, p. 117).",
+        "Cauda equina: early, asymmetric radicular pain with lower motor neuron signs in root distributions (Brazis 2011, p. 118).",
+        "With absent ankle reflexes, test sensation over the buttocks (Morris 2012, p. 29).",
+        "Conus lesions often involve neighbouring roots, so expect mixed upper and lower motor neuron signs.",
+        "Tethered cord: bladder and bowel change, foot deformity, scoliosis and midline skin markers over the low back (Brazis 2011, p. 118)."
+      ],
+      "question": {
+        "question": "An 8-year-old who had been dry for years has started wetting again. One foot has developed a higher arch, and there is a tuft of hair over the base of the spine. Which explanation ties these together?",
+        "options": [
+          "A urinary tract infection with an unrelated foot deformity",
+          "A peroneal neuropathy",
+          "A tethered spinal cord",
+          "A behavioural regression"
+        ],
+        "answer": 2,
+        "explanation": "New bladder dysfunction, a foot deformity and a midline skin marker over the low back are the neurologic, urologic, orthopaedic and cutaneous combination Brazis describes for a tethered cord (Brazis 2011, p. 118); the localization is the conus and lower roots, and it needs imaging. An infection could explain wetting but not the foot or the skin marker, and treating the findings as unrelated abandons parsimony too early. A peroneal neuropathy causes foot drop, not a high arch with bladder change. Calling it behavioural ignores two objective signs."
+      }
+    },
+    {
+      "title": "Cord emergencies in children",
+      "content": "The cord is unforgiving. It has little room to swell, a blood supply with weak spots, and no capacity to regrow lost tracts. A cord that is being compressed or inflamed can go from weak to paralysed in hours, and some causes are treatable only while function remains. The localizing exam earns its place here not by being clever but by being fast.\n\n**The usual stories**\n\n- **Transverse myelitis**: weakness, a sensory level and bladder dysfunction evolving over hours to days, sometimes after an infection. Brazis lists parainfectious and post-vaccinal syndromes among the causes of a transverse myelopathy (Brazis 2011, p. 104).\n- **Compression**: a tumour, an abscess or a haematoma pressing from outside the cord. Back pain, tenderness when the spine is tapped, and radicular pain are the warnings (Brazis 2011, p. 104).\n- **Acute flaccid myelitis**: injury to the grey matter, often after a viral illness, with flaccid, areflexic and often asymmetric weakness and little sensory loss ([[m04-motor-unit|Module 4]]).\n- **Spinal cord infarct**: sudden onset, often with an anterior cord pattern.\n\n**Three traps**\n\n1. **The reassuring reflexes.** An acute cord lesion can be flaccid and areflexic at first (Brazis 2011, p. 106). A weak child with absent reflexes and a sensory level or retention has a cord problem until imaging says otherwise, not Guillain-Barré syndrome.\n2. **The misleading level.** The sensory level may sit many segments below the lesion (Brazis 2011, p. 104), so image the whole spine, not just the segment you suspect.\n3. **The quiet bladder.** Ask about wetting, retention and constipation, and feel for a full bladder. Urgency is usually the first bladder symptom and retention comes later; constipation is the commonest bowel symptom (Brazis 2011, p. 106).\n\n**The decision**\n\nBack pain plus any new weakness, sensory level or bladder change in a child calls for urgent MRI of the whole spine. The exam tells the radiologist where to look first; it should never be used to decide whether to look. Write the level you predict on the request, and check it against the scan: that habit is how localization skill is built.",
+      "keyPoints": [
+        "Transverse myelitis, compression, acute flaccid myelitis and infarct are the pediatric cord emergencies.",
+        "Back pain, spinal tenderness and radicular pain warn of compression (Brazis 2011, p. 104).",
+        "An acute cord lesion can be flaccid and areflexic: do not let absent reflexes redirect you to the nerves (Brazis 2011, p. 106).",
+        "Image the whole spine, because the sensory level can mislead.",
+        "Write your predicted level on the imaging request and compare it with the result."
+      ],
+      "question": {
+        "question": "A 6-year-old has back pain, weak floppy legs with absent reflexes, urinary retention and a pinprick level at T10, all developing over two days. What is the right next step?",
+        "options": [
+          "Urgent MRI of the whole spine, because this is an acute cord lesion until proven otherwise",
+          "Nerve conduction studies for Guillain-Barré syndrome, because the reflexes are absent",
+          "Observation for 24 hours to see whether reflexes return",
+          "MRI of the brain"
+        ],
+        "answer": 0,
+        "explanation": "A sensory level and urinary retention point to the cord, and the absent reflexes fit spinal shock from an acute lesion (Brazis 2011, p. 106); compression and myelitis both need urgent imaging of the whole spine, because the level may sit below the lesion. Guillain-Barré syndrome does not produce a sensory level on the trunk, so areflexia alone should not redirect the work-up to the nerves. Waiting risks permanent loss if the cord is compressed. A brain MRI does not image the cord, and a single brain lesion cannot produce a trunk sensory level."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A teenager is stabbed in the right side of the neck at C5. Below the injury, which side of the body is weak?",
+      "options": [
+        "The left side, because motor pathways cross",
+        "The right side, because the lateral corticospinal tract has already crossed in the medulla",
+        "Both sides equally",
+        "Neither side; only sensation is affected in a hemisection"
+      ],
+      "answer": 1,
+      "explanation": "The lateral corticospinal tract crosses in the lower medulla (Brazis 2011, p. 5), so in the cord it runs on the same side as the muscles it drives, and a right hemisection weakens the right side below the lesion. 'Motor pathways cross' is true of the brain, not of a lesion below the crossing. Both sides are weak only if the lesion crosses the midline. A hemisection always involves the corticospinal tract on its side, so strength is not spared."
+    },
+    {
+      "question": "A 14-year-old with sudden back pain cannot move her legs and cannot feel a pin below the umbilicus, yet she feels the tuning fork at both big toes. Which syndrome fits?",
+      "options": [
+        "Complete transverse lesion",
+        "Brown-Séquard hemisection",
+        "Anterior cord syndrome",
+        "Posterior column syndrome"
+      ],
+      "answer": 2,
+      "explanation": "Loss of strength and of pain sensation with vibration preserved is the anterior cord pattern: the anterior spinal artery supplies the front of the cord and spares the dorsal columns. A complete lesion would remove vibration too. A hemisection would split the deficits between the two sides. A posterior column lesion would remove vibration and spare strength and pain, the exact opposite."
+    },
+    {
+      "question": "Which picture points to the conus medullaris rather than the cauda equina?",
+      "options": [
+        "Severe one-sided radicular leg pain with late bladder trouble",
+        "Weakness in one L5 distribution only",
+        "An absent knee reflex on one side",
+        "Early urinary retention and symmetric saddle anaesthesia with little pain"
+      ],
+      "answer": 3,
+      "explanation": "Early sphincter dysfunction with symmetric saddle anaesthesia and little pain is the conus pattern (Brazis 2011, p. 117). Early, asymmetric radicular pain with sphincter trouble later is the cauda equina pattern (Brazis 2011, p. 118), so the first option describes the opposite. A single L5 distribution or a single absent knee reflex are root-level findings that fit the cauda equina better than the conus."
+    },
+    {
+      "question": "When a 13-year-old lifts his head from the pillow against resistance, his umbilicus moves upward. Where is the cord lesion?",
+      "options": [
+        "Around T10",
+        "Around T4",
+        "In the cervical cord",
+        "In the conus"
+      ],
+      "answer": 0,
+      "explanation": "Beevor sign marks a lesion at about T10: the upper abdominal muscles still work and the lower ones do not, so the umbilicus is pulled upward (Brazis 2011, p. 117). A T4 lesion would weaken all the abdominal muscles, so the umbilicus would not move preferentially. A cervical lesion would weaken the arms as well and all the abdominal muscles. A conus lesion lies below the abdominal muscles' segments and leaves them intact."
+    },
+    {
+      "question": "A 16-year-old has absent biceps and brachioradialis reflexes on both sides, brisk triceps reflexes and brisk knee and ankle jerks. Where is the lesion?",
+      "options": [
+        "In the cervical cord at about the C5 and C6 segments",
+        "In the brain, because reflexes are brisk",
+        "In the C5 and C6 roots on both sides, with no cord involvement",
+        "In the thoracic cord"
+      ],
+      "answer": 0,
+      "explanation": "Reflexes are lost at the level of a cord lesion and increased below it (Brazis 2011, p. 12; Morris 2012, p. xxix): lost C5 and C6 reflexes with brisk C7 and leg reflexes put the lesion in the cord at C5 and C6. A brain lesion could explain the brisk reflexes but not the absent ones. Root lesions alone would remove the C5 and C6 reflexes but could not make the reflexes below brisk. A thoracic lesion would leave all the arm reflexes normal."
+    }
+  ],
+  "resources": [
+    {
+      "label": "Neuroscience Online: anatomy of the spinal cord",
+      "url": "https://nba.uth.tmc.edu/neuroscience/m/s2/chapter03.html",
+      "note": "Free online textbook from UTHealth Houston."
+    },
+    {
+      "label": "Neuroscience Online: somatosensory systems",
+      "url": "https://nba.uth.tmc.edu/neuroscience/m/s2/chapter02.html",
+      "note": "Dorsal columns and the spinothalamic tract."
+    },
+    {
+      "label": "Neuroscience Online: spinal reflexes and descending motor pathways",
+      "url": "https://nba.uth.tmc.edu/neuroscience/m/s3/chapter02.html"
+    },
+    {
+      "label": "Utah NeuroLogic Exam: sensory exam, abnormal findings",
+      "url": "https://neurologicexam.med.utah.edu/adult/html/sensory_abnormal.html",
+      "note": "Sensory levels and dissociated loss (CC BY-NC-SA)."
+    }
+  ],
+  "signOff": "The resident examines a patient with a myelopathy and predicts the level before imaging, and the prediction is checked against the scan with a faculty member.",
+  "sources": [
+    "brazis2011",
+    "fisch2012",
+    "morris2012",
+    "utah"
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "id": "m01-where-before-what",
+  "number": 1,
+  "title": "Where before what",
+  "short": "Where before what",
+  "description": "The case for localization: why neurology finds the lesion before naming the disease, and how the method changes in a growing child.",
+  "why": "The name of the site is a method, and this module argues for it.",
+  "track": "doctrine",
+  "tags": [
+    "The Doctrine"
+  ],
+  "difficulty": "beginner",
+  "duration": "35 min",
+  "color": "#0d9488",
+  "objectives": [
+    "Explain why clinical localization should come before imaging, and the four steps of neurologic diagnosis.",
+    "Name the eleven levels of the neuraxis and use findings to exclude levels.",
+    "Separate what the examination contributes (where) from what the history contributes (when).",
+    "Decide when several findings should be explained by one lesion and when by more than one.",
+    "Describe how development changes the meaning of findings in a child."
+  ],
+  "sections": [
+    {
+      "title": "The oldest rule",
+      "content": "Before neurology had a single effective treatment, it had a method, and the method is still its most distinctive gift to medicine: **find the lesion before you name the disease**. A cardiologist can often go straight from symptom to cause. A neurologist must first ask a stranger question: *where* in this long, branching system has something gone wrong?\n\nThe question is very old. The earliest surviving record of neurologic localization is an Egyptian surgical papyrus describing a man who could not answer questions after a wound to his temple (Brazis 2011, p. 1). In the nineteenth century Broca and Wernicke turned the idea into a discipline by matching what patients could no longer do in life with what their brains showed at autopsy, the clinicopathologic method (Brazis 2011, pp. 1-2). Hughlings Jackson added the warning that keeps the method honest: to find the damage that abolishes a function is not the same as finding the function itself. A lesion tells you where a circuit can be broken, not where a faculty lives.\n\n**The four steps**\n\nBrazis and colleagues break clinical diagnosis into four steps: recognize that a function is impaired, decide what part of the nervous system is affected, list the likely causes, and only then use tests to choose among them (Brazis 2011, p. 2). Before the second step they ask three quieter questions. Is the deficit real? Is it pathological, or one of life's ordinary aches? Is it neurologic at all, or a joint, a bone, a muscle strain (Brazis 2011, p. 3)? Their advice on the first question is generous: unless there are clear psychiatric features, take signs at face value.\n\n**Localize, then image**\n\nThe order matters most in the scanner. Imaging ordered without a localization finds things, and those things get blamed. Brazis gives the example of congenital brain cysts, vivid on imaging, held responsible for symptoms they did not cause while the real disease went untreated (Brazis 2011, p. 1). Pearl and Emsellem make the complementary point: many diseases sit below the resolution of any scanner, so when the images and the patient disagree, the clinical picture has to be reconciled with them, not overruled by them (Pearl 2014, p. 1). In a child, where an incidental cyst or a small bright spot on MRI is common and frightening to parents, a localization made before the scan is what lets you say, with confidence, *that is not the cause*.",
+      "keyPoints": [
+        "Neurology's method is to find the lesion before naming the disease: where before what.",
+        "Four steps: recognize impaired function, localize it, list likely causes, then test among them (Brazis 2011, p. 2).",
+        "Three questions come first: is the deficit real, is it pathological, is it neurologic (Brazis 2011, p. 3)?",
+        "Localize before imaging; unlocalized scans find incidental lesions that get blamed for symptoms (Brazis 2011, p. 1).",
+        "A lesion shows where a circuit can be broken, not where a function lives (Hughlings Jackson)."
+      ],
+      "question": {
+        "question": "A 9-year-old has two months of tripping over his left foot. An outside MRI of the brain, ordered for headache, shows a small arachnoid cyst. On examination he cannot lift or evert the left foot, but inversion and hip abduction are strong, and the rest of the exam is normal. What should guide the next step?",
+        "options": [
+          "The cyst, because it is the only structural abnormality found so far",
+          "The localization from the exam, which points to the left common peroneal nerve, far from the cyst",
+          "A repeat brain MRI with contrast, to see whether the cyst is growing",
+          "A spine MRI, because foot drop always comes from the spinal cord"
+        ],
+        "answer": 1,
+        "explanation": "The exam has already done the localizing: weak dorsiflexion and eversion with strong inversion and hip abduction is the pattern of a common peroneal nerve lesion, which is where the workup should go (nerve studies, and a search for compression at the fibular head). The cyst is exactly the kind of incidental finding Brazis warns gets blamed when imaging comes before localization. A repeat brain MRI chases the wrong address. A spine MRI is not wrong in every foot drop, but here the spared inversion and hip abduction argue against an L5 root or cord lesion, so 'always the cord' is a rule that does not exist."
+      }
+    },
+    {
+      "title": "The neuraxis is a list of addresses",
+      "figure": "localizer-intro",
+      "content": "If localization is a question about place, the nervous system needs a map with named stops. This curriculum uses eleven, from the top down: **cerebral cortex; subcortex and deep grey matter; brainstem; cerebellum; spinal cord; anterior horn cell; nerve root; plexus; peripheral nerve; neuromuscular junction; muscle.** Every weakness, numbness or clumsiness you will ever examine lives at one or more of these addresses.\n\nBrazis describes the lesion as having an address, and finding it the way you find a house: by a street number, or by the intersection of two streets (Brazis 2011, p. 3). Their worked example is a third-nerve palsy. On its own it could sit anywhere along the nerve's long course. Add a hemiparesis on the opposite side and only one place carries both the third-nerve fibres and the corticospinal tract: the cerebral peduncle of the midbrain on the side of the palsy (Brazis 2011, pp. 3-4). Two damaged pathways, one intersection.\n\n**Use the figure above as an elimination game.** Each finding you switch on removes the levels that cannot produce it, and each removed level tells you why. Try the presets. A face that is weak along with the arm and leg removes the spinal cord at once, because the cord has no face. A sensory level on the trunk removes everything except the cord. Notice that a finding is most powerful when it *excludes*, not when it merely fits.\n\n**Precision falls as you climb**\n\nThe levels are not equally easy to pin down. Brazis observes that localization is most precise low in the nervous system and least precise in the cortex (Brazis 2011, p. 4). A muscle lesion weakens that muscle; a nerve lesion weakens its muscles and numbs its skin; but a cortical lesion produces a shifting array of motor, sensory and behavioural findings. Low-level signs are also *consistent*: wasting of a hand muscle is there every time you look. Higher-level signs come and go during an examination, so for language and other higher functions the useful question is not whether the patient can do a task once but whether they do it consistently and normally (Brazis 2011, p. 4).\n\nIn children this gradient has a practical edge. A toddler's cortex-level skills (language, attention, praxis) are still being built, so they are measured against age, while the motor unit behaves much as it will in adulthood. The lower the level, the more you can trust a single clean sign.",
+      "keyPoints": [
+        "Eleven addresses: cortex, subcortex, brainstem, cerebellum, cord, anterior horn, root, plexus, nerve, junction, muscle.",
+        "A lesion is often found at the intersection of two damaged pathways, as with a third-nerve palsy plus opposite hemiparesis in the midbrain (Brazis 2011, pp. 3-4).",
+        "Findings are most useful when they exclude levels; localization is elimination.",
+        "Localization is most precise low in the neuraxis and least precise in the cortex, where signs may be inconsistent (Brazis 2011, p. 4)."
+      ],
+      "question": {
+        "question": "A 15-year-old develops, over one morning, a drooping right eyelid with the right eye turned down and out and a dilated right pupil, together with weakness of the left arm and leg. Where is the single lesion most likely to be?",
+        "options": [
+          "The left internal capsule",
+          "The right oculomotor nerve in the orbit",
+          "The left side of the pons",
+          "The right cerebral peduncle of the midbrain"
+        ],
+        "answer": 3,
+        "explanation": "Two damaged pathways meet in one place. The right third-nerve fibres and the corticospinal fibres for the left limbs (which have not yet crossed) run together only in the right cerebral peduncle, the textbook intersection Brazis uses. A left capsular lesion would weaken the right limbs and spare the eye. An orbital third-nerve lesion explains the eye but not the hemiparesis. A left pontine lesion would weaken the right limbs and, if it touched a cranial nerve, a pontine one on the left, not the right third nerve."
+      }
+    },
+    {
+      "title": "The exam says where, the story says when",
+      "content": "Neurologists divide the labour between history and examination in a way that surprises students. For finding *where*, Brazis says, the examination is far more important than the history, and you can often localize a lesion from the examination alone. The sensory findings a patient reports during the exam count as examination data: a complaint of numbness can be as objective as a wrist drop (Brazis 2011, p. 4).\n\nWhat the history contributes, above all, is **time**. Brazis's example is a left hemiparesis found on examination. If it arrived over minutes, think of a vascular event or a seizure. If it evolved over a few days, think of infection or demyelination. If it crept in over months, think of a tumour or a degenerative process (Brazis 2011, p. 4). The examination places the lesion; the tempo suggests what kind of lesion it is. That pairing, *where* from the exam and *when* from the story, is the backbone of the whole curriculum, and [[m11-where-to-what|Module 11]] builds it into a working differential.\n\n**Three questions at the bedside**\n\nMorris and Jankovic close every examination with three questions: *Where is the lesion? What is the phenomenology? What is the likely underlying cause?* They add a piece of advice worth taping to the wall: commit yourself to a diagnosis, with a short differential if you must, rather than listing every possible cause for fear of being wrong. If you prove wrong, you will have learned something (Morris 2012, p. xxix). They also note that neurology is unusual among the specialties in relying on localization, or on recognition of the phenomenon, before it can reach a cause (Morris 2012, p. xxv). The middle question matters for disorders that have no focal lesion at all: a tremor, a seizure type or a tic is recognized by what it looks like, and that recognition does the work localization does elsewhere.\n\n**When in a child**\n\nA child adds a second clock. Besides \"how long has this been happening?\" you must ask \"since when in development?\" A weakness present since early infancy, a skill that never arrived, and a skill that was there and has been lost are three different stories, even if today's examination looks the same. Section 5 of this module returns to that idea.",
+      "keyPoints": [
+        "For localization, the examination matters more than the history, and reported sensory findings count as examination data (Brazis 2011, p. 4).",
+        "The history supplies tempo: minutes suggest vascular or seizure, days suggest infection or demyelination, months suggest tumour or degeneration (Brazis 2011, p. 4).",
+        "End every exam with three questions: where is the lesion, what is the phenomenology, what is the cause; then commit (Morris 2012, p. xxix).",
+        "In a child, also ask since when in development: never acquired, static, or lost."
+      ],
+      "question": {
+        "question": "A 12-year-old girl has a left hemiparesis on examination. Her parents say her left hand has become gradually clumsier over the last five months and she has started to drag her left foot. Which group of causes should head your list?",
+        "options": [
+          "A tumour or a slowly progressive process",
+          "An arterial ischaemic stroke",
+          "A focal seizure with post-ictal weakness",
+          "Guillain-Barré syndrome"
+        ],
+        "answer": 0,
+        "explanation": "The examination gives the place (a right hemisphere or descending motor pathway lesion) and the history gives the tempo: steady progression over months points first to a tumour or another slowly progressive process (Brazis 2011, p. 4). Stroke and a seizure with post-ictal weakness both arrive over minutes, not months. Guillain-Barré syndrome is a peripheral, usually symmetric disorder that evolves over days to weeks and would not produce a hemiparesis."
+      }
+    },
+    {
+      "title": "One lesion or many",
+      "content": "Faced with several abnormal findings, the localizer's first instinct is parsimony: **look for one lesion that explains them all.** The instinct is usually right, and it is the engine of the intersection method. A third-nerve palsy and a hemiparesis are far more likely to be one midbrain lesion than two unrelated ones.\n\nBut parsimony is a strategy, not a law of nature. Medicine has a famous counterweight to Occam's razor, usually attributed to John Hickam: patients can have as many diseases as they please. A clinical problem-solving case in the *New England Journal of Medicine* sets Occam's razor against **Saint's triad**, the observation that some patients genuinely carry several unrelated conditions at once ([Hilliard 2004](https://pubmed.ncbi.nlm.nih.gov/14762188/)). The skill is knowing when to stop forcing one explanation.\n\n**Time is the referee**\n\nBrazis gives the cleanest test. A third-nerve palsy plus a hemiparesis appearing together point to the midbrain. But if the third-nerve palsy dates from childhood and the hemiparesis appeared decades later, the hemiparesis probably did not come from a midbrain lesion at all: the examination is showing the end result of two lesions that arrived at different times (Brazis 2011, p. 4). So the history matters for localization after all, not just for cause. Before you weld findings into one lesion, ask whether they began together.\n\n**Discrete lesions and system lesions**\n\nBrazis draws a second distinction. Most localization teaching is built on **discrete lesions**: an infarct, a demyelinating plaque, a tumour, an abscess, each damaging everything in one place. Other diseases attack a **functional system** instead: an array of related neurons scattered across several levels (Brazis 2011, p. 4). Parkinson disease localizes neatly to the substantia nigra; a spinocerebellar degeneration does not sit at one address at all. When findings refuse to settle at one level, consider three possibilities in turn: several discrete lesions (as in demyelinating disease), a diffuse process (toxic or metabolic), or a system degeneration. [[m10-everywhere|Module 10]] takes up the case where the answer is \"everywhere\".\n\nIn children the multi-lesion question has a particular flavour. A child with a static motor disability from early life can acquire a new, unrelated problem, and the old findings must be subtracted before the new ones can be localized. Asking the parents what the child's baseline was is part of the localization.",
+      "keyPoints": [
+        "Start with parsimony: try to explain all findings with one lesion.",
+        "Occam's razor has counterweights (Hickam's dictum, Saint's triad): a patient can have more than one disease (Hilliard 2004).",
+        "Findings that began at different times may come from different lesions; time decides whether to merge them (Brazis 2011, p. 4).",
+        "Distinguish discrete lesions from system disorders that affect related neurons across several levels (Brazis 2011, p. 4).",
+        "In a child with a pre-existing disability, establish the baseline before localizing the new problem."
+      ],
+      "question": {
+        "question": "A 14-year-old with spastic diplegia since infancy (born preterm) now has three weeks of tingling and weakness creeping up from both feet, and his previously brisk ankle reflexes are now absent. What is the best way to think about the localization?",
+        "options": [
+          "His long-standing diplegia explains everything, so no new localization is needed",
+          "The new findings must come from the same old brain lesion, which must be progressing",
+          "Two problems at two addresses: an old central lesion and a new peripheral one, which must be localized on its own",
+          "Reflexes are unreliable in cerebral palsy, so the change can be ignored"
+        ],
+        "answer": 2,
+        "explanation": "His baseline is a static central lesion that produces brisk reflexes. A new ascending sensory and motor disturbance with loss of those reflexes is a change in kind, pointing to a new peripheral process such as a polyneuropathy, and it must be localized separately. Forcing everything onto the old diagnosis is parsimony misapplied: the findings began at different times (Brazis 2011, p. 4). A static brain lesion does not make reflexes disappear, and dismissing a change in reflexes in a child with cerebral palsy is exactly how a second diagnosis gets missed."
+      }
+    },
+    {
+      "title": "The child is a moving target",
+      "content": "In an adult the nervous system holds still while you examine it. In a child it does not. **Development is the fourth dimension of pediatric localization**: the same finding can be normal at one age and a sign of disease at another, and a fixed lesion can produce signs that change as the brain around it grows.\n\n**Normal at one age, abnormal at another**\n\nTwo examples carry the whole idea. An upgoing big toe is a cornerstone sign of corticospinal tract damage, yet it is normal in the first year of life, while the corticospinal tracts are still being myelinated ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/newborn_n.html)). DeMyer notes that the closer an infant is to one year, the more consistently the toe goes down (DeMyer, p. 282). The opposite example is handedness. In an adult, preferring one hand is unremarkable. In an infant it is a red flag: a hand preference before 12 months is abnormal and points to weakness of the other hand ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/06month.html)). The baby who reaches only with the right hand is telling you about the left.\n\n**A fixed lesion, changing signs**\n\nCerebral palsy is defined as a group of permanent disorders of movement and posture attributed to **non-progressive** disturbances in the developing fetal or infant brain ([Rosenbaum 2007](https://pubmed.ncbi.nlm.nih.gov/17370477/)). The lesion does not grow, but the picture does. DeMyer points out that infants with cerebral palsy may first appear hypotonic, before spasticity evolves (DeMyer, p. 273). A floppy infant who becomes a stiff toddler need not have a progressive disease; the lesion was always there, and the maturing motor system revealed it.\n\n**Localization in time**\n\nSo in children you localize along a time axis as well as a spatial one. Ask which of three stories you are in:\n- **Static**: present from early life and not worsening, though its expression may change with growth.\n- **Progressive**: getting worse, which demands a search for an active process.\n- **Regressive**: skills once acquired are being lost, the most urgent pattern of all, because it implies the nervous system is being damaged now.\n\nThe examination at any single visit cannot tell these apart. The history, the developmental record and repeated examinations can. That is why, in child neurology, the second visit is often more informative than the first.",
+      "keyPoints": [
+        "Development is the fourth dimension: a finding's meaning depends on age.",
+        "An upgoing toe is normal in the first year while the corticospinal tracts myelinate (Utah PediNeuroLogic Exam).",
+        "Hand preference before 12 months is abnormal and points to weakness of the other hand (Utah PediNeuroLogic Exam).",
+        "Cerebral palsy comes from a non-progressive lesion, yet its signs evolve; hypotonia may precede spasticity (Rosenbaum 2007; DeMyer, p. 273).",
+        "Classify the time course as static, progressive or regressive; regression is the most urgent."
+      ],
+      "question": {
+        "question": "At a 9-month check, a mother says her baby always reaches with the right hand and seems to ignore toys offered on the left. The baby is otherwise well and sitting. What is the right interpretation and next step?",
+        "options": [
+          "Early right-handedness, a normal variant; reassure",
+          "A possible left hemiparesis; examine carefully for asymmetry of tone, reflexes and the parachute response, and arrange brain imaging if confirmed",
+          "A visual problem in the left eye; refer to ophthalmology only",
+          "A sign of autism; refer for developmental assessment"
+        ],
+        "answer": 1,
+        "explanation": "Hand preference before 12 months is abnormal and points to weakness of the non-preferred hand (Utah PediNeuroLogic Exam), so this baby should be examined for a left hemiparesis, which in an infant often follows a perinatal stroke and is localized to the right hemisphere. Calling it early handedness falsely reassures. A field or eye problem can make a baby ignore one side, and vision is worth checking, but referring only to ophthalmology skips the more likely motor explanation. Nothing in the history points to autism, and that label would delay the motor workup."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A medical student, keen to be efficient, orders a brain MRI on every child with a new neurologic complaint before examining them. Which step of clinical diagnosis has been skipped, and what is the main risk?",
+      "options": [
+        "Recognition of impaired function; the risk is missing the diagnosis entirely",
+        "Listing likely causes; the risk is ordering too few tests",
+        "Localization; the risk is that incidental findings get blamed for the symptoms while the real lesion is missed",
+        "Ancillary testing; the risk is radiation exposure"
+      ],
+      "answer": 2,
+      "explanation": "Brazis places localization second of four steps, before listing causes and before tests (Brazis 2011, p. 2), and warns that unlocalized imaging produces false positives such as congenital cysts blamed for unrelated symptoms (Brazis 2011, p. 1). Recognition of impaired function is still happening here, since the child has a complaint. Listing causes and doing tests are not skipped but done too early. MRI involves no ionizing radiation, so radiation is not the risk."
+    },
+    {
+      "question": "A 16-year-old has a right sixth-nerve palsy that began suddenly last week. His mother mentions that his left leg has dragged since a bicycle accident when he was 6. How should these two findings be localized?",
+      "options": [
+        "As one right pontine lesion, because a sixth-nerve palsy with a contralateral leg weakness is a crossed brainstem syndrome",
+        "As two separate problems until proven otherwise, because they began ten years apart",
+        "As one left hemisphere lesion, because the leg is on the left",
+        "The leg weakness should be ignored because it is old"
+      ],
+      "answer": 1,
+      "explanation": "A crossed pattern would point to the brainstem only if the findings began together. When deficits arrive years apart, the examination may be showing two lesions, and Brazis's third-nerve example makes exactly this point (Brazis 2011, p. 4). Merging them into one pontine lesion is parsimony misapplied. A left hemisphere lesion would weaken the right leg, not the left. The old weakness should not be ignored; it is part of the baseline that must be accounted for."
+    },
+    {
+      "question": "On a busy ward round, a resident examines a 7-year-old with a headache and documents only 'neuro exam WNL'. What is the problem with this note?",
+      "options": [
+        "Nothing, if the child is well",
+        "It should say 'non-focal' instead",
+        "It records a conclusion instead of what was actually tested and found, so no one can tell what was examined",
+        "It should include a numerical score such as the Glasgow Coma Scale"
+      ],
+      "answer": 2,
+      "explanation": "The point of recording an examination is to let the next reader see what was tested and what was found; 'within normal limits' hides both. DeMyer explicitly rejects 'WNL' as a record of the examination (DeMyer, p. 604) and asks for objective recording before interpretation (DeMyer, p. 36). 'Non-focal' has the same flaw. A coma score is not relevant to a well, alert child and would not fix the problem."
+    },
+    {
+      "question": "A 10-year-old with a new speech problem repeats some phrases perfectly and fails on others of similar difficulty. What should the examiner conclude about repetition?",
+      "options": [
+        "Repetition is normal, because he can do it",
+        "Repetition is impaired, because higher functions should be judged by whether they are consistently normal",
+        "The test is invalid in children and should not be recorded",
+        "He is not trying, so the finding is functional"
+      ],
+      "answer": 1,
+      "explanation": "Brazis notes that signs from higher levels of the nervous system can be inconsistent within one examination, and that the right question is whether the patient performs the task consistently and normally, not whether they can do it once (Brazis 2011, p. 4). Recording repetition as normal because some phrases succeed misses the deficit. Repetition can be tested in a 10-year-old. Inconsistency at higher levels is expected in organic disease, so it is not by itself a sign of a functional disorder."
+    },
+    {
+      "question": "An 8-month-old born at term has an upgoing big toe on both sides when the sole is stroked. The rest of the examination, development and tone are normal. What does the plantar response mean?",
+      "options": [
+        "It is consistent with normal development at this age",
+        "It localizes to the spinal cord and needs urgent imaging",
+        "It localizes to both cerebral hemispheres",
+        "It shows a peripheral nerve problem"
+      ],
+      "answer": 0,
+      "explanation": "An upgoing toe is normal in the first year of life while the corticospinal tracts myelinate (Utah PediNeuroLogic Exam), and DeMyer notes the flexor response becomes more constant as the infant approaches one year (DeMyer, p. 282). In a developmentally normal 8-month-old with symmetric findings, it is not a localizing sign. Reproducible asymmetry would be a different matter. A peripheral nerve lesion cannot produce an extensor plantar response at any age."
+    },
+    {
+      "question": "Three children each have a weak left leg today. In the first it has been the same since birth; in the second it has worsened over a year; in the third a child who was walking normally has stopped walking over two months. Which child needs the most urgent workup, and why?",
+      "options": [
+        "The first, because congenital problems are the most severe",
+        "All three equally, since today's examinations are identical",
+        "The third, because loss of an acquired skill implies the nervous system is being damaged now",
+        "The second, because slow progression always means a tumour"
+      ],
+      "answer": 2,
+      "explanation": "Regression, the loss of a skill once acquired, implies an active process damaging the nervous system and is the most urgent of the three time courses. The static deficit since birth fits a fixed early lesion. The slowly progressive deficit also needs investigation, but slow progression has several possible causes and does not always mean a tumour. Identical examinations on one day do not make the stories equivalent; the time axis is part of the localization in children."
+    }
+  ],
+  "resources": [
+    {
+      "label": "PediNeuroLogic Exam (University of Utah)",
+      "url": "https://neurologicexam.med.utah.edu/pediatric/html/home_exam.html",
+      "note": "Normal neurologic examinations from newborn to 30 months, with videos (CC BY-NC-SA)."
+    },
+    {
+      "label": "PediNeuroLogic Exam: Introduction and developmental milestones",
+      "url": "https://neurologicexam.med.utah.edu/pediatric/html/introduction.html"
+    },
+    {
+      "label": "NeuroLogic Exam (University of Utah, adult)",
+      "url": "https://neurologicexam.med.utah.edu/adult/html/home_exam.html",
+      "note": "The adult examination, component by component, with normal and abnormal videos."
+    }
+  ],
+  "signOff": "On three real patients, the resident states the level of the lesion before ordering imaging, and a faculty member agrees.",
+  "sources": [
+    "brazis2011",
+    "pearl2014",
+    "morris2012",
+    "demyer",
+    "hilliard2004",
+    "rosenbaum2007",
+    "utah"
+  ]
+}

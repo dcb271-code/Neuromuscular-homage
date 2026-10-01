@@ -30,3 +30,7 @@ __pycache__/
 
 # Owner source decks/PDFs (large, not redistributable)
 docs/eeg/sources/
+
+# Localization source books (copyrighted, reference only)
+docs/localization/Sources/
+.DS_Store

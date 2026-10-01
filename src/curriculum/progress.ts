@@ -1,7 +1,7 @@
 'use client';
 
-// Per-browser progress for the EEG curriculum (no accounts). Stored in localStorage and
-// read only after mount, so server and first client render always agree.
+// Per-browser progress for a curriculum (no accounts). Stored in localStorage under a key per
+// curriculum, read only after mount, so server and first client render always agree.
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
@@ -9,7 +9,7 @@ export interface QuizAttempt { score: number; total: number; at: string; missed:
 export interface Flag { module: string; section: number; text: string; at: string }
 export interface MissedItem { module: string; section: number; at: string } // inline questions answered wrong
 
-export interface EegStore {
+export interface CurriculumStore {
   read: Record<string, number[]>;          // moduleId → section indexes read
   quiz: Record<string, QuizAttempt>;       // moduleId → last attempt
   flags: Record<string, Flag>;             // `${moduleId}:${section}:${kp}` → flag
@@ -17,44 +17,50 @@ export interface EegStore {
   signOff: Record<string, boolean>;        // moduleId → self-reported faculty sign-off
   lastModule?: string;
 }
+/** @deprecated name kept for existing imports */
+export type EegStore = CurriculumStore;
 
-const KEY = 'pons.eeg.v1'; // historical key from the site's first name; changing it would reset everyone's progress
-const EMPTY: EegStore = { read: {}, quiz: {}, flags: {}, missed: {}, signOff: {} };
+const EMPTY: CurriculumStore = { read: {}, quiz: {}, flags: {}, missed: {}, signOff: {} };
 
-function load(): EegStore {
+// One cache + listener set per storage key, so two curricula never share state.
+const caches = new Map<string, CurriculumStore>();
+const listeners = new Map<string, Set<() => void>>();
+
+function load(key: string): CurriculumStore {
   try {
-    const raw = localStorage.getItem(KEY);
+    const raw = localStorage.getItem(key);
     return raw ? { ...EMPTY, ...JSON.parse(raw) } : EMPTY;
   } catch { return EMPTY; }
 }
-function save(s: EegStore) {
-  try { localStorage.setItem(KEY, JSON.stringify(s)); } catch { /* private mode etc. */ }
+function getStore(key: string): CurriculumStore {
+  let s = caches.get(key);
+  if (!s) { s = load(key); caches.set(key, s); }
+  return s;
+}
+function setStore(key: string, next: CurriculumStore) {
+  if (next === caches.get(key)) return; // no-op update: don't notify, or effects that depend on it loop
+  caches.set(key, next);
+  try { localStorage.setItem(key, JSON.stringify(next)); } catch { /* private mode etc. */ }
+  listeners.get(key)?.forEach(l => l());
 }
 
-const listeners = new Set<() => void>();
-let cache: EegStore | null = null;
-function getStore(): EegStore { if (!cache) cache = load(); return cache; }
-function setStore(next: EegStore) {
-  if (next === cache) return; // no-op update: don't notify, or effects that depend on it loop
-  cache = next; save(next); listeners.forEach(l => l());
-}
-
-export function useEegProgress() {
-  const [store, setLocal] = useState<EegStore>(EMPTY);
+export function useCurriculumProgress(key: string) {
+  const [store, setLocal] = useState<CurriculumStore>(EMPTY);
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    const sync = () => setLocal({ ...getStore() });
+    const sync = () => setLocal({ ...getStore(key) });
     sync(); setHydrated(true);
-    listeners.add(sync);
-    const onStorage = (e: StorageEvent) => { if (e.key === KEY) { cache = null; sync(); } };
+    if (!listeners.has(key)) listeners.set(key, new Set());
+    listeners.get(key)!.add(sync);
+    const onStorage = (e: StorageEvent) => { if (e.key === key) { caches.delete(key); sync(); } };
     window.addEventListener('storage', onStorage);
-    return () => { listeners.delete(sync); window.removeEventListener('storage', onStorage); };
-  }, []);
+    return () => { listeners.get(key)?.delete(sync); window.removeEventListener('storage', onStorage); };
+  }, [key]);
 
-  const update = useCallback((fn: (s: EegStore) => EegStore) => setStore(fn(getStore())), []);
+  const update = useCallback((fn: (s: CurriculumStore) => CurriculumStore) => setStore(key, fn(getStore(key))), [key]);
 
-  // Mutators are memoised on `update` (itself stable), so effects may list them as deps.
+  // Mutators are memoised on `update` (itself stable per key), so effects may list them as deps.
   const api = useMemo(() => ({
     markRead: (module: string, section: number) => update(s => {
       const cur = s.read[module] ?? [];
@@ -74,13 +80,19 @@ export function useEegProgress() {
       return { ...s, missed };
     }),
     setSignOff: (module: string, done: boolean) => update(s => ({ ...s, signOff: { ...s.signOff, [module]: done } })),
-    reset: () => setStore({ ...EMPTY }),
-  }), [update]);
+    reset: () => setStore(key, { ...EMPTY }),
+  }), [update, key]);
 
   return { store, hydrated, ...api };
 }
 
-export function moduleProgress(store: EegStore, moduleId: string, sectionCount: number): number {
+// Storage keys. The EEG key is historical (the site's first name); changing it would reset
+// everyone's EEG progress.
+export const STORAGE_KEYS = { eeg: 'pons.eeg.v1', loc: 'wbw.loc.v1' } as const;
+
+export const useEegProgress = () => useCurriculumProgress(STORAGE_KEYS.eeg);
+
+export function moduleProgress(store: CurriculumStore, moduleId: string, sectionCount: number): number {
   const read = (store.read[moduleId] ?? []).length;
   const quizDone = store.quiz[moduleId] ? 1 : 0;
   return sectionCount ? (read + quizDone) / (sectionCount + 1) : 0;

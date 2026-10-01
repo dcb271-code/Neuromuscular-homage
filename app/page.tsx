@@ -3,6 +3,7 @@ import indexData from '@/src/data/index.json';
 import genesEnriched from '@/src/data/genes-enriched.json';
 import { SECTIONS, type Section } from '@/src/sections';
 import { EEG_MODULES } from '@/src/eeg/modules';
+import { LOC_MODULES } from '@/src/loc/modules';
 import eegFigures from '@/src/eeg/figures.json';
 
 type Summary = { crawledPages: number; totalSections: number; withGenes: number; withInheritance: number };
@@ -121,6 +122,12 @@ function SectionCard({ section }: { section: Section }) {
           <Stat value={String(EEG_MODULES.reduce((n, m) => n + m.sections.length, 0))} label="sections" />
           <Stat value={String(EEG_MODULES.reduce((n, m) => n + m.quiz.length + m.sections.filter(s => s.question).length, 0))} label="questions" />
           <Stat value={String(eegFigures.length)} label="tracings" />
+        </div>
+      ) : live && section.slug === 'localization' ? (
+        <div style={{ display: 'flex', gap: '14px', marginTop: '4px', flexWrap: 'wrap' }}>
+          <Stat value={String(LOC_MODULES.length)} label="modules" />
+          <Stat value={String(LOC_MODULES.reduce((n, m) => n + m.sections.filter(s => s.figure).length, 0))} label="interactive figures" />
+          <Stat value={String(LOC_MODULES.reduce((n, m) => n + m.quiz.length + m.sections.filter(s => s.question).length, 0))} label="questions" />
         </div>
       ) : partial ? (
         <div style={{ display: 'grid', gap: '4px', marginTop: '4px' }}>

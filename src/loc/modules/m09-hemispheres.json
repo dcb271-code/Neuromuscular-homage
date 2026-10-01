@@ -1,0 +1,230 @@
+{
+  "id": "m09-hemispheres",
+  "number": 9,
+  "title": "The hemispheres: lobes, proportions and the visual pathway",
+  "short": "Lobes, proportions, visual fields",
+  "description": "How the cortex declares itself through language, attention, gaze, proportion of weakness and the visual fields, and how early injury shapes the developing hemisphere.",
+  "why": "The cortex is where localization is least precise and most interesting.",
+  "track": "hemispheres",
+  "tags": [
+    "Hemispheres"
+  ],
+  "difficulty": "intermediate",
+  "duration": "50 min",
+  "color": "#4f46e5",
+  "objectives": [
+    "Recognise the signs that only a cortical lesion can produce, and use them to lift a hemiparesis to the hemisphere.",
+    "Use the proportion of face, arm and leg weakness to separate lateral cortex, medial cortex and internal capsule.",
+    "Map a visual field defect to its site, and test the fields in a child.",
+    "Separate acquired from developmental language problems, and recognise the exam patterns of perinatal brain injury."
+  ],
+  "sections": [
+    {
+      "title": "Cortical signatures",
+      "content": "Below the hemispheres, localization works by crossings and neighbours: a tract crosses here, a nucleus sits there. In the cortex the method changes. Most of what we know about where functions live was first learned from strokes, wounds and tumours, which Brazis calls true \"experiments of Nature\" (Brazis 2011, p. 493). Imaging and cortical mapping have refined the map, but at the bedside you still read it the old way: by noticing which human abilities have gone missing.\n\n**What only the cortex can lose**\n\nA lesion in the cord or brainstem can weaken a hand. Only the hemisphere can take away the ability to name the hand, to notice it, or to recognise a coin placed in it. Pearl lists the signatures of a cortical lesion (Pearl 2014, p. 108):\n\n- **Aphasia**, with a lesion of the language-dominant hemisphere, which is the left in almost all right-handers.\n- **Homonymous visual field cuts.**\n- **Cortical sensory loss**: the touch is felt but the object is not recognised, two points are not told apart, a number drawn on the palm is not read.\n- **Agnosia and neglect**, classically of the left side of space after a right parietal lesion.\n- **Apraxia**: a strong, sensate limb that cannot carry out a complex motor task.\n- **A dissociated weakness**, face and arm against leg, which the next section takes apart.\n\nTwo more belong on the list. **Seizures** are a cortical event, and a focal seizure is often the most precise localizing sign a child will give you. **Gaze preference** comes from the frontal eye fields, each of which drives the eyes to the opposite side. A destructive lesion lets the eyes drift toward the side of the lesion; a seizure drives them away from it (Pearl 2014, pp. 9-10).\n\n**The bedside decision**\n\nWhen you find a hemiparesis, ask what keeps it company. Brazis's list of neighbouring signs is the practical one: aphasia, hemisensory loss, homonymous hemianopia, unawareness of the deficit, and a history of focal seizures (Brazis 2011, p. 11). Any one of them lifts the lesion to the hemisphere. A pure motor hemiparesis with none of them points deeper, to the internal capsule or the brainstem (Brazis 2011, p. 12).\n\n**In a child**\n\nYoung children cannot report most of these signatures, so you watch for them. Neglect shows as a toddler who ignores toys on one side; apraxia as a child who cannot copy a gesture that a younger sibling manages; aphasia as words that were there last month and are gone.",
+      "keyPoints": [
+        "Most cortical localization came from \"experiments of Nature\": lesions and their effects (Brazis 2011, p. 493).",
+        "Cortical signatures: aphasia, homonymous field cuts, cortical sensory loss, neglect, apraxia, dissociated weakness (Pearl 2014, p. 108).",
+        "A destructive frontal lesion turns the eyes toward the lesion; a seizure turns them away (Pearl 2014, pp. 9-10).",
+        "A hemiparesis with cortical company is in the hemisphere; a pure motor hemiparesis points deeper (Brazis 2011, pp. 11-12)."
+      ],
+      "question": {
+        "question": "A 10-year-old wakes with weakness of the left arm and lower face. His eyes rest looking to the right, he ignores you when you stand on his left, and he does not seem bothered by the weakness. Where is the lesion?",
+        "options": [
+          "Left internal capsule",
+          "Right side of the pons",
+          "Right hemisphere, involving the frontal and parietal cortex",
+          "Right cervical spinal cord"
+        ],
+        "answer": 2,
+        "explanation": "Left-sided weakness with left neglect, unawareness of the deficit and a gaze preference to the right is a cortical picture in the right hemisphere: a destructive lesion of the right frontal eye field lets the eyes drift toward the lesion, and right parietal damage brings neglect of the left (Pearl 2014, pp. 9, 108). A left capsular lesion would weaken the right side. A pontine lesion would usually bring crossed cranial nerve signs and would not cause neglect. The cord cannot weaken the face."
+      }
+    },
+    {
+      "title": "Face, arm, leg",
+      "content": "The motor strip is laid out along the hemisphere like a figure lying upside down over the brain's surface: the face low on the lateral convexity, the arm and hand above it, and the leg folded over the top onto the medial surface between the hemispheres. The blood supply follows the same geography. The middle cerebral artery feeds the lateral convexity, so it serves the face, arm and tongue; the anterior cerebral artery feeds the medial surface, so it serves the leg (Pearl 2014, p. 7).\n\n**Proportion is the clue**\n\nThis gives you a measurement that needs nothing but your hands. Grade the face, the arm and the leg separately, then compare them.\n\n| Pattern | Where |\n|---|---|\n| Face and arm more than leg | Lateral cortex and the white matter under it: middle cerebral territory |\n| Leg more than arm, face spared | Medial cortex near the top of the hemisphere: anterior cerebral territory |\n| Face, arm and leg equal | Internal capsule, where the fibres are packed tightly together |\n\nSources: Pearl 2014, pp. 7, 9-10, 108-109; Brazis 2011, p. 11.\n\nThe reason is anatomical. In the cortex the fibres for face, arm and leg are spread over a large surface, so a lesion usually catches one part more than another. By the time they reach the internal capsule they are bundled into a small space, and one small lesion takes all of them equally (Pearl 2014, p. 7).\n\n**The face tells you the level**\n\nUpper motor neuron facial weakness spares the forehead, because the upper face has cortical input from both sides. A lower face droop on the same side as a hemiparesis places the lesion above the upper pons (Brazis 2011, p. 11). A spared lower face, with a tongue that deviates toward the strong side, should make you question whether the weakness is neurological at all (Brazis 2011, p. 12).\n\n**Where the rule bends**\n\nTumours do not respect vascular territories, and their deficits are less tidy and build up over time (Pearl 2014, p. 10). In childhood, where most hemispheric lesions are not strokes, proportion is a guide rather than a law. A focal seizure that marches from the face to the hand to the leg is the homunculus displaying itself in sequence (Pearl 2014, p. 10).",
+      "keyPoints": [
+        "The middle cerebral artery serves face, arm and tongue; the anterior cerebral artery serves the leg (Pearl 2014, p. 7).",
+        "Face and arm more than leg: lateral cortex. Leg more than arm: medial cortex. All equal: internal capsule.",
+        "Upper motor neuron facial weakness spares the forehead and places the lesion above the upper pons (Brazis 2011, p. 11).",
+        "Tumours do not respect territories; in children, proportion is a guide, not a law (Pearl 2014, p. 10)."
+      ],
+      "question": {
+        "question": "A 14-year-old has a weak right leg, slight clumsiness of the right hand, a normal face and normal speech. The right knee and ankle reflexes are brisk. Where is the lesion most likely to be?",
+        "options": [
+          "Left internal capsule",
+          "Left lateral frontal convexity",
+          "Right medial frontal lobe",
+          "Left medial frontal lobe near the top of the hemisphere"
+        ],
+        "answer": 3,
+        "explanation": "A leg that is much weaker than the arm, with the face spared and speech normal, is the anterior cerebral pattern: the leg area lies on the medial surface of the opposite hemisphere (Pearl 2014, pp. 7, 9; Brazis 2011, p. 11). A capsular lesion would weaken face, arm and leg about equally. A lateral convexity lesion would weaken the face and arm more than the leg, and on the left would often affect language. A right hemisphere lesion would weaken the left side."
+      }
+    },
+    {
+      "title": "The visual pathway",
+      "figure": "visual-fields",
+      "content": "The visual pathway is the best localizing instrument in the hemispheres, because it runs from the front of the brain to the back and every segment leaves its own signature in the field. Learn three facts and the rest follows.\n\n**Three facts**\n\n- **The image is reversed and inverted.** The nasal retina sees the temporal field, and the lower retina sees the upper field. That inversion persists all the way back (Pearl 2014, pp. 26-27).\n- **Nasal fibres cross at the chiasm.** Behind the chiasm, each hemisphere carries the opposite half of space from both eyes.\n- **Behind the thalamus the fibres fan out.** Those for the upper field loop forward through the temporal lobe, in Meyer's loop; those for the lower field run through the parietal lobe (Pearl 2014, p. 27).\n\n**The defects that follow**\n\n- Optic nerve: one eye, often with a central scotoma.\n- Chiasm: both temporal fields, a bitemporal hemianopia.\n- Optic tract: the opposite half-field of both eyes, a homonymous hemianopia.\n- Temporal lobe: the opposite upper quadrant.\n- Parietal lobe: the opposite lower quadrant.\n- Occipital lobe: an opposite homonymous hemianopia, often sparing central vision (Pearl 2014, pp. 27-28).\n\nTry each site in the figure above and watch which quadrants go dark.\n\n**Two rules for the occipital lobe**\n\nAs the fibres approach the calcarine cortex they gather into tight bundles, so a lesion there affects both eyes alike: the defect is congruous. And the macular area has a dual blood supply, so a posterior cerebral infarct often spares central vision. The more congruous and the more macula-sparing the defect, the more occipital the lesion (Pearl 2014, pp. 27-28).\n\n**Testing a child**\n\nTest each eye separately, and watch the child's eyes to make sure they stay on your face. Counting fingers in each quadrant is the best bedside method; wiggling fingers is easier for children but less sensitive (Pearl 2014, p. 26). In younger children a small toy brought in from the side, or a blink to a threatening hand, serves. Present stimuli on both sides at once to look for extinction, a sign of neglect (Pearl 2014, p. 26). Children rarely complain of a field defect. They bump into door frames on one side, or a teacher notices that they miss the start of each line.",
+      "keyPoints": [
+        "The image is inverted on the retina; nasal fibres cross; behind the chiasm each hemisphere sees the opposite half of space (Pearl 2014, pp. 26-27).",
+        "Chiasm: bitemporal. Tract: homonymous. Temporal: opposite upper quadrant. Parietal: opposite lower quadrant.",
+        "The more congruous and macula-sparing the defect, the more occipital the lesion (Pearl 2014, pp. 27-28).",
+        "Test each eye separately; finger counting is more sensitive than finger wiggling; test both sides at once for extinction (Pearl 2014, p. 26)."
+      ],
+      "question": {
+        "question": "A 12-year-old with headaches is found on confrontation to miss your fingers in the upper left quadrant of both eyes. The defect is roughly similar in each eye but not identical. Where is the lesion most likely to be?",
+        "options": [
+          "Optic chiasm",
+          "Right temporal lobe, through Meyer's loop",
+          "Left parietal lobe",
+          "Right optic nerve"
+        ],
+        "answer": 1,
+        "explanation": "A defect in the same quadrant of both eyes is homonymous, so it lies behind the chiasm, in the hemisphere opposite the missing field: here the right. The upper field travels in the lower fibres that loop through the temporal lobe, so a right temporal lesion removes the upper left quadrant (Pearl 2014, p. 27). A chiasmal lesion would take both temporal fields. A left parietal lesion would remove the lower right quadrant. An optic nerve lesion affects one eye only."
+      }
+    },
+    {
+      "title": "Language and the developing brain",
+      "content": "The history of localization is largely the history of aphasia. In the 1860s Paul Broca argued that language belongs to the left hemisphere, overturning the old idea that paired organs do identical work (Brazis 2011, p. 1). His claim still holds in the clinic: the left hemisphere is dominant for language in almost all right-handed people (Pearl 2014, p. 10).\n\n**Broca's own caution**\n\nBroca also noticed something that a careful localizer should never forget. In his patients, the size of the lesion in the left inferior frontal gyrus did not reliably predict how much speech was lost: a small lesion could abolish speech, while one many times larger only impaired it (Brazis 2011, p. 1). The map is real, but brains differ in how they use it. That variability is the first form of plasticity anyone described.\n\n**Testing language**\n\nAt the bedside, sort language into its parts: fluency, comprehension, repetition, naming, reading and writing. In a school-aged child, ask the child to name pictures, follow a command of several steps, repeat a phrase, read a sentence and write their name. Each pattern of loss points to a different part of the left hemisphere. One famous disconnection shows how literally the map works: a lesion of the left visual cortex and the corpus callosum leaves a patient able to write but unable to read what they have written (Pearl 2014, p. 28).\n\n**Loss or never gained**\n\nIn children the first question is developmental, not anatomical. A child whose language has always been behind has a developmental language disorder until proved otherwise, and that does not localize to a focal lesion. Even the anatomy differs: the usual leftward enlargement of the inferior frontal gyrus is not found in people with autism or developmental language disorder (Brazis 2011, p. 493). A child who **loses** words they once had, over hours or days, has an acquired aphasia, and that is a localizing sign that needs urgent explanation.\n\n**The young brain**\n\nChildren injured early in life often regain more language than adults with similar lesions, because the developing brain can reorganise. But the recovery is variable and rarely complete in every respect, and no number we could cite would fit the child in front of you. Promise families attention, not a percentage.",
+      "keyPoints": [
+        "The left hemisphere is dominant for language in almost all right-handers (Pearl 2014, p. 10).",
+        "Broca saw that lesion size did not predict how much speech was lost: the first description of cortical plasticity (Brazis 2011, p. 1).",
+        "Language that was never gained suggests a developmental disorder; language that is lost is an acquired, localizing sign.",
+        "Children often recover more language than adults after early injury, but the course is variable; avoid promising numbers."
+      ],
+      "question": {
+        "question": "A 5-year-old whose speech was normal for age last week now speaks in short, effortful phrases, cannot name a cup or a key, and has a slightly weak right hand. Which reading is most accurate?",
+        "options": [
+          "An acquired aphasia from a left hemisphere lesion that needs urgent assessment",
+          "A developmental language disorder that can be referred for routine speech therapy",
+          "A right hemisphere lesion, since the hand weakness is on the right",
+          "Selective mutism from anxiety"
+        ],
+        "answer": 0,
+        "explanation": "Language that was present and is now lost, together with a weak right hand, is an acquired aphasia from the left hemisphere, the dominant one for language in almost all right-handers (Pearl 2014, p. 10). It is a localizing sign and demands urgent evaluation. A developmental language disorder describes language that was never acquired normally, not language that disappears. A right hemisphere lesion would weaken the left hand. Selective mutism is silence in some settings with normal speech in others, not effortful speech with naming errors and focal weakness."
+      }
+    },
+    {
+      "title": "Perinatal brain injury",
+      "content": "The hemispheres can be injured before a child has done anything with them. Two patterns are common enough that every child neurologist should recognise them from the exam alone, and both teach the same lesson as the rest of this module: the shape of the deficit reflects where the injury fell.\n\n**The hand that is never chosen**\n\nA stroke around the time of birth often goes unnoticed in the newborn period. The first sign may be a baby who reaches with only one hand. Hand preference before the first birthday is abnormal and points to weakness of the other hand; true handedness develops after twelve months ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/home_exam.html)). The child who emerges has a hemiplegic cerebral palsy, with the arm and hand more affected than the leg, a fisted hand, and a leg that circumducts when walking (DeMyer, p. 340). The proportions are those of the lateral cortex, the middle cerebral territory.\n\n**Legs more than arms**\n\nThe premature brain is vulnerable in a different place. The characteristic injury of prematurity is periventricular leukomalacia, damage to the white matter around the lateral ventricles, often with injury to neurons and axons as well ([Volpe 2009](https://pubmed.ncbi.nlm.nih.gov/19081519/)). The fibres for the legs pass closest to the ventricles on their way down from the medial cortex, so they are caught first. The result is spastic diplegia: severe spasticity in the legs, little in the arms, and little or no trouble with speech or swallowing, in contrast with a double hemiplegia, where the arms are weaker than the legs (DeMyer, p. 340). The children toe-walk, scissor, or walk in a crouch.\n\n**Deep grey matter**\n\nA third pattern follows injury to the basal ganglia and thalamus around birth: involuntary writhing movements mixed with spasticity (DeMyer, p. 340). That localization belongs to the [[m08-loops|loops]], but the timing belongs here.\n\n**The bedside decision**\n\nWhen an infant has an early hand preference, examine the neglected hand for tone, reflexes and fisting, and ask about the pregnancy and delivery. When a child born early walks on the toes with stiff legs and good hands, the history and the proportions point to the periventricular white matter before any imaging does. The exam names the level; the birth history names the time.",
+      "keyPoints": [
+        "Hand preference before the first birthday is abnormal and points to weakness of the other hand (Utah PediNeuroLogic Exam).",
+        "Hemiplegic cerebral palsy after perinatal stroke: arm more than leg, fisted hand, circumducting leg (DeMyer, p. 340).",
+        "Periventricular leukomalacia is the characteristic white-matter injury of prematurity (Volpe 2009).",
+        "Spastic diplegia: legs much more than arms, speech and swallowing spared; double hemiplegia: arms weaker than legs (DeMyer, p. 340)."
+      ],
+      "question": {
+        "question": "A 7-month-old reaches for every toy with the left hand. The right hand is often fisted with the thumb tucked in, and the right arm reflexes are brisker than the left. The pregnancy and birth were uneventful at term. What is the most likely explanation?",
+        "options": [
+          "Early left-handedness, which is normal at this age",
+          "Spastic diplegia from periventricular white-matter injury",
+          "A right brachial plexus injury from delivery",
+          "Right hemiparesis from a left hemisphere injury around the time of birth"
+        ],
+        "answer": 3,
+        "explanation": "Hand preference before the first birthday is abnormal and points to weakness of the other hand (Utah PediNeuroLogic Exam). A fisted right hand with brisk reflexes is an upper motor neuron sign, so the lesion is in the left hemisphere, and a term baby with an uneventful history fits a perinatal stroke that declared itself late. Handedness is not established this early. Spastic diplegia affects the legs more than the arms and is characteristic of prematurity (Volpe 2009). A brachial plexus injury would give a floppy arm with reduced reflexes, not a fisted hand with brisk ones."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A 13-year-old has a left homonymous hemianopia that is identical in the two eyes and spares central vision. Where is the lesion?",
+      "options": [
+        "Right occipital lobe",
+        "Right optic tract",
+        "Optic chiasm",
+        "Left occipital lobe"
+      ],
+      "answer": 0,
+      "explanation": "A homonymous defect lies behind the chiasm in the opposite hemisphere, here the right. A perfectly congruous defect with macular sparing points to the occipital lobe, where fibres from the two eyes have come together and the macular area has a dual blood supply (Pearl 2014, pp. 27-28). A tract lesion gives a homonymous hemianopia that is usually less congruous and does not spare the macula. A chiasmal lesion removes both temporal fields. A left occipital lesion would remove the right field."
+    },
+    {
+      "question": "An 11-year-old has a 30-second episode in which her head and eyes turn forcefully to the left and her left arm jerks. Afterwards she is drowsy. Where does the seizure most likely begin?",
+      "options": [
+        "Left frontal lobe",
+        "Left occipital lobe",
+        "Right frontal lobe",
+        "The brainstem"
+      ],
+      "answer": 2,
+      "explanation": "Each frontal eye field drives the eyes to the opposite side. A seizure excites it, so the eyes turn away from the seizure focus: a right frontal seizure drives the eyes to the left (Pearl 2014, p. 9). The left arm jerking points to the right motor strip as well. A destructive right frontal lesion would do the opposite, letting the eyes drift to the right. Seizures are a cortical event, not a brainstem one."
+    },
+    {
+      "question": "A 9-year-old has weakness of the right face, arm and leg to the same degree, with no aphasia, no sensory loss and normal visual fields. Where is the lesion most likely to be?",
+      "options": [
+        "Left lateral frontal convexity",
+        "Left internal capsule",
+        "Left medial frontal lobe",
+        "Right internal capsule"
+      ],
+      "answer": 1,
+      "explanation": "Equal weakness of face, arm and leg, with no cortical company, points to the internal capsule, where the fibres are bundled closely and one small lesion takes them all (Pearl 2014, pp. 7, 109; Brazis 2011, p. 12). A convexity lesion would weaken face and arm more than leg and would often bring aphasia on the left. A medial frontal lesion would weaken the leg more. A right capsular lesion would weaken the left side."
+    },
+    {
+      "question": "A boy born at 28 weeks is now 3. He walks on his toes with stiff, scissoring legs and brisk leg reflexes, but his hands are skilful and his speech is normal for age. What best explains this pattern?",
+      "options": [
+        "Left middle cerebral artery stroke",
+        "A cerebellar malformation",
+        "A peripheral neuropathy",
+        "Periventricular white-matter injury of prematurity"
+      ],
+      "answer": 3,
+      "explanation": "Spastic legs with relatively spared arms and normal speech are spastic diplegia (DeMyer, p. 340), and in a child born very early the characteristic cause is periventricular leukomalacia ([Volpe 2009](https://pubmed.ncbi.nlm.nih.gov/19081519/)). The leg fibres pass close to the ventricles and are caught first. A middle cerebral stroke would affect one side, arm more than leg. A cerebellar malformation would cause ataxia, not spasticity. A neuropathy would reduce the reflexes."
+    },
+    {
+      "question": "Which visual field test is least sensitive for a mild field defect at the bedside?",
+      "options": [
+        "Wiggling fingers in each quadrant",
+        "Counting fingers in each quadrant, one eye at a time",
+        "Presenting a red object in each quadrant",
+        "Formal perimetry"
+      ],
+      "answer": 0,
+      "explanation": "Finger counting in each quadrant, with each eye tested separately, is usually the best bedside method; wiggling fingers is easier for young children but less sensitive for mildly reduced vision (Pearl 2014, p. 26). A red object adds sensitivity, because desaturation of red is an early sign of optic nerve disease. Formal perimetry, manual or computerized, is the most sensitive of these. Use finger wiggling when you must, but know what it can miss."
+    },
+    {
+      "question": "A 16-year-old has right arm and face weakness. He understands and follows commands, but his speech is halting and effortful, with few words. Which part of the brain is most likely affected?",
+      "options": [
+        "Right temporal lobe",
+        "Left posterior temporal lobe",
+        "Left inferior frontal gyrus",
+        "Left occipital lobe"
+      ],
+      "answer": 2,
+      "explanation": "Halting, effortful, sparse speech with preserved comprehension is the pattern Broca described in lesions of the left inferior frontal gyrus (Brazis 2011, p. 1), and with right face and arm weakness it fits the lateral cortex of the left hemisphere (Pearl 2014, p. 10). A left posterior temporal lesion would impair comprehension more. The right hemisphere is rarely dominant for language in a right-hander. An occipital lesion would affect vision and reading, not fluency."
+    }
+  ],
+  "resources": [
+    {
+      "label": "Utah NeuroLogic Exam: mental status, abnormal",
+      "url": "https://neurologicexam.med.utah.edu/adult/html/mentalstatus_abnormal.html",
+      "note": "Videos of aphasia, neglect and apraxia. CC BY-NC-SA."
+    },
+    {
+      "label": "Utah NeuroLogic Exam: cranial nerves, abnormal",
+      "url": "https://neurologicexam.med.utah.edu/adult/html/cranialnerve_abnormal.html",
+      "note": "Includes visual field defects and how they are tested."
+    },
+    {
+      "label": "Utah PediNeuroLogic Exam: 6 month old",
+      "url": "https://neurologicexam.med.utah.edu/pediatric/html/06month.html",
+      "note": "Reaching, grasping and symmetry of hand use in infancy."
+    },
+    {
+      "label": "Neuroscience Online: Visual Processing, Cortical Pathways",
+      "url": "https://nba.uth.tmc.edu/neuroscience/m/s2/chapter15.html"
+    },
+    {
+      "label": "Neuroscience Online: Higher Cortical Functions, Language",
+      "url": "https://nba.uth.tmc.edu/neuroscience/m/s4/chapter08.html"
+    }
+  ],
+  "signOff": "The resident maps the visual fields of two children and names the lesion site in each, with a faculty member.",
+  "sources": [
+    "brazis2011",
+    "pearl2014",
+    "demyer",
+    "volpe2009",
+    "utah"
+  ]
+}

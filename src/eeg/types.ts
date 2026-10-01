@@ -2,14 +2,9 @@
 // Mirrors the Neurogenetics Curriculum schema (module → sections → prose, key points,
 // one decision-style inline question; end-of-module quiz) so the two sites stay parallel.
 
-export type EegTrack = 'foundation' | 'neonatal' | 'abnormal' | 'icu' | 'longitudinal';
+export type EegTrack = string; // EEG: foundation | neonatal | abnormal | icu | longitudinal; localization: doctrine | periphery | axis | hemispheres | synthesis
 
-export type EegTag =
-  | 'EEG Fundamentals'
-  | 'Normal & Variants'
-  | 'Neonatal & ICU'
-  | 'Abnormal & Ictal'
-  | 'Clinical Decision-Making';
+export type EegTag = string; // validated per curriculum by scripts/validate-*.mjs
 
 export type Difficulty = 'beginner' | 'intermediate' | 'advanced';
 
@@ -28,8 +23,10 @@ export interface Section {
   content: string;
   keyPoints: string[]; // 3–5, flaggable for review
   question?: QuizQuestion; // one decision-oriented inline question
-  /** Optional computed figure rendered above the prose. */
-  figure?: 'montage-lab' | 'filter-lab' | 'curriculum-map';
+  /** Optional computed figure (widget id) rendered above the prose. */
+  figure?: string;
+  /** Case sections: the prose is a debrief, collapsed until the learner opens it. */
+  discussion?: boolean;
   /** Tracings from the figure registry (src/eeg/figures.json), shown after the prose. */
   figures?: string[];
 }

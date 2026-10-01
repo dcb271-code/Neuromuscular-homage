@@ -1,0 +1,228 @@
+{
+  "id": "m08-loops",
+  "number": 8,
+  "title": "The loops: cerebellum, basal ganglia and gait",
+  "short": "Cerebellum, basal ganglia, gait",
+  "description": "How the cerebellum and basal ganglia shape movement without powering it, how to localize ataxia and involuntary movements, and why gait is the best single test.",
+  "why": "These circuits do not weaken; they shape movement, and gait is where they show.",
+  "track": "axis",
+  "tags": [
+    "Neuraxis"
+  ],
+  "difficulty": "intermediate",
+  "duration": "45 min",
+  "color": "#7c3aed",
+  "objectives": [
+    "Explain why cerebellar and basal ganglia disease spare strength, and check strength before calling a movement ataxic.",
+    "Localize cerebellar signs by side and by midline versus hemisphere.",
+    "Work through acute ataxia in a child in order of danger and likelihood.",
+    "Describe involuntary movements precisely, and read a gait as a tour of the levels of the neuraxis."
+  ],
+  "sections": [
+    {
+      "title": "Modulators, not motors",
+      "content": "Two great circuits in the brain move nothing directly. Neither the cerebellum nor the basal ganglia sends its own fibres to the anterior horn cells. Both work in loops: they take in what the cortex intends and what the body reports, and they send their verdict back, through the thalamus, to the motor cortex that will act on it. Pearl calls the cerebellum \"the great modulator of the nervous system\" (Pearl 2014, p. 116), and the phrase fits the basal ganglia too. One loop tunes accuracy and timing; the other sets how much movement is allowed and how fast.\n\n**Why this changes the exam**\n\nBecause these loops shape movement rather than power it, their disease leaves **strength intact**. The cerebellar patient is clumsy, overshoots, and walks on a broad base, but pushes against your hand normally. The basal ganglia patient has too little movement or too much of the wrong kind, but no paralysis. That gives you a rule worth stating plainly: before you call a movement ataxic or dystonic, prove the limb is strong. A weak arm misses the target too, and a weak child falls too. The [[m03-first-fork|first fork]] comes first.\n\n**Two kinds of wrong movement**\n\n- **Cerebellar**: errors in range, rate and rhythm. Dysmetria on finger-nose, irregular rapid alternating movements, an intention tremor that grows as the hand approaches the target, a wide-based gait, nystagmus, and scanning speech (Pearl 2014, pp. 63, 116).\n- **Basal ganglia**: errors in amount and selection. Slowness and rigidity at one end; chorea, dystonia, tics and other unwanted movements at the other.\n\nA practical tell: cerebellar tremor appears on action and worsens near the target; a tremor at rest belongs to the basal ganglia.\n\n**In a child**\n\nClumsiness is one of the commonest reasons a child is referred, and most clumsy children have neither a cerebellar nor a basal ganglia lesion. The developmental exam asks a different question first: is this clumsiness for age? The toddler's broad-based, jerky, falling gait is normal at the age when walking begins (DeMyer, p. 338). Localization starts only when a sign is abnormal for the child in front of you.",
+      "keyPoints": [
+        "The cerebellum and basal ganglia work in loops back to the motor cortex; they shape movement but do not power it.",
+        "Their disease spares strength: prove the limb is strong before you call a movement ataxic or dystonic.",
+        "Cerebellar errors are of range, rate and rhythm; basal ganglia errors are of amount and selection.",
+        "Action tremor worsening near the target is cerebellar; tremor at rest is basal ganglia."
+      ],
+      "question": {
+        "question": "A 7-year-old overshoots badly on finger-nose testing with the right arm. Strength in that arm is 3 out of 5, with brisk right reflexes. What is the most defensible description?",
+        "options": [
+          "Right cerebellar ataxia; image the posterior fossa",
+          "Right arm weakness of upper motor neuron type; the overshoot cannot be called cerebellar while the limb is this weak",
+          "Right-sided chorea",
+          "Normal clumsiness for age"
+        ],
+        "answer": 1,
+        "explanation": "Coordination can only be judged in a limb strong enough to perform the task. With power of 3 out of 5 and brisk reflexes, the arm has an upper motor neuron weakness, and that alone can make movements inaccurate. Calling it cerebellar would send you to the wrong level of the neuraxis. Chorea is a random, flowing extra movement, not overshoot on a target task. Normal clumsiness for age does not come with weakness and brisk reflexes on one side."
+      }
+    },
+    {
+      "title": "The cerebellum: same side, midline or hemisphere",
+      "content": "The cerebellum has its own localizing rules, and the first is the one that surprises students: **cerebellar signs are on the same side as the lesion** (Pearl 2014, p. 63). A unilateral cerebellar lesion causes only ipsilateral cerebellar signs (DeMyer, p. 339).\n\n**Why the same side**\n\nThe answer is a double crossing. Cerebellar output leaves through the superior cerebellar peduncle and crosses in the midbrain to reach the opposite thalamus and motor cortex. That cortex then sends its corticospinal tract down, crossing again in the medulla, back to the side where the cerebellum began. Two crossings cancel. A lesion anywhere on that outflow path below the second crossing shows its clumsiness on the side of the cerebellum that started it.\n\n**Midline or hemisphere**\n\nThe second rule maps the cerebellum from medial to lateral. The midline vermis and flocculonodular lobe look after the trunk, stance and eye movements; the hemispheres plan and tune the limbs (Pearl 2014, p. 63). So:\n\n- **Midline lesions** give truncal ataxia: axial unsteadiness and a wide-based, staggering gait, with little ataxia of the limbs when tested lying down (Brazis 2011, pp. 411-412), and often nystagmus, vertigo, nausea and vomiting (Pearl 2014, p. 63).\n- **Hemispheric lesions** give limb ataxia on the same side: dysmetria, intention tremor and poor rapid alternating movements (Brazis 2011, p. 412).\n- **Both at once**, a pancerebellar syndrome, suggests something diffuse: a toxin or drug, a metabolic or inherited disorder, or multiple sclerosis (DeMyer, p. 339).\n\n**A correction worth making**\n\nSome teaching texts say cerebellar output is all inhibitory; Pearl does (Pearl 2014, p. 63). The cerebellar cortex's own output, from the Purkinje cells to the deep nuclei, is inhibitory. But the deep nuclei, which carry the cerebellum's message to the rest of the brain, are excitatory in all their projections except those to the inferior olive (Brazis 2011, p. 405). The difference matters if you want to understand why a cerebellar lesion leaves the motor cortex under-driven rather than released.\n\n**In a child**\n\nThe caudal vermis syndrome, staggering with relatively spared limbs, is typical of a medulloblastoma, the classic midline tumour of childhood (Brazis 2011, p. 412). A child who walks badly but performs heel-shin well lying down has told you the lesion is in the middle.",
+      "keyPoints": [
+        "Cerebellar signs are on the same side as the lesion (Pearl 2014, p. 63); two crossings cancel.",
+        "Midline lesions give truncal and gait ataxia with relatively spared limbs; hemispheric lesions give same-side limb ataxia (Brazis 2011, pp. 411-412).",
+        "Bilateral, pancerebellar signs suggest a diffuse cause: toxin, drug, metabolic, inherited or demyelinating (DeMyer, p. 339).",
+        "The deep nuclei carry cerebellar output and are excitatory except to the inferior olive (Brazis 2011, p. 405); only the Purkinje stage before them is inhibitory."
+      ],
+      "question": {
+        "question": "A 5-year-old has a month of morning vomiting and now staggers and sways when standing, on a broad base. Lying down, finger-nose and heel-shin are nearly normal on both sides. Where is the lesion most likely to be?",
+        "options": [
+          "The cerebellar vermis in the midline",
+          "The right cerebellar hemisphere",
+          "The dorsal columns of the spinal cord",
+          "Both cerebral hemispheres"
+        ],
+        "answer": 0,
+        "explanation": "Ataxia of stance and gait with relatively spared limb coordination is the midline, truncal pattern; with morning vomiting it raises the possibility of a midline posterior fossa tumour blocking the fourth ventricle, such as a medulloblastoma (Brazis 2011, p. 412). A right hemispheric lesion would show right limb ataxia on testing. Dorsal column disease causes a sensory ataxia that worsens with the eyes closed and comes with lost position sense, which was not described. Bilateral hemispheric disease would bring weakness, reflex changes or cognitive signs rather than isolated truncal ataxia."
+      }
+    },
+    {
+      "title": "Acute ataxia in a child",
+      "content": "A child who could walk yesterday and staggers today is one of the commonest urgent problems in child neurology, and it is a good test of whether you can think in levels and tempos at the same time. The level is usually the cerebellum or its connections. The tempo, acute, narrows the mechanisms to a short list that you can walk through in order of danger and of likelihood.\n\n**The short list**\n\n- **An ingestion.** A toddler with sudden ataxia and drowsiness has taken something until proved otherwise; many sedatives and antiseizure drugs cause a pancerebellar picture.\n- **Post-infectious cerebellar ataxia.** An immune-mediated ataxia after a viral illness; Pearl lists it among the infectious causes of cerebellar disease (Pearl 2014, p. 63). The child is alert, the ataxia is mostly truncal, and the rest of the exam is normal.\n- **Opsoclonus-myoclonus-ataxia.** Chaotic, darting, multidirectional eye movements and jerks of the trunk and limbs in an irritable child. This pattern is a reason to look for a neuroblastoma.\n- **A posterior fossa tumour.** Usually a story of weeks rather than days, often with headache and vomiting from raised intracranial pressure (Brazis 2011, p. 412). A child who seems to have become ataxic overnight may have been compensating for longer.\n- **Something that is not the cerebellum.** Absent reflexes with ataxia points to the peripheral nerves, as in a variant of Guillain-Barré syndrome; lost position sense points to a sensory ataxia; a weak leg can masquerade as ataxia.\n\n**What to do first**\n\nAssess the level of consciousness and ask, specifically, what medicines and substances are in the house. Then look at the eyes: nystagmus, opsoclonus, and the optic discs for papilloedema. Check the reflexes, position sense and strength, so that the ataxia is truly cerebellar. A child who is drowsy, has papilloedema, focal signs, a severe headache, or is getting worse needs urgent imaging; an alert child with isolated truncal ataxia after a viral illness and a normal exam can often be watched closely.\n\n**The philosophy**\n\nAcute ataxia rewards the discipline of this whole curriculum. The commonest cause is benign, and the temptation is to stop at it. The order of questions (Is this child safe? Is this really the cerebellum? What else keeps it company?) is what finds the ingestion, the tumour and the neuroblastoma.",
+      "keyPoints": [
+        "Acute ataxia in a toddler: think of an ingestion first, especially with drowsiness.",
+        "Post-infectious ataxia: alert, truncal, otherwise normal exam, after a viral illness (Pearl 2014, p. 63).",
+        "Chaotic multidirectional eye movements with myoclonus suggest opsoclonus-myoclonus-ataxia: look for a neuroblastoma.",
+        "Drowsiness, papilloedema, focal signs or worsening mean urgent imaging."
+      ],
+      "question": {
+        "question": "A 2-year-old has become unsteady over three days and is irritable. His eyes make rapid, chaotic, conjugate darting movements in all directions, and his trunk and limbs jerk. Reflexes are normal and there was no access to medicines. What should the next step include?",
+        "options": [
+          "Reassurance and review in two weeks for post-infectious ataxia",
+          "A lumbar puncture alone",
+          "A search for a neuroblastoma",
+          "Nerve conduction studies for a variant of Guillain-Barré syndrome"
+        ],
+        "answer": 2,
+        "explanation": "Chaotic multidirectional darting eye movements (opsoclonus) with myoclonus and ataxia form the opsoclonus-myoclonus-ataxia syndrome, which in a young child should prompt a search for a neuroblastoma. Treating it as simple post-infectious ataxia misses the defining eye sign. A lumbar puncture alone does not look for the tumour that may be driving the syndrome. Normal reflexes argue against a Guillain-Barré variant, and opsoclonus is not part of it."
+      }
+    },
+    {
+      "title": "The basal ganglia: too little or too much",
+      "content": "If the cerebellum asks \"how accurately?\", the basal ganglia ask \"how much, and which one?\" Their disorders fall on a single axis, and Pearl uses it to sort the whole field: **hypokinetic** disorders with too little movement, and **hyperkinetic** disorders with movements that should not be there (Pearl 2014, p. 116).\n\n**Two ends of the axis**\n\n- **Too little**: slowness, cogwheel rigidity, a tremor at rest, and a stooped, shuffling gait that cannot easily stop (Pearl 2014, p. 116). This is the adult Parkinson picture, and it is rare in childhood.\n- **Too much**: chorea (brief, random, flowing movements that dart from one body part to another), dystonia (sustained or repeated twisting postures, often provoked by a particular action), tics, myoclonus and athetosis. In children this end of the axis dominates.\n\n**Why the involuntary movement is the localizing sign**\n\nThere is no weakness to measure and often no reflex change, so the movement itself carries the address. Chorea, dystonia and a tremor at rest place the lesion in the subcortex and deep grey matter, the one level where the [[m03-first-fork|localizer]] keeps them. The skill is in describing the movement precisely before naming it: what part moves, whether it is brief or sustained, random or patterned, at rest or on action, suppressible or not.\n\n**Sydenham chorea**\n\nThe classic childhood example is Sydenham chorea, a post-streptococcal disorder that Pearl calls pathognomonic of acute rheumatic fever (Pearl 2014, p. 116). A school-aged child becomes fidgety and clumsy, drops things, cannot keep the tongue protruded, and grips with a waxing and waning squeeze; behaviour and mood often change too. The localization is the basal ganglia; the diagnosis obliges you to look for the rest of rheumatic fever, including the heart.\n\n**Other childhood patterns**\n\nDystonia that fluctuates through the day, dyskinetic cerebral palsy after injury to the deep grey matter around birth, and movement disorders that arrive with regression all point to the same level but to very different mechanisms. The level is the beginning of the reasoning, not the end; [[m11-where-to-what|tempo]] will divide them.",
+      "keyPoints": [
+        "Basal ganglia disorders sit on one axis: hypokinetic (too little movement) or hyperkinetic (unwanted movement) (Pearl 2014, p. 116).",
+        "In children the hyperkinetic end dominates: chorea, dystonia, tics, myoclonus.",
+        "Describe the movement precisely (which part, brief or sustained, random or patterned, rest or action) before naming it.",
+        "Sydenham chorea is post-streptococcal and pathognomonic of acute rheumatic fever: look for the rest of the disease (Pearl 2014, p. 116)."
+      ],
+      "question": {
+        "question": "A 9-year-old girl has three weeks of fidgety, irregular movements flitting between her hands, face and feet, a fluctuating hand grip, and new tearfulness. She had a sore throat six weeks ago. Strength and reflexes are normal. After placing the lesion in the basal ganglia, what is the most important next step?",
+        "options": [
+          "Look for the other features of acute rheumatic fever, including the heart",
+          "Image the cervical spinal cord",
+          "Reassure the family that this is a tic disorder",
+          "Order nerve conduction studies"
+        ],
+        "answer": 0,
+        "explanation": "Random, flowing movements that move from one body part to another are chorea, and after a recent sore throat Sydenham chorea is the leading cause; Pearl calls it pathognomonic of acute rheumatic fever (Pearl 2014, p. 116). Diagnosing it obliges you to look for carditis and the rest of the disease. The cord cannot generate chorea. Tics are patterned, repetitive and briefly suppressible, unlike these flitting movements, and calling it a tic disorder would miss the heart. Nerve studies examine the motor unit, which is not the level here."
+      }
+    },
+    {
+      "title": "Gait as the integrator",
+      "figure": "gait-by-level",
+      "content": "If you could watch a child do only one thing, walking would be the choice. Gait is an excellent screen of the whole motor system (Pearl 2014, p. 114), and lesions at each level of the neuraxis impair it in a characteristic way, so the features of the gait suggest the lesion location and its probable cause (DeMyer, p. 338). Pearl teaches it from the bottom up, from muscle to cortex (Pearl 2014, pp. 114-117), which turns the gait into a tour of the eleven levels.\n\n**Bottom up**\n\n- **Muscle**: a waddling, sway-backed gait from weak hip muscles; the classic boy with Duchenne dystrophy has big calves, lordosis and a waddle (Pearl 2014, p. 115).\n- **Junction**: a gait that fatigues and recovers with rest.\n- **Nerve**: a steppage gait, lifting the knee high to clear a dropped foot.\n- **Root**: an antalgic gait, avoiding weight on a painful leg.\n- **Cord**: a stiff, scissoring gait from spasticity.\n- **Basal ganglia**: a dancing, choreic gait, or a shuffling one.\n- **Cerebellum**: a wide-based gait that cannot manage heel to toe.\n- **Hemisphere**: a circumducting gait, the stiff leg swung outward.\n\nUse the figure above to pick a gait and see the level it points to and the company it keeps.\n\n**The developing gait**\n\nA child's gait has its own timetable. The newborn steps reflexly when held upright; cruising follows; around the first birthday the toddler walks freely on a broad base with short, jerky steps and frequent falls, and only later develops the mature heel-toe stride with swinging arms (DeMyer, p. 338). A broad-based, falling gait is a sign at five and normal at thirteen months.\n\n**Toe walking**\n\nToe walking is the best example of a gait that does not localize on its own. It can be the first sign of Duchenne dystrophy or of spastic diplegia, it is common in autism, and in a child who runs, skips and hops normally it may be an idiosyncratic, sometimes familial pattern with no disease at all (DeMyer, p. 338). The rest of the exam decides.\n\n**How to look**\n\nAsk the child to walk, run, walk on the heels and on the toes, and walk heel to toe. Heel and toe walking test the muscles of the sciatic territory as well as balance (DeMyer, p. 338). Make it a race or a game.",
+      "keyPoints": [
+        "Gait screens the whole motor system; its features suggest the level and the cause (DeMyer, p. 338; Pearl 2014, p. 114).",
+        "Bottom up: waddle (muscle), fatigable (junction), steppage (nerve), antalgic (root), scissoring (cord), choreic (basal ganglia), wide-based (cerebellum), circumducting (hemisphere).",
+        "A broad-based, falling toddler gait is normal around the first birthday (DeMyer, p. 338).",
+        "Toe walking does not localize alone: Duchenne dystrophy, spastic diplegia, autism, or an idiopathic familial pattern (DeMyer, p. 338)."
+      ],
+      "question": {
+        "question": "A 4-year-old is referred for toe walking. He runs, skips, hops on either foot and can stand flat-footed. He rises from the floor without using his hands, his calves are normal in size, and reflexes and plantars are normal. What is the most likely explanation?",
+        "options": [
+          "Duchenne muscular dystrophy",
+          "Spastic diplegia from periventricular white-matter injury",
+          "An idiosyncratic or familial toe-walking pattern without neurological disease",
+          "A peripheral neuropathy"
+        ],
+        "answer": 2,
+        "explanation": "Toe walking needs the rest of the exam to localize. A child who runs, skips and hops normally, rises without a Gowers manoeuvre and has normal tone and reflexes has none of the serious causes, and DeMyer describes exactly this child as having an idiosyncratic, sometimes familial gait (DeMyer, p. 338). Duchenne dystrophy would usually show proximal weakness and calf enlargement. Spastic diplegia would bring increased tone and brisk reflexes in the legs. A neuropathy tends to cause foot drop and a steppage gait, the opposite of toe walking."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A 12-year-old has a coarse tremor of the right hand that is absent at rest and grows larger as her finger approaches your finger. Which level does this tremor point to?",
+      "options": [
+        "The left basal ganglia",
+        "The right cerebellar hemisphere or its outflow",
+        "The left cerebellar hemisphere",
+        "The right median nerve"
+      ],
+      "answer": 1,
+      "explanation": "A tremor that appears on action and worsens near the target is an intention tremor, a cerebellar sign. Cerebellar signs are on the same side as the lesion, so a right hand tremor points to the right cerebellar hemisphere or its outflow. A basal ganglia tremor is typically present at rest. A left cerebellar lesion would affect the left limbs. A median nerve lesion causes weakness and numbness, not an intention tremor."
+    },
+    {
+      "question": "A 15-year-old started a new antiseizure medicine a week ago and is now unsteady, with slurred speech, nystagmus in every direction of gaze, and ataxia of all four limbs. Which reading fits best?",
+      "options": [
+        "A right cerebellar hemisphere tumour",
+        "A pancerebellar syndrome from a drug effect",
+        "A midline vermis lesion",
+        "A lesion of the left medial longitudinal fasciculus"
+      ],
+      "answer": 1,
+      "explanation": "Bilateral, symmetric cerebellar signs make a pancerebellar syndrome, which suggests a diffuse cause such as a toxin or drug rather than a focal lesion (DeMyer, p. 339); some antiseizure drugs also cause a central-type nystagmus (Pearl 2014, p. 121). A hemispheric tumour would give same-side limb signs. A midline lesion would spare the limbs more than this. A medial longitudinal fasciculus lesion causes an internuclear ophthalmoplegia, not four-limb ataxia."
+    },
+    {
+      "question": "A 13-year-old stands steadily with her eyes open but sways and nearly falls when she closes them. Vibration and position sense are lost in the toes, and the ankle reflexes are absent. Finger-nose is accurate. What kind of ataxia is this?",
+      "options": [
+        "Midline cerebellar ataxia",
+        "Hemispheric cerebellar ataxia",
+        "Functional gait disorder",
+        "Sensory ataxia from the large sensory nerves or dorsal columns"
+      ],
+      "answer": 3,
+      "explanation": "Steadiness with the eyes open that fails with the eyes closed is a positive Romberg sign: vision was compensating for lost position sense. With absent vibration and position sense and lost ankle reflexes, this is a sensory ataxia from the large sensory nerves or dorsal columns. The cerebellar patient is unsteady with the eyes open too and more or less passes a Romberg test (DeMyer, p. 339). There is nothing inconsistent or effortful to suggest a functional disorder."
+    },
+    {
+      "question": "A 10-year-old with high-arched feet lifts both knees high and slaps the feet down when walking. Ankle reflexes are absent and the calves are thin. Which level does the gait point to?",
+      "options": [
+        "Peripheral nerve",
+        "Cerebellum",
+        "Spinal cord",
+        "Muscle"
+      ],
+      "answer": 0,
+      "explanation": "Lifting the knees high to clear dropped feet is a steppage gait, the gait of the peripheral nerve (Pearl 2014, p. 115). Bilateral foot drop with high arches, thin calves and absent ankle reflexes suggests a symmetric, length-dependent neuropathy, often inherited, as in Charcot-Marie-Tooth disease (DeMyer, p. 338). A cerebellar gait is wide-based, not high-stepping. A cord lesion causes a stiff, scissoring gait with brisk reflexes. Muscle disease usually gives a proximal waddle."
+    },
+    {
+      "question": "Which statement about cerebellar output is accurate?",
+      "options": [
+        "All cerebellar output is inhibitory, so a cerebellar lesion releases the motor cortex",
+        "Cerebellar output reaches the opposite cortex without crossing",
+        "Purkinje cells inhibit the deep nuclei, and the deep nuclei excite their targets, except the inferior olive",
+        "The deep nuclei are inhibitory and the Purkinje cells excitatory"
+      ],
+      "answer": 2,
+      "explanation": "The cerebellar cortex speaks only through the Purkinje cells, which inhibit the deep cerebellar nuclei. The deep nuclei then carry the cerebellum's output, and all of their projections are excitatory except those to the inferior olive (Brazis 2011, p. 405). The statement that all output is inhibitory, found in some primers, confuses the Purkinje stage with the final output. The outflow does cross, in the midbrain, which is half of the double crossing that keeps cerebellar signs on the same side. The last option reverses the two stages."
+    },
+    {
+      "question": "A 13-month-old who started walking three weeks ago walks on a broad base with short, jerky, irregular steps, arms held up and slightly flexed, and falls every few steps. Strength, tone and reflexes are normal. What do you conclude?",
+      "options": [
+        "Midline cerebellar ataxia; image the posterior fossa",
+        "Spastic diplegia",
+        "A myopathy",
+        "A normal toddler gait for age"
+      ],
+      "answer": 3,
+      "explanation": "A broad base, short jerky steps, raised arms and frequent falls are the normal toddler gait when independent walking begins, around the first birthday (DeMyer, p. 338). The same gait at five would be a sign; at thirteen months, with a normal exam, it is development. Calling it cerebellar ataxia ignores age. Spastic diplegia would bring stiff legs and brisk reflexes. A myopathy would show weakness and difficulty rising."
+    }
+  ],
+  "resources": [
+    {
+      "label": "Utah NeuroLogic Exam: coordination, abnormal",
+      "url": "https://neurologicexam.med.utah.edu/adult/html/coordination_abnormal.html",
+      "note": "Videos of dysmetria, intention tremor and dysdiadochokinesia. CC BY-NC-SA."
+    },
+    {
+      "label": "Utah NeuroLogic Exam: gait, abnormal",
+      "url": "https://neurologicexam.med.utah.edu/adult/html/gait_abnormal.html",
+      "note": "Video examples of abnormal gaits by level."
+    },
+    {
+      "label": "Utah PediNeuroLogic Exam: 12 month old",
+      "url": "https://neurologicexam.med.utah.edu/pediatric/html/12month.html",
+      "note": "The early gait, cruising and walking, and fine motor coordination at the first birthday."
+    },
+    {
+      "label": "Neuroscience Online: Cerebellum",
+      "url": "https://nba.uth.tmc.edu/neuroscience/m/s3/chapter05.html"
+    },
+    {
+      "label": "Neuroscience Online: Basal Ganglia",
+      "url": "https://nba.uth.tmc.edu/neuroscience/m/s3/chapter04.html"
+    }
+  ],
+  "signOff": "The resident describes the gait of five children in level terms before any other part of the exam, and a faculty member agrees.",
+  "sources": [
+    "brazis2011",
+    "pearl2014",
+    "demyer"
+  ]
+}

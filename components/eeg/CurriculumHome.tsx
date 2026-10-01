@@ -6,7 +6,7 @@
 import Link from 'next/link';
 import type { EegModule, EegTrack } from '@/src/eeg/types';
 import { HOW_TO_USE, MILESTONES, READING_TARGETS, RESOURCE_MAP, TEXTBOOKS, TRACKS } from '@/src/eeg/curriculum';
-import { moduleProgress, useEegProgress } from '@/src/eeg/progress';
+import { moduleProgress, useEegProgress } from '@/src/curriculum/progress';
 import { CurriculumMap } from './CurriculumMap';
 
 const ORDER: EegTrack[] = ['foundation', 'neonatal', 'abnormal', 'icu', 'longitudinal'];

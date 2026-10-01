@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { ModulePage } from '@/components/eeg/ModulePage';
+import { ModulePage } from '@/components/curriculum/ModulePage';
 import { EEG_MODULES, getEegModule } from '@/src/eeg/modules';
 
 export function generateStaticParams() {
@@ -16,5 +16,5 @@ export function generateMetadata({ params }: { params: { module: string } }): Me
 export default function Page({ params }: { params: { module: string } }) {
   const idx = EEG_MODULES.findIndex(m => m.id === params.module);
   if (idx < 0) notFound();
-  return <ModulePage module={EEG_MODULES[idx]} prev={EEG_MODULES[idx - 1]} next={EEG_MODULES[idx + 1]} />;
+  return <ModulePage kind="eeg" module={EEG_MODULES[idx]} prev={EEG_MODULES[idx - 1]} next={EEG_MODULES[idx + 1]} />;
 }

@@ -4,7 +4,7 @@
 // ending in critical care, with Module 12 running alongside. Boxes fill as modules complete.
 
 import type { EegModule } from '@/src/eeg/types';
-import { moduleProgress, type EegStore } from '@/src/eeg/progress';
+import { moduleProgress, type EegStore } from '@/src/curriculum/progress';
 
 const W = 208, H = 44;
 

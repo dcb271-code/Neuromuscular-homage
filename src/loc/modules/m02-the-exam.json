@@ -1,0 +1,240 @@
+{
+  "id": "m02-the-exam",
+  "number": 2,
+  "title": "The examination as an instrument",
+  "short": "The exam",
+  "description": "The neurologic exam as a set of experiments on circuits: what it is for, how to watch before you touch, how to play, and the reflexes that come and go in infancy.",
+  "why": "The exam is not a ritual; it is a set of experiments, each testing a circuit.",
+  "track": "doctrine",
+  "tags": [
+    "The Doctrine",
+    "Pediatric Exam"
+  ],
+  "difficulty": "beginner",
+  "duration": "45 min",
+  "color": "#0d9488",
+  "objectives": [
+    "Explain each part of the examination as a test of a circuit, and record observations before interpretations.",
+    "Collect most of a child's examination by observation before touching.",
+    "Adapt the examination to newborns, infants, toddlers, school-age children and adolescents.",
+    "Order a toddler examination so that cooperation lasts, and avoid the common technical errors.",
+    "Use the primitive reflexes and postural reactions to detect upper motor neuron dysfunction in infancy."
+  ],
+  "sections": [
+    {
+      "title": "What the examination is for",
+      "content": "A neurologic examination can look like a ritual: the same hammer taps, the same light in the eyes, the same instruction to touch your nose. Done as a ritual it is slow and nearly useless. Done well, **each manoeuvre is a small experiment that tests whether a particular circuit is intact.**\n\nDeMyer puts the idea in two words: **think circuitry**. First record what you actually observed, in plain terms; then translate it into what it means about the nervous system. Weakness and brisk reflexes on one side become, after interpretation, a hemiplegia from interruption of the pyramidal tract, and the interpretation places the lesion in a circuit (DeMyer, p. 36). The order matters. If you write the conclusion without the observation, the next examiner cannot check your reasoning, and you cannot check it either when the picture changes.\n\nDeMyer also gives three standards for deciding whether something is abnormal: compare it with the norm for a person of the same age and sex, compare it with its mate on the other side, and compare the patient with the family (DeMyer, p. 36). The third is easy to forget and especially useful in children. A large head in a child whose father also has a large head, or a wide-based gait that matches a parent's, changes the meaning of what you see.\n\n**Screen, then target**\n\nNo one does every test on every patient. Morris and Jankovic argue that the secret of an efficient neurologic examination is choosing the parts relevant to the problem the history has uncovered (Morris 2012, p. xxv). DeMyer agrees: do a brief screening examination on everyone, then expand or trim it to fit the history, because the better the history, the briefer the examination needs to be (DeMyer, p. 604). The screening examination answers \"is anything wrong?\"; the targeted examination answers \"exactly where?\"\n\n**Never write \"WNL\"**\n\nDeMyer is blunt that scribbling \"neuro exam WNL\" will not do (DeMyer, p. 604). It records a verdict, not evidence. Write what you tested and what you found, especially the normal findings that matter for the question at hand: \"walks, runs and hops on each foot; reflexes symmetric; toes down\" tells the next reader far more than three letters ever could.",
+      "keyPoints": [
+        "Each part of the exam is an experiment on a circuit: think circuitry (DeMyer, p. 36).",
+        "Record the observation first, then the interpretation.",
+        "Judge abnormality against age norms, the other side, and the family (DeMyer, p. 36).",
+        "Screen everyone, then target the exam to the history's hypothesis (Morris 2012, p. xxv; DeMyer, p. 604).",
+        "Never write 'WNL'; write what was tested and found (DeMyer, p. 604)."
+      ],
+      "question": {
+        "question": "A 6-year-old is seen for a large head noticed by the school nurse. Development and examination are otherwise normal. Which single extra step is most likely to change your interpretation?",
+        "options": [
+          "Measuring the parents' head circumferences",
+          "Testing smell with coffee grounds",
+          "Checking the jaw jerk",
+          "Testing two-point discrimination on the fingertips"
+        ],
+        "answer": 0,
+        "explanation": "DeMyer's third standard for judging abnormality is comparison with the family (DeMyer, p. 36). A large head in a well child with a normal examination and a large-headed parent is often familial, and measuring the parents is a quick, targeted test that directly addresses the question. Smell, the jaw jerk and two-point discrimination are legitimate tests, but none bears on the problem the history raised; doing them is examination as ritual rather than as experiment."
+      }
+    },
+    {
+      "title": "Stop, look, and listen",
+      "content": "The most underused instrument in the pediatric neurologic examination is the examiner's patience. **Most of the examination can be done without touching the child.** Before you reach for a hammer, you can usually decide whether the child is alert and engaged, whether both sides of the body move equally, how each hand is used, whether the face moves symmetrically when the child smiles or cries, whether there are extra movements, and how the child sits, stands, walks and plays.\n\nDeMyer makes the point for every patient: study how they sit, stand, walk and gesture, because unobtrusive observation of spontaneous activity often reveals more than formal tests, and particularly in infants (DeMyer, p. 239). In a child the reason is practical as well as diagnostic. Formal testing requires cooperation, and cooperation is a resource that runs out. Every finding you collect by watching is a finding you do not have to wring from a frightened toddler later.\n\n**What to watch for**\n\nWhile you take the history from the parents, watch the child:\n- **Arousal and interaction**: does the child look at you, track you, respond to voices, play purposefully for the age?\n- **Symmetry**: does one arm move less, is one hand kept fisted, does the face droop on one side?\n- **Posture and tone at rest**: a frog-legged posture in an infant, a head that lags, a child who props on a wall to stand.\n- **Gait and play**: walking to the room, climbing onto a chair, picking up a toy from the floor.\n- **Extra movements**: tremor, chorea, tics, staring spells.\n\n**Undress the child**\n\nDeMyer adds a commandment that is easy to break out of politeness: undress the patient, because if a third of the body stays covered you can only do two thirds of the examination (DeMyer, p. 239). For a child that means down to the underwear, with a parent present, so you can see the back, the spine, the calves and the skin. A tuft of hair over the lower spine, wasted calves or enlarged ones, and asymmetry of limb size are all things you will only see if you look.",
+      "keyPoints": [
+        "Much of the pediatric exam is hands-off: watch while you take the history.",
+        "Observation of spontaneous activity often reveals more than formal tests, especially in infants (DeMyer, p. 239).",
+        "Cooperation is a limited resource; collect what you can by watching before you touch.",
+        "Look for arousal, symmetry, posture, gait, play and extra movements.",
+        "Undress the child (with a parent present); a covered third of the body is an unexamined third (DeMyer, p. 239)."
+      ],
+      "question": {
+        "question": "A 2-year-old screams as soon as you walk toward him and buries his face in his mother's shoulder. You have 20 minutes. What is the best way to begin the neurologic examination?",
+        "options": [
+          "Hold him firmly and test reflexes quickly before he becomes more upset",
+          "Postpone the examination to another day",
+          "Ask his mother to describe what he can do, and rely on that instead of an examination",
+          "Sit at a distance, take the history, and watch him play, walk and use his hands before approaching"
+        ],
+        "answer": 3,
+        "explanation": "Observation is examination. Watching from a distance while you take the history lets you assess arousal, symmetry, gait and hand use without spending his cooperation, and children often settle once the stranger stops approaching (DeMyer, p. 239). Restraining a frightened child produces crying, withdrawal and unreliable findings. Postponing gives up information you could collect now. The parent's report is valuable history but it does not replace seeing the child move."
+      }
+    },
+    {
+      "title": "Make it a game: the examination by age",
+      "figure": "exam-order",
+      "content": "DeMyer's advice to adults applies doubly to children: **turn parts of the examination into a friendly contest.** Ask whether the patient can see out to the side as far as you can; tell them \"don't let me win\" when you test strength; see how light a touch they can feel. Challenges like these draw out the patient's best performance and keep the examiner interested too (DeMyer, p. 38). DeMyer also tells the examiner to **expect the abnormal**, because the mind that expects normality stops looking (DeMyer, p. 38).\n\nThe game changes with age.\n\n**Newborn.** The best time to examine is between feeds: an interrupted feed gives a crying baby, a full stomach gives a sleepy one. Watch spontaneous movements, posture and alertness before handling.\n\n**Infant.** Faces, voices and bright objects test vision, hearing and eye movements. Pull to sit, ventral suspension and supported standing test tone and strength. The reflexes that should come and go are in section 5.\n\n**Toddler.** Everything is play. A toy to follow tests eye movements; blowing a kiss and showing teeth test the face; stacking blocks and picking up small objects test fine motor skill and hand preference. For gait, Brazis suggests asking the child to run a short distance while distracted by a request to fetch something (Brazis 2011, p. 17). The [Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/18month.html) films these tasks at each age.\n\n**School-age child.** Most formal tests are possible if framed as challenges: hop on one foot, walk heel to toe like a tightrope walker, \"push me away\". Children will not accept pinprick, but DeMyer notes that children as young as 3 will play \"the temperature game\" with a cool object instead (DeMyer, p. 617).\n\n**Adolescent.** Close to the adult examination, with more attention to privacy and to asking, alone, about symptoms the teenager may not raise in front of a parent.\n\n**Try the figure above.** It asks you to put eight steps of a toddler examination in order. The feedback is about tiers, not an exact sequence: watch first, then play, then hands-on, then the things a toddler hates. Any order within a tier is fine.",
+      "keyPoints": [
+        "Turn tests into games and contests to draw out the child's best performance (DeMyer, p. 38).",
+        "Expect the abnormal; the mind that expects normal stops looking (DeMyer, p. 38).",
+        "Examine a newborn between feeds; a toddler through play; a school-age child through challenges.",
+        "Have a child run and fetch something to screen gait (Brazis 2011, p. 17).",
+        "Children as young as 3 play the temperature game instead of pinprick (DeMyer, p. 617)."
+      ],
+      "question": {
+        "question": "You need to test sensation in a 4-year-old with possible numbness of one leg. She cried when her vaccinations were given last week. What is the most reliable approach?",
+        "options": [
+          "Use a safety pin on each dermatome and ask whether it feels sharp",
+          "Use the temperature game, touching each leg with a cool object and asking which feels colder, and watch her face as well as her answers",
+          "Skip sensory testing, because 4-year-olds cannot report sensation",
+          "Test vibration with a tuning fork on the toes first, because it is the most sensitive test"
+        ],
+        "answer": 1,
+        "explanation": "Children will not accept pain testing, but DeMyer notes that children as young as 3 will play the temperature game (DeMyer, p. 617), which tests the same spinothalamic pathway as pinprick without making the child an unwilling subject. A pin in a child who fears needles will end the examination. Skipping sensation discards a testable finding. A tuning fork tests a different pathway (the dorsal columns) and is no more acceptable to a wary child as a first step."
+      }
+    },
+    {
+      "title": "Save the worst for last, and other craft",
+      "content": "The order of a pediatric examination is not arbitrary. **Do the hands-off parts first, the games next, the hands-on parts after that, and the things a child hates last.** A tape measure round the head, a bright ophthalmoscope light close to the face, a tongue depressor: each can end cooperation, so each waits until everything else is done. The Utah PediNeuroLogic Exam recommends doing the reflexes late in the examination, with the child on a parent's lap, and turning the reflex hammer into an imaginary horse with sound effects so it stops looking like a weapon ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/12month.html)).\n\n**Swing the hammer; don't peck**\n\nDeMyer calls hammer pecking the commonest student error: gripping the handle tightly and jabbing at the tendon with no wrist action. Instead, hold the handle loosely between thumb and finger and let it swing like a pendulum (DeMyer, p. 252). A reflex that seems absent after a peck is often present after a swing.\n\n**Before you call a reflex absent**\n\nDeMyer lists what to try first: reposition the limb to change the tension on the tendon, adjust the pressure of your thumb, and use **reinforcement**, such as asking the patient to lock their fingers together and pull hard while you tap (DeMyer, p. 258). In infants the biceps tendon can be hard to find, and the knee jerk is easiest with the leg nearly straight (DeMyer, p. 258). A child who is tense, cold or frightened will often show reflexes once relaxed.\n\n**Judge tone only in a relaxed limb**\n\nTone is the slight resistance you feel when you move a relaxed joint (DeMyer, p. 270). A child who \"helps\" you move the limb, or who stiffens in fear, will feel stiff for reasons that have nothing to do with the nervous system. Distract, wait, and move the limb slowly and then quickly.\n\n**The plantar response in a ticklish child**\n\nStroking the sole of a ticklish child produces withdrawal that can look like an upgoing toe. DeMyer suggests starting on the lateral side of the foot instead, which ticklish young patients tolerate better (DeMyer, p. 616).\n\n**Compare**\n\nThroughout, compare one side with the other and the child with the family (DeMyer, p. 36). An asymmetry is usually more informative than any single absolute value.",
+      "keyPoints": [
+        "Order by tier: watch, play, hands-on, then the unpleasant parts last.",
+        "Do reflexes late, on the parent's lap, with the hammer as a toy (Utah PediNeuroLogic Exam).",
+        "Swing the hammer loosely; pecking is the commonest error (DeMyer, p. 252).",
+        "Before calling a reflex absent: reposition, adjust, reinforce (DeMyer, p. 258).",
+        "Judge tone only in a relaxed limb; stroke the lateral foot in a ticklish child (DeMyer, pp. 270, 616)."
+      ],
+      "question": {
+        "question": "A tense, anxious 6-year-old has no knee jerks on either side when you tap with the hammer gripped firmly. Strength, gait and sensation are normal. What should you do before recording areflexia?",
+        "options": [
+          "Record the reflexes as absent; a normal child always has knee jerks",
+          "Order nerve conduction studies",
+          "Re-test with a loose, swinging hammer, reposition the legs, and use reinforcement such as pulling the locked fingers apart",
+          "Test the ankle jerks instead and record the knees as untestable"
+        ],
+        "answer": 2,
+        "explanation": "Pecking with a tight grip is the commonest technical error, and DeMyer's sequence before calling a reflex absent is to swing the hammer properly, reposition the limb, and reinforce (DeMyer, pp. 252, 258). In a tense child with an otherwise normal examination, these usually bring the reflexes out. Recording areflexia now, or ordering nerve studies, risks starting a workup for a technical artefact. Moving on to the ankles sidesteps the problem rather than solving it."
+      }
+    },
+    {
+      "title": "The infant exam: reflexes that should come and go",
+      "figure": "reflex-timeline",
+      "content": "An infant's examination has a feature no adult examination has: some findings are supposed to **disappear**, and others are supposed to **appear**, on a schedule. Reading that schedule is one of the most powerful localizing tools in early childhood.\n\n**Primitive reflexes** such as the Moro, the palmar grasp and the Galant are normally present in the term newborn and diminish over the next 4 to 6 months. **Postural reactions** such as the Landau, lateral propping and the parachute emerge between about 3 and 8 months. The persistence of primitive reflexes, and the failure of postural reactions to develop, are the hallmark of an upper motor neuron abnormality in an infant ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/introduction.html)). Zafeiriou's review argues that examining the two together is a simple, quick and predictive screen for infants at risk of cerebral palsy ([Zafeiriou 2004](https://pubmed.ncbi.nlm.nih.gov/15246484/)).\n\n**Why they come and go**\n\nThe primitive reflexes are generated low in the nervous system and are present at birth. As the cortex and its descending pathways mature, they are suppressed and integrated into voluntary movement. When the descending control is damaged, the suppression fails and the reflex persists. The postural reactions depend on that same maturing control, so they are late or absent. One lesion, two signs, pointing the same way.\n\n**Use the slider in the figure above.** Drag it from birth to 12 months and watch each item change state. The ages come from the Utah PediNeuroLogic Exam:\n- Rooting disappears at about 4 months; the Moro is usually absent by 4 to 5 months; a Moro or asymmetric tonic neck reflex still present at 6 months is abnormal.\n- The Landau should develop by 4 to 5 months, lateral propping at 5 to 7 months, and the parachute at 8 to 9 months, certainly by 12 months. An asymmetric parachute is abnormal.\n- An upgoing toe is normal through the first year, and hand preference before 12 months is a red flag.\n\n**Asymmetry localizes**\n\nA symmetric delay suggests a global problem; an **asymmetric** reflex is a localizing sign. A parachute that extends only one arm, or a grasp that persists in one hand, points to the other side's motor pathway. DeMyer adds that an absent plantar grasp in the first 6 months correlates with poor neurologic development (DeMyer, p. 282). The Utah site has short videos of each reflex at [3 months](https://neurologicexam.med.utah.edu/pediatric/html/03month.html), [6 months](https://neurologicexam.med.utah.edu/pediatric/html/06month.html) and [12 months](https://neurologicexam.med.utah.edu/pediatric/html/12month.html).",
+      "keyPoints": [
+        "Primitive reflexes (Moro, grasp, Galant) fade over 4 to 6 months; postural reactions emerge from about 3 to 8 months (Utah PediNeuroLogic Exam).",
+        "Persistent primitive reflexes and absent postural reactions are an upper motor neuron sign in infancy (Utah PediNeuroLogic Exam).",
+        "A Moro or asymmetric tonic neck reflex at 6 months is abnormal; the parachute should be present by 12 months.",
+        "Asymmetry localizes: a one-sided parachute or persistent one-sided grasp points to the opposite motor pathway.",
+        "Together, primitive reflexes and postural reactions are a quick screen for infants at risk of cerebral palsy (Zafeiriou 2004)."
+      ],
+      "question": {
+        "question": "At 7 months, an infant born preterm still has a full Moro response and a persistent asymmetric tonic neck reflex, and does not prop sideways when tipped. Tone in the legs feels increased. How should these findings be interpreted?",
+        "options": [
+          "Normal for a preterm infant; reassess at 18 months",
+          "A sign of a peripheral nerve or muscle disorder",
+          "An isolated vestibular problem, because the Moro is a vestibular reflex",
+          "Possible upper motor neuron dysfunction, such as evolving cerebral palsy, warranting a careful examination and referral"
+        ],
+        "answer": 3,
+        "explanation": "A Moro and asymmetric tonic neck reflex still present at 6 months are abnormal, and persistent primitive reflexes with absent postural reactions are the hallmark of an upper motor neuron abnormality in an infant (Utah PediNeuroLogic Exam). Together with increased leg tone in a preterm infant, this suggests evolving cerebral palsy and calls for referral now, not at 18 months. Prematurity is accounted for by correcting age, not by ignoring the pattern. Peripheral nerve and muscle disorders lower tone and do not cause persistent primitive reflexes. The Moro has a vestibular trigger, but its persistence reflects failed descending suppression, not a vestibular lesion."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A resident examining an alert, cooperative 10-year-old with migraine performs a full examination including smell, taste, two-point discrimination and calorics. What principle does this violate?",
+      "options": [
+        "Expect the abnormal",
+        "Screen everyone, then expand or trim the examination to fit the history",
+        "Compare with the family",
+        "Undress the patient"
+      ],
+      "answer": 1,
+      "explanation": "DeMyer and Morris both argue for a brief screening examination expanded or trimmed to fit the history (DeMyer, p. 604; Morris 2012, p. xxv). A child with a typical migraine history needs a careful screen and a fundus check, not every test in the book. 'Expect the abnormal' is about vigilance, not about doing more tests. Family comparison and undressing are good practice but are not what this examination got wrong."
+    },
+    {
+      "question": "Which of these is the best way to record a normal motor examination in a 5-year-old?",
+      "options": [
+        "Motor: WNL",
+        "Motor: non-focal",
+        "Walks, runs and hops on each foot; rises from the floor without using hands; strength full in arms and legs; tone normal; reflexes 2+ and symmetric; toes down",
+        "Motor: 5/5 throughout"
+      ],
+      "answer": 2,
+      "explanation": "The record should show what was tested and found, so the next reader can check it and compare (DeMyer, pp. 36, 604). The descriptive note covers gait, functional strength, tone, reflexes and plantars in a few words. 'WNL' and 'non-focal' are conclusions without evidence. '5/5 throughout' gives strength only, and a 5-year-old's strength is better shown by what they can do than by a formal grade."
+    },
+    {
+      "question": "You want to test hip and leg strength in a 3-year-old who will not cooperate with formal testing. Which approach gives the most reliable information?",
+      "options": [
+        "Ask him to push against your hand with each leg",
+        "Test strength under sedation",
+        "Rely on the parents' description of his running",
+        "Watch him rise from sitting on the floor, climb onto a chair and run to fetch a ball"
+      ],
+      "answer": 3,
+      "explanation": "Functional tasks are the strength test of early childhood: rising from the floor, climbing and running show proximal leg strength without asking for cooperation, and running to fetch something is Brazis's suggestion for screening a child's gait (Brazis 2011, p. 17). Formal resistance testing in an uncooperative 3-year-old is unreliable. Sedation removes the movement you want to see. The parents' account is useful history, but it is not an examination."
+    },
+    {
+      "question": "A 4-month-old held in prone suspension lifts her head but not yet her legs, still shows a Moro, and has a strong palmar grasp. How should these findings be interpreted?",
+      "options": [
+        "Consistent with normal development at 4 months",
+        "Abnormal: the Moro should be gone by now",
+        "Abnormal: the Landau should be complete",
+        "Abnormal: the palmar grasp should be absent"
+      ],
+      "answer": 0,
+      "explanation": "At 4 months, primitive reflexes such as the Moro and grasp are still fading (they diminish over 4 to 6 months), and the Landau is expected by 4 to 5 months, so a partial Landau is within range (Utah PediNeuroLogic Exam). The Moro is abnormal if still present at 6 months, not at 4. The palmar grasp normally fades over the same period. The pattern is age-appropriate; re-examination later would confirm the expected changes."
+    },
+    {
+      "question": "At 10 months, a baby tipped forward toward the mat extends the right arm but keeps the left arm flexed against the body. What does this suggest?",
+      "options": [
+        "Normal: the parachute is not expected until 12 months",
+        "Weakness of the left arm, pointing to the right hemisphere or the left brachial plexus, needing a full examination",
+        "Weakness of the right arm",
+        "A visual problem"
+      ],
+      "answer": 1,
+      "explanation": "The parachute usually appears at 8 to 9 months, and an asymmetric parachute is abnormal, suggesting weakness of the arm that fails to extend (Utah PediNeuroLogic Exam). The rest of the examination decides between a central cause (right hemisphere: brisk reflexes, increased tone, perhaps leg involvement) and a peripheral one (left brachial plexus: reduced tone and reflexes, a history of a difficult birth). Waiting for 12 months ignores the asymmetry. The right arm is the one working normally. A visual problem would not cause a one-sided motor response."
+    },
+    {
+      "question": "When a toddler examination must include head circumference and fundoscopy, where should they come in the order?",
+      "options": [
+        "First, while the child is still calm",
+        "Before the reflexes, because they are quick",
+        "Only if the history suggests raised pressure",
+        "Last, because they are the parts most likely to end cooperation"
+      ],
+      "answer": 3,
+      "explanation": "Save the worst for last: the tape round the head and a bright light near the face are the least tolerated parts of the toddler examination, so doing them first spends cooperation you need for everything else. Being quick does not make them tolerable. They should not be skipped just because the history is reassuring: head circumference is part of every young child's examination, and fundoscopy matters whenever headache or raised pressure is possible."
+    }
+  ],
+  "resources": [
+    {
+      "label": "PediNeuroLogic Exam: home",
+      "url": "https://neurologicexam.med.utah.edu/pediatric/html/home_exam.html",
+      "note": "Normal examinations at each age with videos (CC BY-NC-SA)."
+    },
+    {
+      "label": "PediNeuroLogic Exam: the newborn",
+      "url": "https://neurologicexam.med.utah.edu/pediatric/html/newborn_n.html",
+      "note": "Tone, primitive reflexes and the plantar response in a 5-day-old."
+    },
+    {
+      "label": "PediNeuroLogic Exam: 6 months",
+      "url": "https://neurologicexam.med.utah.edu/pediatric/html/06month.html",
+      "note": "Loss of the Moro and asymmetric tonic neck reflex; Landau, propping and parachute; hand use."
+    },
+    {
+      "label": "PediNeuroLogic Exam: 12 months",
+      "url": "https://neurologicexam.med.utah.edu/pediatric/html/12month.html",
+      "note": "Pincer grasp, parachute, reflexes on the parent's lap."
+    },
+    {
+      "label": "PediNeuroLogic Exam: 18 months",
+      "url": "https://neurologicexam.med.utah.edu/pediatric/html/18month.html",
+      "note": "Fine motor tasks, handedness and gait through play."
+    }
+  ],
+  "signOff": "Performs a complete neurologic examination on a toddler, in a developmentally appropriate order, observed by faculty.",
+  "sources": [
+    "demyer",
+    "morris2012",
+    "brazis2011",
+    "utah",
+    "zafeiriou2004"
+  ]
+}

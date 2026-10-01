@@ -1,0 +1,223 @@
+{
+  "id": "m04-motor-unit",
+  "number": 4,
+  "title": "The motor unit: horn cell, nerve, junction, muscle",
+  "short": "The motor unit",
+  "description": "Four places weakness can live below the spinal cord, and the fingerprint each one leaves on the exam.",
+  "why": "Four places weakness can live, each with a fingerprint: read distribution, reflexes, sensation, fatigue and fasciculations, and you can name the address before the EMG.",
+  "track": "periphery",
+  "tags": [
+    "Periphery",
+    "Clinical Decision-Making"
+  ],
+  "difficulty": "intermediate",
+  "duration": "45 min",
+  "color": "#2563eb",
+  "objectives": [
+    "Separate anterior horn, nerve, junction and muscle disease using distribution, reflexes, sensation, fatigability and fasciculations.",
+    "Recognize the proximal pattern of myopathy and the Gowers manoeuvre in a young child.",
+    "Recognize fatigable ocular and bulbar weakness, and the presentation of infant botulism.",
+    "Explain why polyneuropathy is length-dependent, and what a pattern that breaks the rule suggests.",
+    "Recognize the purely motor, areflexic, fasciculating picture of anterior horn disease in an infant and a child."
+  ],
+  "sections": [
+    {
+      "title": "Four addresses, four fingerprints",
+      "figure": "localizer-motor-unit",
+      "content": "Once the first fork has pointed below the spinal cord, it is tempting to say \"neuromuscular\" and hand the child to the electromyographer. Resist it. The motor unit, the anterior horn cell with its axon and every muscle fibre that axon commands, has four addresses: the **cell body** in the anterior horn, the **axon** in the nerve, the **junction** where the axon speaks to muscle, and the **muscle** itself. Each address fails in a way that leaves its own fingerprint, and the fingerprint is readable at the bedside. Brazis lists exactly this sequence of lower motor neuron sites, from motor neuron to muscle, as the territory to work through once a lesion lies in the motor unit (Brazis 2011, p. 12).\n\n**The fingerprint table**\n\n| Feature | Horn cell | Nerve | Junction | Muscle |\n|---|---|---|---|---|\n| Distribution | Proximal or patchy, often asymmetric | Distal and length-dependent, or one nerve's territory | Ocular, bulbar, proximal | Proximal and symmetric |\n| Reflexes | Lost early | Lost early | Usually kept | Kept until the muscle is too weak to contract |\n| Sensation | Normal | Often lost | Normal | Normal |\n| Fatigue | No | No | Worse with use, better with rest | No |\n| Fasciculations, wasting | Yes | With chronic axon loss | No | No |\n\nRead the table by columns, then by rows. Two rows do most of the work. **Sensation** divides the nerve from the other three, because the horn cell, the junction and muscle are purely motor. **Reflexes** divide horn cell and nerve, which lose them early, from junction and muscle, which keep them until late.\n\n**Using the figure**\n\nThe figure above is the localizer with a motor-unit set of findings. Try the three cases. The boy who climbs up his legs leaves horn cell and muscle tied, and that tie is the honest answer: the next finding to look for is a fasciculating tongue. The child with high arches and numb toes leaves only the nerve. The teenager whose lids droop by evening leaves the junction on top.\n\n**What changes in a child**\n\nIn an infant, most of these signs are harder to elicit, and the presenting complaint is often hypotonia rather than weakness. The same four addresses still apply, and [[m03-first-fork|Module 3]] shows how to decide first whether a floppy infant's problem is central at all. Commit to an address before the electrodiagnostic study: the test is far more useful when it is asked a question.",
+      "keyPoints": [
+        "The motor unit has four addresses: anterior horn cell, nerve, neuromuscular junction and muscle.",
+        "Sensory loss points to the nerve; the horn cell, junction and muscle are purely motor.",
+        "Early loss of reflexes points to horn cell or nerve; junction and muscle keep reflexes until late.",
+        "Fatigability is the junction's signature; fasciculations and wasting point to the horn cell or chronic axon loss.",
+        "Commit to an address before the EMG, so the test answers a question."
+      ],
+      "question": {
+        "question": "A 6-year-old has weak hips and shoulders on both sides. Sensation is normal, reflexes are present though reduced, there are no fasciculations, and the weakness does not fatigue. Which address fits best?",
+        "options": [
+          "Peripheral nerve, because the reflexes are reduced",
+          "Neuromuscular junction, because the weakness is proximal",
+          "Muscle, because the weakness is proximal, symmetric and purely motor with reflexes still present",
+          "Anterior horn cell, because the weakness is purely motor"
+        ],
+        "answer": 2,
+        "explanation": "Proximal, symmetric, purely motor weakness with reflexes that are reduced but present is the fingerprint of muscle disease; reflexes in myopathy fade in proportion to weakness rather than disappearing early. A neuropathy would usually bring sensory loss and a distal, length-dependent pattern, and reduced reflexes alone do not override that. The junction can weaken proximally, but its defining feature, fatigability, is absent here. Anterior horn disease is also purely motor, but it tends to remove reflexes early and to produce fasciculations and wasting, none of which are present."
+      }
+    },
+    {
+      "title": "Muscle: the girdles fail first",
+      "content": "There is a quiet logic to where muscle disease shows itself. The muscles that hold the hips and shoulders against gravity work hardest and longest, and in most myopathies they fail first. The result is **proximal, symmetric weakness** without sensory loss: the child who cannot get up off the floor, climb stairs or lift a heavy book onto a high shelf, but whose hands and feet still work well.\n\nBrazis describes the classic picture in boys with Duchenne muscular dystrophy: **enlarged calves**, the **Gowers manoeuvre** in which the child pushes up on his own thighs to stand because the hip extensors are weak, an exaggerated lumbar curve, a waddling, wide-based gait and toe walking (Brazis 2011, p. 13). Each sign is a consequence of proximal weakness. The waddle comes from weak hip abductors that cannot hold the pelvis level. The lordosis is the trunk leaning back to keep the centre of gravity behind weak hips.\n\n**Muscle disease does not respect maps**\n\nRoots and nerves supply muscles in fixed groups, so a root or nerve lesion weakens a predictable set. Muscle disease does not follow those maps. Morris points out that in a dystrophy one muscle can be wasted while its neighbour, sharing the same root, is spared, a pattern that also appears in spinal muscular atrophy (Morris 2012, p. 17). When the pattern makes no sense in terms of roots or nerves, think of the muscle or the horn cell.\n\n**Reflexes and sensation**\n\nSensation is normal. Reflexes are kept until the muscle can no longer contract well enough to produce one, so a weak, areflexic child points away from muscle and toward the horn cell or nerve.\n\n**At the bedside**\n\nWatch the child rise from the floor before any formal testing; it is the most efficient test of hip strength there is, and a child will do it happily as part of a game. Look at the calves, the shoulder blades (winging) and the face. Remember that the Gowers manoeuvre means weak hips, not a particular disease: spinal muscular atrophy and inflammatory myopathy produce it too. The site's [Neuromuscular](/neuromuscular) section carries the diseases in detail.",
+      "keyPoints": [
+        "Myopathy usually causes proximal, symmetric, purely motor weakness.",
+        "In Duchenne dystrophy: enlarged calves, a Gowers manoeuvre, lumbar lordosis, a waddling gait and toe walking (Brazis 2011, p. 13).",
+        "A Gowers manoeuvre means weak hip extensors, not a specific disease.",
+        "Selective wasting that ignores root and nerve maps suggests muscle or horn cell disease (Morris 2012, p. 17).",
+        "Reflexes persist in myopathy until the muscle is very weak."
+      ],
+      "question": {
+        "question": "A 4-year-old boy pushes up on his thighs to stand from the floor. Taken on its own, what does that sign establish?",
+        "options": [
+          "Weakness of the hip extensors, without saying which part of the motor unit is at fault",
+          "Duchenne muscular dystrophy",
+          "An upper motor neuron lesion in the spinal cord",
+          "A length-dependent peripheral neuropathy"
+        ],
+        "answer": 0,
+        "explanation": "The Gowers manoeuvre is a way of standing up when the hip extensors are too weak to lift the trunk, so it establishes proximal leg weakness and nothing more specific. Duchenne dystrophy is the classic cause, but spinal muscular atrophy and inflammatory myopathies produce the same manoeuvre, so naming Duchenne from this sign alone is premature. A cord lesion gives spastic, brisk-reflexed legs, not a girdle pattern. A length-dependent neuropathy weakens the feet first, so the child would struggle with heel walking long before getting up from the floor."
+      }
+    },
+    {
+      "title": "The junction: weakness that wears out",
+      "content": "Most weakness is constant: a weak muscle is weak whenever you test it. Weakness at the neuromuscular junction is different, and the difference is the whole diagnosis. Each nerve impulse releases enough transmitter to fire the muscle fibre with a margin to spare. When that margin shrinks, from antibodies against the acetylcholine receptor, a toxin that blocks release, or a congenital fault in the synapse, the first few impulses still succeed and later ones fail. The result is **weakness that worsens with use and recovers with rest**.\n\nBrazis puts the hallmark of myasthenia gravis in one line: fluctuating weakness with a predilection for the eye muscles and the proximal limbs, worse with exercise and better with rest (Brazis 2011, p. 13). The eye muscles and the muscles of chewing, swallowing and speech are favoured, so **drooping lids and double vision that come and go** are the commonest first complaints. Reflexes are usually kept and sensation is normal.\n\n**Testing fatigue**\n\nMake the weakness happen in front of you. Ask for sustained upgaze and watch the lids fall. Ask the child to count aloud and listen to the voice fade. Test a shoulder repeatedly and see whether the tenth effort is weaker than the first. A child who keeps up with friends at the start of a game but not at the end is telling you the same thing.\n\n**The junction in an infant**\n\nThree junction disorders matter most in children. **Juvenile myasthenia gravis** behaves like the adult disease. **Congenital myasthenic syndromes** are inherited faults of the synapse, present from early life. **Infant botulism** is acquired: the toxin blocks transmitter release. Peredo and Hannibal advise suspecting it in an infant under 6 months with an acute or subacute floppiness and constipation, listlessness, poor feeding, a weak cry and a reduced gag ([Peredo 2009](https://pubmed.ncbi.nlm.nih.gov/19726697/)). Constipation is the clue that an autonomic, cholinergic synapse is failing too. A floppy infant with ptosis, a weak suck and new constipation is a junction until proven otherwise.",
+      "keyPoints": [
+        "Junction weakness worsens with use and recovers with rest, because the safety margin of transmission is reduced.",
+        "Myasthenia favours the eye muscles and proximal limbs (Brazis 2011, p. 13); reflexes and sensation are usually normal.",
+        "Provoke fatigue at the bedside: sustained upgaze, counting aloud, repeated testing of one muscle.",
+        "Suspect infant botulism under 6 months with floppiness, constipation, poor feeding, weak cry and reduced gag (Peredo 2009)."
+      ],
+      "question": {
+        "question": "A 3-month-old has been constipated for several days and is now floppy, with a weak suck, a weak cry and drooping eyelids. Which address fits all of the findings?",
+        "options": [
+          "Anterior horn cell, as in spinal muscular atrophy",
+          "Peripheral nerve, as in Guillain-Barré syndrome",
+          "Muscle, as in a congenital myopathy",
+          "Neuromuscular junction, as in infant botulism"
+        ],
+        "answer": 3,
+        "explanation": "Ptosis, weak suck and weak cry are bulbar and ocular weakness, the junction's favoured muscles, and constipation shows a cholinergic autonomic synapse failing as well; Peredo 2009 lists exactly this cluster under 6 months as the reason to suspect infant botulism. Spinal muscular atrophy weakens limbs and bulbar muscles but spares the eye muscles and does not cause constipation. Guillain-Barré syndrome is rare at this age and would bring areflexic limb weakness first. A congenital myopathy is present from birth and does not explain new constipation."
+      }
+    },
+    {
+      "title": "Nerve: the longest axons fail first",
+      "content": "A nerve cell body has to supply its entire axon with everything it needs, and the longest axons in the body are the ones running to the feet. When a neuron is poisoned, starved or genetically weakened, it cannot sustain the far end of a long axon, and the axon dies back from its tip. Brazis describes this dying-back phenomenon: the largest neurons with the longest axons are affected first (Brazis 2011, p. 5). That single idea explains the shape of most polyneuropathies.\n\n**Length dependence**\n\nSymptoms begin in the toes and climb. Brazis traces the motor sequence: the small foot muscles first, then the muscles supplied by the peroneal nerve, then the calf; the intrinsic hand muscles become involved once everything below the knee is affected (Brazis 2011, p. 26). Pearl and Emsellem make the same point about sensation: the hands are not usually involved until the legs are affected up to the knees (Pearl 2014, p. 76). The result is the **glove-and-stocking** pattern, with ankle reflexes lost first because the reflex arc for the ankle is the longest.\n\n**A rule that warns you off**\n\nBecause the anterior compartment's nerve is longer, a neuropathy weakens dorsiflexion before plantar flexion. Brazis turns this into a useful warning: a patient who can walk on the heels but not on the toes probably has an intraspinal problem, such as spinal muscular atrophy or a conus or cauda equina lesion, rather than a polyneuropathy (Brazis 2011, p. 26).\n\n**Neuropathy in children**\n\nIn a child, a slowly progressive, symmetric neuropathy present since early life suggests an inherited one, of which **Charcot-Marie-Tooth disease** is the most familiar: high arches, thin lower legs, absent ankle reflexes and a steppage gait. Brazis notes that early wasting of the first dorsal interosseous of the hand and the short toe extensor on the foot has localizing value for a neuropathy (Brazis 2011, p. 11). An acute, ascending, areflexic weakness over days is **Guillain-Barré syndrome**, which damages roots as well as nerves; the localizer correctly keeps both alive.",
+      "keyPoints": [
+        "The longest axons fail first (dying back), so polyneuropathy starts in the feet (Brazis 2011, p. 5).",
+        "Hands become involved once the legs are affected to about the knees (Pearl 2014, p. 76; Brazis 2011, p. 26).",
+        "Ankle reflexes are lost first; sensory loss takes a glove-and-stocking shape.",
+        "Walking on heels but not toes suggests an intraspinal cause, not a polyneuropathy (Brazis 2011, p. 26).",
+        "In a child, a lifelong symmetric neuropathy suggests an inherited cause; an acute ascending one suggests Guillain-Barré syndrome."
+      ],
+      "question": {
+        "question": "A 10-year-old with slowly worsening leg weakness can walk on her heels but cannot walk on her toes. Ankle reflexes are absent and sensation is normal. What does the heel-toe pattern argue against?",
+        "options": [
+          "A spinal muscular atrophy",
+          "A length-dependent polyneuropathy, which weakens dorsiflexion before plantar flexion",
+          "A conus or cauda equina lesion",
+          "An anterior horn cell disorder of any cause"
+        ],
+        "answer": 1,
+        "explanation": "In a length-dependent neuropathy the longer nerve to the anterior compartment fails before the nerve to the calf, so heel walking goes before toe walking. The reverse pattern, with sensation normal, makes polyneuropathy unlikely and points toward an intraspinal cause (Brazis 2011, p. 26). Spinal muscular atrophy and other anterior horn disorders are among the intraspinal causes Brazis names, so they are what the pattern suggests rather than what it argues against. A conus or cauda equina lesion is likewise on that list."
+      }
+    },
+    {
+      "title": "The anterior horn: weakness without numbness",
+      "content": "The anterior horn cell sits inside the spinal cord, yet when it dies the child looks like a patient with peripheral disease: weak, floppy and areflexic. That is a useful lesson about what localization means. We localize to the **function that is lost**, and the function lost here is the lower motor neuron. The building happens to be the cord.\n\n**The fingerprint**\n\nWeakness with **wasting and fasciculations**, reflexes lost, and **no sensory loss at all**. Brazis notes that fasciculations, visible twitches of small groups of muscle fibres, accompany lower motor neuron disease (Brazis 2011, p. 11). They arise from sick motor units firing on their own. In a weak infant, look at the **tongue at rest inside the mouth**: fine, writhing fasciculations there are the classic sign of spinal muscular atrophy. Look at rest, not on protrusion, because a protruded tongue quivers in everyone.\n\n**Two very different stories**\n\n**Spinal muscular atrophy** is a genetic loss of anterior horn cells. The infant is alert, socially bright and floppy, with a bell-shaped chest from weak intercostal muscles, absent reflexes and tongue fasciculations. Recognizing it early matters, because disease-modifying treatments now exist; the site's [Neuromuscular](/neuromuscular) section covers them.\n\n**Acute flaccid myelitis** is an acquired injury to the grey matter of the cord, often after a viral illness. Weakness comes on over hours to days, is often asymmetric and may involve one limb, with absent reflexes in the weak limb and little or no sensory loss. The lower motor neuron fingerprint plus a cord address is why the work-up is an MRI of the spine, as [[m06-spinal-cord|Module 6]] explains.\n\n**Caveats**\n\nBrief, isolated fasciculations in a healthy person mean nothing. Fasciculations also appear with chronic root or nerve damage, so the localizer keeps root and nerve alive when you select them. What clinches the horn cell is the combination: fasciculations, wasting, areflexia and normal sensation together.",
+      "keyPoints": [
+        "Anterior horn disease: weakness, wasting, fasciculations, lost reflexes and normal sensation.",
+        "Look for tongue fasciculations at rest inside the mouth, not on protrusion.",
+        "Spinal muscular atrophy: an alert, floppy, areflexic infant with tongue fasciculations; early recognition matters because treatments exist.",
+        "Acute flaccid myelitis: acute, often asymmetric, areflexic weakness from injury to the cord's grey matter.",
+        "Isolated benign fasciculations in a healthy person are common and mean nothing."
+      ],
+      "question": {
+        "question": "A 5-year-old develops floppy weakness of one arm over two days after a cold. The arm's reflexes are absent and sensation is normal; bladder function is normal. Which address best explains the picture?",
+        "options": [
+          "Brachial plexus, as in neuralgic amyotrophy",
+          "A single peripheral nerve",
+          "Anterior horn cells of the cervical cord, as in acute flaccid myelitis",
+          "Muscle, as in viral myositis"
+        ],
+        "answer": 2,
+        "explanation": "Acute, asymmetric, flaccid and areflexic weakness of a limb with normal sensation is the lower motor neuron fingerprint of anterior horn injury, and after a viral illness acute flaccid myelitis is the diagnosis to exclude with a spine MRI. A brachial plexus lesion is mixed motor and sensory and is usually painful, so normal sensation argues against it. One peripheral nerve cannot weaken a whole limb. Viral myositis causes muscle pain and tenderness, often in both calves, and keeps reflexes; it does not produce a one-limb, areflexic paralysis."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A 14-year-old's eyelids droop by the end of the school day and she sees double after reading. Pupils are normal and reflexes are brisk-normal. At the bedside, which test best supports your localization?",
+      "options": [
+        "A pinprick examination of the face",
+        "Sustained upgaze for a minute, watching whether the lids progressively fall",
+        "A strong flash of light to look for a sluggish pupil",
+        "Tapping the jaw to look for a brisk jaw jerk"
+      ],
+      "answer": 1,
+      "explanation": "Fluctuating ptosis and diplopia that worsen through the day point to the neuromuscular junction, and the best bedside support is to provoke fatigue: sustained upgaze that makes the lids fall progressively. Pinprick testing assesses sensation, which the junction does not affect. A sluggish pupil would suggest a compressive third-nerve lesion, and myasthenia spares the pupil, so the flash test cannot confirm the junction. A brisk jaw jerk is an upper motor neuron sign above the pons and has nothing to say about fatigable weakness."
+    },
+    {
+      "question": "A 4-month-old lies in a frog-leg posture, follows faces and smiles, has no reflexes and has fine writhing movements of the tongue at rest. Which address is most likely?",
+      "options": [
+        "Cerebral hemispheres, as in central hypotonia",
+        "Neuromuscular junction",
+        "Muscle, as in congenital myopathy",
+        "Anterior horn cell, as in spinal muscular atrophy"
+      ],
+      "answer": 3,
+      "explanation": "An alert, socially engaged, floppy infant with absent reflexes and tongue fasciculations is the classic picture of spinal muscular atrophy, a loss of anterior horn cells. Central hypotonia usually comes with a depressed level of consciousness and normal or brisk reflexes (Peredo 2009), the opposite of this infant. Junction disorders spare reflexes and do not cause fasciculations. A congenital myopathy keeps reflexes longer and never fasciculates; fasciculations need a denervated motor unit."
+    },
+    {
+      "question": "An 8-year-old has high arches, thin calves, absent ankle reflexes, a slapping gait and reduced vibration sense at the toes. Which address fits?",
+      "options": [
+        "Peripheral nerve, a length-dependent neuropathy",
+        "Muscle, a distal myopathy",
+        "Anterior horn cell",
+        "A single lumbar root"
+      ],
+      "answer": 0,
+      "explanation": "Distal weakness with lost ankle reflexes and loss of vibration at the toes is length-dependent: the longest axons have failed first, and only the nerve carries both motor and sensory fibres. Lifelong high arches and thin calves suggest an inherited neuropathy such as Charcot-Marie-Tooth disease. A distal myopathy would not cause sensory loss. The anterior horn is purely motor. One lumbar root would give a one-sided, dermatomal pattern rather than a symmetric distal one."
+    },
+    {
+      "question": "A 7-year-old has weakness rising from the feet over a week, absent reflexes everywhere and tingling toes. In the localizer, nerve and root both survive. Which conclusion is correct?",
+      "options": [
+        "The localizer is wrong, because only one level can be affected",
+        "The muscle must be involved, because the weakness is symmetric",
+        "Both are correct, because Guillain-Barré syndrome is a polyradiculoneuropathy that damages roots and nerves",
+        "The anterior horn is the answer, because the reflexes are absent"
+      ],
+      "answer": 2,
+      "explanation": "Guillain-Barré syndrome attacks myelin along the roots and the nerves, so a model that keeps both alive is describing the disease accurately rather than failing to choose. Insisting on a single level assumes one lesion where the disease is a process along a whole system. Symmetric weakness alone does not point to muscle, and myopathy does not cause tingling. The anterior horn is purely motor and does not explain the sensory symptoms, even though it too removes reflexes."
+    },
+    {
+      "question": "In the localizer, a boy with a Gowers manoeuvre and proximal, purely motor weakness leaves horn cell and muscle tied. Which single bedside finding would break the tie most directly?",
+      "options": [
+        "Weakness of hip flexion",
+        "Enlarged calves",
+        "Normal sensation in the feet",
+        "Fasciculations of the tongue or limbs"
+      ],
+      "answer": 3,
+      "explanation": "Fasciculations arise from denervated motor units, so they appear in anterior horn disease and never in primary muscle disease; finding them breaks the tie toward the horn cell, and their absence leans toward muscle. Hip flexion weakness is part of the proximal pattern both share. Enlarged calves suggest a dystrophy, but they are a softer sign. Normal sensation is expected at both addresses and cannot separate them."
+    }
+  ],
+  "resources": [
+    {
+      "label": "Utah NeuroLogic Exam: motor exam, abnormal findings",
+      "url": "https://neurologicexam.med.utah.edu/adult/html/motor_abnormal.html",
+      "note": "Videos of weakness, wasting and fasciculations (CC BY-NC-SA)."
+    },
+    {
+      "label": "Washington University Neuromuscular Disease Center",
+      "url": "https://neuromuscular.wustl.edu/",
+      "note": "The reference index the site's Neuromuscular section is built on."
+    },
+    {
+      "label": "WashU: Duchenne and Becker muscular dystrophy",
+      "url": "https://neuromuscular.wustl.edu/musdist/dmd.html"
+    },
+    {
+      "label": "WashU: hereditary motor syndromes, including spinal muscular atrophy",
+      "url": "https://neuromuscular.wustl.edu/synmot.html"
+    },
+    {
+      "label": "WashU: Guillain-Barré syndrome",
+      "url": "https://neuromuscular.wustl.edu/antibody/gbs.htm"
+    }
+  ],
+  "signOff": "The resident examines three children with neuromuscular weakness and names the level of the motor unit before the EMG, agreeing with a faculty reader.",
+  "sources": [
+    "brazis2011",
+    "pearl2014",
+    "morris2012",
+    "peredo2009"
+  ]
+}

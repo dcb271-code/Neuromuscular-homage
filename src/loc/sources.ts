@@ -1,0 +1,33 @@
+import type { Source } from '@/src/eeg/sources';
+
+// Citation registry for the localization curriculum.
+// Every PMID was checked against PubMed (esummary + abstract) on 2026-10-01. The `supports`
+// note records what the abstract or the book page actually supports, so writers do not
+// stretch a citation past it. Books are the owner's local copies (docs/localization/Sources);
+// cite them by page, in our own words.
+
+export interface LocSource extends Source { supports?: string }
+
+export const LOC_SOURCES: Record<string, LocSource> = {
+  // ── Papers ──────────────────────────────────────────────────────────────────
+  gates2005: { key: 'gates2005', pmid: '15836511', citation: 'Gates P. The rule of 4 of the brainstem: a simplified method for understanding brainstem anatomy and brainstem vascular syndromes for the non-neurologist. Intern Med J. 2005;35(4):263-266.', supports: 'The rule of 4 as a teaching heuristic for brainstem syndromes.' },
+  gates2011: { key: 'gates2011', pmid: '21551111', citation: "Gates P. Work out where the problem is in the brainstem using 'the rule of 4'. Pract Neurol. 2011;11(3):167-172.", supports: 'The rule of 4 applied to common brainstem syndromes.' },
+  hilliard2004: { key: 'hilliard2004', pmid: '14762188', citation: "Hilliard AA, Weinberger SE, Tierney LM, Midthun DE, Saint S. Clinical problem-solving. Occam's razor versus Saint's triad. N Engl J Med. 2004;350(6):599-603.", supports: 'Parsimony (Occam) versus multiple coexisting diagnoses, as a clinical reasoning case.' },
+  daum2014: { key: 'daum2014', pmid: '23467417', citation: "Daum C, Hubschmid M, Aybek S. The value of 'positive' clinical signs for weakness, sensory and gait disorders in conversion disorder: a systematic and narrative review. J Neurol Neurosurg Psychiatry. 2014;85(2):180-190.", supports: '14 validated positive signs of functional disorder (7 motor, 5 sensory, 2 gait); low sensitivity (8-100%), high specificity (92-100%); evidence class III.' },
+  sonoo2004: { key: 'sonoo2004', pmid: '14707320', citation: 'Sonoo M. Abductor sign: a reliable new sign to detect unilateral non-organic paresis of the lower limb. J Neurol Neurosurg Psychiatry. 2004;75(1):121-125.', supports: 'Abductor sign classified all 33 patients correctly (17 organic, 16 non-organic); Hoover sign non-diagnostic in some.' },
+  peredo2009: { key: 'peredo2009', pmid: '19726697', citation: 'Peredo DE, Hannibal MC. The floppy infant: evaluation of hypotonia. Pediatr Rev. 2009;30(9):e66-e76.', supports: 'Central hypotonia 60-80% of cases, peripheral 15-30%; central features: depressed consciousness, axial weakness, normal strength with hypotonia, normal or brisk reflexes; about 50% diagnosed by history and exam; suspect infant botulism under 6 months with constipation, listlessness, poor feeding, weak cry, decreased gag.' },
+  rosenbaum2007: { key: 'rosenbaum2007', pmid: '17370477', citation: 'Rosenbaum P, Paneth N, Leviton A, et al. A report: the definition and classification of cerebral palsy April 2006. Dev Med Child Neurol Suppl. 2007;109:8-14.', supports: 'The consensus definition of cerebral palsy: permanent disorders of movement and posture attributed to non-progressive disturbances in the developing fetal or infant brain.' },
+  volpe2009: { key: 'volpe2009', pmid: '19081519', citation: 'Volpe JJ. Brain injury in premature infants: a complex amalgam of destructive and developmental disturbances. Lancet Neurol. 2009;8(1):110-124.', supports: 'Periventricular leukomalacia as the characteristic white-matter injury of prematurity, with accompanying neuronal and axonal disease ("encephalopathy of prematurity").' },
+  zafeiriou2004: { key: 'zafeiriou2004', pmid: '15246484', citation: 'Zafeiriou DI. Primitive reflexes and postural reactions in the neurodevelopmental examination. Pediatr Neurol. 2004;31(1):1-8.', supports: 'Persistence of primitive reflexes and abnormal or absent postural reactions as early markers of cerebral palsy; the combined exam as a screening test. (Abstract only; no ages.)' },
+
+  // ── Free web resource ───────────────────────────────────────────────────────
+  utah: { key: 'utah', url: 'https://neurologicexam.med.utah.edu/pediatric/html/home_exam.html', citation: 'Larsen PD, Stensaas SS. PediNeuroLogic Exam: A Neurodevelopmental Approach. University of Utah; updated 2020. Videos CC BY-NC-SA.', supports: 'Primitive reflexes (Moro, grasp, Galant) diminish over 4 to 6 months; postural reflexes (positive support, Landau, lateral propping, parachute) emerge at 3 to 8 months; persistence of primitive reflexes and failure of postural reflexes is the hallmark of UMN abnormality in the infant. Rooting disappears about 4 months; Moro usually absent by 4 to 5 months; persistent Moro or ATNR at 6 months is abnormal. Upgoing toe normal for the first year (incomplete myelination). Hand preference before 1 year is abnormal and points to weakness of the other hand; handedness develops after 12 months.' },
+
+  // ── Books (owner's copies; cite by page, in our own words) ──────────────────
+  brazis2011: { key: 'brazis2011', citation: 'Brazis PW, Masdeu JC, Biller J. Localization in Clinical Neurology. 6th ed. Philadelphia: Lippincott Williams & Wilkins; 2011.' },
+  pearl2014: { key: 'pearl2014', citation: 'Pearl PL, Emsellem HA. Neuro-Logic: A Primer on Localization. New York: Demos Medical; 2014.' },
+  demyer: { key: 'demyer', citation: "Biller J, Gruener G, Brazis PW. DeMyer's The Neurologic Examination: A Programmed Text. 6th ed. New York: McGraw-Hill." },
+  morris2012: { key: 'morris2012', citation: 'Neurological Clinical Examination: A Concise Guide. 3rd ed. 2012.' },
+  fisch2012: { key: 'fisch2012', citation: 'Fisch A. Neuroanatomy: Draw It to Know It. 2nd ed. New York: Oxford University Press; 2012.' },
+  arslan2014: { key: 'arslan2014', citation: 'Arslan O. Neuroanatomical Basis of Clinical Neurology. 2nd ed. Boca Raton: CRC Press; 2014.' },
+};

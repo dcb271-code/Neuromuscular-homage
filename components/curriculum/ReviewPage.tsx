@@ -5,12 +5,14 @@
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import type { EegModule } from '@/src/eeg/types';
-import { useEegProgress } from '@/src/eeg/progress';
+import { useCurriculumProgress } from '@/src/curriculum/progress';
+import { CURRICULA, type CurriculumKind } from './registry';
 
 type Card = { front: string; back: string; module: EegModule; href: string; kind: 'key point' | 'missed question' };
 
-export function ReviewPage({ modules }: { modules: EegModule[] }) {
-  const { store, hydrated, toggleFlag, reset } = useEegProgress();
+export function ReviewPage({ kind, modules }: { kind: CurriculumKind; modules: EegModule[] }) {
+  const cfg = CURRICULA[kind]; const base = cfg.basePath;
+  const { store, hydrated, toggleFlag, reset } = useCurriculumProgress(cfg.storageKey);
   const byId = useMemo(() => Object.fromEntries(modules.map(m => [m.id, m])), [modules]);
   const [mode, setMode] = useState<'list' | 'cards'>('list');
   const [idx, setIdx] = useState(0);
@@ -21,16 +23,16 @@ export function ReviewPage({ modules }: { modules: EegModule[] }) {
     const out: Card[] = [];
     for (const [k, f] of Object.entries(store.flags)) {
       const m = byId[f.module]; if (!m) continue;
-      out.push({ kind: 'key point', front: `Module ${m.number} · ${m.sections[f.section]?.title ?? ''}`, back: f.text, module: m, href: `/eeg/${m.id}#s${f.section + 1}` });
+      out.push({ kind: 'key point', front: `Module ${m.number} · ${m.sections[f.section]?.title ?? ''}`, back: f.text, module: m, href: `${base}/${m.id}#s${f.section + 1}` });
       void k;
     }
     for (const [mid, a] of Object.entries(store.quiz)) {
       const m = byId[mid]; if (!m) continue;
-      for (const qi of a.missed) { const q = m.quiz[qi]; if (q) out.push({ kind: 'missed question', front: q.question, back: `${q.options[q.answer]}\n\n${q.explanation}`, module: m, href: `/eeg/${m.id}#quiz` }); }
+      for (const qi of a.missed) { const q = m.quiz[qi]; if (q) out.push({ kind: 'missed question', front: q.question, back: `${q.options[q.answer]}\n\n${q.explanation}`, module: m, href: `${base}/${m.id}#quiz` }); }
     }
     for (const [, miss] of Object.entries(store.missed)) {
       const m = byId[miss.module]; const q = m?.sections[miss.section]?.question; if (!m || !q) continue;
-      out.push({ kind: 'missed question', front: q.question, back: `${q.options[q.answer]}\n\n${q.explanation}`, module: m, href: `/eeg/${m.id}#s${miss.section + 1}` });
+      out.push({ kind: 'missed question', front: q.question, back: `${q.options[q.answer]}\n\n${q.explanation}`, module: m, href: `${base}/${m.id}#s${miss.section + 1}` });
     }
     return out;
   }, [store, byId]);
@@ -39,14 +41,14 @@ export function ReviewPage({ modules }: { modules: EegModule[] }) {
 
   return (
     <div style={{ maxWidth: '860px', margin: '0 auto' }}>
-      <nav className="text-[12px] text-slate-400 mb-5 flex gap-1.5 items-center"><Link href="/eeg" className="text-slate-500 no-underline hover:underline">EEG</Link><span>/</span><span className="text-slate-800 font-semibold">Review</span></nav>
+      <nav className="text-[12px] text-slate-400 mb-5 flex gap-1.5 items-center"><Link href={base} className="text-slate-500 no-underline hover:underline">{cfg.crumb}</Link><span>/</span><span className="text-slate-800 font-semibold">Review</span></nav>
       <h1 className="font-mono font-extrabold tracking-tight text-slate-900 mb-2" style={{ fontSize: 'clamp(24px, 5.5vw, 34px)' }}>Review</h1>
       <p className="text-[14px] text-slate-600 mb-6 leading-relaxed">Key points you flagged and questions you missed, from every module, stored on this device.</p>
 
       {!hydrated ? null : cards.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-slate-300 p-8 text-center text-[14px] text-slate-500">
           Nothing here yet. Flag a key point with the ⚑ button, or miss a question, and it will appear here.
-          <div className="mt-3"><Link href="/eeg" className="font-semibold no-underline text-blue-600">Go to the curriculum →</Link></div>
+          <div className="mt-3"><Link href={base} className="font-semibold no-underline text-blue-600">Go to the curriculum →</Link></div>
         </div>
       ) : (
         <>

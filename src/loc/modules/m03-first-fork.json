@@ -1,0 +1,234 @@
+{
+  "id": "m03-first-fork",
+  "number": 3,
+  "title": "The first fork: upper or lower motor neuron",
+  "short": "UMN or LMN",
+  "description": "The first and most powerful split in localization: the two motor neurons, their opposite signatures in tone and reflexes, where the rules bend, and the floppy infant.",
+  "why": "The first and most powerful split in localization.",
+  "track": "doctrine",
+  "tags": [
+    "The Doctrine",
+    "Clinical Decision-Making",
+    "Pediatric Exam"
+  ],
+  "difficulty": "beginner",
+  "duration": "45 min",
+  "color": "#0d9488",
+  "objectives": [
+    "Distinguish upper from lower motor neuron lesions by distribution, wasting, tone and reflexes.",
+    "Tell spasticity from rigidity, and place hypotonia on the reflex arc.",
+    "Grade reflexes, judge clonus, and recognize a true extensor plantar response at any age.",
+    "Recognize when the usual signs mislead: neural shock, early cerebral palsy, axonal Guillain-Barré syndrome, the face.",
+    "Decide whether a floppy infant's hypotonia is central or peripheral."
+  ],
+  "sections": [
+    {
+      "title": "Two neurons, two signatures",
+      "figure": "localizer",
+      "content": "Every voluntary movement passes through two neurons in series. The **upper motor neuron** begins in the cortex and runs down through the brain, brainstem and spinal cord. The **lower motor neuron** begins in the anterior horn of the cord or a cranial nerve nucleus, leaves in a root and a nerve, and ends at the muscle. Pearl and Emsellem draw the line simply: a lesion anywhere before the synapse on the anterior horn cell is an upper motor neuron lesion; a lesion of the motor unit, from anterior horn to muscle, is a lower motor neuron lesion (Pearl 2014, p. 65).\n\nThis is the first and most powerful fork in localization, because the two lesions produce opposite signatures, and you can usually tell them apart within minutes.\n\n**The mechanism explains the signs**\n\nThe lower motor neuron is the final common path to muscle. Cut it and the muscle loses its nerve: it weakens, wastes early and severely, may twitch with fasciculations, and the reflex arc it belongs to is broken, so reflexes fall and tone drops. The upper motor neuron, by contrast, mostly modulates the lower one, including restraining its reflex activity. Cut it and the lower motor neuron is still alive but **released**: reflexes become brisk, tone rises, clonus may appear, and the plantar response turns upward (Pearl 2014, p. 65).\n\nDeMyer's table sets the two side by side (DeMyer, p. 289):\n- **Distribution.** Upper motor neuron lesions weaken *movements* in a hemiplegic, quadriplegic or paraplegic pattern, not individual muscles. Lower motor neuron lesions weaken *individual muscles* or groups in a root or nerve distribution.\n- **Wasting.** Upper: disuse atrophy only, late and slight. Lower: denervation atrophy, early and severe, with fasciculations.\n- **Reflexes and tone.** Upper: brisk reflexes, clonus, clasp-knife spasticity, extensor plantar. Lower: reduced or absent reflexes, hypotonia.\n\n**Try the full localizer above.** Switch on brisk reflexes and every motor-unit level disappears; switch on absent reflexes instead and the brain and brainstem disappear, but the cord survives (the next sections explain why). Notice that one well-chosen sign removes half the nervous system.\n\nIn a child the fork works the same way, with two warnings that sections 4 and 5 develop: an acute or early upper motor neuron lesion can look floppy, and in infancy hypotonia is far more often central than peripheral.",
+      "keyPoints": [
+        "Upper motor neuron: cortex to the anterior horn synapse. Lower motor neuron: anterior horn to muscle (Pearl 2014, p. 65).",
+        "Upper lesions release the lower neuron: brisk reflexes, spasticity, clonus, upgoing toe.",
+        "Lower lesions denervate: early wasting, fasciculations, reduced reflexes, hypotonia.",
+        "Upper lesions weaken movements in hemi-, para- or quadriplegic patterns; lower lesions weaken muscles in root or nerve patterns (DeMyer, p. 289)."
+      ],
+      "question": {
+        "question": "A 13-year-old has six months of weakness of the right hand. The small hand muscles are visibly wasted and twitch with fasciculations; the right triceps and finger reflexes are absent; tone is low; the plantar responses are down. Which fork of localization does this belong to?",
+        "options": [
+          "Upper motor neuron, in the left motor cortex",
+          "Lower motor neuron, somewhere in the motor unit supplying the right hand",
+          "Upper motor neuron, in the cervical spinal cord's corticospinal tract",
+          "It cannot be decided without imaging"
+        ],
+        "answer": 1,
+        "explanation": "Early wasting, fasciculations, lost reflexes and low tone in a group of muscles are the denervation signature of a lower motor neuron lesion (DeMyer, p. 289; Pearl 2014, p. 65). The next question is which part of the motor unit (anterior horn, root, plexus or nerve), which later modules address. A cortical lesion would weaken movements of the whole arm with brisk reflexes and little wasting. A corticospinal tract lesion in the cord would produce brisk reflexes below the lesion. The examination has already decided the fork; imaging comes after localization."
+      }
+    },
+    {
+      "title": "Tone: spasticity, rigidity and hypotonia",
+      "content": "**Tone** is the slight resistance you feel when you move a relaxed joint. DeMyer suggests feeling it on yourself first: rest one forearm on your thigh with the wrist dangling, relax it completely, and move the wrist with the other hand. That faint resistance is normal tone; the ligaments set the limits of the range (DeMyer, p. 270). Everything abnormal is a departure from that feeling, and the *kind* of departure localizes.\n\n**Spasticity and rigidity: how fast you move matters**\n\nDeMyer separates the two by the speed of the movement that brings them out (DeMyer, p. 273):\n- **Spasticity** appears when you move the limb **quickly**: a catch, then a give, the clasp-knife phenomenon. It follows the distribution of an upper motor neuron lesion: hemiplegic, paraplegic or quadriplegic.\n- **Rigidity** appears when you move the limb **slowly**: a uniform, lead-pipe resistance through the whole range, often with cogwheeling and a tremor at rest, usually in all four limbs. It points to the basal ganglia, not to the corticospinal tract.\n\nSo test tone twice: once slowly, once with a quick flick. Velocity-dependent resistance is spasticity; resistance that is there whatever the speed is rigidity.\n\n**Hypotonia lives at every level of the reflex arc**\n\nLow tone is less specific. Muscle tone depends on a reflex arc: the muscle spindle, the sensory fibres in the dorsal root, the anterior horn cell and its axon, and the muscle itself. Break any link and tone falls. DeMyer's table distinguishes the peripheral causes by their companions (DeMyer, p. 266):\n- a **dorsal root** lesion lowers tone and reflexes and causes sensory loss, without weakness or wasting;\n- a **lower motor neuron** lesion adds weakness, wasting and fasciculations, without sensory loss;\n- a **myopathy** gives weakness, wasting and hypotonia without fasciculations or sensory loss.\n\nThe dorsal root's role has a pediatric echo. Cutting selected dorsal roots reduces tone by removing excitatory sensory inflow, which is why dorsal rhizotomy is used to reduce tone in some children with spasticity (DeMyer, p. 273).\n\n**In a child**\n\nTone in infants changes with age: the term newborn lies flexed, and that tight flexor tone has eased by about three months ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/03month.html)). And hypotonia in an infant is most often **central**, a point section 5 develops. A fourth kind of increased tone, dystonia, belongs to the basal ganglia and is covered in [[m08-loops|Module 8]].",
+      "keyPoints": [
+        "Tone is the slight resistance of a relaxed joint to passive movement (DeMyer, p. 270).",
+        "Spasticity is velocity-dependent (catch and yield on quick movement) and follows an upper motor neuron pattern (DeMyer, p. 273).",
+        "Rigidity is present at slow speed (lead-pipe, cogwheel) and points to the basal ganglia (DeMyer, p. 273).",
+        "Hypotonia can arise anywhere along the reflex arc; companions such as sensory loss, fasciculations and wasting tell the levels apart (DeMyer, p. 266).",
+        "In infants, flexor tone loosens over the first months, and hypotonia is usually central."
+      ],
+      "question": {
+        "question": "In a 7-year-old, moving the elbow slowly meets almost no resistance, but a quick extension produces a sudden catch that then gives way. The same arm is weak and its reflexes are brisk. What kind of tone is this, and what does it point to?",
+        "options": [
+          "Rigidity, pointing to the basal ganglia",
+          "Hypotonia, pointing to the motor unit",
+          "Spasticity, pointing to an upper motor neuron lesion",
+          "Normal tone in an anxious child"
+        ],
+        "answer": 2,
+        "explanation": "Resistance that appears only with a quick movement and then yields is the catch-and-yield of spasticity, which with weakness and brisk reflexes signals an upper motor neuron lesion (DeMyer, p. 273). Rigidity is felt with slow movement as well, uniformly through the range. Hypotonia would offer less resistance at every speed and come with reduced reflexes if peripheral. Anxiety can stiffen a limb, but it does not produce a reproducible velocity-dependent catch with brisk reflexes."
+      }
+    },
+    {
+      "title": "Reflexes and the plantar response",
+      "content": "The reflex hammer tests a circuit that runs from muscle spindle to spinal cord and back, under the restraining hand of the upper motor neuron. A **brisk** reflex says the brake is off; an **absent** one says the circuit itself is broken. DeMyer recommends grading reflexes on a scale from 0 to 4+ so that findings can be compared over time and between examiners (DeMyer, p. 36).\n\n**Asymmetry is the most useful reflex finding.** Absolute briskness varies from person to person, and many healthy children have lively reflexes. A difference between the two sides, reproduced on repeated testing, is much harder to explain away. DeMyer adds a consistency check: when reflexes are increased on one side because of an upper motor neuron lesion, the examiner should also find weakness on that side (DeMyer, p. 268).\n\n**Clonus**\n\nClonus is a rhythmic to-and-fro oscillation set off by a quick stretch, another way of showing hyperactive reflexes after upper motor neuron interruption. A few beats can be normal (abortive clonus); in mature individuals only **sustained** clonus counts as abnormal. Some normal newborns show sustained clonus, set off by movement or gravity (DeMyer, p. 269). So the same sign means different things at different ages.\n\n**What makes a toe \"upgoing\"**\n\nThe extensor plantar response, the Babinski sign, is the most famous sign in neurology and one of the most misread. DeMyer lists four features of a true extensor toe sign (DeMyer, pp. 281-282):\n1. The toe begins to extend only after the stroke has travelled some distance along the sole.\n2. It stays extended while the stroke continues.\n3. When the stroke stops, it floats slowly back to neutral.\n4. A flexion withdrawal of the leg accompanies it.\n\nDeMyer also insists there is **no \"negative Babinski\"**: the sign is either present or absent (DeMyer, p. 281). And a true extensor response is not always permanent: it can appear transiently in toxic-metabolic coma or after a seizure (DeMyer, p. 282).\n\n**In infants**\n\nAn upgoing toe is normal in the first year of life while the corticospinal tracts myelinate ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/newborn_n.html)); DeMyer notes that the infant toe response varies with the kind of stimulus (DeMyer, p. 282). At 12 months the toe may go up or down, and what matters is **reproducible asymmetry** ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/12month.html)). In a ticklish child, stroke the outer edge of the foot (DeMyer, p. 616).",
+      "keyPoints": [
+        "Grade reflexes 0 to 4+ (DeMyer, p. 36); reproducible asymmetry is more informative than absolute briskness.",
+        "One-sided brisk reflexes from an upper motor neuron lesion should come with weakness on that side (DeMyer, p. 268).",
+        "Only sustained clonus is abnormal in mature individuals; normal neonates may have sustained clonus (DeMyer, p. 269).",
+        "A true extensor toe starts after the stroke moves, stays up, floats back, and comes with leg flexion; there is no negative Babinski (DeMyer, pp. 281-282).",
+        "An upgoing toe is normal in the first year; at 12 months, asymmetry matters (Utah PediNeuroLogic Exam)."
+      ],
+      "question": {
+        "question": "An anxious 9-year-old's big toe jerks up the instant your key touches the sole, and he pulls his whole foot away, laughing. On re-testing from the outer edge of the foot with a slow stroke, both toes go down. How should you record the plantar responses?",
+        "options": [
+          "Flexor (down) on both sides; the first response was withdrawal, not an extensor sign",
+          "Extensor on both sides, because the toe went up the first time",
+          "Equivocal, and request an MRI of the spine",
+          "Negative Babinski bilaterally"
+        ],
+        "answer": 0,
+        "explanation": "A true extensor response starts only after the stroke has moved along the sole, stays up during the stroke and floats back after it (DeMyer, pp. 281-282). An instant jerk with withdrawal and laughter is a ticklish withdrawal, and re-testing from the lateral foot, which DeMyer recommends for ticklish children (DeMyer, p. 616), shows flexor responses. Calling the first response extensor misreads withdrawal. There is no need for imaging when a clean re-test is flexor. 'Negative Babinski' is a term DeMyer rejects: the sign is either present or absent (DeMyer, p. 281)."
+      }
+    },
+    {
+      "title": "When the rules mislead",
+      "content": "The upper and lower motor neuron signatures are reliable enough to build a curriculum on, and unreliable enough to humble anyone who treats them as laws. Four exceptions matter most, and three of them matter especially in children.\n\n**1. Shock: an upper lesion that looks lower**\n\nImmediately after an acute, severe upper motor neuron lesion, the patient may be flaccid and areflexic, the stage DeMyer calls **neural shock** (spinal or cerebral, depending on the site). Brisk reflexes, spasticity and an upgoing toe emerge only as recovery begins (DeMyer, pp. 273-274). A child with acute transverse myelitis or a spinal cord injury can therefore look, in the first days, like a child with a peripheral neuropathy. The sensory level and early loss of bladder control are what keep the cord on your list. Slowly evolving upper motor neuron lesions, in contrast, usually show brisk reflexes and spasticity from the start, without a floppy phase (DeMyer, p. 274).\n\n**2. The floppy infant who will become stiff**\n\nDeMyer notes that infants with cerebral palsy may present as hypotonic before spasticity evolves, or may stay hypotonic (DeMyer, p. 273). A central lesion in an infant does not always announce itself with brisk reflexes. Low tone with normal or brisk reflexes, depressed alertness and comparatively good limb strength should make you think central, as section 5 shows.\n\n**3. A peripheral disorder that keeps its reflexes**\n\nGuillain-Barré syndrome typically brings ascending flaccid weakness with areflexia. But in some patients with the axonal form, reflexes are preserved or even brisk, and the clinical distinction between neuropathy and myelopathy becomes hard; nerve conduction studies settle it (DeMyer, p. 290).\n\n**4. The face**\n\nStudents learn that a central (upper motor neuron) facial palsy spares the forehead because the forehead receives input from both hemispheres, while a peripheral (lower motor neuron) palsy weakens the whole face. The distinction is useful, but Pearl and Emsellem call the strict version of the teaching more dogmatic than truth: anatomical studies suggest a gradient, with the forehead receiving *less* cortical input rather than more (Pearl 2014, p. 49). Use forehead sparing as a strong hint, not a proof.\n\n**The lesson**\n\nWhen one sign contradicts the rest, do not discard the pattern; ask what could make that one sign lie. Time since onset, the age of the nervous system, and the kind of axonal injury are the usual culprits.",
+      "keyPoints": [
+        "Acute severe upper motor neuron lesions can be flaccid and areflexic at first (neural shock) (DeMyer, pp. 273-274).",
+        "Slowly evolving upper motor neuron lesions show spasticity and brisk reflexes from the start (DeMyer, p. 274).",
+        "Infants with cerebral palsy may be hypotonic before spasticity appears (DeMyer, p. 273).",
+        "Axonal Guillain-Barré syndrome can preserve reflexes; nerve studies decide (DeMyer, p. 290).",
+        "Forehead sparing in central facial palsy is a strong hint, not a law (Pearl 2014, p. 49)."
+      ],
+      "question": {
+        "question": "A 12-year-old woke with weak, floppy legs that worsened over a day. Knee and ankle reflexes are absent, the toes are mute, he cannot feel a pin below the umbilicus, and he has not passed urine since the morning. What is the most likely level?",
+        "options": [
+          "Peripheral nerves, because the reflexes are absent",
+          "The spinal cord, in spinal shock",
+          "The muscles, because the legs are floppy",
+          "Both cerebral hemispheres"
+        ],
+        "answer": 1,
+        "explanation": "Absent reflexes would ordinarily point to the motor unit, but a sensory level on the trunk and early urinary retention can only come from the cord. In the first hours to days after an acute, severe cord lesion, spinal shock makes the legs flaccid and areflexic, and upper motor neuron signs appear later (DeMyer, pp. 273-274). A neuropathy does not produce a sensory level or early retention. A myopathy causes no sensory loss. Hemispheric lesions do not produce a level on the trunk. This child needs an urgent spine MRI."
+      }
+    },
+    {
+      "title": "The floppy infant: central or peripheral?",
+      "figure": "localizer-floppy",
+      "content": "No question in child neurology tests the first fork more often than the floppy infant. **Hypotonia** is reduced resistance to passive movement; **weakness** is a reduced maximum power. The two can occur together or apart, and telling them apart is the key to localization ([Peredo 2009](https://pubmed.ncbi.nlm.nih.gov/19726697/)).\n\n**Central is commoner**\n\nIn Peredo and Hannibal's review, central causes account for about 60 to 80% of infant hypotonia and peripheral causes for about 15 to 30% ([Peredo 2009](https://pubmed.ncbi.nlm.nih.gov/19726697/)). So the floppy infant is more often a brain problem than a muscle problem, which is counter-intuitive until you remember that the motor unit is only one of the places tone can fail.\n\n**The signs that point centrally**\n\nThe same review lists the features that favour a central cause: a **depressed level of consciousness**, predominantly **axial** weakness, **relatively normal limb strength** despite the hypotonia, and **normal or brisk reflexes** ([Peredo 2009](https://pubmed.ncbi.nlm.nih.gov/19726697/)). Dysmorphic features, seizures or poor feeding with a sleepy, disengaged baby add weight. The peripheral pattern is the mirror image: an alert, bright-eyed infant who cannot lift the limbs against gravity, with absent reflexes, and sometimes tongue fasciculations.\n\n**The history and examination do most of the work**\n\nAbout half of infants with hypotonia are diagnosed from the history and examination alone ([Peredo 2009](https://pubmed.ncbi.nlm.nih.gov/19726697/)). The localization chooses the first tests: brain imaging and genetic testing for a central picture; studies of the motor unit for a peripheral one.\n\n**One pattern to never miss**\n\nInfant botulism should be suspected in an infant under 6 months with an acute or subacute floppy illness and constipation, listlessness, poor feeding, a weak cry and a reduced gag ([Peredo 2009](https://pubmed.ncbi.nlm.nih.gov/19726697/)). It localizes to the neuromuscular junction and is treatable.\n\n**Use the presets in the figure above.** The sleepy infant with brisk reflexes leaves the brain and brainstem standing. The alert infant with tongue fasciculations and no reflexes leaves the anterior horn cell on top, the picture of spinal muscular atrophy. The constipated 3-month-old with ptosis and a weak suck leaves the junction as the only level that fits everything. Then follow the trail into the motor unit in [[m04-motor-unit|Module 4]], or into the [neuromuscular disease index](/neuromuscular).",
+      "keyPoints": [
+        "Hypotonia is reduced resistance to passive movement; weakness is reduced power; separate them (Peredo 2009).",
+        "Central causes account for about 60 to 80% of infant hypotonia, peripheral for about 15 to 30% (Peredo 2009).",
+        "Central clues: depressed consciousness, axial weakness, relatively normal limb strength, normal or brisk reflexes (Peredo 2009).",
+        "About half of hypotonic infants are diagnosed by history and examination alone (Peredo 2009).",
+        "Suspect infant botulism under 6 months with constipation, weak cry, poor feeding and reduced gag (Peredo 2009)."
+      ],
+      "question": {
+        "question": "A 4-month-old is bright, smiling and follows faces, but cannot lift her arms or legs against gravity. Reflexes are absent and the tongue quivers at rest. What is the most likely level, and what should happen next?",
+        "options": [
+          "Central hypotonia; arrange a brain MRI first",
+          "The neuromuscular junction; give a trial of pyridostigmine",
+          "Muscle; check the creatine kinase and wait",
+          "The anterior horn cell; arrange urgent genetic testing for spinal muscular atrophy"
+        ],
+        "answer": 3,
+        "explanation": "An alert infant with profound limb weakness, absent reflexes and tongue fasciculations has the peripheral pattern (Peredo 2009), and fasciculations with areflexia and no sensory disorder point to the anterior horn cell: the picture of spinal muscular atrophy, which now has time-sensitive treatments, so testing should be urgent. Central hypotonia would come with depressed alertness and preserved or brisk reflexes. Junction disorders do not cause fasciculations. Muscle disease does not cause fasciculations either, and waiting would lose time."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which combination of findings most strongly suggests a lower motor neuron lesion?",
+      "options": [
+        "Weakness of a hand, early wasting, fasciculations and an absent reflex",
+        "Weakness of the whole arm, brisk reflexes and an upgoing toe",
+        "Lead-pipe rigidity in all four limbs",
+        "Ataxia with normal strength"
+      ],
+      "answer": 0,
+      "explanation": "Early denervation wasting, fasciculations and a lost reflex in a group of muscles are the lower motor neuron signature (DeMyer, p. 289). Whole-arm weakness with brisk reflexes and an upgoing toe is upper motor neuron. Lead-pipe rigidity points to the basal ganglia. Ataxia with normal strength points to the cerebellum or its connections, not to either motor neuron."
+    },
+    {
+      "question": "A 16-year-old has brisk reflexes in the right arm and leg, but on careful testing the right side is not weak at all and the reflexes are equally brisk on the left on re-examination. How should you interpret the reflexes?",
+      "options": [
+        "A left hemisphere lesion",
+        "A cervical cord lesion",
+        "Probably physiological briskness, since there is no asymmetry on re-testing and no matching weakness",
+        "A peripheral neuropathy"
+      ],
+      "answer": 2,
+      "explanation": "Reflex briskness varies between healthy people; what matters is reproducible asymmetry, and DeMyer notes that one-sided brisk reflexes from an upper motor neuron lesion should come with weakness on that side (DeMyer, p. 268). Symmetric brisk reflexes without weakness are usually physiological. A hemisphere or cord lesion would leave other signs. A neuropathy lowers reflexes rather than raising them."
+    },
+    {
+      "question": "Testing a 10-year-old's ankle, you feel four beats of clonus that then stop; the other ankle is the same, and there is no weakness. How should this be recorded and interpreted?",
+      "options": [
+        "Sustained clonus, indicating corticospinal tract disease",
+        "Unsustained (abortive) clonus, which can occur in normal individuals",
+        "A sign of spinal cord compression requiring urgent imaging",
+        "A sign of peripheral neuropathy"
+      ],
+      "answer": 1,
+      "explanation": "A few clonic beats that die out are abortive clonus, which can occur with physiological hyperreflexia; in mature individuals only sustained clonus counts as abnormal (DeMyer, p. 269). Calling it sustained misreads the finding. Without weakness, asymmetry or other signs there is no reason to suspect cord compression. A neuropathy reduces reflexes and does not cause clonus."
+    },
+    {
+      "question": "Two days after a severe spinal cord injury at T6, a 14-year-old's legs are flaccid with absent reflexes. A medical student argues this proves a peripheral lesion. What is the correct response?",
+      "options": [
+        "Agree; absent reflexes always mean a lower motor neuron lesion",
+        "Agree; the injury must also have damaged the lumbar plexus",
+        "Disagree; flaccid legs mean a muscle injury",
+        "Disagree; this is spinal shock, and upper motor neuron signs are expected to appear as he recovers"
+      ],
+      "answer": 3,
+      "explanation": "After an acute, severe upper motor neuron lesion the patient may pass through a stage of neural shock with flaccid paralysis and areflexia; reflexes, spasticity and extensor toes appear as recovery begins (DeMyer, pp. 273-274). The rule linking areflexia to the motor unit does not hold in this window. There is no reason to invoke a second, plexus injury. Flaccidity does not by itself point to muscle."
+    },
+    {
+      "question": "A 2-month-old is floppy, feeds poorly and is hard to rouse, yet moves the limbs against gravity, and the reflexes are brisk. Which level of the nervous system is most likely involved?",
+      "options": [
+        "The anterior horn cell",
+        "The peripheral nerves",
+        "The muscle",
+        "The brain (central hypotonia)"
+      ],
+      "answer": 3,
+      "explanation": "A depressed level of consciousness, relatively preserved limb strength and normal or brisk reflexes are the features of central hypotonia, which accounts for most infant hypotonia (Peredo 2009). Anterior horn, nerve and muscle disorders produce an alert infant with true weakness and reduced reflexes. Brain imaging and genetic testing would come first here."
+    },
+    {
+      "question": "A 4-year-old has a right facial palsy in which he cannot close the right eye fully or wrinkle the right forehead, and the right arm and leg are normal. How confident can you be that this is a peripheral (lower motor neuron) facial palsy?",
+      "options": [
+        "Fairly confident: whole-face weakness with normal limbs favours a peripheral lesion, though forehead involvement is a hint rather than a law",
+        "Certain, because the forehead is always spared in central palsies",
+        "Not at all; the face cannot be localized at the bedside",
+        "It must be central, because the eye is involved"
+      ],
+      "answer": 0,
+      "explanation": "Weakness of the whole face, including the forehead, with normal limbs is the usual picture of a lower motor neuron facial palsy. But Pearl and Emsellem caution that the strict teaching about forehead sparing is more dogmatic than truth (Pearl 2014, p. 49), so it supports rather than proves the localization. 'Always spared' overstates it. Facial weakness can be localized at the bedside. Eye closure weakness does not make a palsy central."
+    }
+  ],
+  "resources": [
+    {
+      "label": "PediNeuroLogic Exam: the newborn",
+      "url": "https://neurologicexam.med.utah.edu/pediatric/html/newborn_n.html",
+      "note": "Tone, reflexes and the plantar response in a normal newborn."
+    },
+    {
+      "label": "PediNeuroLogic Exam: abnormal newborn",
+      "url": "https://neurologicexam.med.utah.edu/pediatric/html/newborn_ab.html",
+      "note": "Examples of abnormal tone and reflexes in the newborn."
+    },
+    {
+      "label": "PediNeuroLogic Exam: 12 months",
+      "url": "https://neurologicexam.med.utah.edu/pediatric/html/12month.html",
+      "note": "Reflexes on the parent's lap; the plantar response at 12 months."
+    },
+    {
+      "label": "NeuroLogic Exam (University of Utah, adult)",
+      "url": "https://neurologicexam.med.utah.edu/adult/html/home_exam.html",
+      "note": "Motor examination, tone and reflexes in adults, with abnormal examples."
+    }
+  ],
+  "signOff": "On five patients, classifies the weakness as upper or lower motor neuron from the examination alone, agreeing with faculty.",
+  "sources": [
+    "pearl2014",
+    "demyer",
+    "peredo2009",
+    "utah"
+  ]
+}

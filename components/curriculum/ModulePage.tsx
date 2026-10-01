@@ -6,22 +6,19 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import type { EegModule, QuizQuestion } from '@/src/eeg/types';
-import { SOURCES, sourceUrl } from '@/src/eeg/sources';
-import { TRACKS } from '@/src/eeg/curriculum';
-import { useEegProgress } from '@/src/eeg/progress';
+import { sourceUrl } from '@/src/eeg/sources';
+import { useCurriculumProgress } from '@/src/curriculum/progress';
 import { FormattedContent } from './FormattedContent';
 import { InlineQuestion } from './InlineQuestion';
 import { KeyPoints } from './KeyPoints';
-import { MontageLab } from './MontageLab';
 import { FigureStrip } from './Figure';
-import figuresJson from '@/src/eeg/figures.json';
-import type { EegFigure } from '@/src/eeg/types';
+import { CURRICULA, type CurriculumKind } from './registry';
 
-const FIGURES: Record<string, EegFigure> = Object.fromEntries((figuresJson as EegFigure[]).map(f => [f.id, f]));
-
-export function ModulePage({ module: m, prev, next }: { module: EegModule; prev?: EegModule; next?: EegModule }) {
+export function ModulePage({ kind, module: m, prev, next }: { kind: CurriculumKind; module: EegModule; prev?: EegModule; next?: EegModule }) {
+  const cfg = CURRICULA[kind];
+  const { basePath, tracks: TRACKS, sources: SOURCES, figures: FIGURES } = cfg;
   const accent = m.color;
-  const { store, hydrated, markRead, touch, saveQuiz, toggleFlag, recordInline, setSignOff } = useEegProgress();
+  const { store, hydrated, markRead, touch, saveQuiz, toggleFlag, recordInline, setSignOff } = useCurriculumProgress(cfg.storageKey);
   const read = store.read[m.id] ?? [];
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
   const [active, setActive] = useState(0);
@@ -54,14 +51,14 @@ export function ModulePage({ module: m, prev, next }: { module: EegModule; prev?
     <div style={{ maxWidth: '860px', margin: '0 auto' }}>
       {/* Breadcrumb + header */}
       <nav className="text-[12px] text-slate-400 mb-5 flex gap-1.5 items-center flex-wrap">
-        <Link href="/eeg" className="text-slate-500 no-underline hover:underline">EEG</Link>
+        <Link href={basePath} className="text-slate-500 no-underline hover:underline">{cfg.crumb}</Link>
         <span>/</span>
         <span className="text-slate-800 font-semibold">Module {m.number}</span>
       </nav>
 
       <header className="mb-8 pb-6 border-b border-slate-100">
         <div className="flex items-center gap-2 flex-wrap mb-3">
-          <span className="text-[10px] font-bold uppercase tracking-[0.1em] px-2 py-[3px] rounded-full" style={{ color: accent, background: accent + '14' }}>{TRACKS[m.track].name}</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.1em] px-2 py-[3px] rounded-full" style={{ color: accent, background: accent + '14' }}>{TRACKS[m.track]?.name ?? m.track}</span>
           {m.tags.map(t => <span key={t} className="text-[10px] font-semibold uppercase tracking-[0.06em] px-2 py-[2px] rounded-full border border-slate-200 text-slate-500 bg-white">{t}</span>)}
           <span className="text-[11px] text-slate-400 ml-auto">{m.difficulty} · {m.duration}</span>
         </div>
@@ -117,8 +114,13 @@ export function ModulePage({ module: m, prev, next }: { module: EegModule; prev?
                 <span className="font-mono text-[13px] font-bold" style={{ color: read.includes(i) ? '#16a34a' : accent }}>{read.includes(i) ? '✓' : String(i + 1).padStart(2, '0')}</span>
                 <h2 className="text-[20px] font-bold tracking-tight text-slate-900 leading-tight">{s.title}</h2>
               </div>
-              {s.figure === 'montage-lab' && <MontageLab accent={accent} />}
-              <FormattedContent content={s.content} accent={accent} />
+              {s.figure && cfg.widgets[s.figure] && (() => { const W = cfg.widgets[s.figure!]; return <W accent={accent} />; })()}
+              {s.discussion ? (
+                <details className="rounded-2xl border border-slate-200 bg-white px-5 py-4">
+                  <summary className="cursor-pointer text-[13px] font-semibold" style={{ color: accent }}>Discussion: open after you have worked the case</summary>
+                  <div className="mt-4"><FormattedContent content={s.content} accent={accent} basePath={basePath} /></div>
+                </details>
+              ) : <FormattedContent content={s.content} accent={accent} basePath={basePath} />}
               <FigureStrip figs={(s.figures ?? []).map(id => FIGURES[id]).filter(Boolean)} accent={accent} />
               <div data-section-end={i} aria-hidden="true" />
               <KeyPoints points={s.keyPoints} accent={accent}
@@ -130,7 +132,7 @@ export function ModulePage({ module: m, prev, next }: { module: EegModule; prev?
           ))}
 
           <section id="quiz" className="mb-10 scroll-mt-20">
-            <Quiz module={m} accent={accent} unlocked={allRead || !!attempt} last={attempt}
+            <Quiz module={m} basePath={basePath} accent={accent} unlocked={allRead || !!attempt} last={attempt}
               onFinish={(score, missed) => saveQuiz(m.id, { score, total: m.quiz.length, at: new Date().toISOString(), missed })} />
           </section>
 
@@ -164,13 +166,13 @@ export function ModulePage({ module: m, prev, next }: { module: EegModule; prev?
                 return <li key={k}>{s.citation}{url && <> <a href={url} target="_blank" rel="noopener noreferrer" className="no-underline hover:underline" style={{ color: accent }}>{s.pmid ? `PMID ${s.pmid}` : 'link'} ↗</a></>}</li>;
               })}
             </ol>
-            <p className="text-[11px] text-slate-400 mt-3">Tracings are from St. Louis and Frey (eds), Electroencephalography, AES 2016, CC BY-NC-SA 4.0, or reproduced with their author's permission as stated under each figure (<a href="/eeg/ATTRIBUTIONS.md" target="_blank" rel="noopener noreferrer" className="underline">credits</a>). For education. Not for clinical decision-making; consult primary sources and your attending.</p>
+            <p className="text-[11px] text-slate-400 mt-3">{cfg.footer}</p>
           </section>
 
           <nav className="flex gap-3 justify-between border-t border-slate-100 pt-5 text-[13px]">
-            {prev ? <Link href={`/eeg/${prev.id}`} className="no-underline text-slate-600 hover:text-slate-900">← {String(prev.number).padStart(2, '0')} {prev.short}</Link> : <span />}
-            <Link href="/eeg/gallery" className="no-underline text-slate-500 hover:text-slate-900 text-center">Pattern gallery</Link>
-            {next ? <Link href={`/eeg/${next.id}`} className="no-underline font-semibold text-right" style={{ color: accent }}>{String(next.number).padStart(2, '0')} {next.short} →</Link> : <Link href="/eeg" className="no-underline font-semibold" style={{ color: accent }}>Back to the curriculum →</Link>}
+            {prev ? <Link href={`${basePath}/${prev.id}`} className="no-underline text-slate-600 hover:text-slate-900">← {String(prev.number).padStart(2, '0')} {prev.short}</Link> : <span />}
+            {cfg.navExtra ? <Link href={cfg.navExtra.href} className="no-underline text-slate-500 hover:text-slate-900 text-center">{cfg.navExtra.label}</Link> : <span />}
+            {next ? <Link href={`${basePath}/${next.id}`} className="no-underline font-semibold text-right" style={{ color: accent }}>{String(next.number).padStart(2, '0')} {next.short} →</Link> : <Link href={basePath} className="no-underline font-semibold" style={{ color: accent }}>Back to the curriculum →</Link>}
           </nav>
         </div>
       </div>
@@ -180,8 +182,8 @@ export function ModulePage({ module: m, prev, next }: { module: EegModule; prev?
 
 // ── End-of-module quiz ───────────────────────────────────────────────────────
 
-function Quiz({ module: m, accent, unlocked, last, onFinish }: {
-  module: EegModule; accent: string; unlocked: boolean; last?: { score: number; total: number; at: string };
+function Quiz({ module: m, basePath, accent, unlocked, last, onFinish }: {
+  module: EegModule; basePath: string; accent: string; unlocked: boolean; last?: { score: number; total: number; at: string };
   onFinish: (score: number, missed: number[]) => void;
 }) {
   const [answers, setAnswers] = useState<(number | null)[]>(() => m.quiz.map(() => null));
@@ -220,7 +222,7 @@ function Quiz({ module: m, accent, unlocked, last, onFinish }: {
               <>
                 <div className="text-[14px] text-slate-800"><b>{score}/{m.quiz.length}</b> correct{score === m.quiz.length ? '. Well read.' : '. Missed items are on your review page.'}</div>
                 <button onClick={retry} className="px-3 py-1.5 rounded-lg text-[12px] font-semibold border border-slate-200 text-slate-600 bg-white">Try again</button>
-                <Link href="/eeg/review" className="text-[12px] font-semibold no-underline" style={{ color: accent }}>Review page →</Link>
+                <Link href={`${basePath}/review`} className="text-[12px] font-semibold no-underline" style={{ color: accent }}>Review page →</Link>
               </>
             )}
             {!allChecked && !done && <span className="text-[11px] text-slate-400">Check every answer to finish.</span>}

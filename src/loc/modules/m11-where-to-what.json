@@ -1,0 +1,225 @@
+{
+  "id": "m11-where-to-what",
+  "number": 11,
+  "title": "From where to what: building the differential",
+  "short": "Where to what",
+  "description": "How tempo turns an address into a short list: the mechanism categories, the where-by-when grid, the child's clock of static, progressive, regressive and episodic, and functional disorder as a positive diagnosis.",
+  "why": "Localization is half the answer; tempo turns an address into a short list.",
+  "track": "synthesis",
+  "tags": [
+    "The Doctrine",
+    "Clinical Decision-Making"
+  ],
+  "difficulty": "intermediate",
+  "duration": "45 min",
+  "color": "#475569",
+  "objectives": [
+    "Explain why the examination localizes and the history's time course suggests the cause, and when the history also matters for localization.",
+    "Use the mechanism categories and a level-by-tempo grid to turn a localization into a short, ranked differential.",
+    "Read a child's history against development: static, progressive, regressive or episodic, and age of onset as a filter.",
+    "Make functional neurological disorder a positive diagnosis from bedside signs, and know their limits."
+  ],
+  "sections": [
+    {
+      "title": "Tempo is the bridge",
+      "content": "The site is called Where Before What, and so far every module has been about the first word. This one is about the second, and about the word that connects them: **when**.\n\nBrazis puts the division of labour plainly. For the anatomical localization of a lesion, the examination matters far more than the history; the history, meaning the way the deficits evolved over time, is what defines the cause (Brazis 2011, p. 4). His example is a one-sided hemiparesis. If it arrived in minutes, think of a vascular event or a seizure. If it evolved over a few days, think of infection or demyelination. If it crept up over months, think of a tumour or a degenerative process. Same address, three different differentials, separated only by the clock.\n\n**Where gives a place; when gives a mechanism**\n\nThink of the two as coordinates. Where tells you which structure is failing; when tells you how it is failing. A cord lesion that appeared over minutes, hours, weeks or years is four different diseases, and an examination alone could not tell them apart. Neither could the history alone: \"getting worse over weeks\" means little until you know whether the weeks are happening in the cerebellum or the muscle.\n\n**When the history also localizes**\n\nBrazis adds a refinement worth keeping. The examination shows the end result of everything that has happened, and sometimes that end result is several lesions laid down at different times. A third-nerve palsy and a hemiparesis on opposite sides would put a single lesion in the midbrain, but only if they began together. If one dates from childhood and the other is new, they are two lesions, and imaging the midbrain would miss the second (Brazis 2011, p. 4). In children, birth history, early milestones and old photographs do this work: a \"new\" weakness may turn out to have been there since infancy.\n\n**The order matters**\n\nTaking the tempo before you localize invites premature closure: \"sudden, so stroke\" before you have checked whether the findings even fit the brain. Localize first, then let the clock choose among the causes that live at that address.",
+      "keyPoints": [
+        "The examination localizes; the time course of the history points to the cause (Brazis 2011, p. 4).",
+        "Minutes suggest a vascular event or seizure, days suggest infection or demyelination, months suggest tumour or degeneration (Brazis 2011, p. 4).",
+        "The history also localizes when findings began at different times: two signs that look like one lesion may be two lesions years apart.",
+        "Localize first, then apply the tempo, to avoid fitting the findings to a diagnosis chosen too early."
+      ],
+      "question": {
+        "question": "A 15-year-old has a left hemiparesis. On the same examination you find mild weakness of the right side of the face that, on reviewing old photographs, has been present since infancy. How should this change your localization?",
+        "options": [
+          "Place a single lesion in the right pons, because face and limbs are on opposite sides",
+          "Ignore the facial weakness, because it is old",
+          "Treat them as two lesions of different ages: the facial weakness is an old finding, and the new hemiparesis is localized on its own merits",
+          "Assume a functional disorder, because the signs do not fit one lesion"
+        ],
+        "answer": 2,
+        "explanation": "A crossed pattern places one lesion in the brainstem only if the signs appeared together. Here the facial weakness predates the hemiparesis by years, so the history splits them into two problems, and the new hemiparesis has to be localized on its own. Forcing them into one pontine lesion would send the imaging to the wrong place. Ignoring the old finding throws away information that may still matter, for example a congenital cranial nerve problem. Signs that come from two lesions of different ages are no evidence of a functional disorder."
+      }
+    },
+    {
+      "title": "The mechanism list",
+      "content": "Once you have an address and a clock, you need a list of the ways nervous tissue can fail. The categories are not mysterious, and most clinicians carry some version of them. What matters is that the list is complete enough that nothing important is forgotten, and that each category is held together with its typical tempo and pattern.\n\n- **Vascular:** sudden, maximal at onset, respecting an arterial territory.\n- **Seizure and migraine:** sudden or episodic, with recovery between events.\n- **Infection:** hours to days, often with fever and a sick child.\n- **Inflammatory and demyelinating:** days to weeks, often after an infection, sometimes multifocal.\n- **Toxic and metabolic:** hours to days, usually symmetric and diffuse, often fluctuating.\n- **Neoplastic:** weeks to months, steadily progressive, a growing address.\n- **Degenerative, genetic and metabolic:** months to years, often symmetric and respecting a system.\n- **Congenital and developmental:** present from early life, static.\n- **Traumatic:** sudden, with a history that usually announces itself.\n- **Functional:** variable, with positive signs of inconsistency (see section 5).\n\n**Discrete lesions and systems**\n\nBrazis adds a second axis that sharpens the list: whether the disease makes **discrete lesions** or attacks a **system** (Brazis 2011, pp. 4-5). Vascular events, demyelinating plaques, infections, injuries and tumours tend to cause discrete lesions, single or multiple, whose signs meet at a point. Degenerative disorders take whole arrays of neurons that share a function, and their signs respect a system rather than a place. A symmetric, length-dependent pattern, the longest nerves failing first, is the signature of a system process and almost never of a discrete lesion.\n\n**The pediatric additions**\n\nAdult lists often treat the congenital and genetic categories as rare. In child neurology they are the bread and butter: malformations, perinatal injury, inborn errors of metabolism, the muscular dystrophies, the hereditary neuropathies. A child's list is not an adult list with extra items; it is a list with a different centre of gravity.",
+      "keyPoints": [
+        "Carry a complete mechanism list, and attach to each category its usual tempo and pattern.",
+        "Discrete-lesion diseases (vascular, demyelinating, infectious, traumatic, neoplastic) give signs that meet at a point; system diseases give signs that respect a function (Brazis 2011, pp. 4-5).",
+        "A symmetric, length-dependent pattern points to a system process rather than a discrete lesion.",
+        "In children, congenital, developmental and genetic-metabolic causes move from the margin of the list to its centre."
+      ],
+      "question": {
+        "question": "A 10-year-old has had slowly worsening, symmetric weakness and numbness of the feet for two years, now reaching the lower shins, with absent ankle reflexes. Which kind of mechanism does the pattern favour?",
+        "options": [
+          "A discrete vascular lesion, because it involves the legs",
+          "A system process such as an inherited neuropathy, because the pattern is symmetric, length-dependent and slowly progressive",
+          "A tumour of the spinal cord, because both legs are involved",
+          "An infection, because it has lasted two years"
+        ],
+        "answer": 1,
+        "explanation": "A symmetric distal pattern that climbs from the toes, with lost ankle reflexes, is length-dependent: the longest nerves fail first. That is a system pattern rather than a discrete lesion, and two years of slow progression in a child points toward an inherited neuropathy. A vascular lesion would be sudden and would respect a territory, not a length gradient. A cord tumour would bring a sensory level and upper motor neuron signs rather than absent ankle jerks and glove-and-stocking numbness. Infection does not usually smoulder symmetrically for two years in a well child."
+      }
+    },
+    {
+      "title": "Where × when",
+      "figure": "where-when",
+      "content": "The figure above is a grid with levels down one side and tempos across the top. Choose a level and a tempo and it shows the mechanisms that fit that tempo, with pediatric examples for that address. It is not a diagnostic engine. It is a way of making sure that once you have committed to a where and a when, the obvious candidates and the dangerous ones are both on your list.\n\n**How to read it**\n\nTake the cerebellum. **Acute** ataxia in a young child, over hours to a day or two, brings post-infectious acute cerebellar ataxia and a toxic ingestion to the top. Stretch the same address over **weeks** and a posterior fossa tumour moves up, alongside opsoclonus-myoclonus-ataxia, which should send you looking for a neuroblastoma. Stretch it over **years** and inherited ataxias such as Friedreich ataxia and ataxia-telangiectasia appear. Nothing about the examination of a wobbly child changes between those three columns. Only the clock does, and the clock moves you from \"reassure and observe\" to \"image the posterior fossa\" to \"genetic testing\".\n\nNow take the cord. **Sudden** weakness below a level suggests trauma or an infarct. **Acute**, over hours to days: transverse myelitis, or compression from an epidural abscess or haematoma, which must be excluded first because it is treatable by decompression. **Chronic**: a syrinx, a tethered cord, hereditary spastic paraplegia. **Static**, from birth: a myelomeningocele.\n\n**Two rules the grid cannot apply for you**\n\nFirst, the examples are illustrative. A cell can hold a rare disease that the grid does not name, and a child can have a common disease that presents at an uncommon tempo. Second, the order of your list is not the order of likelihood alone. A short list should rank by likelihood **and** by the cost of missing something: the treatable emergency, such as cord compression or herpes encephalitis, is acted on before it is the most probable answer.\n\nUse the grid in reverse as well. When a disease you suspect sits in a cell that does not match your localization or your clock, that mismatch is a reason to doubt the diagnosis, or the localization.",
+      "keyPoints": [
+        "A level-by-tempo grid turns one localization into several different differentials, separated only by time.",
+        "The same cerebellar examination means post-infectious ataxia or ingestion over a day, a tumour or opsoclonus-myoclonus over weeks, and an inherited ataxia over years.",
+        "Rank the short list by likelihood and by the cost of missing a treatable emergency.",
+        "A suspected disease that sits in a cell that does not match your where or your when is a reason to doubt one of them."
+      ],
+      "question": {
+        "question": "A 4-year-old has become progressively unsteady over five weeks, with morning vomiting. The examination shows truncal ataxia and nothing else. Using where and when, what is the most important next step?",
+        "options": [
+          "Reassure the family that post-infectious ataxia resolves on its own",
+          "Send a toxicology screen and wait",
+          "Arrange urgent brain imaging, because a cerebellar process evolving over weeks with morning vomiting places a posterior fossa tumour at the top of the list",
+          "Order nerve conduction studies to look for a neuropathy"
+        ],
+        "answer": 2,
+        "explanation": "The where is the cerebellum, midline, because the ataxia is truncal. The when is weeks, not a day or two, and morning vomiting suggests raised pressure. A cerebellar address with a subacute tempo puts a posterior fossa tumour at the top of the list, and imaging is the step that answers the question. Post-infectious ataxia is an acute illness that improves rather than worsens over weeks. Toxicology suits an acute ataxia, not a steadily progressive one. Nerve studies address the peripheral nervous system, which does not explain isolated truncal ataxia with vomiting."
+      }
+    },
+    {
+      "title": "The child's clock",
+      "content": "In an adult the clock has two hands: how fast did it come, and is it getting worse? In a child there is a third hand, development itself, and it changes the meaning of the other two.\n\n**Four tempos that belong to childhood**\n\n- **Static:** present from early life and not worsening. Cerebral palsy is the model, defined as a group of permanent disorders of movement and posture attributed to non-progressive disturbances in the developing fetal or infant brain ([Rosenbaum 2007](https://pubmed.ncbi.nlm.nih.gov/17370477/)). The lesion is fixed. The child is not.\n- **Progressive:** the deficit itself is worsening.\n- **Regressive:** skills that were present are lost. Regression is never cerebral palsy, and it moves the differential toward neurodegenerative and genetic-metabolic disease, epileptic encephalopathy and acquired encephalitis.\n- **Episodic:** attacks with recovery between them, which points to seizures, migraine, channelopathies, syncope and intermittent metabolic decompensation.\n\n**A static lesion can look progressive**\n\nThe hard part is that a fixed lesion unfolds as the brain matures. A child with spastic cerebral palsy may present as a floppy infant before spasticity develops (DeMyer, p. 273). A perinatal stroke may be invisible at birth and appear months later as early hand preference: preferring one hand before 12 months is abnormal and points to weakness of the other hand ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/home_exam.html)). The parents see something new; the lesion is old. The question that separates them is not \"is there something new?\" but \"is the child losing ground, or failing to gain it?\"\n\n**Age of onset as a filter**\n\nThe age at which something first appears is a powerful filter on the list. A floppy newborn, a toddler who stops walking, and an adolescent with a new tremor each draw from different populations of disease even when the address is the same. The where-by-when grid becomes a three-way table: level, tempo, and the age the clock started.\n\nThe decision this section protects is one of the most consequential in child neurology: a child labelled with a static condition who is in fact regressing.",
+      "keyPoints": [
+        "In children, tempo includes development: static, progressive, regressive or episodic.",
+        "Cerebral palsy is attributed to a non-progressive disturbance of the developing brain; loss of acquired skills is never cerebral palsy (Rosenbaum 2007).",
+        "A static lesion can look new as development unfolds: a floppy infant who later becomes spastic, a hemiparesis revealed by early hand preference before 12 months (DeMyer, p. 273; Utah).",
+        "Ask whether the child is losing ground or failing to gain it; age of onset is a strong filter on the list."
+      ],
+      "question": {
+        "question": "A 3-year-old with a diagnosis of spastic diplegic cerebral palsy, who walked with a walker at 2, can no longer stand with support and has stopped using two-word phrases. What is the most appropriate response?",
+        "options": [
+          "Reconsider the diagnosis, because loss of acquired motor and language skills is regression, which cerebral palsy by definition does not cause",
+          "Increase physiotherapy, because cerebral palsy often worsens with growth",
+          "Reassure the family that language often plateaus in cerebral palsy",
+          "Wait six months and reassess, because a static lesion can look progressive"
+        ],
+        "answer": 0,
+        "explanation": "Cerebral palsy is attributed to a non-progressive disturbance of the developing brain. A static lesion can unfold as the child matures, but it does not take away skills already gained, and this child has lost both standing and speech. That is regression, and it calls for re-examining the diagnosis with neurodegenerative, genetic-metabolic and epileptic causes in mind. Musculoskeletal problems can progress with growth, but they do not remove two-word phrases. Reassurance or waiting mistakes losing ground for failing to gain it, and some of the causes on the regression list are treatable."
+      }
+    },
+    {
+      "title": "Functional neurological disorder: a positive diagnosis",
+      "content": "There is one more address on the list, and it is the one most often reached by default. Functional neurological disorder is a disorder of nervous system function rather than structure, and the old habit was to diagnose it only after every test had come back normal. That habit is wrong in principle and harmful in practice. Functional disorder is diagnosed the same way as everything else in this curriculum: from **positive findings** at the bedside.\n\n**What the signs show**\n\nA systematic review of bedside signs found 14 with controlled data, 7 motor, 5 sensory and 2 gait. Their sensitivity was low, 8 to 100%, but their specificity was high, 92 to 100% ([Daum 2014](https://pubmed.ncbi.nlm.nih.gov/23467417/)). The evidence was class III. The lesson is in the shape of those numbers: a positive sign is strong evidence, and an absent one is weak evidence. You cannot rule functional disorder out by failing to find a sign.\n\nThe signs share a logic. Each shows that a function said to be lost is present when attention is directed elsewhere, or that a deficit does not follow the anatomy.\n\n- **Hoover sign and the abductor sign:** hip extension or abduction that is weak on command returns automatically when the other leg is tested. In one study the abductor sign classified all 33 patients correctly, while Hoover sign was non-diagnostic in some patients ([Sonoo 2004](https://pubmed.ncbi.nlm.nih.gov/14707320/)).\n- **Give-way weakness and co-contraction:** full power for a moment, then collapse; agonist and antagonist pulling at once.\n- **Sensory signs that ignore anatomy:** loss that splits exactly at the midline, vibration that differs across the two halves of one bone, a field of vision that stays the same width at every distance (tunnel rather than funnel).\n- **Gait:** wild sways that rarely end in a fall, buckling knees without collapse, improvement with distraction.\n\n**The limits**\n\nPositive signs do not exclude structural disease. Patients, including children, can have both, and the old argument between parsimony and multiplicity applies here as everywhere ([Hilliard 2004](https://pubmed.ncbi.nlm.nih.gov/14762188/)). The decision is to make the diagnosis when the signs are present, explain it as real and treatable, and keep examining.",
+      "keyPoints": [
+        "Functional neurological disorder is a positive diagnosis made from bedside signs, not a diagnosis of exclusion.",
+        "Validated positive signs have low sensitivity (8-100%) but high specificity (92-100%): a present sign is strong evidence, an absent sign is weak (Daum 2014).",
+        "Hoover and abductor signs show automatic power returning when attention is elsewhere; the abductor sign classified all 33 patients in its study correctly (Sonoo 2004).",
+        "Functional and structural disease can coexist; making the diagnosis does not end the examination (Hilliard 2004)."
+      ],
+      "question": {
+        "question": "A 14-year-old has a weak left leg. Hip extension on that side is absent on command but returns strongly when she flexes the right hip against resistance, and the left leg moves into abduction when she abducts the right. Reflexes and plantar responses are normal. Her MRI is booked for next week. What should you do now?",
+        "options": [
+          "Wait for the MRI before discussing any diagnosis, because functional disorder can only be diagnosed when tests are normal",
+          "Make a positive diagnosis of functional weakness from these signs, explain it as real and treatable, and keep the planned investigations proportionate",
+          "Tell the family the weakness is not real, because power returns",
+          "Order nerve conduction studies, because the weakness may be peripheral"
+        ],
+        "answer": 1,
+        "explanation": "A positive Hoover sign and a positive abductor sign are specific bedside evidence of functional weakness, and with normal reflexes and plantars there is no sign of a structural lesion. The diagnosis can and should be made now, from the examination, and explained as a genuine, treatable disorder of how the nervous system works. Waiting for normal tests treats it as a diagnosis of exclusion, which delays treatment and implies it is a leftover. Telling a family the weakness is not real is inaccurate and damaging. Nothing points to a peripheral lesion. Any planned investigation should be proportionate, remembering that functional and structural disease can coexist."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Two children have identical examinations: weak legs, a sensory level at the umbilicus and urinary retention. One developed it over 20 minutes during a trampoline accident, the other over two days after a cold. What does the difference tell you?",
+      "options": [
+        "Nothing, because the localization is the same",
+        "That one of them must have a functional disorder",
+        "That the cause differs: trauma or infarction for the sudden onset, inflammation such as transverse myelitis or a compressing abscess for the one that evolved over days",
+        "That the sudden case needs no imaging"
+      ],
+      "answer": 2,
+      "explanation": "The examination places both lesions in the cord; the time course chooses the cause. Minutes point to an injury or a vascular event, days point to inflammation, infection or a compressing collection. The same address with different clocks is different diseases, which is the whole argument of this module. Identical examinations say nothing about which child has a functional disorder, and a sensory level with retention is a structural pattern. Both children need urgent imaging, the sudden one to exclude a treatable compression or fracture."
+    },
+    {
+      "question": "Which statement about the history and the examination best matches Brazis's account?",
+      "options": [
+        "The history localizes and the examination gives the cause",
+        "The examination localizes, and the history's time course points to the cause; the history also matters when deficits began at different times",
+        "The history is unimportant once the examination is complete",
+        "The examination is unreliable in children, so the history must do both jobs"
+      ],
+      "answer": 1,
+      "explanation": "Brazis states that the examination is far more important than the history for localizing a lesion, while the temporal evolution of the deficits is what defines the cause. He adds that the history matters for localization too, because the examination can show the end result of lesions that arose at different times. Reversing the roles gets the method backwards. The history is never unimportant, since it carries the clock. The examination of a child is different, not unreliable."
+    },
+    {
+      "question": "A 2-year-old's parents report she has preferred her right hand since 7 months. She has no other complaints and has never lost skills. What is the most likely tempo, and what does it imply?",
+      "options": [
+        "Regressive, so a neurodegenerative disease is likely",
+        "Normal, because handedness is established by 7 months",
+        "Episodic, so an EEG is the key test",
+        "Static: hand preference before 12 months points to weakness of the left hand from an early lesion such as a perinatal stroke"
+      ],
+      "answer": 3,
+      "explanation": "Hand preference before 12 months is abnormal and points to weakness of the other hand. With no loss of skills and a deficit present from infancy, the tempo is static, which fits an early fixed lesion such as a perinatal arterial stroke. Nothing has been lost, so this is not regression. Handedness does not develop until after 12 months, so preference at 7 months is not normal. There is no history of attacks, so the episodic column does not apply."
+    },
+    {
+      "question": "Why do validated positive signs of functional weakness make a strong case when present but a weak case when absent?",
+      "options": [
+        "Because they have high specificity but low sensitivity",
+        "Because they have high sensitivity but low specificity",
+        "Because they are only valid in adults",
+        "Because they have never been studied"
+      ],
+      "answer": 0,
+      "explanation": "In a systematic review, the validated positive signs had specificity of 92 to 100% but sensitivity of only 8 to 100%. High specificity means a present sign is rarely found in structural disease, so it is strong evidence. Low sensitivity means many patients with functional disorder will not show a particular sign, so its absence proves little. The reverse pattern would make a positive sign weak evidence. The signs have been studied, although the evidence is class III, and the principle of positive diagnosis applies in children too."
+    },
+    {
+      "question": "A short differential for an acute cord syndrome lists transverse myelitis first and epidural abscess fourth, by likelihood. What should determine which is investigated first?",
+      "options": [
+        "Likelihood alone, so investigate transverse myelitis first",
+        "Cost alone, so do the cheapest test first",
+        "Both likelihood and the cost of missing it: a compressing abscess is treatable by urgent decompression, so it must be excluded at once",
+        "The family's preference"
+      ],
+      "answer": 2,
+      "explanation": "A short list is ranked by likelihood and by the consequences of missing a diagnosis. An epidural abscess compressing the cord is a surgical emergency in which delay costs function, so urgent spinal imaging to exclude it comes first even if inflammation is more probable. The same MRI usually answers both questions. Ranking by likelihood alone risks missing the treatable emergency, and ranking by test cost ignores the stakes."
+    },
+    {
+      "question": "A disease you suspect is usually chronic and progressive, but your patient's deficit appeared over hours, and your localization does not match where that disease normally lives. What should you conclude?",
+      "options": [
+        "That the disease is presenting atypically, so the diagnosis stands",
+        "That the mismatch is a reason to doubt the diagnosis, the localization or the timeline, and to re-examine",
+        "That tempo is unreliable in children",
+        "That the patient has a functional disorder"
+      ],
+      "answer": 1,
+      "explanation": "Using the where-by-when grid in reverse, a suspected disease that sits in a cell matching neither your localization nor your tempo is a warning. Something is wrong: the diagnosis, the localization or the history of the time course. Re-examining and re-taking the history is the right response. Calling it an atypical presentation is sometimes correct, but it should be a conclusion reached after doubting, not a way of keeping a favoured diagnosis. Tempo is a strong clue in children. A mismatch is no evidence of a functional disorder."
+    }
+  ],
+  "resources": [
+    {
+      "label": "PediNeuroLogic Exam (University of Utah)",
+      "url": "https://neurologicexam.med.utah.edu/pediatric/html/home_exam.html",
+      "note": "The normal examination at each age from newborn to two and a half years, the baseline against which regression is judged. Videos licensed CC BY-NC-SA."
+    },
+    {
+      "label": "Functional Neurological Disorder: a patient's guide (neurosymptoms.org)",
+      "url": "https://neurosymptoms.org/en/",
+      "note": "Free explanations of functional disorder for patients and families, useful when you explain a positive diagnosis."
+    },
+    {
+      "label": "Daum 2014: positive signs of functional disorder",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23467417/",
+      "note": "Systematic review of the bedside signs and their sensitivity and specificity."
+    }
+  ],
+  "signOff": "The resident presents three new consults to a faculty reader in where, when, what form, stating the localization, the tempo and a ranked differential before any test results are known.",
+  "sources": [
+    "brazis2011",
+    "demyer",
+    "rosenbaum2007",
+    "utah",
+    "daum2014",
+    "sonoo2004",
+    "hilliard2004"
+  ]
+}

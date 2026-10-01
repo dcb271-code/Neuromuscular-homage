@@ -6,7 +6,7 @@
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import type { EegFigure, EegModule } from '@/src/eeg/types';
-import { FigureCard } from './Figure';
+import { FigureCard } from '@/components/curriculum/Figure';
 
 export function GalleryPage({ figures, modules }: { figures: EegFigure[]; modules: EegModule[] }) {
   // Which module/section uses each figure.

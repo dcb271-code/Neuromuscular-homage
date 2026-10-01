@@ -1,14 +1,14 @@
 import React from 'react';
 
-// Renders the curriculum's markdown subset (see docs/eeg/design-spec.md, rule 7).
+// Renders the curricula's markdown subset (see docs/eeg/design-spec.md, rule 7).
 // Ported from the Neurogenetics Curriculum so content is interchangeable between the sites.
 
-function renderInline(text: string, accent: string): React.ReactNode[] {
+function renderInline(text: string, accent: string, basePath = '/eeg'): React.ReactNode[] {
   const parts = text.split(/(\*\*[^*]+\*\*|\*[^*\n]+\*|\[\[[^\]]+\]\]|\[[^\[\]]+\]\([^)\s]+\))/g);
   return parts.map((part, i) => {
     const internal = part.match(/^\[\[([^|]+)\|([^\]]+)\]\]$/);
     if (internal) {
-      return <a key={i} href={`/eeg/${internal[1]}/`} className="font-medium underline-offset-2 hover:underline" style={{ color: accent }}>{internal[2]}</a>;
+      return <a key={i} href={`${basePath}/${internal[1]}/`} className="font-medium underline-offset-2 hover:underline" style={{ color: accent }}>{internal[2]}</a>;
     }
     const ext = part.match(/^\[([^\[\]]+)\]\(([^)\s]+)\)$/);
     if (ext) {
@@ -24,7 +24,7 @@ function renderInline(text: string, accent: string): React.ReactNode[] {
 
 const P = 'mb-4 leading-[1.8] last:mb-0';
 
-export function FormattedContent({ content, accent = '#2563eb', className = '' }: { content: string; accent?: string; className?: string }) {
+export function FormattedContent({ content, accent = '#2563eb', className = '', basePath = '/eeg' }: { content: string; accent?: string; className?: string; basePath?: string }) {
   const blocks = content.split(/\n\n+/);
   return (
     <div className={`text-[15px] text-slate-600 ${className}`}>
@@ -43,13 +43,13 @@ export function FormattedContent({ content, accent = '#2563eb', className = '' }
               <table className="w-full text-[13px]">
                 <thead>
                   <tr className="bg-slate-50 border-b border-slate-200">
-                    {head.map((c, ci) => <th key={ci} className="text-left px-3 py-2 font-semibold text-[11px] uppercase tracking-wide text-slate-500">{renderInline(c, accent)}</th>)}
+                    {head.map((c, ci) => <th key={ci} className="text-left px-3 py-2 font-semibold text-[11px] uppercase tracking-wide text-slate-500">{renderInline(c, accent, basePath)}</th>)}
                   </tr>
                 </thead>
                 <tbody>
                   {rows.map((r, ri) => (
                     <tr key={ri} className="border-b border-slate-100 last:border-0 odd:bg-white even:bg-slate-50/50 align-top">
-                      {r.map((c, ci) => <td key={ci} className={`px-3 py-2 leading-snug ${ci === 0 ? 'font-medium text-slate-800' : ''}`}>{renderInline(c, accent)}</td>)}
+                      {r.map((c, ci) => <td key={ci} className={`px-3 py-2 leading-snug ${ci === 0 ? 'font-medium text-slate-800' : ''}`}>{renderInline(c, accent, basePath)}</td>)}
                     </tr>
                   ))}
                 </tbody>
@@ -72,9 +72,9 @@ export function FormattedContent({ content, accent = '#2563eb', className = '' }
           const preamble = lines.slice(0, firstBullet).join(' ');
           return (
             <div key={bi} className="mb-4">
-              {preamble && <p className="mb-2 leading-[1.8]">{renderInline(preamble, accent)}</p>}
+              {preamble && <p className="mb-2 leading-[1.8]">{renderInline(preamble, accent, basePath)}</p>}
               <ul className="list-disc list-outside ml-5 space-y-1.5">
-                {lines.slice(firstBullet).map((l, li) => <li key={li} className="leading-[1.7]">{renderInline(l.replace(/^\s*-\s+/, ''), accent)}</li>)}
+                {lines.slice(firstBullet).map((l, li) => <li key={li} className="leading-[1.7]">{renderInline(l.replace(/^\s*-\s+/, ''), accent, basePath)}</li>)}
               </ul>
             </div>
           );
@@ -83,14 +83,14 @@ export function FormattedContent({ content, accent = '#2563eb', className = '' }
           const preamble = lines.slice(0, firstNum).join(' ');
           return (
             <div key={bi} className="mb-4">
-              {preamble && <p className="mb-2 leading-[1.8]">{renderInline(preamble, accent)}</p>}
+              {preamble && <p className="mb-2 leading-[1.8]">{renderInline(preamble, accent, basePath)}</p>}
               <ol className="list-decimal list-outside ml-5 space-y-1.5">
-                {lines.slice(firstNum).map((l, li) => <li key={li} className="leading-[1.7]">{renderInline(l.replace(/^\s*\d+\.\s+/, ''), accent)}</li>)}
+                {lines.slice(firstNum).map((l, li) => <li key={li} className="leading-[1.7]">{renderInline(l.replace(/^\s*\d+\.\s+/, ''), accent, basePath)}</li>)}
               </ol>
             </div>
           );
         }
-        return <p key={bi} className={P}>{renderInline(lines.join(' '), accent)}</p>;
+        return <p key={bi} className={P}>{renderInline(lines.join(' '), accent, basePath)}</p>;
       })}
     </div>
   );

@@ -52,16 +52,10 @@ export const SECTIONS: Section[] = [
     short: 'Localization',
     tagline: 'From findings to lesion',
     blurb:
-      'The neurological exam as a localization tool: what each finding means, how findings combine, and the classic syndromes at every level from cortex to muscle.',
+      'Where before what: the doctrine this site is named for. Twelve interactive modules on localization and the neurologic exam in children, from the first fork between upper and lower motor neuron to building the differential.',
     color: '#0d9488',
-    status: 'soon',
-    planned: [
-      'The screening exam, step by step',
-      'Upper versus lower motor neuron signs',
-      'Brainstem syndromes and cranial nerves',
-      'Spinal cord levels and syndromes',
-      'Root, plexus, nerve, junction, muscle',
-    ],
+    status: 'live',
+    planned: [],
   },
   {
     slug: 'eeg',
