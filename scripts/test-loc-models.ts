@@ -180,7 +180,7 @@ t('only naming lost → anomic', classify({ fluent: true, comprehends: true, rep
 t('everything lost → global', classify({ fluent: false, comprehends: false, repeats: false, names: false }).id === 'global');
 
 // ── Vertigo
-t('one central sign outweighs all peripheral signs', vestVerdict(['one-direction', 'fixation', 'hearing', 'neighbours']).lean === 'central');
+t('one central sign outweighs all peripheral signs', vestVerdict(['one-direction', 'fixation', 'hearing', 'neighbors']).lean === 'central');
 t('fixation-suppressed unidirectional nystagmus → peripheral', vestVerdict(['one-direction', 'fixation']).lean === 'peripheral');
 t('pure vertical nystagmus → central', vestVerdict(['vertical']).lean === 'central');
 t('every vestibular feature cites a page', VEST_FEATURES.every(f => /p{1,2}\. \d/.test(f.why)));

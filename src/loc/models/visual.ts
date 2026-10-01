@@ -4,10 +4,10 @@
 //
 //   Light from the LEFT visual field lands on the RIGHT half of each retina.
 //   Light from the UPPER field lands on the LOWER retina.
-//   Nasal retinal fibres cross at the chiasm; temporal fibres stay on their own side.
+//   Nasal retinal fibers cross at the chiasm; temporal fibers stay on their own side.
 //   So the right optic tract, radiation and cortex carry the LEFT field of BOTH eyes.
-//   Behind the lateral geniculate: lower retina (upper field) fibres loop through the temporal
-//   lobe (Meyer's loop); upper retina (lower field) fibres run in the parietal radiation.
+//   Behind the lateral geniculate: lower retina (upper field) fibers loop through the temporal
+//   lobe (Meyer's loop); upper retina (lower field) fibers run in the parietal radiation.
 // (Fisch 2012, Drawing 22-9; Pearl 2014, pp. 27-28.)
 
 export type Eye = 'L' | 'R';
@@ -54,7 +54,7 @@ export function isLost(q: Quadrant, site: LesionSite): boolean {
   switch (site) {
     case 'optic-nerve-L': return q.eye === 'L';
     case 'optic-nerve-R': return q.eye === 'R';
-    case 'chiasm': return r.nasal;                      // crossing nasal fibres = temporal fields
+    case 'chiasm': return r.nasal;                      // crossing nasal fibers = temporal fields
     case 'tract-L': case 'occipital-L': return hemi === 'L';
     case 'tract-R': case 'occipital-R': return hemi === 'R';
     case 'meyer-L': return hemi === 'L' && r.lower;      // lower retina = upper field

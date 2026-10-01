@@ -32,7 +32,7 @@ export const STRUCTURES: Structure[] = [
   }, note: 'In an infant these reflexes are normal and should fade on schedule, so the same finding means something different depending on the age of the child.' },
   { id: 'occipital', name: 'Occipital cortex', cells: {
     subtract: { sign: 'A hemianopia on the opposite side.', cite: 'Pearl 2014, pp. 27-28' },
-    irritate: { sign: 'Simple visual phenomena: flashes, zigzags, coloured lights.', cite: 'Pearl 2014, p. 30' },
+    irritate: { sign: 'Simple visual phenomena: flashes, zigzags, colored lights.', cite: 'Pearl 2014, p. 30' },
     fill: { sign: 'With both occipital lobes lost, a patient may deny being blind and describe things that are not there.', cite: 'Pearl 2014, p. 29' },
   } },
   { id: 'temporal', name: 'Medial temporal lobe', cells: {

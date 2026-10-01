@@ -46,7 +46,7 @@ export function brainstemLesion(level: BsLevel, zone: Zone, side: BsSide = 'L'):
     findings.push({ text: 'Weakness of the arm and leg (upper motor neuron)', side: 'opposite', structure: 'Motor pathway (corticospinal tract)' });
     findings.push({ text: 'Loss of vibration and position sense in arm and leg', side: 'opposite', structure: 'Medial lemniscus' });
     findings.push({ text: 'Internuclear ophthalmoplegia: the eye on the lesion side fails to adduct on gaze to the other side', side: 'same', structure: 'Medial longitudinal fasciculus' });
-    if (level === 'midbrain') notes.push('The fourth nerve also has a medial midbrain nucleus, but its fibres cross before they exit, so a nuclear fourth-nerve lesion weakens the opposite superior oblique: one of the rule\'s exceptions.');
+    if (level === 'midbrain') notes.push('The fourth nerve also has a medial midbrain nucleus, but its fibers cross before they exit, so a nuclear fourth-nerve lesion weakens the opposite superior oblique: one of the rule\'s exceptions.');
   } else {
     findings.push({ text: 'Clumsy, overshooting arm and leg (ataxia)', side: 'same', structure: 'Spinocerebellar pathways' });
     findings.push({ text: 'Loss of pain and temperature in arm, leg and trunk', side: 'opposite', structure: 'Spinothalamic tract' });
@@ -64,7 +64,7 @@ export function brainstemLesion(level: BsLevel, zone: Zone, side: BsSide = 'L'):
   if (level === 'pons' && zone === 'medial') { syndrome = 'Medial pontine syndrome: sixth-nerve palsy with opposite hemiparesis'; notes.push('The facial fascicle loops around the sixth nucleus before it exits, so a ventral pontine lesion often weakens the face too (Millard-Gubler syndrome): the rule calls 7 lateral, the anatomy lets it stray medial.'); }
   if (level === 'pons' && zone === 'lateral') syndrome = 'Lateral pontine syndrome (anterior inferior cerebellar artery territory)';
   if (level === 'medulla' && zone === 'medial') syndrome = 'Medial medullary syndrome (Dejerine): tongue weak on the lesion side, opposite hemiparesis and loss of position sense';
-  if (level === 'medulla' && zone === 'lateral') { syndrome = 'Lateral medullary syndrome (Wallenberg)'; notes.push('The rule places cranial nerve 11 in the lateral medulla too, but its fibres are rarely affected in a lateral medullary stroke, so it is left out here.'); }
+  if (level === 'medulla' && zone === 'lateral') { syndrome = 'Lateral medullary syndrome (Wallenberg)'; notes.push('The rule places cranial nerve 11 in the lateral medulla too, but its fibers are rarely affected in a lateral medullary stroke, so it is left out here.'); }
 
   return { findings, syndrome, notes, cranialNerves: cns };
 }

@@ -1,6 +1,6 @@
 // Vertigo: peripheral or central? Two features do most of the work (Brazis 2011, p. 265):
 // fixation suppresses peripheral but not central nystagmus, and pure vertical or pure torsional
-// nystagmus is central. Direction-changing nystagmus and brainstem neighbours point central;
+// nystagmus is central. Direction-changing nystagmus and brainstem neighbors point central;
 // hearing loss and tinnitus point to the ear or nerve (Pearl 2014, pp. 119-121).
 // A single central feature outweighs several peripheral ones: missing a cerebellar stroke costs
 // more than over-investigating labyrinthitis (Pearl 2014, pp. 121-122).
@@ -15,12 +15,12 @@ export const VEST_FEATURES: VestFeature[] = [
   { id: 'changes', label: 'Nystagmus changes direction with gaze', lean: 'central', weight: 2, why: 'Direction-changing nystagmus is central, and is how a cerebellar stroke betrays itself (Pearl 2014, pp. 121-122).' },
   { id: 'vertical', label: 'Pure vertical or pure torsional nystagmus', lean: 'central', weight: 2, why: 'Pure vertical or torsional nystagmus is central (Brazis 2011, p. 265).' },
   { id: 'no-fixation', label: 'Fixation does not suppress the nystagmus', lean: 'central', weight: 2, why: 'Central nystagmus persists despite fixation (Brazis 2011, p. 265).' },
-  { id: 'neighbours', label: 'Double vision, slurred speech, facial numbness or limb ataxia', lean: 'central', weight: 3, why: 'Brainstem or cerebellar neighbours: everything is the company you keep (Pearl 2014, p. 121).' },
+  { id: 'neighbors', label: 'Double vision, slurred speech, facial numbness or limb ataxia', lean: 'central', weight: 3, why: 'Brainstem or cerebellar neighbors: everything is the company you keep (Pearl 2014, p. 121).' },
 ];
 
 export function vestVerdict(ids: string[]) {
   const on = VEST_FEATURES.filter(f => ids.includes(f.id));
-  if (!on.length) return { lean: null, text: 'Choose what you see. Look at the eyes first, then for neighbours.', central: 0, peripheral: 0 };
+  if (!on.length) return { lean: null, text: 'Choose what you see. Look at the eyes first, then for neighbors.', central: 0, peripheral: 0 };
   const central = on.filter(f => f.lean === 'central').reduce((a, f) => a + f.weight, 0);
   const peripheral = on.filter(f => f.lean === 'peripheral').reduce((a, f) => a + f.weight, 0);
   if (central > 0) return { lean: 'central' as const, central, peripheral, text: 'At least one central feature is present. Treat this as brainstem or cerebellum until proved otherwise, however many peripheral features sit beside it.' };

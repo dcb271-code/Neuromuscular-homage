@@ -27,9 +27,11 @@ const sentencesOf = text => text
   .replace(/\((?:[A-Z][^()]{0,60}\d{4}[^()]*|DeMyer[^()]*|Utah[^()]*)\)/g, '')
   .split(/(?<=[.!?])\s+(?=[A-Z"*>])/).map(s => s.replace(/\*\*/g, '').trim()).filter(s => s && !/^[-|>]/.test(s));
 const words = s => s.split(/\s+/).filter(Boolean).length;
+// Sources named as the subject of prose (outside citation parentheses and link text).
+const NAMED = /\b(Brazis|DeMyer|Pearl|Emsellem|Morris|Fisch|Arslan|Gill|Peredo|Hannibal|Daum|Sonoo|Borusiak|Benbadis|Richards|Gates|Volpe|Rosenbaum|Zafeiriou|Hilliard|Larsen|Stensaas)\b/;
 
 function scoreText(text) {
-  const out = { words: 0, sentences: 0, short: [], antithesis: [], colon: [], stock: [], zinger: [], semicolon: 0 };
+  const out = { words: 0, sentences: 0, short: [], antithesis: [], colon: [], stock: [], zinger: [], semicolon: 0, long: [], named: [] };
   for (const para of text.split(/\n\n+/)) {
     const p = para.trim();
     if (!p || /^\*\*[^*]+\*\*$/.test(p) || p.startsWith('|')) continue;
@@ -37,6 +39,8 @@ function scoreText(text) {
     ss.forEach((s, i) => {
       const w = words(s); out.words += w; out.sentences++;
       if (w <= 7 && !/^(Use the figure|Try it)/.test(s)) out.short.push(s);
+      if (w > 38) out.long.push(s);
+      if (NAMED.test(s)) out.named.push(s);
       if (ANTITHESIS.some(r => r.test(s))) out.antithesis.push(s);
       const body = s.replace(/^\*\*[^*]+\*\*\s*/, '').replace(/^[A-Z][a-z ]{0,25}:/, '');
       if (/[a-z)]: [a-z]/.test(body) && !/\b(e\.g|i\.e)\b/.test(body)) out.colon.push(s);
@@ -49,17 +53,17 @@ function scoreText(text) {
 }
 
 const files = readdirSync(dir).filter(f => f.endsWith('.json') && (!filter || f.startsWith(filter))).sort();
-let tot = { words: 0, short: 0, antithesis: 0, colon: 0, stock: 0, zinger: 0, semicolon: 0, sentences: 0 };
-console.log('module                       words  short%  anti  colon  stock  zinger  semi/1k');
+let tot = { words: 0, short: 0, antithesis: 0, colon: 0, stock: 0, zinger: 0, semicolon: 0, sentences: 0, long: 0, named: 0 };
+console.log('module                       words  short%  anti  colon  stock  zinger  semi/1k  long  named  avg');
 for (const f of files) {
   const m = JSON.parse(readFileSync(dir + f, 'utf8'));
   const texts = [m.why, m.description, m.opener?.parable, m.opener?.history, ...m.sections.map(s => s.content)].filter(Boolean);
   const r = scoreText(texts.join('\n\n'));
   for (const k of Object.keys(tot)) tot[k] += Array.isArray(r[k]) ? r[k].length : r[k];
   const pct = r.sentences ? Math.round(100 * r.short.length / r.sentences) : 0;
-  console.log(`${f.replace('.json', '').padEnd(28)} ${String(r.words).padStart(5)}  ${String(pct).padStart(5)}%  ${String(r.antithesis.length).padStart(4)}  ${String(r.colon.length).padStart(5)}  ${String(r.stock.length).padStart(5)}  ${String(r.zinger.length).padStart(6)}  ${(1000 * r.semicolon / Math.max(1, r.words)).toFixed(1).padStart(7)}`);
-  if (verbose) for (const k of ['stock', 'antithesis', 'zinger', 'short', 'colon']) for (const s of r[k]) console.log(`    [${k}] ${s}`);
+  console.log(`${f.replace('.json', '').padEnd(28)} ${String(r.words).padStart(5)}  ${String(pct).padStart(5)}%  ${String(r.antithesis.length).padStart(4)}  ${String(r.colon.length).padStart(5)}  ${String(r.stock.length).padStart(5)}  ${String(r.zinger.length).padStart(6)}  ${(1000 * r.semicolon / Math.max(1, r.words)).toFixed(1).padStart(7)}  ${String(r.long.length).padStart(4)}  ${String(r.named.length).padStart(5)}  ${(r.words / Math.max(1, r.sentences)).toFixed(1).padStart(4)}`);
+  if (verbose) for (const k of ['named', 'long', 'stock', 'antithesis', 'zinger', 'short', 'colon']) for (const s of r[k]) console.log(`    [${k}] ${s}`);
 }
 const pct = Math.round(100 * tot.short / Math.max(1, tot.sentences));
-console.log(`${'TOTAL'.padEnd(28)} ${String(tot.words).padStart(5)}  ${String(pct).padStart(5)}%  ${String(tot.antithesis).padStart(4)}  ${String(tot.colon).padStart(5)}  ${String(tot.stock).padStart(5)}  ${String(tot.zinger).padStart(6)}  ${(1000 * tot.semicolon / tot.words).toFixed(1).padStart(7)}`);
-console.log('\nTargets per module: short% under 8, antithesis 2 or fewer, colon reveals 6 or fewer, stock 0, zingers 3 or fewer, semicolons under 4 per 1000 words.');
+console.log(`${'TOTAL'.padEnd(28)} ${String(tot.words).padStart(5)}  ${String(pct).padStart(5)}%  ${String(tot.antithesis).padStart(4)}  ${String(tot.colon).padStart(5)}  ${String(tot.stock).padStart(5)}  ${String(tot.zinger).padStart(6)}  ${(1000 * tot.semicolon / tot.words).toFixed(1).padStart(7)}  ${String(tot.long).padStart(4)}  ${String(tot.named).padStart(5)}  ${(tot.words / tot.sentences).toFixed(1).padStart(4)}`);
+console.log('\nTargets per module: short% under 8, antithesis 2 or fewer, colon reveals 6 or fewer, stock 0, zingers 3 or fewer, semicolons under 4 per 1000 words, sentences over 38 words 3 or fewer, sources named in prose 0 (historical figures excepted), average sentence 22 words or fewer.');

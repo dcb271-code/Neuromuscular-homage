@@ -8,6 +8,12 @@ Write the way a good science writer explains a hard idea to a curious, intellige
 
 Professional means the facts carry the piece. Every clinical claim keeps its citation, and no story, quotation or historical detail is invented. Narrative non-fiction gets into trouble exactly when a writer improves a quote or a scene; we never do. Hypothetical patients are presented as hypothetical ("Picture a...", "Suppose a...", "A typical story runs like this..."), and real history comes from a cited page.
 
+## Readability, sources and spelling
+
+- **Easy to follow comes first.** Each sentence should make sense on one reading. Prefer one idea per sentence, keep most sentences under about 25 words, and break up any sentence over about 38. Metaphors must clarify; if a reader has to decode one ("a commandment that politeness makes easy to break"), say the plain thing instead.
+- **Don't name the books in the prose.** Write the claim itself and let the parenthetical citation carry the source: "A child who is nervous will often give a false negative on strength testing (DeMyer, p. 252)", not "DeMyer adds that...". Historical figures (Broca, Babinski, Bayes) are named as part of history, not as sources. A short quoted phrase keeps its citation in parentheses.
+- **American spelling** throughout: tumor, fiber, center, gray, behavior, hemorrhage, edema, ischemia, maneuver, recognize, pediatric. Code identifiers and file names are never changed for spelling.
+
 ## Habits to remove
 
 These patterns make text read as machine-written. `node scripts/style-loc.mjs <module> -v` counts most of them.

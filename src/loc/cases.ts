@@ -23,7 +23,7 @@ export const CASES: LocCase[] = [
     "id": "gbs",
     "title": "Guillain-Barré syndrome",
     "teaser": "A 6-year-old who has stopped walking",
-    "history": "A 6-year-old boy is brought in because he will not walk. Two weeks ago he had a febrile illness with diarrhoea that has since settled. Four days ago he complained that his legs hurt and his feet felt \"fizzy\", and since then he has stumbled a little more each day, needing help on the stairs yesterday and unable to stand this morning. He says his hands feel funny too. His bladder and bowels have been working normally, and he is alert and chatty, though clearly frightened. There has been no headache, vomiting or rash, and nobody at home takes regular medicines.",
+    "history": "A 6-year-old boy is brought in because he will not walk. Two weeks ago he had a febrile illness with diarrhea that has since settled. Four days ago he complained that his legs hurt and his feet felt \"fizzy\", and since then he has stumbled a little more each day, needing help on the stairs yesterday and unable to stand this morning. He says his hands feel funny too. His bladder and bowels have been working normally, and he is alert and chatty, though clearly frightened. There has been no headache, vomiting or rash, and nobody at home takes regular medicines.",
     "examPicks": 4,
     "exam": [
       {
@@ -144,7 +144,7 @@ export const CASES: LocCase[] = [
     "id": "botulism",
     "title": "Infant botulism",
     "teaser": "A 3-month-old who stopped feeding well",
-    "history": "A 3-month-old girl who was previously well and growing normally has been feeding poorly for three days. Her parents say she tires halfway through a bottle and her cry has become weak, and she has not opened her bowels for five days, which is unusual for her. Today she seems floppier and \"less expressive\". There has been no fever, vomiting or diarrhoea. She was born at term after an uncomplicated pregnancy, and a week ago she was smiling and holding her head up well.",
+    "history": "A 3-month-old girl who was previously well and growing normally has been feeding poorly for three days. Her parents say she tires halfway through a bottle and her cry has become weak, and she has not opened her bowels for five days, which is unusual for her. Today she seems floppier and \"less expressive\". There has been no fever, vomiting or diarrhea. She was born at term after an uncomplicated pregnancy, and a week ago she was smiling and holding her head up well.",
     "examPicks": 4,
     "exam": [
       {
@@ -262,7 +262,7 @@ export const CASES: LocCase[] = [
       {
         "id": "gowers",
         "label": "Watch him get up from the floor",
-        "finding": "He turns prone, pushes up on his hands and walks his hands up his thighs to stand (Gowers manoeuvre).",
+        "finding": "He turns prone, pushes up on his hands and walks his hands up his thighs to stand (Gowers maneuver).",
         "key": true
       },
       {
@@ -319,7 +319,7 @@ export const CASES: LocCase[] = [
       "also": [
         "horn"
       ],
-      "explanation": "Proximal, symmetric, purely motor weakness with a Gowers manoeuvre and large calves is the pattern of a myopathy, and calf enlargement points to a dystrophy (Brazis 2011, p. 13). The anterior horn cell remains defensible until tested, because spinal muscular atrophy also weakens proximal muscles and produces a Gowers sign, but the calves and the preserved reflexes lean toward muscle."
+      "explanation": "Proximal, symmetric, purely motor weakness with a Gowers maneuver and large calves is the pattern of a myopathy, and calf enlargement points to a dystrophy (Brazis 2011, p. 13). The anterior horn cell remains defensible until tested, because spinal muscular atrophy also weakens proximal muscles and produces a Gowers sign, but the calves and the preserved reflexes lean toward muscle."
     },
     "tempo": {
       "answer": "chronic",
@@ -331,7 +331,7 @@ export const CASES: LocCase[] = [
         {
           "label": "Duchenne muscular dystrophy",
           "correct": true,
-          "why": "A boy with proximal weakness, Gowers manoeuvre, calf enlargement, lordosis and toe walking, with an affected maternal uncle, fits the classic picture (Brazis 2011, p. 13)."
+          "why": "A boy with proximal weakness, Gowers maneuver, calf enlargement, lordosis and toe walking, with an affected maternal uncle, fits the classic picture (Brazis 2011, p. 13)."
         },
         {
           "label": "Becker muscular dystrophy",
@@ -356,7 +356,7 @@ export const CASES: LocCase[] = [
         {
           "label": "Idiopathic toe walking",
           "correct": false,
-          "why": "A diagnosis only when the rest of the examination is normal, and a Gowers manoeuvre is not normal."
+          "why": "A diagnosis only when the rest of the examination is normal, and a Gowers maneuver is not normal."
         },
         {
           "label": "Juvenile myasthenia gravis",
@@ -365,7 +365,7 @@ export const CASES: LocCase[] = [
         }
       ]
     },
-    "reveal": "**Duchenne muscular dystrophy.** The Gowers manoeuvre shows proximal hip weakness, and the large calves together with an affected maternal uncle point to an X-linked dystrophinopathy (Brazis 2011, p. 13). The next step is a creatine kinase level, followed by genetic testing of the dystrophin gene. See the [Neuromuscular section](/neuromuscular) for the disease itself."
+    "reveal": "**Duchenne muscular dystrophy.** The Gowers maneuver shows proximal hip weakness, and the large calves together with an affected maternal uncle point to an X-linked dystrophinopathy (Brazis 2011, p. 13). The next step is a creatine kinase level, followed by genetic testing of the dystrophin gene. See the [Neuromuscular section](/neuromuscular) for the disease itself."
   },
   {
     "id": "myelitis",
@@ -441,7 +441,7 @@ export const CASES: LocCase[] = [
       "pick": 3,
       "options": [
         {
-          "label": "Spinal cord compression (epidural abscess, haematoma, tumour)",
+          "label": "Spinal cord compression (epidural abscess, hematoma, tumor)",
           "correct": true,
           "why": "It must be excluded first, with urgent imaging, because it is treated by decompression and delay costs function."
         },
@@ -500,14 +500,14 @@ export const CASES: LocCase[] = [
       },
       {
         "id": "mental",
-        "label": "Alertness and behaviour",
+        "label": "Alertness and behavior",
         "finding": "Alert, playful and appropriate; not irritable or sleepy.",
         "key": true
       },
       {
         "id": "fundi",
         "label": "Fundi",
-        "finding": "Sharp discs; no papilloedema.",
+        "finding": "Sharp discs; no papilledema.",
         "key": true
       },
       {
@@ -568,9 +568,9 @@ export const CASES: LocCase[] = [
           "why": "It can begin as ataxia before the eye movements and jerks appear, and it should prompt a search for neuroblastoma, so watch for opsoclonus, myoclonus and irritability over the next few days."
         },
         {
-          "label": "Posterior fossa tumour",
+          "label": "Posterior fossa tumor",
           "correct": false,
-          "why": "Tumours evolve over weeks, usually with headache, vomiting or papilloedema, so an overnight onset with sharp discs fits poorly, although ataxia that persists or worsens should prompt imaging."
+          "why": "Tumors evolve over weeks, usually with headache, vomiting or papilledema, so an overnight onset with sharp discs fits poorly, although ataxia that persists or worsens should prompt imaging."
         },
         {
           "label": "Guillain-Barré syndrome",
@@ -589,11 +589,11 @@ export const CASES: LocCase[] = [
         }
       ]
     },
-    "reveal": "**Post-infectious acute cerebellar ataxia.** The clinching features are an overnight midline ataxia in a well, alert child after a viral illness, with no opsoclonus, no papilloedema and normal reflexes. A toxicology screen is reasonable, and imaging is kept for atypical features, persistence or worsening. Review him again over the coming days, looking specifically for opsoclonus, myoclonus and irritability."
+    "reveal": "**Post-infectious acute cerebellar ataxia.** The clinching features are an overnight midline ataxia in a well, alert child after a viral illness, with no opsoclonus, no papilledema and normal reflexes. A toxicology screen is reasonable, and imaging is kept for atypical features, persistence or worsening. Review him again over the coming days, looking specifically for opsoclonus, myoclonus and irritability."
   },
   {
     "id": "icp",
-    "title": "Posterior fossa tumour with obstructive hydrocephalus",
+    "title": "Posterior fossa tumor with obstructive hydrocephalus",
     "teaser": "A 7-year-old who sees double when looking to one side",
     "history": "A 7-year-old girl has had headaches for three or four weeks. They are worst when she wakes, and on several mornings she has vomited before breakfast and then felt well enough to go to school. For the past week she has seen double when she looks to the left, and she has started turning her whole head to read the board. Her teacher says she has become clumsy in the playground, and her father thinks she walks \"as if the floor were moving\". She has had no fever, injury or recent illness, and she takes no medicines. She can still read small print, and her parents wonder whether she needs glasses.",
     "examPicks": 4,
@@ -654,7 +654,7 @@ export const CASES: LocCase[] = [
       },
       {
         "id": "mental",
-        "label": "Alertness and behaviour",
+        "label": "Alertness and behavior",
         "finding": "Alert and oriented; quieter and more tired than usual, but answers appropriately.",
         "key": false
       }
@@ -664,7 +664,7 @@ export const CASES: LocCase[] = [
       "also": [
         "brainstem"
       ],
-      "explanation": "The sixth-nerve palsy is better read as a messenger reporting raised pressure than as a marker of where the lesion sits. The nerve's long course makes it an early casualty of raised pressure from almost any cause (Pearl 2014, p. 43), and together with papilloedema it is one of the commonest false localizing signs (Brazis 2011, p. 622). The address comes from the company it keeps. A wide-based, staggering gait with little limb ataxia is the midline cerebellar pattern (Brazis 2011, p. 412), and a cerebellar mass pressing on the fourth ventricle is what raises the pressure (Arslan 2014, p. 98). Brainstem is defensible, because it shares the posterior fossa, but the normal face and swallow argue against an intrinsic pontine lesion, and a lesion at the sixth-nerve nucleus tends to cause a gaze palsy rather than one weak lateral rectus (Pearl 2014, p. 43)."
+      "explanation": "The sixth-nerve palsy is better read as a messenger reporting raised pressure than as a marker of where the lesion sits. The nerve's long course makes it an early casualty of raised pressure from almost any cause (Pearl 2014, p. 43), and together with papilledema it is one of the commonest false localizing signs (Brazis 2011, p. 622). The address comes from the company it keeps. A wide-based, staggering gait with little limb ataxia is the midline cerebellar pattern (Brazis 2011, p. 412), and a cerebellar mass pressing on the fourth ventricle is what raises the pressure (Arslan 2014, p. 98). Brainstem is defensible, because it shares the posterior fossa, but the normal face and swallow argue against an intrinsic pontine lesion, and a lesion at the sixth-nerve nucleus tends to cause a gaze palsy rather than one weak lateral rectus (Pearl 2014, p. 43)."
     },
     "tempo": {
       "answer": "subacute",
@@ -674,24 +674,24 @@ export const CASES: LocCase[] = [
       "pick": 2,
       "options": [
         {
-          "label": "Posterior fossa tumour (medulloblastoma, cerebellar astrocytoma)",
+          "label": "Posterior fossa tumor (medulloblastoma, cerebellar astrocytoma)",
           "correct": true,
-          "why": "Posterior fossa tumours are common in children, medulloblastoma and cystic astrocytoma above all (Pearl 2014, p. 63). A midline mass explains the truncal ataxia, and by obstructing the fourth ventricle it also explains the morning headache and vomiting, the papilloedema and the sixth-nerve palsy (Arslan 2014, p. 98)."
+          "why": "Posterior fossa tumors are common in children, medulloblastoma and cystic astrocytoma above all (Pearl 2014, p. 63). A midline mass explains the truncal ataxia, and by obstructing the fourth ventricle it also explains the morning headache and vomiting, the papilledema and the sixth-nerve palsy (Arslan 2014, p. 98)."
         },
         {
           "label": "Obstructive hydrocephalus from another cause",
           "correct": true,
-          "why": "Hydrocephalus raises the pressure and can bring the same papilloedema and sixth-nerve palsy (Brazis 2011, p. 158; Pearl 2014, p. 43). The scan is what separates a tumour from other causes of obstruction, which the bedside cannot do."
+          "why": "Hydrocephalus raises the pressure and can bring the same papilledema and sixth-nerve palsy (Brazis 2011, p. 158; Pearl 2014, p. 43). The scan is what separates a tumor from other causes of obstruction, which the bedside cannot do."
         },
         {
           "label": "Idiopathic intracranial hypertension",
           "correct": false,
-          "why": "It can produce the same headache, papilloedema and sixth-nerve palsy (Brazis 2011, p. 202), but by definition it is raised pressure without a tumour or other cause (Arslan 2014, p. 191), so it can be named only after a scan. A clear midline ataxia sends you to the posterior fossa first."
+          "why": "It can produce the same headache, papilledema and sixth-nerve palsy (Brazis 2011, p. 202), but by definition it is raised pressure without a tumor or other cause (Arslan 2014, p. 191), so it can be named only after a scan. A clear midline ataxia sends you to the posterior fossa first."
         },
         {
           "label": "Diffuse midline glioma of the pons",
           "correct": false,
-          "why": "It lives in the same compartment, but tumours within the pons seldom block the flow of cerebrospinal fluid early, so papilloedema is not their usual opening sign (Arslan 2014, p. 330), and a lesion at the sixth-nerve nucleus tends to cause a gaze palsy instead (Pearl 2014, p. 43). Her face and swallow are normal, and imaging will settle the question."
+          "why": "It lives in the same compartment, but tumors within the pons seldom block the flow of cerebrospinal fluid early, so papilledema is not their usual opening sign (Arslan 2014, p. 330), and a lesion at the sixth-nerve nucleus tends to cause a gaze palsy instead (Pearl 2014, p. 43). Her face and swallow are normal, and imaging will settle the question."
         },
         {
           "label": "Migraine",
@@ -706,10 +706,10 @@ export const CASES: LocCase[] = [
         {
           "label": "Post-infectious acute cerebellar ataxia",
           "correct": false,
-          "why": "Both the tempo and the company are wrong for it. It comes on overnight in a well child after an infection, with sharp discs (compare Case 5), rather than over weeks with headache, vomiting and papilloedema."
+          "why": "Both the tempo and the company are wrong for it. It comes on overnight in a well child after an infection, with sharp discs (compare Case 5), rather than over weeks with headache, vomiting and papilledema."
         }
       ]
     },
-    "reveal": "**A posterior fossa mass with obstructive hydrocephalus**, to be confirmed by urgent imaging. The clinching sign is the papilloedema, because it explains the double vision. Once the pressure is known to be high, the sixth-nerve palsy needs no address of its own (Pearl 2014, p. 43; Brazis 2011, p. 622), which leaves the wide-based gait to do the localizing, to the midline cerebellum (Brazis 2011, p. 412). Posterior fossa tumours are common in children, medulloblastoma and cystic astrocytoma among them (Pearl 2014, p. 63). Arrange brain imaging the same day and involve neurosurgery at once. A lumbar puncture should not come first, because a suspected posterior fossa mass is a reason to image before any needle (DeMyer, pp. 545-546)."
+    "reveal": "**A posterior fossa mass with obstructive hydrocephalus**, to be confirmed by urgent imaging. The clinching sign is the papilledema, because it explains the double vision. Once the pressure is known to be high, the sixth-nerve palsy needs no address of its own (Pearl 2014, p. 43; Brazis 2011, p. 622), which leaves the wide-based gait to do the localizing, to the midline cerebellum (Brazis 2011, p. 412). Posterior fossa tumors are common in children, medulloblastoma and cystic astrocytoma among them (Pearl 2014, p. 63). Arrange brain imaging the same day and involve neurosurgery at once. A lumbar puncture should not come first, because a suspected posterior fossa mass is a reason to image before any needle (DeMyer, pp. 545-546)."
   }
 ];

@@ -5,7 +5,7 @@
 //   - lateral corticospinal tract: already crossed (at the medulla) → weakness on the SAME
 //     side, below the lesion, upper motor neuron type;
 //   - dorsal columns: ascend uncrossed → vibration/position loss on the SAME side, below;
-//   - spinothalamic tract: fibres cross within one or two segments of entry → pain and
+//   - spinothalamic tract: fibers cross within one or two segments of entry → pain and
 //     temperature loss on the OPPOSITE side, starting about two segments below the lesion;
 //   - anterior horn at the lesion's segments → lower motor neuron weakness AT the level.
 
@@ -21,9 +21,9 @@ export type LesionType = 'complete' | 'hemisection' | 'anterior' | 'central' | '
 
 export const LESION_TYPES: { id: LesionType; name: string; parts: string; example: string }[] = [
   { id: 'complete', name: 'Complete transverse lesion', parts: 'Everything at the level', example: 'Trauma, transverse myelitis, compression' },
-  { id: 'hemisection', name: 'Hemisection (Brown-Séquard)', parts: 'One half of the cord', example: 'Penetrating injury, an eccentric tumour or demyelinating plaque' },
+  { id: 'hemisection', name: 'Hemisection (Brown-Séquard)', parts: 'One half of the cord', example: 'Penetrating injury, an eccentric tumor or demyelinating plaque' },
   { id: 'anterior', name: 'Anterior cord', parts: 'Front two thirds: corticospinal, spinothalamic, anterior horns', example: 'Anterior spinal artery infarct' },
-  { id: 'central', name: 'Central cord (syrinx)', parts: 'The crossing spinothalamic fibres and anterior horns at the level', example: 'Syringomyelia, often with a Chiari malformation; intramedullary tumour' },
+  { id: 'central', name: 'Central cord (syrinx)', parts: 'The crossing spinothalamic fibers and anterior horns at the level', example: 'Syringomyelia, often with a Chiari malformation; intramedullary tumor' },
   { id: 'posterior', name: 'Posterior columns', parts: 'Dorsal columns on both sides', example: 'Vitamin B12 or copper deficiency; in children, rare' },
 ];
 
@@ -77,7 +77,7 @@ export function cordLesion(level: Segment, type: LesionType, side: Side = 'L'): 
       out[other].forEach((d, i) => { if (i >= L + STT_OFFSET) d.pain = true; });
       summary.push(`Same side (${side}): upper motor neuron weakness below ${level}, because the corticospinal tract has already crossed in the medulla.`,
         `Same side: vibration and position sense lost below ${level}; the dorsal columns ascend uncrossed.`,
-        `Opposite side (${other}): pain and temperature lost from about ${SEGMENTS[Math.min(L + STT_OFFSET, SEGMENTS.length - 1)]} down; spinothalamic fibres cross within a segment or two of entering.`,
+        `Opposite side (${other}): pain and temperature lost from about ${SEGMENTS[Math.min(L + STT_OFFSET, SEGMENTS.length - 1)]} down; spinothalamic fibers cross within a segment or two of entering.`,
         `A narrow band of total loss and lower motor neuron weakness at ${level} on the same side, where the entering roots and the horn are cut.`);
       break;
     case 'anterior':
@@ -98,7 +98,7 @@ export function cordLesion(level: Segment, type: LesionType, side: Side = 'L'): 
         if (i >= L && i <= end) { d.pain = true; d.motor = 'lmn'; }
       });
       summary.push(`Pain and temperature lost on both sides from ${level} to ${SEGMENTS[end]} only, with normal sensation above AND below: a suspended, cape-like loss.`,
-        'The crossing spinothalamic fibres in front of the central canal are the first thing an expanding cavity cuts.',
+        'The crossing spinothalamic fibers in front of the central canal are the first thing an expanding cavity cuts.',
         'Touch, vibration and position spared (dissociated sensory loss).',
         'Lower motor neuron weakness and wasting at the involved segments as the cavity reaches the anterior horns. Long-tract signs below appear later, if at all.');
       break;

@@ -12,7 +12,7 @@ const SUBTITLES: Record<string, string> = {
   intro: 'Pick the findings in front of you. Each one rules out some levels of the nervous system, and whatever survives is where the lesion can be.',
   full: 'Every finding fits some levels and cannot come from others. Combine several, and open any level that has been struck out to see the reason.',
   floppy: 'Faced with a floppy infant, the first question is whether the problem lies in the brain or in the motor unit.',
-  'motor-unit': 'The motor unit has four parts that can fail, and each leaves a recognisable pattern on the examination.',
+  'motor-unit': 'The motor unit has four parts that can fail, and each leaves a recognizable pattern on the examination.',
 };
 
 export function Localizer({ accent, variant = 'full' }: { accent: string; variant?: keyof typeof FINDING_SETS }) {

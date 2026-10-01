@@ -14,7 +14,7 @@ export type Level =
 
 export const LEVELS: { id: Level; name: string; short: string; group: 'brain' | 'axis' | 'motor unit' }[] = [
   { id: 'cortex', name: 'Cerebral cortex', short: 'Cortex', group: 'brain' },
-  { id: 'subcortex', name: 'Subcortex and deep grey (white matter, capsule, basal ganglia, thalamus)', short: 'Subcortex', group: 'brain' },
+  { id: 'subcortex', name: 'Subcortex and deep gray (white matter, capsule, basal ganglia, thalamus)', short: 'Subcortex', group: 'brain' },
   { id: 'brainstem', name: 'Brainstem', short: 'Brainstem', group: 'axis' },
   { id: 'cerebellum', name: 'Cerebellum', short: 'Cerebellum', group: 'axis' },
   { id: 'cord', name: 'Spinal cord', short: 'Cord', group: 'axis' },
@@ -50,7 +50,7 @@ export const FINDINGS: Finding[] = [
     label: 'Weakness of face, arm and leg on the same side',
     fits: ['cortex', 'subcortex'],
     excludes: {
-      ...ex(['cord'], 'The cord cannot weaken the face; facial fibres leave the corticospinal tract in the brainstem.'),
+      ...ex(['cord'], 'The cord cannot weaken the face; facial fibers leave the corticospinal tract in the brainstem.'),
       ...ex(['cerebellum'], 'The cerebellum coordinates; it does not cause weakness.'),
       ...ex(MOTOR_UNIT, 'A single hemibody pattern including the face cannot come from one root, plexus, nerve or from muscle or junction disease.'),
       brainstem: 'A brainstem lesion that weakens the limbs gives a crossed pattern: a cranial nerve on one side, the body on the other. Same-side face and limbs place the lesion above the facial nucleus.',
@@ -99,7 +99,7 @@ export const FINDINGS: Finding[] = [
       ...ex(BRAIN, 'Cerebral lesions do not produce a symmetric glove-and-stocking gradient.'),
       cerebellum: 'The cerebellum does not cause weakness.',
       plexus: 'One plexus serves one limb.',
-      nmj: 'Junction disorders favour ocular, bulbar and proximal muscles.',
+      nmj: 'Junction disorders favor ocular, bulbar and proximal muscles.',
     },
     caveat: 'The length-dependent pattern is the signature of polyneuropathy: the longest nerves fail first (Brazis 2011, pp. 4-5, 26). A few myopathies are distal, so muscle stays possible.',
   },
@@ -178,7 +178,7 @@ export const FINDINGS: Finding[] = [
     label: 'Gowers sign or waddling gait; calves look large',
     fits: ['muscle', 'horn'],
     excludes: {
-      ...ex(BRAIN, 'A Gowers manoeuvre reflects proximal hip weakness; cerebral lesions do not produce a symmetric girdle pattern.'),
+      ...ex(BRAIN, 'A Gowers maneuver reflects proximal hip weakness; cerebral lesions do not produce a symmetric girdle pattern.'),
       cerebellum: 'The cerebellum does not cause weakness.',
       plexus: 'A plexus lesion affects one limb.',
     },
@@ -218,14 +218,14 @@ export const FINDINGS: Finding[] = [
       ...ex(['horn', 'nmj', 'muscle'], 'This level is purely motor; it cannot cause sensory loss.'),
       cerebellum: 'The cerebellum does not carry sensation to consciousness.',
     },
-    caveat: 'Overlap between neighbouring roots means a single root lesion may cause little measurable sensory loss (Brazis 2011, p. 89).',
+    caveat: 'Overlap between neighboring roots means a single root lesion may cause little measurable sensory loss (Brazis 2011, p. 89).',
   },
   {
     id: 'pure-motor', group: 'sensation',
     label: 'Weakness with no sensory loss at all',
     fits: ['horn', 'nmj', 'muscle'],
     excludes: {
-      plexus: 'Plexus fibres are mixed; a plexus lesion strong enough to weaken also numbs.',
+      plexus: 'Plexus fibers are mixed; a plexus lesion strong enough to weaken also numbs.',
       cord: 'A cord lesion strong enough to weaken almost always disturbs sensation below it.',
     },
     caveat: 'A small capsular or brainstem stroke can be pure motor, and Guillain-Barré often has few sensory signs, so brain, root and nerve stay possible.',
@@ -260,7 +260,7 @@ export const FINDINGS: Finding[] = [
     excludes: {
       cord: 'The cord has no cranial nerves.',
       ...ex(['root', 'plexus'], 'Spinal roots and plexus do not serve the head.'),
-      cerebellum: 'The cerebellum moves the eyes inaccurately (nystagmus, dysmetric saccades), but does not paralyse them.',
+      cerebellum: 'The cerebellum moves the eyes inaccurately (nystagmus, dysmetric saccades), but does not paralyze them.',
     },
     caveat: 'Cortical and subcortical lesions weaken the lower face and can impair swallowing (pseudobulbar). Some myopathies weaken the face. Spinal muscular atrophy can weaken the bulbar muscles.',
   },

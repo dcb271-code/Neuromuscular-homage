@@ -167,7 +167,7 @@ export function MapSort({ accent }: { accent: string }) {
   const r = pick ? checkMap(c.id, pick) : null;
   const go = (d: number) => { setK((k + d + MAP_CASES.length) % MAP_CASES.length); setPick(null); };
   return (
-    <WidgetFrame accent={accent} label="Which map does the deficit obey?" subtitle="Strokes, neuropathies, root lesions and tumours each respect a different map of the body. Read the pattern and decide which map it follows."
+    <WidgetFrame accent={accent} label="Which map does the deficit obey?" subtitle="Strokes, neuropathies, root lesions and tumors each respect a different map of the body. Read the pattern and decide which map it follows."
       footnote="Maps after Pearl 2014 (pages on each answer). Cases are teaching sketches, not complete differentials.">
       <div className="flex items-center gap-2 mb-2">
         <button onClick={() => go(-1)} className="px-2 py-1 rounded-md border border-slate-200 bg-white text-[12px]" aria-label="Previous pattern">←</button>
