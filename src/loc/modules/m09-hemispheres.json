@@ -59,7 +59,11 @@
         ],
         "answer": 3,
         "explanation": "When the leg is much weaker than the arm and the face and speech are spared, the pattern is anterior cerebral, because the leg area lies on the medial surface of the opposite hemisphere (Pearl 2014, pp. 7, 9; Brazis 2011, p. 11). A capsular lesion would weaken face, arm and leg about equally. A lesion of the lateral convexity would weaken the face and arm more than the leg, and on the left it would often disturb language as well. A right medial frontal lesion has the right pattern on the wrong side, since it would weaken the left leg."
-      }
+      },
+      "videos": [
+        "gait_ab_08",
+        "cranialnerve_ab_17"
+      ]
     },
     {
       "title": "The visual pathway",
@@ -81,7 +85,10 @@
         ],
         "answer": 1,
         "explanation": "A defect in the same quadrant of both eyes is homonymous, so the lesion lies behind the chiasm, in the hemisphere opposite the missing field, which here is the right. The upper field travels in the lower fibers that loop forward through the temporal lobe, so a right temporal lesion removes the upper left quadrant (Pearl 2014, p. 27). A chiasmal lesion would take both temporal fields, a left parietal lesion would remove the lower right quadrant, and an optic nerve lesion would affect only one eye."
-      }
+      },
+      "videos": [
+        "cranialnerve_ab_03"
+      ]
     },
     {
       "title": "Language and the developing brain",
@@ -125,7 +132,10 @@
         ],
         "answer": 1,
         "explanation": "Fluent speech and intact comprehension with failed repetition and sound errors is conduction aphasia, which is tied to lesions around the supramarginal gyrus or the pathway linking the language areas (Brazis 2011, p. 524; Pearl 2014, p. 20). Broca aphasia is nonfluent, and she speaks at a normal rate. Transcortical sensory aphasia is the reverse pattern, with understanding lost and repetition kept. Anomic aphasia is tempting because her naming is poor, but it requires repetition to be intact, and repetition is the switch that localizes here. Treat the label as a description, since a child's lesion need not sit exactly where an adult's would."
-      }
+      },
+      "videos": [
+        "mentalstatus_ab_06"
+      ]
     },
     {
       "title": "Perinatal brain injury",
@@ -146,7 +156,10 @@
         ],
         "answer": 3,
         "explanation": "Hand preference before the first birthday is abnormal and points to weakness of the other hand (Utah PediNeuroLogic Exam). A fisted right hand with brisk reflexes is an upper motor neuron sign, which puts the lesion in the left hemisphere, and in a term baby with an uneventful history it fits a perinatal stroke that is only now becoming apparent. Early left-handedness is not a real explanation, because handedness is not established this early. Spastic diplegia affects the legs more than the arms and is characteristic of prematurity (Volpe 2009). A brachial plexus injury would give a floppy arm with reduced reflexes rather than a fisted hand with brisk ones."
-      }
+      },
+      "videos": [
+        "gait_ab_09"
+      ]
     }
   ],
   "quiz": [

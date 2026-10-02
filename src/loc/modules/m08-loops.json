@@ -59,7 +59,10 @@
         ],
         "answer": 0,
         "explanation": "Ataxia of stance and gait with relatively spared limb coordination is the midline, truncal pattern, and together with morning vomiting it raises the possibility of a midline posterior fossa tumor blocking the fourth ventricle, such as a medulloblastoma (Brazis 2011, p. 412). A right hemispheric lesion would show right limb ataxia on testing. Dorsal column disease causes a sensory ataxia that worsens with the eyes closed and comes with lost position sense, neither of which was described. Disease of both cerebral hemispheres would bring weakness, reflex changes or cognitive signs instead of isolated truncal ataxia."
-      }
+      },
+      "videos": [
+        "coord_ab_06"
+      ]
     },
     {
       "title": "Acute ataxia in a child",
@@ -124,7 +127,11 @@
         ],
         "answer": 0,
         "explanation": "Random, flowing movements that pass from one body part to another are chorea, and after a recent sore throat the leading cause is Sydenham chorea, a hallmark of acute rheumatic fever (Pearl 2014, p. 116). Making that diagnosis obliges you to look for carditis and the rest of the disease. The spinal cord cannot generate chorea. Tics are patterned, repetitive and briefly suppressible, unlike these flitting movements, and calling this a tic disorder would miss the heart. Nerve conduction studies examine the motor unit, which is not the level involved here."
-      }
+      },
+      "videos": [
+        "gait_ab_12",
+        "gait_ab_13"
+      ]
     },
     {
       "title": "Gait as the integrator",
@@ -146,7 +153,11 @@
         ],
         "answer": 2,
         "explanation": "Toe walking needs the rest of the exam before it localizes. A child who runs, skips and hops normally, rises without a Gowers maneuver and has normal tone and reflexes shows none of the serious causes, and in exactly this child toe walking is an idiosyncratic, sometimes familial gait (DeMyer, p. 338). Duchenne dystrophy would usually show proximal weakness and enlarged calves. Spastic diplegia would bring increased tone and brisk reflexes in the legs. A neuropathy tends to cause foot drop and a steppage gait, which is the opposite of toe walking."
-      }
+      },
+      "videos": [
+        "gait_ab_14",
+        "sensory_ab_11"
+      ]
     }
   ],
   "quiz": [

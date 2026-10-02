@@ -71,6 +71,10 @@ Every figure runs a small model of the anatomy and draws its output, so the lear
 | `vertigo-sorter` | Mark nystagmus features and neighbours; one central feature overrules the peripheral ones | Weighted features (Brazis p. 265) |
 | `case:<id>` | Work a case: history → choose exam elements → commit to a level → commit to a tempo → pick a differential → discussion | Staged case JSON |
 
+## Exam videos
+
+Sections may list `videos` (ids in `src/loc/videos.ts`): University of Utah NeuroLogic Exam clips (Larsen & Stensaas, CC BY-NC-SA, which allows use on non-commercial educational websites but not re-posting to YouTube or social media). Clips play from Utah's own Kaltura account and load only on click; posters are local stills. Every clip id was checked against Utah's own entry title. The required credit statement and the clip list are on `/credits`. To self-host instead, request the download password through Utah's form; nothing else changes.
+
 ## Openers and the core path
 
 Every module opens with a parable (our own, one to three sentences), a historical note (a named neurologist or document, with a cited book page or registered paper), or both. The validator requires one, and requires a source for any history. Six modules carry `core: true` and form the short path shown on the section home: 1, 3, 4, 6, 7, 11.

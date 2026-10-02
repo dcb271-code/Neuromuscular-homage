@@ -42,7 +42,10 @@
         ],
         "answer": 1,
         "explanation": "Early wasting, fasciculations, lost reflexes and low tone confined to a group of muscles make up the denervation signature of a lower motor neuron lesion (DeMyer, p. 289; Pearl 2014, p. 65). What remains open is which part of the motor unit is responsible (anterior horn, root, plexus or nerve), and later modules take that up. A lesion in the left motor cortex would weaken movements of the whole arm, with brisk reflexes and little wasting. A corticospinal tract lesion in the cervical cord would make the reflexes brisk below the level of damage instead of abolishing them. Imaging has its place, but it comes after localization, and here the examination has already chosen the fork."
-      }
+      },
+      "videos": [
+        "motor_ab_05"
+      ]
     },
     {
       "title": "Tone: spasticity, rigidity and hypotonia",
@@ -64,7 +67,10 @@
         ],
         "answer": 2,
         "explanation": "Resistance that appears only with a quick movement and then yields is the catch-and-yield of spasticity, and together with weakness and brisk reflexes in the same arm it signals an upper motor neuron lesion (DeMyer, p. 273). Rigidity would be felt during slow movement as well, evenly through the whole range, so the near absence of resistance on slow testing rules it out. Hypotonia would offer less resistance at every speed and, if peripheral, would come with reduced reflexes. Anxiety can stiffen a limb, but it does not produce a reproducible catch that depends on velocity, and it does not explain weakness with brisk reflexes."
-      }
+      },
+      "videos": [
+        "motor_ab_02"
+      ]
     },
     {
       "title": "Reflexes and the plantar response",
@@ -86,7 +92,11 @@
         ],
         "answer": 0,
         "explanation": "A true extensor response begins only after the stroke has moved along the sole, stays up while the stroke continues and floats back once it stops (DeMyer, pp. 281-282). A toe that jerks up the instant the key touches, together with withdrawal of the foot and laughter, is a ticklish withdrawal. Re-testing from the lateral edge of the foot, the recommended approach for a ticklish child (DeMyer, p. 616), has shown flexor responses. Recording the first response as extensor mistakes withdrawal for the sign, and a clean flexor re-test leaves no reason for imaging. 'Negative Babinski' is not a useful term, since the sign is either present or absent (DeMyer, p. 281)."
-      }
+      },
+      "videos": [
+        "motor_ab_09",
+        "motor_ab_10"
+      ]
     },
     {
       "title": "When the rules mislead",
@@ -131,7 +141,11 @@
         ],
         "answer": 3,
         "explanation": "An alert infant with profound limb weakness, absent reflexes and tongue fasciculations has the peripheral pattern (Peredo 2009), and fasciculations with areflexia and no sensory disorder point to the anterior horn cell. That is the picture of spinal muscular atrophy, which now has time-sensitive treatments, so genetic testing should be urgent. Central hypotonia would come with depressed alertness and preserved or brisk reflexes, the opposite of this bright, areflexic baby. Neither junction disorders nor muscle disease cause fasciculations, and waiting on a creatine kinase would lose time that matters."
-      }
+      },
+      "videos": [
+        "newborn_ab_03",
+        "newborn_ab_19"
+      ]
     }
   ],
   "quiz": [

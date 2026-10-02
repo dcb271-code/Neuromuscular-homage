@@ -13,6 +13,7 @@ import { MontageLab } from '@/components/eeg/MontageLab';
 import { LOC_TRACKS } from '@/src/loc/curriculum';
 import { LOC_SOURCES } from '@/src/loc/sources';
 import { LOC_WIDGETS } from '@/components/loc/widgets';
+import { ExamVideos } from '@/components/loc/ExamVideos';
 
 export type CurriculumKind = 'eeg' | 'loc';
 
@@ -25,6 +26,8 @@ export interface CurriculumConfig {
   sources: Record<string, Source>;
   figures: Record<string, EegFigure>;
   widgets: Record<string, ComponentType<{ accent: string }>>;
+  /** Renders a section's exam video clips (localization only). */
+  videoStrip?: ComponentType<{ ids: string[]; accent: string }>;
   navExtra?: { href: string; label: string };
   footer: ReactNode;
 }
@@ -55,8 +58,9 @@ export const CURRICULA: Record<CurriculumKind, CurriculumConfig> = {
     sources: LOC_SOURCES,
     figures: {},
     widgets: LOC_WIDGETS,
+    videoStrip: ExamVideos,
     footer: (
-      <>Every figure on these pages is drawn by a model of the anatomy, not copied from a book. For education. Not for clinical decision-making; consult primary sources and your attending.</>
+      <>The interactive figures are calculated from our own models of the anatomy, and exam videos are from the University of Utah NeuroLogic Exam (CC BY-NC-SA); see <a href="/credits/" className="underline">credits</a>. For education. Not for clinical decision-making; consult primary sources and your attending.</>
     ),
   },
 };

@@ -114,7 +114,7 @@ export default function Home() {
           Washington University Neuromuscular Disease Center
         </a>
         , NCBI Gene, and OMIM.
-        For clinical use, always refer to primary sources.
+        For clinical use, always refer to primary sources. See <a href="/credits/" style={{ color: '#94a3b8' }}>credits and licenses</a>.
       </p>
     </div>
   );

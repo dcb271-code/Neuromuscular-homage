@@ -64,7 +64,11 @@
         ],
         "answer": 0,
         "explanation": "The Gowers maneuver is a way of standing up when the hip extensors are too weak to lift the trunk, so on its own it establishes proximal leg weakness and nothing more specific. Duchenne dystrophy is the classic cause, but spinal muscular atrophy and the inflammatory myopathies produce the same maneuver, which makes naming Duchenne from this sign alone premature. A cord lesion gives spastic legs with brisk reflexes and no girdle pattern. A length-dependent neuropathy weakens the feet first, so the child would struggle to walk on his heels long before he had trouble getting up from the floor."
-      }
+      },
+      "videos": [
+        "motor_ab_12",
+        "gait_ab_11"
+      ]
     },
     {
       "title": "The junction: weakness that wears out",
@@ -129,7 +133,10 @@
         ],
         "answer": 2,
         "explanation": "Acute, asymmetric, flaccid and areflexic weakness of one limb with normal sensation is the lower motor neuron fingerprint of anterior horn injury, and after a viral illness acute flaccid myelitis is the diagnosis to exclude with an MRI of the spine. A brachial plexus lesion affects both motor and sensory fibers and is usually painful, so normal sensation argues against it. A single peripheral nerve cannot weaken a whole limb. Viral myositis causes muscle pain and tenderness, often in both calves, and keeps the reflexes, so it does not produce an areflexic paralysis of one limb."
-      }
+      },
+      "videos": [
+        "motor_ab_01"
+      ]
     }
   ],
   "quiz": [

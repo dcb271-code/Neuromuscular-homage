@@ -102,7 +102,10 @@
         ],
         "answer": 1,
         "explanation": "Eyes deviated to the right with a left hemiparesis are looking toward the lesion and away from the weak side, which is the pattern of a destructive right hemispheric lesion. The doll's-eye maneuver confirms it, because a cortical gaze preference can be overcome when the brainstem gaze center is intact. A left pontine lesion would also push the eyes to the right, but its gaze palsy could not be overcome with doll's eyes, and the hemiparesis would be on the right. A left frontal seizure drives the eyes to the right too, yet it explains a fixed left hemiparesis with full doll's eyes far less well than a destructive right lesion does. An internuclear ophthalmoplegia causes failure of adduction in one eye rather than a conjugate deviation of both."
-      }
+      },
+      "videos": [
+        "cranialnerve_ab_08"
+      ]
     },
     {
       "title": "Inside the nerve",

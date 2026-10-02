@@ -12,6 +12,8 @@ const files = readdirSync(dir).filter(f => f.endsWith('.json') && (!filter || f.
 // PMIDs known to src/eeg/sources.ts (kept in sync by hand; the check catches typos).
 const srcTs = readFileSync(new URL('../src/loc/sources.ts', import.meta.url), 'utf8');
 const knownPmids = new Set([...srcTs.matchAll(/pmid: '(\d+)'/g)].map(m => m[1]));
+const videoTs = readFileSync(new URL('../src/loc/videos.ts', import.meta.url), 'utf8');
+const knownVideos = new Set([...videoTs.matchAll(/\{ id: '([^']+)', title:/g)].map(m => m[1]));
 const knownKeys = new Set([...srcTs.matchAll(/^\s+(\w+): \{ key:/gm)].map(m => m[1]));
 // Planned curriculum ids (see docs/eeg/design-spec.md); internal links may point at any of them.
 export const PLANNED_IDS = [
@@ -78,6 +80,7 @@ for (const f of files) {
     checkMarkup(f, s.content || '', where);
     if (s.figure && !WIDGETS.includes(s.figure) && !/^case:[a-z0-9-]+$/.test(s.figure)) fail(f, `${where}: unknown widget ${s.figure}`);
     if (/\u2014/.test(JSON.stringify(s))) fail(f, `${where}: contains an em dash`);
+    for (const v of s.videos || []) if (!knownVideos.has(v)) fail(f, `${where}: unknown video ${v}`);
     if (s.question) { checkQuestion(f, s.question, where + ' inline'); answers.push(s.question.answer); }
     else warn(f, `${where}: no inline question`);
     if ((s.content || '').split('\n').some(l => l.trim().startsWith('|') && l.includes('[['))) fail(f, `${where}: wiki-link inside a table row`);

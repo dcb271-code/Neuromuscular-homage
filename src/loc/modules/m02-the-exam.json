@@ -64,7 +64,10 @@
         ],
         "answer": 3,
         "explanation": "Watching is itself a form of examination. Sitting at a distance while you take the history lets you assess arousal, symmetry, gait and hand use without spending his cooperation, and unobtrusive observation often reveals more than formal tests (DeMyer, p. 239). Many children also settle once the stranger stops approaching. Holding a frightened child down to test reflexes produces crying, withdrawal and unreliable findings. Postponing gives up information you could collect now. His mother's report is valuable history, but it cannot replace seeing him move."
-      }
+      },
+      "videos": [
+        "intro_05"
+      ]
     },
     {
       "title": "The examination as a game, from newborn to adolescent",
@@ -87,7 +90,10 @@
         ],
         "answer": 1,
         "explanation": "Children as young as 3 will play the temperature game (DeMyer, p. 617). It tests the same spinothalamic pathway as pinprick without making the child an unwilling subject, and watching her face gives a check on her answers. A pin in a child who fears needles will end the examination. Skipping sensation throws away a finding that can be tested at this age. Vibration tests a different pathway, the dorsal columns, so it cannot stand in for pain and temperature testing."
-      }
+      },
+      "videos": [
+        "intro_06"
+      ]
     },
     {
       "title": "The craft of the hands-on examination",
@@ -109,7 +115,10 @@
         ],
         "answer": 2,
         "explanation": "Pecking with a tight grip is the commonest technical error. Before calling a reflex absent, swing the hammer properly, reposition the limb and use reinforcement (DeMyer, pp. 252, 258). In a tense child whose examination is otherwise normal, these steps usually bring the reflexes out. Recording areflexia now, or ordering nerve studies, risks starting a workup for a technical artifact. Moving on to the ankle jerks sidesteps the problem without solving it."
-      }
+      },
+      "videos": [
+        "intro_07"
+      ]
     },
     {
       "title": "The infant exam: reflexes that should come and go",
@@ -132,7 +141,12 @@
         ],
         "answer": 3,
         "explanation": "A Moro and an asymmetric tonic neck reflex still present at 6 months are abnormal, and persistent primitive reflexes with absent postural reactions are the hallmark of an upper motor neuron abnormality in an infant (Utah PediNeuroLogic Exam). Even corrected for prematurity, this infant is past 6 months. Together with increased leg tone, the pattern suggests evolving cerebral palsy and calls for referral now rather than at 18 months. Prematurity is allowed for by correcting the age, and correcting the age does not explain this pattern away. Peripheral nerve and muscle disorders lower tone and do not cause persistent primitive reflexes. The Moro does have a vestibular trigger, but its persistence reflects failed descending suppression rather than a vestibular lesion."
-      }
+      },
+      "videos": [
+        "newborn_n_23",
+        "03mo_17",
+        "06mo_14"
+      ]
     },
     {
       "title": "Age as the fourth coordinate",

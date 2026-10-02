@@ -34,6 +34,12 @@
 
 ## History
 
+### 2026-10-02 · v5: exam videos and a credits page
+- **Target:** steps 1 and 2 of the open-resources plan (`open-resources.md`): a site-wide credits page and Utah exam videos attached to the sections they illustrate.
+- **Change:** `/credits` lists every third-party asset with its license and required attribution (Utah videos, AES and Shoup EEG tracings, TemplateFlow atlases, neuromuscular data sources, NiiVue). 28 Utah clips in 21 sections of Modules 2-9, chosen against Utah's descriptions and verified against Kaltura entry titles (one page's ids were off by one and were corrected). Click-to-load player, local posters, validator checks video ids.
+- **Outcome:** see commit on `main`.
+- **Follow-ups:** request Utah's download password if self-hosting is preferred; the Washington University Neuromuscular Disease Center states no reuse license, so confirm how its content is used in the neuromuscular section.
+
 ### 2026-10-01 · v4: proofread, American spelling, fact-check
 - **Target:** owner asked for prose that does not name the books directly, reads easily, uses American spelling, and is checked for accuracy.
 - **Change:** American spelling throughout (code identifiers untouched); sources no longer named in running prose (199 → 0); long sentences and average sentence length reduced (average 24.8 → 19.4 words); every cited page re-read against the extracted texts. About 60 corrections, among them fasciculations versus fibrillations, the double crossing of cerebellar outflow, the facial fascicle in the pons, the sixth-nerve fascicle in crossed pontine palsy, pontine pupils in coma, bladder timing after acute cord injury, the still newborn arm, botulism immune globulin and the aminoglycoside warning, and several overstatements of what a page says.

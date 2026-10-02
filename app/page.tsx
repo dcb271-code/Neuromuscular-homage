@@ -38,7 +38,7 @@ export default function Landing() {
           style={{ color: '#94a3b8', textDecoration: 'none' }}>
           Washington University Neuromuscular Disease Center
         </a>
-        , NCBI Gene, and OMIM. For clinical use, always refer to primary sources.
+        , NCBI Gene, and OMIM. For clinical use, always refer to primary sources. See <a href="/credits/" style={{ color: '#94a3b8' }}>credits and licenses</a>.
       </p>
     </div>
   );

@@ -29,6 +29,8 @@ export interface Section {
   discussion?: boolean;
   /** Tracings from the figure registry (src/eeg/figures.json), shown after the prose. */
   figures?: string[];
+  /** Exam video clip ids (src/loc/videos.ts), shown after the prose. */
+  videos?: string[];
 }
 
 export interface EegFigure {

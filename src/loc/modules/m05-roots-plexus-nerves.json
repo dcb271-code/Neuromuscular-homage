@@ -85,7 +85,10 @@
         ],
         "answer": 1,
         "explanation": "Weak dorsiflexion and eversion with normal inversion and hip abduction is the common peroneal pattern (Morris 2012, p. 26), and rapid weight loss strips away the fat that cushions the nerve at the fibular head. The L5 root is the main alternative, but tibialis posterior (inversion) and gluteus medius (hip abduction) are both L5 muscles, and both are normal here. A sciatic lesion would usually weaken the tibial-nerve muscles too, inversion among them. A partial sciatic lesion that falls mainly on the peroneal fibers can mimic a peroneal palsy, though (Brazis 2011, p. 58). A tibial nerve lesion weakens inversion and plantar flexion and leaves dorsiflexion and eversion alone."
-      }
+      },
+      "videos": [
+        "gait_ab_10"
+      ]
     },
     {
       "title": "The lesion ladder",
