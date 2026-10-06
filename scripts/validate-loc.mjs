@@ -25,7 +25,7 @@ const allIds = new Set(PLANNED_IDS);
 const figureIds = new Set();
 
 const TRACKS = ['doctrine', 'periphery', 'axis', 'hemispheres', 'synthesis'];
-const WIDGETS = ['localizer', 'localizer-intro', 'localizer-floppy', 'localizer-motor-unit', 'exam-order', 'reflex-timeline', 'root-nerve', 'cord-sim', 'brainstem-sim', 'gait-by-level', 'visual-fields', 'coma-levels', 'where-when', 'lesion-voices', 'pretest', 'lesion-ladder', 'map-sort', 'aphasia-switches', 'vertigo-sorter'];
+const WIDGETS = ['localizer', 'localizer-intro', 'localizer-floppy', 'localizer-motor-unit', 'exam-order', 'reflex-timeline', 'root-nerve', 'cord-sim', 'brainstem-sim', 'gait-by-level', 'visual-fields', 'coma-levels', 'where-when', 'lesion-voices', 'pretest', 'lesion-ladder', 'map-sort', 'aphasia-switches', 'vertigo-sorter', 'dermatome-map', 'dermatome-level'];
 const EEG_ONLY_LINK = /\]\(\/eeg/;
 const TAGS = ['The Doctrine', 'Periphery', 'Neuraxis', 'Hemispheres', 'Clinical Decision-Making', 'Pediatric Exam'];
 const HEDGES = /\b(often|may|can|usually|typically|commonly|frequently|rarely)\b[^.]*\b\d+(\.\d+)?\s*%/i;

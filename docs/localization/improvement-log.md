@@ -34,6 +34,12 @@
 
 ## History
 
+### 2026-10-06 · v6: dermatome map
+- **Target:** step 3 of the open-resources plan, a clickable dermatome map linked to the root and cord teaching.
+- **Change:** the public-domain dermatome drawing (Ralf Stephan, Commons) with the 28 key sensory points and 10 key muscles of the 2011 International Standards (Kirshblum, PMID 22330108). Explore, quiz and sensory-level modes; placed in Module 5 ("Three maps laid over one limb") and, opening in level mode, in Module 6 ("Finding the level"). Each point was checked against the drawing: by the drawing's own color for limb and trunk points, and by counting bands down the midclavicular line for T3-T11 (the torso is a gradient there). Nine new model tests. Credits page updated.
+- **Note:** an attempt to make every dermatome region clickable by segmenting the drawing failed because the thoracic band lines stop short of the midline; key points are also the clinical standard, so they replaced regions.
+- **Outcome:** see commit on `main`.
+
 ### 2026-10-02 · v5: exam videos and a credits page
 - **Target:** steps 1 and 2 of the open-resources plan (`open-resources.md`): a site-wide credits page and Utah exam videos attached to the sections they illustrate.
 - **Change:** `/credits` lists every third-party asset with its license and required attribution (Utah videos, AES and Shoup EEG tracings, TemplateFlow atlases, neuromuscular data sources, NiiVue). 28 Utah clips in 21 sections of Modules 2-9, chosen against Utah's descriptions and verified against Kaltura entry titles (one page's ids were off by one and were corrected). Click-to-load player, local posters, validator checks video ids.

@@ -69,6 +69,7 @@ Every figure runs a small model of the anatomy and draws its output, so the lear
 | `map-sort` | Read a pattern, name the map it obeys (artery, length, segment, nerve, level, system, none) | Pattern cards → map → mechanism |
 | `aphasia-switches` | Set fluency, comprehension, repetition, naming; one shared picture described by each syndrome | Four-switch classifier |
 | `vertigo-sorter` | Mark nystagmus features and neighbours; one central feature overrules the peripheral ones | Weighted features (Brazis p. 265) |
+| `dermatome-map`, `dermatome-level` | The public-domain dermatome drawing with the 28 ISNCSCI key sensory points: explore, quiz, or set a cord level and see which points a complete lesion leaves numb | Key points and key muscles (Kirshblum 2011); placements verified against the drawing's colors and band count |
 | `case:<id>` | Work a case: history → choose exam elements → commit to a level → commit to a tempo → pick a differential → discussion | Staged case JSON |
 
 ## Exam videos

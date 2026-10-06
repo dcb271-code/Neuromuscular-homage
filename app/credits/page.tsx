@@ -47,6 +47,11 @@ export default function CreditsPage() {
         </table>
       </div>
 
+      <H>Dermatome drawing (Localization)</H>
+      <P>
+        The dermatome map uses <A href="https://commons.wikimedia.org/wiki/File:Dermatoms.svg">Dermatoms.svg</A> by Ralf Stephan, released into the public domain on Wikimedia Commons. Its legend is hidden in our view and key sensory points are drawn on top. The points and key muscles follow the International Standards for Neurological Classification of Spinal Cord Injury, revised 2011 (Kirshblum et al., J Spinal Cord Med 2011).
+      </P>
+
       <H>Books and papers cited (Localization)</H>
       <P>
         The localization modules are written in our own words and cite these texts by page. No text or figure is reproduced from them. Papers are cited by PubMed link in the modules where they are used.

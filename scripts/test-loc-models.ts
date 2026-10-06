@@ -12,6 +12,7 @@ import { LADDERS, deficitsAt } from '../src/loc/models/ladder.ts';
 import { MAPS, MAP_CASES, checkMap } from '../src/loc/models/maps.ts';
 import { classify } from '../src/loc/models/aphasia.ts';
 import { vestVerdict, VEST_FEATURES } from '../src/loc/models/vestibular.ts';
+import { KEY_POINTS, SEGMENT_ORDER, levelStatus, LEVEL_CHOICES } from '../src/loc/models/dermatomes.ts';
 
 let pass = 0, fail = 0;
 const t = (name: string, cond: boolean, detail = '') => { if (cond) pass++; else { fail++; console.log(`✗ ${name}${detail ? ' — ' + detail : ''}`); } };
@@ -192,6 +193,18 @@ t('herniation stages use known options', HERNIATION.every(st => Object.entries(s
 t('breathing level never rises during herniation', HERNIATION.every((st, i) => i === 0 || levelOrder.indexOf(breathLevel(st)) >= levelOrder.indexOf(breathLevel(HERNIATION[i - 1]))));
 t('herniation ends at the medulla', breathLevel(HERNIATION[HERNIATION.length - 1]) === 'medulla');
 t('episodic tempo lists breath-holding and night terrors as mimics', (TEMPOS.find(x => x.id === 'episodic')!.mimics ?? []).join(' ').match(/Breath-holding.*Night terrors/) !== null);
+
+// ── Dermatome key points (ISNCSCI 2011)
+const kp = (r: string) => KEY_POINTS.find(p => p.root === r)!;
+t('one key point per segment, C2 to S4-5', KEY_POINTS.length === SEGMENT_ORDER.length && SEGMENT_ORDER.every(r => KEY_POINTS.some(p => p.root === r)));
+t('landmarks: C6 thumb, C7 middle finger, C8 little finger', /Thumb/.test(kp('C6').landmark) && /Middle finger/.test(kp('C7').landmark) && /Little finger/.test(kp('C8').landmark));
+t('landmarks: T4 nipple, T6 xiphisternum, T10 umbilicus, T12 inguinal ligament', /nipple/.test(kp('T4').landmark) && /xiphisternum/.test(kp('T6').landmark) && /umbilicus/.test(kp('T10').landmark) && /inguinal/.test(kp('T12').landmark));
+t('landmarks: L4 medial malleolus, S1 lateral heel, S2 popliteal fossa', /medial malleolus/i.test(kp('L4').landmark) && /heel/.test(kp('S1').landmark) && /popliteal/.test(kp('S2').landmark));
+t('key muscles: C5 elbow flexors, C7 elbow extensors, L3 knee extensors, S1 plantar flexors', /Elbow flexors/.test(kp('C5').muscle!) && /Elbow extensors/.test(kp('C7').muscle!) && /Knee extensors/.test(kp('L3').muscle!) && /plantar flexors/.test(kp('S1').muscle!));
+t('thoracic points descend in order down the chest', ['T3','T4','T5','T6','T7','T8','T9','T10','T11'].every((r, i, a) => i === 0 || kp(r).y > kp(a[i - 1]).y));
+t('sacral points are on the back view, thoracic on the front', ['S1','S2','S3','S4-5','C2'].every(r => kp(r).view === 'back') && ['T3','T10'].every(r => kp(r).view === 'front'));
+t('T10 lesion: T10 at level, T9 normal, T11 and S4-5 lost', levelStatus('T10').T10 === 'level' && levelStatus('T10').T9 === 'normal' && levelStatus('T10').T11 === 'lost' && levelStatus('T10')['S4-5'] === 'lost');
+t('level choices are real segments', LEVEL_CHOICES.every(l => SEGMENT_ORDER.includes(l)));
 
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
