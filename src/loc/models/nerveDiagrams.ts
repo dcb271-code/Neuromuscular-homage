@@ -1,6 +1,6 @@
 // Schematic nerve diagrams for the lesion ladders (src/loc/models/ladder.ts). Our own drawings:
 // branch order follows Gray's Anatomy 1918 (public domain; plates 788, 818, 832) and the ladder
-// sources (Brazis 2011, pp. 43-45, 93, 322-327; Pearl 2014, pp. 49-52, 83, 87-88).
+// sources (Brazis 2011, pp. 43-45, 93, 95, 322-327; Pearl 2014, pp. 49-52, 83, 87-88).
 // Pure data: each rung of a ladder names where its lesion sits and which branches it removes.
 
 export interface DiagramPart {
@@ -89,7 +89,7 @@ export const NERVE_DIAGRAMS: Record<string, NerveDiagram> = {
       deep: { at: [320, 200], lost: ['deep'] },
       common: { at: [272, 158], lost: ['deep', 'superficialp', 'common'] },
       sciatic: { at: [150, 84], lost: ['deep', 'superficialp', 'common', 'tibial', 'tibpost', 'calf', 'hamstrings', 'sciatic'] },
-      l5: { at: [86, 35], lost: ['deep', 'sup-gluteal', 'tibpost'], hit: ['sciatic'] },
+      l5: { at: [86, 35], lost: ['deep', 'superficialp', 'sup-gluteal', 'tibpost'], hit: ['sciatic'] },
     },
   },
 };

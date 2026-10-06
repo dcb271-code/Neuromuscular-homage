@@ -36,7 +36,7 @@
 
 ### 2026-10-06 · v7: nerve diagrams for the lesion ladders
 - **Target:** step 4 of the open-resources plan.
-- **Change:** schematic facial, radial and foot-drop diagrams (`src/loc/models/nerveDiagrams.ts`, drawn by `NerveDiagramView` in the lesion ladder). The lesion marker sits at the selected rung; branches cut off turn red and neighbors hit by the same lesion turn amber; tapping a site selects the rung. Branch order checked against Gray's 1918 plates 788, 818 and 832. Drawing it exposed two simplifications, now fixed: a C7 root lesion weakens the wrist extensors (not brachioradialis), and an L5 root lesion takes inversion but not plantar flexion or the sole. Seven new tests tie every diagram site to its ladder rung.
+- **Change:** schematic facial, radial and foot-drop diagrams (`src/loc/models/nerveDiagrams.ts`, drawn by `NerveDiagramView` in the lesion ladder). The lesion marker sits at the selected rung; branches cut off turn red and neighbors hit by the same lesion turn amber; tapping a site selects the rung. Branch order checked against Gray's 1918 plates 788, 818 and 832. Drawing it exposed two simplifications, now fixed: a C7 root lesion weakens the wrist extensors (not brachioradialis), and an L5 root lesion takes inversion but not plantar flexion or the sole. Seven new tests tie every diagram site to its ladder rung. An accuracy check against Brazis 2011 (pp. 43-45, 93, 95, 326-327) then added eversion and lateral-leg numbness to the L5 rung (p. 95) and moved the middle-ear example to the stapedius rung (the nerve crosses the middle ear above that branch) and mastoiditis to the chorda rung.
 - **Outcome:** see commit on `main`.
 
 ### 2026-10-06 · v6: dermatome map

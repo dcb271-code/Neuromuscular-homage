@@ -214,7 +214,7 @@ t('along the cable, a higher lesion loses everything a lower one does', LADDERS.
 t('facial: the supranuclear lesion spares the forehead branch', !NERVE_DIAGRAMS.facial.rungs.cortex.lost.includes('f-temporal') && NERVE_DIAGRAMS.facial.rungs.cortex.lost.includes('f-lower'));
 t('facial: the nuclear lesion spares taste and tears but hits the gaze center', !NERVE_DIAGRAMS.facial.rungs.pons.lost.includes('chorda') && !NERVE_DIAGRAMS.facial.rungs.pons.lost.includes('petrosal') && NERVE_DIAGRAMS.facial.rungs.pons.hit!.includes('gaze'));
 t('radial: the spiral groove spares triceps; C7 hits a muscle outside the radial nerve', !NERVE_DIAGRAMS.radial.rungs.groove.lost.includes('triceps') && NERVE_DIAGRAMS.radial.rungs.c7.lost.includes('root-median') && NERVE_DIAGRAMS.radial.rungs.c7.lost.includes('wrist') && !NERVE_DIAGRAMS.radial.rungs.c7.lost.includes('br'));
-t('foot drop: common peroneal spares the tibial branch; L5 loses hip abduction', !NERVE_DIAGRAMS.footdrop.rungs.common.lost.includes('tibpost') && NERVE_DIAGRAMS.footdrop.rungs.l5.lost.includes('sup-gluteal') && NERVE_DIAGRAMS.footdrop.rungs.l5.lost.includes('tibpost') && !NERVE_DIAGRAMS.footdrop.rungs.l5.lost.includes('calf'));
+t('foot drop: common peroneal spares the tibial branch; L5 loses hip abduction', !NERVE_DIAGRAMS.footdrop.rungs.common.lost.includes('tibpost') && NERVE_DIAGRAMS.footdrop.rungs.l5.lost.includes('sup-gluteal') && NERVE_DIAGRAMS.footdrop.rungs.l5.lost.includes('tibpost') && NERVE_DIAGRAMS.footdrop.rungs.l5.lost.includes('superficialp') && !NERVE_DIAGRAMS.footdrop.rungs.l5.lost.includes('calf'));
 
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
