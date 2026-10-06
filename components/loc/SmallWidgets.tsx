@@ -102,7 +102,7 @@ export function RootNerve({ accent }: { accent: string }) {
   const p = RN_PRESETS.find(x => x.id === preset);
   return (
     <WidgetFrame accent={accent} label="Root, plexus or nerve" subtitle="Tap a muscle or reflex once for weak, twice for normal, three times to clear. The candidates that still explain everything stay lit."
-      footnote="Predominant root assignments; sources differ by a segment (Brazis 2011 ch. 2-4). Two rules do the work: every muscle a nerve supplies below the lesion must be weak, and a muscle sharing a root but not a nerve tells them apart (Morris 2012).">
+      footnote="Predominant root assignments; sources differ by a segment (Brazis 2011 ch. 2-4). Reflexes follow Brazis: knee L2-L4, mainly L4; ankle S1-S2, mainly S1. Two rules do the work: every muscle a nerve supplies below the lesion must be weak, and a muscle sharing a root but not a nerve tells them apart (Morris 2012).">
       <div className="mb-3">
         <Label>Try a patient</Label>
         <div className="flex flex-wrap gap-1.5">{RN_PRESETS.map(x => <Chip key={x.id} accent={accent} on={preset === x.id} onClick={() => { setPreset(x.id); setExam(x.exam); setLimb(Object.keys(x.exam).some(k => ITEMS.find(i => i.id === k)?.limb === 'arm') ? 'arm' : 'leg'); }}>{x.label}</Chip>)}</div>

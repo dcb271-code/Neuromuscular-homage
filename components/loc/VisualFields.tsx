@@ -45,7 +45,7 @@ export function VisualFields({ accent }: { accent: string }) {
   const N = NODES;
   return (
     <WidgetFrame accent={accent} label="Visual pathway" subtitle="Tap a point on the pathway. Each eye's field is calculated by following its fibers, and only the nasal fibers cross at the chiasm."
-      footnote="Fields are drawn as the patient sees them, left field on the left. Black is lost. Macular sparing in occipital lesions reflects the occipital pole's dual blood supply.">
+      footnote="Fields are drawn as the patient sees them, left field on the left. Black is lost. Real tract and radiation defects are often incongruous (unequal in the two eyes), and they become more congruous closer to the occipital lobe; macular sparing reflects the occipital pole's dual blood supply (Pearl 2014, pp. 27-28).">
       <div className="grid gap-4 md:grid-cols-[minmax(0,320px)_1fr] items-start">
         <div className="rounded-xl border border-slate-200 bg-white p-2">
           <svg viewBox="0 0 320 260" className="w-full block" role="img" aria-label="Visual pathway from the eyes to the occipital lobes">

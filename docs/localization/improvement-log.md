@@ -34,6 +34,14 @@
 
 ## History
 
+### 2026-10-06 · v9: accuracy review of the interactive figures
+- **Cord simulator** checked against Brazis 2011, pp. 102-118 and Pearl 2014, pp. 66-71: offsets, hemisection, anterior and central patterns confirmed. Added: phrenic risk at C5 and above (Pearl p. 66), autonomic dysreflexia above T6 (Brazis p. 106), light touch largely spared in hemisection (p. 106), flaccid onset and girdle pain in anterior spinal artery syndrome (p. 111), traumatic central cord syndrome as a different pattern (p. 107). Saddle corrected to S3-S5 (p. 117); the front view omits S2.
+- **Visual fields** confirmed (Pearl pp. 27-28); added the central scotoma of partial optic nerve lesions and the congruity rule.
+- **Coma levels** confirmed against Brazis Fig. 23.3 (p. 608): diencephalic small reactive, midbrain midposition unreactive, pontine pinpoint responsive. No change.
+- **Root and nerve sorter**: knee reflex roots widened to L2-L4 (mainly L4) and ankle to S1-S2 (mainly S1) per Brazis; footnote says so.
+- **Rule-of-four map**: zone colors for selections, "No CN", CN 5 sensory nucleus labelled as running from the pons to the upper cord.
+- Four new tests; 167 total.
+
 ### 2026-10-06 · v8: rule-of-four map rebuilt
 - **Target:** the owner found the brainstem widget confusing: an abstract dot diagram without cranial nerve numbers or the divisible-by-12 rule, three button groups, and a mirror-image section.
 - **Change:** one clickable map (levels × right/left × medial/lateral, drawn as if facing the patient) with the nerves the rule places in each box, the four-nerves-per-level rule beside each level, and medial numbers colored to show they divide into 12. A panel of the four Ms and four Ss lights up what the lesion hits, with same or opposite side. New "Find the lesion" quiz. Accuracy: a note that a sixth-nucleus lesion gives a gaze palsy (Pearl 2014, p. 43); medial labels reworded because classic Weber and Dejerine syndromes do not include every M; a note that real lesions take only some of the four Ms. Four new tests.

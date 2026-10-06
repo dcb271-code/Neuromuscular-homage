@@ -62,7 +62,7 @@ export function CordSim({ accent }: { accent: string }) {
 
   return (
     <WidgetFrame accent={accent} label="Cord lesion simulator" subtitle="Choose a level and a lesion. The deficits are computed from three tracts and where each one crosses."
-      footnote={<>Teaching model: three long tracts, the anterior horn and the entering roots, drawn on simplified dermatomes. Pain and temperature loss from a lateral lesion starts about two segments below it (Brazis 2011, p. 106). The figure faces you: the patient&apos;s right is on your left.</>}>
+      footnote={<>Teaching model: three long tracts, the anterior horn and the entering roots, drawn on simplified dermatomes. Pain and temperature loss from a lateral lesion starts about two segments below it (Brazis 2011, p. 106). The figure faces you: the patient&apos;s right is on your left. It is a front view, so S2, which runs down the back of the thigh, is not drawn; the saddle is S3 to S5 (Brazis 2011, p. 117).</>}>
       <div className="grid gap-3 sm:grid-cols-2 mb-3">
         <div><Label>Level</Label><Segmented accent={accent} value={level} onChange={setLevel} options={LEVEL_CHOICES.map(l => ({ id: l, label: l }))} /></div>
         <div><Label>Show</Label><Segmented accent={accent} value={mode} onChange={setMode} options={[{ id: 'motor', label: 'Strength' }, { id: 'pain', label: 'Pain & temperature' }, { id: 'vibration', label: 'Vibration & position' }]} /></div>

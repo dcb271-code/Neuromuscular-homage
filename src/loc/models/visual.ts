@@ -22,8 +22,8 @@ export type LesionSite =
   | 'occipital-L' | 'occipital-R';
 
 export const SITES: { id: LesionSite; name: string; defect: string }[] = [
-  { id: 'optic-nerve-L', name: 'Left optic nerve', defect: 'Blind left eye' },
-  { id: 'optic-nerve-R', name: 'Right optic nerve', defect: 'Blind right eye' },
+  { id: 'optic-nerve-L', name: 'Left optic nerve', defect: 'Blind left eye; a partial lesion more often leaves a central scotoma' },
+  { id: 'optic-nerve-R', name: 'Right optic nerve', defect: 'Blind right eye; a partial lesion more often leaves a central scotoma' },
   { id: 'chiasm', name: 'Optic chiasm', defect: 'Bitemporal hemianopia' },
   { id: 'tract-L', name: 'Left optic tract', defect: 'Right homonymous hemianopia' },
   { id: 'tract-R', name: 'Right optic tract', defect: 'Left homonymous hemianopia' },

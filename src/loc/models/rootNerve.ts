@@ -42,8 +42,8 @@ export const ITEMS: Item[] = [
   { id: 'tib-post', label: 'Tibialis posterior (ankle inversion)', kind: 'muscle', limb: 'leg', roots: ['L4', 'L5'], main: ['L5'], nerve: 'tibial' },
   { id: 'hamstrings', label: 'Hamstrings (knee flexion)', kind: 'muscle', limb: 'leg', roots: ['L5', 'S1'], main: ['S1'], nerve: 'sciatic' },
   { id: 'gastroc', label: 'Gastrocnemius (stand on tiptoe)', kind: 'muscle', limb: 'leg', roots: ['S1', 'S2'], main: ['S1'], nerve: 'tibial' },
-  { id: 'r-knee', label: 'Knee reflex', kind: 'reflex', limb: 'leg', roots: ['L3', 'L4'], main: ['L4'], nerve: 'femoral' },
-  { id: 'r-ankle', label: 'Ankle reflex', kind: 'reflex', limb: 'leg', roots: ['S1'], main: ['S1'], nerve: 'tibial' },
+  { id: 'r-knee', label: 'Knee reflex', kind: 'reflex', limb: 'leg', roots: ['L2', 'L3', 'L4'], main: ['L4'], nerve: 'femoral' },
+  { id: 'r-ankle', label: 'Ankle reflex', kind: 'reflex', limb: 'leg', roots: ['S1', 'S2'], main: ['S1'], nerve: 'tibial' },
 ];
 
 // Nerve lesions, each defined by the items whose nerve lies DISTAL to that lesion site.

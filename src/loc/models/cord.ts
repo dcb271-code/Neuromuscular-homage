@@ -66,8 +66,10 @@ export function cordLesion(level: Segment, type: LesionType, side: Side = 'L'): 
       bladder = true;
       summary.push(`Weakness of everything below ${level} on both sides, upper motor neuron type once spinal shock passes.`,
         `Lower motor neuron weakness and lost reflexes at ${level} itself, from the damaged anterior horns.`,
-        `Every sensory modality lost from about ${level} down: a sensory level.`,
+        `Every sensory modality lost from about ${level} down, giving a sensory level.`,
         'Bladder and bowel control lost.');
+      if (L <= idx('C5')) summary.push('At C5 and above, breathing is at risk, because the phrenic nerve to the diaphragm arises from C3 to C5 (Pearl 2014, p. 66).');
+      if (L <= idx('T6')) summary.push('Above T6, autonomic dysreflexia can appear once spinal shock passes, with surges of blood pressure triggered by a full bladder or other stimuli below the lesion (Brazis 2011, p. 106).');
       break;
     case 'hemisection':
       out[side].forEach((d, i) => {
@@ -78,7 +80,8 @@ export function cordLesion(level: Segment, type: LesionType, side: Side = 'L'): 
       summary.push(`Same side (${side}): upper motor neuron weakness below ${level}, because the corticospinal tract has already crossed in the medulla.`,
         `Same side: vibration and position sense lost below ${level}; the dorsal columns ascend uncrossed.`,
         `Opposite side (${other}): pain and temperature lost from about ${SEGMENTS[Math.min(L + STT_OFFSET, SEGMENTS.length - 1)]} down; spinothalamic fibers cross within a segment or two of entering.`,
-        `A narrow band of total loss and lower motor neuron weakness at ${level} on the same side, where the entering roots and the horn are cut.`);
+        `A narrow band of total loss and lower motor neuron weakness at ${level} on the same side, where the entering roots and the horn are cut.`,
+        'Light touch is normal or only slightly reduced, because it travels in more than one tract (Brazis 2011, p. 106).');
       break;
     case 'anterior':
       forSides(['L', 'R'], (d, i) => {
@@ -87,7 +90,7 @@ export function cordLesion(level: Segment, type: LesionType, side: Side = 'L'): 
         if (i >= L + 1) d.pain = true;
       });
       bladder = true;
-      summary.push(`Weakness below ${level} on both sides, with lower motor neuron signs at the level.`,
+      summary.push(`Weakness below ${level} on both sides, with lower motor neuron signs at the level. It is flaccid and areflexic at first, often with sudden back or girdle pain (Brazis 2011, p. 111).`,
         'Pain and temperature lost below the lesion on both sides.',
         'Vibration and position sense SPARED: the dorsal columns lie in the back third, supplied by the posterior spinal arteries.',
         'Bladder control lost.');
@@ -100,7 +103,8 @@ export function cordLesion(level: Segment, type: LesionType, side: Side = 'L'): 
       summary.push(`Pain and temperature lost on both sides from ${level} to ${SEGMENTS[end]} only, with normal sensation above AND below: a suspended, cape-like loss.`,
         'The crossing spinothalamic fibers in front of the central canal are the first thing an expanding cavity cuts.',
         'Touch, vibration and position spared (dissociated sensory loss).',
-        'Lower motor neuron weakness and wasting at the involved segments as the cavity reaches the anterior horns. Long-tract signs below appear later, if at all.');
+        'Lower motor neuron weakness and wasting at the involved segments as the cavity reaches the anterior horns. Long-tract signs below appear later, if at all.',
+        'Traumatic central cord syndrome, after a hyperextension injury of the neck, is a different picture, with the arms weaker than the legs (Brazis 2011, p. 107).');
       break;
     }
     case 'posterior':
@@ -127,7 +131,7 @@ export const REGIONS: { id: string; label: string; segs: Segment[] }[] = [
   { id: 'shin-medial', label: 'Knee and inner shin', segs: ['L4'] },
   { id: 'shin-lateral', label: 'Outer shin and top of foot, big toe', segs: ['L5'] },
   { id: 'foot-lateral', label: 'Little-toe side of foot and sole', segs: ['S1'] },
-  { id: 'saddle', label: 'Saddle area', segs: ['S2', 'S3', 'S4', 'S5'] },
+  { id: 'saddle', label: 'Saddle area', segs: ['S3', 'S4', 'S5'] },
 ];
 
 export const LEVEL_CHOICES: Segment[] = ['C5', 'C7', 'T4', 'T10', 'L2'];

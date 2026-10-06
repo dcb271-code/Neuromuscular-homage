@@ -1,7 +1,7 @@
 // Tests for the localization models. Each assertion is a fact a neurologist would check.
 //   node scripts/test-loc-models.ts
 import { localize, survivors, PRESETS, FINDINGS, FINDING_SETS, LEVELS } from '../src/loc/models/localizer.ts';
-import { cordLesion, idx, STT_OFFSET } from '../src/loc/models/cord.ts';
+import { cordLesion, idx, STT_OFFSET, REGIONS } from '../src/loc/models/cord.ts';
 import { brainstemLesion, RULE_CN, structuresHit } from '../src/loc/models/brainstem.ts';
 import { fieldsFor, isLost, sparesMacula } from '../src/loc/models/visual.ts';
 import { candidates, RN_PRESETS, ITEMS, NERVE_LESIONS } from '../src/loc/models/rootNerve.ts';
@@ -125,6 +125,12 @@ t('exam order: tier order has no inversions', examOrderScore([...EXAM_STEPS].sor
 t('exam order: fundi first is penalised', examOrderScore(['fundi', ...EXAM_STEPS.filter(s => s.id !== 'fundi').map(s => s.id)]).inversions >= 6);
 t('where-when keys are known tempos', Object.values(WHERE_WHEN).every(row => Object.keys(row ?? {}).every(k => TEMPOS.some(tp => tp.id === k))));
 t('where-when keys are known levels', Object.keys(WHERE_WHEN).every(k => LEVELS.some(l => l.id === k)));
+
+// ── Cord additions after the 2026-10-06 check
+t('complete C5 lesion warns about breathing (phrenic C3-C5)', cordLesion('C5', 'complete').summary.some(x => /phrenic/.test(x)));
+t('complete T4 lesion warns about autonomic dysreflexia; T10 does not', cordLesion('T4', 'complete').summary.some(x => /dysreflexia/.test(x)) && !cordLesion('T10', 'complete').summary.some(x => /dysreflexia/.test(x)));
+t('hemisection notes that light touch is largely spared', cordLesion('T4', 'hemisection', 'L').summary.some(x => /Light touch/.test(x)));
+t('saddle is S3 to S5', REGIONS.find(r => r.id === 'saddle')!.segs.join() === 'S3,S4,S5');
 
 // ── Voices of a lesion
 t('frontal eye field: lesion and seizure point opposite ways', /toward/.test(voiceAt('fef', 'subtract')!.sign) && /away/.test(voiceAt('fef', 'irritate')!.sign));
