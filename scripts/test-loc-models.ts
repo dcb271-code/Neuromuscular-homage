@@ -12,6 +12,7 @@ import { LADDERS, deficitsAt } from '../src/loc/models/ladder.ts';
 import { MAPS, MAP_CASES, checkMap } from '../src/loc/models/maps.ts';
 import { classify } from '../src/loc/models/aphasia.ts';
 import { vestVerdict, VEST_FEATURES } from '../src/loc/models/vestibular.ts';
+import { NERVE_DIAGRAMS } from '../src/loc/models/nerveDiagrams.ts';
 import { KEY_POINTS, SEGMENT_ORDER, levelStatus, LEVEL_CHOICES } from '../src/loc/models/dermatomes.ts';
 
 let pass = 0, fail = 0;
@@ -205,6 +206,15 @@ t('thoracic points descend in order down the chest', ['T3','T4','T5','T6','T7','
 t('sacral points are on the back view, thoracic on the front', ['S1','S2','S3','S4-5','C2'].every(r => kp(r).view === 'back') && ['T3','T10'].every(r => kp(r).view === 'front'));
 t('T10 lesion: T10 at level, T9 normal, T11 and S4-5 lost', levelStatus('T10').T10 === 'level' && levelStatus('T10').T9 === 'normal' && levelStatus('T10').T11 === 'lost' && levelStatus('T10')['S4-5'] === 'lost');
 t('level choices are real segments', LEVEL_CHOICES.every(l => SEGMENT_ORDER.includes(l)));
+
+// ── Nerve diagrams match the ladders
+t('every ladder has a diagram and every rung a site', LADDERS.every(l => !!NERVE_DIAGRAMS[l.id] && l.rungs.every(r => !!NERVE_DIAGRAMS[l.id].rungs[r.id])));
+t('every lost or hit id is a drawn part', Object.values(NERVE_DIAGRAMS).every(dg => Object.values(dg.rungs).every(r => [...r.lost, ...(r.hit ?? [])].every(id => dg.parts.some(p => p.id === id)))));
+t('along the cable, a higher lesion loses everything a lower one does', LADDERS.every(l => { const acc = l.rungs.filter(r => r.mode !== 'replace'); return acc.every((r, k) => k === 0 || NERVE_DIAGRAMS[l.id].rungs[acc[k - 1].id].lost.every(id => NERVE_DIAGRAMS[l.id].rungs[r.id].lost.includes(id))); }));
+t('facial: the supranuclear lesion spares the forehead branch', !NERVE_DIAGRAMS.facial.rungs.cortex.lost.includes('f-temporal') && NERVE_DIAGRAMS.facial.rungs.cortex.lost.includes('f-lower'));
+t('facial: the nuclear lesion spares taste and tears but hits the gaze center', !NERVE_DIAGRAMS.facial.rungs.pons.lost.includes('chorda') && !NERVE_DIAGRAMS.facial.rungs.pons.lost.includes('petrosal') && NERVE_DIAGRAMS.facial.rungs.pons.hit!.includes('gaze'));
+t('radial: the spiral groove spares triceps; C7 hits a muscle outside the radial nerve', !NERVE_DIAGRAMS.radial.rungs.groove.lost.includes('triceps') && NERVE_DIAGRAMS.radial.rungs.c7.lost.includes('root-median') && NERVE_DIAGRAMS.radial.rungs.c7.lost.includes('wrist') && !NERVE_DIAGRAMS.radial.rungs.c7.lost.includes('br'));
+t('foot drop: common peroneal spares the tibial branch; L5 loses hip abduction', !NERVE_DIAGRAMS.footdrop.rungs.common.lost.includes('tibpost') && NERVE_DIAGRAMS.footdrop.rungs.l5.lost.includes('sup-gluteal') && NERVE_DIAGRAMS.footdrop.rungs.l5.lost.includes('tibpost') && !NERVE_DIAGRAMS.footdrop.rungs.l5.lost.includes('calf'));
 
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

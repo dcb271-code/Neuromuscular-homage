@@ -7,7 +7,8 @@
 import { useMemo, useState } from 'react';
 import { STRUCTURES, VOICES, type Voice } from '@/src/loc/models/voices';
 import { frequencies, posttest, PRIORS, TESTS, type TestId } from '@/src/loc/models/bayes';
-import { LADDERS, deficitsAt } from '@/src/loc/models/ladder';
+import { LADDERS, deficitsAt, type Ladder } from '@/src/loc/models/ladder';
+import { NERVE_DIAGRAMS } from '@/src/loc/models/nerveDiagrams';
 import { MAPS, MAP_CASES, checkMap, type MapId } from '@/src/loc/models/maps';
 import { classify, STIMULUS, type Switches } from '@/src/loc/models/aphasia';
 import { VEST_FEATURES, vestVerdict } from '@/src/loc/models/vestibular';
@@ -112,6 +113,58 @@ export function Pretest({ accent }: { accent: string }) {
   );
 }
 
+
+// Schematic of the nerve with the lesion marked; branches beyond the lesion turn red.
+function NerveDiagramView({ ladder, index, onPick, accent }: { ladder: Ladder; index: number; onPick: (i: number) => void; accent: string }) {
+  const dg = NERVE_DIAGRAMS[ladder.id];
+  if (!dg) return null;
+  const rung = ladder.rungs[index];
+  const r = dg.rungs[rung.id];
+  const lost = new Set(r?.lost ?? []); const hit = new Set(r?.hit ?? []);
+  const LOST = '#dc2626', HIT = '#f59e0b';
+  return (
+    <div className="rounded-xl border border-slate-200 bg-white p-2 mb-3">
+      <div className="overflow-x-auto">
+      <svg viewBox={dg.viewBox} className="w-full block" style={{ minWidth: 560 }} role="img" aria-label={`Diagram of the ${ladder.name.toLowerCase()} with the lesion ${rung.site.toLowerCase()}`}>
+        {dg.boxes?.map((b, bi) => (
+          <g key={bi}><rect x={b.x} y={b.y} width={b.w} height={b.h} rx={8} fill="#f8fafc" stroke="#cbd5e1" />
+            <text x={b.x + 8} y={b.y + 18} fontSize={12} fontWeight={600} fill="#475569">{b.text}</text></g>
+        ))}
+        {dg.parts.map(p => {
+          const isLost = lost.has(p.id), isHit = hit.has(p.id);
+          const color = isLost ? LOST : isHit ? HIT : p.kind === 'other' ? '#94a3b8' : '#334155';
+          const w = p.kind === 'trunk' ? 4.5 : p.kind === 'struct' ? 2 : 2.5;
+          return (
+            <g key={p.id}>
+              <path d={p.d} fill={p.kind === 'struct' ? (isHit ? HIT + '55' : '#e2e8f0') : 'none'} stroke={color} strokeWidth={w} strokeLinecap="round"
+                strokeDasharray={p.kind === 'other' && !isLost && !isHit ? '5 4' : isLost ? '7 5' : undefined} />
+              {p.label && <text x={p.label.x} y={p.label.y} fontSize={12.5} textAnchor={p.label.anchor ?? 'middle'} fill={isLost ? LOST : isHit ? '#b45309' : '#334155'}
+                fontWeight={isLost || isHit ? 700 : 400}>{p.label.text}</text>}
+            </g>
+          );
+        })}
+        {ladder.rungs.map((rg, k) => {
+          const site = dg.rungs[rg.id]; if (!site) return null;
+          const on = k === index;
+          return (
+            <g key={rg.id} onClick={() => onPick(k)} style={{ cursor: 'pointer' }} role="button" aria-label={`Lesion ${rg.site}`}>
+              <circle cx={site.at[0]} cy={site.at[1]} r={13} fill="transparent" />
+              {on ? (
+                <g stroke={LOST} strokeWidth={4} strokeLinecap="round">
+                  <line x1={site.at[0] - 9} y1={site.at[1] - 9} x2={site.at[0] + 9} y2={site.at[1] + 9} />
+                  <line x1={site.at[0] - 9} y1={site.at[1] + 9} x2={site.at[0] + 9} y2={site.at[1] - 9} />
+                </g>
+              ) : <circle cx={site.at[0]} cy={site.at[1]} r={5} fill="#fff" stroke={accent} strokeWidth={2.5} />}
+            </g>
+          );
+        })}
+      </svg>
+      </div>
+      <p className="text-[11px] text-slate-500 px-1 pt-1">Tap a circle to place the lesion there; on a small screen, swipe sideways to see the whole nerve. Red branches are cut off from the cord; amber structures are neighbors hit by the same lesion.</p>
+    </div>
+  );
+}
+
 // ── Lesion ladder ───────────────────────────────────────────────────────────────────────────
 export function LesionLadder({ accent }: { accent: string }) {
   const [lid, setLid] = useState('facial');
@@ -125,6 +178,7 @@ export function LesionLadder({ accent }: { accent: string }) {
     <WidgetFrame accent={accent} label="Lesion ladder" subtitle="Move the lesion up the nerve and watch the deficits accumulate, since a lesion takes out every branch that leaves below it."
       footnote={ladder.footnote}>
       <div className="mb-3"><Segmented accent={accent} value={lid} onChange={v => { setLid(v); setIdx(0); }} options={LADDERS.map(l => ({ id: l.id, label: l.short }))} /></div>
+      <NerveDiagramView ladder={ladder} index={i} onPick={setIdx} accent={accent} />
       <div className="grid gap-4 md:grid-cols-[minmax(0,260px)_1fr] items-start">
         <ol className="rounded-xl border border-slate-200 bg-white overflow-hidden" aria-label="Lesion site, proximal at the top">
           {top.map(k => {

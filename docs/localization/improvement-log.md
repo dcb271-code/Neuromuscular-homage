@@ -34,6 +34,11 @@
 
 ## History
 
+### 2026-10-06 · v7: nerve diagrams for the lesion ladders
+- **Target:** step 4 of the open-resources plan.
+- **Change:** schematic facial, radial and foot-drop diagrams (`src/loc/models/nerveDiagrams.ts`, drawn by `NerveDiagramView` in the lesion ladder). The lesion marker sits at the selected rung; branches cut off turn red and neighbors hit by the same lesion turn amber; tapping a site selects the rung. Branch order checked against Gray's 1918 plates 788, 818 and 832. Drawing it exposed two simplifications, now fixed: a C7 root lesion weakens the wrist extensors (not brachioradialis), and an L5 root lesion takes inversion but not plantar flexion or the sole. Seven new tests tie every diagram site to its ladder rung.
+- **Outcome:** see commit on `main`.
+
 ### 2026-10-06 · v6: dermatome map
 - **Target:** step 3 of the open-resources plan, a clickable dermatome map linked to the root and cord teaching.
 - **Change:** the public-domain dermatome drawing (Ralf Stephan, Commons) with the 28 key sensory points and 10 key muscles of the 2011 International Standards (Kirshblum, PMID 22330108). Explore, quiz and sensory-level modes; placed in Module 5 ("Three maps laid over one limb") and, opening in level mode, in Module 6 ("Finding the level"). Each point was checked against the drawing: by the drawing's own color for limb and trunk points, and by counting bands down the midclavicular line for T3-T11 (the torso is a gradient there). Nine new model tests. Credits page updated.
