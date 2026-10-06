@@ -45,7 +45,7 @@ export function BrainstemSim({ accent }: { accent: string }) {
 
   const fill = (b: Box) => {
     if (mode === 'quiz' && guess) { if (same(b, quiz)) return '#16a34a'; if (same(b, guess)) return '#dc2626'; return '#fff'; }
-    return same(b, sel) && mode === 'explore' ? accent : '#fff';
+    return same(b, sel) && mode === 'explore' ? (b.zone === 'medial' ? MED : LAT) : '#fff';
   };
 
   return (
@@ -94,7 +94,7 @@ export function BrainstemSim({ accent }: { accent: string }) {
                     <g key={k} onClick={() => tap(b)} style={{ cursor: 'pointer' }} role="button" aria-label={`${sideWord(c.side)} ${c.zone} ${L.id}`}>
                       <rect x={L.x0 + k * cw + 3} y={L.y + 3} width={cw - 6} height={L.h - 6} rx={10} fill={f} stroke={c.zone === 'medial' ? MED + '66' : LAT + '55'} strokeWidth={1.5} />
                       <text x={L.x0 + k * cw + cw / 2} y={L.y + L.h / 2 + 7} textAnchor="middle" fontSize={cns.length >= 3 ? 17 : cns.length ? 22 : 12} fontWeight={700}
-                        fill={dark ? '#fff' : cns.length ? (c.zone === 'medial' ? MED : LAT) : '#94a3b8'}>{cns.length ? cns.join(' ') : 'none'}</text>
+                        fill={dark ? '#fff' : cns.length ? (c.zone === 'medial' ? MED : LAT) : '#94a3b8'}>{cns.length ? cns.join(' ') : 'No CN'}</text>
                     </g>
                   );
                 })}
@@ -118,7 +118,7 @@ export function BrainstemSim({ accent }: { accent: string }) {
                 const on = hit.includes(it); const sd = on ? sideOf(it) : undefined;
                 return (
                   <li key={it} className="text-[12.5px] rounded-md px-2 py-1" style={{ background: on ? g.color + '18' : 'transparent', color: on ? '#0f172a' : '#64748b', fontWeight: on ? 600 : 400 }}>
-                    <b style={{ color: g.color }}>{it.charAt(0)}</b>{it.slice(1)}{on && sd && <span className="font-normal text-slate-500"> · {sd === 'same' ? 'same side' : 'opposite side'}</span>}
+                    <b style={{ color: g.color }}>{it.charAt(0)}</b>{it.slice(1)}{it === 'Sensory nucleus of 5' && <span className="font-normal text-slate-400"> (runs from the pons down to the upper cord)</span>}{on && sd && <span className="font-normal text-slate-500"> · {sd === 'same' ? 'same side' : 'opposite side'}</span>}
                   </li>
                 );
               })}
