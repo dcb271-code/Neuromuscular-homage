@@ -34,6 +34,11 @@
 
 ## History
 
+### 2026-10-06 · v8: rule-of-four map rebuilt
+- **Target:** the owner found the brainstem widget confusing: an abstract dot diagram without cranial nerve numbers or the divisible-by-12 rule, three button groups, and a mirror-image section.
+- **Change:** one clickable map (levels × right/left × medial/lateral, drawn as if facing the patient) with the nerves the rule places in each box, the four-nerves-per-level rule beside each level, and medial numbers colored to show they divide into 12. A panel of the four Ms and four Ss lights up what the lesion hits, with same or opposite side. New "Find the lesion" quiz. Accuracy: a note that a sixth-nucleus lesion gives a gaze palsy (Pearl 2014, p. 43); medial labels reworded because classic Weber and Dejerine syndromes do not include every M; a note that real lesions take only some of the four Ms. Four new tests.
+- **Outcome:** see commit on `main`.
+
 ### 2026-10-06 · v7: nerve diagrams for the lesion ladders
 - **Target:** step 4 of the open-resources plan.
 - **Change:** schematic facial, radial and foot-drop diagrams (`src/loc/models/nerveDiagrams.ts`, drawn by `NerveDiagramView` in the lesion ladder). The lesion marker sits at the selected rung; branches cut off turn red and neighbors hit by the same lesion turn amber; tapping a site selects the rung. Branch order checked against Gray's 1918 plates 788, 818 and 832. Drawing it exposed two simplifications, now fixed: a C7 root lesion weakens the wrist extensors (not brachioradialis), and an L5 root lesion takes inversion but not plantar flexion or the sole. Seven new tests tie every diagram site to its ladder rung. An accuracy check against Brazis 2011 (pp. 43-45, 93, 95, 326-327) then added eversion and lateral-leg numbness to the L5 rung (p. 95) and moved the middle-ear example to the stapedius rung (the nerve crosses the middle ear above that branch) and mastoiditis to the chorda rung.

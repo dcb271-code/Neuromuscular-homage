@@ -57,7 +57,7 @@ Every figure runs a small model of the anatomy and draws its output, so the lear
 | `reflex-timeline` | Drag an age slider from birth to 12 months; see which reflexes should be present, fading or gone | Utah-sourced age table |
 | `root-nerve` | Mark weak muscles and lost reflexes; see which roots and nerves still explain the pattern | Muscle → root + nerve table |
 | `cord-sim` | Choose a level and a lesion pattern; the body map shows what is lost, on which side, below what level | Tracts with sides and crossing levels |
-| `brainstem-sim` | Choose midbrain/pons/medulla, medial/lateral, side; get the findings and the named syndrome | Rule of 4 |
+| `brainstem-sim` | A map of the rule of four: three levels by right/left and medial/lateral, each box showing its cranial nerves (medial numbers divide into 12). Tap a box for the findings, the four Ms and Ss it hits and where the rule bends; or Find the lesion from a set of findings | Rule of 4 (Gates), with exceptions from Pearl and Brazis |
 | `visual-fields` | Choose a lesion site on the pathway; both eyes' fields are computed | Hemiretina → fibre → field mapping |
 | `gait-by-level` | Pick a gait; see the level it points to and the company it keeps | Lookup |
 | `coma-levels` | Set breathing, pupils, eye movements and posture; see which level they agree on, or that they don't (think metabolic) | Pearl's coma table as data |

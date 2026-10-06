@@ -2,7 +2,7 @@
 //   node scripts/test-loc-models.ts
 import { localize, survivors, PRESETS, FINDINGS, FINDING_SETS, LEVELS } from '../src/loc/models/localizer.ts';
 import { cordLesion, idx, STT_OFFSET } from '../src/loc/models/cord.ts';
-import { brainstemLesion } from '../src/loc/models/brainstem.ts';
+import { brainstemLesion, RULE_CN, structuresHit } from '../src/loc/models/brainstem.ts';
 import { fieldsFor, isLost, sparesMacula } from '../src/loc/models/visual.ts';
 import { candidates, RN_PRESETS, ITEMS, NERVE_LESIONS } from '../src/loc/models/rootNerve.ts';
 import { TIMELINE, timelineState, comaVerdict, examOrderScore, EXAM_STEPS, WHERE_WHEN, TEMPOS, HERNIATION, COMA_SIGNS } from '../src/loc/models/data.ts';
@@ -82,6 +82,10 @@ const mm = brainstemLesion('medulla', 'medial');
 t('Medial medulla: CN 12 + opposite hemiparesis + opposite position loss', mm.cranialNerves.join() === '12' && has(mm, 'Motor pathway', 'opposite') && has(mm, 'Medial lemniscus', 'opposite'));
 t('Medial pons: CN 6', brainstemLesion('pons', 'medial').cranialNerves.join() === '6');
 t('Lateral pons: CN 5, 7, 8', brainstemLesion('pons', 'lateral').cranialNerves.join() === '5,7,8');
+t('rule map: medial nuclei divide evenly into 12, lateral ones do not', Object.values(RULE_CN).every(z => z.medial.every(n => 12 % Number(n) === 0) && z.lateral.filter(n => n !== '8' && n !== '10').every(n => 12 % Number(n) !== 0)));
+t('rule map: four nerves per level counted from the bottom', [...RULE_CN.medulla.medial, ...RULE_CN.medulla.lateral].sort((a, b) => +a - +b).join() === '9,10,11,12' && [...RULE_CN.pons.medial, ...RULE_CN.pons.lateral].sort((a, b) => +a - +b).join() === '5,6,7,8');
+t('lateral midbrain has no sensory nucleus of 5', !structuresHit('midbrain', 'lateral').includes('Sensory nucleus of 5') && structuresHit('pons', 'lateral').includes('Sensory nucleus of 5'));
+t('medial pons notes the nuclear gaze palsy', brainstemLesion('pons', 'medial').notes.some(n => /gaze/.test(n)));
 t('Medial lesions never cause Horner', ['midbrain', 'pons', 'medulla'].every(l => !has(brainstemLesion(l as never, 'medial'), 'Sympathetic', 'same')));
 
 // ── Visual

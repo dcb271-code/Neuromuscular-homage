@@ -36,6 +36,22 @@ const CN_DEFICIT: Record<string, string> = {
   '11': 'Weak shoulder shrug and head turn',
 };
 
+/** Cranial nerve numbers the rule places in each box of the map (for display). */
+export const RULE_CN: Record<BsLevel, Record<Zone, string[]>> = {
+  midbrain: { medial: ['3', '4'], lateral: [] },
+  pons: { medial: ['6'], lateral: ['5', '7', '8'] },
+  medulla: { medial: ['12'], lateral: ['9', '10', '11'] },
+};
+export const LEVEL_RULE: Record<BsLevel, string> = { midbrain: 'Above the pons: 1 to 4 (3 and 4 here)', pons: 'Pons: 5 to 8', medulla: 'Medulla: 9 to 12' };
+export const M_STRUCTURES = ['Motor pathway', 'Medial lemniscus', 'Medial longitudinal fasciculus', 'Motor nucleus and nerve'];
+export const S_STRUCTURES = ['Spinocerebellar pathways', 'Spinothalamic tract', 'Sensory nucleus of 5', 'Sympathetic pathway'];
+
+/** Which of the four Ms or four Ss a lesion in this box involves. */
+export function structuresHit(level: BsLevel, zone: Zone): string[] {
+  if (zone === 'medial') return M_STRUCTURES;
+  return level === 'midbrain' ? S_STRUCTURES.filter(x => x !== 'Sensory nucleus of 5') : S_STRUCTURES;
+}
+
 export function brainstemLesion(level: BsLevel, zone: Zone, side: BsSide = 'L'): BsResult {
   const findings: BsFinding[] = [];
   const notes: string[] = [];
@@ -46,7 +62,7 @@ export function brainstemLesion(level: BsLevel, zone: Zone, side: BsSide = 'L'):
     findings.push({ text: 'Weakness of the arm and leg (upper motor neuron)', side: 'opposite', structure: 'Motor pathway (corticospinal tract)' });
     findings.push({ text: 'Loss of vibration and position sense in arm and leg', side: 'opposite', structure: 'Medial lemniscus' });
     findings.push({ text: 'Internuclear ophthalmoplegia: the eye on the lesion side fails to adduct on gaze to the other side', side: 'same', structure: 'Medial longitudinal fasciculus' });
-    if (level === 'midbrain') notes.push('The fourth nerve also has a medial midbrain nucleus, but its fibers cross before they exit, so a nuclear fourth-nerve lesion weakens the opposite superior oblique: one of the rule\'s exceptions.');
+    if (level === 'midbrain') notes.push('The fourth nerve also has a medial midbrain nucleus, but its fibers cross before they exit, so a nuclear fourth-nerve lesion weakens the opposite superior oblique, which makes it one of the rule\'s exceptions.');
   } else {
     findings.push({ text: 'Clumsy, overshooting arm and leg (ataxia)', side: 'same', structure: 'Spinocerebellar pathways' });
     findings.push({ text: 'Loss of pain and temperature in arm, leg and trunk', side: 'opposite', structure: 'Spinothalamic tract' });
@@ -59,11 +75,12 @@ export function brainstemLesion(level: BsLevel, zone: Zone, side: BsSide = 'L'):
     }
   }
 
+  if (zone === 'medial') notes.push('The rule lists everything a medial lesion could reach. A real lesion usually takes only some of the four Ms, which is why the named syndromes leave some of them out.');
   let syndrome: string | null = null;
-  if (level === 'midbrain' && zone === 'medial') { syndrome = 'Weber syndrome (ventral midbrain): third-nerve palsy with opposite hemiparesis'; notes.push('A lesion a little further back, through the red nucleus, adds tremor and ataxia on the opposite side (Benedikt syndrome).'); }
-  if (level === 'pons' && zone === 'medial') { syndrome = 'Medial pontine syndrome: sixth-nerve palsy with opposite hemiparesis'; notes.push('The facial fascicle loops around the sixth nucleus before it exits, so a ventral pontine lesion often weakens the face too (Millard-Gubler syndrome): the rule calls 7 lateral, the anatomy lets it stray medial.'); }
+  if (level === 'midbrain' && zone === 'medial') { syndrome = 'Medial midbrain lesion. Its ventral form, Weber syndrome, is a third-nerve palsy with opposite hemiparesis'; notes.push('A lesion a little further back, through the red nucleus, adds tremor and ataxia on the opposite side (Benedikt syndrome).'); }
+  if (level === 'pons' && zone === 'medial') { syndrome = 'Medial pontine syndrome: sixth-nerve palsy with opposite hemiparesis'; notes.push('The rule says sixth-nerve palsy, which is what a lesion of the sixth-nerve fibers gives. A lesion of the sixth nucleus itself, where the horizontal gaze center sits, gives a palsy of gaze toward that side instead (Pearl 2014, p. 43).'); notes.push('The facial fibers loop around the sixth nucleus before they leave the pons, so a medial pontine lesion often weakens the face as well (Millard-Gubler syndrome), even though the rule places the seventh nerve laterally.'); }
   if (level === 'pons' && zone === 'lateral') syndrome = 'Lateral pontine syndrome (anterior inferior cerebellar artery territory)';
-  if (level === 'medulla' && zone === 'medial') syndrome = 'Medial medullary syndrome (Dejerine): tongue weak on the lesion side, opposite hemiparesis and loss of position sense';
+  if (level === 'medulla' && zone === 'medial') syndrome = 'Medial medullary lesion. Dejerine syndrome is a weak tongue on the lesion side with opposite hemiparesis and loss of position sense';
   if (level === 'medulla' && zone === 'lateral') { syndrome = 'Lateral medullary syndrome (Wallenberg)'; notes.push('The rule places cranial nerve 11 in the lateral medulla too, but its fibers are rarely affected in a lateral medullary stroke, so it is left out here.'); }
 
   return { findings, syndrome, notes, cranialNerves: cns };
