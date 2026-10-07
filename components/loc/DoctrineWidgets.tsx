@@ -252,7 +252,7 @@ export function AphasiaSwitches({ accent }: { accent: string }) {
   const [s, setS] = useState<Switches>({ fluent: false, comprehends: true, repeats: false, names: false });
   const a = classify(s);
   return (
-    <WidgetFrame accent={accent} label="Aphasia at the bedside" subtitle="Every patient below describes the same picture. Set the four bedside tests and see which syndrome, and which part of the brain, fits the result."
+    <WidgetFrame accent={accent} label="Aphasia as four switches" subtitle="Every patient below describes the same picture. Set the four bedside tests and see which syndrome, and which part of the brain, fits the result."
       footnote="After Pearl 2014, p. 20 (Table 2.1), with conduction and mixed transcortical aphasia from Brazis 2011, pp. 524 and 448. The adult classification; acquired aphasia in children does not always follow it. Sample speech is ours.">
       <div className="grid gap-2 sm:grid-cols-2 mb-3">
         {SWITCHES.map(w => (
