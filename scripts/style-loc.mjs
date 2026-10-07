@@ -22,6 +22,13 @@ const ANTITHESIS = [
   /\b(isn't|is not|are not|aren't) [^.]{1,50}\. (It|They)('s| is| are)\b/,
 ];
 
+// Softer tells, listed with -v: throat-clearing and framing openers, and trailing participial phrases.
+const FRAMING = [
+  /^(It is|It's) worth (noting|remembering|saying|asking)\b/i, /^(Crucially|Importantly|Notably|Interestingly|Ultimately|Of course|In short|In practice|Remember that|Note that|Keep in mind)\b/,
+  /^While [^,]{1,80}, /, /\bit depends on\b/i, /\b(the|this) (key|real) (question|point|insight)\b/i,
+];
+const TRAIL = /, (making|leaving|giving|turning|allowing|creating|producing|meaning|suggesting|showing|reflecting|ensuring|pointing|helping|letting|revealing|adding)\b[^,]*\.$/;
+
 const sentencesOf = text => text
   .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\[\[[^|\]]+\|([^\]]+)\]\]/g, '$1')
   .replace(/\((?:[A-Z][^()]{0,60}\d{4}[^()]*|DeMyer[^()]*|Utah[^()]*)\)/g, '')
@@ -31,21 +38,26 @@ const words = s => s.split(/\s+/).filter(Boolean).length;
 const NAMED = /\b(Brazis|DeMyer|Pearl|Emsellem|Morris|Fisch|Arslan|Gill|Peredo|Hannibal|Daum|Sonoo|Borusiak|Benbadis|Richards|Gates|Volpe|Rosenbaum|Zafeiriou|Hilliard|Larsen|Stensaas)\b/;
 
 function scoreText(text) {
-  const out = { words: 0, sentences: 0, short: [], antithesis: [], colon: [], stock: [], zinger: [], semicolon: 0, long: [], named: [] };
-  for (const para of text.split(/\n\n+/)) {
+  const out = { words: 0, sentences: 0, short: [], antithesis: [], framing: [], trail: [], colon: [], stock: [], zinger: [], semicolon: 0, long: [], named: [] };
+  const paras = text.split(/\n\n+|\n(?=- |\d+\. )/);
+  for (const [pi, para] of paras.entries()) {
     const p = para.trim();
+    if (/^(- |\d+\. )/.test(p)) continue; // list items are not prose sentences
+    const leadIn = /^(- |\d+\. )/.test((paras[pi + 1] || '').trim());
     if (!p || /^\*\*[^*]+\*\*$/.test(p) || p.startsWith('|')) continue;
     const ss = sentencesOf(p);
     ss.forEach((s, i) => {
       const w = words(s); out.words += w; out.sentences++;
-      if (w <= 7 && !/^(Use the figure|Try it)/.test(s)) out.short.push(s);
+      if (w <= 7 && !leadIn && !/^(Use the figure|Try it)/.test(s)) out.short.push(s);
       if (w > 38) out.long.push(s);
       if (NAMED.test(s)) out.named.push(s);
       if (ANTITHESIS.some(r => r.test(s))) out.antithesis.push(s);
       const body = s.replace(/^\*\*[^*]+\*\*\s*/, '').replace(/^[A-Z][a-z ]{0,25}:/, '');
       if (/[a-z)]: [a-z]/.test(body) && !/\b(e\.g|i\.e)\b/.test(body)) out.colon.push(s);
       if (STOCK.some(r => r.test(s))) out.stock.push(s);
-      if (i === ss.length - 1 && ss.length > 1 && w <= 9) out.zinger.push(s);
+      if (FRAMING.some(r => r.test(s))) out.framing.push(s);
+      if (TRAIL.test(s)) out.trail.push(s);
+      if (i === ss.length - 1 && ss.length > 1 && w <= 9 && !leadIn) out.zinger.push(s);
       out.semicolon += (s.match(/;/g) || []).length;
     });
   }
@@ -62,11 +74,12 @@ for (const f of files) {
   for (const k of Object.keys(tot)) tot[k] += Array.isArray(r[k]) ? r[k].length : r[k];
   const pct = r.sentences ? Math.round(100 * r.short.length / r.sentences) : 0;
   console.log(`${f.replace('.json', '').padEnd(28)} ${String(r.words).padStart(5)}  ${String(pct).padStart(5)}%  ${String(r.antithesis.length).padStart(4)}  ${String(r.colon.length).padStart(5)}  ${String(r.stock.length).padStart(5)}  ${String(r.zinger.length).padStart(6)}  ${(1000 * r.semicolon / Math.max(1, r.words)).toFixed(1).padStart(7)}  ${String(r.long.length).padStart(4)}  ${String(r.named.length).padStart(5)}  ${(r.words / Math.max(1, r.sentences)).toFixed(1).padStart(4)}`);
+  if (r.framing.length || r.trail.length) console.log(`    [soft] ${r.framing.length} framing openers, ${r.trail.length} trailing participial phrases`);
   const visible = c => c.replace(/^:::deeper[^\n]*\n[\s\S]*?\n:::\s*$/gm, '').split(/\s+/).filter(Boolean).length;
   for (const [i, s] of m.sections.entries()) { const v = visible(s.content); if (v > 400) console.log(`    [budget] section ${i + 1} "${s.title}": ${v} visible words (budget 400)`); }
   for (const q of [...m.sections.map(s => s.question).filter(Boolean), ...m.quiz]) { const w = q.explanation.split(/\s+/).length; if (w > 65) console.log(`    [budget] explanation ${w} words (target 60): ${q.question.slice(0, 60)}...`); }
   if (m.quiz.length > 5) console.log(`    [budget] quiz has ${m.quiz.length} questions (cap 5)`);
-  if (verbose) for (const k of ['named', 'long', 'stock', 'antithesis', 'zinger', 'short', 'colon']) for (const s of r[k]) console.log(`    [${k}] ${s}`);
+  if (verbose) for (const k of ['named', 'long', 'stock', 'antithesis', 'framing', 'trail', 'zinger', 'short', 'colon']) for (const s of r[k]) console.log(`    [${k}] ${s}`);
 }
 const pct = Math.round(100 * tot.short / Math.max(1, tot.sentences));
 console.log(`${'TOTAL'.padEnd(28)} ${String(tot.words).padStart(5)}  ${String(pct).padStart(5)}%  ${String(tot.antithesis).padStart(4)}  ${String(tot.colon).padStart(5)}  ${String(tot.stock).padStart(5)}  ${String(tot.zinger).padStart(6)}  ${(1000 * tot.semicolon / tot.words).toFixed(1).padStart(7)}  ${String(tot.long).padStart(4)}  ${String(tot.named).padStart(5)}  ${(tot.words / tot.sentences).toFixed(1).padStart(4)}`);

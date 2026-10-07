@@ -28,8 +28,12 @@ These patterns make text read as machine-written. `node scripts/style-loc.mjs <m
 | Triplet rhythm everywhere | "a weak hand, a blind half-field, numb skin" in every paragraph | Use a list of three when there really are three; otherwise one good example beats three quick ones. |
 | Rhetorical-question chains | "Is the deficit real? Where is it? What is it?" | One question, if it's the reader's real question, then answer it in prose. |
 | Short dramatic sentences for emphasis | "In a child it does not." | Let emphasis come from the content, inside a full sentence. |
+| Riddle-like or pithy headings | "Lesions that go quiet, and lesions that fire", "What only the cortex can lose" | Plain descriptive headings: "Negative and positive signs", "Signs of cortical damage". |
+| Throat-clearing and framing openers | "It is worth noting that...", "Crucially, ...", "While X, Y." | Start with the fact. |
+| Trailing participial phrases | "...the reflex is lost, leaving the arm floppy." | End the sentence and start a new one: "The reflex is lost, and the arm is floppy." |
+| Hedged or balanced endings | "Ultimately it depends on the context." | Take a position and stop. |
 
-Watch for new tics too. A rewrite that opens every section with "Picture..." or ends every section with a reflective sentence has only swapped one formula for another. Vary the openings: a historical scene, a case, a question a resident actually asks, a surprising observation from a book, or a plain statement of the problem.
+Apply these with a light hand. A heading or sentence that reads naturally can stay. Watch for new tics too. A rewrite that opens every section with "Picture..." or ends every section with a reflective sentence has only swapped one formula for another. Vary the openings: a historical scene, a case, a question a resident actually asks, a surprising observation from a book, or a plain statement of the problem.
 
 ## What to keep
 

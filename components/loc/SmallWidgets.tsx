@@ -177,7 +177,7 @@ export function ComaLevels({ accent }: { accent: string }) {
   }, [stage]);
   const pick = (sid: string, oid: string) => { setStage(null); setChoice(c => ({ ...c, [sid]: c[sid] === oid ? '' : oid })); };
   return (
-    <WidgetFrame accent={accent} label="Coma as a level-finder" subtitle="Choose what you see for each sign. When they agree on one level, a structural lesion there is likely, and when they disagree, a metabolic cause becomes more likely."
+    <WidgetFrame accent={accent} label="Finding the level in coma" subtitle="Choose what you see for each sign. When they agree on one level, a structural lesion there is likely, and when they disagree, a metabolic cause becomes more likely."
       footnote="After Pearl 2014, pp. 94-98, and Brazis 2011, pp. 608-613. Describe responsiveness in plain words rather than labels (Brazis 2011, p. 603). The herniation sequence shows a level that moves: the signs descend rather than scatter.">
       <div className="grid gap-4 md:grid-cols-[1fr_minmax(0,220px)]">
         <div className="space-y-3">
@@ -215,7 +215,7 @@ export function WhereWhen({ accent }: { accent: string }) {
   const t = TEMPOS.find(x => x.id === tempo)!;
   const ex = WHERE_WHEN[level]?.[tempo] ?? [];
   return (
-    <WidgetFrame accent={accent} label="Where × when → what" subtitle="The examination gives you the level and the time course suggests the mechanism. Choose both to see the causes that fit a child at that address."
+    <WidgetFrame accent={accent} label="The where-by-when grid" subtitle="The examination gives you the level and the time course suggests the mechanism. Choose both to see the causes that fit a child at that address."
       footnote="Tempo and mechanism after Brazis 2011, p. 4, with the child's own tempos added (static, regression). Examples are illustrative, not a complete differential.">
       <div className="mb-3"><Label>Where</Label><div className="flex flex-wrap gap-1.5">{LEVELS.map(l => <Chip key={l.id} accent={accent} on={level === l.id} onClick={() => setLevel(l.id)}>{l.short}</Chip>)}</div></div>
       <div className="mb-3"><Label>When</Label><div className="flex flex-wrap gap-1.5">{TEMPOS.map(x => <Chip key={x.id} accent={accent} on={tempo === x.id} onClick={() => setTempo(x.id)}>{x.name}</Chip>)}</div></div>

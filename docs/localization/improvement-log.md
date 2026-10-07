@@ -34,6 +34,11 @@
 
 ## History
 
+### 2026-10-07 · v11: budgets applied to every module, plainer headings
+- **Target:** owner approved the Module 3 pilot and asked for a light-touch pass on remaining AI tells: riddle-like or pithy headings, throat-clearing and framing openers, rhetorical balance, trailing participial phrases, hedged endings.
+- **Change:** all 12 modules now meet the budgets. Visible prose went from 30,738 to 26,378 words, with sections over 400 words down from 51 of 71 to 0. Explanations went from 13,684 to 7,997 words (median 94 → 61), and quiz questions from 75 to 60, dropping the ones that repeated an inline question or the prose. There are 15 Go deeper boxes. Most pithy section titles and subheadings were replaced with descriptive ones, and five widget labels were renamed to match. Corrections: the reflex text now matches the figure's root ranges (knee L2-L4, ankle S1-S2), and Thomas Bayes is now described as a Presbyterian minister rather than a vicar. The style checker now flags framing openers and trailing participles, and no longer counts list items as sentences. Every citation was kept.
+- **Outcome:** local commit, awaiting owner review.
+
 ### 2026-10-07 · v10: length budgets, Go deeper, Module 3 pilot
 - **Target:** owner found the didactics heavy. Agreed budgets: sections under 400 words, explanations about 60, quizzes capped at 5, occasional Go deeper boxes, and lists where they help.
 - **Change:** `:::deeper Title … :::` blocks in the shared renderer, shown as closed boxes. The style checker and validator now enforce the budgets. The preservation checker accepts a trimmed quiz, matching the questions that remain by their correct option. Module 3 pilot: sections went from 557/467/457/429/378 to 396/340/396/336/378 words, and explanations from a median of about 89 to about 61. Two Go deeper boxes: dorsal rhizotomy, and why the forehead rule leaks. The spinal-shock quiz question was dropped because the section 4 question covers the same ground. Every citation was kept.

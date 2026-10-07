@@ -66,7 +66,7 @@ export function Pretest({ accent }: { accent: string }) {
   }, [f]);
   const colour = { tp: accent, fn: '#fff', fp: '#f59e0b', tn: '#e2e8f0' } as const;
   return (
-    <WidgetFrame accent={accent} label="The exam as a prior" subtitle="Choose a test and how well the examination predicted the finding, and watch how much the same positive report is worth for a child like this one."
+    <WidgetFrame accent={accent} label="Pretest probability" subtitle="Choose a test and how well the examination predicted the finding, and watch how much the same positive report is worth for a child like this one."
       footnote={<>Bayes in odds form: post-test odds = pretest odds × likelihood ratio (Gill 2005). False-positive rates are published: incidental MRI findings in 21.1% of 9-10-year-olds (Li 2021); epileptiform discharges in 6.5% of healthy 6-13-year-olds (Borusiak 2010). Pretest probabilities and sensitivities are illustrative; move them.</>}>
       <div className="grid gap-3 sm:grid-cols-2 mb-3">
         <div><Label>Test</Label><Segmented accent={accent} value={tid} onChange={setTid} options={TESTS.map(t => ({ id: t.id, label: t.name }))} /></div>
@@ -221,7 +221,7 @@ export function MapSort({ accent }: { accent: string }) {
   const r = pick ? checkMap(c.id, pick) : null;
   const go = (d: number) => { setK((k + d + MAP_CASES.length) % MAP_CASES.length); setPick(null); };
   return (
-    <WidgetFrame accent={accent} label="Which map does the deficit obey?" subtitle="Strokes, neuropathies, root lesions and tumors each respect a different map of the body. Read the pattern and decide which map it follows."
+    <WidgetFrame accent={accent} label="Which map fits the deficit" subtitle="Strokes, neuropathies, root lesions and tumors each respect a different map of the body. Read the pattern and decide which map it follows."
       footnote="Maps after Pearl 2014 (pages on each answer). Cases are teaching sketches, not complete differentials.">
       <div className="flex items-center gap-2 mb-2">
         <button onClick={() => go(-1)} className="px-2 py-1 rounded-md border border-slate-200 bg-white text-[12px]" aria-label="Previous pattern">←</button>
@@ -252,7 +252,7 @@ export function AphasiaSwitches({ accent }: { accent: string }) {
   const [s, setS] = useState<Switches>({ fluent: false, comprehends: true, repeats: false, names: false });
   const a = classify(s);
   return (
-    <WidgetFrame accent={accent} label="Aphasia as four switches" subtitle="Every patient below describes the same picture. Set the four bedside tests and see which syndrome, and which part of the brain, fits the result."
+    <WidgetFrame accent={accent} label="Aphasia at the bedside" subtitle="Every patient below describes the same picture. Set the four bedside tests and see which syndrome, and which part of the brain, fits the result."
       footnote="After Pearl 2014, p. 20 (Table 2.1), with conduction and mixed transcortical aphasia from Brazis 2011, pp. 524 and 448. The adult classification; acquired aphasia in children does not always follow it. Sample speech is ours.">
       <div className="grid gap-2 sm:grid-cols-2 mb-3">
         {SWITCHES.map(w => (
