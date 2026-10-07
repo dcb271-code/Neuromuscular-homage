@@ -73,9 +73,10 @@ for (const f of files) {
   const answers = [];
   (m.sections || []).forEach((s, i) => {
     const where = `section ${i + 1} "${s.title}"`;
-    const words = (s.content || '').split(/\s+/).length;
+    const words = (s.content || '').replace(/^:::deeper[^\n]*\n[\s\S]*?\n:::\s*$/gm, '').split(/\s+/).length;
     if (words < 120) fail(f, `${where}: prose is ${words} words (want ≥120)`);
-    if (words > 700) warn(f, `${where}: prose is ${words} words; consider splitting`);
+    if (words > 400) warn(f, `${where}: ${words} visible words (budget 400)`);
+    if ((s.content.match(/^:::deeper/gm) || []).length !== (s.content.match(/^:::\s*$/gm) || []).length) fail(f, `${where}: unbalanced :::deeper block`);
     if (!s.keyPoints || s.keyPoints.length < 3 || s.keyPoints.length > 5) fail(f, `${where}: keyPoints ${s.keyPoints?.length ?? 0} (want 3–5)`);
     checkMarkup(f, s.content || '', where);
     if (s.figure && !WIDGETS.includes(s.figure) && !/^case:[a-z0-9-]+$/.test(s.figure)) fail(f, `${where}: unknown widget ${s.figure}`);
@@ -86,6 +87,7 @@ for (const f of files) {
     if ((s.content || '').split('\n').some(l => l.trim().startsWith('|') && l.includes('[['))) fail(f, `${where}: wiki-link inside a table row`);
   });
   if ((m.quiz || []).length < 5) fail(f, `quiz has ${(m.quiz || []).length} questions (want ≥5)`);
+  if ((m.quiz || []).length > 5) warn(f, `quiz has ${m.quiz.length} questions (cap is 5)`);
   (m.quiz || []).forEach((q, i) => { checkQuestion(f, q, `quiz ${i + 1}`); answers.push(q.answer); });
   const distinct = new Set(answers);
   if (answers.length >= 4 && distinct.size < 3) fail(f, `answer key uses only positions ${[...distinct].join(',')} (shuffle them)`);

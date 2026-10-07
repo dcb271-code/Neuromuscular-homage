@@ -41,7 +41,14 @@ Watch for new tics too. A rewrite that opens every section with "Picture..." or 
 
 ## Length
 
-A rewritten section may be up to about 20% longer than the original, and must stay under 650 words (the validator stops at 700). Key points stay as 3 to 5 plain, complete sentences that a reader could flag for review; they summarize, they don't perform.
+Budgets (2026-10-07):
+- **Sections:** under 400 visible words. Text inside a Go deeper block doesn't count.
+- **Explanations:** about 60 words. Give the reason for the right answer and dismiss the distractors in a clause each. The checker flags anything over 65.
+- **Quizzes:** 5 questions at most. When trimming, drop the one that repeats a section's inline question.
+- **Go deeper:** for material that is genuinely interesting but not needed to follow the section. Use at most one per section, and not in every section. The syntax is a line `:::deeper Title`, then the text, then a line `:::`. It renders as a closed box headed "Go deeper: Title".
+- **Lists:** turn a paragraph into a list only when it already walks through parallel items.
+
+Key points stay as 3 to 5 plain, complete sentences that a reader could flag for review. They summarize, they don't perform.
 
 ## Checks
 

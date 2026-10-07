@@ -33,8 +33,12 @@ for (const f of files) {
     if (!!s.discussion !== !!c.discussion) msgs.push(`section ${i + 1}: discussion flag changed`);
     if (s.question && (!c.question || s.question.answer !== c.question.answer || s.question.options.length !== c.question.options.length)) msgs.push(`section ${i + 1}: inline question answer/options changed`);
   });
-  if (old.quiz.length !== cur.quiz.length) msgs.push(`quiz count ${old.quiz.length} → ${cur.quiz.length}`);
-  old.quiz.forEach((q, i) => { const c = cur.quiz[i]; if (!c || c.answer !== q.answer || c.options.length !== q.options.length) msgs.push(`quiz ${i + 1}: answer/options changed`); });
+  // A quiz may be trimmed (the cap is 5): each remaining question is matched to its old self by
+  // its correct option, and must keep that answer and option count.
+  const key = q => q.options[q.answer];
+  if (cur.quiz.length > old.quiz.length) msgs.push(`quiz count ${old.quiz.length} → ${cur.quiz.length}`);
+  cur.quiz.forEach((c, i) => { const q = old.quiz.find(o => key(o) === key(c)); if (!q || c.answer !== q.answer || c.options.length !== q.options.length) msgs.push(`quiz ${i + 1}: answer/options changed`); });
+  const dropped = old.quiz.filter(q => !cur.quiz.some(c => key(c) === key(q)));
   for (const k of ['id', 'number', 'track', 'color', 'core']) if (JSON.stringify(old[k]) !== JSON.stringify(cur[k])) msgs.push(`${k} changed`);
   if (JSON.stringify(old.sources) !== JSON.stringify(cur.sources)) msgs.push(`sources list changed`);
   if (old.opener?.source !== cur.opener?.source) msgs.push(`opener source changed`);
@@ -44,6 +48,7 @@ for (const f of files) {
   if (lost.length) msgs.push(`citations lost: ${lost.join(' | ')}`);
   problems += msgs.length;
   console.log(`${msgs.length ? '✗' : '✓'} ${f}${added.length ? `  (new citations to review: ${added.join(' | ')})` : ''}`);
+  dropped.forEach(q => console.log(`    quiz question dropped: ${q.question.slice(0, 70)}...`));
   msgs.forEach(m => console.log('    ' + m));
 }
 console.log(problems ? `\n${problems} problem(s)` : '\nnothing lost');

@@ -57,11 +57,15 @@ let tot = { words: 0, short: 0, antithesis: 0, colon: 0, stock: 0, zinger: 0, se
 console.log('module                       words  short%  anti  colon  stock  zinger  semi/1k  long  named  avg');
 for (const f of files) {
   const m = JSON.parse(readFileSync(dir + f, 'utf8'));
-  const texts = [m.why, m.description, m.opener?.parable, m.opener?.history, ...m.sections.map(s => s.content)].filter(Boolean);
+  const texts = [m.why, m.description, m.opener?.parable, m.opener?.history, ...m.sections.map(s => s.content.replace(/^:::deeper[^\n]*\n|^:::\s*$/gm, ''))].filter(Boolean);
   const r = scoreText(texts.join('\n\n'));
   for (const k of Object.keys(tot)) tot[k] += Array.isArray(r[k]) ? r[k].length : r[k];
   const pct = r.sentences ? Math.round(100 * r.short.length / r.sentences) : 0;
   console.log(`${f.replace('.json', '').padEnd(28)} ${String(r.words).padStart(5)}  ${String(pct).padStart(5)}%  ${String(r.antithesis.length).padStart(4)}  ${String(r.colon.length).padStart(5)}  ${String(r.stock.length).padStart(5)}  ${String(r.zinger.length).padStart(6)}  ${(1000 * r.semicolon / Math.max(1, r.words)).toFixed(1).padStart(7)}  ${String(r.long.length).padStart(4)}  ${String(r.named.length).padStart(5)}  ${(r.words / Math.max(1, r.sentences)).toFixed(1).padStart(4)}`);
+  const visible = c => c.replace(/^:::deeper[^\n]*\n[\s\S]*?\n:::\s*$/gm, '').split(/\s+/).filter(Boolean).length;
+  for (const [i, s] of m.sections.entries()) { const v = visible(s.content); if (v > 400) console.log(`    [budget] section ${i + 1} "${s.title}": ${v} visible words (budget 400)`); }
+  for (const q of [...m.sections.map(s => s.question).filter(Boolean), ...m.quiz]) { const w = q.explanation.split(/\s+/).length; if (w > 65) console.log(`    [budget] explanation ${w} words (target 60): ${q.question.slice(0, 60)}...`); }
+  if (m.quiz.length > 5) console.log(`    [budget] quiz has ${m.quiz.length} questions (cap 5)`);
   if (verbose) for (const k of ['named', 'long', 'stock', 'antithesis', 'zinger', 'short', 'colon']) for (const s of r[k]) console.log(`    [${k}] ${s}`);
 }
 const pct = Math.round(100 * tot.short / Math.max(1, tot.sentences));

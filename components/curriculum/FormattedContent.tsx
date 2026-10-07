@@ -24,7 +24,31 @@ function renderInline(text: string, accent: string, basePath = '/eeg'): React.Re
 
 const P = 'mb-4 leading-[1.8] last:mb-0';
 
-export function FormattedContent({ content, accent = '#2563eb', className = '', basePath = '/eeg' }: { content: string; accent?: string; className?: string; basePath?: string }) {
+// "Go deeper" blocks: a line ":::deeper Title", any content, then a line ":::". Rendered as a
+// collapsed panel so optional depth does not lengthen the section a reader must get through.
+const DEEPER = /^:::deeper[ \t]+(.+)\n([\s\S]*?)\n:::[ \t]*$/gm;
+
+export function FormattedContent(props: { content: string; accent?: string; className?: string; basePath?: string }) {
+  const { content, accent = '#2563eb', className = '', basePath = '/eeg' } = props;
+  if (!/^:::deeper/m.test(content)) return <Blocks {...props} />;
+  const parts: React.ReactNode[] = []; let last = 0; let k = 0;
+  for (const m of content.matchAll(DEEPER)) {
+    const before = content.slice(last, m.index).trim();
+    if (before) parts.push(<Blocks key={k++} content={before} accent={accent} basePath={basePath} />);
+    parts.push(
+      <details key={k++} className="mb-5 rounded-xl border px-4 py-3" style={{ borderColor: accent + '40', background: accent + '06' }}>
+        <summary className="cursor-pointer text-[13.5px] font-semibold" style={{ color: accent }}>Go deeper: {m[1]}</summary>
+        <div className="mt-3"><Blocks content={m[2].trim()} accent={accent} basePath={basePath} className="text-[14px]" /></div>
+      </details>,
+    );
+    last = (m.index ?? 0) + m[0].length;
+  }
+  const rest = content.slice(last).trim();
+  if (rest) parts.push(<Blocks key={k++} content={rest} accent={accent} basePath={basePath} />);
+  return <div className={className}>{parts}</div>;
+}
+
+function Blocks({ content, accent = '#2563eb', className = '', basePath = '/eeg' }: { content: string; accent?: string; className?: string; basePath?: string }) {
   const blocks = content.split(/\n\n+/);
   return (
     <div className={`text-[15px] text-slate-600 ${className}`}>

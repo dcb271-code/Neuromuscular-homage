@@ -34,6 +34,11 @@
 
 ## History
 
+### 2026-10-07 · v10: length budgets, Go deeper, Module 3 pilot
+- **Target:** owner found the didactics heavy. Agreed budgets: sections under 400 words, explanations about 60, quizzes capped at 5, occasional Go deeper boxes, and lists where they help.
+- **Change:** `:::deeper Title … :::` blocks in the shared renderer, shown as closed boxes. The style checker and validator now enforce the budgets. The preservation checker accepts a trimmed quiz, matching the questions that remain by their correct option. Module 3 pilot: sections went from 557/467/457/429/378 to 396/340/396/336/378 words, and explanations from a median of about 89 to about 61. Two Go deeper boxes: dorsal rhizotomy, and why the forehead rule leaks. The spinal-shock quiz question was dropped because the section 4 question covers the same ground. Every citation was kept.
+- **Outcome:** local commit, awaiting owner review before the other modules.
+
 ### 2026-10-06 · v9: accuracy review of the interactive figures
 - **Cord simulator** checked against Brazis 2011, pp. 102-118 and Pearl 2014, pp. 66-71: offsets, hemisection, anterior and central patterns confirmed. Added: phrenic risk at C5 and above (Pearl p. 66), autonomic dysreflexia above T6 (Brazis p. 106), light touch largely spared in hemisection (p. 106), flaccid onset and girdle pain in anterior spinal artery syndrome (p. 111), traumatic central cord syndrome as a different pattern (p. 107). Saddle corrected to S3-S5 (p. 117); the front view omits S2.
 - **Visual fields** confirmed (Pearl pp. 27-28); added the central scotoma of partial optic nerve lesions and the congruity rule.
