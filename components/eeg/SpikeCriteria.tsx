@@ -6,7 +6,7 @@
 import { useId, useMemo, useState } from 'react';
 import {
   CASES, CRITERIA, CRITERION_IDS, WINDOW_S, classify, countCriteria, synthesize,
-  KURAL_SENSITIVITY, KURAL_SPECIFICITY, type Criteria, type CriterionId, type SpikeCase, type Synth,
+  KURAL_SENSITIVITY, KURAL_SPECIFICITY, KURAL4_SENSITIVITY, KURAL4_SPECIFICITY, type Criteria, type CriterionId, type SpikeCase, type Synth,
 } from '@/src/eeg/spike-model';
 import { pm } from '@/src/eeg/sources';
 
@@ -25,7 +25,7 @@ function Conclusion({ count }: { count: number }) {
     <>It meets the glossary threshold of 4 (<Cite k="kane2017" label="Kane 2017" />) and the stricter threshold of 5, which gave {KURAL_SPECIFICITY}% specificity and {KURAL_SENSITIVITY}% sensitivity in validation (<Cite k="kural2020" label="Kural 2020" />). Call it epileptiform.</>
   );
   if (cls === 'search-for-fifth') return (
-    <>It meets the glossary threshold of 4 (<Cite k="kane2017" label="Kane 2017" />) but not the threshold of 5 that gave the best specificity (<Cite k="kural2020" label="Kural 2020" />). Search carefully for a fifth criterion before calling it epileptiform.</>
+    <>It meets the glossary threshold of 4 (<Cite k="kane2017" label="Kane 2017" />) but not 5. In validation, a threshold of 4 gave {KURAL4_SENSITIVITY}% sensitivity but only {KURAL4_SPECIFICITY}% specificity (<Cite k="kural2020" label="Kural 2020" />), so 4 alone is not enough. Check whether a benign variant fits, look for a fifth criterion, and if doubt remains, do not call it epileptiform.</>
   );
   return <>It is below the glossary threshold of 4 (<Cite k="kane2017" label="Kane 2017" />). Do not call it epileptiform.</>;
 }

@@ -99,13 +99,17 @@ const GROUPS: { key: string; title: string; body: ReactNode }[] = [
       ['Fluctuating', '3 or more changes, no more than 1 minute apart, in frequency (by 0.5 Hz or more), morphology or location (by one electrode distance or more), that do not meet the evolution criteria.'],
       ['Static', 'Neither evolving nor fluctuating.'],
       ['Amplitude', 'A change in amplitude alone is neither.'],
+      ['Under 10 s', 'An evolving pattern at 4 Hz or less is called evolving (for example, evolving LRDA). Above 4 Hz it is a definite BIRD. At 10 seconds or more, evolution makes it a seizure.'],
     ]} />,
   },
   {
     key: 'sz', title: 'Seizure and status',
     body: <Rows rows={[
-      ['Electrographic seizure', 'Discharges averaging more than 2.5 Hz (more than 25 in 10 seconds) for 10 seconds or more, or any pattern with definite evolution lasting 10 seconds or more.'],
+      ['Electrographic seizure', 'Epileptiform discharges averaging more than 2.5 Hz (more than 25 in 10 seconds) for 10 seconds or more, or any pattern with definite evolution lasting 10 seconds or more. Sharply contoured discharges too long to be epileptiform still count.'],
       ['Electrographic status', 'An electrographic seizure lasting 10 continuous minutes or more, or seizures totaling 20% or more of any 60-minute period.'],
+      ['Electroclinical seizure', 'Any pattern, of any duration, with a definite clinical correlate time-locked to it, or with EEG and clinical improvement after a parenteral antiseizure medication.'],
+      ['Electroclinical status', 'The same 10 minutes or 20% of an hour, or 5 continuous minutes for a seizure with bilateral tonic-clonic activity.'],
+      ['Possible status', 'Possible electroclinical status is a continuum pattern lasting 10 continuous minutes or 20% of an hour that improves on EEG after a parenteral antiseizure medication, without clinical improvement.'],
     ]} />,
   },
   {
@@ -113,7 +117,7 @@ const GROUPS: { key: string; title: string; body: ReactNode }[] = [
     body: <>
       <p className="mb-2">Brief potentially ictal rhythmic discharges are focal or generalized rhythmic activity faster than 4 Hz, at least 6 waves, lasting from 0.5 to under 10 seconds, with no definite clinical correlate. They must not be a normal variant or part of burst suppression, and they need one more feature.</p>
       <Rows rows={[
-        ['Definite', 'Evolution, or the same morphology and location as the patient\'s discharges or seizures.'],
+        ['Definite', 'Evolution, or a similar morphology and location to the patient\'s epileptiform discharges or seizures.'],
         ['Possible', 'Sharply contoured, without either of those.'],
       ]} />
     </>,

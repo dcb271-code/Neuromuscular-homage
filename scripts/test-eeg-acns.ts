@@ -3,7 +3,7 @@
 //   npx tsx scripts/test-eeg-acns.ts
 import {
   MAIN_TERM_1, MAIN_TERM_2, PLUS_MODIFIERS, PREVALENCE, DURATION, FREQUENCIES, AMPLITUDE, SHARPNESS,
-  EVOLUTION, FLUCTUATION, ESZ, ESE, BIRDS, IIC_CRITERIA, SOURCE_KEY,
+  EVOLUTION, FLUCTUATION, ESZ, ESE, ECSE, BIRDS, IIC_CRITERIA, SOURCE_KEY,
   prevalenceFor, durationFor, plusAllowed, buildName, classify, classifyChoice, isStatus, seizureCriterion,
   birdStatus, issues, type ClassifyInput,
 } from '../src/eeg/acns-model';
@@ -44,6 +44,12 @@ t('fluctuation needs 3 changes no more than 60 s apart', FLUCTUATION.minChanges 
 t('seizure is >2.5 Hz for 10 s, status 10 min or 20%', ESZ.minHz === 2.5 && ESZ.minSec === 10 && ESE.continuousMin === 10 && ESE.burdenPct === 20);
 t('BIRDs >4 Hz, 0.5 to under 10 s, 6 waves', BIRDS.minHz === 4 && BIRDS.minSec === 0.5 && BIRDS.maxSec === 10 && BIRDS.minWaves === 6);
 t('three continuum criteria', IIC_CRITERIA.length === 3);
+t('continuum criterion 3 names LRDA, BIRDA, UIRDA, MfRDA and excludes GRDA', ['LRDA', 'BIRDA', 'UIRDA', 'MfRDA', 'never GRDA'].every(k => IIC_CRITERIA[2].includes(k)));
+t('continuum criterion 1 states more than 10 and up to 25 discharges in 10 s', IIC_CRITERIA[0].includes('more than 10 and up to 25'));
+t('evolution: no stability for 5 min or more', EVOLUTION.maxStaticMin === 5);
+t('fluctuation: 0.5 Hz steps, 3 cycles each', FLUCTUATION.minFreqStepHz === 0.5 && FLUCTUATION.minCyclesEach === 3);
+t('electroclinical status: 10 min, 20%, or 5 min with bilateral tonic-clonic activity', ECSE.continuousMin === 10 && ECSE.burdenPct === 20 && ECSE.bilateralTonicClonicMin === 5);
+t('+S needs a sharp feature at least once every 10 s', PLUS_MODIFIERS.find(p => p.code === '+S')!.meaning.includes('once every 10 seconds'));
 
 // ── Names
 t('Abundant LPDs+F at 1.5 Hz', buildName({ loc: 'L', pattern: 'PDs', plus: '+F', prevalence: 'Abundant', hz: 1.5 }) === 'Abundant LPDs+F at 1.5 Hz');

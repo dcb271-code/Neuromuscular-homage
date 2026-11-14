@@ -26,9 +26,9 @@ export const MAIN_TERM_1: { abbr: Loc; name: string; meaning: string }[] = [
 // ── Main term 2 (C2): what
 export type Pattern = 'PDs' | 'RDA' | 'SW';
 export const MAIN_TERM_2: { abbr: Pattern; name: string; meaning: string }[] = [
-  { abbr: 'PDs', name: 'Periodic discharges', meaning: 'Repeating discharges of uniform shape with a clear interval between them, at nearly regular intervals.' },
-  { abbr: 'RDA', name: 'Rhythmic delta activity', meaning: 'Repeating waves of uniform shape with no interval between them, at 0.5 to 4 Hz.' },
-  { abbr: 'SW', name: 'Spike-and-wave or sharp-and-wave', meaning: 'Spike, polyspike or sharp wave followed by a slow wave, repeating with no interval between complexes.' },
+  { abbr: 'PDs', name: 'Periodic discharges', meaning: 'Repeating discharges of uniform shape with a clear interval between them, at nearly regular intervals (cycle length varying by under 50% between most consecutive cycles). A discharge lasts under 0.5 s, or longer with no more than 3 phases.' },
+  { abbr: 'RDA', name: 'Rhythmic delta activity', meaning: 'Repeating waves of uniform shape with no interval between them, at 0.5 to 4 Hz. Irregular or polymorphic delta is not RDA.' },
+  { abbr: 'SW', name: 'Spike-and-wave or sharp-and-wave', meaning: 'Spike, polyspike or sharp wave consistently followed by a slow wave, repeating with no interval between complexes. With an interval, each complex is a periodic discharge and the pattern is PDs.' },
 ];
 /** A pattern counts as rhythmic or periodic only if it continues for at least 6 cycles (C1 box). */
 export const MIN_CYCLES = 6;
@@ -38,7 +38,7 @@ export type Plus = '' | '+F' | '+R' | '+S' | '+FR' | '+FS';
 export const PLUS_MODIFIERS: { code: Exclude<Plus, ''>; meaning: string; appliesTo: Pattern[] }[] = [
   { code: '+F', meaning: 'Superimposed fast activity, theta or faster, that is part of the pattern and not of the background.', appliesTo: ['PDs', 'RDA'] },
   { code: '+R', meaning: 'Superimposed rhythmic or quasi-rhythmic delta activity.', appliesTo: ['PDs'] },
-  { code: '+S', meaning: 'Associated sharp waves or spikes, or sharp contour, at least once every 10 seconds.', appliesTo: ['RDA'] },
+  { code: '+S', meaning: 'Associated sharp waves or spikes, or sharp contour, at least once every 10 seconds and not as part of an SW pattern.', appliesTo: ['RDA'] },
   { code: '+FR', meaning: 'Both +F and +R.', appliesTo: ['PDs'] },
   { code: '+FS', meaning: 'Both +F and +S.', appliesTo: ['RDA'] },
 ];
@@ -107,25 +107,39 @@ export const EVOLUTION = {
   minFreqStepHz: 0.5,     // frequency changes in the same direction by at least 0.5 Hz
   minCyclesEach: 3,       // each frequency, morphology or location persists at least 3 cycles
   maxStaticMin: 5,        // not evolution if the feature stays unchanged for 5 minutes or more
+  // The 2 changes must be in the same category (frequency, morphology or location). Location
+  // evolution means spreading into or out of at least 2 standard 10-20 electrode positions.
+  // Under 10 s, an evolving pattern at 4 Hz or less is an evolving RPP (for example "evolving RDA"),
+  // and above 4 Hz it is a definite BIRD. At 10 s or more it is a seizure by criterion B.
 };
 export const FLUCTUATION = {
   minChanges: 3,          // 3 or more changes
   maxGapSec: 60,          // not more than 1 minute apart
   minFreqStepHz: 0.5,
   minLocationStep: '1 standard interelectrode distance',
+  minCyclesEach: 3,       // each frequency, morphology or location persists at least 3 cycles
 };
 /** Amplitude change alone is neither evolution nor fluctuation. */
 
 // ── Seizure, status and BIRDs (D, E)
+// ESz criterion A also counts sharply contoured discharges that are too long to be epileptiform
+// (the paper's example is more than 25 sharply contoured discharges in 10 s).
 export const ESZ = { minHz: 2.5, minSec: 10 };          // >2.5 Hz (more than 25 in 10 s) for at least 10 s, or evolution for at least 10 s
 export const ESE = { continuousMin: 10, burdenPct: 20 }; // at least 10 continuous minutes, or at least 20% of any 60-minute period
-export const BIRDS = { minHz: 4, minSec: 0.5, maxSec: 10, minWaves: 6 }; // >4 Hz, at least 0.5 s and under 10 s
+// Electroclinical status (D4): the same thresholds, or 5 continuous minutes for an ongoing seizure with
+// bilateral tonic-clonic motor activity. Possible ECSE (D4b): an IIC pattern for 10 continuous minutes or
+// 20% of an hour that improves on EEG after a parenteral antiseizure medication without clinical improvement.
+export const ECSE = { continuousMin: 10, burdenPct: 20, bilateralTonicClonicMin: 5 };
+// BIRDs: focal or generalized rhythmic activity >4 Hz, at least 6 waves at a regular rate, at least 0.5 s
+// and under 10 s, not a normal pattern or benign variant, not part of burst suppression or burst
+// attenuation, no definite clinical correlate.
+export const BIRDS = { minHz: 4, minSec: 0.5, maxSec: 10, minWaves: 6 };
 
 // ── Ictal-interictal continuum (F), plain statements used by the card.
 export const IIC_CRITERIA = [
-  'PDs or SW averaging more than 1 and up to 2.5 Hz over 10 seconds.',
-  'PDs or SW averaging 0.5 to 1 Hz over 10 seconds, with a plus modifier or fluctuation.',
-  'Lateralized RDA (L, BI, UI or Mf, never G) averaging more than 1 Hz for at least 10 seconds, with a plus modifier or fluctuation.',
+  'PDs or SW averaging more than 1 and up to 2.5 Hz over 10 seconds (more than 10 and up to 25 discharges in 10 seconds).',
+  'PDs or SW averaging 0.5 to 1 Hz over 10 seconds (5 to 10 discharges), with a plus modifier or fluctuation. SW takes no plus modifier, so SW qualifies here only by fluctuation.',
+  'Any lateralized RDA (LRDA, BIRDA, UIRDA or MfRDA, never GRDA) averaging more than 1 Hz for at least 10 seconds (at least 10 waves in 10 seconds), with a plus modifier or fluctuation.',
 ];
 export const IIC_EXCLUSION = 'The pattern does not meet criteria for an electrographic seizure or electrographic status epilepticus.';
 
@@ -194,6 +208,9 @@ export function seizureCriterion(x: Pick<ClassifyInput, 'pattern' | 'hz' | 'chan
   if (x.durationSec < ESZ.minSec) return null;
   if (x.change === 'evolving') return 'B';
   // Criterion A is written for epileptiform discharges, so it is applied to PDs and SW, not to RDA.
+  // Judgment call: the paper states the ">2.5 Hz for 10 s is a seizure" rule explicitly for PDs and SW
+  // and is silent on 3 to 4 Hz RDA lasting 10 s or more (it only limits 3 to 4 Hz labels to very brief
+  // runs). The lenient reading is kept, and the builder does not offer 3 to 4 Hz RDA beyond very brief.
   if (x.pattern !== 'RDA' && x.hz > ESZ.minHz) return 'A';
   return null;
 }
@@ -271,7 +288,7 @@ export interface BirdInput {
   durationSec: number;
   waves?: number;                   // waves at a regular rate, at least 6
   clinicalCorrelate: boolean;
-  feature: BirdFeature;             // matches-patient = similar morphology and location as the patient's discharges or seizures
+  feature: BirdFeature;             // matches-patient = similar morphology and location to the patient's epileptiform discharges or seizures
 }
 export function birdStatus(b: BirdInput): { bird: 'definite' | 'possible' | 'no'; reason: string } {
   if (b.hz <= BIRDS.minHz) return { bird: 'no', reason: 'BIRDs are faster than 4 Hz.' };
@@ -281,7 +298,7 @@ export function birdStatus(b: BirdInput): { bird: 'definite' | 'possible' | 'no'
   if (waves < BIRDS.minWaves) return { bird: 'no', reason: 'BIRDs need at least 6 waves at a regular rate.' };
   if (b.clinicalCorrelate) return { bird: 'no', reason: 'With a definite clinical correlate, the run is an electroclinical seizure, not a BIRD.' };
   if (b.feature === 'evolution') return { bird: 'definite', reason: 'An evolving run is a definite BIRD.' };
-  if (b.feature === 'matches-patient') return { bird: 'definite', reason: "A run with the same morphology and location as the patient's discharges or seizures is a definite BIRD." };
+  if (b.feature === 'matches-patient') return { bird: 'definite', reason: "A run with a similar morphology and location to the patient's epileptiform discharges or seizures is a definite BIRD." };
   if (b.feature === 'sharply-contoured') return { bird: 'possible', reason: 'A sharply contoured run without evolution or a match to the patient is a possible BIRD.' };
   return { bird: 'no', reason: 'BIRDs need evolution, a match to the patient, or sharp contour.' };
 }

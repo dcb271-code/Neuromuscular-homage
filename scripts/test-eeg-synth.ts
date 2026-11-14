@@ -24,20 +24,26 @@ const a1 = renderPage('hypsarrhythmia', { seed: 7 }), a2 = renderPage('hypsarrhy
 t('same seed gives the same output', a1.channels.every((c, i) => c.data.every((v, n) => v === a2.channels[i].data[n])));
 t('a different seed gives different output', a1.channels[0].data.some((v, n) => v !== a3.channels[0].data[n]));
 
-// ── Normal child: posterior dominant rhythm near 9 Hz
+// ── Normal child: posterior dominant rhythm near 9 Hz, about 50 to 100 µV
 const pdr = dominantFrequency(ch(bp, 'P3-O1'), 6, 13);
 t('normal child: PDR at O1 is 8.5 to 9.5 Hz', pdr >= 8.5 && pdr <= 9.5, `${pdr.toFixed(2)} Hz`);
 const pdrPost = bandPower(ch(bp, 'P3-O1'), 8, 10), pdrFront = bandPower(ch(bp, 'Fp1-F3'), 8, 10);
+const o1pp = peakToPeak(ch(renderPage('normal-child', { montage: 'average' }), 'O1-Avg')), t5o1 = peakToPeak(ch(bp, 'T5-O1'));
+t('normal child: PDR amplitude is in the pediatric range (about 50 to 120 µV)', o1pp >= 50 && o1pp <= 120 && t5o1 >= 50 && t5o1 <= 120, `O1-Avg ${o1pp.toFixed(0)}, T5-O1 ${t5o1.toFixed(0)}`);
 t('normal child: alpha is larger posteriorly than frontally', pdrPost > 4 * pdrFront, `${pdrPost.toFixed(1)} vs ${pdrFront.toFixed(1)}`);
 
 // ── 3 Hz spike-wave
 const abs = renderPage('absence');
-const absF = dominantFrequency(seg(ch(abs, 'F3-C3'), 2.4, 7.4), 1, 8);
+const absF = dominantFrequency(seg(ch(abs, 'F3-C3'), 1.6, 8.6), 1, 8);
 t('absence: dominant frequency during the burst is 2.5 to 4 Hz', absF >= 2.5 && absF <= 4, `${absF.toFixed(2)} Hz`);
 const cyc = abs.events.filter(e => e.label === 'spike').map(e => e.t);
 const meanF = (cyc.length - 1) / (cyc[cyc.length - 1] - cyc[0]);
 t('absence: mean spike repetition rate is 2.5 to 4 Hz', meanF >= 2.5 && meanF <= 4, meanF.toFixed(2));
-t('absence: burst is much larger than the background before it', peakToPeak(seg(ch(abs, 'F3-C3'), 3, 6)) > 3 * peakToPeak(seg(ch(abs, 'F3-C3'), 0.2, 2.2)));
+t('absence: burst is much larger than the background before it', peakToPeak(seg(ch(abs, 'F3-C3'), 3, 6)) > 3 * peakToPeak(seg(ch(abs, 'F3-C3'), 0.1, 1.4)));
+const firstF = 1 / (cyc[1] - cyc[0]), lastF = 1 / (cyc[cyc.length - 1] - cyc[cyc.length - 2]);
+t('absence: faster at onset than at the end, both within 2.5 to 4 Hz', firstF > lastF && firstF <= 4 && lastF >= 2.5, `${firstF.toFixed(2)} to ${lastF.toFixed(2)} Hz`);
+const absAvg = renderPage('absence', { montage: 'average' });
+t('absence: frontal predominance (Fz larger than O1 in average reference)', peakToPeak(seg(ch(absAvg, 'Fz-Avg'), 3, 6)) > 1.5 * peakToPeak(seg(ch(absAvg, 'O1-Avg'), 3, 6)));
 t('absence: discharge is seen in both hemispheres', peakToPeak(seg(ch(abs, 'F4-C4'), 3, 6)) > 0.7 * peakToPeak(seg(ch(abs, 'F3-C3'), 3, 6)));
 
 // ── Slow spike-wave
@@ -68,6 +74,15 @@ t('centrotemporal: horizontal dipole, T3 negative and F3 positive in average ref
 const hyp = renderPage('hypsarrhythmia', { montage: 'average' });
 const hypPP = Math.max(...hyp.channels.map(c => peakToPeak(c.data)));
 t('hypsarrhythmia: high voltage (some channel over 200 µV peak-to-peak)', hypPP > 200, hypPP.toFixed(0));
+// 2021 BASED score (Mytinger 2021): over 200 µV in most bipolar channels, excluding midline and
+// occipital, and over 300 µV in T3-T5 and T4-T6. Measured with HFF 15 Hz so the spikes count less.
+const hypB = renderPage('hypsarrhythmia', { filters: { ...DEFAULT_FILTERS, hff: 15 } });
+const lateral = hypB.channels.filter(c => !/^(Fz|Cz)|O[12]$/.test(c.label));
+const over200 = lateral.filter(c => peakToPeak(c.data) > 200).length;
+t('hypsarrhythmia: over 200 µV in most lateral bipolar channels', over200 > lateral.length / 2, `${over200}/${lateral.length}`);
+t('hypsarrhythmia: over 300 µV in T3-T5 and T4-T6', peakToPeak(ch(hypB, 'T3-T5')) > 300 && peakToPeak(ch(hypB, 'T4-T6')) > 300);
+const ctsAmp = peakToPeak(seg(ch(cts, 'F7-T3'), cts.events[0].t - 0.1, cts.events[0].t + 0.1));
+t('centrotemporal: spike amplitude 100 to 300 µV in F7-T3', ctsAmp >= 100 && ctsAmp <= 300, ctsAmp.toFixed(0));
 
 // ── Filters
 const lgsLow = renderPage('slow-spike-wave', { filters: { ...DEFAULT_FILTERS, lff: 0.3 } });

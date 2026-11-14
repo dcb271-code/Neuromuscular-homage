@@ -145,7 +145,8 @@ export function PatternViewer({ accent = '#2563eb' }: { accent?: string }) {
   const [montage, setMontage] = useState<MontageId>('bipolar');
   const [sens, setSens] = useState<number>(presetById(SYNDROME_IDS[0]).sensitivity);
   const preset = presetById(presetId);
-  const page = useMemo(() => renderPage(presetId, { montage }), [presetId, montage]);
+  // 0.5 Hz LFF: the ACNS pediatric guideline (Kuratani 2016) favors 0.3 to 0.6 Hz in young infants, and 0.5 Hz suits every age shown here.
+  const page = useMemo(() => renderPage(presetId, { montage, filters: { lff: 0.5, hff: 70, notch: false } }), [presetId, montage]);
   const choosePreset = (id: PresetId) => { setPresetId(id); setSens(presetById(id).sensitivity); };
 
   return (
@@ -164,7 +165,7 @@ export function PatternViewer({ accent = '#2563eb' }: { accent?: string }) {
         {preset.note}<Cite k={preset.sourceKey} />
       </p>
       <p className="mt-3 text-[11px] text-slate-400 leading-snug">
-        Synthetic, schematic tracing with filters at 1 and 70 Hz. It is not a patient recording, and real discharges vary more in shape, field and timing.
+        Synthetic, schematic tracing with filters at 0.5 and 70 Hz. It is not a patient recording, and real discharges vary more in shape, field and timing.
       </p>
     </Frame>
   );

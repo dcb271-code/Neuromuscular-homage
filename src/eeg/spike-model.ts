@@ -6,8 +6,15 @@
 // Sources (all already in src/eeg/sources.ts):
 //   kane2017  — the six criteria, the threshold of 4, spike 20 to under 70 ms, sharp wave
 //               70 to 200 ms, and the glossary entries for the named variants.
-//   kural2020 — the validation study: at least 5 of 6 gave 95.7% specificity and 81.5%
-//               sensitivity, and 5 was judged the best clinical threshold.
+//   kural2020 — the validation study (retrospective, blinded, 100 patients whose diagnosis was
+//               settled by video-EEG of their habitual events). Table 1: at least 4 of 6 gave
+//               96.30% sensitivity and 84.78% specificity, at least 5 of 6 gave 81.48% and
+//               95.65%, and 5 was judged optimal for clinical use. Interrater agreement was fair
+//               for criteria 3 (asymmetry) and 5 (disruption), the least reliable two (Table 2).
+//   krauss2005 — wicket rhythms are 6 to 11 Hz bursts.
+// Variant cases follow the owner's rule: score benign variants leniently. Where a criterion is
+// arguable for a variant (for example a vertex wave's sharp contour), it is scored not met and
+// the explanation says why and names the variant's identifying features.
 // Waveforms are schematic. Amplitudes and durations are chosen to sit inside the glossary ranges
 // where the glossary gives one, and are otherwise illustrative (noted per case).
 
@@ -15,13 +22,14 @@ export type CriterionId = 'morphology' | 'duration' | 'asymmetry' | 'slowWave' |
 
 export interface Criterion { id: CriterionId; n: number; name: string; definition: string }
 
-// Wording follows the numbered list in Module 5 (Kane 2017).
+// Wording follows the numbered list in Module 5 and the glossary entry "Epileptiform pattern"
+// (Kane 2017), which adds "(i.e. pointed peak)" to criterion 1.
 export const CRITERIA: Criterion[] = [
-  { id: 'morphology', n: 1, name: 'Sharp morphology', definition: 'Di- or triphasic, with a sharp or spiky morphology.' },
+  { id: 'morphology', n: 1, name: 'Sharp morphology', definition: 'Di- or triphasic, with a sharp or spiky morphology (a pointed peak).' },
   { id: 'duration', n: 2, name: 'Different duration', definition: 'Shorter or longer than the waves of the ongoing background.' },
   { id: 'asymmetry', n: 3, name: 'Asymmetric', definition: 'A sharply rising phase and a more slowly decaying one, or the reverse.' },
-  { id: 'slowWave', n: 4, name: 'After-going slow wave', definition: 'Followed by a slow wave.' },
-  { id: 'disruption', n: 5, name: 'Disrupts background', definition: 'Interrupts the activity around it.' },
+  { id: 'slowWave', n: 4, name: 'After-going slow wave', definition: 'Followed by an associated slow after-wave.' },
+  { id: 'disruption', n: 5, name: 'Disrupts background', definition: 'The background around it is disrupted by it.' },
   { id: 'field', n: 6, name: 'Cerebral field', definition: 'Negative and positive potentials spread across the scalp in a way that implies a source in the brain.' },
 ];
 
@@ -30,8 +38,10 @@ export const CRITERION_IDS: CriterionId[] = CRITERIA.map(c => c.id);
 /** Glossary threshold (Kane 2017) and the threshold with the best specificity (Kural 2020). */
 export const GLOSSARY_THRESHOLD = 4;
 export const STRICT_THRESHOLD = 5;
-export const KURAL_SPECIFICITY = 95.7; // %, at >= 5 of 6 (Kural 2020)
-export const KURAL_SENSITIVITY = 81.5; // %, at >= 5 of 6 (Kural 2020)
+export const KURAL_SPECIFICITY = 95.7; // %, at >= 5 of 6 (Kural 2020, Table 1: 95.65)
+export const KURAL_SENSITIVITY = 81.5; // %, at >= 5 of 6 (Kural 2020, Table 1: 81.48)
+export const KURAL4_SPECIFICITY = 84.8; // %, at >= 4 of 6 (Kural 2020, Table 1: 84.78)
+export const KURAL4_SENSITIVITY = 96.3; // %, at >= 4 of 6 (Kural 2020, Table 1: 96.30)
 
 /** Glossary durations (Kane 2017): spike 20 to under 70 ms, sharp wave 70 to 200 ms. */
 export const SPIKE_MS: [number, number] = [20, 70];
@@ -45,8 +55,10 @@ export function countCriteria(c: Criteria): number {
   return CRITERION_IDS.reduce((n, id) => n + (c[id] ? 1 : 0), 0);
 }
 
-/** 5 or 6: epileptiform at the stricter bar. 4: meets the glossary threshold only, so search
- *  for a fifth. 3 or fewer: below the glossary threshold, do not call it epileptiform. */
+/** 5 or 6: epileptiform at the stricter bar. 4: meets the glossary threshold only, which is
+ *  not enough on its own (84.8% specificity in Kural 2020), so the call leans toward not
+ *  epileptiform unless a fifth criterion is found and no variant fits. 3 or fewer: below the
+ *  glossary threshold, do not call it epileptiform. */
 export function classify(count: number): Classification {
   if (count >= STRICT_THRESHOLD) return 'epileptiform';
   if (count >= GLOSSARY_THRESHOLD) return 'search-for-fifth';
@@ -61,6 +73,7 @@ export interface TransientSpec {
   riseMs: number;          // onset to peak
   fallMs: number;          // peak back to baseline
   fallExponent?: number;   // shape of the fall (default 1.6; larger = fast drop then slow tail)
+  rounded?: boolean;       // main phase drawn as a half sine: a broad, blunt peak, not a pointed one
   second?: { amp: number; ms: number }; // opposite-polarity phase after the main one (fraction of amplitude)
   slowWave?: { amp: number; ms: number }; // same-polarity slow wave after the second phase
   disruption?: { attenuation: number; ms: number }; // background scaled down after the transient
@@ -164,12 +177,12 @@ export const CASES: SpikeCase[] = [
     explain: {
       morphology: 'Pointed and diphasic.',
       duration: 'About 48 ms, briefer than the background waves.',
-      asymmetry: 'It rises in about 16 ms and falls in about 32 ms.',
+      asymmetry: 'It rises in about 16 ms and falls in about 32 ms. Raters agree on this criterion less than on most others (Kural 2020), so it is the weakest of the four.',
       slowWave: 'The trace returns straight to background with no slow wave.',
       disruption: 'The background is unchanged after it.',
       field: 'Largest at T4 with a graded spread to F8 and T6.',
     },
-    takeaway: 'Four criteria. It meets the glossary threshold, but not the stricter one, so look for a fifth before calling it.',
+    takeaway: 'Four criteria, which is not enough on its own. In drowsiness, compare a temporal transient with the temporal variants first. At 80 µV it is too large for a small sharp spike, and it stands alone rather than in a wicket run. With no slow wave and no change in the background, leave it uncalled unless the rest of the record shows the same transient with a fifth criterion.',
   },
   {
     id: 'border-4-samedur', synthetic: true, group: 'borderline',
@@ -181,12 +194,12 @@ export const CASES: SpikeCase[] = [
     explain: {
       morphology: 'Sharp and diphasic.',
       duration: 'About 85 ms, the same as a half-wave of the 6 Hz background.',
-      asymmetry: 'It rises in about 30 ms and decays over about 55 ms.',
+      asymmetry: 'It rises in about 30 ms and decays over about 55 ms. Raters agree on this criterion less than on most others (Kural 2020).',
       slowWave: 'A slow wave of about 220 ms follows.',
       disruption: 'The background runs on unchanged.',
       field: 'Largest at F3 with spread to Fp1 and C3.',
     },
-    takeaway: 'Four criteria. It meets the glossary threshold, but not the stricter one, so look for a fifth before calling it.',
+    takeaway: 'Four criteria, which is not enough on its own. A wave the same length as the background, in drowsiness, may be a sharper than usual background wave with a slow wave behind it. Look for the same shape elsewhere in the background, and leave it uncalled unless a fifth criterion is clear.',
   },
   {
     id: 'border-3-nofield', synthetic: true, group: 'borderline',
@@ -207,76 +220,82 @@ export const CASES: SpikeCase[] = [
   },
   {
     id: 'wicket-like', synthetic: true, group: 'variant',
-    prompt: 'Left temporal transient in a short run, drowsy', name: 'Wicket-like wave',
+    prompt: 'Left temporal transient in a short run, drowsy', name: 'Wicket wave',
     state: 'Drowsy', channels: LT, gains: [0, 0.4, 1, 0.5, 0.1],
-    // Arciform temporal waves with no after-going slow wave (Module 5 table, Kane 2017).
-    // The 8 Hz run is illustrative.
+    // Glossary (Kane 2017): spike-like, monophasic, surface-negative single waves or trains over the
+    // temporal regions in drowsiness, arcuate or mu-like. Krauss 2005: 6 to 11 Hz. Here each wave
+    // is a single negative arch, no opposite phase, no slow wave, at 8 Hz. Amplitude illustrative.
     background: { freqHz: 8, amplitude: 18 },
-    transient: { polarity: -1, amplitude: 55, riseMs: 30, fallMs: 32, second: { amp: 0.35, ms: 60 }, repeats: [{ offsetMs: -125, scale: 0.8 }, { offsetMs: 125, scale: 0.9 }, { offsetMs: 250, scale: 0.7 }] },
-    criteria: { morphology: true, duration: false, asymmetry: false, slowWave: false, disruption: false, field: true },
+    transient: { polarity: -1, amplitude: 70, riseMs: 30, fallMs: 32, repeats: [{ offsetMs: -125, scale: 0.8 }, { offsetMs: 125, scale: 0.9 }, { offsetMs: 250, scale: 0.7 }] },
+    criteria: { morphology: false, duration: false, asymmetry: false, slowWave: false, disruption: false, field: true },
     explain: {
-      morphology: 'The arciform peak looks sharp, and the troughs on either side make it diphasic.',
-      duration: 'About 62 ms, the same as the waves beside it in the run.',
+      morphology: 'Each wave is a single negative arch with no opposite phase. The glossary describes wickets as monophasic (Kane 2017), and criterion 1 asks for a di- or triphasic wave, so a pointed top is not enough.',
+      duration: 'About 62 ms, the same as the other waves in the run.',
       asymmetry: 'The rise and fall are about equal.',
-      slowWave: 'No slow wave follows. Wicket waves characteristically lack one (Module 5).',
-      disruption: 'It is part of a run, so nothing is interrupted.',
-      field: 'It spreads to F7 and T5 from a T3 maximum. A field shows a brain source, which a normal rhythm also has.',
+      slowWave: 'No slow wave follows. Wickets characteristically lack one.',
+      disruption: 'It is one wave of a run that blends with the background, so nothing is interrupted.',
+      field: 'It spreads to F7 and T5 from a T3 maximum. That shows a brain source, which a normal rhythm also has.',
     },
-    takeaway: 'Two criteria. A field alone shows only that the wave comes from the brain.',
+    takeaway: 'One criterion, the field, which shows only that the wave comes from the brain. Recognize a wicket by its setting and shape. It is temporal, in drowsiness, and monophasic and arch-shaped, in runs at 6 to 11 Hz in which each wave looks like its neighbors, with no slow wave (Kane 2017, Krauss 2005). Wickets also occur singly, and a single one is harder to recognize, so look for runs elsewhere in drowsiness.',
   },
   {
     id: 'bets-like', synthetic: true, group: 'variant',
-    prompt: 'Low-amplitude left temporal transient, drowsy', name: 'Small sharp spike (BETS-like)',
+    prompt: 'Low-amplitude left temporal transient, drowsy', name: 'Small sharp spike (BETS)',
     state: 'Drowsy', channels: LT, gains: [0.15, 0.35, 1, 0.6, 0.15],
-    // Under 50 ms and under 50 µV, temporal, in drowsiness and light sleep (Module 5 table, Kane 2017).
+    // Glossary (Kane 2017): under 50 ms and under 50 µV, often followed by a small theta wave,
+    // temporal, in drowsiness and light sleep, a normal variant that is not epileptiform. Drawn
+    // monophasic with near-equal limbs and no theta wave, a common form.
     background: { freqHz: 6, amplitude: 15 },
-    transient: { polarity: -1, amplitude: 40, riseMs: 15, fallMs: 17, second: { amp: 0.3, ms: 25 } },
-    criteria: { morphology: true, duration: true, asymmetry: false, slowWave: false, disruption: false, field: true },
+    transient: { polarity: -1, amplitude: 40, riseMs: 15, fallMs: 17 },
+    criteria: { morphology: false, duration: true, asymmetry: false, slowWave: false, disruption: false, field: true },
     explain: {
-      morphology: 'Small, but spiky and diphasic.',
+      morphology: 'A single small negative peak with no second phase, so it is monophasic, not di- or triphasic. Small sharp spikes are often like this, and at under 50 µV they barely stand out from the background.',
       duration: 'About 32 ms, briefer than the background waves.',
-      asymmetry: 'In this example the rise and fall are about equal.',
-      slowWave: 'No slow wave follows in this example.',
+      asymmetry: 'The rise and fall are about equal, steep on both sides.',
+      slowWave: 'No slow wave follows here. When one does, the glossary describes it as a small theta wave (Kane 2017). It is low and blends with the background, so do not credit it as the after-going slow wave of a discharge.',
       disruption: 'The background is unchanged.',
       field: 'It appears at low amplitude in the neighboring temporal channels.',
     },
-    takeaway: 'Three criteria. Under 50 ms and under 50 µV in drowsiness fits a small sharp spike.',
+    takeaway: 'Two criteria. Recognize a small sharp spike by its size and setting. It lasts under 50 ms, is under 50 µV, is temporal, and appears in drowsiness and light sleep, with at most a small theta wave after it. The glossary calls it a normal variant that, despite its old name, is not epileptiform (Kane 2017).',
   },
   {
     id: 'vertex', synthetic: true, group: 'variant',
     prompt: 'Central transient on a transverse chain, light sleep', name: 'Vertex wave',
     state: 'Light sleep', channels: ['T3', 'C3', 'Cz', 'C4', 'T4'], gains: [0.15, 0.6, 1, 0.6, 0.15],
-    // Sharp, negative, maximal at the vertex, in sleep (Kane 2017 glossary). Amplitude illustrative.
+    // Glossary (Kane 2017): sharply contoured, under 0.5 s, maximal at the vertex, negative, in
+    // light sleep or after a sensory stimulus, rarely over 250 µV. The glossary also says the term
+    // sharp wave does not apply to vertex sharp transients. Drawn with a broad, blunt peak.
     background: { freqHz: 4, amplitude: 25 },
-    transient: { polarity: -1, amplitude: 120, riseMs: 60, fallMs: 65, second: { amp: 0.25, ms: 80 } },
-    criteria: { morphology: true, duration: false, asymmetry: false, slowWave: false, disruption: false, field: true },
+    transient: { polarity: -1, amplitude: 120, riseMs: 60, fallMs: 65, rounded: true, second: { amp: 0.25, ms: 80 } },
+    criteria: { morphology: false, duration: false, asymmetry: false, slowWave: false, disruption: false, field: true },
     explain: {
-      morphology: 'Sharp and diphasic.',
+      morphology: 'Its contour is sharp against the slow sleep background, but the peak is broad and blunt rather than pointed. The glossary also names vertex sharp transients as physiological events to which the term sharp wave does not apply (Kane 2017). Not met.',
       duration: 'About 125 ms, the same as the slow waves of the sleep background.',
       asymmetry: 'The rise and fall are nearly equal.',
       slowWave: 'No slow wave follows.',
       disruption: 'It belongs to the sleep background and interrupts nothing.',
       field: 'Maximal at Cz and symmetric to C3 and C4, a cerebral field.',
     },
-    takeaway: 'Two criteria. A sharp, high-amplitude wave can still score low.',
+    takeaway: 'One criterion. Recognize a vertex wave by its maximum at the vertex, its symmetry across the midline, and its setting in light sleep or after a sound (Kane 2017). In children vertex waves can be tall and sharp, and their identity settles the call whatever the count.',
   },
   {
     id: 'posts-like', synthetic: true, group: 'variant',
-    prompt: 'Occipital transient, light sleep', name: 'Positive occipital sharp transient (POSTS-like)',
+    prompt: 'Occipital transient, light sleep', name: 'Positive occipital sharp transient of sleep (POSTS)',
     state: 'Light sleep', channels: ['P3', 'O1', 'O2', 'P4', 'Cz'], gains: [0.4, 1, 0.95, 0.4, 0.1],
-    // Maximal occipitally, positive, in sleep, generally under 50 µV (Kane 2017 glossary).
+    // Glossary (Kane 2017): maximal occipitally, positive, in sleep, single or repetitive,
+    // generally under 50 µV. Drawn as a single positive triangular wave.
     background: { freqHz: 4, amplitude: 25 },
-    transient: { polarity: 1, amplitude: 45, riseMs: 55, fallMs: 70, second: { amp: 0.2, ms: 60 } },
-    criteria: { morphology: true, duration: false, asymmetry: false, slowWave: false, disruption: false, field: true },
+    transient: { polarity: 1, amplitude: 45, riseMs: 60, fallMs: 62, fallExponent: 1 },
+    criteria: { morphology: false, duration: false, asymmetry: false, slowWave: false, disruption: false, field: true },
     explain: {
-      morphology: 'Sharply contoured and diphasic.',
-      duration: 'About 125 ms, the same as the background waves.',
-      asymmetry: 'The rise and fall are close to equal.',
+      morphology: 'A single surface-positive triangle, monophasic rather than di- or triphasic. The glossary also excludes POSTS from the term sharp wave (Kane 2017).',
+      duration: 'About 120 ms, the same as the background waves.',
+      asymmetry: 'The two limbs are close to equal. Even when one limb of a POSTS is steeper, raters agree on this criterion less than on most others (Kural 2020), so it should not tip the call.',
       slowWave: 'No slow wave follows.',
       disruption: 'The sleep background continues around it.',
       field: 'Positive at O1 and O2 and smaller at P3 and P4, a bilateral occipital field.',
     },
-    takeaway: 'Two criteria. It is also positive (drawn downward), the wrong polarity for most epileptiform discharges.',
+    takeaway: 'One criterion. Recognize POSTS by their positive polarity (drawn downward), their bilateral occipital maximum, their setting in sleep, and their low amplitude, generally under 50 µV. They may be single or repetitive (Kane 2017).',
   },
   {
     id: 'electrode-pop', synthetic: true, group: 'artifact',
@@ -294,7 +313,7 @@ export const CASES: SpikeCase[] = [
       disruption: 'The background continues through it.',
       field: 'Only C4 shows it. A deflection at one electrode has no cerebral field.',
     },
-    takeaway: 'Two criteria, and no field. One electrode alone points to artifact.',
+    takeaway: 'Two criteria, and no field. An artifact can meet shape criteria, and a deflection confined to one electrode points to the electrode itself as the source.',
   },
   {
     id: 'sharp-background', synthetic: true, group: 'background',
@@ -341,7 +360,11 @@ function transientAt(spec: TransientSpec, t: number, t0: number): number {
   const A = spec.amplitude * spec.polarity;
   const x = t - t0;
   let v = 0;
-  if (x >= 0 && x < r) v += A * Math.pow(x / r, 1.6);
+  if (spec.rounded) {
+    // Half sine: the peak is broad and blunt.
+    if (x >= 0 && x < r) v += A * Math.sin((Math.PI / 2) * (x / r));
+    else if (x >= r && x < r + f) v += A * Math.cos((Math.PI / 2) * ((x - r) / f));
+  } else if (x >= 0 && x < r) v += A * Math.pow(x / r, 1.6);
   else if (x >= r && x < r + f) v += A * Math.pow(1 - (x - r) / f, k);
   let after = r + f;
   if (spec.second) {
@@ -408,6 +431,7 @@ export interface Measures {
   riseMs: number; fallMs: number; durationMs: number;
   backgroundHalfWaveMs: number;
   lobes: number;               // phases of the main transient (main + second)
+  peakWidthFraction: number;   // width at half amplitude / full width of the main phase (pointed peaks are narrow, under about 0.45)
   slowWaveFraction: number;    // peak same-polarity deflection in the slow-wave window / amplitude
   neighborFraction: number;    // largest transient deflection on any other channel / maximum
   backgroundRatio: number;     // background RMS after the transient / before it, at the maximum channel
@@ -454,10 +478,13 @@ export function measure(c: SpikeCase, syn: Synth = synthesize(c)): Measures {
   const aEnd = syn.marks.disruptEnd !== undefined ? syn.marks.disruptEnd - 0.08 : syn.marks.fallEnd + 0.3;
   const after = rms(ch.background, aStart, aEnd);
   const riseMs = ((peakI - on) / FS) * 1000, fallMs = ((off - peakI) / FS) * 1000;
+  let h0 = peakI; while (h0 > 0 && p * single[h0 - 1] > 0.5 * A) h0--;
+  let h1 = peakI; while (h1 < single.length - 1 && p * single[h1 + 1] > 0.5 * A) h1++;
   return {
     riseMs, fallMs, durationMs: ((off - on) / FS) * 1000,
     backgroundHalfWaveMs: 500 / c.background.freqHz,
     lobes,
+    peakWidthFraction: off > on ? (h1 - h0) / (off - on) : 0,
     slowWaveFraction: A ? slow / A : 0,
     neighborFraction: maxPeak ? neighbor / maxPeak : 0,
     backgroundRatio: before ? after / before : 1,

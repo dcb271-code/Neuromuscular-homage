@@ -281,24 +281,38 @@ export const PRESETS: Preset[] = [
     id: 'normal-child', label: 'Normal child', title: 'Normal awake child, 9 years, eyes closed',
     syndrome: false, sensitivity: 10, sourceKey: 'currentPractice',
     note: 'Posterior dominant rhythm at about 9 Hz, the mean value at age 9. Measure one cycle over O1 or O2 with the calipers.',
-    // PDR 9 Hz: "mean 9 Hz by age 9" (Current Practice chapter, as cited in m04-normal-by-age).
-    // PDR amplitude 60 µV peak-to-peak is a schematic choice, not from a registry source.
-    build: r => background(r, { pdrHz: 9, pdrPP: 60, thetaPP: 18, deltaPP: 10, betaPP: 6, noisePP: 3 }),
+    // PDR 9 Hz: "mean 9 Hz by age 9" (Current Practice chapter, as cited in m04-normal-by-age:
+    // mean 8 Hz by age 3, 9 Hz by age 9, 10 Hz by age 15).
+    // PDR amplitude: children's EEG voltage runs higher than adults' (ACNS Guideline 5, Kuratani
+    // 2016, PMID 27482791, which suggests 10 or even 15 µV/mm for young children). The commonly
+    // taught school-age PDR amplitude is about 50 to 100 µV (textbook figure, no registry source).
+    // pdrPP 90 gives about 100 µV at O1/O2 in average reference and about 60 to 90 µV in the
+    // P3-O1 and T5-O1 bipolar channels, inside that range. A little theta is normal at this age.
+    build: r => background(r, { pdrHz: 9, pdrPP: 90, thetaPP: 18, deltaPP: 10, betaPP: 6, noisePP: 3 }),
   },
   {
     id: 'absence', label: '3 Hz spike-wave', title: 'Generalized 3 Hz spike-wave (childhood absence epilepsy pattern), 7 years',
-    syndrome: true, sensitivity: 15, sourceKey: 'hirschE2022',
-    note: 'Generalized spike-wave at about 3 Hz. The defining range is 2.5 to 4 Hz. Place the calipers on two consecutive spikes to measure it.',
-    // Frequency 3 Hz, range 2.5 to 4 Hz (Hirsch E 2022, ILAE IGE definitions, via m09).
-    // The train starts at 3.4 Hz and slows to 2.9 Hz across the 5 s burst. That slowing within
-    // the discharge, the frontal-predominant field, and the amplitudes (spike 340 µV, wave
-    // 380 µV at the field maximum, at Fz) are schematic choices for the owner to confirm. Spike sigma 11 ms gives a spike
-    // about 50 ms wide (spike range per Kane 2017).
+    syndrome: true, sensitivity: 20, sourceKey: 'hirschE2022',
+    note: 'Generalized spike-wave at about 3 Hz on a normal background, with abrupt onset and offset. The defining range is 2.5 to 4 Hz. Measure two consecutive spikes near the start and again near the end. The discharge is often a little faster at onset.',
+    // Frequency: "regular 3 Hz (range 2.5 to 4 Hz) generalized spike-wave" on a normal
+    // background, slow spike-wave below 2.5 Hz exclusionary (Hirsch E 2022, via m09, and the
+    // ILAE epilepsydiagnosis.org CAE EEG page). The train runs 3.5 Hz at onset to 2.7 Hz at the
+    // end, mean about 3.1 Hz. Faster at onset and slower at the end is the standard textbook
+    // description (not stated in Hirsch 2022 or Sadleir 2006, so treated as schematic).
+    // Duration 7 s, abrupt onset and offset: mean seizure 9.4 s in 339 untreated CAE seizures,
+    // regular 3 Hz GSW with one or two spikes per wave (Sadleir 2006, PMID 16894100). A 10 s page
+    // cannot show a 9 s burst with clean background on both sides, so 7 s is used.
+    // Field: frontocentral maximum (Fz), the usual description, schematic here.
+    // Amplitude: spike 500 µV, wave 560 µV at Fz before the field falls off. That gives about
+    // 380 µV at Fz in average reference (which understates a generalized discharge) and about
+    // 120 to 200 µV in the frontal bipolar channels (largest in Fz-Cz and F3-C3). Studies use an amplitude criterion of
+    // 100 to 900 µV for absence discharges (Mattozzi 2021, Clin Neurophysiol Pract 6:185).
+    // Spike sigma 11 ms gives a spike about 50 ms wide (spike range per Kane 2017).
     build: r => {
-      const sc = background(r, { pdrHz: 8.5, pdrPP: 55, thetaPP: 20, deltaPP: 12, betaPP: 6, noisePP: 3 });
-      const sw = spikeWaveTrain({ tStart: 2.4, tEnd: 7.4, fStart: 3.4, fEnd: 2.9, spikeAmp: -340, spikeSigma: 0.011, waveAmp: -380, jitter: 0.01, r });
+      const sc = background(r, { pdrHz: 8.5, pdrPP: 80, thetaPP: 20, deltaPP: 12, betaPP: 6, noisePP: 3 });
+      const sw = spikeWaveTrain({ tStart: 1.6, tEnd: 8.6, fStart: 3.5, fEnd: 2.7, spikeAmp: -500, spikeSigma: 0.011, waveAmp: -560, jitter: 0.01, r });
       sc.sources.push({ x: 0, y: 0.45, sigma: 0.5, wave: sw.wave });
-      sc.events.push({ t: 2.4, label: 'spike-wave onset' }, ...sw.cycles.map(t => ({ t, label: 'spike' })));
+      sc.events.push({ t: 1.6, label: 'spike-wave onset' }, ...sw.cycles.map(t => ({ t, label: 'spike' })));
       return sc;
     },
   },
@@ -306,10 +320,13 @@ export const PRESETS: Preset[] = [
     id: 'slow-spike-wave', label: 'Slow spike-wave', title: 'Generalized slow spike-wave below 2.5 Hz (one Lennox-Gastaut pattern)',
     syndrome: true, sensitivity: 20, sourceKey: 'specchio2022',
     note: 'Generalized slow spike-wave below 2.5 Hz. Lennox-Gastaut syndrome also requires generalized paroxysmal fast activity, which this page does not show.',
-    // Slow spike-wave below 2.5 Hz, and LGS needs paroxysmal fast activity too (Specchio 2022,
-    // via m09). Here about 2 Hz, irregular (jitter 8%), with sharp waves (sigma 25 ms, about
-    // 100 ms wide, sharp wave range per Kane 2017). The slow, theta-delta background with no
-    // posterior rhythm and the amplitudes are schematic choices for the owner to confirm.
+    // Slow spike-wave below 2.5 Hz, and LGS needs generalized paroxysmal fast activity (10 Hz or
+    // more, often in sleep) too (Specchio 2022, via m09). This page is awake and shows no fast
+    // activity, and the note says so. Here 2.1 to 1.9 Hz, inside the usual 1.5 to 2.5 Hz,
+    // irregular (jitter 8%), with sharp waves rather than spikes (sigma 25 ms, about 100 ms wide,
+    // sharp wave range per Kane 2017), frontally predominant (source at y 0.6). The slow
+    // theta-delta background with no posterior rhythm fits the slow background usually reported.
+    // Amplitudes (about 200 µV at Fz in average reference, 150 µV in F3-C3) are schematic.
     build: r => {
       const sc = background(r, { thetaPP: 40, deltaPP: 45, betaPP: 5, noisePP: 3 });
       const sw = spikeWaveTrain({ tStart: 0.8, tEnd: 9.4, fStart: 2.1, fEnd: 1.9, spikeAmp: -220, spikeSigma: 0.025, waveAmp: -280, jitter: 0.08, r });
@@ -321,16 +338,23 @@ export const PRESETS: Preset[] = [
   {
     id: 'centrotemporal', label: 'Centrotemporal spikes', title: 'Left centrotemporal spikes (SeLECTS pattern), 8 years',
     syndrome: true, sensitivity: 15, sourceKey: 'specchio2022',
-    note: 'High-amplitude centrotemporal sharp-and-slow waves with a horizontal dipole, negative centrotemporal and positive frontal. Look for the phase reversal at T3 and C3 in the bipolar montage.',
-    // Horizontal dipole, frontal positive and temporo-parietal negative (Specchio 2022, via m09).
+    note: 'High-amplitude centrotemporal sharp-and-slow waves with a horizontal dipole, negative centrotemporal and positive frontal. They increase in drowsiness and sleep. Look for the phase reversal at T3 and C3 in the bipolar montage.',
+    // High-amplitude centrotemporal sharp-and-slow waves, activated in drowsiness and sleep,
+    // horizontal dipole, frontal positive and temporo-parietal negative (Specchio 2022, via m09).
+    // A single tangential dipole along the central sulcus, negative central or mid-temporal and
+    // positive anterior, with a biphasic high-voltage wave (Bourel-Ponchel 2019, Front Neurol
+    // 10:809, doi 10.3389/fneur.2019.00809).
     // Negative pole between C3 and T3, positive pole near F3 and Fp1 at 45% of the negative.
     // Sharp component sigma 20 ms (about 80 ms wide, in the sharp wave range of Kane 2017),
-    // with an after-going slow wave. The amplitude (180 µV) and spike timing are schematic.
+    // with an after-going slow wave. Amplitude 220 µV at the source gives about 170 µV at T3 in
+    // average reference and 200 to 230 µV in F7-T3 and F3-C3, inside the 100 to 300 µV usually
+    // taught (textbook figure, not in Specchio 2022). Spike timing is schematic. The page keeps
+    // an awake background, where the spikes also occur, though less often than in sleep.
     build: r => {
       const sc = background(r, { pdrHz: 8.5, pdrPP: 55, thetaPP: 20, deltaPP: 12, betaPP: 6, noisePP: 3 });
       const wave = new Float64Array(N_TOTAL);
       for (const t of [1.3, 3.15, 4.05, 6.6, 8.3]) {
-        addTransient(wave, { t, sharpAmp: -180 * between(r, 0.85, 1.1), sharpSigma: 0.02, slowAmp: -55, slowSigma: 0.07, slowDelay: 0.12 });
+        addTransient(wave, { t, sharpAmp: -220 * between(r, 0.85, 1.1), sharpSigma: 0.02, slowAmp: -55, slowSigma: 0.07, slowDelay: 0.12 });
         sc.events.push({ t, label: 'centrotemporal spike' });
       }
       sc.sources.push({ x: -0.78, y: -0.05, sigma: 0.3, wave, dipole: { x: -0.4, y: 0.7, sigma: 0.38, ratio: 0.45 } });
@@ -343,8 +367,14 @@ export const PRESETS: Preset[] = [
     note: 'A chaotic, high-voltage, disorganized background with multifocal spikes. The definition of infantile epileptic spasms syndrome does not require hypsarrhythmia.',
     // "Chaotic, high-voltage, disorganized background with multifocal spikes", and
     // hypsarrhythmia is not required (Zuberi 2022, via m09). Ten independent focal slow
-    // generators (0.7 to 3 Hz, 180 to 320 µV) and 24 spikes or sharp waves at random sites.
-    // Amplitudes are schematic. No posterior rhythm is modeled.
+    // generators (0.7 to 3 Hz, 180 to 320 µV) and 24 spikes or sharp waves at random sites, so
+    // the slow waves are asynchronous between regions and there is no organized rhythm.
+    // Voltage: the 2021 BASED score calls background waves abnormally high when over 200 µV in
+    // most longitudinal bipolar channels (over 300 µV in T3-T5 and T4-T6, and excluding midline
+    // and occipital channels, which are often high in normal infants) (Mytinger 2021, PMID
+    // 33839516). On this page every lateral bipolar channel exceeds 200 µV and T3-T5 and T4-T6
+    // exceed 300 µV (checked in scripts/test-eeg-synth.ts). BASED is scored in sleep, and this
+    // page does not state a state. No posterior rhythm is modeled.
     build: r => {
       const sc = background(r, { thetaPP: 50, deltaPP: 60, betaPP: 6, noisePP: 4 });
       for (let i = 0; i < 10; i++) {
