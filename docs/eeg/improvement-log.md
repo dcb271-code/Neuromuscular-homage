@@ -21,6 +21,19 @@
 
 ## History
 
+### 2026-11-14 · Interactive features: trace lab, spike criteria, ACNS card, guided tours
+- **Target:** owner asked for functionality akin to EEGSimLab. Built independently from the literature; EEGSimLab's code and content are all rights reserved and were not used.
+- **Change:**
+  - Trace lab (Module 1, filters section) and pattern viewer (Module 9, childhood onset): synthetic 18-channel bipolar and average-reference pages, presets (normal child, 3 Hz spike-wave, slow spike-wave, centrotemporal spikes, hypsarrhythmia-like), sensitivity, LFF, HFF, 60 Hz notch and line noise, calipers for ms, Hz and peak-to-peak µV. `src/eeg/synth.ts`, `components/eeg/TraceView.tsx`, `TraceLab.tsx`, 27 tests.
+  - Spike-criteria trainer (Module 5, IFCN section): 12 synthetic cases scored on the six IFCN criteria with annotated feedback (Kane 2017, Kural 2020). `src/eeg/spike-model.ts`, `SpikeCriteria.tsx`, 194 tests.
+  - ACNS 2021 quick card and name builder (Module 11, continuum section), checked against the full 2021 paper. `src/eeg/acns-model.ts`, `AcnsCard.tsx`, 67 tests.
+  - Guided step-throughs on 7 licensed gallery figures (pattern gallery, "Guided" button). `src/eeg/annotations.json`, `FigureTour.tsx`, 262 tests.
+- **Owner review needed:**
+  - Module 11 text is less complete than the 2021 paper, and the card follows the paper: +FR and +FS plus modifiers and no plus modifiers on SW; "spike-and-wave or sharp-and-wave"; continuum criterion 3 covers any lateralized RDA (LRDA, BIRDA, UIRDA, MfRDA, not GRDA) for at least 10 s; BIRDs need at least 6 waves and evolution or matching morphology and location for a definite BIRD; evolution's same-direction and 5-minute rules; duration, amplitude and sharpness categories. Seizure frequency criterion is more than 2.5 Hz, so exactly 2.5 Hz stays on the continuum.
+  - Spike trainer scoring of variants: wicket-like and POSTS-like cases credited with the shape criterion and a field; vertex and POSTS-like cases not credited with different duration; electrode pop scores 2; background disruption drawn as a post-discharge amplitude drop. Glossary durations (spike 20 to under 70 ms, sharp 70 to 200 ms) are not in the module text.
+  - Trace lab amplitudes and the 3 Hz burst slowing from 3.4 to 2.9 Hz with a frontal maximum are modeling choices, not sourced values.
+  - Tour captions marked for checking: positive polarity of 14 and 6 Hz spikes (from the module, not confirmed on the tracing), pulse and pop confinement read visually, "little" left-sided activity in the LPD figure, generalized simplified for GPDs, neonatal asynchrony left/right readings, burst suppression interval measured at about 7 s.
+- **Outcome:** committed on `main`, not pushed until the owner has looked.
 ### 2026-11-14 · Plain-language pass on all twelve modules
 - **Target:** owner asked for a light-to-medium humanizer pass (strip AI tells, simplify sentence structure without flattening the voice).
 - **Change:** every module's prose, key points, questions and explanations. Totals before → after: antitheses 27 → 2, colon reveals 96 → 0, sentences over 38 words 50 → 5, semicolons 3.6 → 0.1 per 1000 words, average sentence 22.3 → 18.7 words. British spellings made American. Plainer headings where the old ones were riddles or parallel pairs. Fixed: the stray claim that spindle asynchrony is expected only "in the first year" (the cited range is 18 to 24 months); "and the reverse" in the neonatal status comparison, which was false; "often" vs "may" for focal aware seizures without a scalp correlate. `style-loc.mjs` and `check-preserve-loc.mjs` now take `MODULES=eeg`.

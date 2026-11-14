@@ -1,0 +1,477 @@
+[
+  {
+    "figureId": "aes-f51",
+    "steps": [
+      {
+        "caption": "This recording is from a 13-year-old girl, and most channels are referenced to the ears (A1, A2). Start in the third second, where the bursts are clearest.",
+        "regions": [
+          {
+            "kind": "time",
+            "x": 0.233,
+            "y": 0.0,
+            "width": 0.096,
+            "height": 0.95,
+            "label": "Third second"
+          }
+        ]
+      },
+      {
+        "caption": "Brief runs of spiky activity near 14 Hz are best seen over the posterior temporal and posterior head channels.",
+        "regions": [
+          {
+            "kind": "box",
+            "x": 0.233,
+            "y": 0.54,
+            "width": 0.096,
+            "height": 0.065,
+            "label": "O1-A1, O2-A2"
+          },
+          {
+            "kind": "box",
+            "x": 0.233,
+            "y": 0.807,
+            "width": 0.096,
+            "height": 0.08,
+            "label": "P7-A1, P8-A2"
+          }
+        ]
+      },
+      {
+        "caption": "These spikes are positive, the opposite polarity to most epileptiform discharges. Their polarity is one of the features that marks them as a variant.",
+        "regions": []
+      },
+      {
+        "caption": "14 and 6 Hz positive bursts peak in adolescence and appear in drowsiness and light sleep. Report them as a normal variant.",
+        "regions": []
+      }
+    ]
+  },
+  {
+    "figureId": "aes-f89",
+    "steps": [
+      {
+        "caption": "Find the F4 channel. A slow, rounded wave repeats there at a steady rate.",
+        "regions": [
+          {
+            "kind": "rows",
+            "x": 0.038,
+            "y": 0.267,
+            "width": 0.952,
+            "height": 0.039,
+            "label": "F4"
+          }
+        ]
+      },
+      {
+        "caption": "Line the F4 waves up with the ECG channel at the bottom. They recur at the same rate as the heartbeat.",
+        "regions": [
+          {
+            "kind": "rows",
+            "x": 0.038,
+            "y": 0.267,
+            "width": 0.952,
+            "height": 0.039,
+            "label": "F4"
+          },
+          {
+            "kind": "rows",
+            "x": 0.038,
+            "y": 0.913,
+            "width": 0.952,
+            "height": 0.05,
+            "label": "ECG"
+          }
+        ]
+      },
+      {
+        "caption": "The neighboring electrodes F3, Fz, F8 and C4 do not show the wave. It is confined to F4.",
+        "regions": [
+          {
+            "kind": "rows",
+            "x": 0.038,
+            "y": 0.19,
+            "width": 0.952,
+            "height": 0.035,
+            "label": "F3"
+          },
+          {
+            "kind": "rows",
+            "x": 0.038,
+            "y": 0.228,
+            "width": 0.952,
+            "height": 0.035,
+            "label": "Fz"
+          },
+          {
+            "kind": "rows",
+            "x": 0.038,
+            "y": 0.31,
+            "width": 0.952,
+            "height": 0.035,
+            "label": "F8"
+          },
+          {
+            "kind": "rows",
+            "x": 0.038,
+            "y": 0.48,
+            "width": 0.952,
+            "height": 0.035,
+            "label": "C4"
+          }
+        ]
+      },
+      {
+        "caption": "A slow wave at one electrode that follows the pulse is pulse artifact, from an electrode resting over an artery. A cerebral discharge would have a field and would not track the heartbeat.",
+        "regions": []
+      }
+    ]
+  },
+  {
+    "figureId": "aes-f90",
+    "steps": [
+      {
+        "caption": "Sharp deflections recur in the T7-P7 and P7-O1 channels. At a glance the run can look like rhythmic seizure activity.",
+        "regions": [
+          {
+            "kind": "rows",
+            "x": 0.038,
+            "y": 0.635,
+            "width": 0.952,
+            "height": 0.078,
+            "label": "T7-P7, P7-O1"
+          }
+        ]
+      },
+      {
+        "caption": "Both channels share P7. At each deflection the two point in opposite directions, a phase reversal at P7.",
+        "regions": [
+          {
+            "kind": "box",
+            "x": 0.262,
+            "y": 0.615,
+            "width": 0.025,
+            "height": 0.13,
+            "label": "Opposite deflections"
+          }
+        ]
+      },
+      {
+        "caption": "F7-T7 shares T7 and P3-O1 shares O1. Neither shows these deflections, so there is no field around P7.",
+        "regions": [
+          {
+            "kind": "rows",
+            "x": 0.038,
+            "y": 0.599,
+            "width": 0.952,
+            "height": 0.037,
+            "label": "F7-T7"
+          },
+          {
+            "kind": "rows",
+            "x": 0.038,
+            "y": 0.317,
+            "width": 0.952,
+            "height": 0.039,
+            "label": "P3-O1"
+          }
+        ]
+      },
+      {
+        "caption": "One electrode feeds two channels, so a pop can produce a false phase reversal. The missing field is what identifies this as electrode pop artifact.",
+        "regions": []
+      }
+    ]
+  },
+  {
+    "figureId": "aes-f81",
+    "steps": [
+      {
+        "caption": "Sharp discharges repeat through the right temporal and right parasagittal chains.",
+        "regions": [
+          {
+            "kind": "rows",
+            "x": 0.035,
+            "y": 0.193,
+            "width": 0.962,
+            "height": 0.147,
+            "label": "Right temporal chain"
+          },
+          {
+            "kind": "rows",
+            "x": 0.035,
+            "y": 0.55,
+            "width": 0.962,
+            "height": 0.147,
+            "label": "Right parasagittal chain"
+          }
+        ]
+      },
+      {
+        "caption": "The matching left chains show little of this activity. The discharges are lateralized to the right hemisphere.",
+        "regions": [
+          {
+            "kind": "rows",
+            "x": 0.035,
+            "y": 0.017,
+            "width": 0.962,
+            "height": 0.142,
+            "label": "Left temporal chain"
+          },
+          {
+            "kind": "rows",
+            "x": 0.035,
+            "y": 0.374,
+            "width": 0.962,
+            "height": 0.142,
+            "label": "Left parasagittal chain"
+          }
+        ]
+      },
+      {
+        "caption": "Each discharge is separated from the next by a stretch of background. Discharges with a gap between them are called periodic.",
+        "regions": []
+      },
+      {
+        "caption": "The location term L and the pattern term PDs give the name LPDs, lateralized periodic discharges.",
+        "regions": []
+      }
+    ]
+  },
+  {
+    "figureId": "aes-f82",
+    "steps": [
+      {
+        "caption": "Pick one discharge and follow it down the page. It appears in every scalp chain at the same moment.",
+        "regions": [
+          {
+            "kind": "time",
+            "x": 0.289,
+            "y": 0.0,
+            "width": 0.028,
+            "height": 0.82,
+            "label": "One discharge"
+          }
+        ]
+      },
+      {
+        "caption": "It is present over both hemispheres at once, in the left chains and the right chains. That gives the location term G.",
+        "regions": [
+          {
+            "kind": "rows",
+            "x": 0.06,
+            "y": 0.018,
+            "width": 0.935,
+            "height": 0.143,
+            "label": "Left temporal"
+          },
+          {
+            "kind": "rows",
+            "x": 0.06,
+            "y": 0.191,
+            "width": 0.935,
+            "height": 0.149,
+            "label": "Right temporal"
+          },
+          {
+            "kind": "rows",
+            "x": 0.06,
+            "y": 0.37,
+            "width": 0.935,
+            "height": 0.149,
+            "label": "Left parasagittal"
+          },
+          {
+            "kind": "rows",
+            "x": 0.06,
+            "y": 0.55,
+            "width": 0.935,
+            "height": 0.149,
+            "label": "Right parasagittal"
+          }
+        ]
+      },
+      {
+        "caption": "A stretch of flatter background separates each discharge from the next. Discharges with a gap between them are periodic, so the pattern term is PDs.",
+        "regions": [
+          {
+            "kind": "time",
+            "x": 0.315,
+            "y": 0.0,
+            "width": 0.025,
+            "height": 0.82,
+            "label": "Gap"
+          }
+        ]
+      },
+      {
+        "caption": "Together the two terms name the pattern GPDs, generalized periodic discharges.",
+        "regions": []
+      }
+    ]
+  },
+  {
+    "figureId": "aes-f29",
+    "steps": [
+      {
+        "caption": "This infant was 2 weeks old, born at 37 weeks, with seizures from hypoxic-ischemic encephalopathy and sepsis. The record alternates between bursts and very low interburst periods.",
+        "regions": []
+      },
+      {
+        "caption": "In the highlighted stretch, bursts appear in the right hemisphere channels while the left temporal and parasagittal channels stay low.",
+        "regions": [
+          {
+            "kind": "box",
+            "x": 0.103,
+            "y": 0.313,
+            "width": 0.297,
+            "height": 0.119,
+            "label": "Fp2-C4, C4-O2"
+          },
+          {
+            "kind": "box",
+            "x": 0.103,
+            "y": 0.552,
+            "width": 0.297,
+            "height": 0.121,
+            "label": "Fp2-T8, T8-O2"
+          },
+          {
+            "kind": "box",
+            "x": 0.103,
+            "y": 0.796,
+            "width": 0.297,
+            "height": 0.119,
+            "label": "Cz-C4, C4-T8"
+          }
+        ]
+      },
+      {
+        "caption": "Later on the page, bursts appear in the left hemisphere channels with little matching activity on the right. The two hemispheres burst at different times.",
+        "regions": [
+          {
+            "kind": "box",
+            "x": 0.594,
+            "y": 0.191,
+            "width": 0.3,
+            "height": 0.12,
+            "label": "Fp1-C3, C3-O1"
+          },
+          {
+            "kind": "box",
+            "x": 0.594,
+            "y": 0.433,
+            "width": 0.3,
+            "height": 0.121,
+            "label": "Fp1-T7, T7-O1"
+          },
+          {
+            "kind": "box",
+            "x": 0.594,
+            "y": 0.677,
+            "width": 0.3,
+            "height": 0.119,
+            "label": "T7-C3, C3-Cz"
+          }
+        ]
+      },
+      {
+        "caption": "Between the bursts the voltage is very low in every channel.",
+        "regions": [
+          {
+            "kind": "time",
+            "x": 0.41,
+            "y": 0.18,
+            "width": 0.18,
+            "height": 0.75,
+            "label": "Interburst"
+          }
+        ]
+      },
+      {
+        "caption": "Asynchrony is expected around 30 weeks and abnormal at term. In this infant near term it is an abnormal finding.",
+        "regions": []
+      }
+    ]
+  },
+  {
+    "figureId": "shoup-s30",
+    "steps": [
+      {
+        "caption": "This is a longitudinal bipolar montage. The lower right corner has a 1 second bar and a 200 µV bar for judging duration and amplitude.",
+        "regions": [
+          {
+            "kind": "box",
+            "x": 0.872,
+            "y": 0.888,
+            "width": 0.126,
+            "height": 0.11,
+            "label": "Scale bars"
+          }
+        ]
+      },
+      {
+        "caption": "Bursts of mixed-frequency activity appear in every channel at the same time.",
+        "regions": [
+          {
+            "kind": "time",
+            "x": 0.115,
+            "y": 0.0,
+            "width": 0.095,
+            "height": 0.92,
+            "label": "Burst"
+          },
+          {
+            "kind": "time",
+            "x": 0.267,
+            "y": 0.0,
+            "width": 0.063,
+            "height": 0.92,
+            "label": "Burst"
+          },
+          {
+            "kind": "time",
+            "x": 0.78,
+            "y": 0.0,
+            "width": 0.158,
+            "height": 0.92,
+            "label": "Burst"
+          }
+        ]
+      },
+      {
+        "caption": "Between bursts the tracing is nearly flat in most channels. This is the suppressed interval.",
+        "regions": [
+          {
+            "kind": "time",
+            "x": 0.331,
+            "y": 0.0,
+            "width": 0.448,
+            "height": 0.92,
+            "label": "Suppression"
+          }
+        ]
+      },
+      {
+        "caption": "Measured against the 1 second bar, this suppression lasts about 7 seconds. Bursts separated by suppressed intervals make up the pattern called burst suppression.",
+        "regions": [
+          {
+            "kind": "time",
+            "x": 0.331,
+            "y": 0.0,
+            "width": 0.448,
+            "height": 0.92,
+            "label": "About 7 s"
+          },
+          {
+            "kind": "box",
+            "x": 0.872,
+            "y": 0.955,
+            "width": 0.07,
+            "height": 0.04,
+            "label": "1 s"
+          }
+        ]
+      }
+    ]
+  }
+]

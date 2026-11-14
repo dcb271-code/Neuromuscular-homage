@@ -10,6 +10,9 @@ import { SOURCES as EEG_SOURCES, type Source } from '@/src/eeg/sources';
 import eegFiguresJson from '@/src/eeg/figures.json';
 import type { EegFigure } from '@/src/eeg/types';
 import { MontageLab } from '@/components/eeg/MontageLab';
+import { TraceLab, PatternViewer } from '@/components/eeg/TraceLab';
+import { SpikeCriteria } from '@/components/eeg/SpikeCriteria';
+import { AcnsCard } from '@/components/eeg/AcnsCard';
 import { LOC_TRACKS } from '@/src/loc/curriculum';
 import { LOC_SOURCES } from '@/src/loc/sources';
 import { LOC_WIDGETS } from '@/components/loc/widgets';
@@ -43,7 +46,7 @@ export const CURRICULA: Record<CurriculumKind, CurriculumConfig> = {
     tracks: EEG_TRACKS,
     sources: EEG_SOURCES,
     figures: eegFigures,
-    widgets: { 'montage-lab': MontageLab },
+    widgets: { 'montage-lab': MontageLab, 'trace-lab': TraceLab, 'pattern-viewer': PatternViewer, 'spike-criteria': SpikeCriteria, 'acns-card': AcnsCard },
     navExtra: { href: '/eeg/gallery', label: 'Pattern gallery' },
     footer: (
       <>Tracings are from St. Louis and Frey (eds), Electroencephalography, AES 2016, CC BY-NC-SA 4.0, or reproduced with their author&apos;s permission as stated under each figure (<a href="/eeg/ATTRIBUTIONS.md" target="_blank" rel="noopener noreferrer" className="underline">credits</a>). For education. Not for clinical decision-making; consult primary sources and your attending.</>
