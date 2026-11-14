@@ -365,7 +365,7 @@ export const CASES: LocCase[] = [
         }
       ]
     },
-    "reveal": "**Duchenne muscular dystrophy.** The Gowers maneuver shows proximal hip weakness, and the large calves together with an affected maternal uncle point to an X-linked dystrophinopathy (Brazis 2011, p. 13). The next step is a creatine kinase level, followed by genetic testing of the dystrophin gene. See the [Neuromuscular section](/neuromuscular) for the disease itself."
+    "reveal": "**Duchenne muscular dystrophy.** The Gowers maneuver shows proximal hip weakness, and the large calves together with an affected maternal uncle point to an X-linked dystrophinopathy (Brazis 2011, p. 13). The next step is a creatine kinase level, followed by deletion and duplication testing of the dystrophin gene, and sequencing if that is negative ([Birnkrant 2018](https://pubmed.ncbi.nlm.nih.gov/29395989/)). See the [Neuromuscular section](/neuromuscular) for the disease itself."
   },
   {
     "id": "myelitis",

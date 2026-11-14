@@ -124,7 +124,7 @@
           "Delete any mention of the temporal activity and report the study as normal without explanation"
         ],
         "answer": 2,
-        "explanation": "The transients failed the IFCN criteria: no after-going slow wave, no field, and a morphology that is the background itself. They are the sharply contoured drowsy activity that Benbadis found behind most misdiagnoses. The report should describe that activity for what it is, in the description, and state a normal impression with no epileptiform discharges. Keeping a hedge such as 'uncertain significance' transfers the reader's doubt to the chart and invites treatment. Upgrading the call to epileptiform is the overread itself. Deleting the description leaves the next reader unable to check the call. The description should be complete and the impression clear."
+        "explanation": "The transients failed the IFCN criteria: no after-going slow wave, no field, and a morphology that is the background itself. They are the sharply contoured drowsy activity found behind most misdiagnoses of epilepsy (Benbadis 2003; Benbadis 2008). The report should describe that activity for what it is, in the description, and state a normal impression with no epileptiform discharges. Keeping a hedge such as 'uncertain significance' transfers the reader's doubt to the chart and invites treatment. Upgrading the call to epileptiform is the overread itself. Deleting the description leaves the next reader unable to check the call. The description should be complete and the impression clear."
       }
     }
   ],
@@ -182,7 +182,7 @@
         "Describe the slowing as an expected response to hyperventilation in a child and report the study as normal"
       ],
       "answer": 3,
-      "explanation": "Marked slowing during hyperventilation is normal in children, as Module 4 describes, and hyperventilation slowing is among the normal findings documented as overread in patients misdiagnosed with epilepsy (Benbadis 2003; Benbadis 2008). Slowing that appears with the procedure and resolves shortly after it is the physiologic response, not an abnormality of the background. Calling it generalized slowing turns a provoked, transient change into a sign of encephalopathy. Calling it spike-wave invents a discharge that was not seen. The rule is that hyperventilation in an untreated child either produces 2.5 to 4 Hz spike-wave or it does not. Neuroimaging for a normal response has no basis. The report should record that hyperventilation was performed and adequate, describe the response, and give a normal impression."
+      "explanation": "Marked slowing during hyperventilation is normal in children, as Module 4 describes, and hyperventilation slowing is among the normal findings documented as overread in patients misdiagnosed with epilepsy (Benbadis 2003; Benbadis 2008). Slowing that appears with the procedure and resolves shortly after it is the physiologic response, not an abnormality of the background. Calling it generalized slowing turns a provoked, transient change into a sign of encephalopathy. Calling it spike-wave invents a discharge that was not seen. Hyperventilation provokes spike-wave and absence seizures in most untreated children with childhood absence epilepsy, so 3 minutes of good hyperventilation with no spike-wave makes that diagnosis very unlikely (Hirsch E 2022). Slowing alone is not spike-wave. Neuroimaging for a normal response has no basis. The report should record that hyperventilation was performed and adequate, describe the response, and give a normal impression."
     }
   ],
   "resources": [
@@ -213,6 +213,7 @@
     "borusiak2010",
     "benbadis2003",
     "benbadis2008",
-    "stlouis2016"
+    "stlouis2016",
+    "hirschE2022"
   ]
 }
