@@ -28,6 +28,9 @@
         "Cerebellar errors are errors of range, rate and rhythm, and basal ganglia errors are errors of amount and selection.",
         "An action tremor that worsens near the target is cerebellar, and a tremor at rest comes from the basal ganglia."
       ],
+      "related": [
+        { "href": "/neuroradiology/atlas/?age=unc2y&label=Thalamus%20left", "label": "MRI atlas: the thalamus at 2 years" }
+      ],
       "question": {
         "question": "A 7-year-old overshoots badly on finger-nose testing with the right arm. Strength in that arm is 3 out of 5, with brisk right reflexes. What is the most defensible description?",
         "options": [
@@ -48,6 +51,9 @@
         "Midline lesions give truncal and gait ataxia with relatively spared limbs, and hemispheric lesions give limb ataxia on the same side (Brazis 2011, pp. 411-412).",
         "Bilateral, pancerebellar signs suggest a diffuse cause such as a toxin, a drug, or a metabolic, inherited or demyelinating disorder (DeMyer, p. 339).",
         "The deep nuclei carry the cerebellar output and are excitatory except in their projections to the inferior olive (Brazis 2011, p. 405), and only the Purkinje stage before them is inhibitory."
+      ],
+      "related": [
+        { "href": "/neuroradiology/atlas/?age=pma40w&label=Cerebellum%20left", "label": "MRI atlas: the cerebellum at term" }
       ],
       "question": {
         "question": "A 5-year-old has a month of morning vomiting and now staggers and sways when standing, on a broad base. Lying down, finger-nose and heel-shin are nearly normal on both sides. Where is the lesion most likely to be?",
@@ -116,6 +122,10 @@
         "In children the hyperkinetic end dominates, with chorea, dystonia, tics and myoclonus.",
         "A movement should be described precisely, including which part moves, whether it is brief or sustained, random or patterned, and at rest or on action, before it is named.",
         "Sydenham chorea is post-streptococcal and a hallmark of acute rheumatic fever, so the rest of the disease must be sought (Pearl 2014, p. 116)."
+      ],
+      "related": [
+        { "href": "/neuroradiology/atlas/?age=unc2y&label=Putamen%20left", "label": "MRI atlas: the putamen at 2 years" },
+        { "href": "/neuroradiology/atlas/?age=unc2y&label=Caudate%20nucleus%20left", "label": "MRI atlas: the caudate at 2 years" }
       ],
       "question": {
         "question": "A 9-year-old girl has three weeks of fidgety, irregular movements flitting between her hands, face and feet, a fluctuating hand grip, and new tearfulness. She had a sore throat six weeks ago. Strength and reflexes are normal. After placing the lesion in the basal ganglia, what is the most important next step?",

@@ -116,6 +116,10 @@
         "A static lesion can look new as development unfolds, as when a floppy infant later becomes spastic or a hemiparesis is revealed by hand preference before 12 months (DeMyer, p. 273; Utah).",
         "Ask whether the child is losing ground or failing to gain it, and use the age of onset as a strong filter on the list."
       ],
+      "related": [
+        { "href": "/eeg/m09-syndromes/#s4", "label": "EEG Module 9: Lennox-Gastaut and spike-wave activation in sleep" },
+        { "href": "/eeg/m02-read-and-report/#s1", "label": "EEG Module 2: what a single EEG can answer" }
+      ],
       "question": {
         "question": "A 3-year-old with a diagnosis of spastic diplegic cerebral palsy, who walked with a walker at 2, can no longer stand with support and has stopped using two-word phrases. What is the most appropriate response?",
         "options": [
@@ -158,6 +162,9 @@
         "Background rates in well children include incidental MRI findings in 21.1% at 9 to 10 years (Li 2021) and epileptiform discharges in 6.5% at 6 to 13 years (Borusiak 2010).",
         "A variant of uncertain significance is weighed against the localization and the clock rather than read as a diagnosis (Richards 2015).",
         "Before ordering, write down the result you expect and what you will do with each answer."
+      ],
+      "related": [
+        { "href": "/eeg/m05-variants/#s4", "label": "EEG Module 5: discharges in healthy children" }
       ],
       "question": {
         "question": "A 9-year-old fainted while standing through a long assembly on a hot day. She went pale, slumped, and was herself again within a minute, with no confusion afterwards. Her examination is normal. An EEG ordered elsewhere reports a few focal epileptiform discharges. Her parents ask whether she has epilepsy. What is the best response?",

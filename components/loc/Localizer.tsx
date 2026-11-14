@@ -6,6 +6,7 @@
 import { useMemo, useState } from 'react';
 import { FINDINGS, FINDING_SETS, LEVELS, PRESETS, localize, type FindingGroup } from '@/src/loc/models/localizer';
 import { Chip, Label, WidgetFrame } from './ui';
+import { SeeOnMri } from './AtlasLink';
 
 const GROUP_ORDER: FindingGroup[] = ['distribution', 'tone & reflexes', 'muscle', 'sensation', 'other'];
 const SUBTITLES: Record<string, string> = {
@@ -94,6 +95,7 @@ export function Localizer({ accent, variant = 'full' }: { accent: string; varian
               : surviving.length === 1 ? <><b>One level left:</b> {LEVELS.find(l => l.id === surviving[0].level)!.name}.</>
               : <><b>{surviving.length} levels remain.</b> Filled dots show how many findings each one positively fits.</>}
           </p>
+          {sel.length > 0 && surviving.length === 1 && <SeeOnMri site={surviving[0].level} accent={accent} />}
           {activePreset && <p className="mt-1 text-[12px] leading-snug rounded-lg px-3 py-2" style={{ background: accent + '10', color: '#334155' }}>{activePreset.teaching}</p>}
         </div>
       </div>

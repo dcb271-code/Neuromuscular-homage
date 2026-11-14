@@ -17,8 +17,11 @@ import { LOC_TRACKS } from '@/src/loc/curriculum';
 import { LOC_SOURCES } from '@/src/loc/sources';
 import { LOC_WIDGETS } from '@/components/loc/widgets';
 import { ExamVideos } from '@/components/loc/ExamVideos';
+import { NRAD_TRACKS } from '@/src/nrad/curriculum';
+import { NRAD_SOURCES } from '@/src/nrad/sources';
+import { NRAD_WIDGETS } from '@/components/nrad/widgets';
 
-export type CurriculumKind = 'eeg' | 'loc';
+export type CurriculumKind = 'eeg' | 'loc' | 'nrad';
 
 export interface CurriculumConfig {
   kind: CurriculumKind;
@@ -64,6 +67,20 @@ export const CURRICULA: Record<CurriculumKind, CurriculumConfig> = {
     videoStrip: ExamVideos,
     footer: (
       <>The interactive figures are calculated from our own models of the anatomy, and exam videos are from the University of Utah NeuroLogic Exam (CC BY-NC-SA); see <a href="/credits/" className="underline">credits</a>. For education. Not for clinical decision-making; consult primary sources and your attending.</>
+    ),
+  },
+  nrad: {
+    kind: 'nrad',
+    basePath: '/neuroradiology',
+    crumb: 'Neuroradiology',
+    storageKey: STORAGE_KEYS.nrad,
+    tracks: NRAD_TRACKS,
+    sources: NRAD_SOURCES,
+    figures: {},
+    widgets: NRAD_WIDGETS,
+    navExtra: { href: '/neuroradiology/atlas/', label: 'MRI atlas' },
+    footer: (
+      <>The CT images in this module are synthetic and schematic, calculated from tissue values in the cited studies, and no patient images are used. For education. Not for clinical decision-making. Consult primary sources and your attending.</>
     ),
   },
 };

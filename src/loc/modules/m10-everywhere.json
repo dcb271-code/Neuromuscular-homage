@@ -30,6 +30,12 @@
         "Describe responsiveness in plain words, naming the stimulus and the response, rather than with labels such as lethargic or stuporous (Brazis 2011, p. 603).",
         "When the child cannot cooperate, the brainstem reflexes become the examination."
       ],
+      "related": [
+        {
+          "href": "/eeg/m11-critical-care/",
+          "label": "EEG Module 11: critical care EEG"
+        }
+      ],
       "question": {
         "question": "A 9-year-old with a known left frontal tumor has been awake and talking with a right hemiparesis. Overnight she becomes hard to rouse, opening her eyes only to a firm sternal rub and not speaking. What does the change in consciousness tell you?",
         "options": [
@@ -73,6 +79,16 @@
         "Asymmetry and a descending pattern point to a structural lesion, while symmetry and signs that disagree point to metabolic disease.",
         "In every comatose child, check the glucose immediately and look for a chemical cause while the examination proceeds."
       ],
+      "related": [
+        {
+          "href": "/eeg/m10-seizures-status/#s3",
+          "label": "EEG Module 10: status epilepticus thresholds"
+        },
+        {
+          "href": "/eeg/m11-critical-care/#s4",
+          "label": "EEG Module 11: the ictal-interictal continuum"
+        }
+      ],
       "question": {
         "question": "A 2-year-old is brought in very drowsy after playing unsupervised at a relative's house. Her pupils are small and react briskly to light, she has no horizontal eye movement on head turning, and her limbs are symmetrically floppy. What is the most appropriate interpretation and first step?",
         "options": [
@@ -104,7 +120,13 @@
         ],
         "answer": 3,
         "explanation": "In uncal herniation the pupil-constricting fibers on the outside of the third nerve are compressed first, so the dilated pupil is on the side of the mass. Same-side weakness comes from the opposite peduncle being pressed against the tentorium (Kernohan's notch), which is why the pupil is the more reliable sign. Reading the weakness in the usual crossed way sends you to the wrong side."
-      }
+      },
+      "related": [
+        {
+          "href": "/neuroradiology/m02-ct-head/#s5",
+          "label": "Neuroradiology Module 2: herniation and hydrocephalus on CT"
+        }
+      ]
     },
     {
       "title": "False localizing signs",
@@ -136,6 +158,16 @@
         "Discrete lesions give signs that meet at a point, whereas system diseases give signs that respect a tract or cell type throughout the nervous system (Brazis 2011, p. 4).",
         "Signs from several levels at once in a sleepy child after an infection suggest a multifocal process such as acute disseminated encephalomyelitis.",
         "Regression, the loss of skills already acquired, localizes a process in time and points toward neurodegenerative, genetic and metabolic causes and epileptic encephalopathy."
+      ],
+      "related": [
+        {
+          "href": "/eeg/m08-interictal/#s4",
+          "label": "EEG Module 8: focal and diffuse slowing"
+        },
+        {
+          "href": "/eeg/m09-syndromes/#s4",
+          "label": "EEG Module 9: Lennox-Gastaut and spike-wave activation in sleep"
+        }
       ],
       "question": {
         "question": "A 6-year-old became sleepy and irritable ten days after a viral illness. She now has a mild left hemiparesis, unsteady arms, double vision and difficulty passing urine. No single lesion explains all of this. What is the most useful way to frame her localization?",

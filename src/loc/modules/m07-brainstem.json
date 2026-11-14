@@ -28,6 +28,9 @@
         "The corticospinal tract crosses only at the bottom of the medulla, so above that point it still serves the opposite body.",
         "When the face and limbs are weak on the same side, the lesion lies above the facial nucleus rather than in the lower brainstem."
       ],
+      "related": [
+        { "href": "/neuroradiology/atlas/?age=pma40w&label=Brainstem%2C%20spans%20the%20midline", "label": "MRI atlas: the brainstem at term" }
+      ],
       "question": {
         "question": "A 9-year-old has weakness of the whole left side of the face, including the forehead, and a weak right arm and leg with a brisk right knee jerk. Where is the lesion?",
         "options": [

@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import genesData from '@/src/data/genes-enriched.json';
 import Link from 'next/link';
+import { TaughtInLine } from '@/components/curriculum/TaughtIn';
 
 type Gene = (typeof genesData)[number];
 
@@ -143,6 +144,7 @@ export default function GenePage({ params }: { params: { symbol: string } }) {
             {gene.aliases.join(', ')}
           </div>
         )}
+        <TaughtInLine path={`/gene/${gene.symbol}/`} />
       </div>
 
       {/* ── Primary WUSTL link ──────────────────────────────────────────── */}

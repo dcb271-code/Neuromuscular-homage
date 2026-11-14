@@ -30,6 +30,10 @@
         "Indications for continuous EEG in critically ill children follow the ACNS consensus statement (Herman 2015).",
         "Neonatal and pediatric thresholds differ. Neonatal status is 50% of an hour, and pediatric and adult electrographic status is 10 minutes or 20% of an hour."
       ],
+      "related": [
+        { "href": "/localization/m10-everywhere/#s2", "label": "Localization Module 10: finding the level in coma" },
+        { "href": "/localization/m10-everywhere/#s3", "label": "Localization Module 10: metabolic or structural coma" }
+      ],
       "question": {
         "question": "A 4-year-old is admitted after 40 minutes of convulsive status epilepticus, now treated with a benzodiazepine and levetiracetam, intubated and sedated. The convulsions have stopped and the child is unresponsive. The intensivist asks whether continuous EEG is worth ordering, since \"the seizure is over.\" What is the best response?",
         "options": [

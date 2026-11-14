@@ -31,6 +31,15 @@ export interface Section {
   figures?: string[];
   /** Exam video clip ids (src/loc/videos.ts), shown after the prose. */
   videos?: string[];
+  /** Links to other parts of the site (another curriculum's section, a gene or condition page,
+   *  an atlas structure), shown as one small line after the key points. Internal paths only;
+   *  validated by scripts/xlinks-lib.mjs. Does not count toward the section word budget. */
+  related?: RelatedLink[];
+}
+
+export interface RelatedLink {
+  href: string; // e.g. "/eeg/m11-critical-care/#s2" or "/neuroradiology/atlas/?age=pma40w&label=Brainstem%2C%20spans%20the%20midline"
+  label: string; // plain and specific, e.g. "EEG Module 11: critical care EEG"
 }
 
 export interface EegFigure {

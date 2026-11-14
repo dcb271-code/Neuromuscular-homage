@@ -2,6 +2,10 @@
 
 // Pediatric brain MRI atlas viewer (NiiVue).
 // Data comes from public/atlas/, built by scripts/prepare_atlas.py.
+//
+// Deep links: ?age=<age id from manifest.json>&label=<structure name from the label table>.
+// Both are optional and read on the client. A valid label opens with that one structure
+// highlighted and the crosshair on it; an unknown age or label is ignored.
 
 import { useEffect, useRef, useState } from 'react';
 import type { Niivue } from '@niivue/niivue';
@@ -19,6 +23,32 @@ function padLabelColormap(cm: LabelMap): LabelMap {
     R: [0, ...cm.R], G: [0, ...cm.G], B: [0, ...cm.B], A: [0, ...cm.A],
     I: [-1, ...cm.I], labels: ['', ...cm.labels],
   };
+}
+
+// Same map with every structure transparent except one (label index `idx`), for highlighting.
+function highlightColormap(cm: LabelMap, idx: number): LabelMap {
+  const padded = padLabelColormap(cm);
+  return { ...padded, A: padded.A.map((a, k) => (k === idx + 1 ? 255 : 0)) };
+}
+
+// A voxel of label `idx` near the structure's center of mass, in RAS voxel coordinates. The
+// centroid of a curved structure (a ventricle, a gyrus) can fall outside it, so the result is
+// snapped to the labelled voxel nearest the centroid.
+function labelCenter(img: ArrayLike<number>, dims: number[], idx: number): [number, number, number] | null {
+  const [nx, ny, nz] = [dims[1], dims[2], dims[3]];
+  let n = 0, sx = 0, sy = 0, sz = 0;
+  for (let z = 0, i = 0; z < nz; z++) for (let y = 0; y < ny; y++) for (let x = 0; x < nx; x++, i++) {
+    if (Math.round(img[i]) === idx) { n++; sx += x; sy += y; sz += z; }
+  }
+  if (!n) return null;
+  const c = [sx / n, sy / n, sz / n];
+  let best: [number, number, number] = [0, 0, 0], bestD = Infinity;
+  for (let z = 0, i = 0; z < nz; z++) for (let y = 0; y < ny; y++) for (let x = 0; x < nx; x++, i++) {
+    if (Math.round(img[i]) !== idx) continue;
+    const d = (x - c[0]) ** 2 + (y - c[1]) ** 2 + (z - c[2]) ** 2;
+    if (d < bestD) { bestD = d; best = [x, y, z]; }
+  }
+  return best;
 }
 
 const BASE = '/atlas';
@@ -54,6 +84,8 @@ export default function AtlasViewer() {
   const labelCacheRef = useRef<Record<string, LabelMap>>({});
   const hasLabelVolRef = useRef(false);
   const loadedAgeRef = useRef<string | null>(null);
+  // Structure named in the URL, applied once the first label table that contains it has loaded.
+  const pendingLabelRef = useRef<string | null>(null);
 
   const [ready, setReady] = useState(false);
   const [manifest, setManifest] = useState<Manifest | null>(null);
@@ -68,15 +100,28 @@ export default function AtlasViewer() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [where, setWhere] = useState<{ mm: string; structure: string | null }>({ mm: '', structure: null });
+  const [highlight, setHighlight] = useState<string | null>(null);
 
   // Create NiiVue once. Imported dynamically: it needs window/WebGL, so it can't run during prerender.
   useEffect(() => {
     let disposed = false;
     setMobile(window.matchMedia('(max-width: 640px)').matches);
 
+    // Deep-link parameters. Read from window.location so the page can stay a static export.
+    let wantAge: string | null = null;
+    try {
+      const q = new URLSearchParams(window.location.search);
+      wantAge = q.get('age');
+      pendingLabelRef.current = q.get('label') || null;
+    } catch { /* no usable query string */ }
+
     fetch(`${BASE}/manifest.json`)
       .then(r => r.json())
-      .then((m: Manifest) => { if (!disposed) { setManifest(m); setAgeId(m.default); } })
+      .then((m: Manifest) => {
+        if (disposed) return;
+        setManifest(m);
+        setAgeId(wantAge && m.ages.some(a => a.id === wantAge) ? wantAge : m.default);
+      })
       .catch(() => setError('Could not load the atlas manifest.'));
     (async () => {
       try {
@@ -171,6 +216,15 @@ export default function AtlasViewer() {
           loadedAgeRef.current = age.id;
         }
         setWhere({ mm: '', structure: null });
+        // A structure named in the URL: highlight it and put the crosshair on it. If this age has
+        // no label table, or the name is not in it, the link is ignored and the viewer opens as usual.
+        const pending = pendingLabelRef.current;
+        pendingLabelRef.current = null;
+        if (pending && hasLabelVolRef.current && labelMapRef.current?.labels.includes(pending)) {
+          setHighlight(pending);
+          setShowLabels(true);
+          focusStructure(pending);
+        }
         setLoading(false);
       })
       .catch(() => { if (!cancelled) { setError('Could not load this template.'); setLoading(false); } });
@@ -184,6 +238,35 @@ export default function AtlasViewer() {
     if (!nv || loading || nv.volumes.length < 2) return;
     nv.setOpacity(1, showLabels ? LABEL_OPACITY : 0);
   }, [showLabels, loading]);
+
+  // Highlight: show only the chosen structure's color. Dropped when the new age's label table
+  // does not contain it (or the age has no labels).
+  useEffect(() => {
+    const nv = nvRef.current;
+    const cm = labelMapRef.current;
+    if (!nv || loading) return;
+    if (!hasLabelVolRef.current || !cm || nv.volumes.length < 2) { if (highlight) setHighlight(null); return; }
+    const idx = highlight ? cm.labels.indexOf(highlight) : -1;
+    if (highlight && idx < 1) { setHighlight(null); return; }
+    nv.volumes[1].setColormapLabel(idx > 0 ? highlightColormap(cm, idx) : padLabelColormap(cm));
+    nv.updateGLVolume();
+  }, [highlight, loading]);
+
+  // Move the crosshair to a labelled structure (a voxel of it nearest its center of mass).
+  function focusStructure(name: string) {
+    const nv = nvRef.current;
+    const cm = labelMapRef.current;
+    const vol = nv?.volumes[1];
+    if (!nv || !cm || !vol || !vol.dimsRAS) return;
+    const idx = cm.labels.indexOf(name);
+    if (idx < 1) return;
+    const vox = labelCenter(vol.img2RAS(), vol.dimsRAS, idx);
+    if (!vox) return;
+    const mm = vol.convertFrac2MM(vol.convertVox2Frac(vox as unknown as Parameters<typeof vol.convertVox2Frac>[0]));
+    nv.scene.crosshairPos = nv.mm2frac(mm);
+    nv.createOnLocationChange();
+    nv.drawScene();
+  }
 
   useEffect(() => {
     planeRef.current = plane;
@@ -277,6 +360,20 @@ export default function AtlasViewer() {
             <div style={{ fontSize: '12px', color: '#64748b' }}>
               {age.detail}
               {sizeMB && <span style={{ color: '#cbd5e1' }}> · {sizeMB} MB{previewing ? ' (1 mm preview)' : ''}</span>}
+            </div>
+          )}
+
+          {highlight && (
+            <div role="status" style={{
+              display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', fontSize: '12px',
+              background: ACCENT + '0d', border: `1px solid ${ACCENT}33`, borderRadius: '10px', padding: '6px 10px',
+            }}>
+              <span style={{ color: '#64748b' }}>Highlighted:</span>
+              <b style={{ color: '#1e293b' }}>{highlight}</b>
+              <span style={{ display: 'inline-flex', gap: '6px', marginLeft: 'auto' }}>
+                <button onClick={() => { setShowLabels(true); focusStructure(highlight); }} style={linkBtn}>Go to it</button>
+                <button onClick={() => setHighlight(null)} style={linkBtn}>Show all structures</button>
+              </span>
             </div>
           )}
         </div>
@@ -464,6 +561,11 @@ function SliceRail({ plane, frac, total, canCycle, onCycle, onStep, onScrub }: {
     </div>
   );
 }
+
+const linkBtn: React.CSSProperties = {
+  fontSize: '12px', fontWeight: 600, color: ACCENT, background: '#fff', cursor: 'pointer',
+  border: `1px solid ${ACCENT}55`, borderRadius: '7px', padding: '3px 9px',
+};
 
 function Pill({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
   return (

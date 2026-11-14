@@ -94,6 +94,10 @@
         "Tonic seizures and spasms show generalized fast activity or an electrodecrement, and are the seizures most easily hidden by muscle.",
         "For every recorded event, identify onset, evolution and offset, then apply the ACNS definitions."
       ],
+      "related": [
+        { "href": "/localization/m01-where-before-what/#s3", "label": "Localization Module 1: negative signs, positive signs and release" },
+        { "href": "/localization/m09-hemispheres/#s1", "label": "Localization Module 9: signs of a cortical lesion" }
+      ],
       "question": {
         "question": "During a recording, a 10-year-old's left temporal channels flatten for several seconds, then show rhythmic 6 Hz activity that slows to 4 Hz and spreads to the left frontal channels over 30 s, followed by left temporal slowing. The technologist's note says the child \"looked fine.\" What is the correct description?",
         "options": [

@@ -1,0 +1,9 @@
+{
+  "_note": "Atlas structures the localization widgets link to with a 'See it on MRI' link. Keys are widget lesion sites. Ages and labels must exist in public/atlas (checked by scripts/test-xlinks.ts).",
+  "targets": {
+    "brainstem": { "age": "pma40w", "label": "Brainstem, spans the midline", "name": "the brainstem", "ageName": "at term" },
+    "cerebellum": { "age": "pma40w", "label": "Cerebellum left", "name": "the cerebellum", "ageName": "at term" },
+    "occipital-L": { "age": "unc2y", "label": "Calcarine cortex left", "name": "the left calcarine cortex", "ageName": "at 2 years" },
+    "occipital-R": { "age": "unc2y", "label": "Calcarine cortex right", "name": "the right calcarine cortex", "ageName": "at 2 years" }
+  }
+}

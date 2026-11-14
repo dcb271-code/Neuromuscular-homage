@@ -4,6 +4,7 @@
 //   node scripts/validate-eeg.mjs m03        # one module (prefix match)
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { checkRelated } from './xlinks-lib.mjs';
 
 const dir = new URL('../src/eeg/modules/', import.meta.url).pathname;
 const filter = process.argv[2];
@@ -75,6 +76,7 @@ for (const f of files) {
     if (!s.keyPoints || s.keyPoints.length < 3 || s.keyPoints.length > 5) fail(f, `${where}: keyPoints ${s.keyPoints?.length ?? 0} (want 3–5)`);
     checkMarkup(f, s.content || '', where);
     for (const id of s.figures || []) if (!figureIds.has(id)) fail(f, `${where}: unknown figure ${id}`);
+    for (const e of checkRelated(s.related, `/eeg/${m.id}/`)) fail(f, `${where}: ${e}`);
     if (s.question) { checkQuestion(f, s.question, where + ' inline'); answers.push(s.question.answer); }
     else warn(f, `${where}: no inline question`);
     if ((s.content || '').split('\n').some(l => l.trim().startsWith('|') && l.includes('[['))) fail(f, `${where}: wiki-link inside a table row`);

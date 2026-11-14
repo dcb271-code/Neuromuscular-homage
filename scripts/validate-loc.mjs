@@ -4,6 +4,7 @@
 //   node scripts/validate-loc.mjs m03        # one module (prefix match)
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { checkRelated } from './xlinks-lib.mjs';
 
 const dir = new URL('../src/loc/modules/', import.meta.url).pathname;
 const filter = process.argv[2];
@@ -82,6 +83,7 @@ for (const f of files) {
     if (s.figure && !WIDGETS.includes(s.figure) && !/^case:[a-z0-9-]+$/.test(s.figure)) fail(f, `${where}: unknown widget ${s.figure}`);
     if (/\u2014/.test(JSON.stringify(s))) fail(f, `${where}: contains an em dash`);
     for (const v of s.videos || []) if (!knownVideos.has(v)) fail(f, `${where}: unknown video ${v}`);
+    for (const e of checkRelated(s.related, `/localization/${m.id}/`)) fail(f, `${where}: ${e}`);
     if (s.question) { checkQuestion(f, s.question, where + ' inline'); answers.push(s.question.answer); }
     else warn(f, `${where}: no inline question`);
     if ((s.content || '').split('\n').some(l => l.trim().startsWith('|') && l.includes('[['))) fail(f, `${where}: wiki-link inside a table row`);

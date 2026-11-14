@@ -5,7 +5,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
-import type { EegModule, QuizQuestion } from '@/src/eeg/types';
+import type { EegModule, QuizQuestion, RelatedLink } from '@/src/eeg/types';
 import { sourceUrl } from '@/src/eeg/sources';
 import { useCurriculumProgress } from '@/src/curriculum/progress';
 import { FormattedContent } from './FormattedContent';
@@ -138,6 +138,7 @@ export function ModulePage({ kind, module: m, prev, next }: { kind: CurriculumKi
               <KeyPoints points={s.keyPoints} accent={accent}
                 isFlagged={k => !!store.flags[`${m.id}:${i}:${k}`]}
                 onToggle={(k, text) => toggleFlag(m.id, i, k, text)} />
+              {s.related && s.related.length > 0 && <RelatedLine links={s.related} accent={accent} />}
               {s.question && <InlineQuestion question={s.question} accent={accent} onAnswer={ok => recordInline(m.id, i, ok)} />}
               {i < m.sections.length - 1 && <hr className="mt-10 border-slate-100" />}
             </section>
@@ -189,6 +190,25 @@ export function ModulePage({ kind, module: m, prev, next }: { kind: CurriculumKi
         </div>
       </div>
     </div>
+  );
+}
+
+// ── Related elsewhere on the site ──────────────────────────────────────────────
+// One quiet line after the key points. Links stay inside the site, so they open in place.
+
+function RelatedLine({ links, accent }: { links: RelatedLink[]; accent: string }) {
+  return (
+    <nav aria-label="Related elsewhere on the site" className="mt-3 text-[12.5px] leading-relaxed text-slate-500">
+      <span className="mr-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-slate-400">Related elsewhere on the site</span>
+      <ul className="inline">
+        {links.map((l, k) => (
+          <li key={l.href} className="inline">
+            {k > 0 && <span aria-hidden="true" className="mx-1.5 text-slate-300">·</span>}
+            <Link href={l.href} className="underline-offset-2 hover:underline" style={{ color: accent }}>{l.label}</Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
 

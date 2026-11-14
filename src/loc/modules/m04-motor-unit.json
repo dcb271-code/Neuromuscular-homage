@@ -54,6 +54,9 @@
         "Selective wasting that ignores root and nerve maps suggests disease of the muscle or the horn cell (Morris 2012, p. 17).",
         "Reflexes persist in myopathy until the muscle is very weak."
       ],
+      "related": [
+        { "href": "/gene/DMD/", "label": "DMD gene page (Duchenne and Becker muscular dystrophy)" }
+      ],
       "question": {
         "question": "A 4-year-old boy pushes up on his thighs to stand from the floor. Taken on its own, what does that sign establish?",
         "options": [
@@ -101,6 +104,11 @@
         "A patient who can walk on the heels but not the toes more likely has an intraspinal cause than a polyneuropathy (Brazis 2011, p. 26).",
         "In a child, a lifelong symmetric neuropathy suggests an inherited cause, and an acute ascending one suggests Guillain-Barré syndrome."
       ],
+      "related": [
+        { "href": "/gene/PMP22/", "label": "PMP22 gene page (Charcot-Marie-Tooth type 1A)" },
+        { "href": "/condition/hereditary-motor-sensory-neuropathies-hmsn-cmt/", "label": "Hereditary motor sensory neuropathies (CMT) by gene" },
+        { "href": "/condition/classic-guillain-barr-syndrome/", "label": "Guillain-Barré syndrome" }
+      ],
       "question": {
         "question": "A 10-year-old with slowly worsening leg weakness can walk on her heels but cannot walk on her toes. Ankle reflexes are absent and sensation is normal. What does the heel-toe pattern argue against?",
         "options": [
@@ -122,6 +130,11 @@
         "Spinal muscular atrophy presents as an alert, floppy, areflexic infant with tongue fasciculations, and early recognition matters because treatments exist.",
         "Acute flaccid myelitis causes acute, often asymmetric, areflexic weakness from injury to the gray matter of the cord.",
         "Brief, isolated fasciculations in a healthy person are common and usually harmless."
+      ],
+      "related": [
+        { "href": "/gene/SMN1/", "label": "SMN1 gene page (spinal muscular atrophy)" },
+        { "href": "/condition/sma-5q-classification-without-treatment/", "label": "SMA 5q types and SMN2 copy number" },
+        { "href": "/condition/acute-flaccid-myelitis-ev-d68-motor-neuronopathy-afm/", "label": "Acute flaccid myelitis" }
       ],
       "question": {
         "question": "A 5-year-old develops floppy weakness of one arm over two days after a cold. The arm's reflexes are absent and sensation is normal, and bladder function is normal. Which address best explains the picture?",

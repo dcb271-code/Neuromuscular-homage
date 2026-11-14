@@ -25,6 +25,9 @@
         "An interictal discharge does not by itself establish epilepsy, which is a clinical diagnosis.",
         "Match the study to the indication, and say in the report when the study could not answer the question asked."
       ],
+      "related": [
+        { "href": "/localization/m01-where-before-what/#s5", "label": "Localization Module 1: reading scans, EEGs and genes against the exam" }
+      ],
       "question": {
         "question": "A 6-year-old had a single unprovoked generalized tonic-clonic seizure. Her routine awake EEG, without sleep, is normal. The referring clinician asks whether the normal study rules out epilepsy. What should the report say?",
         "options": [

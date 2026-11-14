@@ -1,0 +1,371 @@
+{
+  "id": "m02-ct-head",
+  "number": 2,
+  "title": "CT of the head in children",
+  "short": "CT head",
+  "description": "How CT turns density into gray, the windows that reveal or hide blood, a systematic read with pediatric normals, hemorrhage by shape, herniation and hydrocephalus, abusive head trauma, and when a child does not need a scan.",
+  "why": "CT is still the fastest way to find blood, a mass or blocked ventricles in a sick child. Reading it well means knowing what the numbers mean, which window hides what, and when the radiation is not needed at all.",
+  "track": "first",
+  "tags": [
+    "CT",
+    "Trauma",
+    "Pediatric Normals",
+    "Clinical Decision-Making"
+  ],
+  "difficulty": "intermediate",
+  "duration": "50 min",
+  "color": "#7c3aed",
+  "opener": {
+    "history": "On Friday, 1 October 1971, a middle-aged woman with a suspected tumor in her left frontal lobe was scanned on a prototype machine at Atkinson Morley's Hospital in Wimbledon. The data went to an off-site computer, and two days passed before the radiologist James Ambrose saw the 80 by 80 picture. It showed the tumor, later removed and found to be a cystic astrocytoma. The engineer who built the scanner, Godfrey Hounsfield, shared the 1979 Nobel Prize, and the numbers on every CT carry his name.",
+    "source": "Schulz 2021"
+  },
+  "objectives": [
+    "Explain Hounsfield units, why acute blood is brighter than brain, and when it is not.",
+    "Choose a window for a question, and say what the brain, subdural and bone windows each hide.",
+    "Read a child's head CT in a fixed order, recognizing open sutures and fontanelles, wide extra-axial spaces in infancy and physiologic calcification as normal.",
+    "Tell epidural, subdural, subarachnoid, intraparenchymal and intraventricular blood apart by shape and site, and connect each to the deficit and herniation it can cause.",
+    "Describe the imaging evaluation of suspected abusive head trauma without overstating what CT can say about timing.",
+    "Apply the PECARN rules by age, and choose ultrasound or rapid MRI when they answer the question without radiation."
+  ],
+  "sections": [
+    {
+      "title": "Hounsfield units and why acute blood is bright",
+      "content": "A CT scanner measures how much each small block of tissue weakens an x-ray beam, and it reports that number on a scale where water is 0 and air is -1000. Hounsfield's first machine set air at -500 and dense bone near +500. The scale was later doubled and named after him, so dense bone now sits around +1000 ([Schulz 2021](https://pubmed.ncbi.nlm.nih.gov/34729383/)).\n\nThe brain occupies a narrow strip of that range. In 42 normal pediatric scans, cortical gray matter measured about 32 to 33 HU after age 2, white matter about 24, and CSF in the ventricles between 6 and 15, depending on how it was measured ([Honjo 2026](https://pubmed.ncbi.nlm.nih.gov/42100309/)). Under age 2, gray matter measured nearer 28 HU, so an infant's scan has less contrast between gray and white matter (Honjo 2026). CT studies define fat as the range from -190 to -30 ([Derstine 2022](https://pubmed.ncbi.nlm.nih.gov/35149727/)).\n\nBlood is brighter than brain because of its protein. Acute hemorrhage typically measures 50 to 70 HU ([Mutch 2016](https://pubmed.ncbi.nlm.nih.gov/27637393/)). Laboratory work traced the extra density of a hematoma mainly to hemoconcentration, the packing of red cells and hemoglobin as a clot forms, with almost no contribution from iron or calcium ([Norman 1977](https://pubmed.ncbi.nlm.nih.gov/847198/)). Unclotted blood measured 66 HU in a laboratory phantom, and blood diluted in CSF measured less ([Chakeres 1986](https://pubmed.ncbi.nlm.nih.gov/3082153/)), which is why a thin film of subarachnoid blood can be faint.\n\nThe same arithmetic sets a trap. In a laboratory model, blood with a hemoglobin of 8 to 10 g/dL was the same density as brain ([Smith 1981](https://pubmed.ncbi.nlm.nih.gov/6781293/)), so a severely anemic child can have an acute subdural that looks gray. A later series of 109 patients is reassuring, because every acute subdural in an anemic patient still had a bright component somewhere ([Duy 2019](https://pubmed.ncbi.nlm.nih.gov/30771278/)). A collection that is uniformly low in density should not be blamed on anemia alone.\n\nOver the following days and weeks the clot breaks down and its density falls. In a surgical series, subdurals were brighter than brain in every acute case, matched brain in 70% of subacute cases and were darker than brain in 76% of chronic ones ([Scotti 1977](https://pubmed.ncbi.nlm.nih.gov/894336/)). The pace varies widely from one patient to the next, so density alone cannot say how old a hemorrhage is ([Sieswerda-Hoogendoorn 2014](https://pubmed.ncbi.nlm.nih.gov/24816086/)).",
+      "keyPoints": [
+        "CT reports attenuation in Hounsfield units, with water at 0, air at -1000 and dense bone around +1000.",
+        "In normal children, cortical gray matter is about 32 to 33 HU, white matter about 24 and ventricular CSF about 6 to 15, with less gray-white contrast under age 2.",
+        "Acute blood typically measures 50 to 70 HU, mainly because a forming clot concentrates red cells and hemoglobin.",
+        "Severe anemia can lower the density of acute blood, but anemia alone rarely explains a uniformly low-density acute subdural."
+      ],
+      "question": {
+        "question": "A 7-month-old with severe iron-deficiency anemia (hemoglobin 6 g/dL) has a head CT after a fall. A thin left convexity collection is the same gray as the cortex, with one bright strip along its inner edge. How should you read it?",
+        "options": [
+          "As a chronic subdural, because it matches the density of brain",
+          "As benign extra-axial fluid, because it is not bright",
+          "As a probable acute subdural whose density is lowered by anemia, with the bright strip marking acute clot",
+          "As artifact, because acute blood is always brighter than brain"
+        ],
+        "answer": 2,
+        "explanation": "The density of blood follows hemoglobin, so at very low hemoglobin acute blood can approach brain density. A bright component is usually still present, as here, and marks acute clot. Matching brain does not prove a chronic collection, benign extra-axial fluid has the density of CSF, and acute blood is not always bright."
+      },
+      "related": [
+        {
+          "href": "/localization/m01-where-before-what/#s5",
+          "label": "Localization Module 1: reading scans, EEGs and genes against the exam"
+        }
+      ]
+    },
+    {
+      "title": "Windows, and what each one hides",
+      "figure": "ct-window-lab",
+      "content": "A head CT holds numbers from -1000 to beyond +1000, far more than a screen can show as separate grays or an eye can tell apart. A window decides which slice of that range gets the grays. Its **width** is the span of HU spread from black to white, and its **level** is the number at the middle. Anything below the window is black and anything above it is white.\n\nHead CTs are read on several windows for this reason. A brain window of width 80 and level 40 spans 0 to 80 HU and separates gray matter, white matter, CSF and fresh blood. A subdural window of width 200 and level 80 helps a thin acute subdural stand out from the skull, and a bone window of width 2800 and level 600 shows the bone itself ([Wang 2021](https://pubmed.ncbi.nlm.nih.gov/34411910/)). Try each preset in the figure above and probe the thin crescent along the right side of the head.\n\nEach window buys its view by giving something up. On the brain window, bone is pure white and acute blood is nearly as white, so a thin collection hugging the inner table blends into the skull. The subdural window keeps blood gray and bone white, but flattens gray and white matter toward one shade. The bone window shows the two tables of the skull, the diploë between them, a fracture line and air in the sinuses, and turns the whole brain, blood included, into one gray. A fracture seen on the bone window should send you back to the brain window to look for bleeding beneath it (Wang 2021).\n\nA very narrow window works the other way. In adults with stroke, reading with narrow, adjustable windows that started at a width of 8 around 32 HU raised the sensitivity of CT for early ischemic swelling from 57% to 71% without losing specificity ([Lev 1999](https://pubmed.ncbi.nlm.nih.gov/10540655/)). The narrow preset in the figure shows the cost, because noise starts to look like texture.\n\nBefore calling a head CT normal, page through it on the brain, subdural and bone windows, and ask what each one might have hidden.",
+      "keyPoints": [
+        "Window width is the span of HU shown from black to white, and window level is its center.",
+        "Brain (W80/L40), subdural (W200/L80) and bone (W2800/L600) windows each show something the others hide.",
+        "On a brain window, a thin acute subdural can blend into the skull, and a subdural window separates them.",
+        "A fracture on the bone window is a prompt to look for blood beneath it."
+      ],
+      "question": {
+        "question": "A 3-year-old fell from a climbing frame. On the brain window the CT looks normal. On the bone window there is a linear parietal fracture. What should you do next?",
+        "options": [
+          "Look again at the brain and subdural windows beneath the fracture for a thin extra-axial collection",
+          "Report a normal brain, because blood would have shown on the brain window",
+          "Request MRI before reading further",
+          "Measure the HU of the fracture line to estimate its age"
+        ],
+        "answer": 0,
+        "explanation": "A fracture marks the point of impact, where epidural or subdural blood is most likely, and a thin collection against the inner table can blend into bone on a brain window. Blood is not guaranteed to show on one window, MRI is not the next step in reading this scan, and the density of a fracture line does not date it."
+      }
+    },
+    {
+      "title": "A systematic read of a child's head CT",
+      "content": "A head CT is read best in a fixed order, so that finding one abnormality does not end the search. One teaching aid, offered here as a memory hook rather than a validated method, is the phrase *Blood Can Be Very Bad*.\n\n- **Blood.** Check each convexity, the falx, the tentorium and the posterior fossa, on the subdural window as well as the brain window.\n- **Cisterns.** Check that the basal cisterns around the midbrain and the fourth ventricle are open and symmetric.\n- **Brain.** Compare the two sides for symmetry, gray-white distinction, mass effect and midline shift.\n- **Ventricles.** Judge size and shape, including the temporal horns.\n- **Bone.** Use the bone window for fractures, sutures, sinuses and mastoids, and look at the scalp for swelling.\n\nChildren add normal findings that would worry an adult reader. The anterior fontanelle is still open in most children at the first birthday. On CT it was closed in only 16% at 10 months, in about half at 16 months and in 88% at 20 months ([Pindrik 2014](https://pubmed.ncbi.nlm.nih.gov/24920348/)). Sutures are open too, and under age 2 a suture can be hard to tell from a linear fracture. Adding 3D reconstructions raised sensitivity for linear fractures and, under age 2, specificity, at no extra dose ([Orman 2015](https://pubmed.ncbi.nlm.nih.gov/26186360/)).\n\nThe subarachnoid spaces over the frontal lobes are often wide in infancy. Among infants scanned for a large head, the space measured 5 to 9 mm in about half and 10 mm or more in about 9%, while hydrocephalus was found in about 1% ([Tucker 2016](https://pubmed.ncbi.nlm.nih.gov/26942270/)). This benign enlargement is a normal variant, and the small subdural collections sometimes found with it are discussed in section 6.\n\nCalcification is the other common surprise. In 500 children under 10, choroid plexus calcification appeared in 12%, including some infants, while pineal calcification appeared in 5% and never under age 3 ([Whitehead 2015](https://pubmed.ncbi.nlm.nih.gov/25355815/)). Most physiologic calcification was seen after age 5. Calcified choroid plexus in an infant can still be normal, while pineal calcification in a toddler is unusual enough to mention (Whitehead 2015).",
+      "keyPoints": [
+        "Read in a fixed order (blood, cisterns, brain, ventricles, bone) so that one finding does not end the search.",
+        "The anterior fontanelle closes over a wide range of ages, and on CT it was closed in about half of children by 16 months.",
+        "Wide frontal subarachnoid spaces are common in infants with large heads and are usually a benign variant.",
+        "Choroid plexus calcification can be normal even in infants, while pineal calcification under 3 is unusual."
+      ],
+      "question": {
+        "question": "A 9-month-old has a head circumference above the 97th percentile and normal development. CT shows 7 mm of CSF over both frontal lobes, normal ventricles and an open anterior fontanelle. What is the most likely reading?",
+        "options": [
+          "Communicating hydrocephalus needing a shunt",
+          "Bilateral chronic subdural hematomas",
+          "Cerebral atrophy from a neurodegenerative disease",
+          "Benign enlargement of the subarachnoid spaces, a common variant"
+        ],
+        "answer": 3,
+        "explanation": "Wide frontal subarachnoid spaces with normal ventricles in a thriving infant with a large head fit benign enlargement, found in more than half of infants imaged for macrocephaly. Hydrocephalus enlarges the ventricles, a subdural is a separate collection pressing on the brain surface, and atrophy does not come with a large head and normal development."
+      },
+      "related": [
+        {
+          "href": "/neuroradiology/atlas/?age=pma40w&label=Lateral%20Ventricle%20left",
+          "label": "MRI atlas: the lateral ventricle at term"
+        },
+        {
+          "href": "/localization/m02-the-exam/#s6",
+          "label": "Localization Module 2: reading each finding against age"
+        }
+      ]
+    },
+    {
+      "title": "Hemorrhage by shape and site",
+      "figure": "hemorrhage-sorter",
+      "content": "The shape of blood outside the brain comes from the anatomy of its coverings. An **epidural** hematoma lies between the inner table of the skull and the dura. The dura is bound to the skull at the sutures, so a growing epidural peels the dura away only as far as the nearest suture and then bulges inward, which makes the biconvex lens ([Heit 2017](https://pubmed.ncbi.nlm.nih.gov/28030895/)). Because it lies outside the dura, an epidural can cross the attachments of the falx and tentorium ([Mutch 2016](https://pubmed.ncbi.nlm.nih.gov/27637393/)). A **subdural** hematoma lies beneath the dura, so sutures do not stop it. It spreads around the convexity as a crescent and stops instead at the falx and tentorium, often running along one side of them (Heit 2017).\n\nThese rules have exceptions. In 57 children with epidurals, 11% crossed a suture, which the authors explained by a fracture running through the suture or a suture sprung apart by the injury ([Huisman 2009](https://pubmed.ncbi.nlm.nih.gov/18701165/)). Arterial epidurals are thought to grow larger and faster than venous ones (Heit 2017), and in children bleeding from the fractured bone itself is common (Mutch 2016).\n\n**Subarachnoid** blood fills sulci and cisterns where dark CSF should be, and after trauma it usually lies in sulci near the vertex. **Intraparenchymal** blood lies within the brain, and after trauma contusions sit under the point of impact or opposite it. **Intraventricular** blood lies in the ventricles and may come from a parenchymal bleed or a ruptured malformation (Heit 2017).\n\nBlood of mixed density is harder to interpret. A small dark swirl inside an acute clot is thought to be unclotted blood from hyperacute bleeding (Mutch 2016), and among 147 operated epidurals it predicted a worse outcome ([Guo 2017](https://pubmed.ncbi.nlm.nih.gov/28894943/)). Another surgical series found that mixed density did not reliably mean active bleeding ([Subramanian 2002](https://pubmed.ncbi.nlm.nih.gov/11877894/)). In an infant, a mixed subdural can hold hyperacute blood, fresh blood mixed with CSF through a torn arachnoid ([Zouros 2004](https://pubmed.ncbi.nlm.nih.gov/15287465/)) or new bleeding into an older collection ([Bradford 2013](https://pubmed.ncbi.nlm.nih.gov/23799250/)). Mixed subdurals were seen within 48 hours of accidental injury ([Tung 2006](https://pubmed.ncbi.nlm.nih.gov/16882816/)), and in one 14-month-old a collection first read as bleeds of different ages proved at surgery to be entirely acute ([Sargent 1996](https://pubmed.ncbi.nlm.nih.gov/8871392/)).\n\nA large collection over one hemisphere weakens the opposite side of the body, and as it grows it pushes the medial temporal lobe toward the edge of the tentorium, which is where the next section begins.\n\n:::deeper Epidurals that are hard to recognize\nIn a surgical series of 117 epidurals, 41.5% had been reported as subdural or simply extra-axial, more often when the collection was thin or not lens-shaped. The label matters because a collection called subdural may not prompt a neurosurgical consultation ([Feiz-Erfan 2026](https://pubmed.ncbi.nlm.nih.gov/42462362/)).\n\nAt the top of the head an epidural can sit over the midline, where the superior sagittal sinus runs beneath the sagittal suture. In 32 vertex epidurals, bleeding from that sinus was common, especially with a fracture running parallel to it or a separated sagittal suture ([Su 2023](https://pubmed.ncbi.nlm.nih.gov/36411102/)).\n:::",
+      "keyPoints": [
+        "Epidural blood lies outside the dura, forms a lens and usually stops at sutures, but it can cross the falx and tentorium.",
+        "Subdural blood lies beneath the dura, forms a crescent, crosses sutures and stops at the falx and tentorium.",
+        "About 1 in 9 pediatric epidurals crossed a suture, explained by a fracture through the suture or a separated suture.",
+        "In infants, a mixed-density subdural can be hyperacute blood, blood mixed with CSF or rebleeding, and does not by itself show bleeds of different ages."
+      ],
+      "question": {
+        "question": "A 6-year-old hit the right side of his head on a concrete step. CT shows a right lens-shaped collection that crosses the lambdoid suture where a fracture runs through it. How do you classify it?",
+        "options": [
+          "Subdural, because it crosses a suture",
+          "Epidural is still most likely, because a fracture through a suture lets an epidural cross it",
+          "Subarachnoid, because it lies next to a fracture",
+          "Not extra-axial, because extra-axial blood never crosses sutures"
+        ],
+        "answer": 1,
+        "explanation": "A lens at the point of impact beneath a fracture favors an epidural, and about 11% of pediatric epidurals cross a suture, usually where a fracture runs through it. Crossing a suture suggests subdural only when the shape agrees, subarachnoid blood follows the sulci, and the last option states a rule that children break."
+      },
+      "related": [
+        {
+          "href": "/localization/m09-hemispheres/#s2",
+          "label": "Localization Module 9: reading the proportions of a weakness"
+        },
+        {
+          "href": "/localization/m10-everywhere/#s4",
+          "label": "Localization Module 10: herniation"
+        }
+      ]
+    },
+    {
+      "title": "Mass effect, herniation and hydrocephalus",
+      "content": "Blood, swelling or a tumor takes up room inside a skull that cannot stretch, and once the CSF has been squeezed out, the brain itself begins to move. CT shows where it goes. In subfalcine herniation the brain slides under the falx and the midline shifts. In descending transtentorial herniation the medial temporal lobe or the diencephalon is pushed down through the opening in the tentorium. Ascending herniation pushes the cerebellum upward, and tonsillar herniation drives the cerebellar tonsils into the foramen magnum ([Riveros 2019](https://pubmed.ncbi.nlm.nih.gov/31589570/)). Herniating brain can compress cranial nerves and arteries, causing infarcts or bleeding, and can block the flow of CSF and cause hydrocephalus. CT is the preferred first test because it is fast and widely available (Riveros 2019).\n\nEach type of herniation has its own clinical syndrome (Riveros 2019), and this is where the scan and the bedside meet. The pupil, the motor response and the breathing change in a recognizable order as pressure moves downward, and [Localization Module 10](/localization/m10-everywhere/#s4) teaches that sequence. The scan shows which structure is under pressure, and serial examinations show how far the process has gone.\n\nHydrocephalus on CT has a few dependable signs. In obstructive hydrocephalus the ventricles enlarge while the sulci and fissures disappear, and the temporal horns become visible and wide. In adults, temporal horns 2 mm or wider together with absent sulci, or with symmetric ventricular enlargement and a frontal horn ratio of 0.5 or more, made obstructive hydrocephalus probable ([LeMay 1979](https://pubmed.ncbi.nlm.nih.gov/313025/)). That pairing separates it from ventricles enlarged by tissue loss, where the sulci widen too. In children the occipital horns often enlarge more than the frontal horns, so the frontal and occipital horn ratio is a better guide, and it averaged 0.37 in normal children at every age ([O'Hayon 1998](https://pubmed.ncbi.nlm.nih.gov/9917541/)). When obstruction is acute, a rim of low density can appear around the ventricles, and in patients with raised pressure it went mostly with acute or subacute obstruction from a tumor ([Moseley 1979](https://pubmed.ncbi.nlm.nih.gov/471217/)).\n\nIn children, raised pressure from obstructive hydrocephalus can also disturb the midbrain around the aqueduct. In eight children it caused a palsy of upward gaze and abnormal convergence that resolved after shunting. The authors proposed that the same periaqueductal dysfunction, rather than pressure on the eyeballs, explains the setting-sun eyes of infant hydrocephalus ([Chattha 1975](https://pubmed.ncbi.nlm.nih.gov/1151409/)).\n\n:::deeper Where the periventricular rim comes from\nIn dogs with hydrocephalus induced by kaolin, the rim appeared within 12 hours. Contrast placed in the ventricles moved into the same white matter, which had a higher water content, so the rim is thought to be CSF forced across the ventricular wall ([Hiratsuka 1982](https://pubmed.ncbi.nlm.nih.gov/6976419/)). Human evidence for the mechanism is indirect.\n:::",
+      "keyPoints": [
+        "Herniation is subfalcine, descending or ascending transtentorial, or tonsillar, and CT is the preferred first test.",
+        "Herniating brain can compress nerves and arteries and block the flow of CSF.",
+        "Wide temporal horns with effaced sulci favor obstructive hydrocephalus over volume loss, and in children the frontal and occipital horn ratio, normally about 0.37, tracks ventricular size.",
+        "Upgaze palsy in a child with obstructive hydrocephalus points to the region of the aqueduct and can resolve after shunting."
+      ],
+      "question": {
+        "question": "A 10-year-old with a posterior fossa tumor has enlarged lateral and third ventricles, wide temporal horns, no visible sulci and a thin low-density rim around the frontal horns. What does the rim most likely represent?",
+        "options": [
+          "Periventricular leukomalacia from prematurity",
+          "Normal unmyelinated white matter",
+          "Blood tracking around the ventricles",
+          "CSF forced into the white matter by acute obstructive hydrocephalus"
+        ],
+        "answer": 3,
+        "explanation": "Large ventricles, effaced sulci and wide temporal horns point to obstructive hydrocephalus, and a low-density rim around the ventricles in that setting is CSF pushed into the adjacent white matter. Leukomalacia is an injury of prematurity with volume loss, a 10-year-old has myelinated white matter, and fresh blood would be bright."
+      },
+      "related": [
+        {
+          "href": "/localization/m10-everywhere/#s5",
+          "label": "Localization Module 10: false localizing signs"
+        },
+        {
+          "href": "/localization/m07-brainstem/#s5",
+          "label": "Localization Module 7: third-nerve palsy and the pupil"
+        }
+      ]
+    },
+    {
+      "title": "Abusive head trauma",
+      "content": "Abusive head trauma is the leading cause of fatal head injury in children under 2 ([Choudhary 2018](https://pubmed.ncbi.nlm.nih.gov/29796797/)). The diagnosis is made by a team, from the history, examination, imaging and laboratory tests, after conditions that mimic it have been excluded, and it is a medical conclusion rather than a legal finding about intent (Choudhary 2018). The American Academy of Pediatrics asks clinicians to stay alert to it, evaluate thoroughly and consult pediatric subspecialists when needed ([Narang 2020](https://pubmed.ncbi.nlm.nih.gov/32205464/)).\n\nNo single image proves abuse, but some patterns carry weight. In a systematic review of children mostly under 3, subdural hemorrhage was strongly associated with abuse, especially subdurals that were multiple, over the convexity, between the hemispheres or in the posterior fossa. Hypoxic-ischemic injury and brain swelling were also associated with abuse. Epidural hematoma went with accidental injury, and subarachnoid blood was equally common in both ([Kemp 2011](https://pubmed.ncbi.nlm.nih.gov/21965812/)). The normal falx is often visible as a thin bright line, so the sign to look for in an infant is asymmetric thickening along one side of it, often extending over the tentorium ([Zimmerman 1982](https://pubmed.ncbi.nlm.nih.gov/6816040/)).\n\nWhen abuse is suspected in a child under 24 months, a skeletal survey and a noncontrast head CT are usually appropriate even when no injury is visible. A repeat skeletal survey about 2 weeks later can find healing fractures, and MRI further characterizes brain injury and subtle findings that CT may miss ([ACR 2025](https://pubmed.ncbi.nlm.nih.gov/41860516/)). Complex retinal hemorrhages are part of the picture (Choudhary 2018), so the eyes are examined too.\n\nThe hardest question is when the injury happened, and CT cannot answer it precisely. A systematic review found that the time ranges for each density were broad and overlapping ([Sieswerda-Hoogendoorn 2014](https://pubmed.ncbi.nlm.nih.gov/24816086/)). In infants with known injury dates whose subdurals started out uniformly bright, a dark component first appeared anywhere from 0.3 to 16 days after injury, and rebleeding into a subdural was documented in 16%, always without symptoms ([Bradford 2013](https://pubmed.ncbi.nlm.nih.gov/23799250/)). Mixed density can come from a single event ([Sargent 1996](https://pubmed.ncbi.nlm.nih.gov/8871392/)), including accidental injury in the previous 48 hours ([Tung 2006](https://pubmed.ncbi.nlm.nih.gov/16882816/)). Describe the densities and leave the timing to the team.\n\nBenign enlargement of the subarachnoid spaces adds one more complication. Among infants imaged for a large head who had enlarged spaces, about 6% had incidental subdural collections, and the authors concluded that such collections do not necessarily indicate abuse ([Tucker 2016](https://pubmed.ncbi.nlm.nih.gov/26942270/)).",
+      "keyPoints": [
+        "Abusive head trauma is the leading cause of fatal head injury under 2, and the diagnosis is made by a multidisciplinary team.",
+        "Multiple, convexity, interhemispheric and posterior fossa subdurals, hypoxic-ischemic injury and swelling are associated with abuse.",
+        "Under 24 months with suspected abuse, skeletal survey and head CT come first, with MRI to characterize brain injury further.",
+        "CT cannot date a subdural precisely, and mixed density can arise from a single event."
+      ],
+      "question": {
+        "question": "A 4-month-old has bilateral subdurals of mixed density on CT. A colleague drafts a note saying the scan shows injuries of at least two different ages. What is the best response?",
+        "options": [
+          "Agree, because mixed density proves two separate events",
+          "Agree, because the dark component must be at least 2 weeks old",
+          "Remove any mention of the subdurals until MRI is done",
+          "Describe the densities without dating them, because mixed density can arise from one event and CT cannot date subdurals precisely"
+        ],
+        "answer": 3,
+        "explanation": "Time ranges for each subdural density are broad and overlapping, a dark component can appear within a day of injury, and a single hyperacute bleed can look mixed. The note should describe what is seen and leave timing to the team. Mixed density does not prove two events, and the subdurals must be reported."
+      },
+      "related": [
+        {
+          "href": "/localization/m10-everywhere/#s6",
+          "label": "Localization Module 10: diffuse and multifocal disease in children"
+        }
+      ]
+    },
+    {
+      "title": "When to scan, and when not to",
+      "content": "Head CT carries a small radiation cost. In a British cohort, cumulative doses of about 50 mGy to the bone marrow might almost triple the risk of leukemia, and about 60 mGy to the brain the risk of brain tumors. Both cancers are rare, so the absolute risk was small, about one extra case of each per 10,000 head CTs in the decade after a first scan before age 10 ([Pearce 2012](https://pubmed.ncbi.nlm.nih.gov/22681860/)). A European cohort of 658,752 young people later confirmed a dose-response for brain cancer ([Hauptmann 2023](https://pubmed.ncbi.nlm.nih.gov/36493793/)). Both groups urged justifying each scan and keeping doses as low as possible, the aim of the Image Gently campaign ([Goske 2008](https://pubmed.ncbi.nlm.nih.gov/18212208/)).\n\nThe PECARN rules identify children with minor head trauma who can safely skip CT. They were derived and validated in 42,412 children seen within 24 hours of head trauma with a Glasgow Coma Scale of 14 or 15 ([Kuppermann 2009](https://pubmed.ncbi.nlm.nih.gov/19758692/)).\n\n| Under 2 years | 2 years and older |\n|---|---|\n| Normal mental status | Normal mental status |\n| No scalp hematoma, except frontal | No loss of consciousness |\n| No loss of consciousness, or under 5 seconds | No vomiting |\n| Non-severe mechanism | Non-severe mechanism |\n| No palpable skull fracture | No signs of basilar skull fracture |\n| Acting normally, according to the parents | No severe headache |\n\nVery low risk means meeting every criterion for the child's age. In validation, the rule under 2 missed none of 25 clinically important injuries, and the rule for older children missed 2 of 63, with no missed neurosurgery in either group. Among children who fail a criterion, altered mental status, a palpable skull fracture under 2 or signs of basilar fracture at 2 and older carried a risk above 4%, and CT is recommended. With only the other findings the risk was about 0.9%, and either observation or CT is reasonable (Kuppermann 2009).\n\nIn clinically stable children under 6 with suspected brain injury, fast MRI without sedation was completed in 99% of attempts. It found 92.8% of injuries seen on CT but missed six isolated skull fractures and two subarachnoid hemorrhages ([Lindberg 2019](https://pubmed.ncbi.nlm.nih.gov/31533974/)). For suspected shunt malfunction, rapid MRI was not inferior to CT ([Boyle 2014](https://pubmed.ncbi.nlm.nih.gov/24918222/)). In an infant with an open fontanelle, ultrasound gives a quick look at ventricular size, MRI is generally preferred to define the ventricles and the site of obstruction, and CT is the choice when rapid evaluation is needed or MRI is not feasible ([ACR 2026](https://pubmed.ncbi.nlm.nih.gov/41973891/)).\n\n:::deeper PECARN definitions\nAltered mental status means a Glasgow Coma Scale of 14, or agitation, sleepiness, slow responses or repeated questions. A severe mechanism is a motor vehicle crash with ejection, rollover or death of another passenger, a pedestrian or unhelmeted cyclist struck by a motor vehicle, a fall of more than 3 feet (0.9 m) under age 2 or more than 5 feet (1.5 m) at age 2 and older, or a head struck by a high-impact object. For children with only lower-risk findings, the choice between observation and CT weighs the clinician's experience, isolated against multiple findings, worsening during observation, age under 3 months and parental preference (Kuppermann 2009).\n:::",
+      "keyPoints": [
+        "Cumulative CT doses of about 50 mGy to the marrow and 60 mGy to the brain were linked to roughly tripled leukemia and brain tumor risk, with a small absolute risk.",
+        "PECARN identifies very-low-risk children with GCS 14 or 15 who can skip CT, with separate rules under and over age 2.",
+        "Altered mental status or signs of skull fracture carry a risk above 4% and call for CT, while other findings allow a choice between observation and CT.",
+        "Fast MRI, rapid MRI for shunts and ultrasound in infants can answer many questions without radiation."
+      ],
+      "question": {
+        "question": "An 18-month-old rolled off a sofa onto carpet 2 hours ago, cried at once and has a small frontal bruise. Her parents say she is acting normally, and her examination is normal. What does PECARN suggest?",
+        "options": [
+          "CT now, because she is under 2",
+          "She is at very low risk, and CT can be avoided",
+          "Skull radiographs in place of CT",
+          "Admission for 24 hours of observation"
+        ],
+        "answer": 1,
+        "explanation": "She meets every rule for children under 2: normal mental status, only a frontal scalp hematoma, no loss of consciousness, a non-severe mechanism, no palpable fracture and normal behavior according to her parents. That rule missed no clinically important injury in validation. Age alone does not call for CT, skull films are not part of the rule, and the rule does not call for admission."
+      },
+      "related": [
+        {
+          "href": "/localization/m11-where-to-what/#s7",
+          "label": "Localization Module 11: reading results with a prior"
+        }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "question": "A 14-year-old fell from a bicycle without a helmet. On the brain window his CT looks normal. On a subdural window a 3 mm crescent runs along the right convexity and past the coronal suture. Why was it missed, and what is it?",
+      "options": [
+        "A thin acute subdural, nearly as white as bone on the brain window and so blended into the skull",
+        "An epidural, hidden because it stops at the suture",
+        "Beam-hardening artifact, because it shows only on one window",
+        "A chronic subdural, invisible because it matches CSF"
+      ],
+      "answer": 0,
+      "explanation": "Acute blood near the top of a brain window is almost as white as bone, so a thin crescent against the inner table merges with the skull. The subdural window keeps blood gray and bone white. A crescent that crosses a suture is subdural, artifact would not follow the convexity like this, and a chronic subdural would be dark on both windows."
+    },
+    {
+      "question": "A 5-month-old with vomiting and no history of trauma has a thin interhemispheric subdural on head CT. Which next steps fit current guidance?",
+      "options": [
+        "Discharge if the vomiting settles, since the collection is small",
+        "Brain MRI alone, since the injury is inside the head",
+        "A skeletal survey, an eye examination, MRI of the brain and involvement of the child abuse team",
+        "Repeat CT in 6 months to date the collection"
+      ],
+      "answer": 2,
+      "explanation": "An interhemispheric subdural in an infant without an accidental history is one of the patterns associated with abuse. A skeletal survey and head CT come first under 24 months, MRI characterizes the injury, retinal hemorrhages are sought, and the diagnosis is made by a team. Discharge ignores the finding, MRI alone misses occult fractures, and repeat CT cannot date it."
+    },
+    {
+      "question": "A 7-year-old with a left temporal epidural becomes drowsy, and his left pupil dilates. CT shows the left medial temporal lobe pushed over the tentorial edge, effacing the cistern beside the midbrain. Which process is under way?",
+      "options": [
+        "Subfalcine herniation compressing the anterior cerebral artery",
+        "Descending transtentorial herniation compressing the left third nerve",
+        "Tonsillar herniation compressing the medulla",
+        "Ascending herniation of the cerebellum"
+      ],
+      "answer": 1,
+      "explanation": "The medial temporal lobe sliding over the tentorium is descending transtentorial herniation. It compresses the third nerve on the side of the mass, and the pupil on that side dilates first, as Localization Module 10 describes. Subfalcine herniation shifts the midline, tonsillar herniation affects the medulla, and ascending herniation comes from below."
+    },
+    {
+      "question": "A 6-year-old pedestrian was struck by a car. She has a Glasgow Coma Scale of 15, no loss of consciousness, no vomiting, no headache and a normal examination. How does PECARN apply?",
+      "options": [
+        "She is very low risk, so CT is not indicated",
+        "PECARN does not apply to children over 2",
+        "She needs skull radiographs only",
+        "She is not in the very-low-risk group because of the severe mechanism, so CT or observation is a clinical decision"
+      ],
+      "answer": 3,
+      "explanation": "The rule for children 2 and older needs every criterion, including a non-severe mechanism, and a pedestrian struck by a motor vehicle is a severe mechanism. She is not in the very-low-risk group. With this finding alone, observation or CT is a clinical choice. The rules cover children of all ages, and skull films are not part of them."
+    },
+    {
+      "question": "A 5-month-old has a head CT after a minor fall. The report notes calcification in the choroid plexus of both lateral ventricles and an open anterior fontanelle, and nothing else. What do these findings mean?",
+      "options": [
+        "Both can be normal at her age",
+        "The calcification suggests congenital infection and needs testing",
+        "The open fontanelle suggests raised pressure",
+        "The calcification suggests a pineal tumor"
+      ],
+      "answer": 0,
+      "explanation": "Choroid plexus calcification was found in 12% of children under 10, including some infants, and the anterior fontanelle was closed in only 3 to 5% of infants at 5 to 6 months. Nothing else on this scan suggests infection, an open fontanelle at 5 months is expected, and calcification in the choroid plexus is not a pineal mass."
+    }
+  ],
+  "resources": [
+    {
+      "label": "Radiopaedia: CT head, an approach",
+      "url": "https://radiopaedia.org/articles/ct-head-an-approach",
+      "note": "A step-by-step approach to reading a head CT, with linked cases."
+    },
+    {
+      "label": "Radiopaedia: windowing (CT)",
+      "url": "https://radiopaedia.org/articles/windowing-ct",
+      "note": "Window width and level explained, with typical settings for the head."
+    },
+    {
+      "label": "Radiopaedia: extradural haemorrhage",
+      "url": "https://radiopaedia.org/articles/extradural-haemorrhage",
+      "note": "Shape, causes and the exceptions to the suture rule, with cases."
+    },
+    {
+      "label": "Radiopaedia: subdural haemorrhage",
+      "url": "https://radiopaedia.org/articles/subdural-haemorrhage",
+      "note": "Appearance by age on CT and MRI, with cases."
+    },
+    {
+      "label": "Radiopaedia: suspected physical abuse, head injuries",
+      "url": "https://radiopaedia.org/articles/suspected-physical-abuse-head-injuries",
+      "note": "The imaging approach to suspected abusive head trauma."
+    },
+    {
+      "label": "Image Gently",
+      "url": "https://www.imagegently.org/",
+      "note": "Radiation safety in pediatric imaging, with resources for clinicians and parents."
+    },
+    {
+      "label": "MDCalc: PECARN pediatric head injury rule",
+      "url": "https://www.mdcalc.com/calc/589/pecarn-pediatric-head-injury-trauma-algorithm",
+      "note": "The PECARN rules as a calculator, with the definitions used in the study."
+    }
+  ],
+  "signOff": "With a faculty reader, the resident reads a pediatric head CT on brain, subdural and bone windows in a fixed order, names any hemorrhage by compartment, states the deficit or herniation it could cause, and applies the PECARN rule to a real or teaching case.",
+  "sources": [
+    "schulz2021",
+    "honjo2026",
+    "chakeres1986",
+    "norman1977",
+    "mutch2016",
+    "smith1981",
+    "scotti1977",
+    "duy2019",
+    "derstine2022",
+    "aubrey2014",
+    "wang2021",
+    "lev1999",
+    "heit2017",
+    "huisman2009",
+    "feizerfan2026",
+    "su2023",
+    "guo2017",
+    "subramanian2002",
+    "sargent1996",
+    "zouros2004",
+    "tung2006",
+    "pindrik2014",
+    "tucker2016",
+    "whitehead2015",
+    "orman2015",
+    "riveros2019",
+    "lemay1979",
+    "ohayon1998",
+    "moseley1979",
+    "hiratsuka1982",
+    "chattha1975",
+    "kemp2011",
+    "zimmerman1982",
+    "choudhary2018",
+    "narang2020",
+    "mirsky2026",
+    "bradford2013",
+    "sieswerda2014",
+    "kuppermann2009",
+    "pearce2012",
+    "hauptmann2023",
+    "goske2008",
+    "lindberg2019",
+    "boyle2014",
+    "jaimes2026"
+  ]
+}

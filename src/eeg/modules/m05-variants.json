@@ -95,6 +95,10 @@
         "Describe discharges in the description, and state their base rate in healthy children in the clinical correlation.",
         "A normal routine EEG does not exclude epilepsy, and a record without sleep is a weaker negative."
       ],
+      "related": [
+        { "href": "/localization/m01-where-before-what/#s5", "label": "Localization Module 1: reading scans, EEGs and genes against the exam" },
+        { "href": "/localization/m11-where-to-what/#s7", "label": "Localization Module 11: reading results with a prior" }
+      ],
       "question": {
         "question": "A 6-year-old referred for headaches has occasional right centrotemporal spikes on a routine EEG and has never had a seizure. Does she have epilepsy, and what should the report say?",
         "options": [

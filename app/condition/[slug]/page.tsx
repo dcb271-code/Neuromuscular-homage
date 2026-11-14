@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import conditionsData from '@/src/data/conditions-enriched.json';
 import genesData from '@/src/data/genes-enriched.json';
 import Link from 'next/link';
+import { TaughtInLine } from '@/components/curriculum/TaughtIn';
 
 type Condition = (typeof conditionsData)[number];
 type Gene = (typeof genesData)[number];
@@ -99,6 +100,7 @@ export default function ConditionPage({ params }: { params: { slug: string } }) 
             </a>
           )}
         </div>
+        <TaughtInLine path={`/condition/${cond.slug}/`} />
       </div>
 
       {/* Primary WUSTL link */}

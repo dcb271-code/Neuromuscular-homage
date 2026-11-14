@@ -6,6 +6,7 @@
 import { useMemo, useState } from 'react';
 import { fieldsFor, SITES, sparesMacula, type LesionSite } from '@/src/loc/models/visual';
 import { WidgetFrame } from './ui';
+import { SeeOnMri } from './AtlasLink';
 
 function FieldDisc({ lost, macula, accent, label }: { lost: Record<string, boolean>; macula: boolean; accent: string; label: string }) {
   const r = 46, c = 52;
@@ -83,6 +84,7 @@ export function VisualFields({ accent }: { accent: string }) {
             <FieldDisc lost={f.R} macula={sparesMacula(site)} accent={accent} label="Right eye" />
           </div>
           <p className="mt-2 text-[13px] text-slate-800"><b>{info.name}:</b> {info.defect}.</p>
+          <SeeOnMri site={site} accent={accent} />
         </div>
       </div>
     </WidgetFrame>

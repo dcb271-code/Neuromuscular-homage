@@ -131,6 +131,9 @@
         "About half of hypotonic infants are diagnosed from the history and examination alone (Peredo 2009).",
         "Infant botulism should be suspected under 6 months when floppiness comes with constipation, a weak cry, poor feeding and a reduced gag (Peredo 2009)."
       ],
+      "related": [
+        { "href": "/gene/SMN1/", "label": "SMN1 gene page (spinal muscular atrophy)" }
+      ],
       "question": {
         "question": "A 4-month-old is bright, smiles and follows faces, but cannot lift her arms or legs against gravity. Her reflexes are absent and her tongue quivers at rest. What is the most likely level, and what should happen next?",
         "options": [

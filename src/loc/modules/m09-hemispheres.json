@@ -28,6 +28,10 @@
         "A destructive frontal lesion lets the eyes drift toward the lesion, and a seizure drives them away from it (Pearl 2014, pp. 9-10).",
         "A hemiparesis with cortical signs beside it lies in the hemisphere, while a pure motor hemiparesis points deeper (Brazis 2011, pp. 11-12)."
       ],
+      "related": [
+        { "href": "/eeg/m10-seizures-status/#s4", "label": "EEG Module 10: common ictal patterns in children" },
+        { "href": "/eeg/m08-interictal/#s4", "label": "EEG Module 8: focal and diffuse slowing" }
+      ],
       "question": {
         "question": "A 10-year-old wakes with weakness of his left arm and the lower half of his face. His eyes rest looking to the right, he ignores you when you stand on his left, and he does not seem troubled by the weakness. Where is the lesion?",
         "options": [
@@ -48,6 +52,10 @@
         "Face and arm weaker than leg suggests the lateral cortex, leg weaker than arm suggests the medial cortex, and equal weakness of all three suggests the internal capsule.",
         "Upper motor neuron facial weakness spares the forehead, and a lower facial droop on the side of a hemiparesis generally places the lesion above the upper pons (Brazis 2011, p. 11).",
         "Tumors do not respect vascular territories, so in children proportion is a guide that needs checking (Pearl 2014, p. 10)."
+      ],
+      "related": [
+        { "href": "/neuroradiology/atlas/?age=unc2y&label=Precentral%20gyrus%20left", "label": "MRI atlas: the precentral gyrus (motor strip)" },
+        { "href": "/neuroradiology/atlas/?age=unc2y&label=Paracentral%20lobule%20left", "label": "MRI atlas: the paracentral lobule (leg area)" }
       ],
       "question": {
         "question": "A 14-year-old has a weak right leg, slight clumsiness of the right hand, a normal face and normal speech. The right knee and ankle reflexes are brisk. Where is the lesion most likely to be?",
@@ -74,6 +82,9 @@
         "A chiasmal lesion gives a bitemporal defect, a tract lesion a homonymous one, a temporal lesion the opposite upper quadrant and a parietal lesion the opposite lower quadrant.",
         "The more congruous and macula-sparing the defect, the more likely the lesion is occipital (Pearl 2014, pp. 27-28).",
         "Test each eye separately, prefer finger counting to finger wiggling, and present stimuli on both sides at once to look for extinction (Pearl 2014, p. 26)."
+      ],
+      "related": [
+        { "href": "/neuroradiology/atlas/?age=unc2y&label=Calcarine%20cortex%20left", "label": "MRI atlas: the calcarine cortex" }
       ],
       "question": {
         "question": "A 12-year-old with headaches is found on confrontation to miss your fingers in the upper left quadrant of both eyes. The defect is roughly similar in each eye but not identical. Where is the lesion most likely to be?",
@@ -122,6 +133,10 @@
         "Anomia on its own is relatively nonlocalizing (Pearl 2014, p. 20).",
         "Dysarthria, cerebellar mutism syndrome after posterior fossa surgery and encephalopathy can all imitate aphasia (Pearl 2014, p. 20)."
       ],
+      "related": [
+        { "href": "/neuroradiology/atlas/?age=unc2y&label=Inferior%20frontal%20gyrus%2C%20opercular%20part%20left", "label": "MRI atlas: left inferior frontal gyrus (Broca's area)" },
+        { "href": "/neuroradiology/atlas/?age=unc2y&label=Superior%20temporal%20gyrus%20left", "label": "MRI atlas: left superior temporal gyrus" }
+      ],
       "question": {
         "question": "A 12-year-old is recovering from a left hemisphere injury. She talks in full sentences at a normal rate and carries out three-step commands. Asked to repeat \"the ladder wobbles\", she says \"the lather... the ladder wobbers\" and gives up. Naming is patchy, with sound errors. How do you classify her language, and what does it suggest about the lesion?",
         "options": [
@@ -145,6 +160,10 @@
         "Hemiplegic cerebral palsy after perinatal stroke affects the arm more than the leg, with a fisted hand and a circumducting leg (DeMyer, p. 340).",
         "Periventricular leukomalacia is the characteristic white-matter injury of prematurity (Volpe 2009).",
         "Spastic diplegia affects the legs much more than the arms and spares speech and swallowing, whereas in double hemiplegia the arms are weaker than the legs (DeMyer, p. 340)."
+      ],
+      "related": [
+        { "href": "/neuroradiology/atlas/?age=pma40w&label=Lateral%20Ventricle%20left", "label": "MRI atlas: the lateral ventricle at term" },
+        { "href": "/neuroradiology/atlas/?age=pma40w&label=Lentiform%20Nucleus%20left", "label": "MRI atlas: the lentiform nucleus at term" }
       ],
       "question": {
         "question": "A 7-month-old reaches for every toy with the left hand. The right hand is often fisted with the thumb tucked in, and the right arm reflexes are brisker than the left. The pregnancy and birth were uneventful at term. What is the most likely explanation?",

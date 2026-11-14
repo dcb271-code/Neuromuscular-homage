@@ -92,6 +92,10 @@
         "ILAE 2022 sets no spike-wave index threshold for DEE-SWAS and EE-SWAS, and the old 85% cutoff is not required.",
         "Both syndromes depend on sleep patterns, so a study that captures sleep is the one that can answer the question."
       ],
+      "related": [
+        { "href": "/localization/m11-where-to-what/#s5", "label": "Localization Module 11: tempo and regression in a growing child" },
+        { "href": "/localization/m10-everywhere/#s6", "label": "Localization Module 10: diffuse and multifocal disease" }
+      ],
       "question": {
         "question": "A 5-year-old with language regression has spike-wave that is sparse when awake and nearly continuous in NREM sleep. A colleague says the syndrome cannot be considered because the spike-wave index was calculated at 70%, below the 85% threshold. Which syndrome family should you consider, and is the index required?",
         "options": [

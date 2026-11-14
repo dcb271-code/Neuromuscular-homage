@@ -90,6 +90,10 @@
         "Judge slowing against the normal values for age, and describe location, frequency, continuity and reactivity.",
         "Focal slowing points toward imaging, and diffuse slowing points back to the history, the metabolic panel and the medication list."
       ],
+      "related": [
+        { "href": "/localization/m09-hemispheres/#s1", "label": "Localization Module 9: signs of a cortical lesion" },
+        { "href": "/localization/m10-everywhere/#s6", "label": "Localization Module 10: diffuse and multifocal disease" }
+      ],
       "question": {
         "question": "A 9-year-old has continuous, irregular 1 to 2 Hz delta over the left temporal region that does not change with state or stimulation. The rest of the background is normal for age. No imaging has been done. What does the finding suggest, and what should the report recommend?",
         "options": [

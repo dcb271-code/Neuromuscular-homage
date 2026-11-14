@@ -88,7 +88,7 @@ export function useCurriculumProgress(key: string) {
 
 // Storage keys. The EEG key is historical (the site's first name); changing it would reset
 // everyone's EEG progress.
-export const STORAGE_KEYS = { eeg: 'pons.eeg.v1', loc: 'wbw.loc.v1' } as const;
+export const STORAGE_KEYS = { eeg: 'pons.eeg.v1', loc: 'wbw.loc.v1', nrad: 'wbw.nrad.v1' } as const;
 
 export const useEegProgress = () => useCurriculumProgress(STORAGE_KEYS.eeg);
 

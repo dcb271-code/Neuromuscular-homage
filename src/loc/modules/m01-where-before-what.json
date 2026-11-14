@@ -77,6 +77,12 @@
         "The newborn's palmar grasp is a normal milestone, but the same grasp returning later in frontal disease is a release sign (Utah PediNeuroLogic Exam; Pearl 2014, p. 114).",
         "Denied blindness and denied paralysis are examples of the brain filling in for a lost input (Pearl 2014, p. 29; DeMyer, p. 441)."
       ],
+      "related": [
+        {
+          "href": "/eeg/m10-seizures-status/#s4",
+          "label": "EEG Module 10: common ictal patterns in children"
+        }
+      ],
       "question": {
         "question": "A 7-year-old who was well at breakfast is brought in mid-event: her head and eyes are forced to the left, and her left face and arm are jerking rhythmically. Where is the lesion, and what is it doing?",
         "options": [
@@ -120,6 +126,20 @@
         "Healthy children often have abnormal-looking tests, with incidental MRI findings in 21.1% at 9 to 10 years (Li 2021) and epileptiform discharges in 6.5% at 6 to 13 years (Borusiak 2010).",
         "A variant of uncertain significance is not a positive result, and the child's phenotype decides how much weight it carries (Richards 2015).",
         "A normal scan cannot clear disease below the resolution of imaging, and an abnormal one cannot convict without the exam (Pearl 2014, p. 1)."
+      ],
+      "related": [
+        {
+          "href": "/eeg/m05-variants/#s4",
+          "label": "EEG Module 5: discharges in healthy children"
+        },
+        {
+          "href": "/eeg/m05-variants/#s1",
+          "label": "EEG Module 5: why overreading is a clinical harm"
+        },
+        {
+          "href": "/neuroradiology/m02-ct-head/#s7",
+          "label": "Neuroradiology Module 2: when a child needs a head CT"
+        }
       ],
       "question": {
         "question": "An 11-year-old has fainted three times in a year, each time after standing in a hot school assembly: she felt lightheaded, her vision grayed out, she slumped, and she was herself again within a minute. Her examination is normal. A routine EEG reports a few focal epileptiform discharges. What do the discharges most likely mean?",

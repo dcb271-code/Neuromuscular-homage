@@ -7,6 +7,7 @@
 // (Gates 2005, 2011; exceptions from Pearl 2014 and Brazis 2011).
 
 import { useMemo, useState } from 'react';
+import { SeeOnMri } from './AtlasLink';
 import { brainstemLesion, M_STRUCTURES, RULE_CN, S_STRUCTURES, structuresHit, type BsLevel, type BsSide, type Zone } from '@/src/loc/models/brainstem';
 import { Segmented, WidgetFrame } from './ui';
 
@@ -142,6 +143,7 @@ export function BrainstemSim({ accent }: { accent: string }) {
             ))}
           </div>
           {r.notes.length > 0 && <div className="mt-2 space-y-1">{r.notes.map((n, k) => <p key={k} className="text-[11.5px] text-slate-500 leading-snug"><span className="font-semibold text-slate-600">Exception:</span> {n}</p>)}</div>}
+          <SeeOnMri site="brainstem" accent={accent} />
         </div>
       )}
       {mode === 'explore' && !sel && <p className="text-[13px] text-slate-500">Tap any box to place a lesion.</p>}
