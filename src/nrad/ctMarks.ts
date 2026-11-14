@@ -122,7 +122,7 @@ export interface LabSlice {
 
 export const LAB_SLICES: LabSlice[] = [
   { id: 'sdh-a', label: 'Subdural', start: 'blood',
-    about: 'A thin subdural hematoma along the right side of the head, which is the left side of the image.',
+    about: 'A subdural hematoma along the right side of the head, which is the left side of the image.',
     landmarks: [
       { id: 'blood', label: 'Subdural blood', at: [46, 230], range: [70, 88] },
       { id: 'skull', label: 'Skull', at: [161, 359], range: [1000, 1600] },
@@ -135,11 +135,11 @@ export const LAB_SLICES: LabSlice[] = [
     about: 'A left frontal epidural hematoma, with swelling of the scalp over it.',
     landmarks: [
       { id: 'blood', label: 'Epidural blood', at: [215, 95], range: [60, 78] },
-      { id: 'scalp', label: 'Scalp swelling', at: [272, 150], range: [48, 68], note: 'Swollen scalp measures in the same range as blood, so its position outside the skull is what identifies it.' },
+      { id: 'scalp', label: 'Scalp swelling', at: [272, 150], range: [48, 68], note: 'Swollen scalp measures in the same range as blood, so its position outside the skull identifies it.' },
       { id: 'skull', label: 'Skull', at: [216, 328], range: [900, 1500] },
       { id: 'brain', label: 'Frontal lobe', at: [110, 110], range: [20, 34] },
       { id: 'csf', label: 'CSF in the right frontal horn', at: [135, 146], range: [0, 14] },
-      { id: 'pineal', label: 'Pineal calcification', at: [142, 215], range: [60, 150], note: 'A calcification this small is averaged with the tissue around it, so it measures far below bone.' },
+      { id: 'pineal', label: 'Pineal calcification', at: [142, 215], range: [60, 150], note: 'The scanner averages a calcification this small with the tissue around it, so it measures far below bone.' },
       { id: 'air', label: 'Air', at: [6, 6], range: [-1024, -990] },
     ] },
 ];
@@ -159,8 +159,8 @@ export function huCategory(hu: number): HuCategory {
   if (hu < -200) return { label: 'Air', note: 'Air sets the bottom of the scale at -1000 HU.' };
   if (hu < -20) return { label: 'Fat range', note: 'CT studies define fat as -190 to -30 HU. At an edge the scanner also averages air with tissue.' };
   if (hu < 20) return { label: 'Fluid range', note: 'CSF measures about 6 to 15 HU. Water is 0.' };
-  if (hu < 46) return { label: 'Brain tissue range', note: 'Gray matter measures a few HU above white matter.' };
-  if (hu < 100) return { label: 'Range of acute blood', note: 'Acute blood typically measures 50 to 70 HU, and the clots on these two scans measure 55 to 88. Scalp, muscle and dura can measure the same, so location decides.' };
+  if (hu < 46) return { label: 'Brain tissue range', note: 'Gray matter measures several HU above white matter.' };
+  if (hu < 100) return { label: 'Range of acute blood', note: 'Acute blood typically measures 50 to 70 HU, and the clots on these two scans measure 55 to 88. Scalp, muscle and dura can measure the same, so the location tells them apart.' };
   if (hu < 300) return { label: 'Above blood', note: 'Calcification, thin bone, or bone averaged with soft tissue at its edge.' };
   return { label: 'Bone', note: 'Dense bone sits around +1000 HU and often measures higher.' };
 }
@@ -190,7 +190,7 @@ export const OA_IMAGES: Record<string, OaImage> = {
     note: 'The arrow printed on the source figure points at the collection, and the letter is its panel label.' },
   'oa-edh-11y-bone': { file: '/nrad/oa/oa-edh-11y-bone.webp', w: 1237, h: 1256, who: 'The same 11-year-old, bone window', credit: 'Tsitsipanis 2023, Pediatric Reports, Figure 1c, cropped',
     note: 'The arrow printed on the source figure points at the fracture of the left temporal bone.' },
-  'oa-sdh-3y': { file: '/nrad/oa/oa-sdh-3y.webp', w: 1400, h: 1400, who: 'A 3-year-old with a sudden change in mental status and many bruises', credit: 'Caré 2022, Diagnostics, Figure 3, cropped',
+  'oa-sdh-3y': { file: '/nrad/oa/oa-sdh-3y.webp', w: 1400, h: 1400, who: 'A 3-year-old with a sudden change in mental status and many bruises', credit: 'Caré 2022, Diagnostics, Figure 3a, cropped',
     note: 'On the source figure the white arrow points at the collection, the black arrowheads mark midline shift and the black arrow marks an effaced temporal horn.' },
   'oa-sdh-falx-4m': { file: '/nrad/oa/oa-sdh-falx-4m.webp', w: 1400, h: 1400, who: 'A 4-month-old with a seizure and lethargy', credit: 'Caré 2022, Diagnostics, Figure 4a, cropped',
     note: 'The arrow printed on the source figure points at the blood.' },
@@ -221,7 +221,7 @@ export interface FigureText { title: string; body: string; maxWidth?: number }
 
 export const FIGURE_TEXT: Record<string, FigureText> = {
   'normal-bg': { title: 'Normal anatomy at the level of the basal ganglia',
-    body: 'A scan that all three readers called normal, shown on a brain window. Gray matter is lighter than white matter, and CSF in the ventricles, cisterns and fissures is dark.' },
+    body: 'A scan on which the three readers recorded no finding, shown on a brain window. Gray matter is lighter than white matter, and CSF in the ventricles, cisterns and fissures is dark.' },
   'normal-vent': { title: 'Normal anatomy at the level of the lateral ventricles',
     body: 'The same scan, higher up. The sulci hold dark CSF, and the cortex forms a lighter ribbon over the white matter.' },
   'oa-normal-14m': { title: 'A normal head CT at 14 months',
@@ -231,11 +231,11 @@ export const FIGURE_TEXT: Record<string, FigureText> = {
   'oa-sutures-3d': { title: 'Normal infant sutures on 3D CT', maxWidth: 640,
     body: 'The letters from the source figure mark the sagittal (S) and metopic (M) sutures. The dark gap where they meet the coronal sutures is the anterior fontanelle.' },
   'oa-fx-9m': { title: 'A linear skull fracture and an accessory suture at 9 months', maxWidth: 640,
-    body: 'On the bone window (a) the arrow marks a right parietal fracture and the arrowheads mark scalp swelling over it. On the 3D reconstruction (b) the arrows follow the fracture, and the arrowheads mark an accessory suture in the occipital bone, a normal variant with a zigzag course.' },
+    body: 'On the bone window (a) the arrow marks a right parietal fracture and the arrowheads mark scalp swelling over it. On the 3D reconstruction (b) the arrows follow the fracture, and the arrowheads mark an accessory suture in the occipital bone. An accessory suture is a normal variant with a zigzag course.' },
   'sah-b': { title: 'Subarachnoid blood in the basal cisterns',
     body: 'Bright blood outlines the midbrain and fills the sylvian fissure, where dark CSF should be.' },
   'sdh-b-shift': { title: 'Midline shift from a subdural hematoma',
-    body: 'The dashed line joins the front and back attachments of the falx, and the septum pellucidum lies about 16 mm toward the patient\'s left of it.' },
+    body: 'The dashed line joins the front and back attachments of the falx. The septum pellucidum lies about 16 mm to the patient\'s left of that line.' },
   'sdh-c': { title: 'Mass effect on the sulci',
     body: 'A scan with a right subdural hematoma. The sulci beneath the collection are pressed flat, while the sulci of the left hemisphere still hold CSF.' },
   'oa-cisterns-5y': { title: 'Open and effaced CSF spaces in a 5-year-old with encephalitis', maxWidth: 640,
@@ -243,7 +243,7 @@ export const FIGURE_TEXT: Record<string, FigureText> = {
   'oa-hydro': { title: 'Hydrocephalus in an infant born at 26 weeks', maxWidth: 520,
     body: 'The lateral ventricles are greatly enlarged and the brain around them is thin. The labels and arrows come from the source figure. The authors describe it as posthemorrhagic hydrocephalus.' },
   'oa-aht-8m': { title: 'Subdural collections of mixed density at 8 months',
-    body: 'The infant was found floppy and unresponsive, with no explanation. The arrows from the source figure mark several subdural collections of mixed density, and the arrowhead marks one along the falx.' },
+    body: 'The infant was found floppy and unresponsive, with no explanation. The arrows from the source figure mark several subdural collections of mixed density, and the arrow at the midline marks one along the falx.' },
   'oa-hie-3m': { title: 'Diffuse abnormal attenuation of both hemispheres at 3 months',
     body: 'The infant presented in status epilepticus with bruises. The arrowheads from the source figure mark abnormal attenuation throughout both cerebral hemispheres.' },
 };

@@ -84,7 +84,7 @@ export const CURRICULA: Record<CurriculumKind, CurriculumConfig> = {
     widgets: NRAD_WIDGETS,
     navExtra: { href: '/neuroradiology/atlas/', label: 'MRI atlas' },
     footer: (
-      <>The CT images in this module are real. The slices with numbered pins come from the CQ500 dataset (CC BY-NC-SA 4.0), whose files carry no ages and whose patients are mostly adults. The pediatric images are panels from open-access articles (CC BY 4.0), cropped and credited under each one. See <a href="/nrad/ATTRIBUTIONS.md" className="underline">image sources</a> and <a href="/credits/" className="underline">credits</a>. For education. Not for clinical decision-making. Consult primary sources and your attending.</>
+      <>The CT images in this module are real. The slices with numbered pins come from the CQ500 dataset (CC BY-NC-SA 4.0). Its files carry no ages, and most of its patients are adults. The pediatric images are panels from open-access articles (CC BY 4.0), cropped and credited under each one. See <a href="/nrad/ATTRIBUTIONS.md" className="underline">image sources</a> and <a href="/credits/" className="underline">credits</a>. For education. Not for clinical decision-making. Consult primary sources and your attending.</>
     ),
   },
 };

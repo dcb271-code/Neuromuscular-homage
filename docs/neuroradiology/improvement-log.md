@@ -23,3 +23,11 @@
 - **Limits stated on the page:** CQ500 files carry no ages and most of its patients are adults, so no CQ500 slice is called a child, and its gray and white matter measure several HU above the pediatric values in the text. No CT was mirrored or rotated.
 - **Checks:** `scripts/test-nrad-models.ts` 123 passed (files exist and match their sizes, marks inside images, measured HU within range at each landmark, every image credited and listed in the attribution file). Validator, type check and build pass. Viewed in the browser at phone and desktop widths.
 - **Outcome:** see commit on `main`.
+
+### 2026-11-14 · v3: accuracy check and light prose pass on the real-image text
+- **Target:** owner asked for an accuracy check and a light stylistic pass on the text added in v2.
+- **Checked:** the nine article citations, each patient line and caption against the source legends, every pin label against the image at threefold size, the readers' findings in `reads.csv`, and the Hounsfield values stated for the two window lab slices.
+- **Corrected:** the window lab's subdural is no longer called thin (the clot is up to about 10 mm thick, with mass effect and midline shift recorded by all three readers, now also in the attribution table). The abusive head trauma caption named an arrowhead that the panel does not show. The Caré subdural credit now names panel a. The normal scan is described as one on which the three readers recorded no finding. Gray matter is now "several" HU above white matter, and the two CQ500 scans are "a few" HU above the pediatric values, where v2 had the two words the other way round.
+- **Prose:** six long sentences split, two passive constructions made active and two phrases made plainer. No fact was removed.
+- **Left for the owner:** "linear" in the title of the 9-month fracture figure describes the image and is not the authors' word. The attribution row for CQ500-CT-86 does not give the side, although all three readers recorded right.
+- **Outcome:** see commit on `main`.

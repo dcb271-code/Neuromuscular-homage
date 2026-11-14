@@ -10,17 +10,17 @@ Dataset page: http://headctstudy.qure.ai/dataset (Qure.ai and the Centre for Adv
 
 License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/). The dataset page also carries an end user license agreement. The use here is non-commercial and educational. Any adaptation of these images carries the same license (ShareAlike).
 
-The released files are anonymized and carry no age, sex or date. The paper reports mean ages of 43 and 52 years in its two batches and excluded patients under 7 years, so these slices are used to show the anatomy of hemorrhage and the behavior of CT windows, and the site does not describe any one of them as a child.
+The released files are anonymized and carry no age, sex or date. The paper reports mean ages of 43 and 52 years in its two batches and excluded patients under 7 years. For that reason the site uses these slices to show the anatomy of hemorrhage and the behavior of CT windows, and it does not describe any one of them as a child.
 
 Changes made: one axial slice was taken from the non-contrast series named in the table. Pixels outside the head, including the scanner table, were set to air (-1024 HU). The slice was cropped to the head, displayed on a brain window (width 80, level 40), enlarged twofold and saved as 8-bit WebP. For the two slices marked "HU" the measured Hounsfield values were also saved without windowing, as 16-bit integers, for the window lab. No slice was mirrored or rotated.
 
-Drawn on top by this site, and not part of the dataset: the amber outline (a threshold trace around the bright blood), the numbered pins and their labels, the dashed midline and the shift measurement. The words "all three readers" refer to the three radiologists' reads published with the dataset (`reads.csv`).
+This site drew the amber outline (a threshold trace around the bright blood), the numbered pins and their labels, the dashed midline and the shift measurement. They are not part of the dataset. The words "the three readers" refer to the three radiologists whose reads were published with the dataset (`reads.csv`).
 
 | Image | Case | Series | Slice | Pixel size (mm) | Readers' findings for the scan | Stored as |
 |---|---|---|---|---|---|---|
 | edh-a | CQ500-CT-4 | 5mm | 17 | 0.5625 | Epidural hematoma, calvarial fracture, mass effect, midline shift | WebP, HU |
 | edh-b | CQ500-CT-4 | 5mm | 19 | 0.5625 | Same scan | WebP |
-| sdh-a | CQ500-CT-379 | 5mm | 18 | 0.4883 | Subdural hematoma, right | WebP, HU |
+| sdh-a | CQ500-CT-379 | 5mm | 18 | 0.4883 | Subdural hematoma, right, mass effect, midline shift | WebP, HU |
 | sdh-b | CQ500-CT-61 | Plain 3mm | 31 | 0.6074 | Subdural hematoma, right, mass effect, midline shift | WebP |
 | sdh-c | CQ500-CT-86 | 5/5mm Plain | 22 | 0.5234 | Subdural hematoma, mass effect, midline shift | WebP |
 | sah-a | CQ500-CT-378 | 5mm | 13 | 0.4883 | Subarachnoid hemorrhage | WebP |
@@ -40,7 +40,7 @@ Each article below is published under CC BY 4.0 (https://creativecommons.org/lic
 | Image | Source figure | Article |
 |---|---|---|
 | oa-edh-11y, oa-edh-11y-bone | Figure 1, panels a and c | Tsitsipanis C, et al. Severe and Atypical Presentation of Takotsubo Cardiomyopathy in a Pediatric Patient after a Serious Crash Injury-Case Report and Literature Review. Pediatr Rep. 2023;15(3):396-402. https://doi.org/10.3390/pediatric15030036 |
-| oa-sdh-3y | Figure 3 | Caré MM. Parenchymal Insults in Abuse-A Potential Key to Diagnosis. Diagnostics (Basel). 2022;12(4):955. https://doi.org/10.3390/diagnostics12040955 |
+| oa-sdh-3y | Figure 3, panel a | Caré MM. Parenchymal Insults in Abuse-A Potential Key to Diagnosis. Diagnostics (Basel). 2022;12(4):955. https://doi.org/10.3390/diagnostics12040955 |
 | oa-sdh-falx-4m | Figure 4, panel a | Caré MM. Diagnostics (Basel). 2022;12(4):955, as above |
 | oa-hie-3m | Figure 2, panel a | Caré MM. Diagnostics (Basel). 2022;12(4):955, as above |
 | oa-aht-8m | Figure 2, panel A | Colleran GC, et al. ESR Essentials: imaging of suspected child abuse-practice recommendations by the European Society of Paediatric Radiology. Eur Radiol. 2025;35(4):1868-1880. https://doi.org/10.1007/s00330-024-11052-4 |

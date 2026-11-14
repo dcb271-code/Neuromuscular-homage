@@ -83,7 +83,7 @@ export function CtWindowLab({ accent }: { accent: string }) {
 
   return (
     <WidgetFrame accent={accent} label="CT window lab" subtitle="A real head CT with its measured Hounsfield values. Change the window and probe any point."
-      footnote={<>Real CT slices from the CQ500 dataset ({shortCite('chilamkurthy2018')}), stored with their measured Hounsfield values. The files carry no ages, and most patients in the dataset are adults. On these two scans gray and white matter measure several HU higher than the pediatric values in the text. Pixels outside the head were set to air when the scanner table was removed. R and L follow the radiological convention, so the patient&apos;s right is on the image left. Presets: brain, subdural and bone from {shortCite('wang2021')}, narrow from {shortCite('lev1999')}.</>}>
+      footnote={<>Real CT slices from the CQ500 dataset ({shortCite('chilamkurthy2018')}), stored with their measured Hounsfield values. The files carry no ages, and most patients in the dataset are adults. On these two scans gray and white matter measure a few HU higher than the pediatric values in the text. Pixels outside the head were set to air when the scanner table was removed. R and L follow the radiological convention, so the patient&apos;s right is on the image left. Presets: brain, subdural and bone from {shortCite('wang2021')}, narrow from {shortCite('lev1999')}.</>}>
       <div className="mb-3"><Segmented value={sliceId} onChange={pickSlice} accent={accent} options={LAB_SLICES.map(s => ({ id: s.id, label: s.label }))} /></div>
       <div className="grid gap-4 md:grid-cols-[minmax(0,340px)_1fr] md:items-start">
         <div className="mx-auto w-full max-w-[340px]">

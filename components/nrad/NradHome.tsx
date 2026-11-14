@@ -107,7 +107,7 @@ export function NradHome({ modules }: { modules: EegModule[] }) {
         ))}
       </div>
       <p className="text-[11px] text-slate-400">
-        <Link href="/neuroradiology/review" className="text-slate-500 underline">Review flagged points and missed questions</Link>. The CT images are real, from the CQ500 dataset and from open-access pediatric articles, with sources listed on the <Link href="/credits" className="text-slate-500 underline">credits</Link> page. For education. Not for clinical decision-making.
+        <Link href="/neuroradiology/review" className="text-slate-500 underline">Review flagged points and missed questions</Link>. The CT images are real. They come from the CQ500 dataset and from open-access pediatric articles, and the <Link href="/credits" className="text-slate-500 underline">credits</Link> page lists the sources. For education. Not for clinical decision-making.
       </p>
     </div>
   );

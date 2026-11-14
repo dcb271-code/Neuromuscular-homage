@@ -43,7 +43,7 @@ export function HemorrhageSorter({ accent }: { accent: string }) {
 
   return (
     <WidgetFrame accent={accent} label="Hemorrhage by shape" subtitle="Real head CT images. Acute blood is brighter than brain."
-      footnote={<>Real CT images. The slices with numbered pins come from the CQ500 dataset ({shortCite('chilamkurthy2018')}), whose files carry no ages and whose patients are mostly adults. The amber line on those slices was traced by threshold around the blood. The pediatric images are panels from open-access articles, shown as printed with their own arrows. The case stems are teaching scenarios, and each image comes from a different patient, described in the line under it. R and L follow the radiological convention, so the patient&apos;s right is on the image left. Sources: Heit 2017, Huisman 2009, Kemp 2011.</>}>
+      footnote={<>Real CT images. The slices with numbered pins come from the CQ500 dataset ({shortCite('chilamkurthy2018')}). Its files carry no ages, and most of its patients are adults. The amber line on those slices was traced by threshold around the blood. The pediatric images are panels from open-access articles, shown as printed with their own arrows. The case stems are teaching scenarios, and each image comes from a different patient, described in the line under it. R and L follow the radiological convention, so the patient&apos;s right is on the image left. Sources: Heit 2017, Huisman 2009, Kemp 2011.</>}>
       <div className="mb-3"><Segmented value={mode} onChange={setMode} accent={accent} options={[{ id: 'explore', label: 'Explore' }, { id: 'quiz', label: `Sort ${QUIZ.length} cases` }]} /></div>
 
       {mode === 'explore' ? (
