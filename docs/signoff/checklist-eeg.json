@@ -1,0 +1,779 @@
+[
+  {
+    "id": "E1",
+    "title": "m07: ACNS neonatal continuity definitions and thresholds",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "sections[0].content (table)",
+        "current": "| Continuous | Less than 2 s of attenuation below 25 µV |\\n| Discontinuous | Interburst intervals of at least 2 s, attenuated below 25 to 50 µV |\\n| Excessively discontinuous | Interburst intervals too long or too low for postmenstrual age, and bursts still contain some normal features. No numeric cutoff |\\n| Burst suppression | Invariant, abnormally composed bursts, interburst voltage below 5 µV, and no variability or reactivity |"
+      },
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "sections[0].content (prose, Reading the table)",
+        "current": "It becomes **excessively discontinuous** only when the interburst intervals are too long or too low for the age, and the terminology deliberately sets no numeric cutoff, because the cutoff is the age-specific limit from the maturation tables."
+      },
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "sections[0].keyPoints[0]",
+        "current": "ACNS defines continuous as less than 2 s of attenuation below 25 µV and discontinuous as interburst intervals of at least 2 s attenuated below 25 to 50 µV (Tsuchida 2013)."
+      },
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "sections[0].keyPoints[1]",
+        "current": "Excessively discontinuous means intervals too long or too low for postmenstrual age, with bursts that still contain some normal features, and there is no numeric cutoff."
+      },
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "sections[0].question.explanation and keyPoints[2] (burst suppression)",
+        "current": "interburst voltage below 5 µV, and no variability or reactivity (Tsuchida 2013)"
+      }
+    ],
+    "recommendation": "Keep the \"25 to 50 µV\" figure: it is the ACNS wording (\"We define the IBI as a period in which activity is attenuated <25 to 50 µV pp for 2 seconds or more\"). Clarify that it defines the interburst interval and is peak to peak. Fix \"No numeric cutoff\" for excessive discontinuity, which is wrong: ACNS defines it by the age-specific limits in its Table 4 (maximum IBI 35 s under 30 weeks, 20 s at 30 to 33, 10 s at 34 to 36, 6 s at 37 to 40). Continuous (<2 s of attenuation <25 µV pp) and burst suppression (IBI <5 µV pp, invariant, unreactive, no normal graphoelements) are correct as written.",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "sections[0].content (table row)",
+        "find": "| Discontinuous | Interburst intervals of at least 2 s, attenuated below 25 to 50 µV |",
+        "replace": "| Discontinuous | Bursts separated by interburst intervals, each at least 2 s with activity below 25 to 50 µV peak to peak |"
+      },
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "sections[0].content (table row)",
+        "find": "bursts still contain some normal features. No numeric cutoff |",
+        "replace": "bursts still contain some normal features. The limit depends on age |"
+      },
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "sections[0].content (prose)",
+        "find": "and the terminology deliberately sets no numeric cutoff, because the cutoff is the age-specific limit from the maturation tables.",
+        "replace": "and the limit falls with age. The longest normal interburst interval is 35 s before 30 weeks, 20 s at 30 to 33 weeks, 10 s at 34 to 36 weeks and 6 s at 37 to 40 weeks ([Tsuchida 2013](https://pubmed.ncbi.nlm.nih.gov/23545767/))."
+      },
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "sections[0].keyPoints[0]",
+        "find": "discontinuous as interburst intervals of at least 2 s attenuated below 25 to 50 µV (Tsuchida 2013).",
+        "replace": "discontinuous as bursts separated by interburst intervals of at least 2 s with activity below 25 to 50 µV peak to peak (Tsuchida 2013)."
+      },
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "sections[0].keyPoints[1]",
+        "find": "with bursts that still contain some normal features, and there is no numeric cutoff.",
+        "replace": "with bursts that still contain some normal features. The limit is set by age, not by one number."
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Tsuchida TN, et al. ACNS standardized EEG terminology and categorization for the description of continuous EEG monitoring in neonates. J Clin Neurophysiol. 2013;30(2):161-173.",
+        "pmid": "23545767",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23545767/",
+        "verified": "esummary OK; full text read on journals.lww.com (Table 3 text, Table 4 image)"
+      }
+    ],
+    "confidence": "high",
+    "note": "Burst suppression detail not added (optional): ACNS allows one electrode with sparse IBI activity up to 15 µV pp, or a transient up to 15 µV under 2 s. Consistency flag for m06: sections content and keyPoints give a different table (\"60 s at 24 weeks, 40 s at 26, 20 s at 28 ... (Learning EEG; consistent with Medscape)\"), and a section question explanation says \"A blanket limit of 20 s is the value for about 28 weeks, not 26\". ACNS puts 20 s at 30 to 33 weeks and 35 s for all ages under 30 weeks. Those m06 citations are not in the sources registry. If E1 is approved, m06 should be reconciled (see E2-m06)."
+  },
+  {
+    "id": "E2-m06",
+    "title": "m06 quiz[4]: \"commonly quoted values give about 20 s at 28 weeks\" (formerly \"The outline is explicit that sources disagree\")",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m06-neonatal-maturation.json",
+        "field": "quiz[4].explanation",
+        "current": "Sources disagree about the longest normal interburst interval. The commonly quoted values give about 20 s at 28 weeks, the French consensus reports wider maxima (André 2010), and some texts give medians rather than maxima, which explains much of the disagreement."
+      }
+    ],
+    "recommendation": "Replace the uncited \"commonly quoted values\" with the ACNS Table 4 maxima, which are verifiable and which the module already cites elsewhere. Note the ACNS figure under 30 weeks is 35 s, not 20 s.",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m06-neonatal-maturation.json",
+        "field": "quiz[4].explanation",
+        "find": "The commonly quoted values give about 20 s at 28 weeks, the French consensus reports wider maxima (André 2010)",
+        "replace": "The ACNS terminology gives maxima of 35 s before 30 weeks and 20 s at 30 to 33 weeks (Tsuchida 2013), the French consensus reports wider maxima (André 2010)"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Tsuchida TN, et al. ACNS standardized EEG terminology and categorization for the description of continuous EEG monitoring in neonates. J Clin Neurophysiol. 2013;30(2):161-173.",
+        "pmid": "23545767",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23545767/",
+        "verified": "esummary OK; full text read on journals.lww.com (Table 3 text, Table 4 image)"
+      },
+      {
+        "citation": "André M, et al. Electroencephalography in premature and full-term infants. Neurophysiol Clin. 2010;40(2):59-124.",
+        "pmid": "20510792",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20510792/",
+        "verified": "esummary OK (claim already in module; full text not re-read)"
+      }
+    ],
+    "confidence": "high",
+    "note": "Larger issue outside this sentence: m06 sections content/keyPoints and the section-question explanation use \"Learning EEG; consistent with Medscape\" values (60/40/20 s at 24/26/28 weeks) that are not in the registry and conflict with ACNS Table 4. Recommend a separate pass to replace them with Tsuchida 2013 Table 4 plus André 2010. \"Some texts give medians rather than maxima\" remains uncited; keep or cut at owner discretion."
+  },
+  {
+    "id": "E2-m08-sharp",
+    "title": "m08: spike versus sharp wave \"carries little clinical weight\"",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[0].content",
+        "current": "The distinction is worth recording because the vocabulary is standard, but it carries little clinical weight, since a sharp wave over the left temporal region means much the same as a spike there."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[0].keyPoints[1]",
+        "current": "By the IFCN glossary a spike lasts 20 to under 70 ms and a sharp wave 70 to 200 ms (Kane 2017), but the distinction has little clinical weight."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[0].question.explanation",
+        "current": "The IFCN glossary gives the boundary, but the distinction carries little clinical weight."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "quiz[1].explanation",
+        "current": "Calling them spikes misclassifies a 90 ms transient, though the distinction carries little clinical weight"
+      }
+    ],
+    "recommendation": "Cite the glossary itself, which says the spike/sharp distinction \"is largely arbitrary and primarily serves descriptive purposes\". quiz[1] already cites Kane 2017 in the same paragraph, so leave it.",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[0].content",
+        "find": "but it carries little clinical weight, since a sharp wave",
+        "replace": "but the glossary itself calls it largely arbitrary ([Kane 2017](https://pubmed.ncbi.nlm.nih.gov/30214992/)), since a sharp wave"
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[0].keyPoints[1]",
+        "find": "(Kane 2017), but the distinction has little clinical weight.",
+        "replace": "and the glossary calls the distinction largely arbitrary (Kane 2017)."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[0].question.explanation",
+        "find": "The IFCN glossary gives the boundary, but the distinction carries little clinical weight.",
+        "replace": "The IFCN glossary gives the boundary but calls the distinction largely arbitrary (Kane 2017)."
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kane N, et al. A revised glossary of terms most commonly used by clinical electroencephalographers... Revision 2017. Clin Neurophysiol Pract. 2017;2:170-185.",
+        "pmid": "30214992",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30214992/",
+        "verified": "esummary OK; full text read on PMC6123891"
+      }
+    ],
+    "confidence": "high",
+    "note": ""
+  },
+  {
+    "id": "E2-m08-jme",
+    "title": "m08/m09: JME discharges \"can look focal or asymmetric\"",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[1].content",
+        "current": "The reverse error also happens, because in juvenile myoclonic epilepsy the generalized discharges can look focal or asymmetric on a given record, so a single asymmetric burst does not make a focal epilepsy."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[1].keyPoints[3]",
+        "current": "In juvenile myoclonic epilepsy, generalized discharges can look focal or asymmetric on a single record."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[1].question.explanation",
+        "current": "Dismissing the asymmetry as normal stretches the caution about juvenile myoclonic epilepsy, where a single burst can look asymmetric."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "quiz[2].explanation",
+        "current": "In juvenile myoclonic epilepsy the generalized discharges can look focal or asymmetric on a given record, so a single asymmetric burst ... rather than relabeled as focal."
+      },
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "sections[4].question.explanation",
+        "current": "and its discharges can look focal or asymmetric on a single record."
+      }
+    ],
+    "recommendation": "Add Hirsch E 2022, which states that in JME the discharges often fragment in sleep and can appear focal or multifocal, that focal spikes occur in up to 20%, mostly frontal, and may shift between recordings, and that consistent focal findings should raise a structural cause. The claim is accurate; it only needs the citation.",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[1].content",
+        "find": "so a single asymmetric burst does not make a focal epilepsy.",
+        "replace": "so a single asymmetric burst does not make a focal epilepsy ([Hirsch E 2022](https://pubmed.ncbi.nlm.nih.gov/35503716/))."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[1].keyPoints[3]",
+        "find": "generalized discharges can look focal or asymmetric on a single record.\"",
+        "replace": "generalized discharges can look focal or asymmetric on a single record (Hirsch E 2022).\""
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "quiz[2].explanation",
+        "find": "rather than relabeled as focal.",
+        "replace": "rather than relabeled as focal (Hirsch E 2022)."
+      },
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "sections[4].question.explanation",
+        "find": "and its discharges can look focal or asymmetric on a single record.",
+        "replace": "and its discharges can look focal or asymmetric on a single record (Hirsch E 2022)."
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hirsch E, et al. ILAE definition of the idiopathic generalized epilepsy syndromes. Epilepsia. 2022;63(6):1475-1499.",
+        "pmid": "35503716",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35503716/",
+        "verified": "esummary OK; full text read (Glasgow eprints 270405)"
+      }
+    ],
+    "confidence": "high",
+    "note": "hirschE2022 is already in the sources arrays of m08 and m09."
+  },
+  {
+    "id": "E2-m08-oirda",
+    "title": "m08: OIRDA \"often seen with absence epilepsy\"",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[4].content",
+        "current": "**Occipital intermittent rhythmic delta activity (OIRDA)** is a childhood pattern, often seen with absence epilepsy."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[4].keyPoints[0]",
+        "current": "OIRDA is a childhood pattern often seen with absence epilepsy, so look for generalized 3 Hz spike-wave, especially during hyperventilation."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[4].question.explanation",
+        "current": "is OIRDA, a childhood pattern often seen with absence epilepsy, and the next step is to look for generalized 3 Hz spike-wave"
+      }
+    ],
+    "recommendation": "Cite Hirsch E 2022, which reports OIRDA in 21% to 30% of children with CAE. Give the number in the content and explanation; add the citation to the keyPoint.",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[4].content",
+        "find": "is a childhood pattern, often seen with absence epilepsy.",
+        "replace": "is a childhood pattern seen in 21% to 30% of children with childhood absence epilepsy ([Hirsch E 2022](https://pubmed.ncbi.nlm.nih.gov/35503716/))."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[4].keyPoints[0]",
+        "find": "OIRDA is a childhood pattern often seen with absence epilepsy, so",
+        "replace": "OIRDA is a childhood pattern often seen with absence epilepsy (Hirsch E 2022), so"
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[4].question.explanation",
+        "find": "is OIRDA, a childhood pattern often seen with absence epilepsy, and",
+        "replace": "is OIRDA, a childhood pattern seen in 21% to 30% of children with childhood absence epilepsy (Hirsch E 2022), and"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hirsch E, et al. ILAE definition of the idiopathic generalized epilepsy syndromes. Epilepsia. 2022;63(6):1475-1499.",
+        "pmid": "35503716",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35503716/",
+        "verified": "esummary OK; full text read (Glasgow eprints 270405)"
+      }
+    ],
+    "confidence": "high",
+    "note": ""
+  },
+  {
+    "id": "E2-m08-breach",
+    "title": "m08: breach rhythm \"is not epileptiform\"",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[4].content",
+        "current": "This is a **breach rhythm**, and it is **not epileptiform**, although its sharp contour invites the mistake."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[4].keyPoints",
+        "current": "A breach rhythm over a skull defect is higher in voltage and sharper, and is not epileptiform."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "quiz[4].explanation",
+        "current": "This is a breach rhythm, and it is not epileptiform."
+      }
+    ],
+    "recommendation": "Cite Kane 2017, which defines breach rhythm and comments that it is \"a physiological variant to be distinguished from epileptiform activity, although it may be associated with underlying brain injury and therefore a liability to focal seizures.\"",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[4].content",
+        "find": "although its sharp contour invites the mistake.",
+        "replace": "although its sharp contour invites the mistake ([Kane 2017](https://pubmed.ncbi.nlm.nih.gov/30214992/))."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "quiz[4].explanation",
+        "find": "This is a breach rhythm, and it is not epileptiform.",
+        "replace": "This is a breach rhythm, a physiological variant that is not epileptiform (Kane 2017)."
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kane N, et al. A revised glossary of terms most commonly used by clinical electroencephalographers... Revision 2017. Clin Neurophysiol Pract. 2017;2:170-185.",
+        "pmid": "30214992",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30214992/",
+        "verified": "esummary OK; full text read on PMC6123891"
+      }
+    ],
+    "confidence": "high",
+    "note": "Optional addition the glossary supports: the underlying injury can still carry a risk of focal seizures. Not proposed, to keep the length."
+  },
+  {
+    "id": "E2-m08-advice",
+    "title": "m08: three reporting judgments that lost \"the outline\" (keep without citation)",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "sections[3].question.explanation",
+        "current": "and the report should recommend neuroimaging if it has not been done."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "quiz[0].explanation",
+        "current": "There are two explanations for a lower-voltage side: cortical dysfunction on that side, or something between the cortex and the electrodes, such as a subdural collection or scalp swelling."
+      },
+      {
+        "file": "src/eeg/modules/m08-interictal.json",
+        "field": "quiz[3].explanation",
+        "current": "and it suggests encephalopathy from metabolic, toxic, post-ictal or diffuse structural causes."
+      }
+    ],
+    "recommendation": "Keep as written. These are standard interpretive reasoning and reporting advice, not specific facts a reader would look up, and the wording no longer claims an authority. I did not find a registry source that states them directly, so no citation is proposed.",
+    "proposed": [],
+    "sources": [],
+    "confidence": "medium",
+    "note": "If the owner wants a citation anyway, St. Louis 2016 (registry, NCBI Bookshelf) likely covers all three, but I could not load the book to verify the wording."
+  },
+  {
+    "id": "E2-m09-eidee",
+    "title": "m09: table cell still reads \"None listed in the outline\"",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "sections[1].content (table, EIDEE row)",
+        "current": "| Early infantile DEE (EIDEE) | Burst suppression or multifocal discharges, with diffuse slowing | None listed in the outline |"
+      }
+    ],
+    "recommendation": "The word \"outline\" survived here. Replace with a neutral cell.",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "sections[1].content (table)",
+        "find": "| None listed in the outline |",
+        "replace": "| None specific to the EEG |"
+      }
+    ],
+    "sources": [],
+    "confidence": "high",
+    "note": "Wording only, no new fact."
+  },
+  {
+    "id": "E2-m09-iess",
+    "title": "m09: normal EEG during a recorded spasm is called an \"alert\"; ILAE 2022 lists it as exclusionary",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "sections[1].content (table, IESS pitfalls)",
+        "current": "A normal EEG during recorded spasms argues against IESS and should prompt you to reconsider the diagnosis |"
+      },
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "sections[1].keyPoints",
+        "current": "A normal EEG during recorded spasms argues against IESS and should prompt you to reconsider the diagnosis."
+      },
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "quiz[0].explanation",
+        "current": "The alert about a normal EEG during a spasm applies only when the EEG does not change."
+      },
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "sections[1].question.explanation",
+        "current": "Hypsarrhythmia is not required, may be absent early, and should not delay treatment."
+      }
+    ],
+    "recommendation": "Zuberi 2022 Table (IESS): interictal normal EEG and suppression-burst are alerts; \"Normal EEG during recorded clinical events of suspected spasms\" is exclusionary. The quiz explanation calls it an alert. Fix the label and add the citation. The hypsarrhythmia sentence is accurate (Zuberi: \"hypsarrhythmia may also be absent. Clinicians should not withhold standard therapy\") and needs only the citation.",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "quiz[0].explanation",
+        "find": "The alert about a normal EEG during a spasm applies only when the EEG does not change.",
+        "replace": "A normal EEG during a recorded spasm would exclude the syndrome (Zuberi 2022), but this spasm had a clear ictal change."
+      },
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "sections[1].content (table)",
+        "find": "A normal EEG during recorded spasms argues against IESS and should prompt you to reconsider the diagnosis |",
+        "replace": "A normal EEG during recorded spasms excludes IESS, so reconsider the diagnosis |"
+      },
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "sections[1].keyPoints",
+        "find": "A normal EEG during recorded spasms argues against IESS and should prompt you to reconsider the diagnosis.",
+        "replace": "A normal EEG during recorded spasms excludes IESS (Zuberi 2022), so reconsider the diagnosis."
+      },
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "sections[1].question.explanation",
+        "find": "Hypsarrhythmia is not required, may be absent early, and should not delay treatment.",
+        "replace": "Hypsarrhythmia is not required, may be absent early, and should not delay treatment (Zuberi 2022)."
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Zuberi SM, et al. ILAE classification and definition of epilepsy syndromes with onset in neonates and infants. Epilepsia. 2022;63(6):1349-1397.",
+        "pmid": "35503712",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35503712/",
+        "verified": "esummary OK; full text read (Glasgow eprints 270404)"
+      }
+    ],
+    "confidence": "high",
+    "note": "The section prose also says a normal EEG during a captured spasm \"argues against the syndrome\" and \"the diagnosis needs to be reconsidered\". That is softer than ILAE but not wrong; left alone."
+  },
+  {
+    "id": "E2-m09-seleas",
+    "title": "m09 quiz[2]: \"the pitfall named for SeLEAS\"",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "quiz[2].explanation",
+        "current": "Multifocal, high-voltage spike or sharp-and-slow waves, often posterior, that shift between recordings are the defining EEG of SeLEAS in Specchio 2022, and the pitfall named for SeLEAS is to read the shifting foci as a structural lesion."
+      }
+    ],
+    "recommendation": "Specchio 2022 says multifocal high-voltage sharp waves or spike-wave are \"typically seen\", often posterior at onset, and that localization varies markedly across sequential EEGs. It does not name a pitfall, and the pattern is typical rather than mandatory (\"defining\" overstates). Reword so the source carries the facts and the pitfall is the module's own teaching.",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "quiz[2].explanation",
+        "find": "are the defining EEG of SeLEAS in Specchio 2022, and the pitfall named for SeLEAS is to read the shifting foci as a structural lesion.",
+        "replace": "are the typical EEG of SeLEAS, and their location often changes from one record to the next (Specchio 2022). Reading the shifting foci as a structural lesion is the pitfall."
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Specchio N, et al. ILAE classification and definition of epilepsy syndromes with onset in childhood. Epilepsia. 2022;63(6):1398-1442.",
+        "pmid": "35503717",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35503717/",
+        "verified": "esummary OK; full text read (Glasgow eprints 270403)"
+      }
+    ],
+    "confidence": "high",
+    "note": ""
+  },
+  {
+    "id": "E2-m09-swas",
+    "title": "m09: \"ILAE 2022 sets no spike-wave index threshold\"",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "sections[3].question.explanation",
+        "current": "ILAE 2022 sets no spike-wave index threshold, and the old 85% cutoff is not required."
+      }
+    ],
+    "recommendation": "Accurate. Specchio 2022 Table 10 makes \"abnormalities markedly activated in sleep\" mandatory with no index, and the text notes ESES was historically >85% of slow-wave sleep but lower percentages can matter. Add the citation.",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m09-syndromes.json",
+        "field": "sections[3].question.explanation",
+        "find": "ILAE 2022 sets no spike-wave index threshold, and the old 85% cutoff is not required. Marked",
+        "replace": "ILAE 2022 sets no spike-wave index threshold, and the old 85% cutoff is not required (Specchio 2022). Marked"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Specchio N, et al. ILAE classification and definition of epilepsy syndromes with onset in childhood. Epilepsia. 2022;63(6):1398-1442.",
+        "pmid": "35503717",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35503717/",
+        "verified": "esummary OK; full text read (Glasgow eprints 270403)"
+      }
+    ],
+    "confidence": "high",
+    "note": "m09 quiz[3] (LGS needs both slow spike-wave <2.5 Hz and generalized paroxysmal fast activity) is already cited to Specchio 2022 and matches its Table 9 mandatory criteria; no change."
+  },
+  {
+    "id": "E2-m10-focal-aware",
+    "title": "m10: focal aware seizures may have no scalp correlate",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m10-seizures-status.json",
+        "field": "sections[4].content",
+        "current": "**Focal aware seizures** may have **no clear scalp correlate**."
+      },
+      {
+        "file": "src/eeg/modules/m10-seizures-status.json",
+        "field": "sections[4].question.explanation",
+        "current": "Focal aware seizures may have no scalp correlate, so a normal tracing during a stereotyped event does not exclude a focal seizure."
+      }
+    ],
+    "recommendation": "Add Devinsky 1988 (video-EEG of 87 simple partial seizures: only 21% had an ictal EEG change; 15% of nonmotor seizures). Requires a new registry entry and adding the key to m10 sources.",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m10-seizures-status.json",
+        "field": "sections[4].content",
+        "find": "**Focal aware seizures** may have **no clear scalp correlate**.",
+        "replace": "**Focal aware seizures** may have **no clear scalp correlate**. In one video-EEG series, only 21% of them showed any ictal change on the scalp ([Devinsky 1988](https://pubmed.ncbi.nlm.nih.gov/3137487/))."
+      },
+      {
+        "file": "src/eeg/modules/m10-seizures-status.json",
+        "field": "sections[4].question.explanation",
+        "find": "Focal aware seizures may have no scalp correlate, so",
+        "replace": "Focal aware seizures often have no scalp correlate (Devinsky 1988), so"
+      },
+      {
+        "file": "src/eeg/modules/m10-seizures-status.json",
+        "field": "sources",
+        "find": "    \"hirschE2022\"\n  ]",
+        "replace": "    \"hirschE2022\",\n    \"devinsky1988\"\n  ]"
+      },
+      {
+        "file": "src/eeg/sources.ts",
+        "field": "SOURCES",
+        "find": "  herman2015: {",
+        "replace": "  devinsky1988: { key: 'devinsky1988', pmid: '3137487', citation: 'Devinsky O, et al. Clinical and electroencephalographic features of simple partial seizures. Neurology. 1988;38(9):1347-1352.' },\n  herman2015: {"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Devinsky O, Kelley K, Porter RJ, Theodore WH. Clinical and electroencephalographic features of simple partial seizures. Neurology. 1988;38(9):1347-1352.",
+        "pmid": "3137487",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/3137487/",
+        "verified": "esummary OK; abstract read (18 of 87 simple partial seizures, 21%, had an ictal EEG change)"
+      }
+    ],
+    "confidence": "medium",
+    "note": "Small series (14 patients), mostly adults, in the pre-ILAE-2017 term \"simple partial\". The sources-array find uses a real newline (the file has one), unlike the escaped \\n in prose fields."
+  },
+  {
+    "id": "E2-m10-muscle",
+    "title": "m10 quiz[3]: reading a muscle-obscured seizure at its edges (keep without citation)",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m10-seizures-status.json",
+        "field": "quiz[3].explanation",
+        "current": "When muscle hides a seizure, look for the first change before the artifact starts and at the post-ictal slowing afterward, and read the seizure at its edges."
+      }
+    ],
+    "recommendation": "Keep. This is reading technique, not a sourced fact, and it no longer claims an authority.",
+    "proposed": [],
+    "sources": [],
+    "confidence": "medium",
+    "note": ""
+  },
+  {
+    "id": "E3",
+    "title": "m05 quiz[4]: circular hyperventilation sentence",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m05-variants.json",
+        "field": "quiz[4].explanation",
+        "current": "The rule is that hyperventilation in an untreated child either produces 2.5 to 4 Hz spike-wave or it does not."
+      }
+    ],
+    "recommendation": "Replace with the actual ILAE statement. Hirsch E 2022: \"Generalized spike-wave and absence seizures are both provoked by hyperventilation in most untreated patients\" and \"If an untreated child performs hyperventilation well for 3 min and no generalized spike-wave is seen, childhood absence epilepsy can be excluded\" (the CAE criteria table lists this as an alert). The wording below matches how m09 already phrases it (\"very unlikely\"). Add hirschE2022 to m05 sources.",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m05-variants.json",
+        "field": "quiz[4].explanation",
+        "find": "The rule is that hyperventilation in an untreated child either produces 2.5 to 4 Hz spike-wave or it does not.",
+        "replace": "Hyperventilation provokes spike-wave and absence seizures in most untreated children with childhood absence epilepsy, so 3 minutes of good hyperventilation with no spike-wave makes that diagnosis very unlikely (Hirsch E 2022). Slowing alone is not spike-wave."
+      },
+      {
+        "file": "src/eeg/modules/m05-variants.json",
+        "field": "sources",
+        "find": "    \"stlouis2016\"\n  ]",
+        "replace": "    \"stlouis2016\",\n    \"hirschE2022\"\n  ]"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Hirsch E, et al. ILAE definition of the idiopathic generalized epilepsy syndromes. Epilepsia. 2022;63(6):1475-1499.",
+        "pmid": "35503716",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35503716/",
+        "verified": "esummary OK; full text read (Glasgow eprints 270405)"
+      }
+    ],
+    "confidence": "high",
+    "note": "The sources-array find uses a real newline. The final short sentence ties the fact back to the wrong option (\"Calling it spike-wave invents a discharge\"); drop it if too repetitive."
+  },
+  {
+    "id": "E4",
+    "title": "m05 and m07: Benbadis and Murray named in prose",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m05-variants.json",
+        "field": "sections[3].question.explanation",
+        "current": "They are the sharply contoured drowsy activity that Benbadis found behind most misdiagnoses."
+      },
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "sections[3].content",
+        "current": "The Murray data are the reason that skill cannot be delegated to the bedside."
+      },
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "sections[4].content",
+        "current": "The risk populations are those the ILAE and the Murray data describe: encephalopathy, especially after hypoxia-ischemia, and other acute brain injury."
+      },
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "sections[3].question.question",
+        "current": "Based on Murray 2008, what should you advise?"
+      }
+    ],
+    "recommendation": "Move the names into parenthetical citations. The question stem names a paper but not as a sentence subject; optional change. The section field indexes are approximate (located by line); the find strings are exact.",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m05-variants.json",
+        "field": "question.explanation",
+        "find": "They are the sharply contoured drowsy activity that Benbadis found behind most misdiagnoses.",
+        "replace": "They are the sharply contoured drowsy activity found behind most misdiagnoses of epilepsy (Benbadis 2003; Benbadis 2008)."
+      },
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "content",
+        "find": "The Murray data are the reason that skill cannot be delegated to the bedside.",
+        "replace": "Those numbers are the reason that skill cannot be delegated to the bedside."
+      },
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "content",
+        "find": "The risk populations are those the ILAE and the Murray data describe: encephalopathy, especially after hypoxia-ischemia, and other acute brain injury.",
+        "replace": "The risk populations include encephalopathy, especially after hypoxia-ischemia, and other acute brain injury (Pressler 2021; Murray 2008)."
+      },
+      {
+        "file": "src/eeg/modules/m07-neonatal-abnormal.json",
+        "field": "question.question",
+        "find": "Based on Murray 2008, what should you advise?",
+        "replace": "Based on the video-EEG data in this section, what should you advise?"
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Benbadis SR, et al. Overinterpretation of EEGs and misdiagnosis of epilepsy. J Clin Neurophysiol. 2003;20(1):42-44.",
+        "pmid": "12684557",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12684557/",
+        "verified": "esummary OK"
+      },
+      {
+        "citation": "Benbadis SR, et al. Errors in EEG interpretation and misdiagnosis of epilepsy. Eur Neurol. 2008;59(5):267-271.",
+        "pmid": "18264016",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18264016/",
+        "verified": "esummary OK"
+      },
+      {
+        "citation": "Murray DM, et al. Defining the gap between electrographic seizure burden, clinical expression and staff recognition of neonatal seizures. Arch Dis Child Fetal Neonatal Ed. 2008;93(3):F187-F191.",
+        "pmid": "17626147",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17626147/",
+        "verified": "esummary OK; abstract numbers (51, 526, 34%, 177, 27%, 9%) match module"
+      },
+      {
+        "citation": "Pressler RM, et al. The ILAE classification of seizures and the epilepsies: modification for seizures in the neonate. Epilepsia. 2021;62(3):615-628.",
+        "pmid": "33522601",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33522601/",
+        "verified": "esummary OK (not re-read for this sentence)"
+      }
+    ],
+    "confidence": "medium",
+    "note": "The m07 risk-population sentence keeps the two sources it already named; I did not re-read Pressler 2021 for this sentence, and the ACNS guideline (Shellhaas 2011) may be the better citation if the owner prefers. Murray 2008 enrolled term infants at risk of seizures. Out of scope but same style issue: m11 (\"The Abend cohort found...\", \"In the Topjian cohort...\", \"The Payne cohort found...\"), m09 (\"Hirsch E 2022 records that...\", \"Specchio 2022 defines...\"), m12 (\"Nascimento 2023 concluded...\")."
+  },
+  {
+    "id": "E5",
+    "title": "m04: posterior slow waves of youth age range and prevalence",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m04-normal-by-age.json",
+        "field": "sections[0].content (table)",
+        "current": "| Posterior slow waves of youth | Typically 4 to 25 years, in about 25% of awake children aged 1 to 15 | Kane 2017; Current Practice |"
+      },
+      {
+        "file": "src/eeg/modules/m04-normal-by-age.json",
+        "field": "sections[2].content",
+        "current": "They are seen **typically from 4 to 25 years**, and in about **25% of awake children aged 1 to 15** ([Kane 2017](https://pubmed.ncbi.nlm.nih.gov/30214992/); Current Practice chapter)."
+      },
+      {
+        "file": "src/eeg/modules/m04-normal-by-age.json",
+        "field": "sections[2].keyPoints[0]",
+        "current": "They are seen typically from 4 to 25 years, in about 25% of awake children aged 1 to 15 (Kane 2017; Current Practice)."
+      },
+      {
+        "file": "src/eeg/modules/m04-normal-by-age.json",
+        "field": "sections[2].question.explanation",
+        "current": "They are seen typically from 4 to 25 years and in about a quarter of awake children aged 1 to 15 (Kane 2017; Current Practice)."
+      }
+    ],
+    "recommendation": "Kane 2017 supports only the age range (\"isolated slow waves intermixed with the posterior dominant rhythm in young people (typically 4-25 years of age)\"). The 25% / ages 1 to 15 figure rests on the \"Current Practice\" chapter, whose edition and authors the registry marks as unconfirmed, and its age band clashes with 4 to 25. Cut the prevalence and keep the Kane range, unless the owner can confirm the chapter.",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m04-normal-by-age.json",
+        "field": "sections[0].content (table)",
+        "find": "| Typically 4 to 25 years, in about 25% of awake children aged 1 to 15 | Kane 2017; Current Practice |",
+        "replace": "| Typically 4 to 25 years | Kane 2017 |"
+      },
+      {
+        "file": "src/eeg/modules/m04-normal-by-age.json",
+        "field": "sections[2].content",
+        "find": "They are seen **typically from 4 to 25 years**, and in about **25% of awake children aged 1 to 15** ([Kane 2017](https://pubmed.ncbi.nlm.nih.gov/30214992/); Current Practice chapter).",
+        "replace": "They are seen **typically from 4 to 25 years** ([Kane 2017](https://pubmed.ncbi.nlm.nih.gov/30214992/))."
+      },
+      {
+        "file": "src/eeg/modules/m04-normal-by-age.json",
+        "field": "sections[2].keyPoints[0]",
+        "find": "They are seen typically from 4 to 25 years, in about 25% of awake children aged 1 to 15 (Kane 2017; Current Practice).",
+        "replace": "They are seen typically from 4 to 25 years (Kane 2017)."
+      },
+      {
+        "file": "src/eeg/modules/m04-normal-by-age.json",
+        "field": "sections[2].question.explanation",
+        "find": "They are seen typically from 4 to 25 years and in about a quarter of awake children aged 1 to 15 (Kane 2017; Current Practice).",
+        "replace": "They are seen typically from 4 to 25 years (Kane 2017)."
+      }
+    ],
+    "sources": [
+      {
+        "citation": "Kane N, et al. A revised glossary of terms most commonly used by clinical electroencephalographers... Revision 2017. Clin Neurophysiol Pract. 2017;2:170-185.",
+        "pmid": "30214992",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30214992/",
+        "verified": "esummary OK; full text read on PMC6123891"
+      }
+    ],
+    "confidence": "medium",
+    "note": "I found no PubMed-indexed source to verify the 25% figure in the time available. m05 already gives \"4 to 25 years\" with no prevalence, so the cut makes m04 and m05 agree. Kane does not mention blocking with eye opening; that part of the m04 text is not changed here."
+  },
+  {
+    "id": "E6",
+    "title": "m12 section 2 question explanation: ambiguous \"They\"",
+    "locations": [
+      {
+        "file": "src/eeg/modules/m12-supervised-reading.json",
+        "field": "sections[1].question.explanation",
+        "current": "The milestones describe levels of competence and are silent on rotation length. They do not prohibit a time requirement. They simply do not substitute for assessment."
+      }
+    ],
+    "recommendation": "Rewrite so the subject of each clause is explicit. No new facts.",
+    "proposed": [
+      {
+        "file": "src/eeg/modules/m12-supervised-reading.json",
+        "field": "question.explanation",
+        "find": "The milestones describe levels of competence and are silent on rotation length. They do not prohibit a time requirement. They simply do not substitute for assessment.",
+        "replace": "The milestones describe levels of competence and are silent on rotation length. A program may still set a minimum number of weeks, but time on the rotation does not replace an assessment of competence."
+      }
+    ],
+    "sources": [],
+    "confidence": "high",
+    "note": "The section index is approximate (the field is the question in the second section, file line 61)."
+  }
+]

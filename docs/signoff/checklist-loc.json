@@ -1,0 +1,814 @@
+[
+ {
+  "id": "L1",
+  "title": "Upgoing toe \"normal in the first year\"",
+  "locations": [
+   {
+    "file": "src/loc/modules/m01-where-before-what.json",
+    "field": "sections[6].content",
+    "current": "The upgoing big toe is a cornerstone sign of corticospinal tract damage, yet it can be normal in the first year of life, while the corticospinal tracts are still being myelinated ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/newborn_n.html)). The closer an infant is to one year, the more consistently the toe goes down (DeMyer, p. 282)."
+   },
+   {
+    "file": "src/loc/modules/m01-where-before-what.json",
+    "field": "sections[6].keyPoints[1]",
+    "current": "An upgoing toe is normal in the first year while the corticospinal tracts myelinate (Utah PediNeuroLogic Exam)."
+   },
+   {
+    "file": "src/loc/modules/m01-where-before-what.json",
+    "field": "quiz[3].explanation",
+    "current": "An upgoing toe is normal in the first year while the corticospinal tracts myelinate (Utah PediNeuroLogic Exam), and the flexor response becomes more constant as the infant nears one year (DeMyer, p. 282)."
+   },
+   {
+    "file": "src/loc/modules/m02-the-exam.json",
+    "field": "sections[4].content",
+    "current": "- An upgoing toe is normal through the first year, and hand preference before 12 months is a red flag."
+   },
+   {
+    "file": "src/loc/modules/m02-the-exam.json",
+    "field": "sections[5].content",
+    "current": "- An **upgoing toe** is normal in the first year, while myelination is incomplete, and later it is an upper motor neuron sign ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/newborn_n.html))."
+   },
+   {
+    "file": "src/loc/modules/m02-the-exam.json",
+    "field": "sections[5].keyPoints[1]",
+    "current": "An upgoing toe is normal in the first year, and hand preference before 12 months is abnormal (Utah PediNeuroLogic Exam)."
+   },
+   {
+    "file": "src/loc/modules/m03-first-fork.json",
+    "field": "sections[2].content",
+    "current": "An upgoing toe is normal in the first year of life, while the corticospinal tracts are myelinating ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/newborn_n.html)), and the infant's response varies with the stimulus (DeMyer, p. 282). At 12 months the toe may go either up or down, and what matters then is **reproducible asymmetry**"
+   },
+   {
+    "file": "src/loc/modules/m03-first-fork.json",
+    "field": "sections[2].keyPoints[4]",
+    "current": "An upgoing toe is normal in the first year, and at 12 months it is asymmetry that matters (Utah PediNeuroLogic Exam)."
+   },
+   {
+    "file": "src/loc/modules/m06-spinal-cord.json",
+    "field": "sections[0].content",
+    "current": "The tracts are the same at every age, but the corticospinal tract is still myelinating in infancy, which is why an upgoing toe is normal in the first year (Utah PediNeuroLogic Exam; see [[m02-the-exam|Module 2]])."
+   },
+   {
+    "file": "src/loc/models/data.ts",
+    "field": "line 22 (toe sign note)",
+    "current": "Normal through the first year while the corticospinal tracts myelinate; at 12 months the toe may go up or down."
+   },
+   {
+    "file": "src/loc/models/localizer.ts",
+    "field": "lines 142 and 148",
+    "current": "Extensor plantar response (upgoing toe) after the first year / An upgoing toe is normal in the first year, while the corticospinal tracts myelinate (Utah PediNeuroLogic Exam)."
+   },
+   {
+    "file": "src/loc/videos.ts",
+    "field": "line 41",
+    "current": "After the first year this points to the corticospinal tract."
+   }
+  ],
+  "recommendation": "Keep \"first year\" as the teaching threshold; add one or two sentences in m01 with prospective data. The 12 to 24 month range in some references is not supported by the prospective infant studies found: in Gingold 1998 no healthy infant was still extensor at 12 months, and Zafeiriou 1999 found 86% flexor by 11 months. Kumhar 2002 shows the change is gradual and variable (about a third still bilaterally extensor at 9 to 12 months), which argues for treating an isolated upgoing toe near the first birthday with caution, not for moving the line to 24 months.",
+  "proposed": [
+   {
+    "file": "src/loc/modules/m01-where-before-what.json",
+    "field": "sections[6].content",
+    "find": "The closer an infant is to one year, the more consistently the toe goes down (DeMyer, p. 282).",
+    "replace": "The closer an infant is to one year, the more consistently the toe goes down (DeMyer, p. 282). The pace varies, and in one large study a third of healthy infants were still upgoing on both sides at 9 to 12 months ([Kumhar 2002](https://pubmed.ncbi.nlm.nih.gov/12401457/))."
+   },
+   {
+    "file": "src/loc/modules/m01-where-before-what.json",
+    "field": "sources",
+    "find": "  \"sources\": [",
+    "replace": "  \"sources\": [\n    \"kumhar2002\","
+   },
+   {
+    "file": "src/loc/sources.ts",
+    "field": "LOC_SOURCES",
+    "find": "  // ── Free web resource",
+    "replace": "  kumhar2002: { key: 'kumhar2002', pmid: '12401457', citation: 'Kumhar GD, Dua T, Gupta P. Plantar response in infancy. Eur J Paediatr Neurol. 2002;6(6):321-325.', supports: '1281 healthy term infants aged 1-12 months (India): bilateral extensor response in 79.4%, 67.8%, 32.5% and 31.1% at 1-3, 3-6, 6-9 and 9-12 months; asymmetric responses in 21-40%.' },\n  // ── Free web resource"
+   }
+  ],
+  "sources": [
+   {
+    "citation": "Kumhar GD, Dua T, Gupta P. Plantar response in infancy. Eur J Paediatr Neurol. 2002;6(6):321-325. doi:10.1016/s1090-3798(02)90620-3",
+    "pmid": "12401457",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/12401457/",
+    "verified": true,
+    "supports": "1281 healthy term infants aged 1-12 months (India): bilateral extensor response in 79.4%, 67.8%, 32.5% and 31.1% at 1-3, 3-6, 6-9 and 9-12 months; asymmetric responses in 21-40%.",
+    "registry_key": "kumhar2002"
+   },
+   {
+    "citation": "Gingold MK, Jaynes ME, Bodensteiner JB, Romano JT, Hammond MT. The rise and fall of the plantar response in infancy. J Pediatr. 1998;133(4):568-570. doi:10.1016/s0022-3476(98)70071-x",
+    "pmid": "9787701",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/9787701/",
+    "verified": true,
+    "supports": "169 infants examined serially: plantar response extensor in 95.5%, 64.8%, 10.9%, 0.7% and 0% at 2, 4, 6, 9 and 12 months; predominantly flexor by 6 months.",
+    "registry_key": "gingold1998"
+   }
+  ],
+  "confidence": "medium",
+  "note": "Section budget: m01 section 7 is near 400 visible words, so only Kumhar is added inline. If the owner wants the contrasting study too, Gingold 1998 (listed below, registry text included) found no healthy infant still upgoing at 12 months; register it as gingold1998 before citing. No change needed to the other locations if the threshold stays at one year. Kumhar 2002 also found asymmetric responses in 21 to 40% of healthy infants at a single examination, so the m03 phrase \"what matters then is reproducible asymmetry\" should keep the word \"reproducible\" (it does). Zafeiriou 1999 (PMID 10456761, verified: 68.5% flexor at 9 months, 86.3% at 11 months in neurologically normal high-risk infants) is the source DeMyer p. 282 cites and could be added too. No primary source found that supports 24 months."
+ },
+ {
+  "id": "L2",
+  "title": "Hand preference before 12 months as a red flag",
+  "locations": [
+   {
+    "file": "src/loc/modules/m01-where-before-what.json",
+    "field": "sections[6].content",
+    "current": "Handedness runs the other way, since a hand preference before 12 months is abnormal and points to weakness of the other hand ([Utah PediNeuroLogic Exam](https://neurologicexam.med.utah.edu/pediatric/html/06month.html)). The baby who reaches only with the right hand may be telling you about the left."
+   },
+   {
+    "file": "src/loc/modules/m01-where-before-what.json",
+    "field": "sections[6].keyPoints[2]",
+    "current": "Hand preference before 12 months is abnormal and points to weakness of the other hand (Utah PediNeuroLogic Exam)."
+   },
+   {
+    "file": "src/loc/modules/m01-where-before-what.json",
+    "field": "sections[6].question.explanation",
+    "current": "Hand preference before 12 months is abnormal and points to weakness of the other hand (Utah PediNeuroLogic Exam), so examine for a left hemiparesis"
+   },
+   {
+    "file": "src/loc/modules/m02-the-exam.json",
+    "field": "sections[4].content",
+    "current": "- An upgoing toe is normal through the first year, and hand preference before 12 months is a red flag."
+   },
+   {
+    "file": "src/loc/modules/m02-the-exam.json",
+    "field": "sections[5].content",
+    "current": "- **Hand preference** is ordinary in a schoolchild and abnormal before 12 months, when it points to weakness of the other hand"
+   },
+   {
+    "file": "src/loc/modules/m02-the-exam.json",
+    "field": "sections[5].keyPoints[1]",
+    "current": "An upgoing toe is normal in the first year, and hand preference before 12 months is abnormal (Utah PediNeuroLogic Exam)."
+   },
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "sections[5].content",
+    "current": "Hand preference before the first birthday is abnormal and points to weakness of the other hand, because true handedness develops only after twelve months"
+   },
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "sections[5].keyPoints[0]",
+    "current": "Hand preference before the first birthday is abnormal and points to weakness of the other hand (Utah PediNeuroLogic Exam)."
+   },
+   {
+    "file": "src/loc/modules/m11-where-to-what.json",
+    "field": "sections[4].keyPoints[2] and quiz[1]",
+    "current": "...a hemiparesis is revealed by hand preference before 12 months (DeMyer, p. ...) / Hand preference before 12 months is abnormal and points to weakness of the other hand. Handedness develops after 12 months"
+   },
+   {
+    "file": "src/loc/models/data.ts",
+    "field": "line 23 (hand sign note)",
+    "current": "Hand preference before 12 months is abnormal and points to weakness of the other hand."
+   }
+  ],
+  "recommendation": "Keep 12 months. It is the more sensitive threshold for the diagnosis that matters (congenital hemiparesis from perinatal stroke), which typically surfaces as motor asymmetry between about 4 and 8 months, well before 18 months. Add a citation that ties early hand preference to perinatal stroke.",
+  "proposed": [
+   {
+    "file": "src/loc/modules/m01-where-before-what.json",
+    "field": "sections[6].content",
+    "find": "The baby who reaches only with the right hand may be telling you about the left.",
+    "replace": "The baby who reaches only with the right hand may be telling you about the left, and many perinatal strokes are first noticed this way ([Dunbar 2018](https://pubmed.ncbi.nlm.nih.gov/30119760/))."
+   },
+   {
+    "file": "src/loc/modules/m01-where-before-what.json",
+    "field": "sources",
+    "find": "  \"sources\": [",
+    "replace": "  \"sources\": [\n    \"dunbar2018\","
+   },
+   {
+    "file": "src/loc/sources.ts",
+    "field": "LOC_SOURCES",
+    "find": "  // ── Free web resource",
+    "replace": "  dunbar2018: { key: 'dunbar2018', pmid: '30119760', citation: 'Dunbar M, Kirton A. Perinatal stroke: mechanisms, management, and outcomes of early cerebrovascular brain injury. Lancet Child Adolesc Health. 2018;2(9):666-676.', supports: 'Arterial presumed perinatal ischemic stroke, periventricular venous infarction and presumed perinatal hemorrhagic stroke usually present later in the first year with motor asymmetry.' },\n  // ── Free web resource"
+   }
+  ],
+  "sources": [
+   {
+    "citation": "Dunbar M, Kirton A. Perinatal stroke: mechanisms, management, and outcomes of early cerebrovascular brain injury. Lancet Child Adolesc Health. 2018;2(9):666-676. doi:10.1016/S2352-4642(18)30173-1",
+    "pmid": "30119760",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30119760/",
+    "verified": true,
+    "supports": "Arterial presumed perinatal ischemic stroke, periventricular venous infarction and presumed perinatal hemorrhagic stroke usually present later in the first year with motor asymmetry.",
+    "registry_key": "dunbar2018"
+   }
+  ],
+  "confidence": "medium",
+  "note": "Supporting data, verified: Kirton 2010 (PMID 20625091) found median parental concern at 5 months in presumed perinatal stroke, and Gacio 2016 (PMID 27606667, Spanish case series) says early hand preference is usually noticed at 4 to 8 months and that clear, persistent handedness before one year is a warning sign. No PubMed source found that sets 18 months; that figure appears in textbooks and screening charts. If the owner prefers to acknowledge it, a possible m02 wording is: \"hand preference before 12 months is a red flag, and a strong one before 18 months still deserves a careful look\", but that second clause would be uncited."
+ },
+ {
+  "id": "L3",
+  "title": "Conus at L3 at term",
+  "locations": [
+   {
+    "file": "src/loc/modules/m06-spinal-cord.json",
+    "field": "sections[1].content",
+    "current": "The cord ends lower in a baby. The conus sits at L3 at term and reaches the adult L1 to L2 level by about 2 months of age (Brazis 2011, p. 99)."
+   },
+   {
+    "file": "src/loc/modules/m06-spinal-cord.json",
+    "field": "sections[1].keyPoints[4]",
+    "current": "The conus is at L3 at term and at the adult L1 to L2 level by about 2 months (Brazis 2011, p. 99)."
+   }
+  ],
+  "recommendation": "Change. Brazis p. 99 does say L3 at term, but imaging studies of healthy infants put the conus at the adult level (about L1-L2) by term, with L2-L3 or above normal and L3 indeterminate. Teaching \"L3 is normal at term\" risks reassurance about a tethered cord.",
+  "proposed": [
+   {
+    "file": "src/loc/modules/m06-spinal-cord.json",
+    "field": "sections[1].content",
+    "find": "The cord ends lower in a baby. The conus sits at L3 at term and reaches the adult L1 to L2 level by about 2 months of age (Brazis 2011, p. 99).",
+    "replace": "In a healthy term baby the conus lies at or above the L2-L3 disc, and one at L3 or below raises the question of a tethered cord ([Wilson 1989](https://pubmed.ncbi.nlm.nih.gov/2650477/); [Sun 2022](https://pubmed.ncbi.nlm.nih.gov/34653991/))."
+   },
+   {
+    "file": "src/loc/modules/m06-spinal-cord.json",
+    "field": "sections[1].keyPoints[4]",
+    "find": "The conus is at L3 at term and at the adult L1 to L2 level by about 2 months (Brazis 2011, p. 99).",
+    "replace": "Older teaching puts the conus at L3 at term (Brazis 2011, p. 99), but in healthy term infants it lies at or above the L2-L3 disc, and a conus at L3 or below raises the question of a tethered cord (Wilson 1989; Sun 2022)."
+   },
+   {
+    "file": "src/loc/modules/m06-spinal-cord.json",
+    "field": "sources",
+    "find": "  \"sources\": [",
+    "replace": "  \"sources\": [\n    \"wilson1989\","
+   },
+   {
+    "file": "src/loc/modules/m06-spinal-cord.json",
+    "field": "sources",
+    "find": "  \"sources\": [",
+    "replace": "  \"sources\": [\n    \"sun2022\","
+   },
+   {
+    "file": "src/loc/sources.ts",
+    "field": "LOC_SOURCES",
+    "find": "  // ── Free web resource",
+    "replace": "  wilson1989: { key: 'wilson1989', pmid: '2650477', citation: 'Wilson DA, Prince JR. John Caffey award. MR imaging determination of the location of the normal conus medullaris throughout childhood. AJR Am J Roentgenol. 1989;152(5):1029-1032.', supports: '184 normal children: conus T12 to L2-L3 at 0-2 years (average L1-L2); reaches adult level in the first few months; L2-L3 or above normal at any age; L3 indeterminate (normal or tethered).' },\n  // ── Free web resource"
+   },
+   {
+    "file": "src/loc/sources.ts",
+    "field": "LOC_SOURCES",
+    "find": "  // ── Free web resource",
+    "replace": "  sun2022: { key: 'sun2022', pmid: '34653991', citation: 'Sun M, Tao B, Gao G, Wang H, Shang A. Determination of the normal conus medullaris level in term infants: the role of MRI in early infancy. J Neurosurg Pediatr. 2022;29(1):100-105.', supports: 'MRI in 26 term infants under 3 months: conus between L1 and upper L3, 96.2% above L3, mean L1-2 disc to lower L2; normal conus above L3, a conus at L3 equivocal.' },\n  // ── Free web resource"
+   }
+  ],
+  "sources": [
+   {
+    "citation": "Wilson DA, Prince JR. John Caffey award. MR imaging determination of the location of the normal conus medullaris throughout childhood. AJR Am J Roentgenol. 1989;152(5):1029-1032. doi:10.2214/ajr.152.5.1029",
+    "pmid": "2650477",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/2650477/",
+    "verified": true,
+    "supports": "184 normal children: conus T12 to L2-L3 at 0-2 years (average L1-L2); reaches adult level in the first few months; L2-L3 or above normal at any age; L3 indeterminate (normal or tethered).",
+    "registry_key": "wilson1989"
+   },
+   {
+    "citation": "Sun M, Tao B, Gao G, Wang H, Shang A. Determination of the normal conus medullaris level in term infants: the role of MRI in early infancy. J Neurosurg Pediatr. 2022;29(1):100-105. doi:10.3171/2021.7.PEDS21284",
+    "pmid": "34653991",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34653991/",
+    "verified": true,
+    "supports": "MRI in 26 term infants under 3 months: conus between L1 and upper L3, 96.2% above L3, mean L1-2 disc to lower L2; normal conus above L3, a conus at L3 equivocal.",
+    "registry_key": "sun2022"
+   },
+   {
+    "citation": "Beek FJ, de Vries LS, Gerards LJ, Mali WP. Sonographic determination of the position of the conus medullaris in premature and term infants. Neuroradiology. 1996;38 Suppl 1:S174-S177. doi:10.1007/BF02278151",
+    "pmid": "8811708",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/8811708/",
+    "verified": true,
+    "supports": "Ultrasound in 99 infants: conus at L2/L3 at 27-29 weeks postmenstrual age, ascending to the adult L1/L2 level by about 40 weeks; no further ascent.",
+    "registry_key": "beek1996"
+   }
+  ],
+  "confidence": "high",
+  "note": "The m06 replacement is kept short because section 2 sits at the 400-word budget; it drops \"The cord ends lower in a baby\" and the 2-month ascent, which Wilson 1989 contradicts. Beek 1996 (listed, ultrasound: L2/L3 at 27-29 weeks, L1/L2 by 40 weeks) supports the same point and can replace or join Wilson once registered. Brazis p. 99 moves to the keyPoint (stated as older teaching), so check-preserve-loc.mjs will not report a lost citation. Kesler 2007 (PMID 17961006, verified) found that in older children the conus virtually never ends below mid-L2 without tethering, if the owner wants a stricter line for older children. The keyPoint wording \"L3 or below\" follows Wilson (L3 indeterminate) and Sun (L3 equivocal, should be investigated)."
+ },
+ {
+  "id": "L4",
+  "title": "Acquired third-nerve palsy in a child needs imaging even when the pupil is spared",
+  "locations": [
+   {
+    "file": "src/loc/modules/m07-brainstem.json",
+    "field": "sections[4].content",
+    "current": "Microvascular ischemia is rare in children, so a child with an acquired third-nerve palsy usually needs imaging even when the pupil is normal."
+   }
+  ],
+  "recommendation": "Keep the claim and add a pediatric citation. Pediatric series find no diabetic (microvascular) palsies and a mix of trauma, infection and occasional tumors, so the adult pupil rule cannot be used to skip imaging in a child.",
+  "proposed": [
+   {
+    "file": "src/loc/modules/m07-brainstem.json",
+    "field": "sections[4].content",
+    "find": "Microvascular ischemia is rare in children, so a child with an acquired third-nerve palsy usually needs imaging even when the pupil is normal.",
+    "replace": "Microvascular ischemia is rare in children ([Ing 1992](https://pubmed.ncbi.nlm.nih.gov/1287170/)), so a child with an acquired third-nerve palsy usually needs imaging even when the pupil is normal."
+   },
+   {
+    "file": "src/loc/modules/m07-brainstem.json",
+    "field": "sources",
+    "find": "  \"sources\": [",
+    "replace": "  \"sources\": [\n    \"ing1992\","
+   },
+   {
+    "file": "src/loc/sources.ts",
+    "field": "LOC_SOURCES",
+    "find": "  // ── Free web resource",
+    "replace": "  ing1992: { key: 'ing1992', pmid: '1287170', citation: 'Ing EB, Sullivan TJ, Clarke MP, Buncic JR. Oculomotor nerve palsies in children. J Pediatr Ophthalmol Strabismus. 1992;29(6):331-336.', supports: '54 children: 11 congenital, 43 acquired (31 traumatic, 7 infection, 3 migraine or vascular, 2 neoplastic); no diabetic, posterior communicating aneurysm, metastatic or pituitary cases.' },\n  // ── Free web resource"
+   }
+  ],
+  "sources": [
+   {
+    "citation": "Ing EB, Sullivan TJ, Clarke MP, Buncic JR. Oculomotor nerve palsies in children. J Pediatr Ophthalmol Strabismus. 1992;29(6):331-336. doi:10.3928/0191-3913-19921101-03",
+    "pmid": "1287170",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/1287170/",
+    "verified": true,
+    "supports": "54 children: 11 congenital, 43 acquired (31 traumatic, 7 infection, 3 migraine or vascular, 2 neoplastic); no diabetic, posterior communicating aneurysm, metastatic or pituitary cases.",
+    "registry_key": "ing1992"
+   }
+  ],
+  "confidence": "medium",
+  "note": "The imaging recommendation itself is expert practice, not a guideline finding; no pediatric guideline on PubMed states it directly. Brazis cites Ing 1992 and Schumacher-Feero 1999 (PMID 10458179, verified) in this chapter. Holmes 1999 (PMID 10218690, population-based) found no tumor presenting as an isolated palsy, which the owner may want to weigh, but its series was small (36 palsies, all nerves)."
+ },
+ {
+  "id": "L5",
+  "title": "Opioids and clonidine mimic pontine pupils; hypoglycemia causes focal signs; hydrocephalus causes upgaze failure (m10)",
+  "locations": [
+   {
+    "file": "src/loc/modules/m10-everywhere.json",
+    "field": "sections[2].content",
+    "current": "Opioids and clonidine can make them pinpoint, much like a pontine lesion."
+   },
+   {
+    "file": "src/loc/modules/m10-everywhere.json",
+    "field": "sections[2].content",
+    "current": "Check the glucose at once, because low glucose can itself cause focal signs."
+   },
+   {
+    "file": "src/loc/modules/m10-everywhere.json",
+    "field": "sections[4].content",
+    "current": "Hydrocephalus can also press on the dorsal midbrain, which is why an infant with rising pressure may show downward-deviated \"setting sun\" eyes."
+   }
+  ],
+  "recommendation": "Keep all three and add citations. Two of the three are supported by the books already registered, so only two new papers are needed.",
+  "proposed": [
+   {
+    "file": "src/loc/modules/m10-everywhere.json",
+    "field": "sections[2].content",
+    "find": "Opioids and clonidine can make them pinpoint, much like a pontine lesion.",
+    "replace": "Opioids and clonidine can make them pinpoint, much like a pontine lesion (Brazis 2011, p. 217; [Vaid 2025](https://pubmed.ncbi.nlm.nih.gov/41292070/))."
+   },
+   {
+    "file": "src/loc/modules/m10-everywhere.json",
+    "field": "sections[2].content",
+    "find": "Check the glucose at once, because low glucose can itself cause focal signs.",
+    "replace": "Check the glucose at once, because low glucose can itself cause focal signs, occasionally even a hemiparesis (Brazis 2011, p. 613)."
+   },
+   {
+    "file": "src/loc/modules/m10-everywhere.json",
+    "field": "sections[4].content",
+    "find": "which is why an infant with rising pressure may show downward-deviated \\\"setting sun\\\" eyes.",
+    "replace": "so an infant with rising pressure may show \\\"setting sun\\\" eyes ([Chattha 1975](https://pubmed.ncbi.nlm.nih.gov/1151409/))."
+   },
+   {
+    "file": "src/loc/modules/m10-everywhere.json",
+    "field": "sources",
+    "find": "  \"sources\": [",
+    "replace": "  \"sources\": [\n    \"vaid2025\","
+   },
+   {
+    "file": "src/loc/modules/m10-everywhere.json",
+    "field": "sources",
+    "find": "  \"sources\": [",
+    "replace": "  \"sources\": [\n    \"chattha1975\","
+   },
+   {
+    "file": "src/loc/sources.ts",
+    "field": "LOC_SOURCES",
+    "find": "  // ── Free web resource",
+    "replace": "  vaid2025: { key: 'vaid2025', pmid: '41292070', citation: 'Vaid RA, Shakeri S, Conners GP. Pediatric clonidine toxicity: a review. Pediatr Emerg Care. 2025;41(12):969-975.', supports: 'Clonidine toxicity in children mimics an opioid toxidrome, with CNS depression, miosis, bradycardia and hypotension.' },\n  // ── Free web resource"
+   },
+   {
+    "file": "src/loc/sources.ts",
+    "field": "LOC_SOURCES",
+    "find": "  // ── Free web resource",
+    "replace": "  chattha1975: { key: 'chattha1975', pmid: '1151409', citation: 'Chattha AS, DeLong GR. Sylvian aqueduct syndrome as a sign of acute obstructive hydrocephalus in children. J Neurol Neurosurg Psychiatry. 1975;38(3):288-296.', supports: 'Eight children with obstructive hydrocephalus developed upward gaze palsy and convergence abnormalities that resolved after shunting; periaqueductal dysfunction proposed as the mechanism of the setting-sun sign.' },\n  // ── Free web resource"
+   }
+  ],
+  "sources": [
+   {
+    "citation": "Vaid RA, Shakeri S, Conners GP. Pediatric clonidine toxicity: a review. Pediatr Emerg Care. 2025;41(12):969-975. doi:10.1097/PEC.0000000000003476",
+    "pmid": "41292070",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41292070/",
+    "verified": true,
+    "supports": "Clonidine toxicity in children mimics an opioid toxidrome, with CNS depression, miosis, bradycardia and hypotension.",
+    "registry_key": "vaid2025"
+   },
+   {
+    "citation": "Chattha AS, DeLong GR. Sylvian aqueduct syndrome as a sign of acute obstructive hydrocephalus in children. J Neurol Neurosurg Psychiatry. 1975;38(3):288-296. doi:10.1136/jnnp.38.3.288",
+    "pmid": "1151409",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/1151409/",
+    "verified": true,
+    "supports": "Eight children with obstructive hydrocephalus developed upward gaze palsy and convergence abnormalities that resolved after shunting; periaqueductal dysfunction proposed as the mechanism of the setting-sun sign.",
+    "registry_key": "chattha1975"
+   },
+   {
+    "citation": "Brazis 2011 p. 217 (owner's copy, page checked in PDF text)",
+    "pmid": null,
+    "url": null,
+    "verified": true
+   },
+   {
+    "citation": "Brazis 2011 p. 613 (owner's copy, page checked in PDF text)",
+    "pmid": null,
+    "url": null,
+    "verified": true
+   },
+   {
+    "citation": "DeMyer p. 607 (optional, not used inline) (owner's copy, page checked in PDF text)",
+    "pmid": null,
+    "url": null,
+    "verified": true
+   }
+  ],
+  "confidence": "high",
+  "note": "Book pages checked against the owner's PDFs: Brazis p. 217 (pupil table: narcotics give bilateral miosis; acute pontine lesion gives bilateral pinpoint reactive pupils), Brazis p. 613 (\"Rarely is a metabolic coma (notably hypoglycemic) accompanied by hemiparesis\"), DeMyer p. 607 (aqueductal enlargement in hydrocephalus may cause the pretectal syndrome with impaired upward gaze, listed as a false localizing sign; DeMyer p. 179 says the same for Parinaud syndrome). m10 section 5 is at the 400-word budget, so only Chattha 1975 is cited inline for the hydrocephalus sentence and the redundant word \"downward-deviated\" is dropped; DeMyer p. 607 could be added instead of or beside it. m10 does not list \"demyer\" in its sources array; add it if validate-loc requires book keys to be listed (find \"  \\\"sources\\\": [\" replace with \"  \\\"sources\\\": [\\n    \\\"demyer\\\",\"). Vaid 2025 is a review, abstract read: clonidine mimics an opioid toxidrome with miosis."
+ },
+ {
+  "id": "L6",
+  "title": "Hearing check before diagnosing a language disorder (m09)",
+  "locations": [
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "sections[3].content",
+    "current": "A child whose language has always been behind most likely has a developmental language disorder, once hearing has been checked and nothing else in the story points elsewhere."
+   }
+  ],
+  "recommendation": "Keep, make \"checked\" specific (formal audiology), and cite.",
+  "proposed": [
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "sections[3].content",
+    "find": "once hearing has been checked and nothing else in the story points elsewhere.",
+    "replace": "once an audiologist has tested hearing and nothing else in the story points elsewhere ([McLaughlin 2011](https://pubmed.ncbi.nlm.nih.gov/21568252/))."
+   },
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "sources",
+    "find": "  \"sources\": [",
+    "replace": "  \"sources\": [\n    \"mclaughlin2011\","
+   },
+   {
+    "file": "src/loc/sources.ts",
+    "field": "LOC_SOURCES",
+    "find": "  // ── Free web resource",
+    "replace": "  mclaughlin2011: { key: 'mclaughlin2011', pmid: '21568252', citation: 'McLaughlin MR. Speech and language delay in children. Am Fam Physician. 2011;83(10):1183-1188.', supports: 'Secondary language delay includes hearing loss; when delay is suspected, refer to a speech-language pathologist and an audiologist.' },\n  // ── Free web resource"
+   }
+  ],
+  "sources": [
+   {
+    "citation": "McLaughlin MR. Speech and language delay in children. Am Fam Physician. 2011;83(10):1183-1188.",
+    "pmid": "21568252",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21568252/",
+    "verified": true,
+    "supports": "Secondary language delay includes hearing loss; when delay is suspected, refer to a speech-language pathologist and an audiologist.",
+    "registry_key": "mclaughlin2011"
+   }
+  ],
+  "confidence": "high",
+  "note": "Alternatives verified: AAP clinical report Harlor 2009 (PMID 19786460) and its 2023 update Bower 2023 (PMID 37635686) on hearing assessment beyond the newborn period; their abstracts support surveillance but do not state the referral rule as directly as McLaughlin. CATALISE (Bishop 2017, PMID 28369935) defines developmental language disorder as language disorder without a known biomedical cause."
+ },
+ {
+  "id": "L7",
+  "title": "Currency: pseudotumor cerebri and cerebellar mutism",
+  "locations": [
+   {
+    "file": "src/loc/modules/m10-everywhere.json",
+    "field": "sections[4].content",
+    "current": "The sixth nerve has a long course and is an early casualty of raised intracranial pressure, whether from a tumor above or below the tentorium, hydrocephalus or pseudotumor cerebri (Pearl 2014, pp. 43, 48; Brazis 2011, p. 202)."
+   },
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "sections[4].content",
+    "current": "Neither **cerebellar mutism**, the silence that can follow removal of a cerebellar tumor, nor the speech of a confused, encephalopathic child should be read as a cortical aphasia (Pearl 2014, p. 20)."
+   },
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "sections[4].keyPoints[4]",
+    "current": "Dysarthria, cerebellar mutism after posterior fossa surgery and encephalopathy can all imitate aphasia (Pearl 2014, p. 20)."
+   },
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "quiz[4].options[3]",
+    "current": "Cerebellar mutism, a communication disorder that follows posterior fossa surgery and should not be read as a cortical aphasia"
+   },
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "quiz[4].explanation",
+    "current": "Cerebellar mutism after posterior fossa surgery should not be confused with the cerebral aphasias (Pearl 2014, p. 20)."
+   }
+  ],
+  "recommendation": "Change both. Use \"idiopathic intracranial hypertension\", which m07, m12 and cases.ts already use. Use \"cerebellar mutism syndrome\", the term of the 2016 Iceland Delphi consensus (\"post-operative pediatric cerebellar mutism syndrome\"); the short form fits the voice and the full form can be given once.",
+  "proposed": [
+   {
+    "file": "src/loc/modules/m10-everywhere.json",
+    "field": "sections[4].content",
+    "find": "hydrocephalus or pseudotumor cerebri (Pearl",
+    "replace": "hydrocephalus or idiopathic intracranial hypertension (Pearl"
+   },
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "sections[4].content",
+    "find": "Neither **cerebellar mutism**, the silence that can follow removal of a cerebellar tumor,",
+    "replace": "Neither **cerebellar mutism syndrome**, the silence that can follow cerebellar tumor surgery,"
+   },
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "sections[4].keyPoints[4]",
+    "find": "Dysarthria, cerebellar mutism after posterior fossa surgery",
+    "replace": "Dysarthria, cerebellar mutism syndrome after posterior fossa surgery"
+   },
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "quiz[4].options[3]",
+    "find": "\"Cerebellar mutism, a communication disorder",
+    "replace": "\"Cerebellar mutism syndrome, a communication disorder"
+   },
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "quiz[4].explanation",
+    "find": "Cerebellar mutism after posterior fossa surgery should not be confused",
+    "replace": "Cerebellar mutism syndrome after posterior fossa surgery should not be confused"
+   }
+  ],
+  "sources": [
+   {
+    "citation": "Gudrunardottir T, Morgan AT, Lux AL, et al. Consensus paper on post-operative pediatric cerebellar mutism syndrome: the Iceland Delphi results. Childs Nerv Syst. 2016;32(7):1195-1203. doi:10.1007/s00381-016-3093-3",
+    "pmid": "27142103",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27142103/",
+    "verified": true,
+    "supports": "International Delphi consensus proposing the definition and term \"post-operative pediatric cerebellar mutism syndrome (CMS)\".",
+    "registry_key": "gudrunardottir2016"
+   },
+   {
+    "citation": "Friedman DI, Liu GT, Digre KB. Revised diagnostic criteria for the pseudotumor cerebri syndrome in adults and children. Neurology. 2013;81(13):1159-1165. doi:10.1212/WNL.0b013e3182a55f17",
+    "pmid": "23966248",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23966248/",
+    "verified": true,
+    "supports": "Pseudotumor cerebri syndrome may be primary (idiopathic intracranial hypertension) or secondary; revised criteria including normal opening pressure in children.",
+    "registry_key": "friedman2013"
+   }
+  ],
+  "confidence": "high",
+  "note": "The consensus term dates from 2016 (Iceland Delphi, Gudrunardottir et al.), not 2020; the 2020 papers (Schmahmann 2020, PMID 31240391, verified) recommend retiring \"posterior fossa syndrome\" and keep \"cerebellar mutism syndrome\". Friedman 2013 still uses \"pseudotumor cerebri syndrome\" as the umbrella term, with IIH as the primary form, so \"pseudotumor cerebri\" is not wrong, only inconsistent with the rest of the site; no citation is needed for the m10 swap. Quiz option text change keeps the same answer index. m09 section 5 is at the 400-word budget, so the consensus paper is not cited inline; it is listed for the owner's reference and can be added as [Gudrunardottir 2016](https://pubmed.ncbi.nlm.nih.gov/27142103/) once registered."
+ },
+ {
+  "id": "L8",
+  "title": "Vertigo taught from nystagmus with only a note on HINTS",
+  "locations": [
+   {
+    "file": "src/loc/modules/m08-loops.json",
+    "field": "sections[3].content (inside :::deeper When the ear and the brainstem fail together)",
+    "current": "In adults a bedside battery called HINTS (head impulse, nystagmus and a test of skew) is used to separate central from peripheral vertigo, though it has been studied far less in children."
+   }
+  ],
+  "recommendation": "Adequate in principle for pediatrics, because stroke is a rare cause of acute vertigo in children and HINTS has no pediatric validation. Add one sentence giving the pediatric red flags from an emergency-department series, which is more useful to a resident than the adult HINTS rules.",
+  "proposed": [
+   {
+    "file": "src/loc/modules/m08-loops.json",
+    "field": "sections[3].content",
+    "find": "though it has been studied far less in children.",
+    "replace": "though it has been studied far less in children ([Kattah 2009](https://pubmed.ncbi.nlm.nih.gov/19762709/)). In children with acute nystagmus, the stronger warning signs are ataxia, a cranial nerve palsy or a new squint, which marked out the tumors and other urgent causes in one emergency-department series ([Garone 2020](https://pubmed.ncbi.nlm.nih.gov/32732262/))."
+   },
+   {
+    "file": "src/loc/modules/m08-loops.json",
+    "field": "sources",
+    "find": "  \"sources\": [",
+    "replace": "  \"sources\": [\n    \"kattah2009\","
+   },
+   {
+    "file": "src/loc/modules/m08-loops.json",
+    "field": "sources",
+    "find": "  \"sources\": [",
+    "replace": "  \"sources\": [\n    \"garone2020\","
+   },
+   {
+    "file": "src/loc/sources.ts",
+    "field": "LOC_SOURCES",
+    "find": "  // ── Free web resource",
+    "replace": "  kattah2009: { key: 'kattah2009', pmid: '19762709', citation: 'Kattah JC, Talkad AV, Wang DZ, Hsieh YH, Newman-Toker DE. HINTS to diagnose stroke in the acute vestibular syndrome: three-step bedside oculomotor examination more sensitive than early MRI diffusion-weighted imaging. Stroke. 2009;40(11):3504-3510.', supports: 'Adults with acute vestibular syndrome: a normal head impulse, direction-changing nystagmus or skew deviation suggests stroke.' },\n  // ── Free web resource"
+   },
+   {
+    "file": "src/loc/sources.ts",
+    "field": "LOC_SOURCES",
+    "find": "  // ── Free web resource",
+    "replace": "  garone2020: { key: 'garone2020', pmid: '32732262', citation: 'Garone G, Suppiej A, Vanacore N, et al. Characteristics of acute nystagmus in the pediatric emergency department. Pediatrics. 2020;146(2):e20200484.', supports: '206 children with acute nystagmus in 9 Italian pediatric EDs: migraine 25.7%, vestibular 14.1%; urgent causes 18.9% (brain tumors 8.3%); cranial nerve deficits, ataxia and strabismus were red flags; vertigo lowered the risk.' },\n  // ── Free web resource"
+   }
+  ],
+  "sources": [
+   {
+    "citation": "Kattah JC, Talkad AV, Wang DZ, Hsieh YH, Newman-Toker DE. HINTS to diagnose stroke in the acute vestibular syndrome: three-step bedside oculomotor examination more sensitive than early MRI diffusion-weighted imaging. Stroke. 2009;40(11):3504-3510. doi:10.1161/STROKEAHA.109.551234",
+    "pmid": "19762709",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19762709/",
+    "verified": true,
+    "supports": "Adults with acute vestibular syndrome: a normal head impulse, direction-changing nystagmus or skew deviation suggests stroke.",
+    "registry_key": "kattah2009"
+   },
+   {
+    "citation": "Garone G, Suppiej A, Vanacore N, et al. Characteristics of acute nystagmus in the pediatric emergency department. Pediatrics. 2020;146(2):e20200484. doi:10.1542/peds.2020-0484",
+    "pmid": "32732262",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32732262/",
+    "verified": true,
+    "supports": "206 children with acute nystagmus in 9 Italian pediatric EDs: migraine 25.7%, vestibular 14.1%; urgent causes 18.9% (brain tumors 8.3%); cranial nerve deficits, ataxia and strabismus were red flags; vertigo lowered the risk.",
+    "registry_key": "garone2020"
+   }
+  ],
+  "confidence": "medium",
+  "note": "The new sentence sits inside the existing Go deeper box. If the owner wants it in the main text, it fits after \"In children the central cause not to miss is a posterior fossa tumor, which is common in childhood (Pearl 2014, p. 63).\" Garone 2020: 206 children, urgent causes 18.9% (tumors 8.3%); cranial nerve deficits, ataxia and strabismus predicted an urgent cause, and vertigo lowered the risk. Pediatric video head impulse norms exist (Bachmann 2018, PMID 29708491; Dasgupta 2025 systematic review, PMID 39860374) but no pediatric HINTS accuracy study was found."
+ },
+ {
+  "id": "L9",
+  "title": "Absent frontal asymmetry in autism (Brazis p. 493)",
+  "locations": [
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "sections[3].content",
+    "current": "In most people the back of the left inferior frontal gyrus is larger than the right, but this asymmetry is not found in autism or developmental language disorder (Brazis 2011, p. 493)."
+   }
+  ],
+  "recommendation": "Cut. The claim rests on small studies (for example 22 boys with autism and 9 with language impairment in De Fosse 2004), the largest analysis (ENIGMA, 1774 people with autism) found only tiny asymmetry differences in other regions, and the sentence does not help a resident localize. The paragraph reads correctly without it.",
+  "proposed": [
+   {
+    "file": "src/loc/modules/m09-hemispheres.json",
+    "field": "sections[3].content",
+    "find": " In most people the back of the left inferior frontal gyrus is larger than the right, but this asymmetry is not found in autism or developmental language disorder (Brazis 2011, p. 493).",
+    "replace": ""
+   }
+  ],
+  "sources": [
+   {
+    "citation": "Postema MC, van Rooij D, Anagnostou E, et al. Altered structural brain asymmetry in autism spectrum disorder in a study of 54 datasets. Nat Commun. 2019;10(1):4958. doi:10.1038/s41467-019-13005-8",
+    "pmid": "31673008",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31673008/",
+    "verified": true,
+    "supports": "1774 people with autism and 1809 controls (ENIGMA): small alterations of cortical asymmetry, mostly medial frontal, orbitofrontal, cingulate and inferior temporal; largest effect d = -0.13; earlier findings inconsistent because of small samples.",
+    "registry_key": "postema2019"
+   }
+  ],
+  "confidence": "medium",
+  "note": "Brazis p. 493 is still cited in m09 sections[0], so check-preserve-loc.mjs will not report it lost. If the owner prefers to soften rather than cut, replace the same find string with: \" Large imaging studies find only subtle differences in hemispheric asymmetry in autism, far too small to help with a single child ([Postema 2019](https://pubmed.ncbi.nlm.nih.gov/31673008/)).\" and register postema2019 (supports text included in the sources list). Older small studies verified: De Fosse 2004 (PMID 15478219), Herbert 2005 (PMID 15563515)."
+ },
+ {
+  "id": "L10",
+  "title": "Floppy infant next steps: SMN1 and CK before EMG, SMA newborn screening; Duchenne testing",
+  "locations": [
+   {
+    "file": "src/loc/modules/m03-first-fork.json",
+    "field": "sections[4].content",
+    "current": "About half of infants with hypotonia are diagnosed from the history and examination alone ([Peredo 2009](https://pubmed.ncbi.nlm.nih.gov/19726697/)), and the localization chooses the first tests. A central picture calls for brain imaging and genetic testing, and a peripheral one calls for studies of the motor unit."
+   },
+   {
+    "file": "src/loc/modules/m04-motor-unit.json",
+    "field": "sections[4].content",
+    "current": "Early recognition matters because disease-modifying treatments now exist, and the site's [Neuromuscular](/neuromuscular) section covers them."
+   },
+   {
+    "file": "src/loc/modules/m12-cases.json",
+    "field": "sections[2].content",
+    "current": "Where, when, what: \"Muscle, chronic since early childhood, most likely a dystrophinopathy, so check creatine kinase and then dystrophin genetics.\""
+   },
+   {
+    "file": "src/loc/cases.ts",
+    "field": "duchenne case reveal (line 368)",
+    "current": "The next step is a creatine kinase level, followed by genetic testing of the dystrophin gene."
+   }
+  ],
+  "recommendation": "Change. Name the tests in order: in a peripheral picture, CK and (when the horn cell is suspected) SMN1 deletion testing come before EMG, which genetic testing has largely replaced for SMA. Mention SMA newborn screening in m04. For Duchenne, name deletion and duplication testing first, then sequencing, as in the 2018 care considerations.",
+  "proposed": [
+   {
+    "file": "src/loc/modules/m03-first-fork.json",
+    "field": "sections[4].content",
+    "find": "A central picture calls for brain imaging and genetic testing, and a peripheral one calls for studies of the motor unit.",
+    "replace": "A central picture calls for brain imaging and genetic testing. A peripheral one starts with a creatine kinase level and, if the horn cell is suspected, SMN1 testing, which has largely replaced EMG for spinal muscular atrophy ([Arnold 2015](https://pubmed.ncbi.nlm.nih.gov/25346245/))."
+   },
+   {
+    "file": "src/loc/modules/m04-motor-unit.json",
+    "field": "sections[4].content",
+    "find": "Early recognition matters because disease-modifying treatments now exist, and the site's [Neuromuscular](/neuromuscular) section covers them.",
+    "replace": "Early recognition matters because disease-modifying treatments now exist, and the site's [Neuromuscular](/neuromuscular) section covers them. Spinal muscular atrophy joined the US newborn screening panel in 2018 ([Hale 2021](https://pubmed.ncbi.nlm.nih.gov/34202531/)), and experts advise treating screen-positive infants with two or three copies of SMN2 at once ([Glascock 2018](https://pubmed.ncbi.nlm.nih.gov/29614695/)). Not every child has been screened, so a floppy, areflexic infant with tongue fasciculations still needs SMN1 testing."
+   },
+   {
+    "file": "src/loc/modules/m12-cases.json",
+    "field": "sections[2].content",
+    "find": "so check creatine kinase and then dystrophin genetics",
+    "replace": "so check creatine kinase and then test the dystrophin gene for deletions and duplications"
+   },
+   {
+    "file": "src/loc/cases.ts",
+    "field": "duchenne.reveal",
+    "find": "The next step is a creatine kinase level, followed by genetic testing of the dystrophin gene.",
+    "replace": "The next step is a creatine kinase level, followed by deletion and duplication testing of the dystrophin gene, and sequencing if that is negative ([Birnkrant 2018](https://pubmed.ncbi.nlm.nih.gov/29395989/))."
+   },
+   {
+    "file": "src/loc/modules/m03-first-fork.json",
+    "field": "sources",
+    "find": "  \"sources\": [",
+    "replace": "  \"sources\": [\n    \"arnold2015\","
+   },
+   {
+    "file": "src/loc/modules/m04-motor-unit.json",
+    "field": "sources",
+    "find": "  \"sources\": [",
+    "replace": "  \"sources\": [\n    \"hale2021\","
+   },
+   {
+    "file": "src/loc/modules/m04-motor-unit.json",
+    "field": "sources",
+    "find": "  \"sources\": [",
+    "replace": "  \"sources\": [\n    \"glascock2018\","
+   },
+   {
+    "file": "src/loc/sources.ts",
+    "field": "LOC_SOURCES",
+    "find": "  // ── Free web resource",
+    "replace": "  arnold2015: { key: 'arnold2015', pmid: '25346245', citation: 'Arnold WD, Kassar D, Kissel JT. Spinal muscular atrophy: diagnosis and management in a new therapeutic era. Muscle Nerve. 2015;51(2):157-167.', supports: 'EMG and muscle biopsy were once the basis of diagnosis, but molecular testing for homozygous deletion or mutation of SMN1 allows efficient and specific diagnosis.' },\n  // ── Free web resource"
+   },
+   {
+    "file": "src/loc/sources.ts",
+    "field": "LOC_SOURCES",
+    "find": "  // ── Free web resource",
+    "replace": "  hale2021: { key: 'hale2021', pmid: '34202531', citation: 'Hale K, Ojodu J, Singh S. Landscape of spinal muscular atrophy newborn screening in the United States: 2018-2021. Int J Neonatal Screen. 2021;7(3):33.', supports: 'SMA was added to the US Recommended Uniform Screening Panel in July 2018; 34 state programs had fully implemented screening by June 2021.' },\n  // ── Free web resource"
+   },
+   {
+    "file": "src/loc/sources.ts",
+    "field": "LOC_SOURCES",
+    "find": "  // ── Free web resource",
+    "replace": "  glascock2018: { key: 'glascock2018', pmid: '29614695', citation: 'Glascock J, Sampson J, Haidet-Phillips A, et al. Treatment algorithm for infants diagnosed with spinal muscular atrophy through newborn screening. J Neuromuscul Dis. 2018;5(2):145-158.', supports: 'Delphi consensus: all screen-positive infants with two or three SMN2 copies should be treated immediately.' },\n  // ── Free web resource"
+   },
+   {
+    "file": "src/loc/sources.ts",
+    "field": "LOC_SOURCES",
+    "find": "  // ── Free web resource",
+    "replace": "  birnkrant2018: { key: 'birnkrant2018', pmid: '29395989', citation: 'Birnkrant DJ, Bushby K, Bann CM, et al. Diagnosis and management of Duchenne muscular dystrophy, part 1: diagnosis, and neuromuscular, rehabilitation, endocrine, and gastrointestinal and nutritional management. Lancet Neurol. 2018;17(3):251-267.', supports: 'Raised CK prompts genetic testing; dystrophin deletion and duplication testing (MLPA or array CGH) is usually the first confirmatory test, followed by sequencing if negative (read in full text, PMC5869704).' },\n  // ── Free web resource"
+   }
+  ],
+  "sources": [
+   {
+    "citation": "Arnold WD, Kassar D, Kissel JT. Spinal muscular atrophy: diagnosis and management in a new therapeutic era. Muscle Nerve. 2015;51(2):157-167. doi:10.1002/mus.24497",
+    "pmid": "25346245",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25346245/",
+    "verified": true,
+    "supports": "EMG and muscle biopsy were once the basis of diagnosis, but molecular testing for homozygous deletion or mutation of SMN1 allows efficient and specific diagnosis.",
+    "registry_key": "arnold2015"
+   },
+   {
+    "citation": "Hale K, Ojodu J, Singh S. Landscape of spinal muscular atrophy newborn screening in the United States: 2018-2021. Int J Neonatal Screen. 2021;7(3):33. doi:10.3390/ijns7030033",
+    "pmid": "34202531",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34202531/",
+    "verified": true,
+    "supports": "SMA was added to the US Recommended Uniform Screening Panel in July 2018; 34 state programs had fully implemented screening by June 2021.",
+    "registry_key": "hale2021"
+   },
+   {
+    "citation": "Glascock J, Sampson J, Haidet-Phillips A, et al. Treatment algorithm for infants diagnosed with spinal muscular atrophy through newborn screening. J Neuromuscul Dis. 2018;5(2):145-158. doi:10.3233/JND-180304",
+    "pmid": "29614695",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29614695/",
+    "verified": true,
+    "supports": "Delphi consensus: all screen-positive infants with two or three SMN2 copies should be treated immediately.",
+    "registry_key": "glascock2018"
+   },
+   {
+    "citation": "Birnkrant DJ, Bushby K, Bann CM, et al. Diagnosis and management of Duchenne muscular dystrophy, part 1: diagnosis, and neuromuscular, rehabilitation, endocrine, and gastrointestinal and nutritional management. Lancet Neurol. 2018;17(3):251-267. doi:10.1016/S1474-4422(18)30024-3",
+    "pmid": "29395989",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29395989/",
+    "verified": true,
+    "supports": "Raised CK prompts genetic testing; dystrophin deletion and duplication testing (MLPA or array CGH) is usually the first confirmatory test, followed by sequencing if negative (read in full text, PMC5869704).",
+    "registry_key": "birnkrant2018"
+   }
+  ],
+  "confidence": "high",
+  "note": "The CK clause in m03 is uncited; it is standard practice and the owner may accept it without a citation. Mercuri 2018 SMA standards of care (PMID 29290580, verified title) is the formal guideline but its abstract does not state the testing order, so Arnold 2015 (abstract states it) is cited instead. \"Not every child has been screened\" rests on Hale 2021 (34 of the US state programs by June 2021) and on children born before screening or abroad; the newborn screen also misses the minority of SMA caused by a deletion plus a point mutation, which is true but not verified from a PubMed abstract here. m12 and the m03 inline question already point to urgent SMA genetic testing."
+ },
+ {
+  "id": "L11",
+  "title": "m07 section 1: \"a spinal cord lesion leaves the face alone entirely\"",
+  "locations": [
+   {
+    "file": "src/loc/modules/m07-brainstem.json",
+    "field": "sections[0].content",
+    "current": "A stroke in the internal capsule weakens the opposite face, arm and leg together, and a spinal cord lesion leaves the face alone entirely."
+   }
+  ],
+  "recommendation": "Change with a minimal clause. Motor sparing of the face by the cord is correct (m01 and m12 say so and need no change), but the spinal trigeminal tract and nucleus descend into the upper cervical cord, so a high cervical lesion can affect facial pain and temperature in an onion-skin pattern.",
+  "proposed": [
+   {
+    "file": "src/loc/modules/m07-brainstem.json",
+    "field": "sections[0].content",
+    "find": "A stroke in the internal capsule weakens the opposite face, arm and leg together, and a spinal cord lesion leaves the face alone entirely.",
+    "replace": "A stroke in the internal capsule weakens the opposite face, arm and leg together. A spinal cord lesion spares the face, apart from a high cervical lesion that can dull pain on the outer face (Brazis 2011, p. 309)."
+   }
+  ],
+  "sources": [
+   {
+    "citation": "Brazis 2011 p. 309 (owner's copy, page checked in PDF text)",
+    "pmid": null,
+    "url": null,
+    "verified": true
+   }
+  ],
+  "confidence": "high",
+  "note": "Checked in the owner's Brazis PDF: p. 305 (the spinal tract of the trigeminal nerve descends into the upper cervical cord; caudal nucleus serves the outer face, which may account for the onion-skin pattern), p. 309 (\"Lesions within the brainstem or upper cervical cord may result in an onionskin distribution of sensory loss\"), p. 385 (pars caudalis descends to C3), p. 115 (onion-skin facial loss with cervicomedullary lesions). No new registry entry needed; brazis2011 is already in m07 sources."
+ }
+]
