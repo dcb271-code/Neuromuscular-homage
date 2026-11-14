@@ -1,3 +1,5 @@
+import type { FigureOverlay } from '../figureOverlay';
+
 // Content model for the EEG curriculum.
 // Mirrors the Neurogenetics Curriculum schema (module → sections → prose, key points,
 // one decision-style inline question; end-of-module quiz) so the two sites stay parallel.
@@ -54,6 +56,14 @@ export interface EegFigure {
   credit: string;
   licence: string;
   source?: 'aes' | 'shoup';
+  /** Path of the attribution file the licence links to. Defaults to the EEG attributions. */
+  attribution?: string;
+  /** A radiograph or scan, shown on black at a limited width. */
+  dark?: boolean;
+  /** Numbered pins, outline and lines drawn over the image, with a key under it. */
+  overlay?: FigureOverlay;
+  /** Widest the image is shown in the card, in CSS pixels. */
+  maxWidth?: number;
 }
 
 export interface Resource {

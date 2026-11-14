@@ -19,6 +19,9 @@ const PLAN = [...curTs.matchAll(/\{ number: (\d+), id: '([^']+)'.*?track: '(\w+)
 const TRACKS = [...curTs.matchAll(/^\s+(\w+): \{ name:/gm)].map(m => m[1]);
 const liveIds = new Set(PLAN.filter(p => p.status === 'live').map(p => p.id));
 const WIDGETS = ['ct-window-lab', 'hemorrhage-sorter'];
+// Ids of the images that can sit under a section, read from the captions in src/nrad/ctMarks.ts.
+const marksTs = readFileSync(join(root, 'src/nrad/ctMarks.ts'), 'utf8');
+const FIGURES = new Set([...marksTs.slice(marksTs.indexOf('export const FIGURE_TEXT')).matchAll(/^\s+'?([\w-]+)'?: \{ title:/gm)].map(m => m[1]));
 const TAGS = ['CT', 'MRI', 'Ultrasound', 'Vascular', 'Fetal', 'Trauma', 'Pediatric Normals', 'Clinical Decision-Making', 'Radiation Safety'];
 const HEDGES = /\b(often|may|can|usually|typically|commonly|frequently|rarely)\b[^.]*\b\d+(\.\d+)?\s*%/i;
 
@@ -118,6 +121,7 @@ for (const f of files) {
     checkMarkup(f, s.content || '', where);
     for (const kp of s.keyPoints || []) checkMarkup(f, kp, `${where} key point`);
     if (s.figure && !WIDGETS.includes(s.figure)) fail(f, `${where}: unknown widget ${s.figure}`);
+    for (const id of s.figures ?? []) if (!FIGURES.has(id)) fail(f, `${where}: unknown figure ${id}`);
     for (const r of s.related || []) {
       if (!r.href || !r.label) fail(f, `${where}: related link needs href and label`);
       else checkHref(f, r.href, `${where} related`);

@@ -132,7 +132,7 @@ export function ModulePage({ kind, module: m, prev, next }: { kind: CurriculumKi
                   <div className="mt-4"><FormattedContent content={s.content} accent={accent} basePath={basePath} /></div>
                 </details>
               ) : <FormattedContent content={s.content} accent={accent} basePath={basePath} />}
-              <FigureStrip figs={(s.figures ?? []).map(id => FIGURES[id]).filter(Boolean)} accent={accent} />
+              <FigureStrip figs={(s.figures ?? []).map(id => FIGURES[id]).filter(Boolean)} accent={accent} label={cfg.figureLabel} />
               {s.videos && s.videos.length > 0 && cfg.videoStrip && (() => { const V = cfg.videoStrip!; return <V ids={s.videos!} accent={accent} />; })()}
               <div data-section-end={i} aria-hidden="true" />
               <KeyPoints points={s.keyPoints} accent={accent}

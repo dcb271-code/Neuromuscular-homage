@@ -1,121 +1,63 @@
 'use client';
 
-// Hemorrhage by shape and site: explore the five compartments on a schematic axial head, then
-// sort six schematic cases. Shapes are drawn here in SVG. Model: src/nrad/hemorrhage.ts.
+// Hemorrhage by shape and site: explore the five compartments on real CT slices, then sort six
+// real images. Model and quiz: src/nrad/hemorrhage.ts. Images, marks and credits:
+// src/nrad/ctFigures.ts and src/nrad/ctMarks.ts.
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { BLEEDS, ORDER, QUIZ, checkAnswer, type BleedType, type CaseDrawing } from '@/src/nrad/hemorrhage';
+import { BLEEDS, EXPLORE_IMAGE, ORDER, QUIZ, checkAnswer, type BleedType } from '@/src/nrad/hemorrhage';
+import { NRAD_ATTRIBUTIONS, ctImage, type CtImage } from '@/src/nrad/ctFigures';
+import { shortCite } from '@/src/nrad/sources';
+import { AnnotatedImage, MarkKey } from '@/components/curriculum/AnnotatedImage';
 import { WidgetFrame, Segmented } from '@/components/loc/ui';
 
-// ── Geometry (viewBox 200 x 240, center 100,120; image right = patient left) ──────────────
-const C = { x: 100, y: 120 }, OUT = { a: 78, b: 98 }, IN = { a: 70, b: 90 };
-const SUTURES = [-58, 55, 125, 238]; // coronal and lambdoid, both sides (parametric angles)
-const rad = (d: number) => (d * Math.PI) / 180;
-const onInner = (deg: number, inset = 0) => {
-  const x = IN.a * Math.cos(rad(deg)), y = IN.b * Math.sin(rad(deg));
-  const len = Math.hypot(x, y);
-  return { x: C.x + x * (1 - inset / len), y: C.y + y * (1 - inset / len) };
-};
-const pt = (p: { x: number; y: number }) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`;
-
-/** Closed path between the inner table and an inner edge whose depth follows `thick` (0..1 across the span). */
-function extraAxial(from: number, to: number, max: number, thick: (u: number) => number): string {
-  const n = 40, outer: string[] = [], inner: string[] = [];
-  for (let k = 0; k <= n; k++) {
-    const u = k / n, deg = from + (to - from) * u;
-    outer.push(pt(onInner(deg, -0.6)));
-    inner.push(pt(onInner(deg, max * thick(u))));
-  }
-  return `M${outer.join(' L')} L${inner.reverse().join(' L')} Z`;
-}
-const lens = (u: number) => Math.sqrt(Math.max(0, 1 - (2 * u - 1) ** 2));
-const crescent = (u: number) => Math.min(1, Math.min(u, 1 - u) / 0.1);
-
-const BLOOD = '#f8fafc', BLOOD_EDGE = '#ef4444', BRAIN = '#525b67', CSF = '#1f2630', BONE = '#e7e9ec';
-
-function sideSign(side?: 'left' | 'right') { return side === 'right' ? -1 : 1; } // patient left draws on image right
-
-function HeadSvg({ d, title }: { d: CaseDrawing; title: string }) {
-  const s = sideSign(d.side);
-  const lensFrom = s > 0 ? -48 : 180 - 47, lensTo = s > 0 ? 46 : 180 + 48;
-  const crFrom = s > 0 ? -95 : 98, crTo = s > 0 ? 85 : 278;
-  const sulcusAngles = Array.from({ length: 20 }, (_, k) => -171 + k * 18);
-  const norm = (deg: number) => Math.abs(((deg + 540) % 360) - 180); // 0 = image right, 180 = image left
-  const sahAngles = (deg: number) => (s > 0 ? norm(deg) < 60 : norm(deg) > 120);
-  const sylvian = s > 0 ? -12 : 192;
+/** Who the image shows, where it comes from and its licence. */
+function ImageCredit({ im, accent }: { im: CtImage; accent: string }) {
   return (
-    <svg viewBox="0 0 200 240" role="img" aria-label={title} className="block w-full h-auto rounded-xl" style={{ background: '#0b0f14' }}>
-      <title>{title}</title>
-      {/* scalp, skull, brain */}
-      <ellipse cx={C.x} cy={C.y} rx={OUT.a + 3} ry={OUT.b + 3} fill="#3a3f46" />
-      <ellipse cx={C.x} cy={C.y} rx={OUT.a} ry={OUT.b} fill={BONE} />
-      <ellipse cx={C.x} cy={C.y} rx={IN.a} ry={IN.b} fill={CSF} />
-      <ellipse cx={C.x} cy={C.y} rx={IN.a - 1.6} ry={IN.b - 1.6} fill={BRAIN} />
-      {/* sutures: gaps through the skull */}
-      {SUTURES.map(a => { const p = onInner(a, -0.5), q = { x: C.x + (OUT.a + 0.5) * Math.cos(rad(a)), y: C.y + (OUT.b + 0.5) * Math.sin(rad(a)) }; return <line key={a} x1={p.x} y1={p.y} x2={q.x} y2={q.y} stroke="#0b0f14" strokeWidth={1.4} />; })}
-      {/* sulci and sylvian fissures */}
-      {sulcusAngles.map(a => { const p = onInner(a, 1.5), q = onInner(a, 9); const bright = d.bleed === 'sulcal' && sahAngles(a); return <line key={a} x1={p.x} y1={p.y} x2={q.x} y2={q.y} stroke={bright ? BLOOD : CSF} strokeWidth={bright ? 1.8 : 1.3} strokeLinecap="round" />; })}
-      {[-12, 192].map(a => { const p = onInner(a, 1.5), q = onInner(a, 26); const bright = d.bleed === 'sulcal' && a === sylvian; return <line key={a} x1={p.x} y1={p.y} x2={q.x} y2={q.y} stroke={bright ? BLOOD : CSF} strokeWidth={bright ? 2.4 : 1.8} strokeLinecap="round" />; })}
-      {/* falx */}
-      <line x1={C.x} y1={C.y - IN.b + 2} x2={C.x} y2={C.y - 30} stroke="#8b939e" strokeWidth={0.9} />
-      <line x1={C.x} y1={C.y + 46} x2={C.x} y2={C.y + IN.b - 2} stroke="#8b939e" strokeWidth={0.9} />
-      {/* ventricles */}
-      {[-1, 1].map(k => (
-        <g key={k}>
-          <ellipse cx={C.x + k * 7.5} cy={C.y - 8} rx={5} ry={21} fill={CSF} transform={`rotate(${k * -14} ${C.x + k * 7.5} ${C.y - 8})`} />
-          <ellipse cx={C.x + k * 15} cy={C.y + 30} rx={5} ry={11} fill={CSF} transform={`rotate(${k * 25} ${C.x + k * 15} ${C.y + 30})`} />
-          {d.bleed === 'ventricular' && <ellipse cx={C.x + k * 17} cy={C.y + 35} rx={3.6} ry={5.2} fill={BLOOD} stroke={BLOOD_EDGE} strokeWidth={0.7} transform={`rotate(${k * 25} ${C.x + k * 17} ${C.y + 35})`} />}
-        </g>
-      ))}
-      {/* lesions */}
-      {d.bleed === 'lens' && <path d={extraAxial(lensFrom, lensTo, 15, lens)} fill={BLOOD} stroke={BLOOD_EDGE} strokeWidth={0.8} />}
-      {d.bleed === 'crescent' && <path d={extraAxial(crFrom, crTo, 5.5, crescent)} fill={BLOOD} stroke={BLOOD_EDGE} strokeWidth={0.8} />}
-      {d.bleed === 'interhemispheric' && <path d={`M${C.x + s * -0.6},${C.y + 44} Q${C.x + s * -6.5},${C.y + 75} ${C.x + s * -0.6},${C.y + IN.b - 4} Z`} fill={BLOOD} stroke={BLOOD_EDGE} strokeWidth={0.8} />}
-      {d.bleed === 'rounded' && (
-        <g>
-          <ellipse cx={C.x + s * 28} cy={C.y - 45} rx={16} ry={13} fill="#3d444e" />
-          <ellipse cx={C.x + s * 28} cy={C.y - 45} rx={10} ry={8} fill={BLOOD} stroke={BLOOD_EDGE} strokeWidth={0.8} />
-        </g>
-      )}
-      {d.fracture && (() => { const a = s > 0 ? -2 : 182; const p = onInner(a, -0.5), q = { x: C.x + (OUT.a + 1) * Math.cos(rad(a + s * 3)), y: C.y + (OUT.b + 1) * Math.sin(rad(a + s * 3)) }; return <line x1={p.x} y1={p.y} x2={q.x} y2={q.y} stroke="#0b0f14" strokeWidth={1.2} />; })()}
-      <text x={6} y={124} fontSize={10} fontWeight={700} fill="#fbbf24">R</text>
-      <text x={186} y={124} fontSize={10} fontWeight={700} fill="#fbbf24">L</text>
-      <text x={96} y={11} fontSize={9} fontWeight={700} fill="#fbbf24">A</text>
-    </svg>
+    <p className="mt-1.5 text-[10.5px] leading-snug text-slate-400">
+      Image: {im.who}. {im.credit} · <a href={NRAD_ATTRIBUTIONS} target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: accent }}>{im.licence}</a>
+    </p>
   );
 }
-
-const EXPLORE: Record<BleedType, CaseDrawing> = {
-  epidural: { bleed: 'lens', side: 'left', fracture: true },
-  subdural: { bleed: 'crescent', side: 'right' },
-  subarachnoid: { bleed: 'sulcal', side: 'left' },
-  intraparenchymal: { bleed: 'rounded', side: 'left' },
-  intraventricular: { bleed: 'ventricular' },
-};
 
 export function HemorrhageSorter({ accent }: { accent: string }) {
   const [mode, setMode] = useState<'explore' | 'quiz'>('explore');
   const [type, setType] = useState<BleedType>('epidural');
+  const [marks, setMarks] = useState(true);
   const [qi, setQi] = useState(0);
   const [picked, setPicked] = useState<BleedType | null>(null);
+  const [second, setSecond] = useState(false);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
   const b = BLEEDS[type];
   const q = QUIZ[qi];
 
   const choose = (t: BleedType) => { if (picked) return; setPicked(t); if (checkAnswer(q.id, t)) setScore(s => s + 1); };
-  const next = () => { if (qi + 1 >= QUIZ.length) setDone(true); else { setQi(qi + 1); setPicked(null); } };
-  const restart = () => { setQi(0); setPicked(null); setScore(0); setDone(false); };
+  const next = () => { setSecond(false); if (qi + 1 >= QUIZ.length) setDone(true); else { setQi(qi + 1); setPicked(null); } };
+  const restart = () => { setQi(0); setPicked(null); setSecond(false); setScore(0); setDone(false); };
+
+  const exploreIm = ctImage(EXPLORE_IMAGE[type]);
+  const quizIm = ctImage(picked && second && q.after ? q.after.image : q.image);
+  const quizHasMarks = quizIm.overlay.marks.length > 0 || !!quizIm.overlay.outline;
 
   return (
-    <WidgetFrame accent={accent} label="Hemorrhage by shape" subtitle="Schematic axial slices. Bright on CT is drawn white with a red edge."
-      footnote="Schematic drawings, not patient images. The small dark gaps through the skull are sutures. R and L follow the radiological convention, so the patient's right is on the image left. Sources: Heit 2017, Huisman 2009, Kemp 2011.">
+    <WidgetFrame accent={accent} label="Hemorrhage by shape" subtitle="Real head CT images. Acute blood is brighter than brain."
+      footnote={<>Real CT images. The slices with numbered pins come from the CQ500 dataset ({shortCite('chilamkurthy2018')}), whose files carry no ages and whose patients are mostly adults. The amber line on those slices was traced by threshold around the blood. The pediatric images are panels from open-access articles, shown as printed with their own arrows. The case stems are teaching scenarios, and each image comes from a different patient, described in the line under it. R and L follow the radiological convention, so the patient&apos;s right is on the image left. Sources: Heit 2017, Huisman 2009, Kemp 2011.</>}>
       <div className="mb-3"><Segmented value={mode} onChange={setMode} accent={accent} options={[{ id: 'explore', label: 'Explore' }, { id: 'quiz', label: `Sort ${QUIZ.length} cases` }]} /></div>
 
       {mode === 'explore' ? (
-        <div className="grid gap-4 md:grid-cols-[minmax(0,260px)_1fr] md:items-start">
-          <div className="mx-auto w-full max-w-[260px]"><HeadSvg d={EXPLORE[type]} title={`Schematic ${b.name.toLowerCase()} hemorrhage`} /></div>
+        <div className="grid gap-4 md:grid-cols-[minmax(0,320px)_1fr] md:items-start">
+          <div className="mx-auto w-full max-w-[320px]">
+            <AnnotatedImage key={exploreIm.id} src={exploreIm.file} overlay={exploreIm.overlay} reveal={marks} className="rounded-xl"
+              alt={`Axial head CT with ${b.name.toLowerCase()} hemorrhage`} />
+            <div className="mt-2 flex items-start justify-between gap-3">
+              <div className="min-w-0 flex-1">{marks && <MarkKey overlay={exploreIm.overlay} />}</div>
+              <button onClick={() => setMarks(m => !m)} aria-pressed={marks}
+                className="shrink-0 rounded-lg border border-slate-200 bg-white px-2 py-1 text-[11.5px] font-semibold text-slate-600">{marks ? 'Hide marks' : 'Show marks'}</button>
+            </div>
+            <ImageCredit im={exploreIm} accent={accent} />
+          </div>
           <div className="min-w-0">
             <div className="flex flex-wrap gap-1.5 mb-3" role="group" aria-label="Hemorrhage type">
               {ORDER.map(t => (
@@ -140,8 +82,18 @@ export function HemorrhageSorter({ accent }: { accent: string }) {
           <button onClick={restart} className="ml-3 px-3 py-1.5 rounded-lg text-[12px] font-semibold border border-slate-200 bg-white text-slate-600">Start again</button>
         </div>
       ) : (
-        <div className="grid gap-4 md:grid-cols-[minmax(0,260px)_1fr] md:items-start">
-          <div className="mx-auto w-full max-w-[260px]"><HeadSvg d={q.drawing} title={`Case ${qi + 1}: schematic axial slice`} /></div>
+        <div className="grid gap-4 md:grid-cols-[minmax(0,320px)_1fr] md:items-start">
+          <div className="mx-auto w-full max-w-[320px]">
+            <AnnotatedImage key={quizIm.id} src={quizIm.file} overlay={quizIm.overlay} reveal={!!picked} className="rounded-xl"
+              alt={`Case ${qi + 1}: axial head CT`} />
+            {picked && q.after && (
+              <div className="mt-2"><Segmented value={second ? 'after' : 'first'} onChange={v => setSecond(v === 'after')} accent={accent}
+                options={[{ id: 'first', label: 'Brain window' }, { id: 'after', label: q.after.label }]} /></div>
+            )}
+            {picked && quizHasMarks && <MarkKey overlay={quizIm.overlay} className="mt-2" />}
+            {quizIm.note && <p className="mt-2 text-[11.5px] leading-snug text-slate-500">{quizIm.note}</p>}
+            <ImageCredit im={quizIm} accent={accent} />
+          </div>
           <div className="min-w-0">
             <div className="text-[11px] font-semibold uppercase tracking-wide text-slate-400 mb-1">Case {qi + 1} of {QUIZ.length} · score {score}</div>
             <p className="text-[13.5px] text-slate-800 leading-relaxed mb-3">{q.stem}</p>

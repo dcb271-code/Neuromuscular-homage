@@ -68,6 +68,11 @@ export default function CreditsPage() {
         Most tracings are from St. Louis EK, Frey LC, eds. <em>Electroencephalography (EEG): An Introductory Text and Atlas of Normal and Abnormal Findings in Adults, Children, and Infants</em>. American Epilepsy Society, 2016, licensed <A href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</A>. A smaller set is reproduced with the permission of Jaime Shoup, MD, University of Louisville; those images are not under a Creative Commons license and may not be copied elsewhere without the author's consent. Every tracing carries its credit in its caption. Full list: <a href="/eeg/ATTRIBUTIONS.md" className="underline text-teal-700">EEG attributions</a>.
       </P>
 
+      <H>CT images (Neuroradiology)</H>
+      <P>
+        The CT images in the neuroradiology curriculum are real. The slices with numbered pins, and the two slices in the window lab, come from the CQ500 dataset (Chilamkurthy S, Ghosh R, Tanamala S, et al. <em>Lancet</em> 2018;392:2388-2396), released by Qure.ai under <A href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</A>. Its files carry no ages and most of its patients are adults. The outlines, pins and measurements on those slices are our own. The pediatric images are panels from open-access articles published under <A href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</A>, cropped and otherwise unchanged, each credited beside the image. Full list, with the changes made: <a href="/nrad/ATTRIBUTIONS.md" className="underline text-teal-700">neuroradiology image attributions</a>.
+      </P>
+
       <H>MRI atlas templates</H>
       <P>
         The brain templates are population averages obtained from <A href="https://www.templateflow.org">TemplateFlow</A> and redistributed under their original licenses: the MNI infant and pediatric templates (Fonov et al., MNI/McGill permissive license), the UNC infant atlases with AAL labels (Shi et al., CC BY 4.0) and the dHCP neonatal atlas (Schuh et al., CC BY 4.0). Citations, license texts and the changes made are listed in the <a href="/atlas/ATTRIBUTION.md" className="underline text-teal-700">atlas attribution file</a>.

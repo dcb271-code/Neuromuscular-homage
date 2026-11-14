@@ -20,6 +20,7 @@ import { ExamVideos } from '@/components/loc/ExamVideos';
 import { NRAD_TRACKS } from '@/src/nrad/curriculum';
 import { NRAD_SOURCES } from '@/src/nrad/sources';
 import { NRAD_WIDGETS } from '@/components/nrad/widgets';
+import { NRAD_FIGURES } from '@/src/nrad/ctFigures';
 
 export type CurriculumKind = 'eeg' | 'loc' | 'nrad';
 
@@ -31,6 +32,8 @@ export interface CurriculumConfig {
   tracks: Record<string, { name: string; color: string; blurb: string }>;
   sources: Record<string, Source>;
   figures: Record<string, EegFigure>;
+  /** Heading over a section's figure strip. Left out, the strip says "Tracings". */
+  figureLabel?: string;
   widgets: Record<string, ComponentType<{ accent: string }>>;
   /** Renders a section's exam video clips (localization only). */
   videoStrip?: ComponentType<{ ids: string[]; accent: string }>;
@@ -76,11 +79,12 @@ export const CURRICULA: Record<CurriculumKind, CurriculumConfig> = {
     storageKey: STORAGE_KEYS.nrad,
     tracks: NRAD_TRACKS,
     sources: NRAD_SOURCES,
-    figures: {},
+    figures: NRAD_FIGURES,
+    figureLabel: 'Images',
     widgets: NRAD_WIDGETS,
     navExtra: { href: '/neuroradiology/atlas/', label: 'MRI atlas' },
     footer: (
-      <>The CT images in this module are synthetic and schematic, calculated from tissue values in the cited studies, and no patient images are used. For education. Not for clinical decision-making. Consult primary sources and your attending.</>
+      <>The CT images in this module are real. The slices with numbered pins come from the CQ500 dataset (CC BY-NC-SA 4.0), whose files carry no ages and whose patients are mostly adults. The pediatric images are panels from open-access articles (CC BY 4.0), cropped and credited under each one. See <a href="/nrad/ATTRIBUTIONS.md" className="underline">image sources</a> and <a href="/credits/" className="underline">credits</a>. For education. Not for clinical decision-making. Consult primary sources and your attending.</>
     ),
   },
 };

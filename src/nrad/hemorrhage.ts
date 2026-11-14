@@ -1,5 +1,5 @@
 // Intracranial hemorrhage by shape and site: the compartments, the features that identify each
-// one on CT, and a short quiz of schematic cases. Pure data and functions with no imports, so
+// one on CT, and a short quiz on real images. Pure data and functions with no imports, so
 // scripts/test-nrad-models.ts can run it under Node. Sources are keys into src/nrad/sources.ts.
 
 export type BleedType = 'epidural' | 'subdural' | 'subarachnoid' | 'intraparenchymal' | 'intraventricular';
@@ -99,33 +99,42 @@ export function identify(shape: Shape | null, boundary: Boundary | null): BleedT
   });
 }
 
-// ── Quiz: schematic cases drawn by components/nrad/HemorrhageSorter.tsx ─────────
+// ── Images ───────────────────────────────────────────────────────────────────
+// Image ids are resolved by src/nrad/ctFigures.ts. Ids that start with "oa-" are panels from
+// open-access pediatric articles. The others are slices from the CQ500 dataset.
 
-export type Side = 'left' | 'right'; // the patient's side; drawn on the opposite side of the image
+/** The example shown for each compartment in the explore view. */
+export const EXPLORE_IMAGE: Record<BleedType, string> = {
+  epidural: 'edh-a',
+  subdural: 'sdh-b',
+  subarachnoid: 'sah-a',
+  intraparenchymal: 'iph-a',
+  intraventricular: 'ivh-b',
+};
 
-export interface CaseDrawing {
-  bleed: Shape | 'interhemispheric';
-  side?: Side;
-  crossesSuture?: boolean;
-  fracture?: boolean;
-  region?: 'frontal' | 'temporal' | 'parietal' | 'occipital';
-}
+// ── Quiz ─────────────────────────────────────────────────────────────────────
+// The stems are teaching scenarios. Each image comes from a different patient, who is named in
+// the credit line under it.
 
 export interface QuizCase {
   id: string;
   stem: string;
-  drawing: CaseDrawing;
+  image: string;
+  /** A second view of the same patient, offered once the case is answered. */
+  after?: { image: string; label: string };
+  /** What the blood looks like on this image. */
+  shape: Shape | 'interhemispheric';
   answer: BleedType;
   explanation: string;
 }
 
 export const QUIZ: QuizCase[] = [
-  { id: 'q-lens', stem: 'A 9-year-old fell from a climbing frame and struck the left side of his head. Where is this blood?', drawing: { bleed: 'lens', side: 'left', region: 'temporal', fracture: true }, answer: 'epidural', explanation: 'A biconvex collection that stops at the sutures, under a fracture at the point of impact, is epidural. The bone window shows the fracture.' },
-  { id: 'q-crescent', stem: 'A 4-month-old is brought in limp. One collection is drawn on this slice. Where is it?', drawing: { bleed: 'crescent', side: 'right', crossesSuture: true }, answer: 'subdural', explanation: 'A thin crescent that runs past the suture lines lies beneath the dura. In an infant without a clear accidental mechanism, a subdural starts an evaluation for abuse.' },
-  { id: 'q-falx', stem: 'A 3-month-old with vomiting and a full fontanelle. The blood runs along the falx. Where is it?', drawing: { bleed: 'interhemispheric', side: 'right' }, answer: 'subdural', explanation: 'Blood layered along one side of the falx is an interhemispheric subdural. It is one of the patterns associated with abusive head trauma (Kemp 2011).' },
-  { id: 'q-sulci', stem: 'A 15-year-old was hit by a car. Thin bright lines fill several sulci and the sylvian fissure. Where is the blood?', drawing: { bleed: 'sulcal', side: 'left' }, answer: 'subarachnoid', explanation: 'Blood that follows the sulci and fills a fissure is in the subarachnoid space, where the CSF should be.' },
-  { id: 'q-blob', stem: 'A 12-year-old with sudden headache and right-sided weakness. Where is this blood?', drawing: { bleed: 'rounded', side: 'left', region: 'frontal' }, answer: 'intraparenchymal', explanation: 'A rounded bright focus inside the brain substance, with a dark rim of edema, is intraparenchymal. The weakness is on the opposite side to the hemorrhage.' },
-  { id: 'q-ivh', stem: 'A 6-year-old with a known arteriovenous malformation becomes drowsy. Where is this blood?', drawing: { bleed: 'ventricular', side: 'right' }, answer: 'intraventricular', explanation: 'Bright blood inside both occipital horns, where dark CSF should be, is intraventricular. A ruptured arteriovenous malformation can bleed into the brain, the ventricles or the subarachnoid space (Heit 2017).' },
+  { id: 'q-lens', stem: 'A 9-year-old fell from a climbing frame and struck the left side of his head. Where is this blood?', image: 'oa-edh-11y', after: { image: 'oa-edh-11y-bone', label: 'Bone window' }, shape: 'lens', answer: 'epidural', explanation: 'A biconvex collection that stops at the sutures, under a fracture at the point of impact, is epidural. The bone window shows the fracture.' },
+  { id: 'q-crescent', stem: 'A 4-month-old is brought in limp. One collection is shown on this slice. Where is it?', image: 'oa-sdh-3y', shape: 'crescent', answer: 'subdural', explanation: 'A thin crescent that runs past the suture lines lies beneath the dura. In an infant without a clear accidental mechanism, a subdural starts an evaluation for abuse.' },
+  { id: 'q-falx', stem: 'A 3-month-old with vomiting and a full fontanelle. The blood runs along the falx. Where is it?', image: 'oa-sdh-falx-4m', shape: 'interhemispheric', answer: 'subdural', explanation: 'Blood layered along one side of the falx is an interhemispheric subdural. It is one of the patterns associated with abusive head trauma (Kemp 2011).' },
+  { id: 'q-sulci', stem: 'A 15-year-old was hit by a car. Thin bright lines fill several sulci and the sylvian fissure. Where is the blood?', image: 'sah-c', shape: 'sulcal', answer: 'subarachnoid', explanation: 'Blood that follows the sulci and fills a fissure is in the subarachnoid space, where the CSF should be.' },
+  { id: 'q-blob', stem: 'A 12-year-old with sudden headache and left-sided weakness. Where is this blood?', image: 'iph-b', shape: 'rounded', answer: 'intraparenchymal', explanation: 'A rounded bright focus inside the brain substance, with a dark rim of edema, is intraparenchymal. The weakness is on the opposite side to the hemorrhage.' },
+  { id: 'q-ivh', stem: 'A 6-year-old with a known arteriovenous malformation becomes drowsy. Where is this blood?', image: 'ivh-a', shape: 'ventricular', answer: 'intraventricular', explanation: 'Bright blood inside the lateral and third ventricles, where dark CSF should be, is intraventricular. A ruptured arteriovenous malformation can bleed into the brain, the ventricles or the subarachnoid space (Heit 2017).' },
 ];
 
 export function checkAnswer(caseId: string, answer: BleedType): boolean {
