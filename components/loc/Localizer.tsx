@@ -9,7 +9,7 @@ import { Chip, Label, WidgetFrame } from './ui';
 
 const GROUP_ORDER: FindingGroup[] = ['distribution', 'tone & reflexes', 'muscle', 'sensation', 'other'];
 const SUBTITLES: Record<string, string> = {
-  intro: 'Pick the findings in front of you. Each one rules out some levels of the nervous system, and whatever survives is where the lesion can be.',
+  intro: 'Pick the findings in front of you. Each one rules out some levels of the nervous system. The levels that remain are where the lesion can be.',
   full: 'Every finding fits some levels and cannot come from others. Combine several, and open any level that has been struck out to see the reason.',
   floppy: 'Faced with a floppy infant, the first question is whether the problem lies in the brain or in the motor unit.',
   'motor-unit': 'The motor unit has four parts that can fail, and each leaves a recognizable pattern on the examination.',
@@ -33,7 +33,7 @@ export function Localizer({ accent, variant = 'full' }: { accent: string; varian
       footnote="A teaching model of classical rules (Brazis 2011; DeMyer; Peredo 2009). Each rule's exceptions are listed under its finding. Real patients can have more than one lesion.">
       {presets.length > 0 && (
         <div className="mb-3">
-          <Label>Try a patient</Label>
+          <Label>Example patients</Label>
           <div className="flex flex-wrap gap-1.5">
             {presets.map(p => (
               <Chip key={p.id} accent={accent} on={preset === p.id} onClick={() => { setPreset(p.id); setSel(p.findings); setOpen(null); }}>{p.label}</Chip>
@@ -58,7 +58,7 @@ export function Localizer({ accent, variant = 'full' }: { accent: string; varian
             );
           })}
           {sel.map(id => FINDINGS.find(f => f.id === id)).filter(f => f?.caveat).map(f => (
-            <p key={f!.id} className="text-[11.5px] text-slate-500 leading-snug mt-1.5"><span className="font-semibold text-slate-600">Where this rule bends:</span> {f!.caveat}</p>
+            <p key={f!.id} className="text-[11.5px] text-slate-500 leading-snug mt-1.5"><span className="font-semibold text-slate-600">Exception:</span> {f!.caveat}</p>
           ))}
         </div>
 
@@ -89,10 +89,10 @@ export function Localizer({ accent, variant = 'full' }: { accent: string; varian
             })}
           </ol>
           <p className="mt-2 text-[12px] text-slate-600 leading-snug min-h-[36px]">
-            {!sel.length ? 'No findings yet: every level is possible.'
-              : surviving.length === 0 ? 'Nothing survives. Either a finding is wrong, or there is more than one lesion.'
+            {!sel.length ? 'No findings selected. Every level is still possible.'
+              : surviving.length === 0 ? 'No level fits every finding. Either a finding is wrong or there is more than one lesion.'
               : surviving.length === 1 ? <><b>One level left:</b> {LEVELS.find(l => l.id === surviving[0].level)!.name}.</>
-              : <><b>{surviving.length} levels survive.</b> Filled dots show how many findings each one positively fits.</>}
+              : <><b>{surviving.length} levels remain.</b> Filled dots show how many findings each one positively fits.</>}
           </p>
           {activePreset && <p className="mt-1 text-[12px] leading-snug rounded-lg px-3 py-2" style={{ background: accent + '10', color: '#334155' }}>{activePreset.teaching}</p>}
         </div>

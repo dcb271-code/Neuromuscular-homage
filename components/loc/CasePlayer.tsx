@@ -49,7 +49,7 @@ export function CasePlayer({ accent, c }: { accent: string; c: LocCase }) {
               })}
             </div>
             {stage === 'exam' && <button disabled={picked.length === 0} onClick={() => setStage('level')} className="mt-2 px-3 py-1.5 rounded-lg text-[12px] font-semibold text-white disabled:opacity-40" style={{ background: accent }}>Done examining</button>}
-            {at('level') && <p className="mt-2 text-[11.5px] text-slate-500">Every finding is now shown, including the ones you did not ask for. High-yield ones are marked: did you choose them?</p>}
+            {at('level') && <p className="mt-2 text-[11.5px] text-slate-500">All findings are now shown, including the ones you did not choose. High-yield findings are marked so you can check your choices.</p>}
           </div>
 
           {at('level') && (
@@ -57,7 +57,7 @@ export function CasePlayer({ accent, c }: { accent: string; c: LocCase }) {
               <Label>Where is the lesion?</Label>
               <div className="flex flex-wrap gap-1.5">{LEVELS.map(l => <Chip key={l.id} accent={accent} disabled={at('tempo')} on={level === l.id} onClick={() => setLevel(l.id)}>{l.short}</Chip>)}</div>
               {stage === 'level' && <button disabled={!level} onClick={() => setStage('tempo')} className="mt-2 px-3 py-1.5 rounded-lg text-[12px] font-semibold text-white disabled:opacity-40" style={{ background: accent }}>Commit</button>}
-              {at('tempo') && <p className="mt-2 text-[12.5px] leading-snug"><b style={{ color: levelRight ? accent : '#334155' }}>{levelRight ? 'Yes.' : `The answer is ${LEVELS.find(l => l.id === c.level.answer)!.short.toLowerCase()}.`}</b> {c.level.explanation}</p>}
+              {at('tempo') && <p className="mt-2 text-[12.5px] leading-snug"><b style={{ color: levelRight ? accent : '#334155' }}>{levelRight ? 'Correct.' : `The answer is ${LEVELS.find(l => l.id === c.level.answer)!.short.toLowerCase()}.`}</b> {c.level.explanation}</p>}
             </div>
           )}
 
@@ -66,7 +66,7 @@ export function CasePlayer({ accent, c }: { accent: string; c: LocCase }) {
               <Label>When: what is the time course?</Label>
               <div className="flex flex-wrap gap-1.5">{TEMPOS.map(t => <Chip key={t.id} accent={accent} disabled={at('ddx')} on={tempo === t.id} onClick={() => setTempo(t.id)}>{t.name}</Chip>)}</div>
               {stage === 'tempo' && <button disabled={!tempo} onClick={() => setStage('ddx')} className="mt-2 px-3 py-1.5 rounded-lg text-[12px] font-semibold text-white disabled:opacity-40" style={{ background: accent }}>Commit</button>}
-              {at('ddx') && <p className="mt-2 text-[12.5px] leading-snug"><b style={{ color: tempo === c.tempo.answer ? accent : '#334155' }}>{tempo === c.tempo.answer ? 'Yes.' : `Best fit: ${TEMPOS.find(t => t.id === c.tempo.answer)!.name.toLowerCase()}.`}</b> {c.tempo.explanation}</p>}
+              {at('ddx') && <p className="mt-2 text-[12.5px] leading-snug"><b style={{ color: tempo === c.tempo.answer ? accent : '#334155' }}>{tempo === c.tempo.answer ? 'Correct.' : `Best fit: ${TEMPOS.find(t => t.id === c.tempo.answer)!.name.toLowerCase()}.`}</b> {c.tempo.explanation}</p>}
             </div>
           )}
 
@@ -94,7 +94,7 @@ export function CasePlayer({ accent, c }: { accent: string; c: LocCase }) {
             <div className="rounded-xl border p-4" style={{ borderColor: accent, background: accent + '0a' }}>
               <Label>{c.title}</Label>
               <FormattedContent content={c.reveal} accent={accent} basePath="/localization" />
-              <button onClick={reset} className="mt-2 text-[12px] underline text-slate-500">Work it again</button>
+              <button onClick={reset} className="mt-2 text-[12px] underline text-slate-500">Restart the case</button>
             </div>
           )}
         </div>

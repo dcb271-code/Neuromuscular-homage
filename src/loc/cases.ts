@@ -65,7 +65,7 @@ export const CASES: LocCase[] = [
       {
         "id": "bladder",
         "label": "Bladder: palpate for retention",
-        "finding": "Not palpable; he passed urine an hour ago.",
+        "finding": "Not palpable. He passed urine an hour ago.",
         "key": false
       },
       {
@@ -119,7 +119,7 @@ export const CASES: LocCase[] = [
         {
           "label": "Acute flaccid myelitis",
           "correct": false,
-          "why": "A disease of the anterior horn, and so purely motor, which means the tingling and distal sensory loss argue against it."
+          "why": "It affects the anterior horn and is purely motor, so the tingling and distal sensory loss argue against it."
         },
         {
           "label": "Duchenne muscular dystrophy",
@@ -150,7 +150,7 @@ export const CASES: LocCase[] = [
       {
         "id": "lids",
         "label": "Eyelids and eye movements",
-        "finding": "Bilateral ptosis that worsens as the examination goes on; eye movements are reduced.",
+        "finding": "Bilateral ptosis that worsens as the examination goes on. Eye movements are reduced.",
         "key": true
       },
       {
@@ -292,7 +292,7 @@ export const CASES: LocCase[] = [
       {
         "id": "reflexes",
         "label": "Deep tendon reflexes",
-        "finding": "Present; knee jerks reduced, ankle jerks present. No clonus; plantars flexor.",
+        "finding": "Present, with the knee jerks reduced and the ankle jerks present. No clonus. Plantars flexor.",
         "key": false
       },
       {
@@ -336,7 +336,7 @@ export const CASES: LocCase[] = [
         {
           "label": "Becker muscular dystrophy",
           "correct": true,
-          "why": "The milder dystrophinopathy, with the same gene and pattern but a later and slower course, and genetics will separate the two."
+          "why": "The milder dystrophinopathy, with the same gene and pattern but a later and slower course. Genetics will separate the two."
         },
         {
           "label": "Spinal muscular atrophy",
@@ -413,7 +413,7 @@ export const CASES: LocCase[] = [
       {
         "id": "back",
         "label": "Examine the spine",
-        "finding": "Tender over the mid-thoracic spine; no deformity.",
+        "finding": "Tender over the mid-thoracic spine. No deformity.",
         "key": false
       },
       {
@@ -435,7 +435,7 @@ export const CASES: LocCase[] = [
     },
     "tempo": {
       "answer": "acute",
-      "explanation": "The course is one of hours to days, with tingling that climbed to the waist overnight and retention by morning, ten days after an infection."
+      "explanation": "The course is one of hours to days. Ten days after an infection, the tingling climbed to the waist overnight and retention followed by morning."
     },
     "differential": {
       "pick": 3,
@@ -489,7 +489,7 @@ export const CASES: LocCase[] = [
       {
         "id": "gait",
         "label": "Gait",
-        "finding": "Wide-based and staggering; he falls if he tries to turn quickly.",
+        "finding": "Wide-based and staggering. He falls if he tries to turn quickly.",
         "key": true
       },
       {
@@ -501,13 +501,13 @@ export const CASES: LocCase[] = [
       {
         "id": "mental",
         "label": "Alertness and behavior",
-        "finding": "Alert, playful and appropriate; not irritable or sleepy.",
+        "finding": "Alert, playful and appropriate, and not irritable or sleepy.",
         "key": true
       },
       {
         "id": "fundi",
         "label": "Fundi",
-        "finding": "Sharp discs; no papilledema.",
+        "finding": "Sharp discs, no papilledema.",
         "key": true
       },
       {
@@ -525,7 +525,7 @@ export const CASES: LocCase[] = [
       {
         "id": "reflexes",
         "label": "Deep tendon reflexes",
-        "finding": "Present and symmetric; plantars flexor.",
+        "finding": "Present and symmetric. Plantars flexor.",
         "key": false
       },
       {
@@ -613,7 +613,7 @@ export const CASES: LocCase[] = [
       {
         "id": "gait",
         "label": "Gait, then heel-to-toe walking",
-        "finding": "Wide-based and unsteady; she cannot walk heel to toe and sways when standing with her feet together, even with her eyes open.",
+        "finding": "Wide-based and unsteady. She cannot walk heel to toe and sways when standing with her feet together, even with her eyes open.",
         "key": true
       },
       {
@@ -655,7 +655,7 @@ export const CASES: LocCase[] = [
       {
         "id": "mental",
         "label": "Alertness and behavior",
-        "finding": "Alert and oriented; quieter and more tired than usual, but answers appropriately.",
+        "finding": "Alert and oriented. She is quieter and more tired than usual but answers appropriately.",
         "key": false
       }
     ],
@@ -664,7 +664,7 @@ export const CASES: LocCase[] = [
       "also": [
         "brainstem"
       ],
-      "explanation": "The sixth-nerve palsy is better read as a sign of raised pressure than as a marker of where the lesion sits. The nerve's long course makes it an early casualty of raised pressure from almost any cause (Pearl 2014, p. 43), and together with papilledema it is one of the commonest false localizing signs (Brazis 2011, p. 622). The address comes from the company it keeps. A wide-based, staggering gait with little limb ataxia is the midline cerebellar pattern (Brazis 2011, p. 412), and a cerebellar mass pressing on the fourth ventricle is what raises the pressure (Arslan 2014, p. 98). Brainstem is defensible, because it shares the posterior fossa. However, the normal face and swallow argue against an intrinsic pontine lesion, and a lesion at the sixth-nerve nucleus tends to cause a gaze palsy rather than one weak lateral rectus (Pearl 2014, p. 43)."
+      "explanation": "The sixth-nerve palsy is better read as a sign of raised pressure than as a marker of where the lesion sits. The nerve's long course makes it an early casualty of raised pressure from almost any cause (Pearl 2014, p. 43), and together with papilledema it is one of the commonest false localizing signs (Brazis 2011, p. 622). The address comes from the company it keeps. A wide-based, staggering gait with little limb ataxia is the midline cerebellar pattern (Brazis 2011, p. 412), and a cerebellar mass pressing on the fourth ventricle is what raises the pressure (Arslan 2014, p. 98). Brainstem is defensible, because it shares the posterior fossa. But the normal face and swallow argue against an intrinsic pontine lesion, and a lesion at the sixth-nerve nucleus tends to cause a gaze palsy rather than one weak lateral rectus (Pearl 2014, p. 43)."
     },
     "tempo": {
       "answer": "subacute",
@@ -710,6 +710,6 @@ export const CASES: LocCase[] = [
         }
       ]
     },
-    "reveal": "**A posterior fossa mass with obstructive hydrocephalus**, to be confirmed by urgent imaging. The clinching sign is the papilledema, because it explains the double vision. Once the pressure is known to be high, the sixth-nerve palsy needs no address of its own (Pearl 2014, p. 43; Brazis 2011, p. 622), which leaves the wide-based gait to do the localizing, to the midline cerebellum (Brazis 2011, p. 412). Posterior fossa tumors are common in children, medulloblastoma and cystic (pilocytic) astrocytoma among them, along with ependymoma (Pearl 2014, p. 63). Arrange brain imaging the same day and involve neurosurgery at once. A lumbar puncture should not come first, because a suspected posterior fossa mass is a reason to image before any needle (DeMyer, pp. 545-546)."
+    "reveal": "**A posterior fossa mass with obstructive hydrocephalus**, to be confirmed by urgent imaging. The clinching sign is the papilledema, because it explains the double vision. Once the pressure is known to be high, the sixth-nerve palsy needs no address of its own (Pearl 2014, p. 43; Brazis 2011, p. 622). The wide-based gait then does the localizing, to the midline cerebellum (Brazis 2011, p. 412). Posterior fossa tumors are common in children, medulloblastoma and cystic (pilocytic) astrocytoma among them, along with ependymoma (Pearl 2014, p. 63). Arrange brain imaging the same day and involve neurosurgery at once. A lumbar puncture should not come first, because a suspected posterior fossa mass is a reason to image before any needle (DeMyer, pp. 545-546)."
   }
 ];

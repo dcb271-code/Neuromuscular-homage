@@ -47,8 +47,8 @@ export function ReviewPage({ kind, modules }: { kind: CurriculumKind; modules: E
 
       {!hydrated ? null : cards.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-slate-300 p-8 text-center text-[14px] text-slate-500">
-          Nothing here yet. Flag a key point with the ⚑ button, or miss a question, and it will appear here.
-          <div className="mt-3"><Link href={base} className="font-semibold no-underline text-blue-600">Go to the curriculum →</Link></div>
+          Nothing to review yet. Key points you flag with ⚑ and questions you miss will appear here.
+          <div className="mt-3"><Link href={base} className="font-semibold no-underline text-blue-600">Go to the curriculum</Link></div>
         </div>
       ) : (
         <>
@@ -75,7 +75,7 @@ export function ReviewPage({ kind, modules }: { kind: CurriculumKind; modules: E
               {cards.map((c, i) => (
                 <li key={i} className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-[13px]" style={{ borderLeft: `3px solid ${c.module.color}` }}>
                   <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.08em] mb-1" style={{ color: c.module.color }}>
-                    {c.kind}<Link href={c.href} className="ml-auto no-underline font-semibold normal-case tracking-normal text-[11px]" style={{ color: c.module.color }}>Module {c.module.number} →</Link>
+                    {c.kind}<Link href={c.href} className="ml-auto no-underline font-semibold normal-case tracking-normal text-[11px]" style={{ color: c.module.color }}>Module {c.module.number}</Link>
                   </div>
                   {c.kind === 'key point' ? <p className="text-slate-800 leading-relaxed">{c.back}</p> : (
                     <details><summary className="cursor-pointer text-slate-800 leading-relaxed">{c.front}</summary><p className="mt-2 text-slate-600 leading-relaxed whitespace-pre-line">{c.back}</p></details>
@@ -90,9 +90,9 @@ export function ReviewPage({ kind, modules }: { kind: CurriculumKind; modules: E
                 <span className="text-[15px] text-slate-800 leading-relaxed whitespace-pre-line">{flipped ? card.back : card.front}</span>
               </button>
               <div className="flex items-center gap-2 mt-3 text-[12px]">
-                <button onClick={() => { setIdx(i => (i - 1 + cards.length) % cards.length); setFlipped(false); }} className="px-3 py-1.5 rounded-lg border border-slate-200 bg-white font-semibold text-slate-600">← Prev</button>
+                <button onClick={() => { setIdx(i => (i - 1 + cards.length) % cards.length); setFlipped(false); }} className="px-3 py-1.5 rounded-lg border border-slate-200 bg-white font-semibold text-slate-600">Previous</button>
                 <span className="text-slate-400">{(idx % cards.length) + 1} / {cards.length}</span>
-                <button onClick={() => { setIdx(i => (i + 1) % cards.length); setFlipped(false); }} className="px-3 py-1.5 rounded-lg border border-slate-200 bg-white font-semibold text-slate-600">Next →</button>
+                <button onClick={() => { setIdx(i => (i + 1) % cards.length); setFlipped(false); }} className="px-3 py-1.5 rounded-lg border border-slate-200 bg-white font-semibold text-slate-600">Next</button>
                 {card.kind === 'key point' && (
                   <button onClick={() => { const key = Object.keys(store.flags).find(k => store.flags[k].text === card.back); if (key) { const [mid, s, kp] = key.split(':'); toggleFlag(mid, Number(s), Number(kp), card.back); } }}
                     className="ml-auto text-slate-400 hover:text-slate-600">Unflag</button>

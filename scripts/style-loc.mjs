@@ -6,7 +6,8 @@
 //   node scripts/style-loc.mjs m04 -v     # list every flagged sentence
 import { readdirSync, readFileSync } from 'node:fs';
 
-const dir = new URL('../src/loc/modules/', import.meta.url).pathname;
+// MODULES=eeg checks the EEG modules with the same rules.
+const dir = new URL(process.env.MODULES === 'eeg' ? '../src/eeg/modules/' : '../src/loc/modules/', import.meta.url).pathname;
 const args = process.argv.slice(2);
 const verbose = args.includes('-v');
 const filter = args.find(a => !a.startsWith('-'));

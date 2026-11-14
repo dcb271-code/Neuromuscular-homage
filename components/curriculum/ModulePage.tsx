@@ -128,7 +128,7 @@ export function ModulePage({ kind, module: m, prev, next }: { kind: CurriculumKi
               {s.figure && cfg.widgets[s.figure] && (() => { const W = cfg.widgets[s.figure!]; return <W accent={accent} />; })()}
               {s.discussion ? (
                 <details className="rounded-2xl border border-slate-200 bg-white px-5 py-4">
-                  <summary className="cursor-pointer text-[13px] font-semibold" style={{ color: accent }}>Discussion: open after you have worked the case</summary>
+                  <summary className="cursor-pointer text-[13px] font-semibold" style={{ color: accent }}>Discussion (open after you have worked the case)</summary>
                   <div className="mt-4"><FormattedContent content={s.content} accent={accent} basePath={basePath} /></div>
                 </details>
               ) : <FormattedContent content={s.content} accent={accent} basePath={basePath} />}
@@ -182,9 +182,9 @@ export function ModulePage({ kind, module: m, prev, next }: { kind: CurriculumKi
           </section>
 
           <nav className="flex gap-3 justify-between border-t border-slate-100 pt-5 text-[13px]">
-            {prev ? <Link href={`${basePath}/${prev.id}`} className="no-underline text-slate-600 hover:text-slate-900">← {String(prev.number).padStart(2, '0')} {prev.short}</Link> : <span />}
+            {prev ? <Link href={`${basePath}/${prev.id}`} className="no-underline text-slate-600 hover:text-slate-900">Previous: {String(prev.number).padStart(2, '0')} {prev.short}</Link> : <span />}
             {cfg.navExtra ? <Link href={cfg.navExtra.href} className="no-underline text-slate-500 hover:text-slate-900 text-center">{cfg.navExtra.label}</Link> : <span />}
-            {next ? <Link href={`${basePath}/${next.id}`} className="no-underline font-semibold text-right" style={{ color: accent }}>{String(next.number).padStart(2, '0')} {next.short} →</Link> : <Link href={basePath} className="no-underline font-semibold" style={{ color: accent }}>Back to the curriculum →</Link>}
+            {next ? <Link href={`${basePath}/${next.id}`} className="no-underline font-semibold text-right" style={{ color: accent }}>Next: {String(next.number).padStart(2, '0')} {next.short}</Link> : <Link href={basePath} className="no-underline font-semibold" style={{ color: accent }}>Back to the curriculum</Link>}
           </nav>
         </div>
       </div>
@@ -232,9 +232,9 @@ function Quiz({ module: m, basePath, accent, unlocked, last, onFinish }: {
                 style={{ background: accent }}>Finish and save score</button>
             ) : (
               <>
-                <div className="text-[14px] text-slate-800"><b>{score}/{m.quiz.length}</b> correct{score === m.quiz.length ? '. Well read.' : '. Missed items are on your review page.'}</div>
+                <div className="text-[14px] text-slate-800"><b>{score}/{m.quiz.length}</b> correct{score === m.quiz.length ? '.' : '. Missed items are on your review page.'}</div>
                 <button onClick={retry} className="px-3 py-1.5 rounded-lg text-[12px] font-semibold border border-slate-200 text-slate-600 bg-white">Try again</button>
-                <Link href={`${basePath}/review`} className="text-[12px] font-semibold no-underline" style={{ color: accent }}>Review page →</Link>
+                <Link href={`${basePath}/review`} className="text-[12px] font-semibold no-underline" style={{ color: accent }}>Review page</Link>
               </>
             )}
             {!allChecked && !done && <span className="text-[11px] text-slate-400">Check every answer to finish.</span>}

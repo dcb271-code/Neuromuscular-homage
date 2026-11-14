@@ -50,8 +50,8 @@ export function BrainstemSim({ accent }: { accent: string }) {
 
   return (
     <WidgetFrame accent={accent} label="Rule of four" subtitle="The brainstem drawn as if you are facing the patient, with each level split into medial and lateral halves. Tap a box to place a lesion there, or switch to Find the lesion and work backward from the findings."
-      footnote={<>A teaching heuristic (Gates 2005; Gates 2011), not a law; the places it bends are listed with each result. The boxes are a map of the rule, not a true cross-section: in a real brainstem the motor tract lies at the front and the cranial nerve nuclei toward the back.</>}>
-      <div className="mb-3"><Segmented accent={accent} value={mode} onChange={m => { setMode(m); setGuess(null); if (m === 'quiz') setQuiz(randomBox()); }} options={[{ id: 'explore', label: 'Explore' }, { id: 'quiz', label: 'Find the lesion' }]} /></div>
+      footnote={<>A teaching heuristic (Gates 2005; Gates 2011) with known exceptions, which are listed with each result. The boxes map the rule and are not a true cross-section. In a real brainstem the motor tract lies at the front and the cranial nerve nuclei toward the back.</>}>
+      <div className="mb-3"><Segmented accent={accent} value={mode} onChange={m => { setMode(m); setGuess(null); if (m === 'quiz') setQuiz(randomBox()); }} options={[{ id: 'explore', label: 'Place a lesion' }, { id: 'quiz', label: 'Find the lesion' }]} /></div>
 
       {mode === 'quiz' && (
         <div className="rounded-xl border border-slate-200 bg-white p-3 mb-3">
@@ -141,7 +141,7 @@ export function BrainstemSim({ accent }: { accent: string }) {
               </div>
             ))}
           </div>
-          {r.notes.length > 0 && <div className="mt-2 space-y-1">{r.notes.map((n, k) => <p key={k} className="text-[11.5px] text-slate-500 leading-snug"><span className="font-semibold text-slate-600">Where the rule bends:</span> {n}</p>)}</div>}
+          {r.notes.length > 0 && <div className="mt-2 space-y-1">{r.notes.map((n, k) => <p key={k} className="text-[11.5px] text-slate-500 leading-snug"><span className="font-semibold text-slate-600">Exception:</span> {n}</p>)}</div>}
         </div>
       )}
       {mode === 'explore' && !sel && <p className="text-[13px] text-slate-500">Tap any box to place a lesion.</p>}

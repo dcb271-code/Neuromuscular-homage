@@ -57,13 +57,13 @@ export function MontageLab({ accent = '#2563eb' }: { accent?: string }) {
     : r.endOfChain
       ? <><b>No phase reversal.</b> The maximum is at {CHAIN[r.maxElectrode]}, the end of the chain, so there is no second channel to reverse against. Only the last channel shows it.</>
       : <>No reversal found.</>;
-  const refNote = <><b>Largest amplitude at {CHAIN[r.maxElectrode]}</b> ({Math.round(Math.abs(r.potentials[r.maxElectrode]))} µV, {polarity < 0 ? 'negative, drawn up' : 'positive, drawn down'}). Amplitude, not reversal, does the localizing here.</>;
+  const refNote = <><b>Largest amplitude at {CHAIN[r.maxElectrode]}</b> ({Math.round(Math.abs(r.potentials[r.maxElectrode]))} µV, {polarity < 0 ? 'negative, drawn up' : 'positive, drawn down'}). In this montage, amplitude localizes the source.</>;
 
   return (
     <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 mb-6">
       <div className="flex items-center gap-2 flex-wrap mb-3">
         <span className="text-[10px] font-bold uppercase tracking-[0.1em] px-2 py-1 rounded-full" style={{ color: accent, background: accent + '14' }}>Montage lab</span>
-        <span className="text-[12px] text-slate-500">One source, two montages, the same potentials. Move it and watch which channels change.</span>
+        <span className="text-[12px] text-slate-500">One source shown in two montages. Move it and see which channels change.</span>
       </div>
 
       <div className="grid gap-3 mb-3 sm:grid-cols-[auto_auto_1fr] sm:items-end">

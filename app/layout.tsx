@@ -58,7 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 color: '#60a5fa',
                 textDecoration: 'none',
               }}
-            >A–Z</a>
+            >A-Z</a>
           </div>
         </header>
 

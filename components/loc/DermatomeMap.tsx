@@ -40,7 +40,7 @@ export function DermatomeMap({ accent, initialMode = 'explore' }: { accent: stri
   return (
     <WidgetFrame accent={accent} label="Dermatome map" subtitle="Each dot is the standard point for testing one root. Tap a dot to see its root, quiz yourself, or set a cord level and see which points a complete lesion would leave numb."
       footnote={<>Key sensory points and key muscles from the International Standards for Neurological Classification of Spinal Cord Injury, revised 2011 (Kirshblum et al.). Drawing: Ralf Stephan, Wikimedia Commons, public domain. Dermatome maps vary between sources and neighboring roots overlap, which is why the standard tests one point per root rather than whole territories.</>}>
-      <div className="mb-3"><Segmented accent={accent} value={mode} onChange={m => { setMode(m); setSel(null); setAnswer(null); }} options={[{ id: 'explore', label: 'Explore' }, { id: 'quiz', label: 'Quiz' }, { id: 'level', label: 'Sensory level' }]} /></div>
+      <div className="mb-3"><Segmented accent={accent} value={mode} onChange={m => { setMode(m); setSel(null); setAnswer(null); }} options={[{ id: 'explore', label: 'Browse' }, { id: 'quiz', label: 'Quiz' }, { id: 'level', label: 'Sensory level' }]} /></div>
       {mode === 'level' && (
         <div className="mb-3"><Label>Complete cord lesion at</Label>
           <div className="flex flex-wrap gap-1.5">{LEVEL_CHOICES.map(l => <Chip key={l} accent={accent} on={level === l} onClick={() => setLevel(l)}>{l}</Chip>)}</div>
@@ -68,7 +68,7 @@ export function DermatomeMap({ accent, initialMode = 'explore' }: { accent: stri
               <div className="text-[18px] font-bold" style={{ color: accent }}>{sel.root}</div>
               <p className="text-[13px] text-slate-700 leading-snug mt-1"><b>Key sensory point:</b> {sel.landmark}.</p>
               {sel.muscle && <p className="text-[13px] text-slate-700 leading-snug mt-1"><b>Key muscle:</b> {sel.muscle}.</p>}
-              <p className="text-[12px] text-slate-500 leading-snug mt-2">Numbness here with normal sensation at the neighboring points points to this root, or to a cord level just above it if everything below is also numb.</p>
+              <p className="text-[12px] text-slate-500 leading-snug mt-2">Numbness here, with normal sensation at the neighboring points, localizes to this root, or to a cord level just above it if everything below is also numb.</p>
             </div>
           ) : <p className="text-[13px] text-slate-500 leading-snug">Tap any dot. The front view shows C3 to L5; the back view shows C2 and the sacral points.</p>)}
           {mode === 'quiz' && (
@@ -76,7 +76,7 @@ export function DermatomeMap({ accent, initialMode = 'explore' }: { accent: stri
               <p className="text-[14px] text-slate-800">Tap the key sensory point for <b style={{ color: accent }}>{target.root}</b>.</p>
               {answer && (
                 <p className="text-[13px] mt-2 leading-snug" style={{ color: answer.ok ? '#15803d' : '#b91c1c' }}>
-                  {answer.ok ? 'Correct.' : `That dot is ${answer.picked.root}.`} {target.root} is tested at: {target.landmark.toLowerCase()}.
+                  {answer.ok ? 'Correct.' : `That dot is ${answer.picked.root}.`} Key point for {target.root}: {target.landmark.toLowerCase()}.
                 </p>
               )}
               <div className="flex items-center gap-3 mt-2">

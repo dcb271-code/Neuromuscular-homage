@@ -333,7 +333,7 @@ function RotatingLabel({ kind }: { kind: 'Conditions' | 'Categories' }) {
         fontSize: '10px', fontWeight: 700, letterSpacing: '0.1em',
         textTransform: 'uppercase', color: '#94a3b8',
       }}>
-        Daily Spotlight — {kind}
+        Spotlight: {kind}
       </div>
       <span style={{
         fontSize: '9px', fontWeight: 600, letterSpacing: '0.06em',

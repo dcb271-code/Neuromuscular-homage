@@ -25,10 +25,11 @@ export default function Landing() {
       }}>
         <SectionLabel>About the name</SectionLabel>
         <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.65, margin: 0 }}>
-          <strong>Where before what.</strong> The oldest rule in neurology: find the lesion before you
-          name the disease. A weak hand, a lost reflex, a child who stopped walking are addresses first and
-          diagnoses second. Fix the address and the list of suspects writes itself; skip it and the list is
-          everyone. The sections here keep that order, from muscle and nerve to image to rhythm.
+          <strong>Where before what.</strong> An old rule in neurology says to find the lesion before you
+          name the disease. A weak hand, a lost reflex or a child who has stopped walking tells you first where
+          the problem is, and only then what it might be. Once you know the location, the list of possible causes
+          is short. Without it, almost anything is possible. The sections here keep that order, from muscle and
+          nerve to imaging to EEG.
         </p>
       </div>
 

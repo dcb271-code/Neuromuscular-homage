@@ -27,7 +27,7 @@ export function GalleryPage({ figures, modules }: { figures: EegFigure[]; module
       <nav className="text-[12px] text-slate-400 mb-5 flex gap-1.5 items-center"><Link href="/eeg" className="text-slate-500 no-underline hover:underline">EEG</Link><span>/</span><span className="text-slate-800 font-semibold">Pattern gallery</span></nav>
       <h1 className="font-mono font-extrabold tracking-tight text-slate-900 mb-2" style={{ fontSize: 'clamp(24px, 5.5vw, 34px)' }}>Pattern gallery</h1>
       <p className="text-[14px] text-slate-600 mb-5 leading-relaxed max-w-[680px]">
-        {figures.length} tracings: from the AES introductory text and atlas (St. Louis and Frey, 2016, Creative Commons) and from Jaime Shoup, MD, University of Louisville (used with permission). In quiz mode the caption is hidden until you tap the card: name the pattern first, then check.
+        {figures.length} tracings, from the AES introductory text and atlas (St. Louis and Frey, 2016, Creative Commons) and from Jaime Shoup, MD, University of Louisville (used with permission). In quiz mode the caption stays hidden until you tap the card, so you can name the pattern first.
       </p>
 
       <div className="flex items-center gap-2 flex-wrap mb-5">
@@ -55,7 +55,7 @@ export function GalleryPage({ figures, modules }: { figures: EegFigure[]; module
                 <FigureCard fig={f} accent={accent} />
                 {uses.length > 0 && (
                   <div className="mt-1.5 text-[11px] text-slate-500 flex gap-2 flex-wrap">
-                    {uses.map(u => <Link key={`${u.module.id}-${u.section}`} href={`/eeg/${u.module.id}#s${u.section + 1}`} className="no-underline font-semibold" style={{ color: u.module.color }}>Module {u.module.number} · {u.module.sections[u.section].title} →</Link>)}
+                    {uses.map(u => <Link key={`${u.module.id}-${u.section}`} href={`/eeg/${u.module.id}#s${u.section + 1}`} className="no-underline font-semibold" style={{ color: u.module.color }}>Module {u.module.number} · {u.module.sections[u.section].title}</Link>)}
                   </div>
                 )}
               </div>
@@ -70,7 +70,7 @@ export function GalleryPage({ figures, modules }: { figures: EegFigure[]; module
                 {on ? (
                   <><span className="font-semibold text-slate-800">{f.title}.</span> <span className="text-slate-600">{f.caption.slice(f.title.length).replace(/^[.\s]+/, '')}</span>
                     {uses[0] && <div className="mt-1 text-[11px] font-semibold" style={{ color: accent }}>Module {uses[0].module.number} · {uses[0].module.sections[uses[0].section].title}</div>}</>
-                ) : <span className="text-slate-400">What is this? Tap to reveal.</span>}
+                ) : <span className="text-slate-400">Name the pattern, then tap to check.</span>}
               </div>
             </button>
           );

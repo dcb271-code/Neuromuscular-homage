@@ -133,7 +133,7 @@ export function GeneOfDay() {
                   <div>
                     <span style={{ color: '#1e293b' }}>{h.point}</span>
                     <span style={{ display: 'block', color: '#94a3b8', fontSize: '11px', marginTop: '2px' }}>
-                      — {h.citation}
+                      Source: {h.citation}
                     </span>
                   </div>
                 </div>
@@ -336,7 +336,7 @@ export function QuestionOfDay() {
               marginBottom: '6px',
               display: 'flex', alignItems: 'center', gap: '6px',
             }}>
-              {correct ? '✓ Correct' : '✗ Incorrect'} — {correct ? 'Well done!' : `Answer: ${String.fromCharCode(65 + q.answer)}`}
+              {correct ? '✓ Correct.' : `✗ Incorrect. The answer is ${String.fromCharCode(65 + q.answer)}.`}
             </div>
             <p style={{ fontSize: '12px', color: '#334155', lineHeight: 1.6, margin: 0 }}>
               {q.explanation}

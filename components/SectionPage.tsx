@@ -28,7 +28,7 @@ export default function SectionPage({ slug, children, hidePlanned }: { slug: str
             color: '#94a3b8', background: '#f8fafc', border: '1px solid #e2e8f0',
             padding: '2px 7px', borderRadius: '99px',
           }}>
-            {section.status === 'soon' ? 'In development' : section.status === 'live' ? 'Live' : 'Growing'}
+            {section.status === 'soon' ? 'In development' : section.status === 'live' ? 'Live' : 'In progress'}
           </span>
         </div>
         <h1 style={{

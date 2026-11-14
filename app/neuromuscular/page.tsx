@@ -69,7 +69,7 @@ export default function Home() {
 
       {/* ── Featured + rotating conditions ─────────────────────────── */}
       <div style={{ marginTop: '28px' }}>
-        <SectionLabel>Select Neuromuscular Conditions</SectionLabel>
+        <SectionLabel>Featured Neuromuscular Conditions</SectionLabel>
         <FeaturedConditions conditions={FEATURED_CONDITIONS} />
         <RotatingConditions />
       </div>

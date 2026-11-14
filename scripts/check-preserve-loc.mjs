@@ -6,7 +6,8 @@
 import { execSync } from 'node:child_process';
 import { readdirSync, readFileSync } from 'node:fs';
 
-const dir = 'src/loc/modules/';
+// MODULES=eeg checks the EEG modules.
+const dir = process.env.MODULES === 'eeg' ? 'src/eeg/modules/' : 'src/loc/modules/';
 const filter = process.argv[2];
 const files = readdirSync(dir).filter(f => f.endsWith('.json') && (!filter || f.startsWith(filter))).sort();
 
@@ -33,12 +34,14 @@ for (const f of files) {
     if (!!s.discussion !== !!c.discussion) msgs.push(`section ${i + 1}: discussion flag changed`);
     if (s.question && (!c.question || s.question.answer !== c.question.answer || s.question.options.length !== c.question.options.length)) msgs.push(`section ${i + 1}: inline question answer/options changed`);
   });
-  // A quiz may be trimmed (the cap is 5): each remaining question is matched to its old self by
-  // its correct option, and must keep that answer and option count.
+  // Same quiz length: questions are matched by position, so their wording may be edited, and each
+  // must keep its answer index and option count. A trimmed quiz (the cap is 5) is matched by the
+  // text of the correct option instead, so reword options and trim in separate commits.
   const key = q => q.options[q.answer];
   if (cur.quiz.length > old.quiz.length) msgs.push(`quiz count ${old.quiz.length} → ${cur.quiz.length}`);
-  cur.quiz.forEach((c, i) => { const q = old.quiz.find(o => key(o) === key(c)); if (!q || c.answer !== q.answer || c.options.length !== q.options.length) msgs.push(`quiz ${i + 1}: answer/options changed`); });
-  const dropped = old.quiz.filter(q => !cur.quiz.some(c => key(c) === key(q)));
+  const sameLength = cur.quiz.length === old.quiz.length;
+  cur.quiz.forEach((c, i) => { const q = sameLength ? old.quiz[i] : old.quiz.find(o => key(o) === key(c)); if (!q || c.answer !== q.answer || c.options.length !== q.options.length) msgs.push(`quiz ${i + 1}: answer/options changed`); });
+  const dropped = sameLength ? [] : old.quiz.filter(q => !cur.quiz.some(c => key(c) === key(q)));
   for (const k of ['id', 'number', 'track', 'color', 'core']) if (JSON.stringify(old[k]) !== JSON.stringify(cur[k])) msgs.push(`${k} changed`);
   if (JSON.stringify(old.sources) !== JSON.stringify(cur.sources)) msgs.push(`sources list changed`);
   if (old.opener?.source !== cur.opener?.source) msgs.push(`opener source changed`);

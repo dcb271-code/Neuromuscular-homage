@@ -67,7 +67,7 @@ export function Pretest({ accent }: { accent: string }) {
   const colour = { tp: accent, fn: '#fff', fp: '#f59e0b', tn: '#e2e8f0' } as const;
   return (
     <WidgetFrame accent={accent} label="Pretest probability" subtitle="Choose a test and how well the examination predicted the finding, and watch how much the same positive report is worth for a child like this one."
-      footnote={<>Bayes in odds form: post-test odds = pretest odds × likelihood ratio (Gill 2005). False-positive rates are published: incidental MRI findings in 21.1% of 9-10-year-olds (Li 2021); epileptiform discharges in 6.5% of healthy 6-13-year-olds (Borusiak 2010). Pretest probabilities and sensitivities are illustrative; move them.</>}>
+      footnote={<>Bayes in odds form: post-test odds = pretest odds × likelihood ratio (Gill 2005). Published false-positive rates: incidental MRI findings in 21.1% of 9-10-year-olds (Li 2021), and epileptiform discharges in 6.5% of healthy 6-13-year-olds (Borusiak 2010). Pretest probabilities and sensitivities are illustrative, so adjust them.</>}>
       <div className="grid gap-3 sm:grid-cols-2 mb-3">
         <div><Label>Test</Label><Segmented accent={accent} value={tid} onChange={setTid} options={TESTS.map(t => ({ id: t.id, label: t.name }))} /></div>
         {model && (
@@ -160,7 +160,7 @@ function NerveDiagramView({ ladder, index, onPick, accent }: { ladder: Ladder; i
         })}
       </svg>
       </div>
-      <p className="text-[11px] text-slate-500 px-1 pt-1">Tap a circle to place the lesion there; on a small screen, swipe sideways to see the whole nerve. Red branches are cut off from the cord; amber structures are neighbors hit by the same lesion.</p>
+      <p className="text-[11px] text-slate-500 px-1 pt-1">Tap a circle to place the lesion there. On a small screen, swipe sideways to see the whole nerve. Red branches are cut off from the cord, and amber structures are neighbors hit by the same lesion.</p>
     </div>
   );
 }
@@ -204,7 +204,7 @@ export function LesionLadder({ accent }: { accent: string }) {
               </li>
             ))}
           </ul>
-          <p className="text-[12.5px] text-slate-700 leading-snug"><b style={{ color: accent }}>The test that places it:</b> {rung.clue}.</p>
+          <p className="text-[12.5px] text-slate-700 leading-snug"><b style={{ color: accent }}>Localizing test:</b> {rung.clue}.</p>
           <p className="text-[12px] text-slate-500 leading-snug mt-1">In a child: {rung.example}.</p>
           {rung.mode === 'replace' && <p className="text-[12px] text-slate-500 leading-snug mt-1">◆ Above a dashed line the pattern changes shape instead of growing, because the lesion has left the nerve itself.</p>}
         </div>
@@ -224,17 +224,17 @@ export function MapSort({ accent }: { accent: string }) {
     <WidgetFrame accent={accent} label="Which map fits the deficit" subtitle="Strokes, neuropathies, root lesions and tumors each respect a different map of the body. Read the pattern and decide which map it follows."
       footnote="Maps after Pearl 2014 (pages on each answer). Cases are teaching sketches, not complete differentials.">
       <div className="flex items-center gap-2 mb-2">
-        <button onClick={() => go(-1)} className="px-2 py-1 rounded-md border border-slate-200 bg-white text-[12px]" aria-label="Previous pattern">←</button>
+        <button onClick={() => go(-1)} className="px-2 py-1 rounded-md border border-slate-200 bg-white text-[12px]" aria-label="Previous pattern">Previous</button>
         <span className="text-[11px] text-slate-400 font-mono">{k + 1}/{MAP_CASES.length}</span>
-        <button onClick={() => go(1)} className="px-2 py-1 rounded-md border border-slate-200 bg-white text-[12px]" aria-label="Next pattern">→</button>
+        <button onClick={() => go(1)} className="px-2 py-1 rounded-md border border-slate-200 bg-white text-[12px]" aria-label="Next pattern">Next</button>
       </div>
       <p className="rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-[13.5px] text-slate-800 leading-snug mb-3">{c.pattern}</p>
-      <Label>The deficit obeys</Label>
+      <Label>The deficit follows</Label>
       <div className="flex flex-wrap gap-1.5 mb-3">{MAPS.map(m => <Chip key={m.id} accent={accent} on={pick === m.id} onClick={() => setPick(m.id)} disabled={!!r?.correct && pick !== m.id}>{m.name}</Chip>)}</div>
       {r && (
         <div className="rounded-lg px-3 py-2 text-[13px] leading-snug" style={{ background: r.correct ? accent + '14' : '#fef3c7' }}>
-          <b>{r.correct ? 'Yes.' : `Not quite: it obeys ${r.answer.name.toLowerCase()}.`}</b> {r.why} <span className="text-slate-500">({r.cite})</span>
-          <div className="mt-1.5 text-[12.5px] text-slate-700"><b style={{ color: accent }}>So think:</b> {r.answer.suggests}.</div>
+          <b>{r.correct ? 'Correct.' : `Not quite: it follows ${r.answer.name.toLowerCase()}.`}</b> {r.why} <span className="text-slate-500">({r.cite})</span>
+          <div className="mt-1.5 text-[12.5px] text-slate-700"><b style={{ color: accent }}>Consider:</b> {r.answer.suggests}.</div>
         </div>
       )}
     </WidgetFrame>

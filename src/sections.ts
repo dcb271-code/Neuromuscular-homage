@@ -52,7 +52,7 @@ export const SECTIONS: Section[] = [
     short: 'Localization',
     tagline: 'From findings to lesion',
     blurb:
-      'The habit this site is named for: working out where the problem is before deciding what it is. Twelve interactive modules on localization and the neurologic examination in children, from telling upper from lower motor neuron weakness to building a differential.',
+      'Working out where the problem is before deciding what it is, the habit this site is named for. Twelve interactive modules on localization and the neurologic examination in children, from telling upper from lower motor neuron weakness to building a differential.',
     color: '#0d9488',
     status: 'live',
     planned: [],
@@ -61,7 +61,7 @@ export const SECTIONS: Section[] = [
     slug: 'eeg',
     name: 'EEG',
     short: 'EEG',
-    tagline: 'Reading the rhythms',
+    tagline: 'Reading pediatric EEG',
     blurb:
       'A pediatric EEG reading curriculum: twelve self-paced modules from electrodes and montages to reading a neonatal or PICU record and writing the report, with decision questions, quizzes and faculty sign-offs.',
     color: '#d97706',

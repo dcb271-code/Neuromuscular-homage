@@ -4,6 +4,13 @@
 
 ## Queued
 
+- **Ideas from EEGSimLab (eegsimlab.org, Wayne State University, reviewed 2026-11-14).** Its code, tracings and text are "All rights reserved", so nothing is copied. These are independent reimplementations of general functionality, cited to the public literature:
+  1. Spike-criteria tapper for Module 8: a synthetic discharge where the learner marks which of the six IFCN criteria it meets, with each criterion drawn on the trace (Kural 2020). Pure model plus widget, like the montage lab. Medium.
+  2. Synthetic multichannel trace renderer: one component that draws a full bipolar page from a model, with adjustable sensitivity (pediatric and neonatal settings, not the adult default) and time scale. Unblocks the filter lab, the waveform viewer, and Module 9 morphologies until real tracings are cleared. Large.
+  3. Annotated step-through on our licensed gallery figures: Next/Back captions with highlighted channels or time windows. Medium.
+  4. Calipers on tracings to read Hz and ms ("3 Hz or 2.5 Hz?"). Small to medium, after item 2.
+  5. ACNS terms quick card for Module 11, in our own words from Hirsch 2021. Small.
+- **Clinical checks raised by the 2026-11-14 prose pass (owner):** Module 7's definition of discontinuous ("attenuated below 25 to 50 µV") should be checked against Tsuchida 2013. Module 5 quiz 5's explanation that hyperventilation "either produces 2.5 to 4 Hz spike-wave or it does not" is circular. Modules 5, 6 and 8 used to attribute some claims to "the outline"; those claims now stand without a source and need a citation or a cut. Modules 5 and 7 still name Benbadis and Murray in prose. Module 11 has 6 quiz questions and most EEG explanations run 95 to 150 words; the Localization length budgets have not been applied to EEG.
 - Add the owner's own slide decks and PDFs once uploaded (see `resources-to-integrate.md`): extract figures only where the licence allows, otherwise link.
 - Filter and sampling lab (Module 1): apply low-pass, high-pass and notch to a synthetic spike, muscle burst and alpha, and show what each does to morphology. Pure model + tests, like the montage lab.
 - Tracings for Module 9 (hypsarrhythmia, 3 Hz spike-wave, slow spike-wave, centrotemporal spikes): the AES atlas versions are Mayo-copyrighted and the Shoup deck has none. Candidates: the DeStefano deck (permission given; identifiers to crop), or Learning EEG by link.
@@ -14,6 +21,10 @@
 
 ## History
 
+### 2026-11-14 · Plain-language pass on all twelve modules
+- **Target:** owner asked for a light-to-medium humanizer pass (strip AI tells, simplify sentence structure without flattening the voice).
+- **Change:** every module's prose, key points, questions and explanations. Totals before → after: antitheses 27 → 2, colon reveals 96 → 0, sentences over 38 words 50 → 5, semicolons 3.6 → 0.1 per 1000 words, average sentence 22.3 → 18.7 words. British spellings made American. Plainer headings where the old ones were riddles or parallel pairs. Fixed: the stray claim that spindle asynchrony is expected only "in the first year" (the cited range is 18 to 24 months); "and the reverse" in the neonatal status comparison, which was false; "often" vs "may" for focal aware seizures without a scalp correlate. `style-loc.mjs` and `check-preserve-loc.mjs` now take `MODULES=eeg`.
+- **Outcome:** see commit on `main`.
 ### 2026-09-30 · Twelve tracings from Jaime Shoup's non-epileptiform lecture
 - **Target:** give Module 8 (slowing, rhythmic deltas) and Module 11 (ICU backgrounds) real tracings.
 - **Change:** owner confirmed the deck's recordings may be used. `scripts/extract_shoup_figures.py` takes 12 slides (excluding three Mayo-permission tracings, a scanned journal figure and an unlabelled slide), writes `shoup-sNN.jpg` and merges them into the registry with the credit "used with permission"; `scripts/build_eeg_attributions.py` now renders `ATTRIBUTIONS.md` for both sources. Placed in Module 8 sections 4 and 5 and Module 11 section 1.

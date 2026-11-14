@@ -29,7 +29,7 @@ export function CurriculumHome({ modules }: { modules: EegModule[] }) {
             <div className="text-[10px] font-bold uppercase tracking-[0.1em]" style={{ color: last.color }}>Continue where you left off</div>
             <div className="text-[14px] font-semibold text-slate-900 truncate">{String(last.number).padStart(2, '0')} · {last.title}</div>
           </div>
-          <span className="ml-auto text-[13px] font-semibold" style={{ color: last.color }}>→</span>
+          <span className="ml-auto text-[13px] font-semibold" style={{ color: last.color }}>Resume</span>
         </Link>
       )}
 
@@ -39,7 +39,7 @@ export function CurriculumHome({ modules }: { modules: EegModule[] }) {
           <div className="text-[14px] font-semibold text-slate-900">Pattern gallery</div>
           <div className="text-[12.5px] text-slate-500">Licensed tracings from the AES atlas, browsable or as a name-the-pattern quiz. Each one links to the section that teaches it.</div>
         </div>
-        <span className="ml-auto text-[13px] font-semibold text-slate-400">→</span>
+        <span className="ml-auto text-[13px] font-semibold text-slate-400">Open</span>
       </Link>
 
       {/* How to use */}
@@ -50,7 +50,7 @@ export function CurriculumHome({ modules }: { modules: EegModule[] }) {
             {HOW_TO_USE.map((h, i) => <li key={i}>{h}</li>)}
           </ol>
           <p className="text-[12px] text-slate-500 mt-4 leading-relaxed">
-            Each module takes roughly 2 to 4 hours of self-study, plus reading real records. These are estimates, not tested times. Every module has the same parts: objectives, teaching sections with key points and a decision question each, a quiz, what to read and watch, and what a faculty reader checks before the module counts as done.
+            Each module takes roughly 2 to 4 hours of self-study, plus reading real records. These are untested estimates. Every module has the same parts: objectives, teaching sections with key points and a decision question each, a quiz, what to read and watch, and what a faculty reader checks before the module counts as done.
           </p>
           {hydrated && <p className="text-[12px] text-slate-400 mt-3">Progress on this device: <b className="text-slate-600">{modulesDone}</b> of {modules.length} quizzes done.</p>}
         </div>
@@ -132,7 +132,7 @@ export function CurriculumHome({ modules }: { modules: EegModule[] }) {
             </li>
           ))}
         </ul>
-        <p className="text-[12px] text-slate-500 mt-4 leading-relaxed">A suggested local reading mix, offered as a suggestion rather than a standard: {READING_TARGETS.join(' ')} Sign-offs here are self-reported; the faculty log in Module 12 is the record that counts.</p>
+        <p className="text-[12px] text-slate-500 mt-4 leading-relaxed">Suggested local reading mix (a suggestion, not a formal standard): {READING_TARGETS.join(' ')} Sign-offs here are self-reported. The faculty log in Module 12 is the official record.</p>
       </div>
 
       {/* Resource map */}

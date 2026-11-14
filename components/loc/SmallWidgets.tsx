@@ -18,7 +18,7 @@ export function ExamOrder({ accent }: { accent: string }) {
   const score = done ? examOrderScore(order) : null;
   return (
     <WidgetFrame accent={accent} label="Examining a toddler" subtitle="Tap the steps in the order you would do them with a toddler, and see which ones you have made harder by doing them too early."
-      footnote={'After the owner\'s rule: stop, look and listen; make it a game; save the worst for last. Reflexes late and on a lap (Utah PediNeuroLogic Exam).'}>
+      footnote={'After the owner\'s rule: stop, look and listen, make it a game, and save the worst for last. Reflexes late and on a lap (Utah PediNeuroLogic Exam).'}>
       <div className="nm-2col">
         <div>
           <Label>Steps</Label>
@@ -46,7 +46,7 @@ export function ExamOrder({ accent }: { accent: string }) {
           {score && (
             <p className="mt-2 text-[13px] leading-snug rounded-lg px-3 py-2" style={{ background: accent + '10' }}>
               {score.inversions === 0 ? <><b>Every step is in a workable place.</b> Watching first, games next, hands-on after, unpleasant last.</>
-                : <><b>{score.inversions} {score.inversions === 1 ? 'step comes' : 'pairs of steps come'} out of order.</b> Highlighted steps are ones a toddler is likely to resist, done before gentler ones; once a child is crying, the rest of the exam is lost.</>}
+                : <><b>{score.inversions} {score.inversions === 1 ? 'step comes' : 'pairs of steps come'} out of order.</b> Highlighted steps are ones a toddler is likely to resist, done before gentler ones. Once a child is crying, the rest of the exam is lost.</>}
             </p>
           )}
         </div>
@@ -66,7 +66,7 @@ export function ReflexTimeline({ accent }: { accent: string }) {
   const tone = (t: string) => t === 'ok' ? { background: accent + '18', color: accent } : t === 'flag' ? { background: '#1e293b', color: '#fff' } : t === 'mid' ? { background: '#e2e8f0', color: '#334155' } : { background: '#f1f5f9', color: '#94a3b8' };
   return (
     <WidgetFrame accent={accent} label="Reflexes that come and go" subtitle="Drag the age slider. Primitive reflexes should fade and postural reactions should appear on schedule, and in an infant either one arriving out of time suggests an upper motor neuron problem."
-      footnote={<>Ages from the <a href="https://neurologicexam.med.utah.edu/pediatric/html/home_exam.html" target="_blank" rel="noopener noreferrer" className="underline">Utah PediNeuroLogic Exam</a> (Larsen and Stensaas), which has a video of each reflex. Boundaries are typical ages, not cut-offs; asymmetry at any age matters more than timing.</>}>
+      footnote={<>Ages from the <a href="https://neurologicexam.med.utah.edu/pediatric/html/home_exam.html" target="_blank" rel="noopener noreferrer" className="underline">Utah PediNeuroLogic Exam</a> (Larsen and Stensaas), which has a video of each reflex. Boundaries are typical ages rather than cut-offs. Asymmetry at any age matters more than timing.</>}>
       <div className="mb-3">
         <div className="flex items-baseline justify-between"><Label>Age</Label><span className="font-mono text-[14px] font-bold" style={{ color: accent }}>{m === 0 ? 'newborn' : `${m} month${m === 1 ? '' : 's'}`}</span></div>
         <input type="range" min={0} max={12} step={1} value={m} onChange={e => setM(Number(e.target.value))} className="w-full" style={{ accentColor: accent }} aria-label="Age in months" />
@@ -102,9 +102,9 @@ export function RootNerve({ accent }: { accent: string }) {
   const p = RN_PRESETS.find(x => x.id === preset);
   return (
     <WidgetFrame accent={accent} label="Root, plexus or nerve" subtitle="Tap a muscle or reflex once for weak, twice for normal, three times to clear. The candidates that still explain everything stay lit."
-      footnote="Predominant root assignments; sources differ by a segment (Brazis 2011 ch. 2-4). Reflexes follow Brazis: knee L2-L4, mainly L4; ankle S1-S2, mainly S1. Two rules do the work: every muscle a nerve supplies below the lesion must be weak, and a muscle sharing a root but not a nerve tells them apart (Morris 2012).">
+      footnote="Predominant root assignments; sources differ by a segment (Brazis 2011 ch. 2-4). Reflexes follow Brazis: knee L2-L4, mainly L4; ankle S1-S2, mainly S1. Two rules decide it. Every muscle a nerve supplies below the lesion must be weak, and a muscle that shares a root but not a nerve tells them apart (Morris 2012).">
       <div className="mb-3">
-        <Label>Try a patient</Label>
+        <Label>Example patients</Label>
         <div className="flex flex-wrap gap-1.5">{RN_PRESETS.map(x => <Chip key={x.id} accent={accent} on={preset === x.id} onClick={() => { setPreset(x.id); setExam(x.exam); setLimb(Object.keys(x.exam).some(k => ITEMS.find(i => i.id === k)?.limb === 'arm') ? 'arm' : 'leg'); }}>{x.label}</Chip>)}</div>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
@@ -128,11 +128,11 @@ export function RootNerve({ accent }: { accent: string }) {
           <Label>What still explains the exam</Label>
           {!Object.values(exam).includes('weak') ? <p className="text-[12.5px] text-slate-500">Mark at least one weak muscle or lost reflex.</p> : (
             <>
-              {fits.length === 0 && <p className="text-[12.5px] text-slate-700 rounded-lg bg-white border border-slate-200 px-3 py-2">Nothing single explains this. Think of more than one lesion, a polyneuropathy, or a central cause.</p>}
+              {fits.length === 0 && <p className="text-[12.5px] text-slate-700 rounded-lg bg-white border border-slate-200 px-3 py-2">No single lesion explains this. Consider more than one lesion, a polyneuropathy, or a central cause.</p>}
               <ul className="space-y-1.5">
                 {fits.map(c => <li key={c.id} className="rounded-lg px-3 py-2 text-[12.5px]" style={{ background: accent + '14' }}><b style={{ color: accent }}>{c.name}</b><span className="block text-slate-600">{c.why}</span></li>)}
               </ul>
-              <details className="mt-2"><summary className="text-[12px] text-slate-500 cursor-pointer">Why the others fail</summary>
+              <details className="mt-2"><summary className="text-[12px] text-slate-500 cursor-pointer">Why the others do not fit</summary>
                 <ul className="mt-1 space-y-1">{cands.filter(c => !c.explains && (c.kind !== 'root' || ITEMS.filter(i => i.limb === limb).some(i => i.roots.includes(c.id as never)))).map(c => <li key={c.id} className="text-[11.5px] text-slate-500"><b className="text-slate-600">{c.name}:</b> {c.why}</li>)}</ul>
               </details>
             </>
@@ -178,7 +178,7 @@ export function ComaLevels({ accent }: { accent: string }) {
   const pick = (sid: string, oid: string) => { setStage(null); setChoice(c => ({ ...c, [sid]: c[sid] === oid ? '' : oid })); };
   return (
     <WidgetFrame accent={accent} label="Finding the level in coma" subtitle="Choose what you see for each sign. When they agree on one level, a structural lesion there is likely, and when they disagree, a metabolic cause becomes more likely."
-      footnote="After Pearl 2014, pp. 94-98, and Brazis 2011, pp. 608-613. Describe responsiveness in plain words rather than labels (Brazis 2011, p. 603). The herniation sequence shows a level that moves: the signs descend rather than scatter.">
+      footnote="After Pearl 2014, pp. 94-98, and Brazis 2011, pp. 608-613. Describe responsiveness in plain words rather than labels (Brazis 2011, p. 603). In the herniation sequence the level moves, and the signs descend in order instead of scattering.">
       <div className="grid gap-4 md:grid-cols-[1fr_minmax(0,220px)]">
         <div className="space-y-3">
           {COMA_SIGNS.map(s => (
@@ -200,7 +200,7 @@ export function ComaLevels({ accent }: { accent: string }) {
             ? <p className="mt-2 text-[12.5px] leading-snug rounded-lg px-3 py-2" style={{ background: v.kind === 'none' ? '#f1f5f9' : accent + '12', color: '#334155' }}>{v.text}</p>
             : <p className="mt-2 text-[12.5px] leading-snug rounded-lg px-3 py-2" style={{ background: '#fef3c7', color: '#334155' }}><b>{stage + 1}/{HERNIATION.length} · {HERNIATION[stage].stage}.</b> {HERNIATION[stage].text}</p>}
           <button onClick={() => setStage(stage === null ? 0 : null)} className="mt-2 w-full rounded-lg border px-3 py-1.5 text-[12px] font-semibold" style={{ borderColor: accent, color: stage === null ? accent : '#fff', background: stage === null ? '#fff' : accent }}>
-            {stage === null ? '▶ Watch a herniation descend' : stage >= HERNIATION.length - 1 ? 'Done: clear' : '■ Stop'}
+            {stage === null ? '▶ Watch a herniation descend' : stage >= HERNIATION.length - 1 ? 'Clear' : '■ Stop'}
           </button>
         </div>
       </div>
@@ -224,7 +224,7 @@ export function WhereWhen({ accent }: { accent: string }) {
           <div className="text-[10px] font-bold uppercase tracking-[0.08em] mb-1" style={{ color: accent }}>{t.name}: {t.span.toLowerCase()}</div>
           <ul className="list-disc ml-4 text-[12.5px] text-slate-700 space-y-0.5">{t.mechanisms.map(m => <li key={m}>{m}</li>)}</ul>
           {t.mimics && (<>
-            <div className="text-[10px] font-bold uppercase tracking-[0.08em] mt-2 mb-1 text-amber-600">Not a lesion at all: mimics</div>
+            <div className="text-[10px] font-bold uppercase tracking-[0.08em] mt-2 mb-1 text-amber-600">Mimics (not a lesion)</div>
             <ul className="list-disc ml-4 text-[12.5px] text-slate-700 space-y-0.5">{t.mimics.map(m => <li key={m}>{m}</li>)}</ul>
             <p className="text-[11px] text-slate-400 mt-1">Pearl 2014, p. 104.</p>
           </>)}
@@ -232,7 +232,7 @@ export function WhereWhen({ accent }: { accent: string }) {
         <div className="rounded-xl border border-slate-200 bg-white p-3">
           <div className="text-[10px] font-bold uppercase tracking-[0.08em] mb-1" style={{ color: accent }}>{LEVELS.find(l => l.id === level)!.short} + {t.name.toLowerCase()}: in a child</div>
           {ex.length ? <ul className="list-disc ml-4 text-[12.5px] text-slate-700 space-y-0.5">{ex.map(e => <li key={e}>{e}</li>)}</ul>
-            : <p className="text-[12.5px] text-slate-500">No classic pediatric example sits in this cell. That is itself information: re-check the level or the tempo before going further.</p>}
+            : <p className="text-[12.5px] text-slate-500">No classic pediatric example fits this cell. Re-check the level or the tempo before going further.</p>}
         </div>
       </div>
     </WidgetFrame>

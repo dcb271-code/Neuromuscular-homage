@@ -27,7 +27,7 @@ export function LocHome({ modules }: { modules: EegModule[] }) {
             <div className="text-[10px] font-bold uppercase tracking-[0.1em]" style={{ color: last.color }}>Continue where you left off</div>
             <div className="text-[14px] font-semibold text-slate-900 truncate">{String(last.number).padStart(2, '0')} · {last.title}</div>
           </div>
-          <span className="ml-auto text-[13px] font-semibold" style={{ color: last.color }}>→</span>
+          <span className="ml-auto text-[13px] font-semibold" style={{ color: last.color }}>Resume</span>
         </Link>
       )}
 
@@ -39,7 +39,7 @@ export function LocHome({ modules }: { modules: EegModule[] }) {
 
       {modules.some(m => m.core) && (
         <div className="rounded-2xl border border-slate-200 bg-white px-5 py-4 mb-6">
-          <div className="text-[10px] font-bold uppercase tracking-[0.1em] mb-1" style={{ color: accent }}>Short on time? The core path</div>
+          <div className="text-[10px] font-bold uppercase tracking-[0.1em] mb-1" style={{ color: accent }}>Core path</div>
           <p className="text-[13px] text-slate-600 leading-relaxed mb-2">If you only have time for part of the course, these six modules carry the core method, and the others build on them.</p>
           <div className="flex flex-wrap gap-1.5">
             {modules.filter(m => m.core).map(m => (
@@ -51,7 +51,7 @@ export function LocHome({ modules }: { modules: EegModule[] }) {
         </div>
       )}
 
-      <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 mb-2">Try it before you read anything</div>
+      <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 mb-2">Try the localizer first</div>
       <Localizer accent={accent} variant="intro" />
 
       {ORDER.map(track => {
@@ -99,9 +99,9 @@ export function LocHome({ modules }: { modules: EegModule[] }) {
           </a>
         ))}
       </div>
-      <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 mb-2">The books behind it</div>
+      <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 mb-2">Reference texts</div>
       <ul className="list-disc list-outside ml-5 text-[12.5px] text-slate-500 space-y-1 mb-6">{LOC_TEXTS.map(t => <li key={t}>{t}</li>)}</ul>
-      <p className="text-[11px] text-slate-400">Written in our own words, citing these texts by page. For education; not for clinical decision-making.</p>
+      <p className="text-[11px] text-slate-400">Written in our own words, citing these texts by page. For education. Not for clinical decision-making.</p>
     </div>
   );
 }

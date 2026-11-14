@@ -45,7 +45,7 @@ export function ExamVideos({ ids, accent }: { ids: string[]; accent: string }) {
   if (!vids.length) return null;
   return (
     <div className="mb-6">
-      <div className="text-[10px] font-bold uppercase tracking-[0.1em] mb-2" style={{ color: accent }}>Watch it at the bedside</div>
+      <div className="text-[10px] font-bold uppercase tracking-[0.1em] mb-2" style={{ color: accent }}>Exam videos</div>
       <div className={vids.length === 1 ? 'max-w-[420px]' : 'grid gap-3 sm:grid-cols-2'}>
         {vids.map(v => <Clip key={v.id} v={v} accent={accent} />)}
       </div>
